@@ -47,6 +47,7 @@ body {
 
 /* Header */
 /* Header */
+/* Header */
 .main-header {
     padding: 0.8rem 1rem;
     display: flex;
@@ -56,6 +57,64 @@ body {
     background: rgba(15, 23, 42, 0.95);
     z-index: 101;
     position: relative;
+    gap: 1rem;
+}
+
+.header-left, .header-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
+.header-center {
+    flex: 0 0 auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.volume-control-container {
+    display: flex;
+    align-items: center;
+    width: 60px;
+}
+
+#volume-slider {
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: var(--text-muted);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#volume-slider::-webkit-slider-thumb:hover {
+    background: var(--text-primary);
+}
+
+.btn-music:hover {
+    color: var(--accent-primary);
 }
 
 .logo h1 {
