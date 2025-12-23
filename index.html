@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="tr">
+<!-- lol -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İhsans Gate - Survival Mod</title>
+    <meta name="description" content="İngilizce kelime dağarcığınızı geliştirin.">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="main-header">
+            <div class="logo">
+                <span class="logo-icon">🔥</span>
+                <h1>İhsans<span class="highlight">Gate</span></h1>
+            </div>
+            <nav class="nav-controls">
+                <div class="wallet-display" title="Toplam Birikmiş Puan">
+                    <span class="wallet-icon">💎</span>
+                    <span id="wallet-amount">0</span>
+                </div>
+            </nav>
+        </header>
+
+        <main id="app-content">
+            <!-- MENU VIEW -->
+            <div id="view-menu" class="view active">
+                <div class="hero">
+                    <h2>Survival Modu</h2>
+                    <p>Tek bir yanlış hakkın var.</p>
+
+                    <div class="leaderboard-section">
+                        <h3>🏆 En İyiler (Top 5)</h3>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>İsim</th>
+                                        <th>Skor</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="leaderboard-body">
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-actions">
+                    <div class="name-input-container">
+                        <input type="text" id="menu-player-name" placeholder="Oyuncu Adı Giriniz" maxlength="15">
+                    </div>
+
+                    <div class="mode-selection">
+                        <button class="btn btn-mode-survival" onclick="app.startGame('survival')">
+                            <strong>💀 Tek Şans</strong>
+                            <span>Hata Yok • Sonsuz Süre</span>
+                        </button>
+                        <button class="btn btn-mode-rush" onclick="app.startGame('rush')">
+                            <strong>⚡ Acele Modu</strong>
+                            <span>3 Can • 2 Dakika • Skor Tablosu</span>
+                        </button>
+                        <button class="btn btn-mode-favs" onclick="app.startGame('favorites')">
+                            <strong>⭐ Favoriler</strong>
+                            <span>Yıldızlı Kelimeler • Rahat Mod</span>
+                        </button>
+                    </div>
+
+                    <div style="display:flex; gap:0.5rem; justify-content:center; margin-top:1.5rem">
+                        <button class="btn btn-sm btn-secondary" onclick="app.showWordList()">Kelime Listesi</button>
+                        <button class="btn btn-sm btn-secondary" onclick="app.showAddWord()">Kelime Ekle</button>
+                    </div>
+                    <button class="btn btn-text" onclick="app.resetProgress()"
+                        style="font-size:0.8rem; margin-top:1rem">İlerlemeyi Sıfırla</button>
+                </div>
+            </div>
+
+            <!-- GAME VIEW -->
+            <div id="view-game" class="view hidden">
+                <div class="game-header-bar">
+                    <div class="game-stats-left">
+                        <div class="live-score">Skor: <span id="current-score">0</span></div>
+                        <div id="game-timer" class="game-timer hidden">02:00</div>
+                    </div>
+                    <div class="game-stats-right">
+                        <div id="game-lives" class="game-lives hidden">❤️❤️❤️</div>
+                        <div class="joker-container">
+                            <button id="btn-joker" class="btn-joker" onclick="app.useJoker()"
+                                title="200 Puan Karşılığı %50 Şans">
+                                <span class="joker-icon">⚡</span> ½
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="card-header">
+                        <span class="level-indicator" id="word-level">A2</span>
+                        <button class="btn-star" id="game-star-btn" onclick="app.toggleGameFavorite()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="word-display">
+                        <h2 id="target-word">Lütfen Bekleyin...</h2>
+                    </div>
+                    <div class="options-grid" id="options-container">
+                        <!-- Options generated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- GAME OVER MODAL (Overlay) -->
+            <div id="view-gameover" class="modal-overlay hidden">
+                <div class="modal-content">
+                    <h3>Oyun Bitti!</h3>
+                    <p class="final-score-text">Skorun: <span id="final-score">0</span></p>
+
+                    <!-- HIGH SCORE INPUT -->
+                    <!-- HIGH SCORE INPUT REMOVED - Name taken at start -->
+                    <div id="name-input-area" class="hidden" style="display:none !important"></div>
+
+                    <div class="earnings-report">
+                        <p>Kazanılan Puan: <span class="highlight">+<span id="earned-wallet">0</span>💎</span></p>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="app.startGame()">Tekrar Dene</button>
+                    <button class="btn btn-secondary" onclick="app.showMenu()">Ana Menü</button>
+                </div>
+            </div>
+
+            <!-- PASSWORD MODAL (Overlay) -->
+            <div id="view-password-modal" class="modal-overlay hidden">
+                <div class="modal-content">
+                    <h3>🔒 Güvenlik Kontrolü</h3>
+                    <p>İlerlemeyi sıfırlamak için parolayı girin:</p>
+
+                    <div class="form-group">
+                        <input type="password" id="reset-password-input" placeholder="Parola"
+                            style="text-align:center; letter-spacing: 5px;">
+                    </div>
+
+                    <div style="display:flex; gap:1rem; justify-content:center; margin-top:1.5rem">
+                        <button class="btn btn-secondary" onclick="app.closePasswordModal()">İptal</button>
+                        <button class="btn btn-primary" onclick="app.confirmReset()"
+                            style="background-color: var(--accent-red); border-color: var(--accent-red)">Onayla</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LIST VIEW -->
+            <div id="view-list" class="view hidden">
+                <div class="list-header">
+                    <div class="stats-bar-sm">
+                        Toplam Kelime: <span id="total-word-count"
+                            style="color:var(--accent-gold); font-weight:bold">0</span>
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="Kelime ara... (İngilizce veya Türkçe)"
+                            onkeyup="app.filterList()">
+                    </div>
+                    <div class="filter-toggles">
+                        <button class="filter-btn active" id="filter-all"
+                            onclick="app.setListFilter('all')">Tümü</button>
+                        <button class="filter-btn" id="filter-favs"
+                            onclick="app.setListFilter('favs')">Favoriler</button>
+                    </div>
+                </div>
+                <div class="word-list-container" id="word-list-items">
+                    <!-- Items generated by JS -->
+                </div>
+                <button class="btn btn-secondary sticky-back" onclick="app.showMenu()">Geri Dön</button>
+            </div>
+
+            <!-- ADD WORD VIEW -->
+            <div id="view-add-word" class="view hidden">
+                <h3 style="margin-bottom:1.5rem; color:var(--accent-gold)">Yeni Kelime Ekle</h3>
+
+                <div class="form-group">
+                    <label>İngilizce Kelime</label>
+                    <input type="text" id="new-word-en" placeholder="Örn: Serendipity">
+                </div>
+
+                <div class="form-group">
+                    <label>Türkçe Karşılığı</label>
+                    <input type="text" id="new-word-tr" placeholder="Örn: Şans eseri bulma">
+                </div>
+
+                <div class="form-group">
+                    <label>Seviye</label>
+                    <div class="level-select">
+                        <button class="lvl-btn active" onclick="app.selectLevel('A1', this)">A1</button>
+                        <button class="lvl-btn" onclick="app.selectLevel('A2', this)">A2</button>
+                        <button class="lvl-btn" onclick="app.selectLevel('B1', this)">B1</button>
+                        <button class="lvl-btn" onclick="app.selectLevel('B2', this)">B2</button>
+                        <button class="lvl-btn" onclick="app.selectLevel('C1', this)">C1</button>
+                    </div>
+                </div>
+
+                <div style="margin-top:2rem; display:flex; gap:1rem">
+                    <button class="btn btn-secondary" onclick="app.showMenu()">İptal</button>
+                    <button class="btn btn-primary" onclick="app.saveNewWord()">Kaydet</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/words.js?v=12"></script>
+    <script src="js/app.js?v=5"></script>
+</body>
+
+</html>
