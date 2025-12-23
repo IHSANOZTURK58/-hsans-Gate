@@ -2,8 +2,8 @@
  * English Vocabulary Game - Survival Mode
  */
 
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, limit, serverTimestamp } from "firebase/firestore";
+// Firebase Compat Mode - No imports needed
+// Uses global 'firebase' object
 
 // Config
 const firebaseConfig = {
@@ -16,9 +16,9 @@ const firebaseConfig = {
     measurementId: "G-S2FEZYQRR4"
 };
 
-// Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
-const db = getFirestore(firebaseApp);
+// Initialize Firebase (Compat)
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
 const app = {
     // Config
@@ -60,14 +60,17 @@ const app = {
     },
 
     setupFirebaseListener() {
-        const q = query(collection(db, "scores"), orderBy("score", "desc"), limit(this.MAX_LEADERBOARD));
-        onSnapshot(q, (snapshot) => {
-            this.state.leaderboard = [];
-            snapshot.forEach((doc) => {
-                this.state.leaderboard.push(doc.data());
+        // Compat Syntax
+        db.collection("scores")
+            .orderBy("score", "desc")
+            .limit(this.MAX_LEADERBOARD)
+            .onSnapshot((snapshot) => {
+                this.state.leaderboard = [];
+                snapshot.forEach((doc) => {
+                    this.state.leaderboard.push(doc.data());
+                });
+                this.renderLeaderboard();
             });
-            this.renderLeaderboard();
-        });
     },
 
     getAllWords() {
@@ -628,11 +631,12 @@ const app = {
 
     async saveScoreToFirebase() {
         try {
-            await addDoc(collection(db, "scores"), {
+            // Compat Syntax
+            await db.collection("scores").add({
                 name: this.state.playerName,
                 score: this.state.score,
                 date: new Date().toLocaleDateString('tr-TR'),
-                timestamp: serverTimestamp()
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
             });
             console.log("Score saved!");
         } catch (e) {
