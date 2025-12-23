@@ -38,6 +38,9 @@ const app = {
         currentOptions: [],
         filters: { search: '', showFavsOnly: false },
 
+        // Audio State
+        isMusicPlaying: false,
+
         // New Mode State
         playerName: '',
         gameMode: 'survival', // 'survival' | 'rush'
@@ -49,7 +52,9 @@ const app = {
     init() {
         this.loadData();
         this.setupUI();
+        this.setupUI();
         this.setupFirebaseListener();
+        this.initMusic();
 
         // Force hide gameover modal on startup to prevent it from showing over menu
         const modal = document.getElementById('view-gameover');
@@ -641,6 +646,53 @@ const app = {
             console.log("Score saved!");
         } catch (e) {
             console.error("Error adding score: ", e);
+        }
+    },
+
+    // Audio Logic
+    initMusic() {
+        const storedSetting = localStorage.getItem('music_enabled');
+        this.state.isMusicPlaying = storedSetting === 'true'; // Default false if not set
+
+        const audio = document.getElementById('bg-music');
+        if (audio) {
+            audio.volume = 0.3; // Low volume
+            if (this.state.isMusicPlaying) {
+                // Browsers block autoplay, so we need a user interaction first
+                // We'll try to play, if it fails, we wait for first click
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Autoplay prevented. Waiting for interaction.");
+                        document.addEventListener('click', () => {
+                            if (this.state.isMusicPlaying) audio.play();
+                        }, { once: true });
+                    });
+                }
+            }
+        }
+        this.updateMusicUI();
+    },
+
+    toggleMusic() {
+        const audio = document.getElementById('bg-music');
+        this.state.isMusicPlaying = !this.state.isMusicPlaying;
+
+        if (this.state.isMusicPlaying) {
+            audio.play().catch(e => console.log(e));
+        } else {
+            audio.pause();
+        }
+
+        localStorage.setItem('music_enabled', this.state.isMusicPlaying);
+        this.updateMusicUI();
+    },
+
+    updateMusicUI() {
+        const btn = document.getElementById('btn-music');
+        if (btn) {
+            btn.textContent = this.state.isMusicPlaying ? '🎵' : '🔇';
+            btn.style.opacity = this.state.isMusicPlaying ? '1' : '0.5';
         }
     }
 };
