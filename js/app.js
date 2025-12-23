@@ -2,16 +2,34 @@
  * English Vocabulary Game - Survival Mode
  */
 
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, limit, serverTimestamp } from "firebase/firestore";
+
+// Config
+const firebaseConfig = {
+    apiKey: "AIzaSyAj6zt-30z_BX5jIM8JQW8kbK6qHSatZwQ",
+    authDomain: "ihsansgate.firebaseapp.com",
+    projectId: "ihsansgate",
+    storageBucket: "ihsansgate.firebasestorage.app",
+    messagingSenderId: "731110929518",
+    appId: "1:731110929518:web:723c3dd71d593c5e04627f",
+    measurementId: "G-S2FEZYQRR4"
+};
+
+// Initialize Firebase
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(firebaseApp);
+
 const app = {
     // Config
     POINTS_PER_QUESTION: 5,
     JOKER_COST: 200,
-    MAX_LEADERBOARD: 5,
+    MAX_LEADERBOARD: 10, // Increased for global
 
     state: {
         currentView: 'menu',
         score: 0,
-        leaderboard: [], // { name: string, score: number, date: string }
+        leaderboard: [], // Global Data
         wallet: 0,
         favorites: [],
         customWords: [],
@@ -31,12 +49,25 @@ const app = {
     init() {
         this.loadData();
         this.setupUI();
+        this.setupFirebaseListener();
+
         // Force hide gameover modal on startup to prevent it from showing over menu
         const modal = document.getElementById('view-gameover');
         if (modal) modal.classList.add('hidden');
 
         this.render();
         this.renderLeaderboard();
+    },
+
+    setupFirebaseListener() {
+        const q = query(collection(db, "scores"), orderBy("score", "desc"), limit(this.MAX_LEADERBOARD));
+        onSnapshot(q, (snapshot) => {
+            this.state.leaderboard = [];
+            snapshot.forEach((doc) => {
+                this.state.leaderboard.push(doc.data());
+            });
+            this.renderLeaderboard();
+        });
     },
 
     getAllWords() {
@@ -48,29 +79,23 @@ const app = {
         const stored = localStorage.getItem('vocab_game_data_v2');
         if (stored) {
             const data = JSON.parse(stored);
-            this.state.leaderboard = data.leaderboard || [];
+            // Leaderboard is now global, don't load local one except for migration maybe?
+            // this.state.leaderboard = data.leaderboard || []; 
             this.state.wallet = data.wallet || 0;
             this.state.favorites = data.favorites || [];
             this.state.customWords = data.customWords || [];
         } else {
-            // Migrate old high score if exists
-            const oldData = localStorage.getItem('vocab_game_data');
-            if (oldData) {
-                const d = JSON.parse(oldData);
-                if (d.highScore > 0) {
-                    this.state.leaderboard.push({ name: 'Eski Rekor', score: d.highScore, date: new Date().toLocaleDateString() });
-                }
-                this.state.wallet = d.wallet || 0;
-                this.state.favorites = d.favorites || [];
-                this.state.customWords = [];
-            }
+            // New user or cleared data
+            this.state.wallet = 0;
+            this.state.favorites = [];
+            this.state.customWords = [];
         }
         this.updateHeaderStats();
     },
 
     saveData() {
         const data = {
-            leaderboard: this.state.leaderboard,
+            // leaderboard: this.state.leaderboard, // Don't save global board to local
             wallet: this.state.wallet,
             favorites: this.state.favorites,
             customWords: this.state.customWords
@@ -345,13 +370,7 @@ const app = {
 
         // Leaderboard logic ONLY for Rush mode
         if (this.state.gameMode === 'rush' && this.state.score > 0) {
-            this.state.leaderboard.push({
-                name: this.state.playerName,
-                score: this.state.score,
-                date: new Date().toLocaleDateString('tr-TR')
-            });
-            this.state.leaderboard.sort((a, b) => b.score - a.score);
-            this.state.leaderboard = this.state.leaderboard.slice(0, this.MAX_LEADERBOARD);
+            this.saveScoreToFirebase();
         }
 
         this.saveData();
@@ -605,7 +624,22 @@ const app = {
                 if (livesEl) livesEl.classList.add('hidden');
             }
         }
+    },
+
+    async saveScoreToFirebase() {
+        try {
+            await addDoc(collection(db, "scores"), {
+                name: this.state.playerName,
+                score: this.state.score,
+                date: new Date().toLocaleDateString('tr-TR'),
+                timestamp: serverTimestamp()
+            });
+            console.log("Score saved!");
+        } catch (e) {
+            console.error("Error adding score: ", e);
+        }
     }
 };
 
 window.onload = () => app.init();
+window.app = app; // Expose to window for HTML onclick handlers
