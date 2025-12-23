@@ -24,7 +24,7 @@ const app = {
     // Config
     POINTS_PER_QUESTION: 5,
     JOKER_COST: 200,
-    MAX_LEADERBOARD: 10, // Increased for global
+    MAX_LEADERBOARD: 5, // Request: Limit to top 5
 
     state: {
         currentView: 'menu',
