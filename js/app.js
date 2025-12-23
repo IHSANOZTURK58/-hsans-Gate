@@ -40,6 +40,7 @@ const app = {
 
         // Audio State
         isMusicPlaying: false,
+        musicVolume: 0.3,
 
         // New Mode State
         playerName: '',
@@ -652,11 +653,19 @@ const app = {
     // Audio Logic
     initMusic() {
         const storedSetting = localStorage.getItem('music_enabled');
-        this.state.isMusicPlaying = storedSetting === 'true'; // Default false if not set
+        const storedVol = localStorage.getItem('music_volume');
+
+        // Default true if not set (null), otherwise parse string
+        this.state.isMusicPlaying = storedSetting === null ? true : (storedSetting === 'true');
+        this.state.musicVolume = storedVol ? parseFloat(storedVol) : 0.3;
 
         const audio = document.getElementById('bg-music');
         if (audio) {
-            audio.volume = 0.3; // Low volume
+            audio.volume = this.state.musicVolume;
+            // Update slider UI
+            const slider = document.getElementById('volume-slider');
+            if (slider) slider.value = this.state.musicVolume;
+
             if (this.state.isMusicPlaying) {
                 // Browsers block autoplay, so we need a user interaction first
                 // We'll try to play, if it fails, we wait for first click
@@ -672,6 +681,15 @@ const app = {
             }
         }
         this.updateMusicUI();
+    },
+
+    setVolume(value) {
+        this.state.musicVolume = parseFloat(value);
+        const audio = document.getElementById('bg-music');
+        if (audio) {
+            audio.volume = this.state.musicVolume;
+        }
+        localStorage.setItem('music_volume', this.state.musicVolume);
     },
 
     toggleMusic() {
