@@ -36,6 +36,7 @@ const app = {
         if (modal) modal.classList.add('hidden');
 
         this.render();
+        this.renderLeaderboard();
     },
 
     getAllWords() {
