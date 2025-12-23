@@ -235,16 +235,35 @@ const app = {
         if (modal) modal.classList.add('hidden');
     },
 
-    confirmReset() {
+    async confirmReset() {
         const input = document.getElementById('reset-password-input');
         const password = input ? input.value : '';
 
         if (password === '24103021031') {
-            localStorage.removeItem('vocab_game_data_v2');
-            localStorage.removeItem('vocab_game_data');
-            // Remove name as well to fully reset
-            localStorage.removeItem('last_player_name');
-            location.reload();
+            if (!confirm("⚠️ DIKKAT: Bu işlem TÜM DÜNYADAKİ rekor listesini temizleyecek!\n(Kişisel elmaslar silinmez.)\n\nDevam etmek istiyor musun?")) return;
+
+            try {
+                // Show loading
+                if (input) input.value = "SİLİNİYOR...";
+
+                // Get all scores
+                const snapshot = await db.collection("scores").get();
+
+                // Batch delete (or loop if batch is complex in compat, loop is safer for quick impl)
+                const batch = db.batch();
+                snapshot.docs.forEach((doc) => {
+                    batch.delete(doc.ref);
+                });
+                await batch.commit();
+
+                alert("✅ Global Rekor Tablosu Başarıyla Temizlendi!");
+                this.closePasswordModal();
+                // We don't reload, just re-fetch to show empty table
+                // this.renderLeaderboard(); // Listener will catch it automatically
+            } catch (e) {
+                console.error("Error clearing leaderboard: ", e);
+                alert("Hata oluştu: " + e.message);
+            }
         } else {
             alert("⚠️ Yanlış Parola!");
             if (input) {
