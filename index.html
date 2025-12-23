@@ -21,11 +21,15 @@
                 <h1>İhsans<span class="highlight">Gate</span></h1>
             </div>
             <nav class="nav-controls">
+                <button id="btn-music" class="btn-music" onclick="app.toggleMusic()" title="Müziği Aç/Kapat">
+                    🎵
+                </button>
                 <div class="wallet-display" title="Toplam Birikmiş Puan">
                     <span class="wallet-icon">💎</span>
                     <span id="wallet-amount">0</span>
                 </div>
             </nav>
+            <audio id="bg-music" src="assets/bg_music.mp3" loop></audio>
         </header>
 
         <main id="app-content">
