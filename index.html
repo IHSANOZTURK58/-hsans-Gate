@@ -163,7 +163,7 @@
             <div id="view-password-modal" class="modal-overlay hidden">
                 <div class="modal-content">
                     <h3>🔒 Güvenlik Kontrolü</h3>
-                    <p>İlerlemeyi sıfırlamak için parolayı girin:</p>
+                    <p id="password-modal-msg">İşlemi onaylamak için parolayı girin:</p>
 
                     <div class="form-group">
                         <input type="password" id="reset-password-input" placeholder="Parola"
@@ -172,7 +172,7 @@
 
                     <div style="display:flex; gap:1rem; justify-content:center; margin-top:1.5rem">
                         <button class="btn btn-secondary" onclick="app.closePasswordModal()">İptal</button>
-                        <button class="btn btn-primary" onclick="app.confirmReset()"
+                        <button class="btn btn-primary" onclick="app.submitPassword()"
                             style="background-color: var(--accent-red); border-color: var(--accent-red)">Onayla</button>
                     </div>
                 </div>
