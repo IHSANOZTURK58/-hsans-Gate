@@ -47,7 +47,9 @@ const app = {
         gameMode: 'survival', // 'survival' | 'rush'
         lives: 3,
         timer: 120, // seconds
-        timerInterval: null
+        timer: 120, // seconds
+        timerInterval: null,
+        pendingPasswordAction: null // 'reset' | 'addWord'
     },
 
     init() {
@@ -222,8 +224,15 @@ const app = {
     },
 
     resetProgress() {
+        this.state.pendingPasswordAction = 'reset';
+        this.openPasswordModal("İlerlemeyi sıfırlamak için parolayı girin:");
+    },
+
+    openPasswordModal(message) {
         const modal = document.getElementById('view-password-modal');
+        const msgEl = document.getElementById('password-modal-msg');
         if (modal) {
+            if (msgEl) msgEl.textContent = message;
             modal.classList.remove('hidden');
             const input = document.getElementById('reset-password-input');
             if (input) {
@@ -234,39 +243,28 @@ const app = {
     },
 
     closePasswordModal() {
+        this.state.pendingPasswordAction = null;
         const modal = document.getElementById('view-password-modal');
         if (modal) modal.classList.add('hidden');
+        const input = document.getElementById('reset-password-input');
+        if (input) input.value = '';
     },
 
-    async confirmReset() {
+    async submitPassword() {
         const input = document.getElementById('reset-password-input');
         const password = input ? input.value : '';
 
         if (password === '24103021031') {
-            if (!confirm("⚠️ DIKKAT: Bu işlem TÜM DÜNYADAKİ rekor listesini temizleyecek!\n(Kişisel elmaslar silinmez.)\n\nDevam etmek istiyor musun?")) return;
+            // Password Correct
+            const action = this.state.pendingPasswordAction;
+            this.closePasswordModal();
 
-            try {
-                // Show loading
-                if (input) input.value = "SİLİNİYOR...";
-
-                // Get all scores
-                const snapshot = await db.collection("scores").get();
-
-                // Batch delete (or loop if batch is complex in compat, loop is safer for quick impl)
-                const batch = db.batch();
-                snapshot.docs.forEach((doc) => {
-                    batch.delete(doc.ref);
-                });
-                await batch.commit();
-
-                alert("✅ Global Rekor Tablosu Başarıyla Temizlendi!");
-                this.closePasswordModal();
-                // We don't reload, just re-fetch to show empty table
-                // this.renderLeaderboard(); // Listener will catch it automatically
-            } catch (e) {
-                console.error("Error clearing leaderboard: ", e);
-                alert("Hata oluştu: " + e.message);
+            if (action === 'reset') {
+                await this.performReset();
+            } else if (action === 'addWord') {
+                this.performShowAddWord();
             }
+
         } else {
             alert("⚠️ Yanlış Parola!");
             if (input) {
@@ -275,6 +273,27 @@ const app = {
                 input.style.border = '2px solid #ef4444';
                 setTimeout(() => input.style.border = '', 2000);
             }
+        }
+    },
+
+    async performReset() {
+        if (!confirm("⚠️ DIKKAT: Bu işlem TÜM DÜNYADAKİ rekor listesini temizleyecek!\n(Kişisel elmaslar silinmez.)\n\nDevam etmek istiyor musun?")) return;
+
+        try {
+            // Get all scores
+            const snapshot = await db.collection("scores").get();
+
+            // Batch delete
+            const batch = db.batch();
+            snapshot.docs.forEach((doc) => {
+                batch.delete(doc.ref);
+            });
+            await batch.commit();
+
+            alert("✅ Global Rekor Tablosu Başarıyla Temizlendi!");
+        } catch (e) {
+            console.error("Error clearing leaderboard: ", e);
+            alert("Hata oluştu: " + e.message);
         }
     },
 
@@ -520,6 +539,11 @@ const app = {
 
     // Add Custom Word Logic
     showAddWord() {
+        this.state.pendingPasswordAction = 'addWord';
+        this.openPasswordModal("Yeni kelime eklemek için parolayı girin:");
+    },
+
+    performShowAddWord() {
         this.state.currentView = 'add-word';
         this.render();
         // Reset inputs
