@@ -137,7 +137,10 @@ const app = {
         this.renderLeaderboard();
     },
 
-    startGame(mode = 'survival') {
+    startGame(mode) {
+        // Mevcut modu koru veya varsayılan olarak survival kullan
+        const targetMode = mode || this.state.gameMode || 'survival';
+
         const nameInput = document.getElementById('menu-player-name');
         const name = nameInput ? nameInput.value.trim() : '';
 
@@ -152,14 +155,14 @@ const app = {
 
         this.state.playerName = name;
         localStorage.setItem('last_player_name', name);
-        this.state.gameMode = mode;
+        this.state.gameMode = targetMode;
         this.state.score = 0;
 
-        if (mode === 'rush') {
+        if (targetMode === 'rush') {
             this.state.lives = 3;
             this.state.timer = 120; // 2 minutes
             this.startTimer();
-        } else if (mode === 'favorites') {
+        } else if (targetMode === 'favorites') {
             if (this.state.favorites.length < 4) {
                 alert("⚠️ Favoriler modunu açmak için en az 4 kelimeyi favorilemelisiniz!");
                 this.showMenu();
