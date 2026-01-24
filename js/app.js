@@ -19,6 +19,7 @@ const firebaseConfig = {
 // Initialize Firebase (Compat)
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+const auth = firebase.auth();
 
 const app = {
     // Config
@@ -47,7 +48,6 @@ const app = {
         gameMode: 'survival', // 'survival' | 'rush'
         lives: 3,
         timer: 120, // seconds
-        timer: 120, // seconds
         timerInterval: null,
         pendingPasswordAction: null // 'reset' | 'addWord'
     },
@@ -55,8 +55,6 @@ const app = {
     init() {
         this.loadData();
         this.setupUI();
-        this.setupUI();
-        this.setupFirebaseListener();
         this.initMusic();
 
         // Force hide gameover modal on startup to prevent it from showing over menu
@@ -65,6 +63,22 @@ const app = {
 
         this.render();
         this.renderLeaderboard();
+
+        // Authenticate then listen
+        this.authenticateAndListen();
+    },
+
+    authenticateAndListen() {
+        auth.signInAnonymously()
+            .then(() => {
+                console.log("Signed in anonymously");
+                this.setupFirebaseListener();
+            })
+            .catch((error) => {
+                console.error("Auth Error", error);
+                const tbody = document.getElementById('leaderboard-body');
+                if (tbody) tbody.innerHTML = '<tr><td colspan="3" style="color:red; text-align:center;">Bağlantı Hatası (Auth)</td></tr>';
+            });
     },
 
     setupFirebaseListener() {
@@ -78,6 +92,16 @@ const app = {
                     this.state.leaderboard.push(doc.data());
                 });
                 this.renderLeaderboard();
+            }, (error) => {
+                console.error("Leaderboard Error:", error);
+                const tbody = document.getElementById('leaderboard-body');
+                if (tbody) {
+                    if (error.code === 'permission-denied') {
+                        tbody.innerHTML = '<tr><td colspan="3" style="color:red; text-align:center;">Yetki Hatası (Erişim Reddedildi)</td></tr>';
+                    } else {
+                        tbody.innerHTML = `<tr><td colspan="3" style="color:red; text-align:center;">Hata: ${error.message}</td></tr>`;
+                    }
+                }
             });
     },
 
@@ -693,6 +717,7 @@ const app = {
             console.log("Score saved!");
         } catch (e) {
             console.error("Error adding score: ", e);
+            alert("Skor kaydedilemedi: " + e.message);
         }
     },
 
