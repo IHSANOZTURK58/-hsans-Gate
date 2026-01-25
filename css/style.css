@@ -948,3 +948,57 @@ th {
     border-color: var(--accent-gold);
 }
 
+
+/* Mobile Layout Adjustments */
+@media (max-width: 480px) {
+    .app-container {
+        height: 100dvh; /* Dynamic viewport height fix for mobile browsers */
+    }
+
+    .hero {
+        margin-top: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        margin-bottom: 1rem;
+    }
+
+    .leaderboard-section {
+        margin: 1rem 0;
+    }
+
+    .table-container {
+        /* Limit table height */
+        max-height: 160px;
+        overflow-y: auto;
+    }
+    
+    .menu-actions {
+        padding: 0 1rem;
+        gap: 0.5rem;
+    }
+
+    .mode-selection {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .btn-mode-survival, 
+    .btn-mode-rush, 
+    .btn-mode-favs {
+        padding: 0.8rem 1rem;
+    }
+
+    /* Landing adjustments */
+    .btn-admin-icon {
+        bottom: 20px; /* Bring inside viewport */
+        right: 20px;
+        opacity: 0.1; /* Very subtle */
+        pointer-events: auto; /* Ensure clickable */
+    }
+}
+
