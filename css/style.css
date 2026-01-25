@@ -872,3 +872,79 @@ th {
     font-size: 1.2rem;
     letter-spacing: 2px;
 }
+/* Landing View */
+#view-landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.landing-content {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.logo-large h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.btn-landing {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+    animation: pulse 2s infinite;
+}
+
+.btn-admin-icon {
+    position: absolute;
+    bottom: -150px; /* Push it down */
+    right: 0;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    opacity: 0.3;
+    cursor: default; /* Masquerade as non-clickable */
+    transition: opacity 0.3s;
+}
+
+.btn-admin-icon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Admin Grid */
+.admin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.admin-grid .btn {
+    height: 150px;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border-subtle);
+}
+
+.admin-grid .btn:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--accent-gold);
+}
+

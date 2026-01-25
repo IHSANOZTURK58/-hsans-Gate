@@ -47,8 +47,48 @@
         </header>
 
         <main id="app-content">
+            <!-- LANDING VIEW -->
+            <div id="view-landing" class="view active">
+                <div class="landing-content">
+                    <div class="logo-large">
+                        <span class="logo-icon">🔥</span>
+                        <h1>İhsans<span class="highlight">Gate</span></h1>
+                        <p class="subtitle">Kelime Dağarcığını Geliştir</p>
+                    </div>
+
+                    <button class="btn btn-primary btn-landing" onclick="app.showMenu()">GİRİŞ</button>
+
+                    <button class="btn-admin-icon" onclick="app.checkAdminAuth()" title="Yönetici Girişi">
+                        👤
+                    </button>
+                </div>
+            </div>
+
+            <!-- ADMIN VIEW -->
+            <div id="view-admin" class="view hidden">
+                <h2 style="text-align:center; margin-bottom:2rem; color:var(--accent-gold)">Yönetici Paneli</h2>
+
+                <div class="admin-grid">
+                    <button class="btn btn-secondary" onclick="app.performShowAddWord()">
+                        <span style="font-size:2rem; display:block">📝</span>
+                        Kelime Ekle
+                    </button>
+
+                    <button class="btn btn-secondary" onclick="app.resetProgress()">
+                        <span style="font-size:2rem; display:block">🗑️</span>
+                        İlerlemeyi Sıfırla
+                    </button>
+                </div>
+
+                <div style="margin-top:3rem; text-align:center">
+                    <button class="btn btn-text" onclick="app.showLanding()">
+                        &larr; Ana Ekrana Dön
+                    </button>
+                </div>
+            </div>
+
             <!-- MENU VIEW -->
-            <div id="view-menu" class="view active">
+            <div id="view-menu" class="view hidden">
                 <div class="hero">
                     <h2>Survival Modu</h2>
                     <p>Tek bir yanlış hakkın var.</p>
@@ -93,10 +133,8 @@
 
                     <div style="display:flex; gap:0.5rem; justify-content:center; margin-top:1.5rem">
                         <button class="btn btn-sm btn-secondary" onclick="app.showWordList()">Kelime Listesi</button>
-                        <button class="btn btn-sm btn-secondary" onclick="app.showAddWord()">Kelime Ekle</button>
+                        <button class="btn btn-text" onclick="app.showLanding()" style="font-size:0.8rem">Çıkış</button>
                     </div>
-                    <button class="btn btn-text" onclick="app.resetProgress()"
-                        style="font-size:0.8rem; margin-top:1rem">İlerlemeyi Sıfırla</button>
                 </div>
             </div>
 
@@ -228,7 +266,7 @@
                 </div>
 
                 <div style="margin-top:2rem; display:flex; gap:1rem">
-                    <button class="btn btn-secondary" onclick="app.showMenu()">İptal</button>
+                    <button class="btn btn-secondary" onclick="app.showAdmin()">İptal</button>
                     <button class="btn btn-primary" onclick="app.saveNewWord()">Kaydet</button>
                 </div>
             </div>

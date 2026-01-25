@@ -33,7 +33,10 @@ const app = {
         leaderboard: [], // Global Data
         wallet: 0,
         favorites: [],
-        customWords: [],
+        wallet: 0,
+        favorites: [],
+        customWords: [], // Local legacy
+        globalWords: [], // Firebase Global
         selectedAddLevel: 'A1',
         currentWord: null,
         currentOptions: [],
@@ -57,9 +60,13 @@ const app = {
         this.setupUI();
         this.initMusic();
 
+        // Start at Landing
+        this.state.currentView = 'landing';
+
         // Force hide gameover modal on startup to prevent it from showing over menu
         const modal = document.getElementById('view-gameover');
         if (modal) modal.classList.add('hidden');
+
 
         this.render();
         this.renderLeaderboard();
@@ -72,12 +79,35 @@ const app = {
         auth.signInAnonymously()
             .then(() => {
                 console.log("Signed in anonymously");
-                this.setupFirebaseListener();
+                this.setupFirebaseListener(); // Scores
+                this.setupWordListener();     // Global Words
             })
             .catch((error) => {
                 console.error("Auth Error", error);
                 const tbody = document.getElementById('leaderboard-body');
                 if (tbody) tbody.innerHTML = '<tr><td colspan="3" style="color:red; text-align:center;">Bağlantı Hatası (Auth)</td></tr>';
+            });
+    },
+
+    setupWordListener() {
+        db.collection("words")
+            .onSnapshot((snapshot) => {
+                this.state.globalWords = [];
+                snapshot.forEach((doc) => {
+                    // Safe handling of data
+                    const d = doc.data();
+                    if (d.word && d.meaning) {
+                        this.state.globalWords.push({
+                            id: doc.id, // Use firestore ID
+                            word: d.word,
+                            meaning: d.meaning,
+                            level: d.level || 'A1'
+                        });
+                    }
+                });
+                console.log("Global words loaded:", this.state.globalWords.length);
+                // Refresh list if open
+                if (this.state.currentView === 'list') this.renderList();
             });
     },
 
@@ -107,7 +137,8 @@ const app = {
 
     getAllWords() {
         const staticData = window.WORD_DATA || [];
-        return [...staticData, ...this.state.customWords];
+        // Combine all sources: Static + Local(Legacy) + Global(Firebase)
+        return [...staticData, ...this.state.customWords, ...this.state.globalWords];
     },
 
     loadData() {
@@ -155,12 +186,27 @@ const app = {
     },
 
     // Navigation
+    showLanding() {
+        this.state.currentView = 'landing';
+        this.render();
+    },
+
+    showAdmin() {
+        this.state.currentView = 'admin';
+        this.render();
+    },
+
     showMenu() {
         if (this.state.timerInterval) clearInterval(this.state.timerInterval);
         this.state.currentView = 'menu';
         document.getElementById('view-gameover').classList.add('hidden');
         this.render();
         this.renderLeaderboard();
+    },
+
+    checkAdminAuth() {
+        this.state.pendingPasswordAction = 'adminAccess';
+        this.openPasswordModal("Yönetici Paneline girmek için parolayı girin:");
     },
 
     startGame(mode) {
@@ -287,6 +333,9 @@ const app = {
                 await this.performReset();
             } else if (action === 'addWord') {
                 this.performShowAddWord();
+            } else if (action === 'adminAccess') {
+                this.state.currentView = 'admin';
+                this.render();
             }
 
         } else {
@@ -590,7 +639,7 @@ const app = {
         }
     },
 
-    saveNewWord() {
+    async saveNewWord() {
         const wordInput = document.getElementById('new-word-en');
         const meanInput = document.getElementById('new-word-tr');
 
@@ -602,22 +651,24 @@ const app = {
             return;
         }
 
-        const newId = Date.now(); // Unique enough for local
-        const newEntry = {
-            id: newId,
-            word: word,
-            meaning: meaning,
-            level: this.state.selectedAddLevel
-        };
+        try {
+            await db.collection("words").add({
+                word: word,
+                meaning: meaning,
+                level: this.state.selectedAddLevel,
+                addedBy: this.state.playerName || 'Admin',
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            });
 
-        this.state.customWords.push(newEntry);
-        this.saveData();
+            alert("✅ Kelime Global Veritabanına Eklendi! (Herkes görecek)");
 
-        alert("Kelime başarıyla eklendi!");
-
-        wordInput.value = '';
-        meanInput.value = '';
-        wordInput.focus();
+            wordInput.value = '';
+            meanInput.value = '';
+            wordInput.focus();
+        } catch (e) {
+            console.error("Error adding word:", e);
+            alert("Hata: " + e.message);
+        }
     },
 
     renderLeaderboard() {
