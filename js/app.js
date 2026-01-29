@@ -34,6 +34,7 @@ const app = {
         wallet: 0,
         favorites: [],
         wallet: 0,
+        highScore: 0, // Track Personal Best
         favorites: [],
         customWords: [], // Local legacy
         globalWords: [], // Firebase Global
@@ -59,6 +60,7 @@ const app = {
         this.loadData();
         this.setupUI();
         this.initMusic();
+        this.initSFX(); // Initialize Sound Effects
 
         // Start at Landing
         this.state.currentView = 'landing';
@@ -147,7 +149,9 @@ const app = {
             const data = JSON.parse(stored);
             // Leaderboard is now global, don't load local one except for migration maybe?
             // this.state.leaderboard = data.leaderboard || []; 
+            // this.state.leaderboard = data.leaderboard || []; 
             this.state.wallet = data.wallet || 0;
+            this.state.highScore = data.highScore || 0; // Load High Score
             this.state.favorites = data.favorites || [];
             this.state.customWords = data.customWords || [];
         } else {
@@ -163,6 +167,7 @@ const app = {
         const data = {
             // leaderboard: this.state.leaderboard, // Don't save global board to local
             wallet: this.state.wallet,
+            highScore: this.state.highScore, // Save High Score
             favorites: this.state.favorites,
             customWords: this.state.customWords
         };
@@ -174,20 +179,43 @@ const app = {
         document.addEventListener('dblclick', (e) => e.preventDefault());
 
         // Input validation for Name
-        const nameInput = document.getElementById('menu-player-name');
+        // Input validation for Name
+        const nameInput = document.getElementById('landing-player-name');
         if (nameInput) {
             nameInput.value = localStorage.getItem('last_player_name') || '';
-            nameInput.addEventListener('input', (e) => {
-                this.state.playerName = e.target.value.trim();
-                const hasName = this.state.playerName.length > 0;
-                // Visual feedback could be added here if needed
+            nameInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') this.enterDashboard();
             });
         }
     },
 
     // Navigation
+    logout() {
+        if (confirm("Çıkış yapmak istediğine emin misin?")) {
+            this.state.isAdmin = false;
+            this.state.playerName = null;
+            this.showLanding();
+        }
+    },
+
     showLanding() {
         this.state.currentView = 'landing';
+        // Reset login state to choices
+        const choices = document.getElementById('login-choices');
+        const form = document.getElementById('user-login-form');
+        if (choices) choices.classList.remove('hidden');
+        if (form) form.classList.add('hidden');
+
+        // Hide all header buttons on landing
+        const adminBtn = document.querySelector('.header-left .btn-icon[title="Yönetici Paneli"]');
+        const logoutBtn = document.querySelector('.header-left .btn-icon[title="Çıkış Yap"]');
+        if (adminBtn) adminBtn.style.display = 'none';
+        if (logoutBtn) logoutBtn.style.display = 'none';
+
+        // Reset name display
+        const displayName = document.getElementById('display-user-name');
+        if (displayName) displayName.textContent = 'Misafir';
+
         this.render();
     },
 
@@ -196,39 +224,109 @@ const app = {
         this.render();
     },
 
-    showMenu() {
-        if (this.state.timerInterval) clearInterval(this.state.timerInterval);
-        this.state.currentView = 'menu';
-        document.getElementById('view-gameover').classList.add('hidden');
-        this.render();
-        this.renderLeaderboard();
-    },
+
 
     checkAdminAuth() {
+        // If already admin, go directly to admin panel
+        if (this.state.isAdmin) {
+            this.showAdmin();
+            return;
+        }
         this.state.pendingPasswordAction = 'adminAccess';
         this.openPasswordModal("Yönetici Paneline girmek için parolayı girin:");
     },
 
-    startGame(mode) {
-        // Mevcut modu koru veya varsayılan olarak survival kullan
-        const targetMode = mode || this.state.gameMode || 'survival';
+    showUserLogin() {
+        document.getElementById('login-choices').classList.add('hidden');
+        document.getElementById('user-login-form').classList.remove('hidden');
+    },
 
-        const nameInput = document.getElementById('menu-player-name');
+    cancelUserLogin() {
+        document.getElementById('user-login-form').classList.add('hidden');
+        document.getElementById('login-choices').classList.remove('hidden');
+    },
+
+    openModeSelection() {
+        this.state.currentView = 'modes';
+        this.render();
+        this.renderLeaderboard();
+    },
+
+    quitGame() {
+        if (this.state.timerInterval) clearInterval(this.state.timerInterval);
+        this.state.isPlaying = false; // Ensure game state is off
+        this.openModeSelection();
+    },
+
+    closeModeSelection() {
+        const modal = document.getElementById('modal-mode-selection');
+        if (modal) {
+            modal.classList.add('hidden');
+        }
+    },
+
+
+    enterDashboard() {
+        const nameInput = document.getElementById('landing-player-name');
         const name = nameInput ? nameInput.value.trim() : '';
 
         if (!name) {
-            alert("⚠️ Lütfen önce isminizi yazın!");
-            // Shake effect or focus
-            nameInput.focus();
-            nameInput.style.border = '2px solid #ef4444';
-            setTimeout(() => nameInput.style.border = '', 2000);
+            alert("⚠️ Lütfen ismini yaz!");
+            if (nameInput) {
+                nameInput.focus();
+                nameInput.style.border = '2px solid #ef4444';
+                setTimeout(() => nameInput.style.border = '', 2000);
+            }
             return;
         }
 
         this.state.playerName = name;
+        this.state.isAdmin = false; // Reset admin status on normal login
         localStorage.setItem('last_player_name', name);
+
+        // Update header name
+        const displayName = document.getElementById('display-user-name');
+        if (displayName) displayName.textContent = name;
+
+        // Hide admin button for normal users, Ensure logout is visible
+        const adminBtn = document.querySelector('.header-left .btn-icon[title="Yönetici Paneli"]');
+        const logoutBtn = document.querySelector('.header-left .btn-icon[title="Çıkış Yap"]');
+
+        if (adminBtn) adminBtn.style.display = 'none';
+        if (logoutBtn) logoutBtn.style.display = 'block';
+
+        this.showDashboard();
+    },
+
+    showDashboard() {
+        if (this.state.timerInterval) clearInterval(this.state.timerInterval);
+        this.state.currentView = 'dashboard';
+        const modal = document.getElementById('view-gameover');
+        if (modal) modal.classList.add('hidden');
+        this.render();
+    },
+
+    startGame(mode) {
+        // this.closeModeSelection(); -> Removed, as we switch views now
+        // Mevcut modu koru veya varsayılan olarak survival kullan
+        const targetMode = mode || this.state.gameMode || 'survival';
+
+        if (!this.state.playerName) {
+            alert("⚠️ Oturum hatası. Lütfen giriş sayfasına dönün.");
+            this.showLanding();
+            return;
+        }
+
+        this.state.gameMode = targetMode;
         this.state.gameMode = targetMode;
         this.state.score = 0;
+
+        // Apply Background based on Mode
+        const gameView = document.getElementById('view-game');
+        if (gameView) {
+            gameView.classList.remove('bg-survival', 'bg-rush', 'bg-favorites');
+            gameView.classList.add(`bg-${targetMode}`);
+        }
 
         if (targetMode === 'rush') {
             this.state.lives = 3;
@@ -237,7 +335,7 @@ const app = {
         } else if (targetMode === 'favorites') {
             if (this.state.favorites.length < 4) {
                 alert("⚠️ Favoriler modunu açmak için en az 4 kelimeyi favorilemelisiniz!");
-                this.showMenu();
+                this.showDashboard();
                 return;
             }
             this.state.lives = 3;
@@ -334,7 +432,21 @@ const app = {
             } else if (action === 'addWord') {
                 this.performShowAddWord();
             } else if (action === 'adminAccess') {
+                this.state.isAdmin = true;
+                this.state.playerName = "Yönetici";
                 this.state.currentView = 'admin';
+
+                // Show admin button in header since we are now admin
+                const adminBtn = document.querySelector('.header-left .btn-icon[title="Yönetici Paneli"]');
+                const logoutBtn = document.querySelector('.header-left .btn-icon[title="Çıkış Yap"]');
+
+                if (adminBtn) adminBtn.style.display = 'block';
+                if (logoutBtn) logoutBtn.style.display = 'block';
+
+                // Update header name
+                const displayName = document.getElementById('display-user-name');
+                if (displayName) displayName.textContent = this.state.playerName;
+
                 this.render();
             }
 
@@ -444,9 +556,11 @@ const app = {
             btnElement.classList.add('correct');
             this.state.score += this.POINTS_PER_QUESTION;
             this.updateScoreDisplay();
+            this.playSound('correct'); // SFX
             setTimeout(() => this.nextQuestion(), 800);
         } else {
             btnElement.classList.add('wrong');
+            this.playSound('wrong'); // SFX
             // Show correct
             allBtns.forEach(b => {
                 if (parseInt(b.dataset.id) === this.state.currentWord.id) b.classList.add('correct');
@@ -489,6 +603,11 @@ const app = {
         // Add Score to Wallet
         if (this.state.score > 0) {
             this.state.wallet += this.state.score;
+
+            // Check High Score
+            if (this.state.score > this.state.highScore) {
+                this.state.highScore = this.state.score;
+            }
         }
 
         // Leaderboard logic ONLY for Rush mode
@@ -608,6 +727,15 @@ const app = {
             const jokerBtn = document.getElementById('btn-joker');
             if (jokerBtn) jokerBtn.disabled = this.state.wallet < this.JOKER_COST;
         }
+        this.updateDashboardStats();
+    },
+
+    updateDashboardStats() {
+        const favCount = document.getElementById('dash-fav-count');
+        const highScore = document.getElementById('dash-high-score');
+
+        if (favCount) favCount.textContent = `⭐ ${this.state.favorites.length}`;
+        if (highScore) highScore.textContent = `🏆 ${this.state.highScore}`;
     },
 
     // Add Custom Word Logic
@@ -681,10 +809,19 @@ const app = {
             return;
         }
 
+        const medals = ['🥇', '🥈', '🥉'];
+
         this.state.leaderboard.forEach((item, index) => {
+            let rankDisplay = index + 1;
+            if (index < 3) {
+                rankDisplay = `<span style="font-size:1.2rem">${medals[index]}</span>`;
+            } else {
+                rankDisplay = `<span class="rank rank-${index + 1}">${index + 1}</span>`;
+            }
+
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                <td><span class="rank rank-${index + 1}">${index + 1}</span></td>
+                <td>${rankDisplay}</td>
                 <td>${item.name}</td>
                 <td style="font-weight:bold; color:var(--accent-gold)">${item.score}</td>
             `;
@@ -735,6 +872,10 @@ const app = {
     },
 
     render() {
+        // Force close overlays
+        document.getElementById('view-gameover').classList.add('hidden');
+        document.getElementById('view-password-modal').classList.add('hidden');
+
         document.querySelectorAll('.view').forEach(el => el.classList.add('hidden'));
         const activeView = document.getElementById(`view-${this.state.currentView}`);
         if (activeView) activeView.classList.remove('hidden');
@@ -833,6 +974,55 @@ const app = {
         if (btn) {
             btn.textContent = this.state.isMusicPlaying ? '🎵' : '🔇';
             btn.style.opacity = this.state.isMusicPlaying ? '1' : '0.5';
+        }
+    },
+
+    // --- SFX MANAGER (Web Audio API) ---
+    initSFX() {
+        try {
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            this.sfxCtx = new AudioContext();
+        } catch (e) {
+            console.error("Web Audio API not supported", e);
+        }
+    },
+
+    playSound(type) {
+        if (!this.sfxCtx) return;
+
+        // Resume context if suspended (browser policy)
+        if (this.sfxCtx.state === 'suspended') {
+            this.sfxCtx.resume();
+        }
+
+        const osc = this.sfxCtx.createOscillator();
+        const gainNode = this.sfxCtx.createGain();
+
+        osc.connect(gainNode);
+        gainNode.connect(this.sfxCtx.destination);
+
+        if (type === 'correct') {
+            // Ding! (Sine wave 600Hz -> 800Hz)
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(600, this.sfxCtx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(800, this.sfxCtx.currentTime + 0.1);
+
+            gainNode.gain.setValueAtTime(0.3, this.sfxCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, this.sfxCtx.currentTime + 0.5);
+
+            osc.start();
+            osc.stop(this.sfxCtx.currentTime + 0.5);
+        } else if (type === 'wrong') {
+            // Buzz (Sawtooth 150Hz -> 100Hz)
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(150, this.sfxCtx.currentTime);
+            osc.frequency.linearRampToValueAtTime(100, this.sfxCtx.currentTime + 0.3);
+
+            gainNode.gain.setValueAtTime(0.3, this.sfxCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, this.sfxCtx.currentTime + 0.3);
+
+            osc.start();
+            osc.stop(this.sfxCtx.currentTime + 0.3);
         }
     }
 };
