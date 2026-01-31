@@ -49,46 +49,273 @@ const app = {
 
         // New Mode State
         playerName: '',
-        gameMode: 'survival', // 'survival' | 'rush'
+        selectedAvatar: 1,
+        gameMode: 'survival', // 'survival' | 'rush' | 'adventure'
         lives: 3,
         timer: 120, // seconds
         timerInterval: null,
-        pendingPasswordAction: null // 'reset' | 'addWord'
+        pendingPasswordAction: null, // 'reset' | 'addWord'
+
+        // Adventure Mode Specific
+        currentLevel: 1,
+        maxLevel: 1, // Highest Unlocked Level
+        levelProgress: 0,
+        adventureLives: 3,
+        levelWords: []
     },
 
     init() {
         this.loadData();
         this.setupUI();
-        this.initMusic();
-        this.initSFX(); // Initialize Sound Effects
+        this.initSFX();
 
         // Start at Landing
         this.state.currentView = 'landing';
 
-        // Force hide gameover modal on startup to prevent it from showing over menu
+        // Force hide gameover modal
         const modal = document.getElementById('view-gameover');
         if (modal) modal.classList.add('hidden');
-
 
         this.render();
         this.renderLeaderboard();
 
-        // Authenticate then listen
+        // Authenticate
         this.authenticateAndListen();
     },
 
-    authenticateAndListen() {
-        auth.signInAnonymously()
-            .then(() => {
-                console.log("Signed in anonymously");
-                this.setupFirebaseListener(); // Scores
-                this.setupWordListener();     // Global Words
-            })
-            .catch((error) => {
-                console.error("Auth Error", error);
-                const tbody = document.getElementById('leaderboard-body');
-                if (tbody) tbody.innerHTML = '<tr><td colspan="3" style="color:red; text-align:center;">Bağlantı Hatası (Auth)</td></tr>';
+    // ... skip ...
+
+    loadData() {
+        const stored = localStorage.getItem('vocab_game_data_v2');
+        if (stored) {
+            const data = JSON.parse(stored);
+            this.state.wallet = data.wallet || 0;
+            this.state.highScore = data.highScore || 0;
+            this.state.favorites = data.favorites || [];
+            this.state.currentLevel = data.currentLevel || 1;
+            this.state.maxLevel = data.maxLevel || this.state.currentLevel || 1; // Backwards compat
+            this.state.customWords = data.customWords || [];
+        } else {
+            this.state.wallet = 0;
+            this.state.favorites = [];
+            this.state.customWords = [];
+        }
+        // Load Avatar
+        const savedAvatar = localStorage.getItem('player_avatar');
+        if (savedAvatar) this.state.selectedAvatar = parseInt(savedAvatar);
+
+        this.updateHeaderStats();
+        this.updateAvatarUI();
+    },
+
+    saveData() {
+        const data = {
+            wallet: this.state.wallet,
+            highScore: this.state.highScore,
+            favorites: this.state.favorites,
+            currentLevel: this.state.currentLevel,
+            maxLevel: this.state.maxLevel, // SAVE MAX
+            customWords: this.state.customWords
+        };
+        localStorage.setItem('vocab_game_data_v2', JSON.stringify(data));
+        this.updateHeaderStats();
+    },
+
+    setupUI() {
+        document.addEventListener('dblclick', (e) => e.preventDefault());
+
+        // Input validation for Name
+        // Input validation for Name
+        const nameInput = document.getElementById('landing-player-name');
+        if (nameInput) {
+            nameInput.value = localStorage.getItem('last_player_name') || '';
+            nameInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') this.enterDashboard();
             });
+        }
+    },
+
+    // Navigation
+    logout() {
+        // Show custom logout confirmation modal
+        const modal = document.getElementById('logout-confirmation-modal');
+        if (modal) modal.classList.remove('hidden');
+    },
+
+    closeLogoutModal() {
+        const modal = document.getElementById('logout-confirmation-modal');
+        if (modal) modal.classList.add('hidden');
+    },
+
+    confirmLogout() {
+        this.closeLogoutModal();
+        this.state.isAdmin = false;
+        this.state.playerName = null;
+        this.showLanding();
+    },
+
+    showGameOverModal() {
+        const modal = document.getElementById('game-over-modal');
+        if (modal) modal.classList.remove('hidden');
+    },
+
+    closeGameOverModal() {
+        const modal = document.getElementById('game-over-modal');
+        if (modal) modal.classList.add('hidden');
+    },
+
+    exitToLevelMap() {
+        this.closeGameOverModal();
+        this.state.currentView = 'level-map';
+        this.render();
+    },
+
+    retryAdventure() {
+        this.closeGameOverModal();
+        this.startGame(); // Restart the current game mode
+    },
+
+    showLanding() {
+        this.state.currentView = 'landing';
+        // Reset login state to choices
+        const choices = document.getElementById('login-choices');
+        const form = document.getElementById('user-login-form');
+        if (choices) choices.classList.remove('hidden');
+        if (form) form.classList.add('hidden');
+
+        // Hide all header buttons on landing
+        const adminBtn = document.querySelector('.header-left .btn-icon[title="Yönetici Paneli"]');
+        const logoutBtn = document.querySelector('.header-left .btn-icon[title="Çıkış Yap"]');
+        if (adminBtn) adminBtn.style.display = 'none';
+        if (logoutBtn) logoutBtn.style.display = 'none';
+
+        // Reset name display
+        const displayName = document.getElementById('display-user-name');
+        if (displayName) displayName.textContent = 'Misafir';
+
+        if (this.updateAvatarUI) this.updateAvatarUI();
+
+        this.render();
+    },
+
+    showAdmin() {
+        this.state.currentView = 'admin';
+        this.render();
+    },
+
+
+
+    checkAdminAuth() {
+        // If already admin, go directly to admin panel
+        if (this.state.isAdmin) {
+            this.showAdmin();
+            return;
+        }
+        this.state.pendingPasswordAction = 'adminAccess';
+        this.openPasswordModal("Yönetici Paneline girmek için parolayı girin:");
+    },
+
+    showUserLogin() {
+        document.getElementById('login-choices').classList.add('hidden');
+        document.getElementById('user-login-form').classList.remove('hidden');
+
+        // Sync UI with state
+        if (this.selectAvatar) {
+            this.selectAvatar(this.state.selectedAvatar);
+        }
+
+        // Focus input
+        setTimeout(() => document.getElementById('landing-player-name').focus(), 100);
+    },
+
+    cancelUserLogin() {
+        document.getElementById('user-login-form').classList.add('hidden');
+        document.getElementById('login-choices').classList.remove('hidden');
+    },
+
+    selectAvatar(id) {
+        this.state.selectedAvatar = id;
+        // Update selection UI in grid
+        document.querySelectorAll('.avatar-option').forEach(el => el.classList.remove('selected'));
+        const selected = document.getElementById(`av-opt-${id}`);
+        if (selected) selected.classList.add('selected');
+
+        // Update preview avatar
+        const preview = document.getElementById('current-avatar-preview');
+        if (preview) {
+            const img = preview.querySelector('img');
+            if (img) img.src = `assets/avatars/avatar_${id}.png`;
+        }
+
+        // Auto-close picker after selection
+        const picker = document.getElementById('avatar-picker-grid');
+        if (picker && !picker.classList.contains('hidden')) {
+            this.toggleAvatarPicker();
+        }
+    },
+
+    toggleAvatarPicker() {
+        const picker = document.getElementById('avatar-picker-grid');
+        const text = document.getElementById('avatar-picker-text');
+
+        if (picker) {
+            const isHidden = picker.classList.contains('hidden');
+            if (isHidden) {
+                picker.classList.remove('hidden');
+                if (text) text.textContent = 'Kapat';
+            } else {
+                picker.classList.add('hidden');
+                if (text) text.textContent = 'Değiştir';
+            }
+        }
+    },
+
+    toggleProfileMenu() {
+        const dropdown = document.getElementById('profile-dropdown');
+        if (dropdown) {
+            dropdown.classList.toggle('hidden');
+        }
+    },
+
+    updateAvatarUI() {
+        const img = document.getElementById('header-avatar');
+        if (img) {
+            img.src = `assets/avatars/avatar_${this.state.selectedAvatar}.png`;
+            // Only show if logged in (playerName exists)
+            img.style.display = this.state.playerName ? 'block' : 'none';
+        }
+    },
+
+    authenticateAndListen() {
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                // User is signed in.
+                console.log("Auth State: Signed in as", user.uid);
+                // We don't necessarily update playerName here, as we use localStorage or manual input
+                this.setupFirebaseListener();
+            } else {
+                // User is signed out.
+                console.log("Auth State: Signed out. Signing in anon...");
+                auth.signInAnonymously()
+                    .catch((error) => {
+                        console.error("Auth Error:", error);
+                    });
+            }
+        });
+
+        // Also listen for word updates
+        this.setupWordListener();
+    },
+
+    openModeSelection() {
+        this.state.currentView = 'modes';
+        this.render();
+        this.renderLeaderboard();
+        // Force refresh leaderboard data
+        if (this.state.leaderboard.length === 0) {
+            // trigger re-fetch if empty? 
+            // listener should handle it.
+        }
     },
 
     setupWordListener() {
@@ -143,119 +370,189 @@ const app = {
         return [...staticData, ...this.state.customWords, ...this.state.globalWords];
     },
 
-    loadData() {
-        const stored = localStorage.getItem('vocab_game_data_v2');
-        if (stored) {
-            const data = JSON.parse(stored);
-            // Leaderboard is now global, don't load local one except for migration maybe?
-            // this.state.leaderboard = data.leaderboard || []; 
-            // this.state.leaderboard = data.leaderboard || []; 
-            this.state.wallet = data.wallet || 0;
-            this.state.highScore = data.highScore || 0; // Load High Score
-            this.state.favorites = data.favorites || [];
-            this.state.customWords = data.customWords || [];
-        } else {
-            // New user or cleared data
-            this.state.wallet = 0;
-            this.state.favorites = [];
-            this.state.customWords = [];
-        }
-        this.updateHeaderStats();
-    },
-
-    saveData() {
-        const data = {
-            // leaderboard: this.state.leaderboard, // Don't save global board to local
-            wallet: this.state.wallet,
-            highScore: this.state.highScore, // Save High Score
-            favorites: this.state.favorites,
-            customWords: this.state.customWords
-        };
-        localStorage.setItem('vocab_game_data_v2', JSON.stringify(data));
-        this.updateHeaderStats();
-    },
-
-    setupUI() {
-        document.addEventListener('dblclick', (e) => e.preventDefault());
-
-        // Input validation for Name
-        // Input validation for Name
-        const nameInput = document.getElementById('landing-player-name');
-        if (nameInput) {
-            nameInput.value = localStorage.getItem('last_player_name') || '';
-            nameInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') this.enterDashboard();
-            });
-        }
-    },
-
-    // Navigation
-    logout() {
-        if (confirm("Çıkış yapmak istediğine emin misin?")) {
-            this.state.isAdmin = false;
-            this.state.playerName = null;
-            this.showLanding();
-        }
-    },
-
-    showLanding() {
-        this.state.currentView = 'landing';
-        // Reset login state to choices
-        const choices = document.getElementById('login-choices');
-        const form = document.getElementById('user-login-form');
-        if (choices) choices.classList.remove('hidden');
-        if (form) form.classList.add('hidden');
-
-        // Hide all header buttons on landing
-        const adminBtn = document.querySelector('.header-left .btn-icon[title="Yönetici Paneli"]');
-        const logoutBtn = document.querySelector('.header-left .btn-icon[title="Çıkış Yap"]');
-        if (adminBtn) adminBtn.style.display = 'none';
-        if (logoutBtn) logoutBtn.style.display = 'none';
-
-        // Reset name display
-        const displayName = document.getElementById('display-user-name');
-        if (displayName) displayName.textContent = 'Misafir';
-
+    showLevelMap() {
+        this.state.currentView = 'level-map';
         this.render();
+        this.renderLevelMap();
+
+        // Scroll to current level (after render)
+        setTimeout(() => {
+            const current = document.querySelector('.level-node.current');
+            if (current) current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
     },
 
-    showAdmin() {
-        this.state.currentView = 'admin';
-        this.render();
-    },
+    renderLevelMap() {
+        const container = document.getElementById('level-map-container');
+        if (!container) return;
+        container.innerHTML = '';
 
+        const totalLevels = 100;
+        let maxUnl = this.state.maxLevel || 1;
 
-
-    checkAdminAuth() {
-        // If already admin, go directly to admin panel
-        if (this.state.isAdmin) {
-            this.showAdmin();
-            return;
+        // Admin Bypass
+        if (this.state.playerName === 'Yönetici') {
+            maxUnl = totalLevels;
         }
-        this.state.pendingPasswordAction = 'adminAccess';
-        this.openPasswordModal("Yönetici Paneline girmek için parolayı girin:");
-    },
 
-    showUserLogin() {
-        document.getElementById('login-choices').classList.add('hidden');
-        document.getElementById('user-login-form').classList.remove('hidden');
-    },
+        // Configuration
+        const nodeSpacing = 80; // Vertical distance
+        const amplitude = 75; // Horizontal wave width (Reduced to keep nodes safe from edges)
+        const details = [];
 
-    cancelUserLogin() {
-        document.getElementById('user-login-form').classList.add('hidden');
-        document.getElementById('login-choices').classList.remove('hidden');
-    },
+        // 1. Calculate Positions (Top-Down: Level 1 at Top)
+        for (let i = 1; i <= totalLevels; i++) {
+            // Level 1 at Top (y=50), Level 100 at Bottom
+            const yPos = (i - 1) * nodeSpacing + 50;
 
-    openModeSelection() {
-        this.state.currentView = 'modes';
-        this.render();
-        this.renderLeaderboard();
+            // X Logic: Sine Wave
+            // We need x to be in the range of our viewBox [-200, 200]
+            const xOffset = Math.sin((i - 1) * 0.6) * amplitude; // amplitude=100. Range [-100, 100]. Safe within [-200, 200].
+
+            details.push({ level: i, x: xOffset, y: yPos });
+        }
+
+        const totalHeight = totalLevels * nodeSpacing + 100;
+        container.style.height = `${totalHeight}px`;
+        container.style.position = 'relative';
+
+        // 2. Draw SVG Path (Smooth Snake)
+        const svgNs = "http://www.w3.org/2000/svg";
+        const svg = document.createElementNS(svgNs, "svg");
+        svg.style.position = "absolute";
+        svg.style.top = 0;
+        svg.style.left = 0;
+        svg.style.width = "100%";
+        svg.style.height = "100%";
+        svg.style.pointerEvents = "none";
+
+        // Center X is 0 in viewBox. Width is 400.
+        // We set preserveAspectRatio to "none" to force the SVG to stretch exactly like our % based divs?
+        // NO. "none" distorts the stroke width.
+        // We want the SVG X-axis to map 1:1 to the Container X-axis.
+        // Container width is unknown (responsive).
+        // If we use % for Divs, we are mapping Range to ContainerWidth.
+        // We need SVG viewBox width to map to ContainerWidth lineary.
+        // If viewBox="-200 0 400 H", it maps -200..200 to 0..clientWidth.
+        // This is exactly what we want. "xMidYMin slice" might crop?
+        // "none"? No.
+        // "xMidYMin meet"? If container is very wide, SVG will be centered and pillarboxed. Divs will stretch 0-100%. ALIGNMENT FAIL.
+        // "xMidYMin slice"? If container is narrow, SVG crops sides. Divs shrink 0-100%. ALIGNMENT FAIL.
+
+        // CORRECT APPROACH:
+        // Force SVG to scale its width fully to the container, regardless of aspect ratio.
+        // preserveAspectRatio="none" is the only way to guarantee -200 maps to 0px and 200 maps to widthpx.
+        // BUT it distorts stroke width.
+        // ALTERNATIVE: Don't use viewBox width 400. Use 100? 
+        // Best: use preserveAspectRatio="none" BUT make the path stroke vector-effect="non-scaling-stroke".
+
+        svg.setAttribute("viewBox", `-200 0 400 ${totalHeight}`);
+        svg.setAttribute("preserveAspectRatio", "none");
+
+        // Generate Path Data (Cubic Bezier)
+        let pathD = `M ${details[0].x} ${details[0].y}`;
+
+        for (let i = 0; i < details.length - 1; i++) {
+            const p1 = details[i];
+            const p2 = details[i + 1];
+            const cpY = (p2.y - p1.y) / 2;
+            const cp1 = { x: p1.x, y: p1.y + cpY };
+            const cp2 = { x: p2.x, y: p2.y - cpY };
+            pathD += ` C ${cp1.x} ${cp1.y}, ${cp2.x} ${cp2.y}, ${p2.x} ${p2.y}`;
+        }
+
+        // Background Path
+        const pathBg = document.createElementNS(svgNs, "path");
+        pathBg.setAttribute("d", pathD);
+        pathBg.setAttribute("stroke", "rgba(255,255,255,0.3)"); // White for dark sky visibility
+        pathBg.setAttribute("stroke-width", "4"); // Thinner because "none" might scale it up horizontally?
+        // vector-effect ensures stroke remains constant pixels!
+        pathBg.setAttribute("vector-effect", "non-scaling-stroke");
+        pathBg.setAttribute("fill", "none");
+        pathBg.setAttribute("stroke-linecap", "round");
+        pathBg.setAttribute("stroke-dasharray", "15 15");
+        svg.appendChild(pathBg);
+
+        // Unlocked Path
+        if (maxUnl > 1) {
+            let unlockedD = `M ${details[0].x} ${details[0].y}`;
+            const limit = Math.min(maxUnl, totalLevels);
+
+            for (let i = 0; i < limit - 1; i++) {
+                const p1 = details[i];
+                const p2 = details[i + 1];
+                const cpY = (p2.y - p1.y) / 2;
+                const cp1 = { x: p1.x, y: p1.y + cpY };
+                const cp2 = { x: p2.x, y: p2.y - cpY };
+                unlockedD += ` C ${cp1.x} ${cp1.y}, ${cp2.x} ${cp2.y}, ${p2.x} ${p2.y}`;
+            }
+
+            const pathDone = document.createElementNS(svgNs, "path");
+            pathDone.setAttribute("d", unlockedD);
+            pathDone.setAttribute("stroke", "var(--neon-gold)");
+            pathDone.setAttribute("stroke-width", "4");
+            pathDone.setAttribute("vector-effect", "non-scaling-stroke");
+            pathDone.setAttribute("fill", "none");
+            pathDone.setAttribute("stroke-linecap", "round");
+            pathDone.style.filter = "drop-shadow(0 0 5px rgba(245, 158, 11, 0.5))";
+            svg.appendChild(pathDone);
+        }
+
+        container.appendChild(svg);
+
+        // 3. Render Nodes
+        details.forEach(pt => {
+            const node = document.createElement('div');
+            node.className = 'level-node';
+            node.textContent = pt.level;
+
+            // Positioning Logic:
+            // Map [-200, 200] to [0%, 100%]
+            // x=-200 -> 0%
+            // x=0 -> 50%
+            // x=200 -> 100%
+            // Formula: ((x + 200) / 400) * 100
+
+            const leftPercent = ((pt.x + 200) / 400) * 100;
+
+            node.style.position = 'absolute';
+            node.style.left = `${leftPercent}%`;
+            node.style.top = `${pt.y}px`;
+            node.style.transform = 'translate(-50%, -50%)';
+            node.style.zIndex = "10";
+
+            // Info for Tooltip
+            const difficulty = this.getDifficultyForLevel(pt.level).join('/');
+            const infoText = `Seviye ${pt.level} | ${difficulty} | 50 Kelime`;
+            node.setAttribute('data-info', infoText);
+
+            // Status
+            if (pt.level < maxUnl) {
+                node.className += ' unlocked completed';
+                node.onclick = () => this.startGame('adventure', pt.level);
+                // Checkmark for finished
+                node.innerHTML += '<span style="position:absolute; bottom:-10px; right:-5px; font-size:14px; background:white; border-radius:50%; padding:2px;">✅</span>';
+            } else if (pt.level === maxUnl) {
+                node.className += ' current';
+                node.onclick = () => this.startGame('adventure', pt.level);
+            } else {
+                node.className += ' locked';
+                node.innerHTML += '<span style="position:absolute; bottom:-12px; font-size:18px; filter:drop-shadow(0 0 3px rgba(255,255,255,0.5));">🔒</span>';
+            }
+
+            container.appendChild(node);
+        });
     },
 
     quitGame() {
         if (this.state.timerInterval) clearInterval(this.state.timerInterval);
         this.state.isPlaying = false; // Ensure game state is off
-        this.openModeSelection();
+
+        if (this.state.gameMode === 'adventure') {
+            this.showLevelMap();
+        } else {
+            this.openModeSelection();
+        }
     },
 
     closeModeSelection() {
@@ -283,6 +580,10 @@ const app = {
         this.state.playerName = name;
         this.state.isAdmin = false; // Reset admin status on normal login
         localStorage.setItem('last_player_name', name);
+        localStorage.setItem('player_avatar', this.state.selectedAvatar);
+
+        // Update Avatar UI
+        this.updateAvatarUI();
 
         // Update header name
         const displayName = document.getElementById('display-user-name');
@@ -306,7 +607,7 @@ const app = {
         this.render();
     },
 
-    startGame(mode) {
+    startGame(mode, level = null) {
         // this.closeModeSelection(); -> Removed, as we switch views now
         // Mevcut modu koru veya varsayılan olarak survival kullan
         const targetMode = mode || this.state.gameMode || 'survival';
@@ -317,7 +618,11 @@ const app = {
             return;
         }
 
-        this.state.gameMode = targetMode;
+        // If specific level requested (and valid), use it
+        if (targetMode === 'adventure' && level) {
+            this.state.currentLevel = level;
+        }
+
         this.state.gameMode = targetMode;
         this.state.score = 0;
 
@@ -340,6 +645,17 @@ const app = {
             }
             this.state.lives = 3;
             this.state.timer = 0;
+        } else if (targetMode === 'adventure') {
+            this.state.timer = 0;
+            this.startAdventureLevel();
+            // Return early since startAdventureLevel calls nextAdventureQuestion -> render
+            // But we need to switch view first
+            this.state.currentView = 'game';
+            document.getElementById('view-gameover').classList.add('hidden');
+            this.updateHeaderStats();
+            this.updateScoreDisplay();
+            this.render();
+            return;
         } else {
             this.state.lives = 1;
             this.state.timer = 0;
@@ -482,8 +798,189 @@ const app = {
         }
     },
 
+    // ADVENTURE MODE LOGIC
+    getDifficultyForLevel(lvl) {
+        if (lvl <= 20) return ['A1', 'A2'];
+        if (lvl <= 50) return ['B1', 'B2'];
+        return ['C1', 'C2'];
+    },
+
+    getFallbackDifficulty(targetDiffs) {
+        // Simple fallback chain: C -> B -> A
+        if (targetDiffs.includes('C1') || targetDiffs.includes('C2')) return ['B1', 'B2'];
+        if (targetDiffs.includes('B1') || targetDiffs.includes('B2')) return ['A1', 'A2'];
+        return ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']; // Desperate fallback
+    },
+
+    generateLevelWords(level) {
+        const requiredCount = 50;
+        let pool = this.getAllWords();
+
+        // 0. Deterministic Sort first (to ensure consistency vs browser differences)
+        // IDs can be numbers (static) or strings (firebase), so String() cast is required.
+        pool.sort((a, b) => String(a.id).localeCompare(String(b.id)));
+
+        let targetDiffs = this.getDifficultyForLevel(level);
+
+        // 1. Filter by target difficulty
+        let candidates = pool.filter(w => targetDiffs.includes(w.level));
+
+        // 2. Fallback if insufficient
+        if (candidates.length < requiredCount) {
+            console.warn(`Level ${level}: Insufficient words in ${targetDiffs}. Found ${candidates.length}. Attempting fallback.`);
+
+            const fallbackDiffs = this.getFallbackDifficulty(targetDiffs);
+            const secondaryCandidates = pool.filter(w => fallbackDiffs.includes(w.level));
+
+            // Avoid duplicates
+            const existingIds = new Set(candidates.map(w => w.id));
+            const distinctSecondary = secondaryCandidates.filter(w => !existingIds.has(w.id));
+
+            // Pseudo-random shuffle for secondary candidates (Seed: Level + 1000)
+            this.shuffleArray(distinctSecondary, level + 1000);
+            candidates = [...candidates, ...distinctSecondary];
+        }
+
+        // 3. Final Fallback (Global Random) if still insufficient
+        if (candidates.length < requiredCount) {
+            const existingIds = new Set(candidates.map(w => w.id));
+            const remaining = pool.filter(w => !existingIds.has(w.id));
+            // Seed: Level + 2000
+            this.shuffleArray(remaining, level + 2000);
+            candidates = [...candidates, ...remaining];
+        }
+
+        // 4. Select deterministic 50 (Seed: Level)
+        // This guarantees we always pick the SAME 50 words for this level.
+        this.shuffleArray(candidates, level);
+        const selectedWords = candidates.slice(0, requiredCount);
+
+        // 5. Randomize Order (User Request: "Sırası farklı olabilir")
+        // The set is fixed, but the order you face them changes every time.
+        this.shuffleArray(selectedWords);
+
+        return selectedWords;
+    },
+
+    startAdventureLevel() {
+        // Reset states FIRST so UI has correct data to render
+        this.state.levelProgress = 0;
+        this.state.adventureLives = 3;
+
+        this.updateLevelUI(); // Show Level X / Progress 0/50 / Lives 3
+        const backgrounds = [
+            'assets/sky-bg.png',
+            'assets/game-bg-nature.png',
+            'assets/game-bg-abstract.png',
+            'assets/game-bg-desert.png',
+            'assets/game-bg-galaxy.png',
+            'assets/game-bg-geometric.png',
+            'assets/game-bg-underwater.png',
+            'assets/game-bg-mountains.png',
+            'assets/game-bg-city.png',
+            'assets/game-bg-paper.png'
+        ];
+
+        const bgIndex = (this.state.currentLevel - 1) % backgrounds.length;
+        const bgUrl = backgrounds[bgIndex];
+
+        const gameView = document.getElementById('view-game');
+        if (gameView) {
+            gameView.style.background = `url('${bgUrl}') no-repeat center center`;
+            gameView.style.backgroundSize = 'cover';
+        }
+
+        // Logic for replaying?
+        // If we replay level 5, but our max is 10. `this.state.currentLevel` is 5.
+        // We just play it.
+        // But `levelProgress` logic relies on fresh start.
+
+        // Always reset progress/lives when starting a fresh level session (even if replay)
+        // Unless we are Resuming? (Not implemented)
+
+        // Reset necessary states
+        this.state.levelProgress = 0;
+        this.state.adventureLives = 3;
+
+        this.state.levelWords = this.generateLevelWords(this.state.currentLevel);
+
+        this.nextAdventureQuestion();
+    },
+
+    nextAdventureQuestion() {
+        if (this.state.levelProgress >= 50) {
+            this.completeLevel();
+            return;
+        }
+
+        const word = this.state.levelWords[this.state.levelProgress];
+        this.prepareGameForWord(word);
+    },
+
+    prepareGameForWord(word) {
+        this.state.currentWord = word;
+
+        // Distractors from GLOBAL pool or LEVEL pool?
+        // Global is better for variety
+        let allWords = this.getAllWords();
+        const distractors = [];
+
+        while (distractors.length < 3) {
+            const idx = Math.floor(Math.random() * allWords.length);
+            const w = allWords[idx];
+            if (w.id !== word.id && !distractors.some(d => d.id === w.id)) {
+                distractors.push(w);
+            }
+        }
+
+        const options = [word, ...distractors];
+        this.shuffleArray(options);
+        this.state.currentOptions = options;
+
+        this.renderGameQuestion();
+        this.updateLevelUI();
+    },
+
+    completeLevel() {
+        // Level Up Logic
+        this.playSound('correct');
+        alert(`🎉 TEBRİKLER! Seviye ${this.state.currentLevel} Tamamlandı!`);
+
+        // Unlock next Level if we are at the max
+        if (this.state.currentLevel >= this.state.maxLevel) {
+            this.state.maxLevel = this.state.currentLevel + 1;
+        }
+
+        this.state.currentLevel++;
+        this.state.levelProgress = 0;
+
+        // Save Progress
+        this.saveData();
+
+        // Start Next
+        this.startAdventureLevel();
+    },
+
+    failAdventureLevel() {
+        this.playSound('wrong');
+        alert(`💀 Seviye ${this.state.currentLevel} Başarısız! Başa dönülüyor...`);
+        this.state.levelProgress = 0;
+        this.state.adventureLives = 3;
+
+        // We do NOT shuffle here anymore. 
+        // startAdventureLevel will re-call generateLevelWords which is now DETERMINISTIC.
+        // So the level will restart with exactly the same words in the same order.
+        this.startAdventureLevel();
+    },
+
     // Game Logic
     nextQuestion() {
+        // Redirect for Adventure Mode
+        if (this.state.gameMode === 'adventure') {
+            this.nextAdventureQuestion();
+            return;
+        }
+
         let data = this.getAllWords();
 
         if (this.state.gameMode === 'favorites') {
@@ -557,7 +1054,14 @@ const app = {
             this.state.score += this.POINTS_PER_QUESTION;
             this.updateScoreDisplay();
             this.playSound('correct'); // SFX
-            setTimeout(() => this.nextQuestion(), 800);
+
+            if (this.state.gameMode === 'adventure') {
+                this.state.levelProgress++;
+                this.updateLevelUI();
+                setTimeout(() => this.nextAdventureQuestion(), 800);
+            } else {
+                setTimeout(() => this.nextQuestion(), 800);
+            }
         } else {
             btnElement.classList.add('wrong');
             this.playSound('wrong'); // SFX
@@ -567,7 +1071,31 @@ const app = {
             });
 
             // Logic Split
-            if (this.state.gameMode === 'rush') {
+            if (this.state.gameMode === 'adventure') {
+                this.state.adventureLives--;
+                this.updateLevelUI();
+
+                if (this.state.adventureLives <= 0) {
+                    setTimeout(() => this.failAdventureLevel(), 1500);
+                } else {
+                    // Repeat same question or allow to proceed?
+                    // "Yanlış cevapta 1 can gider" -> usually you retry or move on?
+                    // User said: "Can 0 olursa o level resetlenir (1. kelimeye döner)."
+                    // Implicitly, if you have lives, you probably just stay on same word or next?
+                    // Standard logic: Show correct, wait, then NEXT word? 
+                    // But if we move to next word, we miss 1 progress count?
+                    // To get 50/50, we must answer 50 correctly.
+                    // If we skip, we can't reach 50.
+                    // So we must RETRY the same word or just count it as fail?
+                    // "50 kelime bitince" -> implying we go through 50 Qs?
+                    // Let's assume we move to next question but don't increment progress?
+                    // NO, if we don't increment progress, we never finish.
+                    // Let's assume we just retry the same word until correct or lives run out.
+                    setTimeout(() => {
+                        this.prepareGameForWord(this.state.currentWord); // Retry same word
+                    }, 1500);
+                }
+            } else if (this.state.gameMode === 'rush') {
                 this.state.lives--;
                 this.renderLives(); // Need to implement/update this helper or do it in renderGameQuestion? 
                 // Better to update UI immediately
@@ -637,6 +1165,28 @@ const app = {
     renderLives() {
         const livesEl = document.getElementById('game-lives');
         if (livesEl) livesEl.textContent = "❤️".repeat(this.state.lives);
+    },
+
+    updateLevelUI() {
+        const livesEl = document.getElementById('game-lives');
+        const levelInfo = document.getElementById('level-info-container');
+        const countInfo = document.getElementById('level-progress-text');
+        const bar = document.getElementById('level-progress-fill');
+
+        if (this.state.gameMode === 'adventure') {
+            if (livesEl) {
+                livesEl.classList.remove('hidden');
+                livesEl.textContent = "❤️".repeat(this.state.adventureLives);
+            }
+            if (levelInfo) {
+                levelInfo.classList.remove('hidden');
+                document.getElementById('current-level-display').textContent = this.state.currentLevel;
+            }
+            if (countInfo) countInfo.textContent = `${this.state.levelProgress} / 50`;
+            if (bar) bar.style.width = `${(this.state.levelProgress / 50) * 100}%`;
+        } else {
+            if (levelInfo) levelInfo.classList.add('hidden');
+        }
     },
 
     useJoker() {
@@ -878,9 +1428,22 @@ const app = {
         }
     },
 
-    shuffleArray(array) {
+    // Updated Shuffle: Supports Optional Seed for Deterministic Levels
+    shuffleArray(array, seed = null) {
+        // Simple seeded PRNG (Mulberry32)
+        let random = Math.random; // Default
+        if (seed !== null) {
+            let s = seed + 0x6D2B79F5;
+            random = () => {
+                let t = s += 0x6D2B79F5;
+                t = Math.imul(t ^ (t >>> 15), t | 1);
+                t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+                return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+            };
+        }
+
         for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
+            const j = Math.floor(random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
     },
@@ -899,11 +1462,15 @@ const app = {
             const timerEl = document.getElementById('game-timer');
             const livesEl = document.getElementById('game-lives');
 
-            if (this.state.gameMode === 'rush' || this.state.gameMode === 'favorites') {
+            if (this.state.gameMode === 'rush' || this.state.gameMode === 'favorites' || this.state.gameMode === 'adventure') {
                 if (timerEl) timerEl.classList.toggle('hidden', this.state.gameMode !== 'rush');
-                if (livesEl) livesEl.classList.remove('hidden');
-                this.updateTimerUI(); // Ensure text is set
-                this.renderLives();   // Ensure hearts are set
+                if (livesEl) {
+                    livesEl.classList.remove('hidden');
+                    // For Adventure, updateLevelUI handles text, but we ensure it's visible here.
+                    // For others, renderLives handles it.
+                    if (this.state.gameMode !== 'adventure') this.renderLives();
+                    else livesEl.textContent = "❤️".repeat(this.state.adventureLives || 3);
+                }
             } else {
                 if (timerEl) timerEl.classList.add('hidden');
                 if (livesEl) livesEl.classList.add('hidden');
@@ -1037,6 +1604,173 @@ const app = {
 
             osc.start();
             osc.stop(this.sfxCtx.currentTime + 0.3);
+        }
+    },
+
+    speakCurrentWord() {
+        let textToSpeak = null;
+
+        if (this.state.currentView === 'writing') {
+            if (this.state.currentWritingWord && this.state.currentWritingWord.word) {
+                textToSpeak = this.state.currentWritingWord.word;
+            }
+        } else {
+            // Default to normal game
+            if (this.state.currentWord && this.state.currentWord.word) {
+                textToSpeak = this.state.currentWord.word;
+            }
+        }
+
+        if (!textToSpeak) return;
+
+        // Cancel any ongoing speech to prevent queueing
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = 'en-US'; // English pronunciation
+        utterance.rate = 0.8; // Slightly slower for clear pronunciation
+
+        window.speechSynthesis.speak(utterance);
+    },
+
+    // --- WRITING MODULE (New) ---
+    startWritingMode() {
+        if (!this.state.playerName) {
+            alert("⚠️ Önce giriş yapmalısınız.");
+            this.showLanding();
+            return;
+        }
+        this.state.currentView = 'writing';
+        this.state.writingScore = 0;
+        this.render();
+        this.nextWritingQuestion();
+    },
+
+    nextWritingQuestion() {
+        const allWords = this.getAllWords();
+        if (allWords.length === 0) return;
+
+        // Pick Random
+        const wordData = allWords[Math.floor(Math.random() * allWords.length)];
+        this.state.currentWritingWord = wordData;
+        this.state.writingInput = Array(wordData.word.length).fill(null); // Empty slots
+
+        // Prepare Pool: Scramble letters
+        const letters = wordData.word.toUpperCase().split('');
+        this.shuffleArray(letters); // Random scramble
+
+        // Map letters to unique objects to track usage (handle duplicate letters like E, E)
+        this.state.writingPool = letters.map((char, index) => ({
+            id: index,
+            char: char,
+            used: false
+        }));
+
+        this.renderWritingBoard();
+    },
+
+    renderWritingBoard() {
+        const wordData = this.state.currentWritingWord;
+
+        // Update Header
+        document.getElementById('writing-score').textContent = this.state.writingScore;
+        document.getElementById('writing-target-meaning').textContent = wordData.meaning;
+        document.getElementById('writing-feedback').textContent = '';
+
+        // Render Slots
+        const slotsContainer = document.getElementById('writing-slots');
+        slotsContainer.innerHTML = '';
+        this.state.writingInput.forEach((char, idx) => {
+            const slot = document.createElement('div');
+            slot.className = `writing-slot ${char ? 'filled' : ''}`;
+            slot.textContent = char ? char.char : '';
+            slot.onclick = () => this.handleSlotClick(idx);
+            slotsContainer.appendChild(slot);
+        });
+
+        // Render Pool
+        const poolContainer = document.getElementById('writing-pool');
+        poolContainer.innerHTML = '';
+        this.state.writingPool.forEach((item) => {
+            const btn = document.createElement('div');
+            btn.className = `letter-tile ${item.used ? 'used' : ''}`;
+            btn.textContent = item.char;
+            btn.onclick = () => this.handleLetterClick(item);
+            poolContainer.appendChild(btn);
+        });
+    },
+
+    handleLetterClick(item) {
+        if (item.used) return;
+
+        // Find first empty slot
+        const emptyIndex = this.state.writingInput.findIndex(val => val === null);
+        if (emptyIndex === -1) return; // Full
+
+        // Place letter
+        this.state.writingInput[emptyIndex] = item;
+        item.used = true;
+
+        this.playSound('click'); // Optional click sound if exists, or silence
+        this.renderWritingBoard();
+
+        // Auto-check if full?
+        if (emptyIndex === this.state.writingInput.length - 1) {
+            // Check immediately or wait for button? 
+            // Better wait for button or auto-check? Let's wait for button or auto-check.
+            // Let's auto-check for smooth flow?
+            // this.checkWritingAnswer();
+        }
+    },
+
+    handleSlotClick(index) {
+        const item = this.state.writingInput[index];
+        if (!item) return;
+
+        // Return to pool
+        item.used = false;
+        this.state.writingInput[index] = null;
+        this.renderWritingBoard();
+    },
+
+    clearWritingSlots() {
+        this.state.writingInput.fill(null);
+        this.state.writingPool.forEach(i => i.used = false);
+        this.renderWritingBoard();
+    },
+
+    checkWritingAnswer() {
+        if (this.state.writingInput.includes(null)) {
+            // Incomplete
+            const fb = document.getElementById('writing-feedback');
+            fb.textContent = "Kelime tamamlanmadı!";
+            fb.style.color = "#ef4444";
+            setTimeout(() => fb.textContent = '', 1500);
+            return;
+        }
+
+        const formedWord = this.state.writingInput.map(i => i.char).join('');
+        const targetWord = this.state.currentWritingWord.word.toUpperCase();
+
+        if (formedWord === targetWord) {
+            // Correct
+            this.playSound('correct');
+            this.state.writingScore += 10;
+
+            const fb = document.getElementById('writing-feedback');
+            fb.textContent = "DOĞRU! 🎉";
+            fb.style.color = "#22c55e";
+
+            setTimeout(() => {
+                this.nextWritingQuestion();
+            }, 1000);
+
+        } else {
+            // Wrong
+            this.playSound('wrong');
+            const fb = document.getElementById('writing-feedback');
+            fb.textContent = "YANLIŞ! Tekrar dene.";
+            fb.style.color = "#ef4444";
         }
     }
 };

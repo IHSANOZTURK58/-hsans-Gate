@@ -18,17 +18,40 @@
         <header class="main-header">
             <div class="header-left">
                 <div class="user-profile">
-                    <span class="user-name" id="display-user-name">Misafir</span>
-                    <button class="btn-icon" onclick="app.logout()" title="Çıkış Yap" style="display: none;">🚪</button>
+                    <div class="profile-avatar-container" onclick="app.toggleProfileMenu()">
+                        <img id="header-avatar" src="assets/avatars/avatar_1.png" class="header-avatar-img"
+                            style="display:none; margin-right:5px;">
+                        <span class="user-name" id="display-user-name">Misafir</span>
+                    </div>
+
+                    <!-- Profile Dropdown Menu -->
+                    <div class="profile-dropdown hidden" id="profile-dropdown">
+                        <button class="profile-menu-item" onclick="app.logout(); event.stopPropagation();">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>
+                            <span>Çıkış Yap</span>
+                        </button>
+                    </div>
+
+                    <button class="btn-logout" onclick="app.logout()" title="Çıkış Yap" style="display: none;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                    </button>
                     <button class="btn-icon" onclick="app.checkAdminAuth()" title="Yönetici Paneli"
                         style="display: none;">👤</button>
                 </div>
                 <!-- Controls moved next to profile -->
-                <div class="audio-controls">
-                    <button id="btn-music" class="btn-music" onclick="app.toggleMusic()" title="Müziği Aç/Kapat">
-                        🎵
-                    </button>
-                </div>
+                <!-- Controls moved next to profile -->
+                <!-- Removed Audio Controls as per request -->
+                <div class="audio-controls" style="display:none"></div>
             </div>
 
             <div class="header-right-container">
@@ -67,8 +90,44 @@
 
                         <!-- User Name Input (Hidden by default, shown after User Login click) -->
                         <div id="user-login-form" class="hidden">
+
+                            <!-- Avatar Selection -->
+                            <div class="avatar-selection-container">
+                                <span class="avatar-label">Profil Resmi</span>
+
+                                <!-- Current Avatar Display -->
+                                <div class="current-avatar-display">
+                                    <div class="avatar-option selected large" id="current-avatar-preview">
+                                        <img src="assets/avatars/avatar_1.png" alt="Avatar">
+                                    </div>
+                                    <button class="btn-change-avatar" onclick="app.toggleAvatarPicker()" type="button">
+                                        <span id="avatar-picker-text">Değiştir</span>
+                                    </button>
+                                </div>
+
+                                <!-- All Avatars Grid (Hidden by default) -->
+                                <div class="avatar-grid hidden" id="avatar-picker-grid">
+                                    <div class="avatar-option selected" id="av-opt-1" onclick="app.selectAvatar(1)">
+                                        <img src="assets/avatars/avatar_1.png" alt="Samurai">
+                                    </div>
+                                    <div class="avatar-option" id="av-opt-2" onclick="app.selectAvatar(2)">
+                                        <img src="assets/avatars/avatar_2.png" alt="Robot">
+                                    </div>
+                                    <div class="avatar-option" id="av-opt-3" onclick="app.selectAvatar(3)">
+                                        <img src="assets/avatars/avatar_3.png" alt="Astronaut">
+                                    </div>
+                                    <div class="avatar-option" id="av-opt-4" onclick="app.selectAvatar(4)">
+                                        <img src="assets/avatars/avatar_4.png" alt="Ninja">
+                                    </div>
+                                    <div class="avatar-option" id="av-opt-5" onclick="app.selectAvatar(5)">
+                                        <img src="assets/avatars/avatar_5.png" alt="Wolf">
+                                    </div>
+                                </div>
+                            </div>
+
                             <input type="text" id="landing-player-name" class="landing-input"
                                 placeholder="Adını yaz...">
+
                             <div style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
                                 <button class="btn btn-secondary" onclick="app.cancelUserLogin()">Geri</button>
                                 <button class="btn btn-primary" onclick="app.enterDashboard()">Başla &rarr;</button>
@@ -135,6 +194,16 @@
                                 </div>
                                 <span class="lock-icon">🔒</span>
                             </div>
+
+                            <!-- Writing (New) -->
+                            <div class="module-card" onclick="app.startWritingMode()">
+                                <div class="icon-box">✍️</div>
+                                <div class="module-info">
+                                    <h4>Yazma</h4>
+                                    <p>Kelime oluştur.</p>
+                                </div>
+                                <div class="hover-glow"></div>
+                            </div>
                         </div>
 
                         <!-- Right / Bottom: Stats or Quick Actions -->
@@ -166,11 +235,11 @@
                         <p style="color:var(--text-secondary); margin-bottom:2rem">Meydan okumanı seç.</p>
 
                         <div class="mode-grid-compact">
-                            <div class="mode-card compact" onclick="app.startGame('survival')">
-                                <div class="mode-icon">💀</div>
+                            <div class="mode-card compact" onclick="app.showLevelMap()">
+                                <div class="mode-icon">🏔️</div>
                                 <div class="mode-info">
-                                    <h3>Tek Şans</h3>
-                                    <p>Hata yok, sonsuz koşu.</p>
+                                    <h3>Kelime Serüveni</h3>
+                                    <p>100 Seviye, Artan Zorluk.</p>
                                 </div>
                             </div>
                             <div class="mode-card compact" onclick="app.startGame('rush')">
@@ -227,7 +296,23 @@
             <!-- GAME VIEW -->
             <div id="view-game" class="view hidden">
                 <div class="game-header-bar">
-                    <button id="btn-music" class="btn-music" onclick="app.toggleMusic()">🎵</button>
+                    <!-- Space holder if needed, or just justify-between -->
+                    <div></div>
+
+                    <!-- New Level Info -->
+                    <div id="level-info-container" class="level-info-container hidden" style="flex:1; margin:0 1rem;">
+                        <div
+                            style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem">
+                            <span style="font-size:0.9rem; color:var(--text-secondary); font-weight:bold">Seviye <span
+                                    id="current-level-display" style="color:var(--neon-gold)">1</span></span>
+                            <span id="level-progress-text" style="font-size:0.8rem; color:var(--text-secondary)">0 /
+                                50</span>
+                        </div>
+                        <div class="level-progress-track">
+                            <div id="level-progress-fill" class="level-progress-fill" style="width:0%"></div>
+                        </div>
+                    </div>
+
                     <div class="live-score">Skor: <span id="current-score">0</span></div>
                     <div id="game-timer" class="game-timer hidden">02:00</div>
                 </div>
@@ -237,14 +322,25 @@
                 <div class="game-card">
                     <div class="card-header">
                         <span id="word-level" class="level-indicator">A1</span>
-                        <button id="game-star-btn" class="btn-star" onclick="app.toggleGameFavorite()">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                </polygon>
-                            </svg>
-                        </button>
+
+                        <!-- Actions Container: Stacked Vertically -->
+                        <div style="display:flex; flex-direction:column; gap:0.5rem; align-items:center;">
+                            <!-- Favorite Star -->
+                            <button id="game-star-btn" class="btn-star" onclick="app.toggleGameFavorite()">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                            </button>
+
+                            <!-- Speaker Button (New Position) -->
+                            <button id="btn-speak" class="btn-star" onclick="app.speakCurrentWord()" title="Dinle"
+                                style="font-size:1.2rem; display:flex; justify-content:center; align-items:center;">
+                                🔊
+                            </button>
+                        </div>
                     </div>
 
                     <div class="word-display">
@@ -333,6 +429,71 @@
                 </div>
             </div>
 
+            <!-- LEVEL MAP VIEW -->
+            <div id="view-level-map" class="view hidden" style="padding:0; overflow:hidden;">
+                <!-- Fixed Header independent of scroll -->
+                <div class="map-fixed-header"
+                    style="position:absolute; top:0; left:0; right:0; z-index:50; padding:1rem; background:rgba(15,23,42,0.95); display:flex; align-items:center; border-bottom:1px solid var(--border-glass);">
+                    <button class="btn-icon back-btn-top" onclick="app.openModeSelection()" title="Geri">
+                        &larr;
+                    </button>
+                    <h2 style="flex:1; text-align:center; margin:0;">Seviye Haritası</h2>
+                    <div style="width:40px"></div>
+                </div>
+
+                <!-- Scrollable Container -->
+                <div class="map-scroll-area" style="overflow-y:auto; height:100%; padding-top:80px;">
+                    <div id="level-map-container" class="level-map-container">
+                        <!-- Nodes Generated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- WRITING VIEW (Scramble Mode) -->
+            <div id="view-writing" class="view hidden">
+                <div class="game-header-bar">
+                    <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Çıkış">&larr;</button>
+                    <div style="font-size:1.2rem; font-weight:bold; color:var(--text-secondary)">Puan: <span
+                            id="writing-score" style="color:var(--neon-blue)">0</span></div>
+                </div>
+
+                <div class="game-card" style="justify-content:center; gap:2rem;">
+                    <!-- Question Area -->
+                    <div style="text-align:center;">
+                        <span style="font-size:1rem; opacity:0.7; display:block; margin-bottom:0.5rem">Bu kelimenin
+                            İngilizcesi ne?</span>
+                        <h2 id="writing-target-meaning"
+                            style="font-size:2.5rem; color:var(--accent-gold); text-shadow:0 0 10px rgba(245,158,11,0.5)">
+                            Elma
+                        </h2>
+                        <button class="btn-star" onclick="app.speakCurrentWord()" title="Dinle"
+                            style="font-size:1.2rem; display:inline-flex; justify-content:center; align-items:center; margin-top:0.5rem;">
+                            🔊
+                        </button>
+                    </div>
+
+                    <!-- Slots Area -->
+                    <div id="writing-slots"
+                        style="display:flex; justify-content:center; gap:0.5rem; flex-wrap:wrap; min-height:60px;">
+                        <!-- Generated via JS -->
+                    </div>
+
+                    <!-- Letters Area -->
+                    <div id="writing-pool"
+                        style="display:flex; justify-content:center; gap:0.5rem; flex-wrap:wrap; margin-top:2rem;">
+                        <!-- Generated via JS -->
+                    </div>
+
+                    <!-- Feedback Area -->
+                    <div id="writing-feedback" style="height:2rem; font-weight:bold; color:var(--text-primary);"></div>
+                </div>
+
+                <div style="margin-top:2rem; display:flex; justify-content:center; gap:1rem;">
+                    <button class="btn btn-secondary" onclick="app.clearWritingSlots()">Temizle 🧹</button>
+                    <button class="btn btn-primary" onclick="app.checkWritingAnswer()">Kontrol Et ✅</button>
+                </div>
+            </div>
+
             <!-- ADMIN VIEW -->
             <div id="view-admin" class="view hidden">
                 <h2 style="text-align:center; margin-bottom:2rem; color:var(--accent-gold)">Yönetici Paneli</h2>
@@ -346,6 +507,12 @@
                     <button class="btn btn-secondary" onclick="app.resetProgress()">
                         <span style="font-size:2rem; display:block">🗑️</span>
                         İlerlemeyi Sıfırla
+                    </button>
+
+                    <button class="btn btn-primary" onclick="app.openModeSelection()"
+                        style="grid-column: 1 / -1; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border:none; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);">
+                        <span style="font-size:2rem; display:block">🎮</span>
+                        Yönetici Olarak Oyuna Dön<br><span style="font-size:0.8rem; opacity:0.9">(Kilitler Açık)</span>
                     </button>
                 </div>
 
@@ -396,6 +563,31 @@
                     <div style="display:flex; gap:1rem; justify-content:center">
                         <button class="btn btn-secondary" onclick="app.closePasswordModal()">İptal</button>
                         <button class="btn btn-primary" onclick="app.submitPassword()">Onayla</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOGOUT CONFIRMATION MODAL -->
+            <div id="logout-confirmation-modal" class="modal-overlay hidden">
+                <div class="modal-content">
+                    <h3 style="margin-bottom:1.5rem; color:var(--text-primary)">Çıkış Yap</h3>
+                    <p style="margin-bottom:2rem; color:var(--text-secondary)">Çıkış yapmak istediğinizden emin misiniz?
+                    </p>
+                    <div style="display:flex; gap:1rem; justify-content:center">
+                        <button class="btn btn-secondary" onclick="app.closeLogoutModal()">İptal</button>
+                        <button class="btn btn-primary" onclick="app.confirmLogout()">Çıkış Yap</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GAME OVER MODAL (Adventure Mode) -->
+            <div id="game-over-modal" class="modal-overlay hidden">
+                <div class="modal-content">
+                    <h3 style="margin-bottom:1rem; color:#ef4444; font-size:2rem">💔 Oyun Bitti</h3>
+                    <p style="margin-bottom:2rem; color:var(--text-secondary); font-size:1.1rem">Maalesef yandınız!</p>
+                    <div style="display:flex; gap:1rem; justify-content:center">
+                        <button class="btn btn-secondary" onclick="app.exitToLevelMap()">Çıkış Yap</button>
+                        <button class="btn btn-primary" onclick="app.retryAdventure()">Tekrar Dene</button>
                     </div>
                 </div>
             </div>
