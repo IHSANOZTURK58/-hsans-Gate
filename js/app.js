@@ -41,7 +41,7 @@ const app = {
         selectedAddLevel: 'A1',
         currentWord: null,
         currentOptions: [],
-        filters: { search: '', showFavsOnly: false },
+        filters: { search: '', showFavsOnly: false, level: 'all' },
 
         // Audio State
         isMusicPlaying: false,
@@ -698,6 +698,9 @@ const app = {
         if (this.state.filters.showFavsOnly) {
             filtered = filtered.filter(w => this.state.favorites.includes(w.id));
         }
+        if (this.state.filters.level && this.state.filters.level !== 'all') {
+            filtered = filtered.filter(w => w.level === this.state.filters.level);
+        }
 
         const displayList = filtered.slice(0, 100);
 
@@ -847,6 +850,17 @@ const app = {
             document.getElementById('filter-favs').classList.remove('active');
             document.getElementById('filter-all').classList.add('active');
         }
+        this.renderList();
+    },
+
+    setLevelFilter(lvl, btn) {
+        this.state.filters.level = lvl;
+
+        // Update UI
+        const chips = document.querySelectorAll('.level-chip');
+        chips.forEach(c => c.classList.remove('active'));
+        if (btn) btn.classList.add('active');
+
         this.renderList();
     },
 

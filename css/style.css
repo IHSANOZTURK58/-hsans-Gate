@@ -1155,3 +1155,87 @@ input:focus {
         padding: 3rem;
     }
 }
+
+/* =========================================
+   LIST VIEW IMPROVEMENTS
+   ========================================= */
+.filter-tabs {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.3rem;
+    border-radius: 12px;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-glass);
+}
+
+.filter-tab {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.filter-tab:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.filter-tab.active {
+    background: rgba(14, 165, 233, 0.15);
+    color: var(--neon-blue);
+    border: 1px solid rgba(14, 165, 233, 0.3);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
+}
+
+/* Level Filter Chips */
+.level-filters {
+    display: flex;
+    gap: 0.6rem;
+    overflow-x: auto;
+    padding: 0.2rem 0.2rem 0.8rem 0.2rem;
+    margin-bottom: 0.5rem;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.level-filters::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome */
+}
+
+.level-chip {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--border-glass);
+    background: rgba(30, 41, 59, 0.4);
+    color: var(--text-secondary);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.level-chip:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.level-chip.active {
+    background: var(--neon-gold);
+    color: #000;
+    border-color: var(--neon-gold);
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}

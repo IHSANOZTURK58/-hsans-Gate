@@ -213,6 +213,13 @@
                                 </table>
                             </div>
                         </div>
+
+                        <!-- NEW: Word List Button -->
+                        <button class="btn btn-secondary"
+                            style="width:100%; margin-top:1rem; display:flex; justify-content:center; align-items:center; gap:0.5rem;"
+                            onclick="app.showWordList()">
+                            <span>📚</span> Tüm Kelimeler & Favoriler
+                        </button>
                     </div>
                 </div>
             </div>
@@ -286,21 +293,43 @@
             <!-- WORD LIST VIEW -->
             <div id="view-list" class="view hidden">
                 <div class="list-header">
+                    <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                        <button class="btn-icon back-btn-top" onclick="app.openModeSelection()" title="Geri">
+                            &larr;
+                        </button>
+                        <h2 style="margin:0; font-size:1.5rem;">Kelimeler</h2>
+                    </div>
+
                     <div class="search-bar">
                         <input type="text" id="search-input" placeholder="Kelime ara..." onkeyup="app.filterList()">
                     </div>
-                    <div class="filter-toggles">
-                        <button class="filter-btn active" id="filter-all" onclick="app.setListFilter('all')">Tümü (<span
-                                id="total-word-count">0</span>)</button>
-                        <button class="filter-btn" id="filter-favs"
-                            onclick="app.setListFilter('favs')">Favoriler</button>
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" id="filter-all" onclick="app.setListFilter('all')">
+                            <span>📚</span> Tümü <span id="total-word-count"
+                                style="font-size:0.8em; opacity:0.7; margin-left:4px">(0)</span>
+                        </button>
+                        <button class="filter-tab" id="filter-favs" onclick="app.setListFilter('favs')">
+                            <span>⭐</span> Favoriler
+                        </button>
+                    </div>
+
+                    <!-- Level Filters -->
+                    <div class="level-filters">
+                        <button class="level-chip active" onclick="app.setLevelFilter('all', this)">Tüm
+                            Seviyeler</button>
+                        <button class="level-chip" onclick="app.setLevelFilter('A1', this)">A1</button>
+                        <button class="level-chip" onclick="app.setLevelFilter('A2', this)">A2</button>
+                        <button class="level-chip" onclick="app.setLevelFilter('B1', this)">B1</button>
+                        <button class="level-chip" onclick="app.setLevelFilter('B2', this)">B2</button>
+                        <button class="level-chip" onclick="app.setLevelFilter('C1', this)">C1</button>
+                        <button class="level-chip" onclick="app.setLevelFilter('C2', this)">C2</button>
                     </div>
                 </div>
                 <div id="word-list-items" class="word-list-container">
                     <!-- Items JS -->
                 </div>
                 <div class="sticky-back">
-                    <button class="btn btn-primary" onclick="app.showDashboard()">Geri Dön</button>
+                    <button class="btn btn-primary" onclick="app.openModeSelection()">Geri Dön</button>
                 </div>
             </div>
 
@@ -380,7 +409,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
 
-    <script src="js/words.js?v=13"></script>
+    <script src="js/words.js?v=16"></script>
     <script src="js/app.js?v=7"></script>
 </body>
 
