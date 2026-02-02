@@ -1771,6 +1771,44 @@ input:focus {
     }
 }
 
+/* --- MOBILE SPLIT SCREEN FIX --- */
+@media (max-width: 768px) {
+    .split-screen-container {
+        flex-direction: column;
+        overflow-y: auto;
+        /* Allow scroll if needed overall, though panes handle it */
+    }
+
+    .task-pane {
+        width: 100%;
+        flex: 1;
+        /* Takes available space, usually pushes chat down */
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        min-height: 50%;
+        /* Ensure it takes at least half */
+    }
+
+    .chat-pane {
+        width: 100%;
+        height: 45%;
+        /* Fixed height for chat at bottom */
+        border-left: none;
+        flex: none;
+        /* Don't shrink */
+    }
+
+    .task-question-text {
+        font-size: 1.8rem;
+    }
+
+    .task-textarea {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+}
+
 /* --- SPLIT SCREEN AI MODE --- */
 /* --- SPLIT SCREEN AI MODE --- */
 .split-screen-container {
@@ -1939,7 +1977,7 @@ input:focus {
 
 /* Right: AI Chat Pane */
 .chat-pane {
-    width: 350px;
+    width: 450px;
     /* Fixed width for chat */
     background: rgba(0, 0, 0, 0.2);
     display: flex;
@@ -2037,5 +2075,476 @@ input:focus {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* --- PREMIUM LANGUAGE TOGGLE --- */
+.task-header {
+    gap: 1rem;
+}
+
+.lang-toggle-btn {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+.lang-toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.lang-toggle-btn:active {
+    transform: translateY(0);
+}
+
+/* Content wrapper */
+.toggle-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Gradient Backgrounds based on state */
+/* Default (EN -> TR): Blue to Red Gradient */
+.lang-toggle-btn.mode-en-tr {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(220, 38, 38, 0.2) 100%);
+    border-color: rgba(14, 165, 233, 0.4);
+}
+
+/* Swapped (TR -> EN): Red to Blue Gradient */
+.lang-toggle-btn.mode-tr-en {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.3) 0%, rgba(37, 99, 235, 0.3) 100%);
+    border-color: rgba(220, 38, 38, 0.5);
+}
+
+/* Flag Images */
+.flag-img {
+    width: 24px;
+    height: 18px;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.lang-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lang-text {
+    font-weight: 800;
+    font-size: 1rem;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.arrow-icon {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Animation on Toggle */
+.rotate-anim {
+    animation: spin 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+/* Admin Grid Layout */
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Ensure full width on mobile */
+@media (max-width: 600px) {
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Force Admin View Center */
+#view-admin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* --- MISSING LAYOUT STYLES restored --- */
+.modes-split-layout {
+    display: flex;
+    gap: 2rem;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.modes-column {
+    flex: 1;
+}
+
+.leaderboard-column {
+    width: 320px;
+}
+
+.modes-header-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.profile-menu-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.8rem 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-menu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--neon-gold);
+}
+
+.profile-menu-item:last-child {
+    border-bottom: none;
+}
+
+/* Ensure compact grid displays correctly */
+.mode-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.mode-card.compact {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Ensure compact grid displays correctly */
+.mode-grid-compact {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 400px;
+    /* Limit width for better aesthetics when stacked */
+}
+
+.mode-card.compact {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Game Over Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    /* Dark transparent bg */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: rgba(30, 41, 59, 1);
+    border: 1px solid var(--neon-gold);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    box-shadow: 0 0 40px rgba(245, 158, 11, 0.3);
+    animation: zoomIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#view-writing {
+    background: url('../assets/game-bg-galaxy.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Visibility enhancements for Writing Mode */
+#view-writing .back-btn-top {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+#view-writing #writing-score-container {
+    display: none !important;
+    background: rgba(15, 23, 42, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#view-writing .btn-secondary {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+#view-writing .btn-secondary:hover {
+    background: rgba(30, 41, 59, 1);
+    transform: translateY(-2px);
+}
+
+/* ===== WRITING MODES SELECTION SCREEN ===== */
+#view-writing-modes {
+    background: url('../assets/dark_login_bg.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.writing-modes-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 2rem 1rem;
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.writing-modes-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.writing-modes-header .btn-icon {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.75rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.writing-modes-header .btn-icon:hover {
+    background: rgba(30, 41, 59, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.writing-modes-title {
+    flex: 1;
+}
+
+.writing-modes-title h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.writing-modes-title p {
+    color: #000000 !important;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0;
+    font-weight: 700;
+    text-shadow: none;
+}
+
+.writing-modes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.writing-mode-card {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.writing-mode-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 30px 80px rgba(37, 99, 235, 0.4),
+        0 0 80px rgba(59, 130, 246, 0.3),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.writing-mode-card:active {
+    transform: translateY(-8px) scale(0.98);
+}
+
+.card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+}
+
+.writing-mode-card:hover .card-glow {
+    opacity: 1;
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mode-card-icon {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.writing-mode-card:hover .mode-card-icon {
+    transform: scale(1.15) rotateZ(-5deg);
+}
+
+.writing-mode-card h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.5px;
+}
+
+.writing-mode-card p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .writing-modes-title h2 {
+        font-size: 2rem;
+    }
+
+    .writing-modes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .writing-mode-card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .mode-card-icon {
+        font-size: 4rem;
     }
 }

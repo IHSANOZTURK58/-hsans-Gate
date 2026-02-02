@@ -61,7 +61,15 @@ const app = {
         maxLevel: 1, // Highest Unlocked Level
         levelProgress: 0,
         adventureLives: 3,
-        levelWords: []
+        levelProgress: 0,
+        adventureLives: 3,
+        levelWords: [],
+
+        // Writing Input Settings
+        writingDirection: 'EN_TR', // 'EN_TR' (Default) or 'TR_EN'
+
+        // Navigation History
+        previousView: null
     },
 
     init() {
@@ -81,91 +89,108 @@ const app = {
 
         this.geminiService.init();
 
+        // Explicitly hide settings button on load
+        const sBtn = document.getElementById('btn-dashboard-settings');
+        if (sBtn) {
+            sBtn.classList.add('hidden');
+            sBtn.style.display = 'none'; // Doubly sure
+        }
+
         // Authenticate
         this.authenticateAndListen();
     },
 
     openSettings() {
         this.state.currentView = 'settings';
+
+        // Admin visibility check
+        const adminSection = document.getElementById('admin-api-settings');
+        if (adminSection) {
+            if (this.state.isAdmin) {
+                adminSection.classList.remove('hidden');
+            } else {
+                adminSection.classList.add('hidden');
+            }
+        }
+
         const input = document.getElementById('settings-api-key');
         if (input) input.value = this.geminiService.apiKey || '';
+        const input2 = document.getElementById('settings-api-key-2');
+        if (input2) input2.value = this.geminiService.secondaryApiKey || '';
         this.render();
     },
 
     saveSettings() {
         const input = document.getElementById('settings-api-key');
+        const input2 = document.getElementById('settings-api-key-2');
+
         if (input) {
             const key = input.value.trim();
             localStorage.setItem('gemini_api_key', key);
             this.geminiService.apiKey = key;
-            alert('Ayarlar kaydedildi! ✅');
         }
+
+        if (input2) {
+            const key2 = input2.value.trim();
+            localStorage.setItem('gemini_api_key_2', key2);
+            this.geminiService.secondaryApiKey = key2;
+        }
+
+        alert('Ayarlar kaydedildi! ✅');
     },
 
     async testGeminiConnection() {
         const input = document.getElementById('settings-api-key');
         const key = input ? input.value.trim() : '';
+
+        // Test Primary
         if (!key) {
-            alert('Lütfen önce bir anahtar girin.');
+            alert('Lütfen en az bir anahtar girin.');
             return;
         }
 
-        try {
-            // Step 1: List Models to find a valid one
-            const listResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${key}`);
-            const listData = await listResponse.json();
+        // Simple Test Wrapper
+        const testKey = async (apiKey, label) => {
+            try {
+                const listResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
+                const listData = await listResponse.json();
+                if (!listResponse.ok) throw new Error(listData.error?.message || 'Liste Hatası');
 
-            if (!listResponse.ok) {
-                const errorMsg = listData.error?.message || 'Model Listesi Alınamadı';
-                alert(`Bağlantı Hatası! ❌\n${errorMsg}`);
-                return;
-            }
+                const models = listData.models || [];
+                const validModel = models.find(m => m.name.includes('gemini-1.5-flash')) ||
+                    models.find(m => m.supportedGenerationMethods?.includes('generateContent') && m.name.includes('flash'));
 
-            // Find a valid generateContent model (Prioritize 1.5-flash)
-            const models = listData.models || [];
-            const validModel = models.find(m => m.name.includes('gemini-1.5-flash')) ||
-                models.find(m => m.supportedGenerationMethods?.includes('generateContent') && m.name.includes('flash'));
-
-            if (validModel) {
-                // Now test generation with this model
-                const modelName = validModel.name.replace('models/', '');
-                localStorage.setItem('gemini_valid_model', modelName); // Save for usage
-
-                const genResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${key}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: [{ parts: [{ text: "Hello" }] }]
-                    })
-                });
-
-                if (genResponse.ok) {
-                    alert(`Bağlantı Başarılı! 🤖✅\nBulunan Model: ${modelName}\nKullanılacak.`);
-                    // Update global service immediately
-                    if (this.geminiService) {
-                        this.geminiService.apiKey = key;
-                        this.geminiService.modelName = modelName;
-                    }
-                } else {
-                    const errorData = await genResponse.json();
-                    const errMsg = errorData.error?.message || '';
-
-                    if (errMsg.includes('quota') || errMsg.includes('429')) {
-                        alert(`⚠️ KOTA DOLDU!\n\nGoogle'ın ücretsiz sürümünde dakikalık sınır var. Çok hızlı deneme yaptınız.\n\nLütfen 1 dakika bekleyip tekrar deneyin.`);
-                    } else {
-                        alert(`Model Bulundu (${modelName}) ama test başarısız oldu:\n${errMsg}`);
-                    }
+                if (validModel) {
+                    const modelName = validModel.name.replace('models/', '');
+                    localStorage.setItem('gemini_valid_model', modelName);
+                    this.geminiService.modelName = modelName;
+                    return { success: true, model: modelName };
                 }
-            } else {
-                alert('Uygun bir yapay zeka modeli bulunamadı! ⚠️\nListenizdeki modeller: ' + listData.models?.map(m => m.name).join(', '));
+                return { success: false, error: "Model bulunamadı" };
+            } catch (e) {
+                return { success: false, error: e.message };
             }
+        };
 
-        } catch (e) {
-            alert('Ağ Hatası: ' + e.message);
+        const res1 = await testKey(key, "Ana");
+        let msg = `1. Anahtar: ${res1.success ? '✅ (' + res1.model + ')' : '❌ ' + res1.error}`;
+
+        const input2 = document.getElementById('settings-api-key-2');
+        const key2 = input2 ? input2.value.trim() : '';
+        if (key2) {
+            const res2 = await testKey(key2, "Yedek");
+            msg += `\n2. Anahtar: ${res2.success ? '✅' : '❌ ' + res2.error}`;
+        }
+
+        alert(msg);
+
+        if (res1.success) {
+            this.geminiService.apiKey = key;
+            if (key2) this.geminiService.secondaryApiKey = key2;
         }
     },
 
-    // ... skip ...
+
 
     loadData() {
         const stored = localStorage.getItem('vocab_game_data_v2');
@@ -238,6 +263,14 @@ const app = {
         this.closeLogoutModal();
         this.state.isAdmin = false;
         this.state.playerName = null;
+
+        // Reset Admin UI
+        const settingsBtn = document.getElementById('btn-dashboard-settings');
+        if (settingsBtn) settingsBtn.classList.add('hidden');
+
+        const adminBtn = document.querySelector('.header-left .btn-icon[title="Yönetici Paneli"]');
+        if (adminBtn) adminBtn.style.display = 'none';
+
         this.showLanding();
     },
 
@@ -846,6 +879,16 @@ const app = {
                 if (adminBtn) adminBtn.style.display = 'block';
                 if (logoutBtn) logoutBtn.style.display = 'block';
 
+                if (adminBtn) adminBtn.style.display = 'block';
+                if (logoutBtn) logoutBtn.style.display = 'block';
+
+                // Show settings for admin
+                const settingsBtn = document.getElementById('btn-dashboard-settings');
+                if (settingsBtn) {
+                    settingsBtn.classList.remove('hidden');
+                    settingsBtn.style.display = 'block'; // Force display
+                }
+
                 // Update header name
                 const displayName = document.getElementById('display-user-name');
                 if (displayName) displayName.textContent = this.state.playerName;
@@ -1050,15 +1093,41 @@ const app = {
 
     failAdventureLevel() {
         this.playSound('wrong');
-        alert(`💀 Seviye ${this.state.currentLevel} Başarısız! Başa dönülüyor...`);
-        this.state.levelProgress = 0;
-        this.state.adventureLives = 3;
 
-        // We do NOT shuffle here anymore. 
-        // startAdventureLevel will re-call generateLevelWords which is now DETERMINISTIC.
-        // So the level will restart with exactly the same words in the same order.
-        this.startAdventureLevel();
+        // Show Custom Modal
+        const modal = document.getElementById('view-gameover');
+        const title = modal.querySelector('h3');
+        title.innerHTML = `💀 Seviye ${this.state.currentLevel} Başarısız!<br><span style="font-size:1rem; opacity:0.8">Başa dönülüyor...</span>`;
+
+        // Hide Score/Earnings for this specific fail screen if desired, or just show them
+        // For now let's keep it simple
+
+        // Hijack the Restart Button
+        const btnRetry = modal.querySelector('.btn-primary');
+        const oldOnClick = btnRetry.onclick; // Backup if needed, though we rely on HTML attr usually
+
+        btnRetry.textContent = "Tekrar Dene ↺";
+        btnRetry.onclick = () => {
+            this.state.levelProgress = 0;
+            this.state.adventureLives = 3;
+            this.startAdventureLevel();
+            modal.classList.add('hidden');
+
+            // Reset Button for other modes
+            btnRetry.onclick = () => app.startGame();
+            btnRetry.textContent = "Tekrar Oyna ↺";
+        };
+
+        // Ensure Secondary Button is "Harita" (Adventure Mode Specific)
+        const secondaryBtn = modal.querySelector('.btn-secondary');
+        if (secondaryBtn) {
+            secondaryBtn.textContent = 'Harita 🗺️';
+            secondaryBtn.onclick = () => app.showLevelMap();
+        }
+
+        modal.classList.remove('hidden');
     },
+
 
     // Game Logic
     nextQuestion() {
@@ -1245,7 +1314,31 @@ const app = {
         const nameInputArea = document.getElementById('name-input-area');
         if (nameInputArea) nameInputArea.classList.add('hidden');
 
-        document.getElementById('view-gameover').classList.remove('hidden');
+        // Dynamic Navigation Button Logic
+        const gameOverView = document.getElementById('view-gameover');
+        const secondaryBtn = gameOverView.querySelector('.btn-secondary');
+
+        if (secondaryBtn) {
+            if (this.state.gameMode === 'adventure') {
+                secondaryBtn.textContent = 'Harita 🗺️';
+                secondaryBtn.onclick = () => app.showLevelMap();
+            } else {
+                // Rush, Favorites, etc. -> Go to Mode Selection
+                secondaryBtn.textContent = 'Mod Seçimi 🎮';
+                secondaryBtn.onclick = () => app.openModeSelection();
+            }
+        }
+
+        gameOverView.classList.remove('hidden');
+    },
+
+    // New Helper to centralize exit logic if called from HTML directly (safety net)
+    handleGameOverExit() {
+        if (this.state.gameMode === 'adventure') {
+            this.showLevelMap();
+        } else {
+            this.openModeSelection();
+        }
     },
 
     // Helper needed for Rush Mode UI
@@ -1728,6 +1821,7 @@ const app = {
 
         init() {
             this.apiKey = localStorage.getItem('gemini_api_key');
+            this.secondaryApiKey = localStorage.getItem('gemini_api_key_2');
             const savedModel = localStorage.getItem('gemini_valid_model');
             if (savedModel) this.modelName = savedModel;
         },
@@ -1744,21 +1838,38 @@ const app = {
             Return ONLY a pure JSON object with keys 'en' (the sentence) and 'tr' (meaning). 
             No markdown.`;
 
-            try {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.modelName}:generateContent?key=${this.apiKey}`, {
+            // Helper for request
+            const makeRequest = async (key) => {
+                return fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.modelName}:generateContent?key=${key}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: [{ parts: [{ text: prompt }] }]
-                    })
+                    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
                 });
+            };
+
+            try {
+                let response = await makeRequest(this.apiKey);
+
+                // FAILOVER LOGIC
+                if (response.status === 429 && this.secondaryApiKey) {
+                    console.warn("Primary API Quota Exceeded. Switching to Secondary Key...");
+                    response = await makeRequest(this.secondaryApiKey);
+                }
 
                 const data = await response.json();
                 if (data.candidates && data.candidates[0].content) {
                     let text = data.candidates[0].content.parts[0].text;
-                    // Clean markdown code blocks if present
-                    text = text.replace(/```json/g, '').replace(/```/g, '').trim();
-                    return JSON.parse(text);
+                    try {
+                        // Robust JSON Extraction
+                        const startIndex = text.indexOf('{');
+                        const endIndex = text.lastIndexOf('}');
+                        if (startIndex !== -1 && endIndex !== -1) {
+                            text = text.substring(startIndex, endIndex + 1);
+                            return JSON.parse(text);
+                        }
+                    } catch (e) {
+                        console.error("JSON Parse Error:", e);
+                    }
                 }
             } catch (e) {
                 console.error("Gemini Gen Error:", e);
@@ -1766,55 +1877,111 @@ const app = {
             return null;
         },
 
-        async checkAnswer(source, input) {
+        async checkAnswer(source, input, direction = 'EN_TR') {
             if (!this.apiKey) return null;
 
-            // Source is EN (e.g. "I am happy")
-            // Input is TR (e.g. "Ben mutluyum")
+            let prompt = '';
 
-            const prompt = `
-            Act as a supportive Turkish language tutor.
-            
-            English Source: "${source.en}"
-            User's Translation: "${input}"
-            
-            Task: Evaluation.
-            Rules:
-            1. Be FLEXIBLE. Accept synonyms (e.g., "name"="ad"="isim"), dropped pronouns, and minor typos.
-            2. If the meaning is mostly preserved, mark it as TRUE.
-            3. IGNORE punctuation and casing.
-            
-            Return ONLY a pure JSON object (no markdown):
-            {
-                "isCorrect": boolean,
-                "feedback": "If Correct: Praise enthusiastically in Turkish. IF WRONG: Explain the specific mistake in Turkish (e.g., 'X kelimesi yerine Y kullanmalısın' or 'Gramer hatası var'). Do NOT just give the answer, explain the WHY."
-            }`;
+            if (direction === 'EN_TR') {
+                // English -> Turkish
+                prompt = `
+                Act as a supportive Turkish language tutor.
+                
+                English Source: "${source.en}"
+                User's Translation: "${input}"
+                
+                Task: Evaluation.
+                Rules:
+                1. Be FLEXIBLE. Accept synonyms, dropped pronouns, and minor typos.
+                2. If the meaning is mostly preserved, mark it as TRUE.
+                3. IGNORE punctuation and casing.
+                
+                Return ONLY a pure JSON object (no markdown):
+                {
+                    "isCorrect": boolean,
+                    "feedback": "If Correct: Praise enthusiastically in Turkish. IF WRONG: Explain the specific mistake in Turkish."
+                }`;
+            } else {
+                // Turkish -> English
+                prompt = `
+                Act as a supportive English language tutor for a Turkish speaker.
+                
+                Turkish Source: "${source.tr}"
+                User's English translation: "${input}"
+                
+                Task: Evaluation.
+                Rules:
+                1. Be FLEXIBLE. Accept synonyms, American/British spelling, and minor typos.
+                2. If the meaning is mostly preserved, mark it as TRUE.
+                3. IGNORE punctuation and casing.
+                
+                Return ONLY a pure JSON object (no markdown):
+                {
+                    "isCorrect": boolean,
+                    "feedback": "If Correct: Praise enthusiastically in English (keep it simple). IF WRONG: Explain the specific mistake in Turkish so the user understands."
+                }`;
+            }
+
 
             try {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.modelName}:generateContent?key=${this.apiKey}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: [{ parts: [{ text: prompt }] }]
-                    })
-                });
+                // Helper for request
+                const makeRequest = async (key) => {
+                    return fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.modelName}:generateContent?key=${key}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+                    });
+                };
+
+                let response = await makeRequest(this.apiKey);
+
+                if (response.status === 429 && this.secondaryApiKey) {
+                    console.warn("Primary API Quota Exceeded (Check). Switching to Secondary Key...");
+                    response = await makeRequest(this.secondaryApiKey);
+                }
+
 
                 const data = await response.json();
+
+                if (!response.ok) {
+                    // API returned an error (e.g. Invalid Key, Quota)
+                    const apiError = data.error?.message || "Unknown API Error";
+                    return { error: apiError };
+                }
+
                 if (data.candidates && data.candidates[0].content) {
                     let text = data.candidates[0].content.parts[0].text;
-                    text = text.replace(/```json/g, '').replace(/```/g, '').trim();
-                    return JSON.parse(text);
+                    // Robust JSON Extraction
+                    const startIndex = text.indexOf('{');
+                    const endIndex = text.lastIndexOf('}');
+                    if (startIndex !== -1 && endIndex !== -1) {
+                        text = text.substring(startIndex, endIndex + 1);
+                        return JSON.parse(text);
+                    }
                 }
             } catch (e) {
                 console.error("Gemini Check Error:", e);
+                return { error: e.message || "Network Error" };
             }
-            return null;
+            return { error: "No Response Candidates" };
         }
     },
 
     // --- WRITING MODULE (New) ---
     openWritingModes() {
+        this.state.previousView = this.state.currentView;
         this.state.currentView = 'writing-modes';
+        this.render();
+    },
+
+    goBackFromWriting() {
+        // Navigate back to previous view or default to dashboard
+        if (this.state.previousView) {
+            this.state.currentView = this.state.previousView;
+            this.state.previousView = null;
+        } else {
+            this.state.currentView = 'dashboard';
+        }
         this.render();
     },
 
@@ -1825,6 +1992,7 @@ const app = {
             this.showLanding();
             return;
         }
+        this.state.previousView = this.state.currentView;
         this.state.currentView = 'writing';
         this.state.writingScore = 0;
         this.render();
@@ -1838,6 +2006,7 @@ const app = {
             this.showLanding();
             return;
         }
+        this.state.previousView = this.state.currentView;
         this.state.currentView = 'writing-input';
         this.state.writingScore = 0; // Share score variable or separate? Let's use same state ref but different ID
         this.render();
@@ -1850,6 +2019,16 @@ const app = {
         input.value = '';
         input.disabled = true;
         input.placeholder = 'Soruyu hazırlıyorum...';
+
+        // Update Label
+        const label = document.querySelector('.task-label');
+        if (label) {
+            if (this.state.writingDirection === 'EN_TR') {
+                label.innerHTML = "İngilizce &rarr; Türkçe";
+            } else {
+                label.innerHTML = "Türkçe &rarr; İngilizce";
+            }
+        }
 
         document.getElementById('input-target-meaning').textContent = '...';
 
@@ -1868,13 +2047,20 @@ const app = {
 
         this.state.currentWritingSentence = sentenceData;
 
-        // Render Question (English)
+        // Render Question based on direction
         document.getElementById('writing-input-score').textContent = this.state.writingScore;
-        // Display ENGLISH to translate to Turkish
-        document.getElementById('input-target-meaning').textContent = sentenceData.en;
+
+        if (this.state.writingDirection === 'EN_TR') {
+            // EN -> TR
+            document.getElementById('input-target-meaning').textContent = sentenceData.en;
+            input.placeholder = 'Türkçesi nedir?';
+        } else {
+            // TR -> EN
+            document.getElementById('input-target-meaning').textContent = sentenceData.tr; // Show Turkish
+            input.placeholder = 'İngilizcesi nedir?'; // Ask for English
+        }
 
         input.disabled = false;
-        input.placeholder = 'Türkçe çevirisi nedir?';
         input.focus();
 
         // Check Button Reset
@@ -1886,6 +2072,37 @@ const app = {
             btn.style.background = 'white';
             btn.style.color = 'black';
         }
+    },
+
+    toggleWritingDirection() {
+        if (this.state.writingDirection === 'EN_TR') {
+            this.state.writingDirection = 'TR_EN';
+        } else {
+            this.state.writingDirection = 'EN_TR';
+        }
+
+        // Update Button UI (Classes)
+        const btn = document.getElementById('btn-lang-toggle');
+        if (btn) {
+            btn.classList.remove('mode-en-tr', 'mode-tr-en');
+
+            if (this.state.writingDirection === 'EN_TR') {
+                btn.classList.add('mode-en-tr');
+            } else {
+                btn.classList.add('mode-tr-en');
+            }
+
+            // Animation
+            const arrow = btn.querySelector('#toggle-arrow');
+            if (arrow) {
+                arrow.classList.remove('rotate-anim');
+                void arrow.offsetWidth; // Trigger reflow
+                arrow.classList.add('rotate-anim');
+            }
+        }
+
+        // Reload question
+        this.nextWritingInputQuestion();
     },
 
     updateChat(sender, msg) {
@@ -1921,28 +2138,63 @@ const app = {
         let result = null;
         if (this.geminiService.apiKey) {
             try {
-                result = await this.geminiService.checkAnswer(this.state.currentWritingSentence, val);
+                result = await this.geminiService.checkAnswer(this.state.currentWritingSentence, val, this.state.writingDirection);
             } catch (err) {
                 console.error("AI Check failed, falling back to local:", err);
             }
         }
 
-        if (result) {
+        if (result && !result.error) {
             // AI Success
             isCorrect = result.isCorrect;
             feedback = result.feedback;
         } else {
             // Fallback: Local match (Offline or API Fail)
-            const cleanVal = val.toLowerCase().replace(/[.,!?'"]/g, '').trim();
-            const cleanTarget = this.state.currentWritingSentence.tr.toLowerCase().replace(/[.,!?'"]/g, '').trim();
+            let errorMsg = "Yapay zeka çevrimdışı";
+            if (result && result.error) {
+                const err = result.error.toLowerCase();
+                if (err.includes('quota') || err.includes('429') || err.includes('rate limit')) {
+                    errorMsg = "⏳ Çok Hızlısın! (Kota Doldu, 15sn Bekle)";
+                } else {
+                    errorMsg += ` (${result.error})`;
+                }
+            }
 
-            // Allow exact match or if user's input is contained in target (vice versa for safety)
-            isCorrect = cleanVal === cleanTarget || cleanTarget.includes(cleanVal);
+            // Improved Fuzzy Logic: Token-based comparison to allow flexibility in word order and minor typos.
+            const cleanInput = val.toLowerCase().replace(/[.,!?'"]/g, ' ').trim();
+            const inputTokens = cleanInput.split(/\s+/).filter(t => t.length > 0).sort();
+
+            let targetText = '';
+            if (this.state.writingDirection === 'EN_TR') {
+                targetText = this.state.currentWritingSentence.tr;
+            } else {
+                targetText = this.state.currentWritingSentence.en;
+            }
+
+            const cleanTarget = targetText.toLowerCase().replace(/[.,!?'"]/g, ' ').trim();
+            const targetTokens = cleanTarget.split(/\s+/).filter(t => t.length > 0).sort();
+
+            // Calculate intersection
+            let matchCount = 0;
+            inputTokens.forEach(token => {
+                if (targetTokens.includes(token)) matchCount++;
+            });
+
+            // If more than 70% of significant words match, consider it correct.
+            const accuracy = matchCount / Math.max(inputTokens.length, targetTokens.length);
+            isCorrect = accuracy >= 0.7;
+
+            // Also check for simple containment as a safety net
+            if (!isCorrect) {
+                const simpleInput = val.toLowerCase().replace(/\s+/g, '');
+                const simpleTarget = targetText.toLowerCase().replace(/\s+/g, '');
+                isCorrect = simpleInput === simpleTarget || simpleTarget.includes(simpleInput);
+            }
 
             if (isCorrect) {
-                feedback = "Güzel! (Yapay zeka çevrimdışı ama cevap doğru.)";
+                feedback = `Güzel! (${errorMsg} ama kelime bazlı eşleşme başarılı.)`;
             } else {
-                feedback = "Eşleşmedi. (⚠️ Yapay zeka şu an çevrimdışı olduğu için hatayı detaylı açıklayamıyorum. Sadece kelime eşleşmesine bakabildim.)";
+                feedback = `Eşleşmedi. (${errorMsg} olduğu için sadece kelime kontrolü yapabildim.)`;
             }
         }
 
@@ -1961,7 +2213,12 @@ const app = {
 
         } else {
             this.playSound('wrong');
-            this.updateChat('ai', `❌ <b>Yanlış.</b> ${feedback}<br><br>Doğru Çeviri: <i>${this.state.currentWritingSentence.tr}</i>`);
+
+            const correctText = this.state.writingDirection === 'EN_TR' ?
+                this.state.currentWritingSentence.tr :
+                this.state.currentWritingSentence.en;
+
+            this.updateChat('ai', `❌ <b>Yanlış.</b> ${feedback}<br><br>Doğru Çeviri: <i>${correctText}</i>`);
 
             btn.textContent = "DEVAM ET ->";
             btn.disabled = false;
@@ -1973,13 +2230,19 @@ const app = {
 
     passWritingQuestion() {
         this.updateChat('user', 'Pas geçtim.');
-        this.updateChat('ai', `Sorun değil! Cevap şuydu: <b>${this.state.currentWritingSentence.tr}</b>`);
+        const correctText = this.state.writingDirection === 'EN_TR' ?
+            this.state.currentWritingSentence.tr :
+            this.state.currentWritingSentence.en;
+        this.updateChat('ai', `Sorun değil! Cevap şuydu: <b>${correctText}</b>`);
         this.nextWritingInputQuestion();
     },
 
     giveUpWritingInput() {
         this.updateChat('user', 'Pes ediyorum 🏳️');
-        this.updateChat('ai', `Pes etmek yok! 💪 Doğrusu buydu:<br><b>${this.state.currentWritingSentence.tr}</b>`);
+        const correctText = this.state.writingDirection === 'EN_TR' ?
+            this.state.currentWritingSentence.tr :
+            this.state.currentWritingSentence.en;
+        this.updateChat('ai', `Pes etmek yok! 💪 Doğrusu buydu:<br><b>${correctText}</b>`);
 
         const btn = document.getElementById('btn-check-answer');
         btn.textContent = "DEVAM ET ->";
