@@ -170,14 +170,80 @@ body {
 .hub-header {
     display: flex;
     flex-wrap: wrap;
+    /* Allow wrap */
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-bottom: 2rem;
     background: rgba(255, 255, 255, 0.03);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: var(--radius-xl);
     border: 1px solid var(--border-glass);
+}
+
+.dashboard-top-bar {
+    flex-wrap: wrap;
+}
+
+/* Wallet Badge Styling */
+.wallet-display {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(30, 41, 59, 0.6));
+    border: 1px solid rgba(14, 165, 233, 0.4);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    /* Slightly smaller radius */
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 700;
+    color: var(--neon-blue);
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.1);
+    font-size: 0.8rem;
+    /* Smaller font */
+    white-space: nowrap;
+    margin-top: 0.2rem;
+}
+
+.wallet-display span {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Logo Fixes */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically */
+    align-items: center;
+    gap: 0;
+    /* Gap handled by margin-top of wallet */
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .dashboard-top-bar h1 {
+        font-size: 1.2rem !important;
+    }
+
+    .logo-icon {
+        font-size: 1.2rem;
+    }
+
+    .user-profile {
+        order: 1;
+    }
+
+    .logo {
+        order: 2;
+        flex: 1;
+        justify-content: center;
+        flex-direction: column;
+        /* Reinforce column */
+    }
+
+    /* Wallet is now inside logo, so order property here won't affect it relative to profile/logo main container, 
+       but we want to ensure the whole logo block is centered */
 }
 
 .hub-welcome h3 {
@@ -1132,6 +1198,7 @@ input:focus {
 /* =========================================
    NEW SPLIT MODE SELECTION (APP STYLE)
    ========================================= */
+/* Peaceful Background */
 #view-modes {
     background: url('../assets/modes-bg.png') no-repeat center center/cover;
     position: relative;
@@ -1147,6 +1214,23 @@ input:focus {
     height: 100%;
     background: rgba(2, 6, 23, 0.7);
     /* Dark overlay */
+    z-index: 0;
+}
+
+/* WRITING MODES BACKGROUND */
+#view-writing-modes {
+    background: url('../assets/writing-bg.png') no-repeat center center/cover;
+    position: relative;
+}
+
+#view-writing-modes::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 6, 23, 0.7);
     z-index: 0;
 }
 
@@ -1424,39 +1508,306 @@ input:focus {
     border-bottom: none;
 }
 
-/* Desktop Split Layout override */
+/* Modes Split Layout - Base */
+/* Modes Split Layout - Base Container */
+/* Modes Split Layout - Base Container */
+.modes-split-layout {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem;
+    padding-top: 5rem;
+    /* Increased top padding to clear absolute button */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MOBILE FIRST: Flex Column Layout for #view-modes */
+#view-modes .modes-split-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding-top: 6rem;
+    height: 100vh;
+    overflow-y: auto;
+    /* Allow scrolling entire view if needed */
+}
+
+/* Area 1: Leaderboard (Top) */
+.area-leaderboard {
+    order: 1;
+    flex: 0 0 auto;
+    /* Don't grow, just fit content */
+    width: 100%;
+}
+
+/* Area 2: Modes (Middle) */
+.area-modes {
+    order: 2;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Area 3: Footer (Bottom) */
+.area-footer {
+    order: 3;
+    flex: 0 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+/* Area 2: Modes (Middle) */
+.area-modes {
+    order: 2;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Area 3: Footer (Bottom) */
+.area-footer {
+    order: 3;
+    flex: 0 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+.modes-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-y: auto;
+    height: 100%;
+    padding-bottom: 2rem;
+    scrollbar-width: none;
+    min-width: 0;
+    width: 100%;
+}
+
+/* MOBILE: Hide rows > 3 in leaderboard */
+#view-modes .lb-table tbody tr:nth-child(n+4) {
+    display: table-row !important;
+    /* Temporarily show to check alignment issues user mentioned */
+}
+
+/* Align ranks 4 and 5 (which have no medal) to look better */
+/* Align ranks 4 and 5 (which have no medal) to look better */
+#view-modes .lb-table tbody tr:nth-child(n+4) td:first-child {
+    padding-left: 0.8rem;
+    font-weight: bold;
+    color: var(--text-base);
+}
+
+/* Force equal font size for ALL rows (User request) */
+#view-modes .lb-table td {
+    font-size: 0.85rem !important;
+}
+
+/* Mobile Leaderboard Styling */
+.leaderboard-card {
+    padding: 0.8rem !important;
+    background: rgba(30, 41, 59, 0.6);
+}
+
+.lb-table td,
+.lb-table th {
+    padding: 0.4rem;
+    font-size: 0.85rem;
+    max-width: none !important;
+    /* Reset truncation for single column */
+}
+
+/* Ensure header stays compact */
+.modes-header-group {
+    margin-bottom: 0.5rem;
+    padding-left: 0.2rem;
+}
+
+.modes-header-group h2 {
+    font-size: 1rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+/* Back button positioning for mobile grid */
+/* Back button positioning for mobile grid */
+#view-modes .modes-header-group .back-btn-top {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 50;
+    /* Ensure high z-index */
+    background: rgba(15, 23, 42, 0.8);
+    /* Add background to ensure visibility if overlap persists */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile Mode Grid */
+.mode-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cols on mobile? or 2? Let's try 3 for compactness or auto-fit */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.mode-card.compact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    height: 100%;
+}
+
+.mode-card.compact .mode-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.mode-card.compact h3 {
+    font-size: 0.8rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.mode-card.compact p {
+    display: none;
+    /* Hide description on mobile to keep it tight */
+}
+
+/* Leaderboard Compact */
+.leaderboard-card {
+    padding: 0.5rem 0.2rem !important;
+    width: 100%;
+    overflow: hidden;
+}
+
+.lb-header {
+    display: flex;
+    flex-direction: column;
+    /* Stack on tiny screens */
+    align-items: center;
+    margin-bottom: 0.4rem;
+    gap: 0.2rem;
+}
+
+.lb-header h3 {
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.badge-rush {
+    font-size: 0.6rem;
+    padding: 0.1rem 0.3rem;
+}
+
+/* Table Compact Logic */
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.lb-table {
+    font-size: 0.7rem;
+    width: 100%;
+}
+
+.lb-table th {
+    padding: 0.2rem;
+    font-size: 0.65rem;
+    white-space: nowrap;
+}
+
+.lb-table td {
+    padding: 0.2rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Force name truncation */
+.lb-table td:nth-child(2) {
+    max-width: 60px;
+    /* Very aggressive truncation */
+}
+
+/* Specific Mobile Styles (very small) */
+@media (max-width: 400px) {
+    #view-modes .modes-split-layout {
+        gap: 0.2rem;
+        padding-left: 0.1rem;
+        padding-right: 0.1rem;
+    }
+
+    .mode-card.compact .mode-icon {
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktop Override */
 @media (min-width: 1024px) {
+
+    /* Apply desktop grid logic nicely */
+    #view-modes .modes-split-layout {
+        grid-template-columns: 2fr 1fr;
+        padding: 3rem;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    /* General override for others if needed */
     .modes-split-layout {
         flex-direction: row;
-        align-items: flex-start;
-        /* Align Top */
-        gap: 3rem;
-        padding: 3rem;
-        justify-content: center;
     }
 
     .modes-column {
-        justify-content: center;
-        flex: 3;
-        /* Take more space */
-        max-width: 600px;
+        height: auto;
+        overflow: visible;
     }
 
     .leaderboard-column {
-        flex: 1;
-        max-width: 350px;
-        /* Small and on the right */
-        justify-content: flex-start;
-    }
-
-    .leaderboard-card {
         height: auto;
-        max-height: 500px;
-        /* Limit height */
+        overflow: visible;
     }
 
     .mode-card.compact {
-        padding: 1.5rem;
+        flex-direction: row;
+        text-align: left;
+        padding: 1.2rem;
+    }
+
+    .mode-card.compact .mode-icon {
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+
+    .mode-card.compact p {
+        display: block;
+        font-size: 0.85rem;
     }
 }
 
@@ -1815,7 +2166,8 @@ input:focus {
     display: flex;
     height: 100%;
     width: 100%;
-    background: #0f172a;
+    /* Peaceful Nature Background with readable overlay */
+    background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('../assets/game-bg-nature.png') no-repeat center center/cover;
     overflow: hidden;
     position: absolute;
     /* Changed from fixed to absolute */
@@ -2266,19 +2618,143 @@ input:focus {
 }
 
 /* Ensure compact grid displays correctly */
-.mode-grid-compact {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    max-width: 400px;
-    /* Limit width for better aesthetics when stacked */
+/* Writing Modes Section (Cleaned) */
+#view-writing-modes {
+    background: url('../assets/dashboard-bg.png') no-repeat center center/cover fixed;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
 }
 
-.mode-card.compact {
+.writing-modes-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
+    gap: 1.5rem;
 }
+
+.writing-modes-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.writing-modes-header .back-btn-top {
+    font-size: 1.2rem;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.writing-modes-title h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1.2;
+    color: white;
+}
+
+.writing-modes-title p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+    font-weight: normal !important;
+    /* Override inline styles */
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Vertical Stack Layout - ABSOLUTE OVERRIDE */
+#view-writing-modes .writing-modes-grid,
+.writing-modes-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    /* CRITICAL: Reset all grid properties */
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    grid-auto-flow: initial !important;
+}
+
+/* Colorful Rectangular Cards */
+.writing-mode-card {
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    display: flex !important;
+    flex-direction: row !important;
+    /* Icon | Text */
+    align-items: center;
+    text-align: left;
+    gap: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    min-height: 80px;
+}
+
+/* Card 1: Puzzle (Harf Birleştirme) - Blue/Cyan Gradient */
+.writing-mode-card:nth-child(1) {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(6, 182, 212, 0.2)) !important;
+    border-color: rgba(14, 165, 233, 0.4);
+}
+
+.writing-mode-card:nth-child(1):hover {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.3), rgba(6, 182, 212, 0.3)) !important;
+    transform: translateX(5px);
+}
+
+/* Card 2: Typing (Kelime Yazma) - Purple/Pink Gradient */
+.writing-mode-card:nth-child(2) {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2)) !important;
+    border-color: rgba(139, 92, 246, 0.4);
+}
+
+.writing-mode-card:nth-child(2):hover {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3)) !important;
+    transform: translateX(5px);
+}
+
+.writing-mode-card .mode-card-icon {
+    font-size: 2rem !important;
+    margin-bottom: 0 !important;
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.writing-mode-card h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.2rem 0;
+    color: white;
+}
+
+.writing-mode-card p {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Middle duplicate block removed */
 
 /* Game Over Modal Styling */
 .modal-overlay {
@@ -2361,190 +2837,446 @@ input:focus {
     transform: translateY(-2px);
 }
 
-/* ===== WRITING MODES SELECTION SCREEN ===== */
-#view-writing-modes {
-    background: url('../assets/dark_login_bg.png') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+/* Old conflicting styles removed */
+
+/* NUCLEAR FIX: Force Writing Mode Layout */
+#view-writing-modes .writing-modes-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    /* Reset grid */
+    gap: 1rem !important;
 }
 
-.writing-modes-container {
-    width: 100%;
-    max-width: 1000px;
-    padding: 2rem 1rem;
-    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+#view-writing-modes .writing-mode-card {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    padding: 1rem 1.5rem !important;
+    align-items: center !important;
+    min-height: 80px !important;
+    border-radius: 16px !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+#view-writing-modes .writing-mode-card .mode-card-icon {
+    font-size: 2rem !important;
+    margin-bottom: 0 !important;
+    margin-right: 1.5rem !important;
+}
+
+#view-writing-modes .writing-mode-card h3 {
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+}
+
+#view-writing-modes .writing-mode-card p {
+    font-size: 0.8rem !important;
+    margin: 0 !important;
+}
+
+/* Force Colors */
+#view-writing-modes .writing-mode-card:nth-child(1) {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(6, 182, 212, 0.2)), rgba(2, 6, 23, 0.9) !important;
+    border: 1px solid rgba(14, 165, 233, 0.6) !important;
+}
+
+#view-writing-modes .writing-mode-card:nth-child(2) {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2)), rgba(2, 6, 23, 0.9) !important;
+    border: 1px solid rgba(139, 92, 246, 0.6) !important;
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION - WRITING INPUT MODE
+   ======================================== */
+
+@media (max-width: 480px) {
+
+    /* Language Toggle Button - Make it smaller/Compact for Header */
+    #btn-lang-toggle {
+        font-size: 0.75rem !important;
+        padding: 0.25rem 0.5rem !important;
+        min-height: 32px;
+        gap: 6px !important;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    #btn-lang-toggle .flag-img {
+        width: 18px !important;
+        height: 13px !important;
+    }
+
+    #btn-lang-toggle .lang-text {
+        font-size: 0.8rem !important;
+    }
+
+    #btn-lang-toggle .arrow-icon {
+        font-size: 0.8rem !important;
+    }
+
+    /* English Sentence Display - Reduce massive text */
+    #input-target-meaning {
+        font-size: clamp(1rem, 3.5vw, 1.3rem) !important;
+        line-height: 1.3 !important;
+        padding: 1rem !important;
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+        /* User Requested: Frame and Light Background */
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-radius: 12px !important;
+        backdrop-filter: blur(5px);
+    }
+
+    /* Writing Input Container - Better spacing */
+    #view-writing-input {
+        padding: 0.75rem !important;
+    }
+
+    /* AI Chat Messages - More compact */
+    #ai-chat-messages {
+        max-height: 35vh !important;
+        padding: 0.5rem !important;
+    }
+
+    .chat-bubble {
+        padding: 0.6rem 0.8rem !important;
+        font-size: 0.85rem !important;
+        max-width: 85% !important;
+    }
+
+    .chat-bubble.ai {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Input Field - Touch target */
+    #writing-direct-input {
+        font-size: 1rem !important;
+        padding: 0.75rem !important;
+        min-height: 44px;
+    }
+
+    /* Buttons - Ensure touch targets */
+    #btn-check-answer {
+        font-size: 0.95rem !important;
+        padding: 0.75rem 1.25rem !important;
+        min-height: 48px;
+        font-weight: 600;
+    }
+
+    .writing-input-actions button {
+        min-height: 44px;
+        padding: 0.6rem 1rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Back button spacing */
+    .back-btn-top {
+        min-width: 44px;
+        min-height: 44px;
     }
 }
 
-.writing-modes-header {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    position: relative;
-}
+/* Mobile Keyboard Optimization */
+@media (max-width: 480px) {
 
-.writing-modes-header .btn-icon {
-    background: rgba(15, 23, 42, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 0.75rem 1rem;
-    font-size: 1.2rem;
-    border-radius: 16px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    /* Task Header (Removed/Consolidated into Chat Header) */
 
-.writing-modes-header .btn-icon:hover {
-    background: rgba(30, 41, 59, 0.95);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-}
-
-.writing-modes-title {
-    flex: 1;
-}
-
-.writing-modes-title h2 {
-    font-size: 3rem;
-    font-weight: 900;
-    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 0;
-    letter-spacing: -1px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.writing-modes-title p {
-    color: #000000 !important;
-    font-size: 1.1rem;
-    margin: 0.5rem 0 0;
-    font-weight: 700;
-    text-shadow: none;
-}
-
-.writing-modes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.writing-mode-card {
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: 32px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 3rem 2rem;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
-        inset 0 1px 1px rgba(255, 255, 255, 0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.writing-mode-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    border-color: rgba(59, 130, 246, 0.5);
-    box-shadow: 0 30px 80px rgba(37, 99, 235, 0.4),
-        0 0 80px rgba(59, 130, 246, 0.3),
-        inset 0 1px 1px rgba(255, 255, 255, 0.2);
-}
-
-.writing-mode-card:active {
-    transform: translateY(-8px) scale(0.98);
-}
-
-.card-glow {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.4s;
-    pointer-events: none;
-}
-
-.writing-mode-card:hover .card-glow {
-    opacity: 1;
-    animation: rotate 8s linear infinite;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
+    /* Consolidated Chat Header for Mobile */
+    .chat-header {
+        justify-content: space-between !important;
+        padding: 0.5rem 1rem !important;
+        background: rgba(15, 23, 42, 0.95) !important;
+        /* Keep it semi-transparent dark or transparent as per user preference? User asked to remove dark backgound from the PREVIOUS header location. 
+        But text needs contrast against galaxy background? 
+        The chat pane has `order: -1`.
+        If I make it transparent, does it overlap weirdly? 
+        The user said "clean dark background" earlier, then "remove dark background". 
+        Let's try transparent first as per last request, or minimal. 
+        Actually, the chat pane itself might have background.
+        Let's stick to transparent for the header to match the request "place it where AI assistant is". 
+        Wait, AI assistant pane has its own background.
+        The user said "move to the place where AI assistant writes".
+        If I move it there, I should probably keep the AI assistant header style but just spaced out.
+        The AI assistant header usually has a background.
+        Let's keep the existing AI header background but spread items. */
     }
 
-    to {
-        transform: rotate(360deg);
+    /* Task Content - Remove label spacing since we deleted it */
+    .task-content {
+        padding: 1rem 0.75rem !important;
+        gap: 0.75rem !important;
+    }
+
+    /* Question text - More compact */
+    .task-question-text {
+        margin-top: 0 !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    /* Task input wrapper - Prevent keyboard overlap issues */
+    .task-input-wrapper {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .task-textarea {
+        font-size: 1rem !important;
+        padding: 0.75rem !important;
+        min-height: 70px;
+    }
+
+    /* Task Actions - Ensure visible above keyboard */
+    .task-actions {
+        padding: 0.75rem !important;
+        padding-bottom: 1.5rem !important;
+        /* Extra bottom space for iOS */
+        background: rgba(15, 23, 42, 0.95);
+        position: sticky;
+        bottom: 0;
+    }
+
+    .sub-actions {
+        gap: 0.5rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    /* Split Screen - Stack vertically on mobile */
+    .split-screen-container {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    .task-pane {
+        width: 100% !important;
+        min-height: auto !important;
+    }
+
+    .chat-pane {
+        width: 100% !important;
+        max-height: 40vh !important;
+        order: -1;
+        /* Move chat ABOVE task on mobile */
     }
 }
 
-.mode-card-icon {
-    font-size: 5rem;
-    margin-bottom: 1.5rem;
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* iOS Safe Area (notch devices) */
+@supports (padding: env(safe-area-inset-bottom)) {
+    @media (max-width: 480px) {
 
-.writing-mode-card:hover .mode-card-icon {
-    transform: scale(1.15) rotateZ(-5deg);
-}
+        /* NUCLEAR FIX: Force Writing Mode Layout */
+        #view-writing-modes .writing-modes-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            grid-template-columns: none !important;
+            /* Reset grid */
+            gap: 1rem !important;
+        }
 
-.writing-mode-card h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 0 0.75rem;
-    letter-spacing: -0.5px;
-}
+        #view-writing-modes .writing-mode-card {
+            display: flex !important;
+            flex-direction: row !important;
+            width: 100% !important;
+            padding: 1rem 1.5rem !important;
+            align-items: center !important;
+            min-height: 80px !important;
+            border-radius: 16px !important;
+            text-align: left !important;
+            justify-content: flex-start !important;
+        }
 
-.writing-mode-card p {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0;
-    font-weight: 500;
-}
+        #view-writing-modes .writing-mode-card .mode-card-icon {
+            font-size: 2rem !important;
+            margin-bottom: 0 !important;
+            margin-right: 1.5rem !important;
+        }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .writing-modes-title h2 {
-        font-size: 2rem;
-    }
+        #view-writing-modes .writing-mode-card h3 {
+            font-size: 1.1rem !important;
+            margin: 0 !important;
+        }
 
-    .writing-modes-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
+        #view-writing-modes .writing-mode-card p {
+            font-size: 0.8rem !important;
+            margin: 0 !important;
+        }
 
-    .writing-mode-card {
-        padding: 2.5rem 1.5rem;
-    }
+        /* Force Colors */
+        #view-writing-modes .writing-mode-card:nth-child(1) {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.4), rgba(6, 182, 212, 0.4)) !important;
+            border: 1px solid rgba(14, 165, 233, 0.6) !important;
+        }
 
-    .mode-card-icon {
-        font-size: 4rem;
-    }
-}
+        #view-writing-modes .writing-mode-card:nth-child(2) {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(236, 72, 153, 0.4)) !important;
+            border: 1px solid rgba(139, 92, 246, 0.6) !important;
+        }
+
+        /* ========================================
+   MOBILE OPTIMIZATION - WRITING INPUT MODE
+   ======================================== */
+
+        @media (max-width: 480px) {
+
+            /* Language Toggle Button - Make it smaller */
+            #btn-lang-toggle {
+                font-size: 0.85rem !important;
+                padding: 0.4rem 0.8rem !important;
+                min-height: 36px;
+            }
+
+            /* English Sentence Display - Reduce massive text */
+            #input-target-meaning {
+                font-size: clamp(1rem, 3.5vw, 1.3rem) !important;
+                line-height: 1.3 !important;
+                padding: 1rem !important;
+                word-wrap: break-word;
+                overflow-wrap: anywhere;
+            }
+
+            /* Writing Input Container - Better spacing */
+            #view-writing-input {
+                padding: 0.75rem !important;
+            }
+
+            /* AI Chat Messages - More compact */
+            #ai-chat-messages {
+                max-height: 35vh !important;
+                padding: 0.5rem !important;
+            }
+
+            .chat-bubble {
+                padding: 0.6rem 0.8rem !important;
+                font-size: 0.85rem !important;
+                max-width: 85% !important;
+            }
+
+            .chat-bubble.ai {
+                font-size: 0.85rem !important;
+                line-height: 1.4 !important;
+            }
+
+            /* Input Field - Touch target */
+            #writing-direct-input {
+                font-size: 1rem !important;
+                padding: 0.75rem !important;
+                min-height: 44px;
+            }
+
+            /* Buttons - Ensure touch targets */
+            #btn-check-answer {
+                font-size: 0.95rem !important;
+                padding: 0.75rem 1.25rem !important;
+                min-height: 48px;
+                font-weight: 600;
+            }
+
+            .writing-input-actions button {
+                min-height: 44px;
+                padding: 0.6rem 1rem !important;
+                font-size: 0.85rem !important;
+            }
+
+            /* Back button spacing */
+            .back-btn-top {
+                min-width: 44px;
+                min-height: 44px;
+            }
+        }
+
+        /* Mobile Keyboard Optimization */
+        @media (max-width: 480px) {
+
+            /* Task Header - Move to top, compact */
+            .task-header {
+                padding: 0.5rem 0.75rem !important;
+                gap: 0.75rem !important;
+                background: rgba(15, 23, 42, 0.98);
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            /* Task Content - Remove label spacing since we deleted it */
+            .task-content {
+                padding: 1rem 0.75rem !important;
+                gap: 0.75rem !important;
+            }
+
+            /* Question text - More compact */
+            .task-question-text {
+                margin-top: 0 !important;
+                margin-bottom: 0.75rem !important;
+            }
+
+            /* Task input wrapper - Prevent keyboard overlap issues */
+            .task-input-wrapper {
+                margin-bottom: 0.5rem !important;
+            }
+
+            .task-textarea {
+                font-size: 1rem !important;
+                padding: 0.75rem !important;
+                min-height: 70px;
+            }
+
+            /* Task Actions - Ensure visible above keyboard */
+            .task-actions {
+                padding: 0.75rem !important;
+                padding-bottom: 1.5rem !important;
+                /* Extra bottom space for iOS */
+                background: rgba(15, 23, 42, 0.95);
+                position: sticky;
+                bottom: 0;
+            }
+
+            .sub-actions {
+                gap: 0.5rem !important;
+                margin-top: 0.5rem !important;
+            }
+
+            /* Split Screen - Stack vertically on mobile */
+            .split-screen-container {
+                flex-direction: column !important;
+                min-height: 100vh !important;
+            }
+
+            .task-pane {
+                width: 100% !important;
+                min-height: auto !important;
+            }
+
+            .chat-pane {
+                width: 100% !important;
+                max-height: 40vh !important;
+                order: -1;
+                /* Move chat ABOVE task on mobile */
+            }
+        }
+
+        /* iOS Safe Area (notch devices) */
+        @supports (padding: env(safe-area-inset-bottom)) {
+            @media (max-width: 480px) {
+                .task-actions {
+                    padding-bottom: calc(1rem + env(safe-area-inset-bottom)) !important;
+                }
+            }
+        }
+
+        #view-writing-modes {
+            background: url('../assets/game-bg-galaxy.png') no-repeat center center/cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        #view-writing-modes::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }

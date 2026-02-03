@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İhsans Gate - Survival Mod</title>
     <meta name="description" content="İngilizce kelime dağarcığınızı geliştirin.">
-    <link rel="stylesheet" href="css/style.css?v=6">
+    <link rel="stylesheet" href="css/style.css?v=11">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -123,12 +123,14 @@
                             </div>
 
                             <div class="logo">
-                                <span class="logo-icon">🔥</span>
-                                <h1 style="font-size:1.5rem;">İhsans<span class="highlight">Gate</span></h1>
-                            </div>
-
-                            <div class="wallet-display">
-                                <span id="wallet-amount">0</span> 💎
+                                <div class="logo-row" style="display:flex; align-items:center; gap:0.5rem;">
+                                    <span class="logo-icon">🔥</span>
+                                    <h1 style="font-size:1.5rem; margin:0;">İhsans<span class="highlight">Gate</span>
+                                    </h1>
+                                </div>
+                                <div class="wallet-display">
+                                    <span id="wallet-amount">0</span> 💎
+                                </div>
                             </div>
                         </div>
 
@@ -211,7 +213,7 @@
             <!-- WRITING MODES SELECTION (New) -->
             <div id="view-writing-modes" class="view hidden">
                 <div class="modes-split-layout"
-                    style="justify-content:center; align-items:center; flex-direction:column; padding-top:4rem;">
+                    style="justify-content:center; align-items:center; flex-direction:column; padding-top:6rem;">
 
                     <div class="modes-header-group" style="text-align:center; margin-bottom:3rem;">
                         <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Geri"
@@ -223,10 +225,10 @@
                     </div>
 
                     <div class="mode-grid-compact"
-                        style="display:flex; gap:2rem; justify-content:center; flex-wrap:wrap;">
+                        style="display:flex; gap:1.5rem; justify-content:center; flex-direction:column; width:100%; align-items:center;">
                         <!-- Scramble Mode -->
                         <div class="mode-card compact" onclick="app.startWritingMode()"
-                            style="width:280px; text-align:center; display:block; padding:2rem;">
+                            style="width:100%; max-width:350px; text-align:center; display:block; padding:2rem;">
                             <div class="mode-icon" style="font-size:3rem; margin-bottom:1rem;">🧩</div>
                             <div class="mode-info">
                                 <h3>Harf Birleştirme</h3>
@@ -236,7 +238,7 @@
 
                         <!-- Direct Input Mode -->
                         <div class="mode-card compact" onclick="app.startWritingInputMode()"
-                            style="width:280px; text-align:center; display:block; padding:2rem;">
+                            style="width:100%; max-width:350px; text-align:center; display:block; padding:2rem;">
                             <div class="mode-icon" style="font-size:3rem; margin-bottom:1rem;">⌨️</div>
                             <div class="mode-info">
                                 <h3>Kelime Yazma</h3>
@@ -248,17 +250,59 @@
             </div>
 
             <!-- WRITING INPUT VIEW (Split Layout) -->
-            <div id="view-writing-input" class="view hidden">
+            <div id="view-writing-input" class="view hidden" style="position:relative;">
+                <!-- START OVERLAY (Quota Saver) -->
+                <div id="writing-input-start-overlay"
+                    style="position:absolute; inset:0; background:rgba(15, 23, 42, 0.95); z-index:1000; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+                    <div style="font-size:4rem; margin-bottom:1rem;">🤖</div>
+                    <h2 style="font-size:2rem; margin-bottom:0.5rem; color:var(--accent-gold);">Hazır mısın?</h2>
+                    <p style="color:var(--text-secondary); max-width:400px; margin-bottom:2rem;">
+                        Başla butonuna bastığında Yapay Zeka senin için özel bir soru hazırlayacak.
+                    </p>
+                    <button class="btn btn-primary" style="font-size:1.5rem; padding:1rem 3rem;"
+                        onclick="app.beginProWritingSession()">
+                        BAŞLA 🚀
+                    </button>
+                    <button class="btn btn-text" style="margin-top:1rem;" onclick="app.openWritingModes()">Geri
+                        Dön</button>
+                </div>
+
                 <div class="split-screen-container">
 
                     <!-- LEFT: Task Pane -->
                     <div class="task-pane">
-                        <div class="task-header">
-                            <button class="btn-icon back-btn-simple" onclick="app.openWritingModes()">&larr;</button>
+                        <!-- task-header removed -->
 
-                            <!-- Language Toggle -->
-                            <!-- Language Toggle -->
-                            <!-- Language Toggle -->
+                        <div class="task-content">
+                            <h2 id="input-target-meaning" class="task-question-text">Loading...</h2>
+
+                            <div class="task-input-wrapper">
+                                <textarea id="writing-direct-input" class="task-textarea"
+                                    placeholder="Türkçesi nedir?..." rows="2"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="task-actions">
+                            <button id="btn-check-answer" class="btn-action check"
+                                onclick="app.checkWritingInputAnswer()">KONTROL ET</button>
+                            <!-- Removed Buttons -->
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: AI Chat Pane -->
+                    <div class="chat-pane">
+                        <div class="chat-header" style="justify-content: space-between;">
+                            <button class="btn-icon back-btn-simple" onclick="app.openWritingModes()"
+                                style="margin-right:0;">&larr;</button>
+
+                            <div style="display:flex; align-items:center; gap:0.5rem;">
+                                <span class="ai-avatar">🤖</span>
+                                <div class="ai-info">
+                                    <span class="ai-name">AI Asistan</span>
+                                    <span class="ai-status">Çevrimiçi</span>
+                                </div>
+                            </div>
+
                             <button id="btn-lang-toggle" class="lang-toggle-btn mode-en-tr"
                                 onclick="app.toggleWritingDirection()">
                                 <div class="toggle-content">
@@ -273,38 +317,6 @@
                                     </span>
                                 </div>
                             </button>
-
-                            <div class="score-display">💎 <span id="writing-input-score">0</span></div>
-                        </div>
-
-                        <div class="task-content">
-                            <span class="task-label">Bunu Türkçeye Çevir 👇</span>
-                            <h2 id="input-target-meaning" class="task-question-text">Loading...</h2>
-
-                            <div class="task-input-wrapper">
-                                <textarea id="writing-direct-input" class="task-textarea"
-                                    placeholder="Türkçesi nedir?..." rows="2"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="task-actions">
-                            <button id="btn-check-answer" class="btn-action check"
-                                onclick="app.checkWritingInputAnswer()">KONTROL ET</button>
-                            <div class="sub-actions">
-                                <button class="btn-action sub" onclick="app.passWritingQuestion()">Pas Geç ⏭️</button>
-                                <button class="btn-action sub" onclick="app.giveUpWritingInput()">Pes Et 🏳️</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- RIGHT: AI Chat Pane -->
-                    <div class="chat-pane">
-                        <div class="chat-header">
-                            <span class="ai-avatar">🤖</span>
-                            <div class="ai-info">
-                                <span class="ai-name">AI Asistan</span>
-                                <span class="ai-status">Çevrimiçi</span>
-                            </div>
                         </div>
                         <div id="ai-chat-messages" class="chat-messages">
                             <!-- Messages will appear here -->
@@ -319,15 +331,42 @@
             <!-- WRITING VIEW (Scramble Mode) -->
             <div id="view-modes" class="view hidden" style="padding: 0;">
                 <div class="modes-split-layout">
-                    <!-- LEFT COLUMN: MODES -->
-                    <div class="modes-column">
+
+                    <!-- AREA 1: LEADERBOARD (Top on Mobile) -->
+                    <div class="area-leaderboard">
+                        <div class="leaderboard-card">
+                            <div class="lb-header">
+                                <h3>🏆 Liderlik Tablosu</h3>
+                                <span class="badge-rush">Acele Modu</span>
+                            </div>
+
+                            <div class="table-wrapper">
+                                <table class="lb-table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Oyuncu</th>
+                                            <th>Skor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="leaderboard-body">
+                                        <!-- JS Populated -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AREA 2: MODES (Middle on Mobile) -->
+                    <div class="area-modes">
                         <div class="modes-header-group">
                             <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Geri">
                                 &larr;
                             </button>
                             <h2>Oyun Modu</h2>
                         </div>
-                        <p style="color:var(--text-secondary); margin-bottom:2rem">Meydan okumanı seç.</p>
+                        <p style="color:var(--text-secondary); margin-bottom:1rem; text-align:center;">Meydan okumanı
+                            seç.</p>
 
                         <div class="mode-grid-compact">
                             <div class="mode-card compact" onclick="app.showLevelMap()">
@@ -354,33 +393,10 @@
                         </div>
                     </div>
 
-                    <!-- RIGHT COLUMN: LEADERBOARD -->
-                    <div class="leaderboard-column">
-                        <div class="leaderboard-card">
-                            <div class="lb-header">
-                                <h3>🏆 Liderlik Tablosu</h3>
-                                <span class="badge-rush">Acele Modu</span>
-                            </div>
-
-                            <div class="table-wrapper">
-                                <table class="lb-table">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Oyuncu</th>
-                                            <th>Skor</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="leaderboard-body">
-                                        <!-- JS Populated -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <!-- NEW: Word List Button -->
+                    <!-- AREA 3: FOOTER (Bottom on Mobile) -->
+                    <div class="area-footer">
                         <button class="btn btn-secondary"
-                            style="width:100%; margin-top:1rem; display:flex; justify-content:center; align-items:center; gap:0.5rem;"
+                            style="width:100%; display:flex; justify-content:center; align-items:center; gap:0.5rem;"
                             onclick="app.showWordList()">
                             <span>📚</span> Tüm Kelimeler & Favoriler
                         </button>
@@ -392,7 +408,7 @@
             <div id="view-game" class="view hidden">
                 <div class="game-header-bar" style="position:relative; justify-content:center;">
                     <!-- Level Positioned Absolutely to Global Left -->
-                    <div
+                    <div id="level-indicator-container"
                         style="position:absolute; left:1rem; top:50%; transform:translateY(-50%); font-size:1.4rem; color:var(--text-secondary); font-weight:bold;">
                         Seviye <span id="current-level-display" style="color:var(--neon-gold)">1</span>
                     </div>
@@ -547,41 +563,10 @@
                 </div>
             </div>
 
-            <!-- WRITING MODES SELECTION VIEW -->
-            <div id="view-writing-modes" class="view hidden">
-                <div class="writing-modes-container">
-                    <!-- Header -->
-                    <div class="writing-modes-header">
-                        <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Geri">&larr;</button>
-                        <div class="writing-modes-title">
-                            <h2>Yazma Modu</h2>
-                            <p style="color: #000000 !important; font-weight: 700;">Nasıl çalışmak istersin?</p>
-                        </div>
-                    </div>
 
-                    <!-- Mode Cards -->
-                    <div class="writing-modes-grid">
-                        <!-- Harf Birleştirme Card -->
-                        <div class="writing-mode-card" onclick="app.startWritingMode()">
-                            <div class="mode-card-icon">🧩</div>
-                            <h3>Harf Birleştirme</h3>
-                            <p>Karışık harfleri birleştir</p>
-                            <div class="card-glow"></div>
-                        </div>
-
-                        <!-- Kelime Yazma Card -->
-                        <div class="writing-mode-card" onclick="app.startWritingInputMode()">
-                            <div class="mode-card-icon">⌨️</div>
-                            <h3>Kelime Yazma</h3>
-                            <p>İngilizceyi kendisi yaz</p>
-                            <div class="card-glow"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <!-- WRITING VIEW (Scramble Mode) -->
-            <div id="view-writing" class="view hidden">
+            <div id="view-writing" class="view hidden" style="padding-top: 6rem;">
                 <div class="game-header-bar">
                     <button class="btn-icon back-btn-top" onclick="app.goBackFromWriting()" title="Geri">&larr;</button>
                     <div id="writing-score-container"
@@ -785,6 +770,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
 
     <script src="js/words.js?v=16"></script>
+    <script src="js/sentences.js?v=1"></script>
     <script src="js/app.js?v=7"></script>
 </body>
 

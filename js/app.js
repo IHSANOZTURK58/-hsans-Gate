@@ -786,6 +786,7 @@ const app = {
 
         this.updateHeaderStats();
         this.updateScoreDisplay();
+        this.updateLevelUI();
         this.nextQuestion();
         this.render();
     },
@@ -1350,6 +1351,7 @@ const app = {
     updateLevelUI() {
         const livesEl = document.getElementById('game-lives');
         const levelInfo = document.getElementById('level-info-container');
+        const levelIndicator = document.getElementById('level-indicator-container'); // NEW
         const countInfo = document.getElementById('level-progress-text');
         const bar = document.getElementById('level-progress-fill');
 
@@ -1362,10 +1364,12 @@ const app = {
                 levelInfo.classList.remove('hidden');
                 document.getElementById('current-level-display').textContent = this.state.currentLevel;
             }
+            if (levelIndicator) levelIndicator.classList.remove('hidden'); // SHOW
             if (countInfo) countInfo.textContent = `${this.state.levelProgress} / 50`;
             if (bar) bar.style.width = `${(this.state.levelProgress / 50) * 100}%`;
         } else {
             if (levelInfo) levelInfo.classList.add('hidden');
+            if (levelIndicator) levelIndicator.classList.add('hidden'); // HIDE
         }
     },
 
@@ -1815,75 +1819,92 @@ const app = {
 
     // --- GEMINI AI SERVICE ---
     geminiService: {
-        apiKey: null,
-
-        modelName: 'gemini-1.5-flash',
+        // Multi-Key Rotation System (supports up to 4 keys)
+        apiKeys: [
+            "AIzaSyAjIAR8yjA0kTPN23qxy0ovel-REpoH5Zc",  // Key 1
+            "AIzaSyCKb-Cm2rnVlkA-WfkxjU5E_YHGrPqKObw",  // Key 2
+            "AIzaSyCMQoab17MmEEBgSHqEeabHr_aNnyyfC48",  // Key 3
+            "AIzaSyCKBMvmoImAWiVSgMfPpYlTYOQJrF1clEo"   // Key 4
+        ],
+        currentKeyIndex: 0,
+        modelName: 'gemini-pro',  // Changed to gemini-pro for v1beta compatibility
 
         init() {
-            this.apiKey = localStorage.getItem('gemini_api_key');
-            this.secondaryApiKey = localStorage.getItem('gemini_api_key_2');
+            // Clear old localStorage
+            localStorage.removeItem('gemini_api_key');
+
             const savedModel = localStorage.getItem('gemini_valid_model');
             if (savedModel) this.modelName = savedModel;
+
+            console.log(`🔑 Gemini Service initialized with ${this.apiKeys.length} API keys`);
         },
 
         async generateSentence() {
-            if (!this.apiKey) return null;
+            if (this.apiKeys.length === 0) return null;
 
             const topics = ['Daily Life', 'Travel', 'Food', 'Work', 'School', 'Hobby', 'Family', 'Weather', 'Technology', 'Nature', 'Health', 'Shopping'];
             const randomTopic = topics[Math.floor(Math.random() * topics.length)];
-            const complexity = Math.random() > 0.5 ? 'A1-A2 (Simple)' : 'B1-B2 (Intermediate)';
 
             const prompt = `Generate a unique, simple English sentence (A1-B1 level) related to topic "${randomTopic}". 
             Also provide its correct Turkish translation.
             Return ONLY a pure JSON object with keys 'en' (the sentence) and 'tr' (meaning). 
             No markdown.`;
 
-            // Helper for request
-            const makeRequest = async (key) => {
-                return fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.modelName}:generateContent?key=${key}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-                });
-            };
+            // Try all keys in rotation
+            for (let attempt = 0; attempt < this.apiKeys.length; attempt++) {
+                const currentKey = this.apiKeys[this.currentKeyIndex];
 
-            try {
-                let response = await makeRequest(this.apiKey);
+                try {
+                    console.log(`📡 AI Request (Key ${this.currentKeyIndex + 1}/${this.apiKeys.length}), Model: [${this.modelName}]`);
 
-                // FAILOVER LOGIC
-                if (response.status === 429 && this.secondaryApiKey) {
-                    console.warn("Primary API Quota Exceeded. Switching to Secondary Key...");
-                    response = await makeRequest(this.secondaryApiKey);
-                }
+                    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.modelName}:generateContent?key=${currentKey}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+                    });
 
-                const data = await response.json();
-                if (data.candidates && data.candidates[0].content) {
-                    let text = data.candidates[0].content.parts[0].text;
-                    try {
-                        // Robust JSON Extraction
-                        const startIndex = text.indexOf('{');
-                        const endIndex = text.lastIndexOf('}');
-                        if (startIndex !== -1 && endIndex !== -1) {
-                            text = text.substring(startIndex, endIndex + 1);
-                            return JSON.parse(text);
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (data.candidates && data.candidates[0].content) {
+                            let text = data.candidates[0].content.parts[0].text;
+                            try {
+                                const startIndex = text.indexOf('{');
+                                const endIndex = text.lastIndexOf('}');
+                                if (startIndex !== -1 && endIndex !== -1) {
+                                    text = text.substring(startIndex, endIndex + 1);
+                                    return JSON.parse(text);
+                                }
+                            } catch (e) {
+                                console.error("JSON Parse Error:", e);
+                            }
                         }
-                    } catch (e) {
-                        console.error("JSON Parse Error:", e);
+                    } else if (response.status === 429) {
+                        // Quota exceeded - rotate to next key
+                        console.warn(`⚠️ Key ${this.currentKeyIndex + 1} quota exceeded (429). Rotating...`);
+                        this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
+                        continue;
+                    } else {
+                        console.error(`API Error: ${response.status}`);
+                        this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
+                        continue;
                     }
+                } catch (e) {
+                    console.error("Network Error:", e);
+                    this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
+                    continue;
                 }
-            } catch (e) {
-                console.error("Gemini Gen Error:", e);
             }
+
+            console.error("❌ All API keys exhausted for generateSentence");
             return null;
         },
 
         async checkAnswer(source, input, direction = 'EN_TR') {
-            if (!this.apiKey) return null;
+            if (this.apiKeys.length === 0) return { error: "No API keys available" };
 
             let prompt = '';
 
             if (direction === 'EN_TR') {
-                // English -> Turkish
                 prompt = `
                 Act as a supportive Turkish language tutor.
                 
@@ -1902,7 +1923,6 @@ const app = {
                     "feedback": "If Correct: Praise enthusiastically in Turkish. IF WRONG: Explain the specific mistake in Turkish."
                 }`;
             } else {
-                // Turkish -> English
                 prompt = `
                 Act as a supportive English language tutor for a Turkish speaker.
                 
@@ -1922,48 +1942,49 @@ const app = {
                 }`;
             }
 
+            // Try all keys in rotation
+            for (let attempt = 0; attempt < this.apiKeys.length; attempt++) {
+                const currentKey = this.apiKeys[this.currentKeyIndex];
 
-            try {
-                // Helper for request
-                const makeRequest = async (key) => {
-                    return fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.modelName}:generateContent?key=${key}`, {
+                try {
+                    console.log(`🔍 Checking answer (Key ${this.currentKeyIndex + 1}/${this.apiKeys.length})`);
+
+                    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.modelName}:generateContent?key=${currentKey}`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
                     });
-                };
 
-                let response = await makeRequest(this.apiKey);
+                    const data = await response.json();
 
-                if (response.status === 429 && this.secondaryApiKey) {
-                    console.warn("Primary API Quota Exceeded (Check). Switching to Secondary Key...");
-                    response = await makeRequest(this.secondaryApiKey);
-                }
-
-
-                const data = await response.json();
-
-                if (!response.ok) {
-                    // API returned an error (e.g. Invalid Key, Quota)
-                    const apiError = data.error?.message || "Unknown API Error";
-                    return { error: apiError };
-                }
-
-                if (data.candidates && data.candidates[0].content) {
-                    let text = data.candidates[0].content.parts[0].text;
-                    // Robust JSON Extraction
-                    const startIndex = text.indexOf('{');
-                    const endIndex = text.lastIndexOf('}');
-                    if (startIndex !== -1 && endIndex !== -1) {
-                        text = text.substring(startIndex, endIndex + 1);
-                        return JSON.parse(text);
+                    if (response.ok) {
+                        if (data.candidates && data.candidates[0].content) {
+                            let text = data.candidates[0].content.parts[0].text;
+                            const startIndex = text.indexOf('{');
+                            const endIndex = text.lastIndexOf('}');
+                            if (startIndex !== -1 && endIndex !== -1) {
+                                text = text.substring(startIndex, endIndex + 1);
+                                return JSON.parse(text);
+                            }
+                        }
+                    } else if (response.status === 429) {
+                        console.warn(`⚠️ Key ${this.currentKeyIndex + 1} quota exceeded. Rotating...`);
+                        this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
+                        continue;
+                    } else {
+                        console.error(`API Error: ${response.status}`);
+                        const apiError = data.error?.message || "Unknown API Error";
+                        return { error: apiError };
                     }
+                } catch (e) {
+                    console.error("Network Error:", e);
+                    this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
+                    continue;
                 }
-            } catch (e) {
-                console.error("Gemini Check Error:", e);
-                return { error: e.message || "Network Error" };
             }
-            return { error: "No Response Candidates" };
+
+            console.error("❌ All API keys exhausted for checkAnswer");
+            return { error: "Yapay zeka çevrimdışı (Tüm API anahtarları limitte)" };
         }
     },
 
@@ -2000,6 +2021,7 @@ const app = {
     },
 
     startWritingInputMode() {
+        console.log("Starting Writing Input Mode...");
         // DIRECT INPUT MODE
         if (!this.state.playerName) {
             alert("⚠️ Önce giriş yapmalısınız.");
@@ -2008,8 +2030,28 @@ const app = {
         }
         this.state.previousView = this.state.currentView;
         this.state.currentView = 'writing-input';
-        this.state.writingScore = 0; // Share score variable or separate? Let's use same state ref but different ID
+        this.state.writingScore = 0;
+
+        // RESET OVERLAY (Quota Saver)
+        const overlay = document.getElementById('writing-input-start-overlay');
+        if (overlay) {
+            console.log("Overlay found, showing...");
+            overlay.classList.remove('hidden');
+        } else {
+            console.error("Overlay NOT found!");
+        }
+
         this.render();
+        // this.nextWritingInputQuestion(); // DELAYED until user clicks Start
+    },
+
+    beginProWritingSession() {
+        console.log("User clicked START");
+        const overlay = document.getElementById('writing-input-start-overlay');
+        if (overlay) {
+            overlay.classList.add('hidden');
+            console.log("Overlay hidden via classList");
+        }
         this.nextWritingInputQuestion();
     },
 
@@ -2032,23 +2074,14 @@ const app = {
 
         document.getElementById('input-target-meaning').textContent = '...';
 
-        let sentenceData = null;
-
-        // Try AI First
-        if (this.geminiService.apiKey) {
-            sentenceData = await this.geminiService.generateSentence();
-        }
-
-        // Fallback
-        if (!sentenceData) {
-            const allSentences = this.getSentences();
-            sentenceData = allSentences[Math.floor(Math.random() * allSentences.length)];
-        }
+        // ALWAYS use sentences.js (no API quota cost!)
+        const allSentences = this.getSentences();
+        const sentenceData = allSentences[Math.floor(Math.random() * allSentences.length)];
 
         this.state.currentWritingSentence = sentenceData;
 
         // Render Question based on direction
-        document.getElementById('writing-input-score').textContent = this.state.writingScore;
+        // document.getElementById('writing-input-score').textContent = this.state.writingScore; // REMOVED
 
         if (this.state.writingDirection === 'EN_TR') {
             // EN -> TR
@@ -2153,8 +2186,15 @@ const app = {
             let errorMsg = "Yapay zeka çevrimdışı";
             if (result && result.error) {
                 const err = result.error.toLowerCase();
+
                 if (err.includes('quota') || err.includes('429') || err.includes('rate limit')) {
-                    errorMsg = "⏳ Çok Hızlısın! (Kota Doldu, 15sn Bekle)";
+                    if (err.includes('daily') || err.includes('exceeded')) {
+                        errorMsg = "🛑 GÜNLÜK Kota Doldu! (Başka API Key girin)";
+                    } else {
+                        errorMsg = "⏳ Çok Hızlısın! (15sn Bekle)";
+                    }
+                } else if (err.includes('key') || err.includes('403')) {
+                    errorMsg = "🔑 Geçersiz API Key";
                 } else {
                     errorMsg += ` (${result.error})`;
                 }
@@ -2188,7 +2228,7 @@ const app = {
             if (!isCorrect) {
                 const simpleInput = val.toLowerCase().replace(/\s+/g, '');
                 const simpleTarget = targetText.toLowerCase().replace(/\s+/g, '');
-                isCorrect = simpleInput === simpleTarget || simpleTarget.includes(simpleInput);
+                isCorrect = simpleInput === simpleTarget;
             }
 
             if (isCorrect) {
@@ -2201,7 +2241,7 @@ const app = {
         if (isCorrect) {
             this.playSound('correct');
             this.state.writingScore += 10;
-            document.getElementById('writing-input-score').textContent = this.state.writingScore;
+            // document.getElementById('writing-input-score').textContent = this.state.writingScore; // REMOVED
 
             this.updateChat('ai', `✅ <b>Doğru!</b> ${feedback}`);
 
@@ -2249,37 +2289,13 @@ const app = {
         btn.onclick = () => app.nextWritingInputQuestion();
     },
     getSentences() {
+        // Use external huge list if available, else small fallback
+        if (window.SENTENCE_DATA && window.SENTENCE_DATA.length > 0) {
+            return window.SENTENCE_DATA;
+        }
         return [
             { en: "I am ready", tr: "Hazırım" },
-            { en: "See you later", tr: "Sonra görüşürüz" },
-            { en: "What is your name?", tr: "Adın ne?" },
-            { en: "I usually drink coffee in the morning", tr: "Sabahları genellikle kahve içerim" },
-            { en: "She is reading a book in the garden", tr: "Bahçede kitap okuyor" },
-            { en: "They are playing football in the park", tr: "Parkta futbol oynuyorlar" },
-            { en: "I saw my friends while walking down the road", tr: "Yolda yürürken arkadaşlarımı gördüm" },
-            { en: "This car is faster than yours", tr: "Bu araba seninkinden daha hızlı" },
-            { en: "I have never been to London", tr: "Londra'ya hiç gitmedim" },
-            { en: "If I were you, I would accept the offer", tr: "Senin yerinde olsam teklifi kabul ederdim" },
-            { en: "It is raining heavily outside", tr: "Dışarıda sağanak yağmur yağıyor" },
-            { en: "Can you help me with my homework?", tr: "Ev ödevime yardım edebilir misin?" },
-            { en: "I was sleeping when you called", tr: "Sen aradığında uyuyordum" },
-            { en: "We should go to the cinema tonight", tr: "Bu gece sinemaya gitmeliyiz" },
-            { en: "My brother works as a doctor", tr: "Kardeşim doktor olarak çalışıyor" },
-            { en: "Have you ever seen a ghost?", tr: "Hiç hayalet gördün mü?" },
-            { en: "I will call you valid as soon as I arrive", tr: "Varır varmaz seni arayacağım" },
-            { en: "She looks like her mother", tr: "Annesine benziyor" },
-            { en: "I prefer tea to coffee", tr: "Çayı kahveye tercih ederim" },
-            { en: "The movie was so boring that I fell asleep", tr: "Film o kadar sıkıcıydı ki uyuyakaldım" },
-            { en: "You must finish your work before you leave", tr: "Çıkmadan önce işini bitirmelisin" },
-            { en: "I used to play tennis when I was young", tr: "Gençken tenis oynardım" },
-            { en: "Do you know where the station is?", tr: "İstasyonun nerede olduğunu biliyor musun?" },
-            { en: "I am looking forward to seeing you", tr: "Seni görmeyi dört gözle bekliyorum" },
-            { en: "It takes two hours to get there by car", tr: "Arabayla oraya varmak iki saat sürer" },
-            { en: "I wish I had studied harder", tr: "Keşke daha sıkı çalışsaydım" },
-            { en: "Despite the rain, we went out", tr: "Yağmura rağmen dışarı çıktık" },
-            { en: "He is the smartest student in the class", tr: "Sınıftaki en zeki öğrenci o" },
-            { en: "Let's meet at the cafe at 5 o'clock", tr: "Saat 5'te kafede buluşalım" },
-            { en: "I ran out of money", tr: "Param bitti" }
+            { en: "See you later", tr: "Sonra görüşürüz" }
         ];
     },
 
