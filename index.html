@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İhsans Gate - Survival Mod</title>
     <meta name="description" content="İngilizce kelime dağarcığınızı geliştirin.">
-    <link rel="stylesheet" href="css/style.css?v=11">
+    <link rel="stylesheet" href="css/style.css?v=13">
+    <link rel="stylesheet" href="css/grammar-topics.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -164,14 +165,14 @@
                                 <div class="hover-glow"></div>
                             </div>
 
-                            <!-- Grammar (Locked) -->
-                            <div class="module-card locked">
-                                <div class="icon-box">📝</div>
+                            <!-- Grammar (Unlocked) -->
+                            <div class="module-card" onclick="app.openGrammarLevelSelection()">
+                                <div class="icon-box">🧠</div>
                                 <div class="module-info">
                                     <h4>Dil Bilgisi</h4>
-                                    <p>Yakında</p>
+                                    <p>Boşluk Doldurma</p>
                                 </div>
-                                <span class="lock-icon">🔒</span>
+                                <div class="hover-glow"></div>
                             </div>
 
                             <!-- Reading (Locked) -->
@@ -611,6 +612,194 @@
                 </div>
             </div>
 
+            <!-- GRAMMAR LEVEL SELECTION VIEW -->
+            <div id="view-grammar-intro" class="view hidden">
+                <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Geri"
+                    style="position:fixed; top:1rem; left:1rem; z-index:100;">
+                    &larr;
+                </button>
+
+                <div class="modes-split-layout"
+                    style="justify-content:center; align-items:flex-start; flex-direction:column; padding-top:4rem; overflow-y:auto;">
+
+                    <div class="modes-header-group" style="text-align:center; margin-bottom:1.5rem; width:100%;">
+                        <h2 style="font-size:2.5rem;">Dil Bilgisi</h2>
+                        <p style="color:var(--text-secondary); font-size:0.95rem;">Çalışmak istediğin konuyu seç</p>
+                    </div>
+
+                    <div class="grammar-topics-grid">
+                        <!-- Tenses -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('tenses')">
+                            <div class="topic-icon">⏰</div>
+                            <div class="topic-info">
+                                <h3>Tenses (Zamanlar)</h3>
+                                <p>Present, Past, Future</p>
+                                <span class="topic-count">5 Soru</span>
+                            </div>
+                        </div>
+
+                        <!-- Conditionals -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('conditionals')">
+                            <div class="topic-icon">🔀</div>
+                            <div class="topic-info">
+                                <h3>Conditionals (Şartlar)</h3>
+                                <p>If Clauses</p>
+                                <span class="topic-count">3 Soru</span>
+                            </div>
+                        </div>
+
+                        <!-- Modals -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('modals')">
+                            <div class="topic-icon">🎯</div>
+                            <div class="topic-info">
+                                <h3>Modals</h3>
+                                <p>Can, Must, Should...</p>
+                                <span class="topic-count">2 Soru</span>
+                            </div>
+                        </div>
+
+                        <!-- Articles & Determiners -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('articles')">
+                            <div class="topic-icon">📝</div>
+                            <div class="topic-info">
+                                <h3>Articles & Determiners</h3>
+                                <p>A/An/The, Some/Any</p>
+                                <span class="topic-count">2 Soru</span>
+                            </div>
+                        </div>
+
+                        <!-- Prepositions -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('prepositions')">
+                            <div class="topic-icon">📍</div>
+                            <div class="topic-info">
+                                <h3>Prepositions (Edatlar)</h3>
+                                <p>In, On, At...</p>
+                                <span class="topic-count">1 Soru</span>
+                            </div>
+                        </div>
+
+                        <!-- Passive Voice -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('passive')">
+                            <div class="topic-icon">🔄</div>
+                            <div class="topic-info">
+                                <h3>Passive Voice</h3>
+                                <p>Edilgen Yapı</p>
+                                <span class="topic-count">1 Soru</span>
+                            </div>
+                        </div>
+
+                        <!-- Reported Speech -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('reported')">
+                            <div class="topic-icon">💬</div>
+                            <div class="topic-info">
+                                <h3>Reported Speech</h3>
+                                <p>Dolaylı Anlatım</p>
+                                <span class="topic-count">1 Soru</span>
+                            </div>
+                        </div>
+
+                        <!-- Relative Clauses -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('relative')">
+                            <div class="topic-icon">🔗</div>
+                            <div class="topic-info">
+                                <h3>Relative Clauses</h3>
+                                <p>Who, Which, That</p>
+                                <span class="topic-count">1 Soru</span>
+                            </div>
+                        </div>
+
+                        <!-- Gerunds & Infinitives -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('gerunds')">
+                            <div class="topic-icon">🔤</div>
+                            <div class="topic-info">
+                                <h3>Gerunds & Infinitives</h3>
+                                <p>-ing vs to</p>
+                                <span class="topic-count">1 Soru</span>
+                            </div>
+                        </div>
+
+                        <!-- Phrasal Verbs -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('phrasal')">
+                            <div class="topic-icon">🚀</div>
+                            <div class="topic-info">
+                                <h3>Phrasal Verbs</h3>
+                                <p>Run out, Give up...</p>
+                                <span class="topic-count">1 Soru</span>
+                            </div>
+                        </div>
+
+                        <!-- Comparatives & Superlatives -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('comparatives')">
+                            <div class="topic-icon">📊</div>
+                            <div class="topic-info">
+                                <h3>Comparatives & Superlatives</h3>
+                                <p>-er, -est, more, most</p>
+                                <span class="topic-count">1 Soru</span>
+                            </div>
+                        </div>
+
+                        <!-- Possessives -->
+                        <div class="grammar-topic-card" onclick="app.startGrammarMode('possessives')">
+                            <div class="topic-icon">👤</div>
+                            <div class="topic-info">
+                                <h3>Possessives</h3>
+                                <p>My, Your, His...</p>
+                                <span class="topic-count">1 Soru</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRAMMAR GAME VIEW -->
+            <div id="view-grammar" class="view hidden" style="padding-top: 6rem;">
+                <div class="game-header-bar">
+                    <button class="btn-icon back-btn-top" onclick="app.openGrammarLevelSelection()"
+                        title="Geri">&larr;</button>
+                    <div id="grammar-score-container"
+                        style="font-size:1.2rem; font-weight:bold; margin-top:-10px; margin-right:20px;">
+                        Skor: <span id="grammar-score" style="color:var(--neon-purple)">0</span>
+                    </div>
+                </div>
+
+                <div class="game-card" style="justify-content:center; gap:2rem;">
+                    <!-- Topic -->
+                    <div style="text-align:center; margin-bottom:1rem;">
+                        <span id="grammar-topic"
+                            style="background:rgba(139, 92, 246, 0.2); color:var(--neon-purple); padding:0.3rem 0.8rem; border-radius:12px; font-size:0.9rem; font-weight:600;">Topic</span>
+                    </div>
+
+                    <!-- Question Area -->
+                    <div style="text-align:center;">
+                        <h2 id="grammar-question" style="font-size:2rem; line-height:1.4;">
+                            She ____ my friend.
+                        </h2>
+                    </div>
+
+                    <!-- Options Area -->
+                    <div id="grammar-options"
+                        style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-top:2rem;">
+                        <!-- Buttons Generated via JS -->
+                    </div>
+
+                    <!-- Feedback Area -->
+                    <div id="grammar-feedback" style="margin-top:2rem; min-height:60px; text-align:center;">
+                        <div id="grammar-feedback-text"
+                            style="font-weight:bold; font-size:1.2rem; margin-bottom:0.5rem;"></div>
+                        <div id="grammar-explanation" style="color:var(--text-secondary); font-size:0.95rem;"></div>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top:1rem; display:flex; justify-content:center; gap: 1rem; position: relative; z-index: 100; padding-bottom: 2rem;">
+                    <button id="btn-grammar-pass" class="btn"
+                        style="background:rgba(255,255,255,0.15); color:white; border:1px solid rgba(255,255,255,0.3); font-weight:bold; min-width: 140px;"
+                        onclick="app.passGrammarQuestion()">Devam Et</button>
+                    <button id="btn-grammar-next" class="btn btn-primary" style="display:none; min-width: 140px;"
+                        onclick="app.nextGrammarQuestion()">Devam Et &rarr;</button>
+                </div>
+            </div>
+
             <!-- ADMIN VIEW -->
             <div id="view-admin" class="view hidden">
                 <h2 style="text-align:center; margin-bottom:2rem; color:var(--accent-gold)">Yönetici Paneli</h2>
@@ -771,6 +960,7 @@
 
     <script src="js/words.js?v=16"></script>
     <script src="js/sentences.js?v=1"></script>
+    <script src="js/grammar.js?v=1"></script>
     <script src="js/app.js?v=7"></script>
 </body>
 

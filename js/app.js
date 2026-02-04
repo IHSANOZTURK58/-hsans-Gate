@@ -1553,14 +1553,14 @@ const app = {
             if (index < 3) {
                 rankDisplay = `<span style="font-size:1.2rem">${medals[index]}</span>`;
             } else {
-                rankDisplay = `<span class="rank rank-${index + 1}">${index + 1}</span>`;
+                rankDisplay = `<span class="lb-rank">${index + 1}</span>`;
             }
 
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${rankDisplay}</td>
                 <td>${item.name}</td>
-                <td style="font-weight:bold; color:var(--accent-gold)">${item.score}</td>
+                <td>${item.score}</td>
             `;
             tbody.appendChild(tr);
         });
@@ -2471,6 +2471,176 @@ const app = {
             const fb = document.getElementById('writing-feedback');
             fb.textContent = "YANLIŞ! Tekrar dene.";
             fb.style.color = "#ef4444";
+        }
+    },
+
+    // --- GRAMMAR MODE ---
+
+    // --- GRAMMAR MODE ---
+    openGrammarLevelSelection() {
+        this.state.previousView = this.state.currentView;
+        this.state.currentView = 'grammar-intro';
+        this.render();
+    },
+
+    startGrammarMode(topic) {
+        if (!window.GRAMMAR_DATA) {
+            console.error("Grammar data not loaded!");
+            alert("Dil bilgisi verileri yüklenemedi.");
+            return;
+        }
+
+        // Filter by topic_id
+        const questions = window.GRAMMAR_DATA.filter(q => q.topic_id === topic);
+        if (questions.length === 0) {
+            alert(`Bu konu için henüz soru eklenmedi: ${topic}`);
+            return;
+        }
+
+        this.state.grammarTopic = topic;
+        this.state.grammarQuestions = questions;
+        this.state.grammarScore = 0;
+
+        this.state.previousView = this.state.currentView;
+        this.state.currentView = 'grammar';
+        this.render();
+        this.nextGrammarQuestion();
+    },
+
+    nextGrammarQuestion() {
+        // Reset UI
+        document.getElementById('grammar-feedback-text').textContent = '';
+        document.getElementById('grammar-explanation').textContent = '';
+        document.getElementById('btn-grammar-next').style.display = 'none';
+
+        const passBtn = document.getElementById('btn-grammar-pass');
+        if (passBtn) passBtn.style.display = 'inline-block';
+
+        // Pick Random
+        const questions = this.state.grammarQuestions;
+        const q = questions[Math.floor(Math.random() * questions.length)];
+        this.state.currentGrammarQuestion = q;
+
+        this.renderGrammarQuestion();
+    },
+
+    passGrammarQuestion() {
+        // Show correct answer and move on
+        const q = this.state.currentGrammarQuestion;
+
+        // Show correct answer in gap
+        const gap = document.getElementById('current-gap');
+        if (gap) {
+            gap.textContent = q.options[q.correct];
+            gap.classList.add('filled');
+        }
+
+        // Highlight correct button
+        const btns = document.querySelectorAll('.grammar-option-btn');
+        btns.forEach((b, idx) => {
+            b.disabled = true;
+            if (idx === q.correct) b.classList.add('correct');
+        });
+
+        // Show explanation
+        document.getElementById('grammar-feedback-text').textContent = "Cevap Gösterildi";
+        document.getElementById('grammar-feedback-text').style.color = "var(--text-secondary)";
+        document.getElementById('grammar-explanation').textContent = q.explanation;
+
+        // Hide Pass, Show Next
+        const passBtn = document.getElementById('btn-grammar-pass');
+        if (passBtn) passBtn.style.display = 'none';
+
+        document.getElementById('btn-grammar-next').style.display = 'inline-block';
+    },
+
+    renderGrammarQuestion() {
+        const q = this.state.currentGrammarQuestion;
+
+        // Update Score
+        document.getElementById('grammar-score').textContent = this.state.grammarScore;
+
+        // Update Topic
+        document.getElementById('grammar-topic').textContent = `${this.state.grammarLevel} - ${q.topic}`;
+
+        // Render Question with Gap
+        const questionEl = document.getElementById('grammar-question');
+        // Replace ___ with a span
+        const parts = q.question.split('___');
+        if (parts.length === 2) {
+            questionEl.innerHTML = `${parts[0]}<span class="grammar-gap" id="current-gap"></span>${parts[1]}`;
+        } else {
+            questionEl.textContent = q.question;
+        }
+
+        // Render Options
+        const optionsContainer = document.getElementById('grammar-options');
+        optionsContainer.innerHTML = '';
+
+        q.options.forEach((opt, idx) => {
+            const btn = document.createElement('button');
+            btn.className = 'grammar-option-btn';
+            btn.textContent = opt;
+            btn.onclick = () => this.checkGrammarAnswer(idx, btn);
+            optionsContainer.appendChild(btn);
+        });
+    },
+
+    checkGrammarAnswer(selectedIndex, btnElement) {
+        // Disable all options
+        const btns = document.querySelectorAll('.grammar-option-btn');
+        btns.forEach(b => b.disabled = true);
+
+        const q = this.state.currentGrammarQuestion;
+        const isCorrect = selectedIndex === q.correct;
+        const gap = document.getElementById('current-gap');
+        const feedbackText = document.getElementById('grammar-feedback-text');
+        const explanation = document.getElementById('grammar-explanation');
+        const nextBtn = document.getElementById('btn-grammar-next');
+        const passBtn = document.getElementById('btn-grammar-pass');
+
+        // Fill the gap
+        if (gap) {
+            gap.textContent = q.options[selectedIndex];
+            gap.classList.add('filled');
+        }
+
+        if (isCorrect) {
+            this.playSound('correct');
+            this.state.grammarScore += 10;
+            document.getElementById('grammar-score').textContent = this.state.grammarScore;
+
+            if (gap) gap.classList.add('correct');
+            btnElement.classList.add('correct');
+
+            feedbackText.textContent = "DOĞRU! 🎉";
+            feedbackText.style.color = "#22c55e";
+
+            // Hide Pass button
+            if (passBtn) passBtn.style.display = 'none';
+
+            // Auto next after 1.5s
+            setTimeout(() => {
+                this.nextGrammarQuestion();
+            }, 1500);
+
+        } else {
+            this.playSound('wrong');
+
+            if (gap) gap.classList.add('wrong');
+            btnElement.classList.add('wrong');
+
+            // Highlight correct answer
+            btns[q.correct].classList.add('correct'); // Show which was right
+
+            feedbackText.textContent = "YANLIŞ";
+            feedbackText.style.color = "#ef4444";
+
+            explanation.textContent = q.explanation;
+
+            // Hide Pass button, Show Next
+            if (passBtn) passBtn.style.display = 'none';
+            nextBtn.style.display = 'inline-block';
         }
     }
 };
