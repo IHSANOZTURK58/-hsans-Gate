@@ -2481,6 +2481,41 @@ const app = {
         this.state.previousView = this.state.currentView;
         this.state.currentView = 'grammar-intro';
         this.render();
+        this.updateGrammarCounts();
+    },
+
+    updateGrammarCounts() {
+        if (!window.GRAMMAR_DATA) return;
+
+        const cards = document.querySelectorAll('.grammar-topic-card');
+        cards.forEach(card => {
+            const onclick = card.getAttribute('onclick');
+            if (onclick && onclick.includes("app.startGrammarMode('")) {
+                // Extract topic ID: app.startGrammarMode('tenses') -> tenses
+                const topicId = onclick.split("'")[1];
+
+                // Count questions
+                const count = window.GRAMMAR_DATA.filter(q => q.topic_id === topicId).length;
+
+                // Update UI
+                const countSpan = card.querySelector('.topic-count');
+                if (countSpan) {
+                    countSpan.textContent = `${count} Soru`;
+
+                    // Visual cue for empty topics
+                    if (count === 0) {
+                        countSpan.style.color = '#ef4444';
+                        countSpan.textContent = 'Hazırlanıyor...';
+                        card.style.opacity = '0.7';
+                        card.style.cursor = 'not-allowed';
+                    } else {
+                        countSpan.style.color = '';
+                        card.style.opacity = '1';
+                        card.style.cursor = 'pointer';
+                    }
+                }
+            }
+        });
     },
 
     startGrammarMode(topic) {
