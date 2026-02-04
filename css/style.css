@@ -3666,3 +3666,26 @@ input:focus {
     font-weight: 600;
 }
 
+
+
+/* Writing Modes - Space Background */
+#view-writing-modes {
+    background-image: url('../assets/game-bg-galaxy.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#view-writing-modes::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    z-index: 0;
+}
+
+#view-writing-modes > * {
+    position: relative;
+    z-index: 1;
+}

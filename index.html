@@ -9,6 +9,8 @@
     <meta name="description" content="İngilizce kelime dağarcığınızı geliştirin.">
     <link rel="stylesheet" href="css/style.css?v=13">
     <link rel="stylesheet" href="css/grammar-topics.css">
+    <link rel="stylesheet" href="css/writing-mode.css">
+    <link rel="stylesheet" href="css/reading.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -19,6 +21,61 @@
 
 
         <main id="app-content">
+
+            <!-- READING MODE VIEW -->
+            <div id="view-reading" class="view hidden">
+                <!-- Library View -->
+                <div id="reading-library">
+                    <div class="game-header-bar">
+                        <button class="btn-icon library-back-btn" onclick="app.returnToDashboard()"
+                            title="Ana Menü">&larr;</button>
+                        <h2 style="margin:0; font-size:1.5rem;">Kütüphane</h2>
+                        <div style="width:40px;"></div>
+                    </div>
+                    <div class="library-grid" id="library-grid">
+                        <!-- Books injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Reader View -->
+                <div id="reading-reader" class="hidden">
+                    <div class="reader-header">
+                        <button class="reader-back-btn" onclick="app.closeBook()"
+                            title="Kütüphaneye Dön">&larr;</button>
+                        <div class="reader-header-title">
+                            <h3 id="reader-book-title">Book Title</h3>
+                            <span id="reader-book-level">Level A1</span>
+                        </div>
+                        <div class="reader-search-box">
+                            <input type="text" id="dictionary-search" autocomplete="off"
+                                placeholder="Sözlük: Kelime ara..." oninput="app.handleSearchInput(this.value)"
+                                onblur="app.hideSuggestions()"
+                                onkeyup="if(event.key === 'Enter') { app.lookupWord(this.value); app.hideSuggestions(); }">
+                            <span class="search-icon">🔍</span>
+                            <div id="search-suggestions" class="search-suggestions"></div>
+                        </div>
+                    </div>
+                    <div class="reader-container">
+                        <div id="reader-content" class="reader-content">
+                            <!-- Text injected via JS -->
+                        </div>
+                    </div>
+                    <!-- Pagination Controls -->
+                    <div class="reader-pagination">
+                        <button id="btn-prev-page" class="pagination-btn" onclick="app.prevBookPage()"
+                            title="Önceki Sayfa">
+                            ← Önceki
+                        </button>
+                        <span id="page-indicator" class="page-indicator">Sayfa 1 / 1</span>
+                        <button id="btn-next-page" class="pagination-btn" onclick="app.nextBookPage()"
+                            title="Sonraki Sayfa">
+                            Sonraki →
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
 
             <!-- LANDING VIEW -->
             <div id="view-landing" class="view active">
@@ -175,14 +232,14 @@
                                 <div class="hover-glow"></div>
                             </div>
 
-                            <!-- Reading (Locked) -->
-                            <div class="module-card locked">
+                            <!-- Reading (Unlocked) -->
+                            <div class="module-card" onclick="app.openReadingMode()">
                                 <div class="icon-box">📖</div>
                                 <div class="module-info">
                                     <h4>Okuma</h4>
-                                    <p>Yakında</p>
+                                    <p>Hikaye ve Kitaplar</p>
                                 </div>
-                                <span class="lock-icon">🔒</span>
+                                <div class="hover-glow"></div>
                             </div>
 
                             <!-- Writing (New) -->
@@ -619,6 +676,25 @@
                     &larr;
                 </button>
 
+                <!-- Grammar Explanation Modal -->
+                <div id="grammar-explanation-modal" class="modal hidden"
+                    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:200; background:rgba(0,0,0,0.8); backdrop-filter:blur(5px); justify-content:center; align-items:center;">
+                    <div class="modal-content"
+                        style="background:var(--bg-surface); width:90%; max-width:800px; max-height:85vh; border-radius:16px; border:1px solid var(--neon-purple); display:flex; flex-direction:column; box-shadow:0 0 30px rgba(139, 92, 246, 0.3);">
+                        <div class="modal-header"
+                            style="padding:1.5rem; border-bottom:1px solid var(--border-glass); display:flex; justify-content:space-between; align-items:center;">
+                            <h2 id="explanation-title" style="margin:0; color:var(--neon-purple); font-size:1.5rem;">
+                                Topic Title</h2>
+                            <button onclick="app.closeGrammarExplanation()"
+                                style="background:none; border:none; color:var(--text-secondary); font-size:1.5rem; cursor:pointer;">&times;</button>
+                        </div>
+                        <div id="explanation-body"
+                            style="padding:1.5rem; overflow-y:auto; line-height:1.6; color:var(--text-primary);">
+                            <!-- Content will be injected here -->
+                        </div>
+                    </div>
+                </div>
+
                 <div class="modes-split-layout"
                     style="justify-content:flex-start; align-items:center; flex-direction:column; padding-top:4rem; overflow-y:auto; width:100%;">
 
@@ -630,6 +706,9 @@
                     <div class="grammar-topics-grid">
                         <!-- Tenses -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('tenses')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('tenses')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">⏰</div>
                             <div class="topic-info">
                                 <h3>Tenses (Zamanlar)</h3>
@@ -640,6 +719,9 @@
 
                         <!-- Conditionals -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('conditionals')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('conditionals')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">🔀</div>
                             <div class="topic-info">
                                 <h3>Conditionals (Şartlar)</h3>
@@ -650,6 +732,9 @@
 
                         <!-- Modals -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('modals')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('modals')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">🎯</div>
                             <div class="topic-info">
                                 <h3>Modals</h3>
@@ -660,6 +745,9 @@
 
                         <!-- Articles & Determiners -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('articles')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('articles')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">📝</div>
                             <div class="topic-info">
                                 <h3>Articles & Determiners</h3>
@@ -670,6 +758,9 @@
 
                         <!-- Prepositions -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('prepositions')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('prepositions')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">📍</div>
                             <div class="topic-info">
                                 <h3>Prepositions (Edatlar)</h3>
@@ -680,6 +771,9 @@
 
                         <!-- Passive Voice -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('passive')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('passive')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">🔄</div>
                             <div class="topic-info">
                                 <h3>Passive Voice</h3>
@@ -690,6 +784,9 @@
 
                         <!-- Reported Speech -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('reported')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('reported')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">💬</div>
                             <div class="topic-info">
                                 <h3>Reported Speech</h3>
@@ -700,26 +797,35 @@
 
                         <!-- Relative Clauses -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('relative')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('relative')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">🔗</div>
                             <div class="topic-info">
                                 <h3>Relative Clauses</h3>
                                 <p>Who, Which, That</p>
-                                <span class="topic-count">1 Soru</span>
+                                <span class="topic-count">Hazırlanıyor...</span>
                             </div>
                         </div>
 
                         <!-- Gerunds & Infinitives -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('gerunds')">
-                            <div class="topic-icon">🔤</div>
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('gerunds')"
+                                title="Konu Anlatımı">ℹ️</button>
+                            <div class="topic-icon">🏊</div>
                             <div class="topic-info">
                                 <h3>Gerunds & Infinitives</h3>
-                                <p>-ing vs to</p>
-                                <span class="topic-count">1 Soru</span>
+                                <p>Doing vs To Do</p>
+                                <span class="topic-count">Hazırlanıyor...</span>
                             </div>
                         </div>
 
                         <!-- Phrasal Verbs -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('phrasal')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('phrasal')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">🚀</div>
                             <div class="topic-info">
                                 <h3>Phrasal Verbs</h3>
@@ -730,6 +836,9 @@
 
                         <!-- Comparatives & Superlatives -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('comparatives')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('comparatives')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">📊</div>
                             <div class="topic-info">
                                 <h3>Comparatives & Superlatives</h3>
@@ -740,6 +849,9 @@
 
                         <!-- Possessives -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('possessives')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('possessives')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">👤</div>
                             <div class="topic-info">
                                 <h3>Possessives</h3>
@@ -750,6 +862,9 @@
 
                         <!-- Adjectives & Adverbs -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('adjectives_adverbs')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('adjectives_adverbs')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">⚡</div>
                             <div class="topic-info">
                                 <h3>Adjectives & Adverbs</h3>
@@ -760,6 +875,9 @@
 
                         <!-- Conjunctions -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('conjunctions')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('conjunctions')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">🔗</div>
                             <div class="topic-info">
                                 <h3>Conjunctions</h3>
@@ -770,6 +888,9 @@
 
                         <!-- Quantifiers & Noun Clauses -->
                         <div class="grammar-topic-card" onclick="app.startGrammarMode('quantifiers_noun_clauses')">
+                            <button class="info-btn"
+                                onclick="event.stopPropagation(); app.showGrammarExplanation('quantifiers_noun_clauses')"
+                                title="Konu Anlatımı">ℹ️</button>
                             <div class="topic-icon">🔢</div>
                             <div class="topic-info">
                                 <h3>Quantifiers & Noun Clauses</h3>
@@ -988,10 +1109,14 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
 
-    <script src="js/words.js?v=16"></script>
-    <script src="js/sentences.js?v=1"></script>
-    <script src="js/grammar.js?v=1"></script>
-    <script src="js/app.js?v=7"></script>
+    <script src="js/words.js?v=20"></script>
+    <script src="js/basic_vocabulary.js"></script>
+    <script src="js/sentences.js?v=2"></script>
+    <script src="js/grammar.js?v=TIMESTAMP_HERE"></script>
+    <script src="js/grammar_explanations.js?v=TIMESTAMP_HERE"></script>
+    <script src="js/books.js"></script>
+    <script src="js/app.js?v=TIMESTAMP_HERE"></script>
 </body>
 
 </html>
+```

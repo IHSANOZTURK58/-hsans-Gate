@@ -1,4 +1,4 @@
-const GRAMMAR_DATA = [
+window.GRAMMAR_DATA = [
     // --- TOPIC: TENSES (50 Questions) ---
     { id: "t_1", level: "A1", topic_id: "tenses", topic: "Tenses", question: "I ___ a student.", options: ["am", "is", "are"], correct: 0, explanation: "I öznesi ile 'am' kullanılır." },
     { id: "t_2", level: "A1", topic_id: "tenses", topic: "Tenses", question: "She ___ happy.", options: ["am", "is", "are"], correct: 1, explanation: "She öznesi ile 'is' kullanılır." },
@@ -691,7 +691,7 @@ const GRAMMAR_DATA = [
     { id: "pv_48", level: "C1", topic_id: "phrasal", topic: "Phrasal Verbs", question: "I can't ___ what he is saying.", options: ["make out", "make up", "make for"], correct: 0, explanation: "Make out: Anlamak/Seçmek." },
     { id: "pv_49", level: "C1", topic_id: "phrasal", topic: "Phrasal Verbs", question: "They ___ a new plan.", options: ["drew up", "drew down", "drew in"], correct: 0, explanation: "Draw up: Hazırlamak/Tasarlamak." },
     { id: "pv_50", level: "C1", topic_id: "phrasal", topic: "Phrasal Verbs", question: "The effect of the drug will ___ soon.", options: ["wear off", "wear out", "wear in"], correct: 0, explanation: "Wear off: Etkisini kaybetmek." },
- 
+
     // --- TOPIC: COMPARATIVES & SUPERLATIVES (50 Questions) ---
     { id: "cs_1", level: "A1", topic_id: "comparatives", topic: "Comparatives & Superlatives", question: "Elephants are ___ than dogs.", options: ["big", "bigger", "biggest"], correct: 1, explanation: "Comparative: bigger than." },
     { id: "cs_2", level: "A1", topic_id: "comparatives", topic: "Comparatives & Superlatives", question: "My car is ___ than yours.", options: ["fast", "faster", "fastest"], correct: 1, explanation: "Comparative: faster than." },
@@ -743,7 +743,7 @@ const GRAMMAR_DATA = [
     { id: "cs_48", level: "C1", topic_id: "comparatives", topic: "Comparatives & Superlatives", question: "She is not ___ intelligent as her sister.", options: ["quite so", "quite as", "as quite"], correct: 0, explanation: "Not quite so ... as." },
     { id: "cs_49", level: "C1", topic_id: "comparatives", topic: "Comparatives & Superlatives", question: "The noise got ___.", options: ["loud and loud", "louder and louder", "loudest and loudest"], correct: 1, explanation: "Louder and louder." },
     { id: "cs_50", level: "C1", topic_id: "comparatives", topic: "Comparatives & Superlatives", question: "Better and better? No. More and more good? No. Correction.", options: ["Better and better", "Gooder and gooder", "Best and best"], correct: 0, explanation: "Better and better." },
- 
+
     // --- TOPIC: POSSESSIVES (50 Questions) ---
     { id: "po_1", level: "A1", topic_id: "possessives", topic: "Possessives", question: "This is ___ book.", options: ["my", "mine", "me"], correct: 0, explanation: "Possessive adjective: my book." },
     { id: "po_2", level: "A1", topic_id: "possessives", topic: "Possessives", question: "Is this pen ___?", options: ["your", "yours", "you"], correct: 1, explanation: "Possessive pronoun: yours." },
@@ -795,7 +795,7 @@ const GRAMMAR_DATA = [
     { id: "po_48", level: "C1", topic_id: "possessives", topic: "Possessives", question: "___ money.", options: ["Money's worth of", "Worth of", "Money worth"], correct: 0, explanation: "Ten dollars' worth of sugar -> Money's worth (Idioim: Get your money's worth)." },
     { id: "po_49", level: "C1", topic_id: "possessives", topic: "Possessives", question: "It is ___ fault.", options: ["nobody's", "nobodies", "nobody"], correct: 0, explanation: "Nobody's." },
     { id: "po_50", level: "C1", topic_id: "possessives", topic: "Possessives", question: "We met at ___.", options: ["St Paul's", "St Paul", "The St Paul's"], correct: 0, explanation: "Kiliseler/Kurumlar: St Paul's (Cathedral implied)." },
- 
+
     // --- TENSES EXPANSION (51-100) ---
     { id: "t_51", level: "B1", topic_id: "tenses", topic: "Tenses", question: "I ___ to the gym twice a week.", options: ["go", "going", "gone"], correct: 0, explanation: "Regular habit: Present Simple." },
     { id: "t_52", level: "B1", topic_id: "tenses", topic: "Tenses", question: "They ___ TV when I arrived.", options: ["watched", "were watching", "have watched"], correct: 1, explanation: "Interrupted action: Past Continuous." },
@@ -951,7 +951,7 @@ const GRAMMAR_DATA = [
     { id: "p_98", level: "C1", topic_id: "prepositions", topic: "Prepositions", question: "___ time (early enough).", options: ["In", "On", "At"], correct: 0, explanation: "In time." },
     { id: "p_99", level: "C1", topic_id: "prepositions", topic: "Prepositions", question: "___ time (punctual).", options: ["On", "In", "At"], correct: 0, explanation: "On time." },
     { id: "p_100", level: "C1", topic_id: "prepositions", topic: "Prepositions", question: "___ strike.", options: ["On", "In", "At"], correct: 0, explanation: "On strike." },
- 
+
     // --- PASSIVE EXPANSION (51-100) ---
     { id: "ps_51", level: "B1", topic_id: "passive", topic: "Passive Voice", question: "The castle ___ in the 15th century.", options: ["built", "was built", "has built"], correct: 1, explanation: "Past Passive." },
     { id: "ps_52", level: "B1", topic_id: "passive", topic: "Passive Voice", question: "A new school ___ in our city right now.", options: ["is built", "is being built", "builds"], correct: 1, explanation: "Present Continuous Passive." },
@@ -1055,7 +1055,7 @@ const GRAMMAR_DATA = [
     { id: "c_98", level: "C1", topic_id: "conditionals", topic: "Conditionals", question: "Whatever you ___, don't give up.", options: ["do", "did", "done"], correct: 0, explanation: "Whatever you do." },
     { id: "c_99", level: "C1", topic_id: "conditionals", topic: "Conditionals", question: "___ you be happy?", options: ["Would", "Will", "Do"], correct: 0, explanation: "Would you be... (if...)." },
     { id: "c_100", level: "C1", topic_id: "conditionals", topic: "Conditionals", question: "If I ___ known!", options: ["had", "have", "did"], correct: 0, explanation: "If I had known (Exclamation)." },
- 
+
     // --- MODALS EXPANSION (51-100) ---
     { id: "m_51", level: "A2", topic_id: "modals", topic: "Modals", question: "You ___ touch the painting!", options: ["mustn't", "don't have to", "needn't"], correct: 0, explanation: "Prohibition: Mustn't." },
     { id: "m_52", level: "A2", topic_id: "modals", topic: "Modals", question: "I ___ ride a bike when I was 5.", options: ["can", "could", "may"], correct: 1, explanation: "Past ability: Could." },
@@ -1211,7 +1211,7 @@ const GRAMMAR_DATA = [
     { id: "rc_98", level: "C1", topic_id: "relative", topic: "Relative Clauses", question: "The doctor ___ treated me.", options: ["who", "whom", "which"], correct: 0, explanation: "Who." },
     { id: "rc_99", level: "C1", topic_id: "relative", topic: "Relative Clauses", question: "The bridge ___ collapsed.", options: ["which", "who", "where"], correct: 0, explanation: "Which." },
     { id: "rc_100", level: "C1", topic_id: "relative", topic: "Relative Clauses", question: "The pen ___ I lost.", options: ["---", "who", "where"], correct: 0, explanation: "Omitted object pronoun." },
- 
+
     // --- GERUNDS & INFINITIVES EXPANSION (51-100) ---
     { id: "gi_51", level: "B1", topic_id: "gerunds", topic: "Gerunds & Infinitives", question: "I promise ___ you.", options: ["help", "to help", "helping"], correct: 1, explanation: "Promise + To." },
     { id: "gi_52", level: "B1", topic_id: "gerunds", topic: "Gerunds & Infinitives", question: "He admitted ___ the money.", options: ["steal", "stealing", "to steal"], correct: 1, explanation: "Admit + Ving." },
@@ -1315,7 +1315,7 @@ const GRAMMAR_DATA = [
     { id: "aa_98", level: "C1", topic_id: "adjectives_adverbs", topic: "Adjectives & Adverbs", question: "At 8 o'clock ___.", options: ["sharp", "sharply", "exactly"], correct: 0, explanation: "Sharp (punctual)." },
     { id: "aa_99", level: "C1", topic_id: "adjectives_adverbs", topic: "Adjectives & Adverbs", question: "Clean ___.", options: ["forget", "forgot", "forgotten"], correct: 2, explanation: "Clean forgotten (completely)." },
     { id: "aa_100", level: "C1", topic_id: "adjectives_adverbs", topic: "Adjectives & Adverbs", question: "Fight ___.", options: ["clean", "cleanly", "cleanness"], correct: 0, explanation: "Fight clean (fair)." },
- 
+
     // --- TOPIC: CONJUNCTIONS (100 Questions) ---
     { id: "cn_1", level: "A1", topic_id: "conjunctions", topic: "Conjunctions", question: "I like tea ___ coffee.", options: ["and", "but", "so"], correct: 0, explanation: "Addition: and." },
     { id: "cn_2", level: "A1", topic_id: "conjunctions", topic: "Conjunctions", question: "I am hungry, ___ I will eat.", options: ["but", "so", "because"], correct: 1, explanation: "Result: so." },
@@ -1418,7 +1418,7 @@ const GRAMMAR_DATA = [
     { id: "cn_99", level: "C1", topic_id: "conjunctions", topic: "Conjunctions", question: "As regards ___.", options: ["that", "what", "which"], correct: 0, explanation: "As regards that." },
     { id: "cn_100", level: "C1", topic_id: "conjunctions", topic: "Conjunctions", question: "In conclusion, ___.", options: ["we must act", "acting", "to act"], correct: 0, explanation: "In conclusion + Sentence." },
 
- 
+
     // --- QUANTIFIERS & NOUN CLAUSES EXPANSION (51-100) ---
     { id: "qn_51", level: "A1", topic_id: "quantifiers_noun_clauses", topic: "Quantifiers & Noun Clauses", question: "I have ___ friends.", options: ["many", "much", "a little"], correct: 0, explanation: "Countable plural: many." },
     { id: "qn_52", level: "A1", topic_id: "quantifiers_noun_clauses", topic: "Quantifiers & Noun Clauses", question: "How ___ money do you have?", options: ["many", "much", "few"], correct: 1, explanation: "Uncountable: How much." },
@@ -1626,7 +1626,7 @@ const GRAMMAR_DATA = [
     { id: "po_98", level: "C1", topic_id: "possessives", topic: "Possessives", question: "___ disease.", options: ["Alzheimer's", "Alzheimers", "Alzheimer"], correct: 0, explanation: "Alzheimer's disease." },
     { id: "po_99", level: "C1", topic_id: "possessives", topic: "Possessives", question: "___ syndrome.", options: ["Down's", "Downs", "Down"], correct: 0, explanation: "Down's syndrome." },
     { id: "po_100", level: "C1", topic_id: "possessives", topic: "Possessives", question: "___ laws.", options: ["Newton's", "Newtons", "Newton"], correct: 0, explanation: "Newton's laws." },
- ];
+];
 
 if (typeof window !== 'undefined') {
     window.GRAMMAR_DATA = GRAMMAR_DATA;

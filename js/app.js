@@ -211,6 +211,16 @@ const app = {
         const savedAvatar = localStorage.getItem('player_avatar');
         if (savedAvatar) this.state.selectedAvatar = parseInt(savedAvatar);
 
+        // Merge Basic Vocabulary
+        if (window.BASIC_VOCAB && window.WORD_DATA) {
+            // Avoid duplicates if run multiple times
+            if (!window.WORD_DATA._merged) {
+                window.WORD_DATA = window.WORD_DATA.concat(window.BASIC_VOCAB);
+                window.WORD_DATA._merged = true;
+                console.log("Basic Vocabulary Merged:", window.BASIC_VOCAB.length);
+            }
+        }
+
         this.updateHeaderStats();
         this.updateAvatarUI();
     },
@@ -1630,6 +1640,7 @@ const app = {
             const j = Math.floor(random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
+        return array;
     },
 
     render() {
@@ -2519,27 +2530,61 @@ const app = {
     },
 
     startGrammarMode(topic) {
+        this.state.grammarTopic = topic; // Keep track of the current topic
+        this.state.grammarScore = 0;
+        document.getElementById('grammar-score').textContent = '0';
+
+        // Find topic title for display
+        const topicCard = document.querySelector(`.grammar-topic-card[onclick="app.startGrammarMode('${topic}')"]`);
+        const title = topicCard ? topicCard.querySelector('h3').textContent : topic;
+        document.getElementById('grammar-topic').textContent = title;
+
+        // Filter questions
         if (!window.GRAMMAR_DATA) {
             console.error("Grammar data not loaded!");
             alert("Dil bilgisi verileri yüklenemedi.");
             return;
         }
 
-        // Filter by topic_id
         const questions = window.GRAMMAR_DATA.filter(q => q.topic_id === topic);
+
         if (questions.length === 0) {
-            alert(`Bu konu için henüz soru eklenmedi: ${topic}`);
+            alert("Bu konu için henüz soru hazırlanmadı.");
             return;
         }
 
-        this.state.grammarTopic = topic;
-        this.state.grammarQuestions = questions;
-        this.state.grammarScore = 0;
+        this.state.grammarQuestions = this.shuffleArray(questions); // Store shuffled questions
+        this.state.grammarQuestionIndex = 0; // Start from the first question
 
         this.state.previousView = this.state.currentView;
         this.state.currentView = 'grammar';
         this.render();
         this.nextGrammarQuestion();
+    },
+
+    showGrammarExplanation(topicId) {
+        const modal = document.getElementById('grammar-explanation-modal');
+        const titleEl = document.getElementById('explanation-title');
+        const bodyEl = document.getElementById('explanation-body');
+
+        if (!window.GRAMMAR_EXPLANATIONS || !window.GRAMMAR_EXPLANATIONS[topicId]) {
+            console.warn("Explanation not found for:", topicId);
+            titleEl.textContent = "Hazırlanıyor...";
+            bodyEl.innerHTML = "<p>Bu konu için henüz anlatım eklenmedi.</p>";
+        } else {
+            const data = window.GRAMMAR_EXPLANATIONS[topicId];
+            titleEl.textContent = data.title;
+            bodyEl.innerHTML = data.content;
+        }
+
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+    },
+
+    closeGrammarExplanation() {
+        const modal = document.getElementById('grammar-explanation-modal');
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
     },
 
     nextGrammarQuestion() {
@@ -2676,6 +2721,211 @@ const app = {
             // Hide Pass button, Show Next
             if (passBtn) passBtn.style.display = 'none';
             nextBtn.style.display = 'inline-block';
+        }
+    },
+
+    returnToDashboard() {
+        this.state.currentView = 'dashboard';
+        this.render();
+    },
+
+    // --- READING MODE ---
+    openReadingMode() {
+        this.state.previousView = this.state.currentView;
+        this.state.currentView = 'reading';
+        this.render();
+        this.renderLibrary();
+    },
+
+    renderLibrary() {
+        const grid = document.getElementById('library-grid');
+        grid.innerHTML = '';
+
+        if (!window.BOOK_DATA) {
+            grid.innerHTML = '<p>Kitaplar yüklenemedi.</p>';
+            return;
+        }
+
+        const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+
+        levels.forEach(level => {
+            const book = window.BOOK_DATA[level];
+            if (book) {
+                const card = document.createElement('div');
+                card.className = 'book-card';
+                card.onclick = () => this.openBook(level);
+
+                card.innerHTML = `
+                    <div class="book-level-badge">${level}</div>
+                    <div class="book-cover">${book.cover}</div>
+                    <div class="book-title">${book.title}</div>
+                    <div class="book-author">${book.author}</div>
+                    <div class="book-desc">${book.description}</div>
+                `;
+                grid.appendChild(card);
+            }
+        });
+    },
+
+    openBook(level) {
+        const book = window.BOOK_DATA[level];
+        if (!book) return;
+
+        // Initialize state
+        this.state.currentBook = level;
+        this.state.currentBookPage = 0;
+        this.state.totalBookPages = book.pages ? book.pages.length : 1;
+
+        document.getElementById('reading-library').classList.add('hidden');
+        document.getElementById('reading-reader').classList.remove('hidden');
+
+        document.getElementById('reader-book-title').textContent = book.title;
+        document.getElementById('reader-book-level').textContent = `Seviye ${book.level}`;
+
+        // Render first page
+        this.renderBookPage();
+
+        // Reset search
+        document.getElementById('dictionary-search').value = '';
+    },
+
+    closeBook() {
+        this.state.currentBook = null;
+        this.state.currentBookPage = 0;
+        document.getElementById('reading-reader').classList.add('hidden');
+        document.getElementById('reading-library').classList.remove('hidden');
+    },
+
+    renderBookPage() {
+        const book = window.BOOK_DATA[this.state.currentBook];
+        if (!book) return;
+
+        const content = book.pages ? book.pages[this.state.currentBookPage] : book.content;
+        document.getElementById('reader-content').innerHTML = content;
+
+        // Update page indicator
+        const indicator = document.getElementById('page-indicator');
+        if (indicator && book.pages) {
+            indicator.textContent = `Sayfa ${this.state.currentBookPage + 1} / ${this.state.totalBookPages}`;
+        }
+
+        // Update button states
+        const prevBtn = document.getElementById('btn-prev-page');
+        const nextBtn = document.getElementById('btn-next-page');
+        if (prevBtn) prevBtn.disabled = this.state.currentBookPage === 0;
+        if (nextBtn) nextBtn.disabled = this.state.currentBookPage === this.state.totalBookPages - 1;
+
+        // Scroll to top
+        const readerContent = document.getElementById('reader-content');
+        if (readerContent) readerContent.scrollTop = 0;
+    },
+
+    nextBookPage() {
+        if (this.state.currentBookPage < this.state.totalBookPages - 1) {
+            this.state.currentBookPage++;
+            this.renderBookPage();
+        }
+    },
+
+    prevBookPage() {
+        if (this.state.currentBookPage > 0) {
+            this.state.currentBookPage--;
+            this.renderBookPage();
+        }
+    },
+
+    lookupWord(word) {
+        if (!word || word.trim() === '') return;
+
+        const searchTerm = word.trim().toLowerCase();
+
+        // Find word in WORD_DATA (approx 30k words)
+        // Optimized: find first exact match or startsWith
+        let result = window.WORD_DATA.find(w => w.word.toLowerCase() === searchTerm);
+
+        if (!result) {
+            // Try startsWith if exact match fails
+            // result = window.WORD_DATA.find(w => w.word.toLowerCase().startsWith(searchTerm));
+        }
+
+        const toast = document.getElementById('dict-toast');
+        const wordEl = document.getElementById('dict-word');
+        const meanEl = document.getElementById('dict-meaning');
+        const levelEl = document.getElementById('dict-level');
+
+        if (!toast || !wordEl || !meanEl || !levelEl) return;
+
+        if (result) {
+            wordEl.textContent = result.word;
+            meanEl.textContent = result.meaning;
+            levelEl.textContent = result.level;
+            levelEl.style.display = 'inline-block';
+        } else {
+            wordEl.textContent = word;
+            meanEl.textContent = "Kelime bulunamadı.";
+            levelEl.style.display = 'none';
+        }
+
+        toast.classList.add('show');
+
+        // Hide after 3 seconds
+        if (this.dictTimeout) clearTimeout(this.dictTimeout);
+        this.dictTimeout = setTimeout(() => {
+            toast.classList.remove('show');
+        }, 4000);
+    },
+
+    handleSearchInput(query) {
+        const suggestionsBox = document.getElementById('search-suggestions');
+
+        if (!query || query.length < 2) {
+            suggestionsBox.innerHTML = '';
+            suggestionsBox.style.display = 'none';
+            return;
+        }
+
+        const searchTerm = query.toLowerCase();
+
+        // Filter WORD_DATA for matches starting with query
+        // Limit to 8 matches
+        const matches = window.WORD_DATA.filter(w =>
+            w.word.toLowerCase().startsWith(searchTerm)
+        ).slice(0, 8);
+
+        if (matches.length === 0) {
+            suggestionsBox.style.display = 'none';
+            return;
+        }
+
+        suggestionsBox.innerHTML = '';
+        matches.forEach(match => {
+            const div = document.createElement('div');
+            div.className = 'suggestion-item';
+
+            // Highlight match
+            const regex = new RegExp(`^(${searchTerm})`, 'gi');
+            const highlighted = match.word.replace(regex, '<span class="suggestion-match">$1</span>');
+
+            div.innerHTML = `${highlighted} <span style="font-size:0.8em; opacity:0.7">(${match.meaning})</span>`;
+
+            div.onclick = () => {
+                this.lookupWord(match.word);
+                document.getElementById('dictionary-search').value = match.word;
+                this.hideSuggestions();
+            };
+            suggestionsBox.appendChild(div);
+        });
+
+        suggestionsBox.style.display = 'block';
+    },
+
+    hideSuggestions() {
+        const box = document.getElementById('search-suggestions');
+        if (box) {
+            // Small delay to allow click event to register
+            setTimeout(() => {
+                box.style.display = 'none';
+            }, 200);
         }
     }
 };
