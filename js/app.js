@@ -24,15 +24,12 @@ const auth = firebase.auth();
 const app = {
     // Config
     POINTS_PER_QUESTION: 5,
-    JOKER_COST: 200,
     MAX_LEADERBOARD: 5, // Request: Limit to top 5
 
     state: {
         currentView: 'menu',
         score: 0,
         leaderboard: [], // Global Data
-        wallet: 0,
-        favorites: [],
         wallet: 0,
         highScore: 0, // Track Personal Best
         favorites: [],
@@ -196,14 +193,12 @@ const app = {
         const stored = localStorage.getItem('vocab_game_data_v2');
         if (stored) {
             const data = JSON.parse(stored);
-            this.state.wallet = data.wallet || 0;
             this.state.highScore = data.highScore || 0;
             this.state.favorites = data.favorites || [];
             this.state.currentLevel = data.currentLevel || 1;
             this.state.maxLevel = data.maxLevel || this.state.currentLevel || 1; // Backwards compat
             this.state.customWords = data.customWords || [];
         } else {
-            this.state.wallet = 0;
             this.state.favorites = [];
             this.state.customWords = [];
         }
@@ -227,7 +222,6 @@ const app = {
 
     saveData() {
         const data = {
-            wallet: this.state.wallet,
             highScore: this.state.highScore,
             favorites: this.state.favorites,
             currentLevel: this.state.currentLevel,
@@ -1200,12 +1194,6 @@ const app = {
             container.appendChild(btn);
         });
 
-        // Joker State
-        const jokerBtn = document.getElementById('btn-joker');
-        if (jokerBtn) {
-            jokerBtn.disabled = this.state.wallet < this.JOKER_COST;
-            jokerBtn.style.opacity = this.state.wallet < this.JOKER_COST ? 0.5 : 1;
-        }
     },
 
     handleAnswer(selectedOption, btnElement) {
@@ -1297,7 +1285,6 @@ const app = {
 
         // Add Score to Wallet
         if (this.state.score > 0) {
-            this.state.wallet += this.state.score;
 
             // Check High Score
             if (this.state.score > this.state.highScore) {
@@ -1313,7 +1300,6 @@ const app = {
         this.saveData();
 
         document.getElementById('final-score').textContent = this.state.score;
-        document.getElementById('earned-wallet').textContent = this.state.score;
 
         // Show correct header
         const title = document.querySelector('#view-gameover h3');
@@ -1352,6 +1338,15 @@ const app = {
         }
     },
 
+    quitGame() {
+        if (this.state.timerInterval) clearInterval(this.state.timerInterval);
+        if (this.state.gameMode === 'adventure') {
+            this.showLevelMap();
+        } else {
+            this.openModeSelection();
+        }
+    },
+
     // Helper needed for Rush Mode UI
     renderLives() {
         const livesEl = document.getElementById('game-lives');
@@ -1383,23 +1378,6 @@ const app = {
         }
     },
 
-    useJoker() {
-        if (this.state.wallet < this.JOKER_COST) return;
-
-        this.state.wallet -= this.JOKER_COST;
-        this.saveData();
-        this.updateHeaderStats();
-
-        const allBtns = Array.from(document.querySelectorAll('.option-btn'));
-        const correctId = this.state.currentWord.id;
-        let wrongBtns = allBtns.filter(b => parseInt(b.dataset.id) !== correctId);
-
-        this.shuffleArray(wrongBtns);
-        if (wrongBtns.length > 0) wrongBtns[0].style.visibility = 'hidden';
-        if (wrongBtns.length > 1) wrongBtns[1].style.visibility = 'hidden';
-
-        document.getElementById('btn-joker').disabled = true;
-    },
 
     // Favorites & List
     toggleFavorite(id) {
@@ -1469,10 +1447,8 @@ const app = {
 
     // Utilities/Helpers
     updateHeaderStats() {
-        document.getElementById('wallet-amount').textContent = this.state.wallet;
         if (this.state.currentView === 'game') {
-            const jokerBtn = document.getElementById('btn-joker');
-            if (jokerBtn) jokerBtn.disabled = this.state.wallet < this.JOKER_COST;
+            // Logic stripped
         }
         this.updateDashboardStats();
     },
