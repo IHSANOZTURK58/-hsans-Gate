@@ -2508,7 +2508,8 @@ const app = {
     startGrammarMode(topic) {
         this.state.grammarTopic = topic; // Keep track of the current topic
         this.state.grammarScore = 0;
-        document.getElementById('grammar-score').textContent = '0';
+        this.state.grammarScore = 0;
+
 
         // Find topic title for display
         const topicCard = document.querySelector(`.grammar-topic-card[onclick="app.startGrammarMode('${topic}')"]`);
@@ -2614,7 +2615,7 @@ const app = {
         const q = this.state.currentGrammarQuestion;
 
         // Update Score
-        document.getElementById('grammar-score').textContent = this.state.grammarScore;
+
 
         // Update Topic
         document.getElementById('grammar-topic').textContent = `${this.state.grammarLevel} - ${q.topic}`;
@@ -2664,7 +2665,8 @@ const app = {
         if (isCorrect) {
             this.playSound('correct');
             this.state.grammarScore += 10;
-            document.getElementById('grammar-score').textContent = this.state.grammarScore;
+
+
 
             if (gap) gap.classList.add('correct');
             btnElement.classList.add('correct');
@@ -2836,19 +2838,52 @@ const app = {
             meanEl.textContent = result.meaning;
             levelEl.textContent = result.level;
             levelEl.style.display = 'inline-block';
+
+            // Check if favorite
+            const isFav = this.state.favorites.includes(result.id);
+            const starBtn = document.getElementById('dict-star-btn');
+            if (starBtn) {
+                starBtn.setAttribute('data-word-id', result.id);
+                if (isFav) starBtn.classList.add('active');
+                else starBtn.classList.remove('active');
+                starBtn.style.display = 'flex';
+            }
         } else {
             wordEl.textContent = word;
             meanEl.textContent = "Kelime bulunamadı.";
             levelEl.style.display = 'none';
+
+            const starBtn = document.getElementById('dict-star-btn');
+            if (starBtn) starBtn.style.display = 'none'; // Hide star if not found
         }
 
         toast.classList.add('show');
 
-        // Hide after 3 seconds
+        // Hide after 4 seconds
         if (this.dictTimeout) clearTimeout(this.dictTimeout);
         this.dictTimeout = setTimeout(() => {
             toast.classList.remove('show');
         }, 4000);
+    },
+
+    toggleDictToastFavorite() {
+        const starBtn = document.getElementById('dict-star-btn');
+        if (!starBtn) return;
+
+        const id = parseInt(starBtn.getAttribute('data-word-id'));
+        if (!id || isNaN(id)) return;
+
+        this.toggleFavorite(id);
+
+        // Update UI immediately
+        const isFav = this.state.favorites.includes(id);
+        if (isFav) starBtn.classList.add('active');
+        else starBtn.classList.remove('active');
+
+        // Update list if open
+        if (this.state.currentView === 'list') {
+            this.renderList();
+        }
     },
 
     handleSearchInput(query) {
@@ -2882,7 +2917,18 @@ const app = {
             const regex = new RegExp(`^(${searchTerm})`, 'gi');
             const highlighted = match.word.replace(regex, '<span class="suggestion-match">$1</span>');
 
-            div.innerHTML = `${highlighted} <span style="font-size:0.8em; opacity:0.7">(${match.meaning})</span>`;
+            const isFav = this.state.favorites.includes(match.id);
+            const starIcon = isFav ? '★' : '☆';
+            const starClass = isFav ? 'active' : '';
+
+            div.innerHTML = `
+                <div class="suggestion-text">
+                    ${highlighted} <span style="font-size:0.8em; opacity:0.7">(${match.meaning})</span>
+                </div>
+                <button class="suggestion-star ${starClass}" onclick="event.stopPropagation(); app.toggleSuggestionFavorite(${match.id}, this)">
+                    ${starIcon}
+                </button>
+            `;
 
             div.onclick = () => {
                 this.lookupWord(match.word);
@@ -2893,6 +2939,26 @@ const app = {
         });
 
         suggestionsBox.style.display = 'block';
+    },
+
+    toggleSuggestionFavorite(id, btn) {
+        this.toggleFavorite(id);
+        const isFav = this.state.favorites.includes(id);
+        btn.innerHTML = isFav ? '★' : '☆';
+        if (isFav) btn.classList.add('active');
+        else btn.classList.remove('active');
+
+        // Also update main dictionary toast star if visible and matching
+        const toastStar = document.getElementById('dict-star-btn');
+        if (toastStar && parseInt(toastStar.getAttribute('data-word-id')) === id) {
+            if (isFav) toastStar.classList.add('active');
+            else toastStar.classList.remove('active');
+        }
+
+        // Update list if open
+        if (this.state.currentView === 'list') {
+            this.renderList();
+        }
     },
 
     hideSuggestions() {

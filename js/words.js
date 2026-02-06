@@ -30160,5 +30160,3560 @@ window.WORD_DATA = [
         "meaning": "Antep fıstığı",
         "level": "C1",
         "id": 10741
+    },
+    {
+        "word": "accumulated",
+        "meaning": "birikmiş, toplanmış",
+        "level": "B2"
+    },
+    {
+        "word": "ached",
+        "meaning": "ağrıdı, sızladı",
+        "level": "B1"
+    },
+    {
+        "word": "added",
+        "meaning": "ekledi",
+        "level": "A1"
+    },
+    {
+        "word": "adonis",
+        "meaning": "Adonis (çok yakışıklı erkek)",
+        "level": "C1"
+    },
+    {
+        "word": "adored",
+        "meaning": "çok sevdi, tapındı",
+        "level": "B2"
+    },
+    {
+        "word": "ages",
+        "meaning": "çağlar, uzun yıllar",
+        "level": "B1"
+    },
+    {
+        "word": "ain't",
+        "meaning": "değil (argo)",
+        "level": "B2"
+    },
+    {
+        "word": "allusions",
+        "meaning": "anıştırmalar, imalar",
+        "level": "C2"
+    },
+    {
+        "word": "amazement",
+        "meaning": "şaşkınlık, hayret",
+        "level": "B2"
+    },
+    {
+        "word": "amidst",
+        "meaning": "ortasında, arasında",
+        "level": "B2"
+    },
+    {
+        "word": "animals",
+        "meaning": "hayvanlar",
+        "level": "A1"
+    },
+    {
+        "word": "answered",
+        "meaning": "cevapladı",
+        "level": "A2"
+    },
+    {
+        "word": "appeared",
+        "meaning": "göründü",
+        "level": "A2"
+    },
+    {
+        "word": "appears",
+        "meaning": "görünür",
+        "level": "A2"
+    },
+    {
+        "word": "argued",
+        "meaning": "tartıştı",
+        "level": "B1"
+    },
+    {
+        "word": "arises",
+        "meaning": "ortaya çıkar",
+        "level": "B2"
+    },
+    {
+        "word": "arose",
+        "meaning": "ortaya çıktı",
+        "level": "B2"
+    },
+    {
+        "word": "arrives",
+        "meaning": "varır, ulaşır",
+        "level": "A2"
+    },
+    {
+        "word": "artists",
+        "meaning": "sanatçılar",
+        "level": "A2"
+    },
+    {
+        "word": "asked",
+        "meaning": "sordu",
+        "level": "A1"
+    },
+    {
+        "word": "ate",
+        "meaning": "yedi",
+        "level": "A2"
+    },
+    {
+        "word": "audacity",
+        "meaning": "küstahlık, cüret",
+        "level": "C1"
+    },
+    {
+        "word": "awaking",
+        "meaning": "uyanma",
+        "level": "B1"
+    },
+    {
+        "word": "awhile",
+        "meaning": "bir süre",
+        "level": "Old"
+    },
+    {
+        "word": "bade",
+        "meaning": "buyurdu, veda etti",
+        "level": "Old"
+    },
+    {
+        "word": "barracks",
+        "meaning": "kışla",
+        "level": "B2"
+    },
+    {
+        "word": "bearing",
+        "meaning": "taşıyan, duruş",
+        "level": "B2"
+    },
+    {
+        "word": "beating",
+        "meaning": "dövme, kalp atışı",
+        "level": "B1"
+    },
+    {
+        "word": "became",
+        "meaning": "oldu",
+        "level": "A2"
+    },
+    {
+        "word": "becoming",
+        "meaning": "oluyor, yakışan",
+        "level": "B1"
+    },
+    {
+        "word": "began",
+        "meaning": "başladı",
+        "level": "A2"
+    },
+    {
+        "word": "begging",
+        "meaning": "yalvarma, dilenme",
+        "level": "B1"
+    },
+    {
+        "word": "begins",
+        "meaning": "başlar",
+        "level": "A1"
+    },
+    {
+        "word": "believed",
+        "meaning": "inandı",
+        "level": "A2"
+    },
+    {
+        "word": "belonged",
+        "meaning": "aitti",
+        "level": "B1"
+    },
+    {
+        "word": "betrayal",
+        "meaning": "ihanet",
+        "level": "C1"
+    },
+    {
+        "word": "birds",
+        "meaning": "kuşlar",
+        "level": "A1"
+    },
+    {
+        "word": "blandly",
+        "meaning": "yumuşakça, sakince",
+        "level": "C1"
+    },
+    {
+        "word": "blessed",
+        "meaning": "kutsadı",
+        "level": "B1"
+    },
+    {
+        "word": "blinking",
+        "meaning": "göz kırpma",
+        "level": "B1"
+    },
+    {
+        "word": "blood-spot",
+        "meaning": "kan lekesi",
+        "level": "B1"
+    },
+    {
+        "word": "bloody",
+        "meaning": "kanlı, lanet (argo)",
+        "level": "B1"
+    },
+    {
+        "word": "blossoms",
+        "meaning": "çiçekler (ağaç)",
+        "level": "B1"
+    },
+    {
+        "word": "boards",
+        "meaning": "tahtalar, panolar",
+        "level": "B1"
+    },
+    {
+        "word": "bosom",
+        "meaning": "bağır, göğüs",
+        "level": "C1"
+    },
+    {
+        "word": "bought",
+        "meaning": "satın aldı",
+        "level": "A2"
+    },
+    {
+        "word": "boys",
+        "meaning": "erkek çocuklar",
+        "level": "A1"
+    },
+    {
+        "word": "branches",
+        "meaning": "dallar",
+        "level": "B1"
+    },
+    {
+        "word": "bribe",
+        "meaning": "rüşvet",
+        "level": "B2"
+    },
+    {
+        "word": "bringing",
+        "meaning": "getirme",
+        "level": "A2"
+    },
+    {
+        "word": "briskly",
+        "meaning": "canlı bir şekilde, çabucak",
+        "level": "B2"
+    },
+    {
+        "word": "broke",
+        "meaning": "kırdı, bozuldu",
+        "level": "A2"
+    },
+    {
+        "word": "bronze",
+        "meaning": "bronz",
+        "level": "B1"
+    },
+    {
+        "word": "brought",
+        "meaning": "getirdi",
+        "level": "A2"
+    },
+    {
+        "word": "brows",
+        "meaning": "kaşlar, alın",
+        "level": "B1"
+    },
+    {
+        "word": "bucket",
+        "meaning": "kova",
+        "level": "B1"
+    },
+    {
+        "word": "burden",
+        "meaning": "yük, sorumluluk",
+        "level": "B2"
+    },
+    {
+        "word": "bursting",
+        "meaning": "patlayan, dopdolu",
+        "level": "B2"
+    },
+    {
+        "word": "called",
+        "meaning": "aradı, isimlendirdi",
+        "level": "A1"
+    },
+    {
+        "word": "calls",
+        "meaning": "arar, çağırır",
+        "level": "A1"
+    },
+    {
+        "word": "calmly",
+        "meaning": "sakin bir şekilde",
+        "level": "B1"
+    },
+    {
+        "word": "came",
+        "meaning": "geldi",
+        "level": "A1"
+    },
+    {
+        "word": "cannot",
+        "meaning": "yapamaz",
+        "level": "A1"
+    },
+    {
+        "word": "captured",
+        "meaning": "yakaladı, ele geçirdi",
+        "level": "B2"
+    },
+    {
+        "word": "carelessly",
+        "meaning": "dikkatsizce",
+        "level": "B1"
+    },
+    {
+        "word": "catches",
+        "meaning": "yakalar",
+        "level": "A2"
+    },
+    {
+        "word": "catching",
+        "meaning": "yakalama",
+        "level": "A2"
+    },
+    {
+        "word": "cautious",
+        "meaning": "dikkatli, tedbirli",
+        "level": "B2"
+    },
+    {
+        "word": "ceased",
+        "meaning": "sona erdi, durdu",
+        "level": "C1"
+    },
+    {
+        "word": "ceasing",
+        "meaning": "durma, kesilme",
+        "level": "C1"
+    },
+    {
+        "word": "cents",
+        "meaning": "sentler (para birimi)",
+        "level": "A1"
+    },
+    {
+        "word": "chairs",
+        "meaning": "sandalyeler",
+        "level": "A1"
+    },
+    {
+        "word": "changed",
+        "meaning": "değişti",
+        "level": "A1"
+    },
+    {
+        "word": "chap",
+        "meaning": "ahbap, adam",
+        "level": "B2"
+    },
+    {
+        "word": "chaps",
+        "meaning": "ahbaplar",
+        "level": "B2"
+    },
+    {
+        "word": "charming",
+        "meaning": "cazibeli, büyüleyici",
+        "level": "B1"
+    },
+    {
+        "word": "chatted",
+        "meaning": "sohbet etti",
+        "level": "A2"
+    },
+    {
+        "word": "cheeks",
+        "meaning": "yanaklar",
+        "level": "B1"
+    },
+    {
+        "word": "chew",
+        "meaning": "çiğnemek",
+        "level": "B1"
+    },
+    {
+        "word": "chews",
+        "meaning": "çiğner",
+        "level": "B1"
+    },
+    {
+        "word": "chuckled",
+        "meaning": "kıs kıs güldü",
+        "level": "B2"
+    },
+    {
+        "word": "cigarettes",
+        "meaning": "sigaralar",
+        "level": "A2"
+    },
+    {
+        "word": "clearing",
+        "meaning": "temizleme, açıklık alan",
+        "level": "B1"
+    },
+    {
+        "word": "cleverly",
+        "meaning": "akıllıca",
+        "level": "B1"
+    },
+    {
+        "word": "closes",
+        "meaning": "kapanır",
+        "level": "A1"
+    },
+    {
+        "word": "coal-black",
+        "meaning": "kömür karası",
+        "level": "B2"
+    },
+    {
+        "word": "coarsely",
+        "meaning": "kaba bir şekilde",
+        "level": "C1"
+    },
+    {
+        "word": "coats",
+        "meaning": "montlar",
+        "level": "A1"
+    },
+    {
+        "word": "coldly",
+        "meaning": "soğukça",
+        "level": "B1"
+    },
+    {
+        "word": "combs",
+        "meaning": "taraklar",
+        "level": "B1"
+    },
+    {
+        "word": "comes",
+        "meaning": "gelir",
+        "level": "A1"
+    },
+    {
+        "word": "complexity",
+        "meaning": "karmaşıklık",
+        "level": "B2"
+    },
+    {
+        "word": "comprehended",
+        "meaning": "kavradı, anladı",
+        "level": "C1"
+    },
+    {
+        "word": "concealment",
+        "meaning": "gizleme",
+        "level": "C1"
+    },
+    {
+        "word": "conceived",
+        "meaning": "tasarladı, kafasına koydu",
+        "level": "C1"
+    },
+    {
+        "word": "confession",
+        "meaning": "itiraf",
+        "level": "B2"
+    },
+    {
+        "word": "conscience",
+        "meaning": "vicdan",
+        "level": "B2"
+    },
+    {
+        "word": "consciousness",
+        "meaning": "bilinç",
+        "level": "B2"
+    },
+    {
+        "word": "consent",
+        "meaning": "rıza, onay",
+        "level": "B2"
+    },
+    {
+        "word": "considered",
+        "meaning": "düşündü, hesaba kattı",
+        "level": "A2"
+    },
+    {
+        "word": "consists",
+        "meaning": "-den oluşur",
+        "level": "B1"
+    },
+    {
+        "word": "contemplated",
+        "meaning": "düşünüp taşındı",
+        "level": "C1"
+    },
+    {
+        "word": "continued",
+        "meaning": "devam etti",
+        "level": "A2"
+    },
+    {
+        "word": "contradict",
+        "meaning": "çelişmek, itiraz etmek",
+        "level": "C1"
+    },
+    {
+        "word": "convey",
+        "meaning": "iletmek, aktarmak",
+        "level": "B2"
+    },
+    {
+        "word": "convinced",
+        "meaning": "ikna olmuş",
+        "level": "B1"
+    },
+    {
+        "word": "corpse",
+        "meaning": "ceset",
+        "level": "C1"
+    },
+    {
+        "word": "corrupt",
+        "meaning": "yozlaşmış",
+        "level": "B2"
+    },
+    {
+        "word": "counted",
+        "meaning": "saydı",
+        "level": "A2"
+    },
+    {
+        "word": "covet",
+        "meaning": "imrenmek, göz dikmek",
+        "level": "C2"
+    },
+    {
+        "word": "crammed",
+        "meaning": "tıkıştırdı",
+        "level": "B2"
+    },
+    {
+        "word": "cried",
+        "meaning": "ağladı, bağırdı",
+        "level": "A2"
+    },
+    {
+        "word": "crossed",
+        "meaning": "karşıya geçti, çapraz",
+        "level": "A2"
+    },
+    {
+        "word": "crosses",
+        "meaning": "haçlar, geçişler",
+        "level": "B1"
+    },
+    {
+        "word": "cruelty",
+        "meaning": "zalimlik",
+        "level": "B2"
+    },
+    {
+        "word": "crying",
+        "meaning": "ağlama",
+        "level": "A2"
+    },
+    {
+        "word": "cunningly",
+        "meaning": "kurnazca",
+        "level": "C1"
+    },
+    {
+        "word": "curled",
+        "meaning": "kıvrıldı",
+        "level": "B1"
+    },
+    {
+        "word": "curtains",
+        "meaning": "perdeler",
+        "level": "A2"
+    },
+    {
+        "word": "damn",
+        "meaning": "lanet, kahretsin",
+        "level": "B1"
+    },
+    {
+        "word": "darkened",
+        "meaning": "karardı",
+        "level": "B1"
+    },
+    {
+        "word": "days",
+        "meaning": "günler",
+        "level": "A1"
+    },
+    {
+        "word": "dearly",
+        "meaning": "içtenlikle, pahalıya",
+        "level": "B2"
+    },
+    {
+        "word": "deed",
+        "meaning": "eylem, tapu",
+        "level": "C1"
+    },
+    {
+        "word": "deeds",
+        "meaning": "işler, eylemler",
+        "level": "C1"
+    },
+    {
+        "word": "deepening",
+        "meaning": "derinleşen",
+        "level": "C1"
+    },
+    {
+        "word": "defines",
+        "meaning": "tanımlar",
+        "level": "B1"
+    },
+    {
+        "word": "degrees",
+        "meaning": "dereceler",
+        "level": "B1"
+    },
+    {
+        "word": "delicate",
+        "meaning": "hassas, narin",
+        "level": "B2"
+    },
+    {
+        "word": "delight",
+        "meaning": "sevinç, zevk",
+        "level": "B1"
+    },
+    {
+        "word": "deposited",
+        "meaning": "koydu, yatırdı",
+        "level": "C1"
+    },
+    {
+        "word": "derision",
+        "meaning": "alay, küçümseme",
+        "level": "C2"
+    },
+    {
+        "word": "described",
+        "meaning": "tanımladı",
+        "level": "A2"
+    },
+    {
+        "word": "desire",
+        "meaning": "arzu, istek",
+        "level": "B2"
+    },
+    {
+        "word": "desired",
+        "meaning": "arzulanan, istenen",
+        "level": "B2"
+    },
+    {
+        "word": "desperate",
+        "meaning": "umutsuz",
+        "level": "B2"
+    },
+    {
+        "word": "destroyed",
+        "meaning": "yok etti",
+        "level": "B1"
+    },
+    {
+        "word": "destruction",
+        "meaning": "yıkım",
+        "level": "B2"
+    },
+    {
+        "word": "detected",
+        "meaning": "tespit etti",
+        "level": "B2"
+    },
+    {
+        "word": "didn't",
+        "meaning": "yapmadı",
+        "level": "A1"
+    },
+    {
+        "word": "dipped",
+        "meaning": "daldırdı",
+        "level": "B1"
+    },
+    {
+        "word": "discovered",
+        "meaning": "keşfetti",
+        "level": "B1"
+    },
+    {
+        "word": "dismembered",
+        "meaning": "parçalara ayırdı",
+        "level": "C2"
+    },
+    {
+        "word": "displeased",
+        "meaning": "memnuniyetsiz",
+        "level": "C1"
+    },
+    {
+        "word": "dissemble",
+        "meaning": "gizlemek, ikiyüzlülük yapmak",
+        "level": "C2"
+    },
+    {
+        "word": "dissimulation",
+        "meaning": "iki yüzlülük, gizleme",
+        "level": "C2"
+    },
+    {
+        "word": "distinct",
+        "meaning": "belirgin",
+        "level": "B2"
+    },
+    {
+        "word": "distracted",
+        "meaning": "dikkatini dağıttı",
+        "level": "B1"
+    },
+    {
+        "word": "divan",
+        "meaning": "divan, sedir",
+        "level": "C1"
+    },
+    {
+        "word": "doesn't",
+        "meaning": "yapmaz",
+        "level": "A1"
+    },
+    {
+        "word": "dollars",
+        "meaning": "dolar",
+        "level": "A1"
+    },
+    {
+        "word": "don't",
+        "meaning": "yapma",
+        "level": "A1"
+    },
+    {
+        "word": "done",
+        "meaning": "yapılmış, bitmiş",
+        "level": "A1"
+    },
+    {
+        "word": "doorway",
+        "meaning": "kapı aralığı",
+        "level": "B1"
+    },
+    {
+        "word": "dragged",
+        "meaning": "sürükledi",
+        "level": "B1"
+    },
+    {
+        "word": "dreadful",
+        "meaning": "korkunç",
+        "level": "B2"
+    },
+    {
+        "word": "dreadfully",
+        "meaning": "korkunç bir şekilde",
+        "level": "B2"
+    },
+    {
+        "word": "drew",
+        "meaning": "çizdi, çekti",
+        "level": "A2"
+    },
+    {
+        "word": "droned",
+        "meaning": "vızıldadı",
+        "level": "C1"
+    },
+    {
+        "word": "drove",
+        "meaning": "sürdü",
+        "level": "A2"
+    },
+    {
+        "word": "dulled",
+        "meaning": "körelmiş, donuklaşmış",
+        "level": "C1"
+    },
+    {
+        "word": "dying",
+        "meaning": "ölmekte olan",
+        "level": "B1"
+    },
+    {
+        "word": "earnestly",
+        "meaning": "ciddiyetle, samimiyetle",
+        "level": "B2"
+    },
+    {
+        "word": "ears",
+        "meaning": "kulaklar",
+        "level": "A1"
+    },
+    {
+        "word": "eating",
+        "meaning": "yeme",
+        "level": "A1"
+    },
+    {
+        "word": "eighth",
+        "meaning": "sekizinci",
+        "level": "A2"
+    },
+    {
+        "word": "eighty-seven",
+        "meaning": "seksen yedi",
+        "level": "A1"
+    },
+    {
+        "word": "elegant",
+        "meaning": "zarif, şık",
+        "level": "B1"
+    },
+    {
+        "word": "elevated",
+        "meaning": "yükseltilmiş, yüce",
+        "level": "C1"
+    },
+    {
+        "word": "embodiment",
+        "meaning": "somutlaşmış hali, simge",
+        "level": "C2"
+    },
+    {
+        "word": "ends",
+        "meaning": "biter, sonlar",
+        "level": "A1"
+    },
+    {
+        "word": "entered",
+        "meaning": "girdi",
+        "level": "A2"
+    },
+    {
+        "word": "entering",
+        "meaning": "girme",
+        "level": "A2"
+    },
+    {
+        "word": "envied",
+        "meaning": "kıskandı, gıpta etti",
+        "level": "B2"
+    },
+    {
+        "word": "equine",
+        "meaning": "ata ait, at gibi",
+        "level": "C2"
+    },
+    {
+        "word": "eras",
+        "meaning": "çağlar, dönemler",
+        "level": "B2"
+    },
+    {
+        "word": "ere",
+        "meaning": "önce (eski)",
+        "level": "Old"
+    },
+    {
+        "word": "establishes",
+        "meaning": "kurar, tesis eder",
+        "level": "B2"
+    },
+    {
+        "word": "eternal",
+        "meaning": "ebedi, sonsuz",
+        "level": "B2"
+    },
+    {
+        "word": "eternally",
+        "meaning": "ebediyen",
+        "level": "B2"
+    },
+    {
+        "word": "examined",
+        "meaning": "inceledi, muayene etti",
+        "level": "B1"
+    },
+    {
+        "word": "excerpt",
+        "meaning": "alıntı",
+        "level": "B2"
+    },
+    {
+        "word": "exhibit",
+        "meaning": "sergilemek",
+        "level": "B1"
+    },
+    {
+        "word": "exploration",
+        "meaning": "keşif",
+        "level": "B1"
+    },
+    {
+        "word": "eyebrows",
+        "meaning": "kaşlar",
+        "level": "B1"
+    },
+    {
+        "word": "eyes",
+        "meaning": "gözler",
+        "level": "A1"
+    },
+    {
+        "word": "faced",
+        "meaning": "yüzleşti, dönük",
+        "level": "B1"
+    },
+    {
+        "word": "fancied",
+        "meaning": "hayal etti, sandı",
+        "level": "C1"
+    },
+    {
+        "word": "fanciful",
+        "meaning": "süslü, hayali",
+        "level": "C2"
+    },
+    {
+        "word": "fastening",
+        "meaning": "tutturma, bağlama",
+        "level": "B2"
+    },
+    {
+        "word": "fatigues",
+        "meaning": "yorgunluklar (askeri iş)",
+        "level": "C2"
+    },
+    {
+        "word": "fearful",
+        "meaning": "korkunç, korkak",
+        "level": "B1"
+    },
+    {
+        "word": "features",
+        "meaning": "özellikler, yüz hatları",
+        "level": "B1"
+    },
+    {
+        "word": "feelings",
+        "meaning": "hisler",
+        "level": "A2"
+    },
+    {
+        "word": "feet",
+        "meaning": "ayaklar",
+        "level": "A1"
+    },
+    {
+        "word": "fell",
+        "meaning": "düştü",
+        "level": "A2"
+    },
+    {
+        "word": "felt",
+        "meaning": "hissetti",
+        "level": "A2"
+    },
+    {
+        "word": "fetch",
+        "meaning": "gidip getirmek",
+        "level": "B1"
+    },
+    {
+        "word": "filled",
+        "meaning": "dolu, doldurulmuş",
+        "level": "A2"
+    },
+    {
+        "word": "finely",
+        "meaning": "ince bir şekilde, güzelce",
+        "level": "B2"
+    },
+    {
+        "word": "fingers",
+        "meaning": "parmaklar",
+        "level": "A1"
+    },
+    {
+        "word": "finical",
+        "meaning": "titiz, süslü",
+        "level": "C2"
+    },
+    {
+        "word": "finished",
+        "meaning": "bitti, bitirdi",
+        "level": "A1"
+    },
+    {
+        "word": "flame-like",
+        "meaning": "ateş gibi",
+        "level": "B2"
+    },
+    {
+        "word": "flitted",
+        "meaning": "uçuştu, süzüldü",
+        "level": "C2"
+    },
+    {
+        "word": "flooring",
+        "meaning": "döşeme",
+        "level": "B1"
+    },
+    {
+        "word": "fluently",
+        "meaning": "akıcı bir şekilde",
+        "level": "B1"
+    },
+    {
+        "word": "flung",
+        "meaning": "fırlattı",
+        "level": "B2"
+    },
+    {
+        "word": "folds",
+        "meaning": "kıvrımlar",
+        "level": "B1"
+    },
+    {
+        "word": "followed",
+        "meaning": "takip etti",
+        "level": "A2"
+    },
+    {
+        "word": "foresight",
+        "meaning": "öngörü",
+        "level": "C1"
+    },
+    {
+        "word": "forth",
+        "meaning": "ileri, dışarı",
+        "level": "B2"
+    },
+    {
+        "word": "frank",
+        "meaning": "dobra, içten",
+        "level": "B2"
+    },
+    {
+        "word": "frankly",
+        "meaning": "açıkçası",
+        "level": "B1"
+    },
+    {
+        "word": "friends",
+        "meaning": "arkadaşlar",
+        "level": "A1"
+    },
+    {
+        "word": "gaily",
+        "meaning": "neşeyle",
+        "level": "C1"
+    },
+    {
+        "word": "games",
+        "meaning": "oyunlar",
+        "level": "A1"
+    },
+    {
+        "word": "gathering",
+        "meaning": "toplama, toplanma",
+        "level": "B1"
+    },
+    {
+        "word": "gave",
+        "meaning": "verdi",
+        "level": "A1"
+    },
+    {
+        "word": "gay",
+        "meaning": "neşeli (eski kullanım)",
+        "level": "Old"
+    },
+    {
+        "word": "gazing",
+        "meaning": "dik dik bakma",
+        "level": "B2"
+    },
+    {
+        "word": "gentlemen",
+        "meaning": "beyefendiler",
+        "level": "A2"
+    },
+    {
+        "word": "gently",
+        "meaning": "nazikçe",
+        "level": "B1"
+    },
+    {
+        "word": "genuine",
+        "meaning": "hakiki, gerçek",
+        "level": "B2"
+    },
+    {
+        "word": "gesticulations",
+        "meaning": "el kol hareketleri",
+        "level": "C2"
+    },
+    {
+        "word": "getting",
+        "meaning": "alma, olma",
+        "level": "A1"
+    },
+    {
+        "word": "gifts",
+        "meaning": "hediyeler",
+        "level": "A1"
+    },
+    {
+        "word": "girls",
+        "meaning": "kızlar",
+        "level": "A1"
+    },
+    {
+        "word": "given",
+        "meaning": "verilmiş",
+        "level": "A2"
+    },
+    {
+        "word": "gleam",
+        "meaning": "parıltı",
+        "level": "C1"
+    },
+    {
+        "word": "glistening",
+        "meaning": "parıldayan",
+        "level": "C1"
+    },
+    {
+        "word": "gloomily",
+        "meaning": "kasvetli bir şekilde",
+        "level": "B2"
+    },
+    {
+        "word": "going",
+        "meaning": "gidiyor",
+        "level": "A1"
+    },
+    {
+        "word": "gone",
+        "meaning": "gitmiş",
+        "level": "A2"
+    },
+    {
+        "word": "got",
+        "meaning": "aldı, sahip oldu",
+        "level": "A1"
+    },
+    {
+        "word": "gown",
+        "meaning": "sabahlık, elbise",
+        "level": "B1"
+    },
+    {
+        "word": "grained",
+        "meaning": "taneli, desenli",
+        "level": "C1"
+    },
+    {
+        "word": "gravely",
+        "meaning": "ciddiyetle",
+        "level": "B2"
+    },
+    {
+        "word": "greatest",
+        "meaning": "en büyük",
+        "level": "A2"
+    },
+    {
+        "word": "grew",
+        "meaning": "büyüdü, oldu",
+        "level": "B1"
+    },
+    {
+        "word": "grief",
+        "meaning": "keder",
+        "level": "B2"
+    },
+    {
+        "word": "groan",
+        "meaning": "inilti",
+        "level": "B2"
+    },
+    {
+        "word": "grotesque",
+        "meaning": "ucube, acayip",
+        "level": "C1"
+    },
+    {
+        "word": "growled",
+        "meaning": "hırladı",
+        "level": "B2"
+    },
+    {
+        "word": "grows",
+        "meaning": "büyür",
+        "level": "A1"
+    },
+    {
+        "word": "guilt",
+        "meaning": "suçluluk",
+        "level": "B2"
+    },
+    {
+        "word": "gunrest",
+        "meaning": "silah dayanağı",
+        "level": "C2"
+    },
+    {
+        "word": "gurgling",
+        "meaning": "çağlayan, fokurdayan",
+        "level": "C1"
+    },
+    {
+        "word": "haircut",
+        "meaning": "saç kesimi",
+        "level": "A2"
+    },
+    {
+        "word": "halfway",
+        "meaning": "yarı yolda",
+        "level": "B1"
+    },
+    {
+        "word": "halted",
+        "meaning": "durdu",
+        "level": "B2"
+    },
+    {
+        "word": "happened",
+        "meaning": "oldu, meydana geldi",
+        "level": "A2"
+    },
+    {
+        "word": "hasn't",
+        "meaning": "yapmadı (has not)",
+        "level": "A1"
+    },
+    {
+        "word": "hastily",
+        "meaning": "aceleyle",
+        "level": "B2"
+    },
+    {
+        "word": "hateful",
+        "meaning": "nefret dolu",
+        "level": "B2"
+    },
+    {
+        "word": "haunted",
+        "meaning": "perili, aklından çıkmayan",
+        "level": "B2"
+    },
+    {
+        "word": "healthily",
+        "meaning": "sağlıklı bir şekilde",
+        "level": "B1"
+    },
+    {
+        "word": "heard",
+        "meaning": "duydu",
+        "level": "A2"
+    },
+    {
+        "word": "hears",
+        "meaning": "duyar",
+        "level": "A2"
+    },
+    {
+        "word": "heartbeat",
+        "meaning": "kalp atışı",
+        "level": "B1"
+    },
+    {
+        "word": "hedonism",
+        "meaning": "hazcılık",
+        "level": "C2"
+    },
+    {
+        "word": "held",
+        "meaning": "tuttu",
+        "level": "B1"
+    },
+    {
+        "word": "hellenic",
+        "meaning": "Yunan, Helenik",
+        "level": "C2"
+    },
+    {
+        "word": "helps",
+        "meaning": "yardım eder",
+        "level": "A1"
+    },
+    {
+        "word": "hewed",
+        "meaning": "yonttu, kesti",
+        "level": "C2"
+    },
+    {
+        "word": "hewing",
+        "meaning": "yontma",
+        "level": "C2"
+    },
+    {
+        "word": "hid",
+        "meaning": "sakladı",
+        "level": "B1"
+    },
+    {
+        "word": "hideous",
+        "meaning": "iğrenç, korkunç",
+        "level": "B2"
+    },
+    {
+        "word": "hoarsened",
+        "meaning": "kısılmış (ses)",
+        "level": "C2"
+    },
+    {
+        "word": "honey-coloured",
+        "meaning": "bal rengi",
+        "level": "B2"
+    },
+    {
+        "word": "honey-sweet",
+        "meaning": "bal gibi tatlı",
+        "level": "B2"
+    },
+    {
+        "word": "hoof",
+        "meaning": "toynak",
+        "level": "B2"
+    },
+    {
+        "word": "hopeless",
+        "meaning": "umutsuz",
+        "level": "B1"
+    },
+    {
+        "word": "horn",
+        "meaning": "boynuz, korna",
+        "level": "B1"
+    },
+    {
+        "word": "horses",
+        "meaning": "atlar",
+        "level": "A1"
+    },
+    {
+        "word": "hued",
+        "meaning": "renkli, tonlu",
+        "level": "C2"
+    },
+    {
+        "word": "hunters",
+        "meaning": "avcılar",
+        "level": "B1"
+    },
+    {
+        "word": "hyperborean",
+        "meaning": "kuzeyli, çok soğuk",
+        "level": "C2"
+    },
+    {
+        "word": "hypocritical",
+        "meaning": "ikiyüzlü",
+        "level": "B2"
+    },
+    {
+        "word": "i'll",
+        "meaning": "yapacağım",
+        "level": "A1"
+    },
+    {
+        "word": "i'm",
+        "meaning": "ben ...'ım",
+        "level": "A1"
+    },
+    {
+        "word": "idle",
+        "meaning": "aylak, boş",
+        "level": "B1"
+    },
+    {
+        "word": "ignorance",
+        "meaning": "cehalet",
+        "level": "B2"
+    },
+    {
+        "word": "imagines",
+        "meaning": "hayal eder",
+        "level": "B1"
+    },
+    {
+        "word": "immobile",
+        "meaning": "hareketsiz",
+        "level": "C1"
+    },
+    {
+        "word": "impaled",
+        "meaning": "saplanmış",
+        "level": "C1"
+    },
+    {
+        "word": "increased",
+        "meaning": "arttı",
+        "level": "B1"
+    },
+    {
+        "word": "indigestion",
+        "meaning": "hazımsızlık",
+        "level": "B2"
+    },
+    {
+        "word": "innumerable",
+        "meaning": "sayısız, hadsiz hesapsız",
+        "level": "C1"
+    },
+    {
+        "word": "instant",
+        "meaning": "an",
+        "level": "B1"
+    },
+    {
+        "word": "intoned",
+        "meaning": "ağır ağır söyledi",
+        "level": "C2"
+    },
+    {
+        "word": "intricate",
+        "meaning": "karmaşık, girift",
+        "level": "C1"
+    },
+    {
+        "word": "introduced",
+        "meaning": "tanıttı",
+        "level": "A2"
+    },
+    {
+        "word": "introducing",
+        "meaning": "tanıtma",
+        "level": "A2"
+    },
+    {
+        "word": "isn't",
+        "meaning": "değil",
+        "level": "A1"
+    },
+    {
+        "word": "it's",
+        "meaning": "bu ...",
+        "level": "A1"
+    },
+    {
+        "word": "items",
+        "meaning": "eşyalar, maddeler",
+        "level": "A2"
+    },
+    {
+        "word": "ivory",
+        "meaning": "fildişi",
+        "level": "C1"
+    },
+    {
+        "word": "jade-faced",
+        "meaning": "yeşim yüzlü (soluk)",
+        "level": "C2"
+    },
+    {
+        "word": "jejune",
+        "meaning": "yavan, basit",
+        "level": "C2"
+    },
+    {
+        "word": "jest",
+        "meaning": "şaka, alay",
+        "level": "C1"
+    },
+    {
+        "word": "jesuit",
+        "meaning": "Cizvit",
+        "level": "C2"
+    },
+    {
+        "word": "jowl",
+        "meaning": "gıdı, çene altı",
+        "level": "C2"
+    },
+    {
+        "word": "jug",
+        "meaning": "sürahi",
+        "level": "B1"
+    },
+    {
+        "word": "kept",
+        "meaning": "tuttu, sakladı",
+        "level": "A2"
+    },
+    {
+        "word": "killed",
+        "meaning": "öldürdü",
+        "level": "A2"
+    },
+    {
+        "word": "kinder",
+        "meaning": "daha nazik",
+        "level": "B1"
+    },
+    {
+        "word": "kinds",
+        "meaning": "türler",
+        "level": "A2"
+    },
+    {
+        "word": "kinswoman",
+        "meaning": "kadın akraba",
+        "level": "C2"
+    },
+    {
+        "word": "kite",
+        "meaning": "uçurtma",
+        "level": "A2"
+    },
+    {
+        "word": "kneel",
+        "meaning": "diz çökmek",
+        "level": "B1"
+    },
+    {
+        "word": "knees",
+        "meaning": "dizler",
+        "level": "B1"
+    },
+    {
+        "word": "knelt",
+        "meaning": "diz çöktü",
+        "level": "B1"
+    },
+    {
+        "word": "knew",
+        "meaning": "biliyordu",
+        "level": "A1"
+    },
+    {
+        "word": "knocking",
+        "meaning": "vurma, tıkırtı",
+        "level": "B1"
+    },
+    {
+        "word": "labors",
+        "meaning": "emekler, işler",
+        "level": "C1"
+    },
+    {
+        "word": "laburnum",
+        "meaning": "sarı salkım ağacı",
+        "level": "C2"
+    },
+    {
+        "word": "laid",
+        "meaning": "koydu, yatırdı",
+        "level": "B1"
+    },
+    {
+        "word": "lantern",
+        "meaning": "fener",
+        "level": "B1"
+    },
+    {
+        "word": "latch",
+        "meaning": "kapı mandalı",
+        "level": "B2"
+    },
+    {
+        "word": "lather",
+        "meaning": "köpük (sabun)",
+        "level": "C1"
+    },
+    {
+        "word": "lathered",
+        "meaning": "köpürttü",
+        "level": "C1"
+    },
+    {
+        "word": "laughed",
+        "meaning": "güldü",
+        "level": "A1"
+    },
+    {
+        "word": "laughing",
+        "meaning": "gülme",
+        "level": "A1"
+    },
+    {
+        "word": "laughs",
+        "meaning": "güler",
+        "level": "A1"
+    },
+    {
+        "word": "leads",
+        "meaning": "yol açar, yönetir",
+        "level": "B1"
+    },
+    {
+        "word": "leaned",
+        "meaning": "yaslandı, eğildi",
+        "level": "B2"
+    },
+    {
+        "word": "leaning",
+        "meaning": "yaslanma, eğilme",
+        "level": "B2"
+    },
+    {
+        "word": "leaped",
+        "meaning": "sıçradı",
+        "level": "B2"
+    },
+    {
+        "word": "learned",
+        "meaning": "öğrendi",
+        "level": "A1"
+    },
+    {
+        "word": "led",
+        "meaning": "yol gösterdi",
+        "level": "B1"
+    },
+    {
+        "word": "legs",
+        "meaning": "bacaklar",
+        "level": "A1"
+    },
+    {
+        "word": "lemme",
+        "meaning": "bırak (let me)",
+        "level": "A2"
+    },
+    {
+        "word": "lets",
+        "meaning": "izin verir",
+        "level": "B1"
+    },
+    {
+        "word": "lifting",
+        "meaning": "kaldırma",
+        "level": "B1"
+    },
+    {
+        "word": "lilac",
+        "meaning": "leylak",
+        "level": "C1"
+    },
+    {
+        "word": "lines",
+        "meaning": "satırlar, çizgiler",
+        "level": "A1"
+    },
+    {
+        "word": "linguistic",
+        "meaning": "dilbilimsel",
+        "level": "C1"
+    },
+    {
+        "word": "lips",
+        "meaning": "dudaklar",
+        "level": "B1"
+    },
+    {
+        "word": "lived",
+        "meaning": "yaşadı",
+        "level": "A1"
+    },
+    {
+        "word": "loaf",
+        "meaning": "somun (ekmek)",
+        "level": "C1"
+    },
+    {
+        "word": "locked",
+        "meaning": "kilitli",
+        "level": "A2"
+    },
+    {
+        "word": "longer",
+        "meaning": "daha uzun",
+        "level": "A2"
+    },
+    {
+        "word": "looked",
+        "meaning": "baktı, göründü",
+        "level": "A1"
+    },
+    {
+        "word": "looks",
+        "meaning": "bakar, görünür",
+        "level": "A1"
+    },
+    {
+        "word": "louder",
+        "meaning": "daha yüksek sesli",
+        "level": "A2"
+    },
+    {
+        "word": "loved",
+        "meaning": "sevdi",
+        "level": "A1"
+    },
+    {
+        "word": "lunged",
+        "meaning": "ileri atıldı",
+        "level": "C1"
+    },
+    {
+        "word": "lying",
+        "meaning": "uzanma, yalan söyleme",
+        "level": "B1"
+    },
+    {
+        "word": "ma'am",
+        "meaning": "hanımefendi",
+        "level": "A2"
+    },
+    {
+        "word": "made",
+        "meaning": "yaptı",
+        "level": "A1"
+    },
+    {
+        "word": "madmen",
+        "meaning": "deliler",
+        "level": "C1"
+    },
+    {
+        "word": "madness",
+        "meaning": "delilik",
+        "level": "B2"
+    },
+    {
+        "word": "magi",
+        "meaning": "müneccimler (bilge adamlar)",
+        "level": "C2"
+    },
+    {
+        "word": "mailboat",
+        "meaning": "posta gemisi",
+        "level": "C2"
+    },
+    {
+        "word": "makes",
+        "meaning": "yapar",
+        "level": "A1"
+    },
+    {
+        "word": "making",
+        "meaning": "yapma",
+        "level": "A1"
+    },
+    {
+        "word": "man's",
+        "meaning": "adamın",
+        "level": "A1"
+    },
+    {
+        "word": "marbles",
+        "meaning": "bilyeler",
+        "level": "B1"
+    },
+    {
+        "word": "men",
+        "meaning": "adamlar",
+        "level": "A1"
+    },
+    {
+        "word": "mentioned",
+        "meaning": "bahsetti",
+        "level": "B1"
+    },
+    {
+        "word": "messmates",
+        "meaning": "yemek arkadaşları (askeri/denizci)",
+        "level": "C2"
+    },
+    {
+        "word": "missus",
+        "meaning": "hanımefendi (halk ağzı)",
+        "level": "B2"
+    },
+    {
+        "word": "mockery",
+        "meaning": "alay",
+        "level": "C1"
+    },
+    {
+        "word": "momentary",
+        "meaning": "anlık",
+        "level": "B2"
+    },
+    {
+        "word": "monologue",
+        "meaning": "monolog",
+        "level": "B2"
+    },
+    {
+        "word": "monstrous",
+        "meaning": "canavarca, kocaman",
+        "level": "B2"
+    },
+    {
+        "word": "mountains",
+        "meaning": "dağlar",
+        "level": "A1"
+    },
+    {
+        "word": "mounted",
+        "meaning": "bindi, tırmandı",
+        "level": "B2"
+    },
+    {
+        "word": "moved",
+        "meaning": "hareket etti, taşındı",
+        "level": "A2"
+    },
+    {
+        "word": "muffled",
+        "meaning": "boğuk (ses)",
+        "level": "C1"
+    },
+    {
+        "word": "mulatto",
+        "meaning": "melez",
+        "level": "C2"
+    },
+    {
+        "word": "munched",
+        "meaning": "kıtır kıtır yedi",
+        "level": "C1"
+    },
+    {
+        "word": "murmured",
+        "meaning": "mırıldandı",
+        "level": "B2"
+    },
+    {
+        "word": "narrator's",
+        "meaning": "anlatıcının",
+        "level": "B2"
+    },
+    {
+        "word": "needed",
+        "meaning": "ihtiyacı vardı",
+        "level": "A1"
+    },
+    {
+        "word": "nerves",
+        "meaning": "sinirler",
+        "level": "B1"
+    },
+    {
+        "word": "nicely",
+        "meaning": "güzelce",
+        "level": "A2"
+    },
+    {
+        "word": "nights",
+        "meaning": "geceler",
+        "level": "A1"
+    },
+    {
+        "word": "notes",
+        "meaning": "notlar",
+        "level": "A1"
+    },
+    {
+        "word": "noticed",
+        "meaning": "fark etti",
+        "level": "B1"
+    },
+    {
+        "word": "noticing",
+        "meaning": "fark etme",
+        "level": "B1"
+    },
+    {
+        "word": "obliged",
+        "meaning": "mecbur, minnettar",
+        "level": "C1"
+    },
+    {
+        "word": "odour",
+        "meaning": "koku",
+        "level": "B2"
+    },
+    {
+        "word": "officers",
+        "meaning": "memurlar, subaylar",
+        "level": "B1"
+    },
+    {
+        "word": "older",
+        "meaning": "daha yaşlı",
+        "level": "A1"
+    },
+    {
+        "word": "omnipotence",
+        "meaning": "kadir-i mutlaklık (her şeye gücü yetme)",
+        "level": "C2"
+    },
+    {
+        "word": "one's",
+        "meaning": "kişinin",
+        "level": "B2"
+    },
+    {
+        "word": "opened",
+        "meaning": "açtı",
+        "level": "A1"
+    },
+    {
+        "word": "opinions",
+        "meaning": "fikirler",
+        "level": "B1"
+    },
+    {
+        "word": "opium-tainted",
+        "meaning": "afyon bulaşmış",
+        "level": "C2"
+    },
+    {
+        "word": "oughtn't",
+        "meaning": "yapmamalı (ought not)",
+        "level": "B1"
+    },
+    {
+        "word": "oval",
+        "meaning": "oval",
+        "level": "B1"
+    },
+    {
+        "word": "overclouding",
+        "meaning": "bulutlanma, kararma",
+        "level": "C2"
+    },
+    {
+        "word": "pages",
+        "meaning": "sayfalar",
+        "level": "A1"
+    },
+    {
+        "word": "paid",
+        "meaning": "ödedi",
+        "level": "A2"
+    },
+    {
+        "word": "painted",
+        "meaning": "boyalı, boyanmış",
+        "level": "A2"
+    },
+    {
+        "word": "painters",
+        "meaning": "ressamlar",
+        "level": "A2"
+    },
+    {
+        "word": "pallid",
+        "meaning": "solgun, benzi atmış",
+        "level": "C2"
+    },
+    {
+        "word": "parapet",
+        "meaning": "korkuluk, siper",
+        "level": "C2"
+    },
+    {
+        "word": "passed",
+        "meaning": "geçti",
+        "level": "A2"
+    },
+    {
+        "word": "patron",
+        "meaning": "hamilik eden kimse",
+        "level": "C1"
+    },
+    {
+        "word": "paused",
+        "meaning": "durakladı",
+        "level": "B1"
+    },
+    {
+        "word": "paw",
+        "meaning": "pati",
+        "level": "B1"
+    },
+    {
+        "word": "peeped",
+        "meaning": "gözetledi",
+        "level": "C1"
+    },
+    {
+        "word": "peered",
+        "meaning": "dikkatle baktı",
+        "level": "C1"
+    },
+    {
+        "word": "perfume",
+        "meaning": "parfüm",
+        "level": "A2"
+    },
+    {
+        "word": "persian",
+        "meaning": "Farsça, İranlı",
+        "level": "B1"
+    },
+    {
+        "word": "petticoats",
+        "meaning": "iç etekler",
+        "level": "C1"
+    },
+    {
+        "word": "philanthropy",
+        "meaning": "hayırseverlik",
+        "level": "C2"
+    },
+    {
+        "word": "philosopher",
+        "meaning": "filozof",
+        "level": "B2"
+    },
+    {
+        "word": "pink-flowering",
+        "meaning": "pembe çiçek açan",
+        "level": "C1"
+    },
+    {
+        "word": "placed",
+        "meaning": "yerleştirdi",
+        "level": "B1"
+    },
+    {
+        "word": "planks",
+        "meaning": "kalaslar",
+        "level": "C1"
+    },
+    {
+        "word": "planned",
+        "meaning": "planladı",
+        "level": "A2"
+    },
+    {
+        "word": "playing",
+        "meaning": "oynuyor",
+        "level": "A1"
+    },
+    {
+        "word": "pleasantly",
+        "meaning": "hoş bir şekilde",
+        "level": "B1"
+    },
+    {
+        "word": "plump",
+        "meaning": "tombul",
+        "level": "B2"
+    },
+    {
+        "word": "pointed",
+        "meaning": "işaret etti",
+        "level": "B1"
+    },
+    {
+        "word": "points",
+        "meaning": "puanlar, noktalar",
+        "level": "A1"
+    },
+    {
+        "word": "ponderous",
+        "meaning": "hantal, ağır",
+        "level": "C2"
+    },
+    {
+        "word": "possessions",
+        "meaning": "eşyalar, varlıklar",
+        "level": "B2"
+    },
+    {
+        "word": "powers",
+        "meaning": "güçler, yetkiler",
+        "level": "B1"
+    },
+    {
+        "word": "preacher's",
+        "meaning": "vaizin",
+        "level": "C1"
+    },
+    {
+        "word": "precautions",
+        "meaning": "önlemler",
+        "level": "B2"
+    },
+    {
+        "word": "precious",
+        "meaning": "değerli, kıymetli",
+        "level": "B1"
+    },
+    {
+        "word": "prelate",
+        "meaning": "yüksek rütbeli din adamı",
+        "level": "C2"
+    },
+    {
+        "word": "presently",
+        "meaning": "şu anda, birazdan",
+        "level": "B2"
+    },
+    {
+        "word": "pretended",
+        "meaning": "numara yaptı",
+        "level": "B1"
+    },
+    {
+        "word": "printed",
+        "meaning": "basılmış",
+        "level": "B1"
+    },
+    {
+        "word": "proceeded",
+        "meaning": "ilerledi, devam etti",
+        "level": "C1"
+    },
+    {
+        "word": "producing",
+        "meaning": "üretme",
+        "level": "B1"
+    },
+    {
+        "word": "propped",
+        "meaning": "destekledi, dayadı",
+        "level": "C1"
+    },
+    {
+        "word": "pulled",
+        "meaning": "çekti",
+        "level": "A2"
+    },
+    {
+        "word": "pulsation",
+        "meaning": "nabız atışı",
+        "level": "C2"
+    },
+    {
+        "word": "pursued",
+        "meaning": "takip etti, sürdürdü",
+        "level": "C1"
+    },
+    {
+        "word": "puzzled",
+        "meaning": "şaşkın, kafası karışık",
+        "level": "B1"
+    },
+    {
+        "word": "qualities",
+        "meaning": "nitelikler",
+        "level": "B2"
+    },
+    {
+        "word": "quid",
+        "meaning": "sterlin (argo)",
+        "level": "C1"
+    },
+    {
+        "word": "ran",
+        "meaning": "koştu",
+        "level": "A1"
+    },
+    {
+        "word": "rapt",
+        "meaning": "kendinden geçmiş, dalmış",
+        "level": "C2"
+    },
+    {
+        "word": "rasping",
+        "meaning": "tırmalayıcı (ses)",
+        "level": "C2"
+    },
+    {
+        "word": "razor",
+        "meaning": "ustura, tıraş bıçağı",
+        "level": "B1"
+    },
+    {
+        "word": "reached",
+        "meaning": "ulaştı, uzandı",
+        "level": "A2"
+    },
+    {
+        "word": "reactions",
+        "meaning": "tepkiler",
+        "level": "B1"
+    },
+    {
+        "word": "realized",
+        "meaning": "fark etti",
+        "level": "B1"
+    },
+    {
+        "word": "reasons",
+        "meaning": "sebepler",
+        "level": "A2"
+    },
+    {
+        "word": "recalled",
+        "meaning": "hatırladı, anımsadı",
+        "level": "B2"
+    },
+    {
+        "word": "reckon",
+        "meaning": "sanmak, hesaplamak",
+        "level": "B1"
+    },
+    {
+        "word": "refused",
+        "meaning": "reddetti",
+        "level": "B1"
+    },
+    {
+        "word": "rejection",
+        "meaning": "reddetme",
+        "level": "B2"
+    },
+    {
+        "word": "reluctance",
+        "meaning": "isteksizlik",
+        "level": "C1"
+    },
+    {
+        "word": "remained",
+        "meaning": "kaldı",
+        "level": "B1"
+    },
+    {
+        "word": "remembered",
+        "meaning": "hatırladı",
+        "level": "A2"
+    },
+    {
+        "word": "removed",
+        "meaning": "kaldırdı, çıkardı",
+        "level": "B1"
+    },
+    {
+        "word": "replaced",
+        "meaning": "yerine koydu, değiştirdi",
+        "level": "B1"
+    },
+    {
+        "word": "replied",
+        "meaning": "cevap verdi",
+        "level": "A2"
+    },
+    {
+        "word": "reposed",
+        "meaning": "yatmak, dinlenmek",
+        "level": "C2"
+    },
+    {
+        "word": "resemblance",
+        "meaning": "benzerlik",
+        "level": "C1"
+    },
+    {
+        "word": "resting",
+        "meaning": "dinlenme",
+        "level": "A2"
+    },
+    {
+        "word": "resumed",
+        "meaning": "kaldığı yerden devam etti",
+        "level": "C1"
+    },
+    {
+        "word": "returned",
+        "meaning": "döndü",
+        "level": "A2"
+    },
+    {
+        "word": "returns",
+        "meaning": "döner",
+        "level": "A2"
+    },
+    {
+        "word": "revealed",
+        "meaning": "açığa çıkardı",
+        "level": "B1"
+    },
+    {
+        "word": "revelation",
+        "meaning": "vahiy, ifşa",
+        "level": "C1"
+    },
+    {
+        "word": "revolutionized",
+        "meaning": "devrim yarattı",
+        "level": "C1"
+    },
+    {
+        "word": "ringing",
+        "meaning": "çınlama, çalma",
+        "level": "B1"
+    },
+    {
+        "word": "roar",
+        "meaning": "kükreme",
+        "level": "B1"
+    },
+    {
+        "word": "roars",
+        "meaning": "kükrer",
+        "level": "B1"
+    },
+    {
+        "word": "ropes",
+        "meaning": "halatlar",
+        "level": "B1"
+    },
+    {
+        "word": "rose-leaves",
+        "meaning": "gül yaprakları",
+        "level": "B2"
+    },
+    {
+        "word": "roses",
+        "meaning": "güller",
+        "level": "A1"
+    },
+    {
+        "word": "rugged",
+        "meaning": "sağlam, engebeli",
+        "level": "C1"
+    },
+    {
+        "word": "runs",
+        "meaning": "koşar",
+        "level": "A1"
+    },
+    {
+        "word": "saddle-bags",
+        "meaning": "heybe",
+        "level": "B2"
+    },
+    {
+        "word": "sagacity",
+        "meaning": "keskin zeka, feraset",
+        "level": "C2"
+    },
+    {
+        "word": "said",
+        "meaning": "dedi",
+        "level": "A1"
+    },
+    {
+        "word": "sat",
+        "meaning": "oturdu",
+        "level": "A1"
+    },
+    {
+        "word": "saved",
+        "meaning": "kurtardı, kaydetti",
+        "level": "A2"
+    },
+    {
+        "word": "scantlings",
+        "meaning": "keresteler, kirişler",
+        "level": "C2"
+    },
+    {
+        "word": "scarcely",
+        "meaning": "neredeyse hiç, güçbela",
+        "level": "C1"
+    },
+    {
+        "word": "scarlet",
+        "meaning": "kızıl",
+        "level": "C1"
+    },
+    {
+        "word": "schoolroom",
+        "meaning": "derslik",
+        "level": "A2"
+    },
+    {
+        "word": "scold",
+        "meaning": "azarlamak",
+        "level": "B2"
+    },
+    {
+        "word": "screamed",
+        "meaning": "çığlık attı",
+        "level": "B1"
+    },
+    {
+        "word": "scrotumtightening",
+        "meaning": "torba sıkıştıran (mecazi/deniz)",
+        "level": "C2"
+    },
+    {
+        "word": "searching",
+        "meaning": "arama, araştıran",
+        "level": "B1"
+    },
+    {
+        "word": "seeing",
+        "meaning": "görme",
+        "level": "A1"
+    },
+    {
+        "word": "seemed",
+        "meaning": "gibi göründü",
+        "level": "B1"
+    },
+    {
+        "word": "seen",
+        "meaning": "görülmüş",
+        "level": "A2"
+    },
+    {
+        "word": "sees",
+        "meaning": "görür",
+        "level": "A1"
+    },
+    {
+        "word": "seized",
+        "meaning": "ele geçirdi, yakaladı",
+        "level": "B2"
+    },
+    {
+        "word": "sensation",
+        "meaning": "his, duygu",
+        "level": "B2"
+    },
+    {
+        "word": "senses",
+        "meaning": "duyular",
+        "level": "B1"
+    },
+    {
+        "word": "shadowed",
+        "meaning": "gölgeli, izlenen",
+        "level": "B2"
+    },
+    {
+        "word": "shadows",
+        "meaning": "gölgeler",
+        "level": "B1"
+    },
+    {
+        "word": "shaking",
+        "meaning": "titreme, sallama",
+        "level": "B1"
+    },
+    {
+        "word": "sharpened",
+        "meaning": "keskinleşmiş",
+        "level": "B2"
+    },
+    {
+        "word": "shave",
+        "meaning": "tıraş olmak",
+        "level": "A2"
+    },
+    {
+        "word": "shaven",
+        "meaning": "tıraşlı",
+        "level": "B1"
+    },
+    {
+        "word": "she'd",
+        "meaning": "o yapardı/yapmıştı (she would/had)",
+        "level": "B1"
+    },
+    {
+        "word": "shone",
+        "meaning": "parladı",
+        "level": "B1"
+    },
+    {
+        "word": "shook",
+        "meaning": "salladı, titredi",
+        "level": "B1"
+    },
+    {
+        "word": "shops",
+        "meaning": "dükkanlar",
+        "level": "A1"
+    },
+    {
+        "word": "showed",
+        "meaning": "gösterdi",
+        "level": "A1"
+    },
+    {
+        "word": "showing",
+        "meaning": "gösterme",
+        "level": "A1"
+    },
+    {
+        "word": "shriek",
+        "meaning": "çığlık",
+        "level": "B2"
+    },
+    {
+        "word": "shrieked",
+        "meaning": "feryat etti",
+        "level": "B2"
+    },
+    {
+        "word": "shrill",
+        "meaning": "acı, tiz (ses)",
+        "level": "C1"
+    },
+    {
+        "word": "shucks",
+        "meaning": "hadi canım (ünlem)",
+        "level": "C2"
+    },
+    {
+        "word": "sidewalk",
+        "meaning": "kaldırım",
+        "level": "A2"
+    },
+    {
+        "word": "sideways",
+        "meaning": "yanlamasına",
+        "level": "B2"
+    },
+    {
+        "word": "sin",
+        "meaning": "günah",
+        "level": "B1"
+    },
+    {
+        "word": "sinister",
+        "meaning": "uğursuz, kötü",
+        "level": "C1"
+    },
+    {
+        "word": "sins",
+        "meaning": "günahlar",
+        "level": "B1"
+    },
+    {
+        "word": "sisters",
+        "meaning": "kız kardeşler",
+        "level": "A1"
+    },
+    {
+        "word": "skipped",
+        "meaning": "atladı, sekti",
+        "level": "B1"
+    },
+    {
+        "word": "skipping",
+        "meaning": "sekme, atlama",
+        "level": "A2"
+    },
+    {
+        "word": "sleeping",
+        "meaning": "uyuyor",
+        "level": "A1"
+    },
+    {
+        "word": "sleeps",
+        "meaning": "uyur",
+        "level": "A1"
+    },
+    {
+        "word": "sleepy",
+        "meaning": "uykulu",
+        "level": "A1"
+    },
+    {
+        "word": "slept",
+        "meaning": "uyudu",
+        "level": "A2"
+    },
+    {
+        "word": "slices",
+        "meaning": "dilimler",
+        "level": "B1"
+    },
+    {
+        "word": "slipped",
+        "meaning": "kaydı",
+        "level": "B1"
+    },
+    {
+        "word": "slowed",
+        "meaning": "yavaşladı",
+        "level": "A2"
+    },
+    {
+        "word": "smartly",
+        "meaning": "şık bir şekilde, akıllıca",
+        "level": "B2"
+    },
+    {
+        "word": "smiled",
+        "meaning": "gülümsedi",
+        "level": "A2"
+    },
+    {
+        "word": "smiles",
+        "meaning": "gülümser",
+        "level": "A1"
+    },
+    {
+        "word": "smiling",
+        "meaning": "gülümseyen",
+        "level": "A1"
+    },
+    {
+        "word": "snotgreen",
+        "meaning": "sümük yeşili",
+        "level": "C2"
+    },
+    {
+        "word": "sofa",
+        "meaning": "kanepe",
+        "level": "A2"
+    },
+    {
+        "word": "sold",
+        "meaning": "sattı",
+        "level": "A2"
+    },
+    {
+        "word": "solemnly",
+        "meaning": "ciddiyetle",
+        "level": "B2"
+    },
+    {
+        "word": "sounded",
+        "meaning": "ses çıkardı, gibi geldi",
+        "level": "B1"
+    },
+    {
+        "word": "sounds",
+        "meaning": "sesler",
+        "level": "A1"
+    },
+    {
+        "word": "speaking",
+        "meaning": "konuşma",
+        "level": "A1"
+    },
+    {
+        "word": "spoken",
+        "meaning": "konuşulan",
+        "level": "B1"
+    },
+    {
+        "word": "sprang",
+        "meaning": "fırladı, sıçradı",
+        "level": "C1"
+    },
+    {
+        "word": "stain",
+        "meaning": "leke",
+        "level": "B1"
+    },
+    {
+        "word": "staircase",
+        "meaning": "merdiven boşluğu",
+        "level": "B2"
+    },
+    {
+        "word": "stairhead",
+        "meaning": "merdiven başı",
+        "level": "C2"
+    },
+    {
+        "word": "stairs",
+        "meaning": "merdivenler",
+        "level": "A2"
+    },
+    {
+        "word": "stared",
+        "meaning": "dik dik baktı",
+        "level": "B1"
+    },
+    {
+        "word": "started",
+        "meaning": "başladı",
+        "level": "A1"
+    },
+    {
+        "word": "stately",
+        "meaning": "görkemli, asil",
+        "level": "C1"
+    },
+    {
+        "word": "stayed",
+        "meaning": "kaldı",
+        "level": "A2"
+    },
+    {
+        "word": "steamboat",
+        "meaning": "buharlı gemi",
+        "level": "B1"
+    },
+    {
+        "word": "stepped",
+        "meaning": "adım attı",
+        "level": "B1"
+    },
+    {
+        "word": "steps",
+        "meaning": "adımlar, basamaklar",
+        "level": "A2"
+    },
+    {
+        "word": "sternly",
+        "meaning": "sertçe",
+        "level": "C1"
+    },
+    {
+        "word": "stifled",
+        "meaning": "bastırılmış, boğulmuş",
+        "level": "C1"
+    },
+    {
+        "word": "stirred",
+        "meaning": "kıpırdadı, karıştırdı",
+        "level": "B2"
+    },
+    {
+        "word": "stocks",
+        "meaning": "stoklar, boyunluk (eski)",
+        "level": "C1"
+    },
+    {
+        "word": "stood",
+        "meaning": "ayakta durdu",
+        "level": "A2"
+    },
+    {
+        "word": "stopped",
+        "meaning": "durdu",
+        "level": "A1"
+    },
+    {
+        "word": "stream-of-consciousness",
+        "meaning": "bilinç akışı",
+        "level": "C2"
+    },
+    {
+        "word": "stretched",
+        "meaning": "gerindi, uzandı",
+        "level": "B1"
+    },
+    {
+        "word": "stump",
+        "meaning": "kütük, çıkmaz",
+        "level": "C1"
+    },
+    {
+        "word": "sufficient",
+        "meaning": "yeterli",
+        "level": "B2"
+    },
+    {
+        "word": "suggested",
+        "meaning": "önerdi",
+        "level": "B1"
+    },
+    {
+        "word": "suits",
+        "meaning": "takım elbiseler, uyar",
+        "level": "B1"
+    },
+    {
+        "word": "sullen",
+        "meaning": "suratsız, asık suratlı",
+        "level": "C1"
+    },
+    {
+        "word": "sunlight",
+        "meaning": "güneş ışığı",
+        "level": "A2"
+    },
+    {
+        "word": "sunny",
+        "meaning": "güneşli",
+        "level": "A1"
+    },
+    {
+        "word": "suspected",
+        "meaning": "şüphelendi",
+        "level": "B2"
+    },
+    {
+        "word": "sustained",
+        "meaning": "sürdürülen, desteklenen",
+        "level": "C1"
+    },
+    {
+        "word": "sweated",
+        "meaning": "terledi",
+        "level": "B1"
+    },
+    {
+        "word": "sweet",
+        "meaning": "tatlı",
+        "level": "A1"
+    },
+    {
+        "word": "swept",
+        "meaning": "süpürdü",
+        "level": "B1"
+    },
+    {
+        "word": "swiftness",
+        "meaning": "sürat, çabukluk",
+        "level": "C1"
+    },
+    {
+        "word": "swim",
+        "meaning": "yüzmek",
+        "level": "A1"
+    },
+    {
+        "word": "swimming",
+        "meaning": "yüzme",
+        "level": "A1"
+    },
+    {
+        "word": "swung",
+        "meaning": "salladı",
+        "level": "B2"
+    },
+    {
+        "word": "take",
+        "meaning": "almak",
+        "level": "A1"
+    },
+    {
+        "word": "takes",
+        "meaning": "alır",
+        "level": "A1"
+    },
+    {
+        "word": "talk",
+        "meaning": "konuşmak",
+        "level": "A1"
+    },
+    {
+        "word": "talked",
+        "meaning": "konuştu",
+        "level": "A1"
+    },
+    {
+        "word": "talks",
+        "meaning": "konuşur",
+        "level": "A1"
+    },
+    {
+        "word": "tea",
+        "meaning": "çay",
+        "level": "A1"
+    },
+    {
+        "word": "teach",
+        "meaning": "öğretmek",
+        "level": "A1"
+    },
+    {
+        "word": "tear",
+        "meaning": "gözyaşı, yırtmak",
+        "level": "B1"
+    },
+    {
+        "word": "technique",
+        "meaning": "teknik",
+        "level": "B1"
+    },
+    {
+        "word": "teeth",
+        "meaning": "dişler",
+        "level": "A2"
+    },
+    {
+        "word": "tell",
+        "meaning": "anlatmak, söylemek",
+        "level": "A1"
+    },
+    {
+        "word": "ten",
+        "meaning": "on",
+        "level": "A1"
+    },
+    {
+        "word": "terrible",
+        "meaning": "korkunç",
+        "level": "A2"
+    },
+    {
+        "word": "terror",
+        "meaning": "dehşet",
+        "level": "B1"
+    },
+    {
+        "word": "terrors",
+        "meaning": "dehşetler",
+        "level": "B1"
+    },
+    {
+        "word": "thalatta",
+        "meaning": "deniz (Yunanca)",
+        "level": "C2"
+    },
+    {
+        "word": "than",
+        "meaning": "...-den (karşılaştırma)",
+        "level": "A1"
+    },
+    {
+        "word": "thank",
+        "meaning": "teşekkür etmek",
+        "level": "A1"
+    },
+    {
+        "word": "thanks",
+        "meaning": "teşekkürler",
+        "level": "A1"
+    },
+    {
+        "word": "that's",
+        "meaning": "bu ...",
+        "level": "A1"
+    },
+    {
+        "word": "theirs",
+        "meaning": "onlarınki",
+        "level": "B1"
+    },
+    {
+        "word": "themselves",
+        "meaning": "kendileri",
+        "level": "B1"
+    },
+    {
+        "word": "there",
+        "meaning": "orada, var",
+        "level": "A1"
+    },
+    {
+        "word": "thick",
+        "meaning": "kalın",
+        "level": "A2"
+    },
+    {
+        "word": "thin",
+        "meaning": "ince",
+        "level": "A2"
+    },
+    {
+        "word": "thing",
+        "meaning": "şey",
+        "level": "A1"
+    },
+    {
+        "word": "things",
+        "meaning": "şeyler",
+        "level": "A1"
+    },
+    {
+        "word": "think",
+        "meaning": "düşünmek",
+        "level": "A1"
+    },
+    {
+        "word": "thinks",
+        "meaning": "düşünür",
+        "level": "A1"
+    },
+    {
+        "word": "thirty",
+        "meaning": "otuz",
+        "level": "A1"
+    },
+    {
+        "word": "thorn",
+        "meaning": "diken",
+        "level": "B2"
+    },
+    {
+        "word": "thoughts",
+        "meaning": "düşünceler",
+        "level": "B1"
+    },
+    {
+        "word": "three",
+        "meaning": "üç",
+        "level": "A1"
+    },
+    {
+        "word": "threw",
+        "meaning": "fırlattı",
+        "level": "B1"
+    },
+    {
+        "word": "thrice",
+        "meaning": "üç kez",
+        "level": "C1"
+    },
+    {
+        "word": "through",
+        "meaning": "içinden, vasıtasıyla",
+        "level": "A2"
+    },
+    {
+        "word": "thrust",
+        "meaning": "itti, soktu",
+        "level": "C1"
+    },
+    {
+        "word": "thus",
+        "meaning": "böylece",
+        "level": "B2"
+    },
+    {
+        "word": "time",
+        "meaning": "zaman",
+        "level": "A1"
+    },
+    {
+        "word": "tin",
+        "meaning": "teneke",
+        "level": "B1"
+    },
+    {
+        "word": "tired",
+        "meaning": "yorgun",
+        "level": "A1"
+    },
+    {
+        "word": "together",
+        "meaning": "birlikte",
+        "level": "A1"
+    },
+    {
+        "word": "told",
+        "meaning": "anlattı, söyledi",
+        "level": "A2"
+    },
+    {
+        "word": "tolerable",
+        "meaning": "katlanılabilir",
+        "level": "B2"
+    },
+    {
+        "word": "tomorrow",
+        "meaning": "yarın",
+        "level": "A1"
+    },
+    {
+        "word": "tone",
+        "meaning": "ton",
+        "level": "B1"
+    },
+    {
+        "word": "too",
+        "meaning": "çok, de/da",
+        "level": "A1"
+    },
+    {
+        "word": "took",
+        "meaning": "aldı",
+        "level": "A1"
+    },
+    {
+        "word": "top",
+        "meaning": "üst, tepe",
+        "level": "A1"
+    },
+    {
+        "word": "tossing",
+        "meaning": "fırlatma, savurma",
+        "level": "B2"
+    },
+    {
+        "word": "towards",
+        "meaning": "doğru, yönünde",
+        "level": "A2"
+    },
+    {
+        "word": "tower",
+        "meaning": "kule",
+        "level": "A2"
+    },
+    {
+        "word": "traded",
+        "meaning": "takas etti",
+        "level": "B2"
+    },
+    {
+        "word": "tragic",
+        "meaning": "trajik",
+        "level": "B2"
+    },
+    {
+        "word": "transformation",
+        "meaning": "dönüşüm",
+        "level": "B2"
+    },
+    {
+        "word": "trap",
+        "meaning": "tuzak",
+        "level": "B1"
+    },
+    {
+        "word": "treasure",
+        "meaning": "hazine",
+        "level": "B1"
+    },
+    {
+        "word": "treasures",
+        "meaning": "hazineler",
+        "level": "B1"
+    },
+    {
+        "word": "trees",
+        "meaning": "ağaçlar",
+        "level": "A1"
+    },
+    {
+        "word": "tremulous",
+        "meaning": "titrek, ürkek",
+        "level": "C2"
+    },
+    {
+        "word": "trick",
+        "meaning": "numara, hile",
+        "level": "B1"
+    },
+    {
+        "word": "trifles",
+        "meaning": "ıvır zıvır",
+        "level": "C2"
+    },
+    {
+        "word": "tripping",
+        "meaning": "tökezleme, seke seke yürüme",
+        "level": "B2"
+    },
+    {
+        "word": "triumph",
+        "meaning": "zafer",
+        "level": "C1"
+    },
+    {
+        "word": "trouble",
+        "meaning": "sorun, dert",
+        "level": "A2"
+    },
+    {
+        "word": "true",
+        "meaning": "doğru",
+        "level": "A1"
+    },
+    {
+        "word": "truly",
+        "meaning": "gerçekten",
+        "level": "B1"
+    },
+    {
+        "word": "trust",
+        "meaning": "güvenmek",
+        "level": "A2"
+    },
+    {
+        "word": "truth",
+        "meaning": "gerçek",
+        "level": "B1"
+    },
+    {
+        "word": "try",
+        "meaning": "denemek",
+        "level": "A1"
+    },
+    {
+        "word": "turn",
+        "meaning": "dönmek, sıra",
+        "level": "A1"
+    },
+    {
+        "word": "turned",
+        "meaning": "döndü",
+        "level": "A2"
+    },
+    {
+        "word": "tussore-silk",
+        "meaning": "yabani ipek",
+        "level": "C2"
+    },
+    {
+        "word": "twelve",
+        "meaning": "on iki",
+        "level": "A1"
+    },
+    {
+        "word": "twenty",
+        "meaning": "yirmi",
+        "level": "A1"
+    },
+    {
+        "word": "twenty-one",
+        "meaning": "yirmi bir",
+        "level": "A1"
+    },
+    {
+        "word": "twisted",
+        "meaning": "bükülmüş, çarpık",
+        "level": "B2"
+    },
+    {
+        "word": "two",
+        "meaning": "iki",
+        "level": "A1"
+    },
+    {
+        "word": "understood",
+        "meaning": "anladı",
+        "level": "A2"
+    },
+    {
+        "word": "undisturbed",
+        "meaning": "rahatsız edilmemiş",
+        "level": "C1"
+    },
+    {
+        "word": "ungirdled",
+        "meaning": "kushaksız, kemersiz",
+        "level": "C2"
+    },
+    {
+        "word": "unlock",
+        "meaning": "kilit açmak",
+        "level": "B1"
+    },
+    {
+        "word": "unprecedented",
+        "meaning": "eşi benzeri görülmemiş",
+        "level": "C2"
+    },
+    {
+        "word": "untonsured",
+        "meaning": "rahip tıraşı olmamış",
+        "level": "C2"
+    },
+    {
+        "word": "untouched",
+        "meaning": "dokunulmamış",
+        "level": "B2"
+    },
+    {
+        "word": "uses",
+        "meaning": "kullanır",
+        "level": "A1"
+    },
+    {
+        "word": "vain",
+        "meaning": "kibirli, beyhude",
+        "level": "B2"
+    },
+    {
+        "word": "vex",
+        "meaning": "kızdırmak, üzmek",
+        "level": "C2"
+    },
+    {
+        "word": "vice",
+        "meaning": "ahlaksızlık, kusur",
+        "level": "C2"
+    },
+    {
+        "word": "victims",
+        "meaning": "kurbanlar",
+        "level": "B2"
+    },
+    {
+        "word": "vigorously",
+        "meaning": "güçlü bir şekilde",
+        "level": "C1"
+    },
+    {
+        "word": "villains",
+        "meaning": "kötü adamlar, hainler",
+        "level": "B2"
+    },
+    {
+        "word": "visitors",
+        "meaning": "ziyaretçiler",
+        "level": "A2"
+    },
+    {
+        "word": "waited",
+        "meaning": "bekledi",
+        "level": "A1"
+    },
+    {
+        "word": "wakes",
+        "meaning": "uyanır",
+        "level": "A2"
+    },
+    {
+        "word": "walked",
+        "meaning": "yürüdü",
+        "level": "A1"
+    },
+    {
+        "word": "walks",
+        "meaning": "yürür",
+        "level": "A1"
+    },
+    {
+        "word": "wanted",
+        "meaning": "istedi",
+        "level": "A1"
+    },
+    {
+        "word": "wary",
+        "meaning": "temkinli",
+        "level": "C1"
+    },
+    {
+        "word": "wasn't",
+        "meaning": "değildi",
+        "level": "A1"
+    },
+    {
+        "word": "watched",
+        "meaning": "izledi",
+        "level": "A1"
+    },
+    {
+        "word": "watcher",
+        "meaning": "gözcü, izleyici",
+        "level": "B2"
+    },
+    {
+        "word": "watching",
+        "meaning": "izliyor",
+        "level": "A1"
+    },
+    {
+        "word": "wearily",
+        "meaning": "yorgunlukla",
+        "level": "B2"
+    },
+    {
+        "word": "weeks",
+        "meaning": "haftalar",
+        "level": "A1"
+    },
+    {
+        "word": "weird",
+        "meaning": "tuhaf",
+        "level": "B1"
+    },
+    {
+        "word": "welled",
+        "meaning": "fışkırdı, doldu",
+        "level": "C2"
+    },
+    {
+        "word": "went",
+        "meaning": "gitti",
+        "level": "A1"
+    },
+    {
+        "word": "wheedling",
+        "meaning": "tatlı dille kandırma",
+        "level": "C2"
+    },
+    {
+        "word": "whistle",
+        "meaning": "ıslık, düdük",
+        "level": "B1"
+    },
+    {
+        "word": "whistles",
+        "meaning": "ıslıklar",
+        "level": "B1"
+    },
+    {
+        "word": "whitewash",
+        "meaning": "badana",
+        "level": "C1"
+    },
+    {
+        "word": "whitewashed",
+        "meaning": "badanalı",
+        "level": "C1"
+    },
+    {
+        "word": "whitewashing",
+        "meaning": "badana yapma",
+        "level": "C1"
+    },
+    {
+        "word": "who's",
+        "meaning": "kim (who is)",
+        "level": "A1"
+    },
+    {
+        "word": "whorls",
+        "meaning": "helezonlar, kıvrımlar",
+        "level": "C2"
+    },
+    {
+        "word": "winding",
+        "meaning": "kıvrımlı, dolambaçlı",
+        "level": "B2"
+    },
+    {
+        "word": "wisely",
+        "meaning": "bilgece",
+        "level": "B2"
+    },
+    {
+        "word": "wisest",
+        "meaning": "en bilge",
+        "level": "B2"
+    },
+    {
+        "word": "wished",
+        "meaning": "diledi",
+        "level": "A2"
+    },
+    {
+        "word": "woman's",
+        "meaning": "kadının",
+        "level": "A1"
+    },
+    {
+        "word": "women",
+        "meaning": "kadınlar",
+        "level": "A1"
+    },
+    {
+        "word": "won't",
+        "meaning": "yapmayacak",
+        "level": "A1"
+    },
+    {
+        "word": "wordplay",
+        "meaning": "kelime oyunu",
+        "level": "C1"
+    },
+    {
+        "word": "wore",
+        "meaning": "giydi",
+        "level": "A2"
+    },
+    {
+        "word": "worked",
+        "meaning": "çalıştı",
+        "level": "A1"
+    },
+    {
+        "word": "works",
+        "meaning": "çalışır, eserler",
+        "level": "A1"
+    },
+    {
+        "word": "world's",
+        "meaning": "dünyanın",
+        "level": "A1"
+    },
+    {
+        "word": "wouldn't",
+        "meaning": "yapmazdı",
+        "level": "B1"
+    },
+    {
+        "word": "wreaths",
+        "meaning": "çelenkler, halkalar",
+        "level": "C2"
+    },
+    {
+        "word": "wronged",
+        "meaning": "haksızlığa uğramış",
+        "level": "C1"
+    },
+    {
+        "word": "yards",
+        "meaning": "yardalar",
+        "level": "B1"
+    },
+    {
+        "word": "years",
+        "meaning": "yıllar",
+        "level": "A1"
+    },
+    {
+        "word": "yell",
+        "meaning": "bağırmak",
+        "level": "B1"
+    },
+    {
+        "word": "you'd",
+        "meaning": "sen yapardın",
+        "level": "B1"
+    },
+    {
+        "word": "you'll",
+        "meaning": "sen yapacaksın",
+        "level": "A1"
+    },
+    {
+        "word": "you're",
+        "meaning": "sen ...'sın",
+        "level": "A1"
+    },
+    {
+        "word": "younger",
+        "meaning": "daha genç",
+        "level": "A1"
     }
 ];

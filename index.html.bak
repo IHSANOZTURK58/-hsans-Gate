@@ -83,7 +83,7 @@
                     <div class="landing-logo">
                         <span class="logo-icon-lg">🔥</span>
                         <h1>İhsans<span class="highlight">Gate</span></h1>
-                        <p class="subtitle">Profesyonel İngilizce Gelişim Platformu</p>
+                        <p class="subtitle">Kelime avına hazır mısın?</p>
                     </div>
 
                     <div class="landing-form">
@@ -1109,27 +1109,6 @@
     <script src="js/grammar_explanations.js?v=TIMESTAMP_HERE"></script>
     <script src="js/books.js"></script>
     <script src="js/app.js?v=TIMESTAMP_HERE"></script>
-
-    <!-- DICTIONARY TOAST (Re-injected) -->
-    <div id="dict-toast" class="dict-toast">
-        <div class="dict-content">
-            <div class="dict-header">
-                <span id="dict-word" class="dict-word">Word</span>
-                <span id="dict-level" class="dict-level">A1</span>
-            </div>
-            <div id="dict-meaning" class="dict-meaning">Meaning goes here</div>
-        </div>
-        <div class="dict-actions">
-            <button id="dict-star-btn" class="btn-dict-star" onclick="app.toggleDictToastFavorite()"
-                title="Favorilere Ekle">
-                <svg viewBox="0 0 24 24">
-                    <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                    </polygon>
-                </svg>
-            </button>
-        </div>
-    </div>
 </body>
 
 </html>
