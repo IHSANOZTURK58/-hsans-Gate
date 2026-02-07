@@ -136,7 +136,8 @@
                             </div>
 
                             <!-- Trophies (Right) -->
-                            <button class="btn-icon trophy-btn" onclick="app.openGlobalLeaderboard()" title="Global Sıralama">
+                            <button class="btn-icon trophy-btn" onclick="app.openGlobalLeaderboard()"
+                                title="Global Sıralama">
                                 <span class="trophy-icon">🏆</span>
                                 <span id="header-total-score">0</span>
                             </button>
@@ -275,7 +276,8 @@
                         <div class="task-actions">
                             <button id="btn-check-answer" class="btn-action check"
                                 onclick="app.checkWritingInputAnswer()">KONTROL ET</button>
-                            <!-- Removed Buttons -->
+                            <button id="btn-next-question" class="btn-action next hidden"
+                                onclick="app.nextWritingQuestion()">DEVAM ET ➡</button>
                         </div>
                     </div>
 
@@ -704,8 +706,12 @@
                 </div>
 
                 <div style="margin-top:2rem; display:flex; justify-content:center; gap:1rem;">
-                    <button class="btn btn-secondary" onclick="app.clearWritingSlots()">Temizle 🧹</button>
-                    <button class="btn btn-primary" onclick="app.checkWritingAnswer()">Kontrol Et ✅</button>
+                    <button id="btn-scramble-clear" class="btn btn-secondary" onclick="app.clearWritingSlots()">TEMİZLE
+                        🧹</button>
+                    <button id="btn-scramble-check" class="btn btn-primary" onclick="app.checkWritingAnswer()">KONTROL
+                        ET ✅</button>
+                    <button id="btn-scramble-next" class="btn btn-primary hidden"
+                        onclick="app.nextScrambleQuestion()">DEVAM ET ➡</button>
                 </div>
             </div>
 

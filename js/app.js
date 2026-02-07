@@ -3198,6 +3198,352 @@ const app = {
 
     completeLogin(name) {
         this.showDashboard();
+    },
+
+    // ======================================
+    // WRITING MODE (FIX)
+    // ======================================
+
+    // 1. INPUT MODE (Split Screen)
+    openWritingModes() {
+        this.state.currentView = 'writing-modes';
+        this.render();
+        this.renderLeaderboard();
+    },
+
+    startWritingInputMode() {
+        this.state.currentView = 'writing-input';
+        this.render();
+        // Show start overlay
+        const overlay = document.getElementById('writing-input-start-overlay');
+        if (overlay) overlay.classList.remove('hidden');
+    },
+
+    beginProWritingSession() {
+        const overlay = document.getElementById('writing-input-start-overlay');
+        if (overlay) overlay.classList.add('hidden');
+
+        this.nextWritingQuestion();
+    },
+
+    nextWritingQuestion() {
+        // RESET BUTTONS
+        const checkBtn = document.getElementById('btn-check-answer');
+        const nextBtn = document.getElementById('btn-next-question');
+        if (checkBtn) checkBtn.classList.remove('hidden');
+        if (nextBtn) nextBtn.classList.add('hidden');
+
+        // Pick a random SENTENCE
+        const sentences = window.SENTENCE_DATA;
+        if (!sentences || sentences.length === 0) {
+            console.error("Sentence data missing!");
+            return;
+        }
+
+        const randomItem = sentences[Math.floor(Math.random() * sentences.length)];
+        this.state.currentWord = randomItem; // Using same state var, but now it's a sentence obj
+
+        // Update UI
+        const questionEl = document.getElementById('input-target-meaning');
+        const inputEl = document.getElementById('writing-direct-input');
+
+        if (questionEl) {
+            // Check direction
+            if (this.state.writingDirection === 'TR_EN') {
+                questionEl.textContent = randomItem.tr;
+                if (inputEl) inputEl.placeholder = "İngilizcesi nedir?";
+            } else {
+                questionEl.textContent = randomItem.en; // Show English
+                if (inputEl) inputEl.placeholder = "Türkçesi nedir?"; // Ask Turkish
+            }
+        }
+
+        if (inputEl) {
+            inputEl.value = '';
+            inputEl.focus();
+            inputEl.disabled = false;
+            // Reset border
+            inputEl.style.borderColor = 'var(--border-glass)';
+        }
+    },
+
+    checkWritingInputAnswer() {
+        const inputEl = document.getElementById('writing-direct-input');
+        if (!inputEl) return;
+
+        const answer = inputEl.value.trim(); // Keep case for display but lower for check
+        if (!answer) return;
+
+        let target = '';
+        if (this.state.writingDirection === 'TR_EN') {
+            target = this.state.currentWord.en;
+        } else {
+            target = this.state.currentWord.tr;
+        }
+
+        // Normalize for comparison (remove punctuation at end if user forgot, lowercase)
+        const cleanAnswer = answer.toLowerCase().replace(/[.,!?]$/, '');
+        const cleanTarget = target.toLowerCase().replace(/[.,!?]$/, '');
+
+        // CHECK ANSWER
+        if (cleanAnswer === cleanTarget) {
+            // Correct
+            this.showFeedback(true);
+            this.state.score += 20; // More points for sentences
+            this.updateHeaderStats();
+            this.saveGlobalScore();
+
+            this.addChatMessage("ai", "Mükemmel! Doğru cevap. 🎉");
+        } else {
+            // Incorrect
+            this.showFeedback(false);
+            this.addChatMessage("ai", `Üzgünüm yanlış. \nDoğrusu: "${target}"`);
+        }
+
+        // SWITCH BUTTONS (Manual Advance)
+        const checkBtn = document.getElementById('btn-check-answer');
+        const nextBtn = document.getElementById('btn-next-question');
+        if (checkBtn) checkBtn.classList.add('hidden');
+        if (nextBtn) nextBtn.classList.remove('hidden');
+
+        // Disable input to prevent changing answer after check
+        inputEl.disabled = true;
+    },
+
+    // 2. SCRAMBLE MODE
+    startWritingMode() {
+        this.state.currentView = 'writing';
+        this.render();
+        this.nextScrambleQuestion();
+    },
+
+    nextScrambleQuestion() {
+        // RESET BUTTONS & FEEDBACK
+        const checkBtn = document.getElementById('btn-scramble-check');
+        const nextBtn = document.getElementById('btn-scramble-next');
+        const clearBtn = document.getElementById('btn-scramble-clear');
+        const feedbackEl = document.getElementById('writing-feedback');
+
+        if (checkBtn) checkBtn.classList.remove('hidden');
+        if (nextBtn) nextBtn.classList.add('hidden');
+        if (clearBtn) clearBtn.disabled = false;
+        if (feedbackEl) {
+            feedbackEl.textContent = '';
+            feedbackEl.className = '';
+        }
+
+        const words = this.getAllWords();
+        if (!words || !words.length) {
+            console.error("No words found for scramble mode");
+            return;
+        }
+
+        const word = words[Math.floor(Math.random() * words.length)];
+        this.state.currentWord = word;
+
+        // UI Setup
+        const questionEl = document.getElementById('writing-target-meaning');
+        if (questionEl) questionEl.textContent = word.meaning;
+        this.renderScrambleSlots(word.word);
+    },
+
+    renderScrambleSlots(word) {
+        const slotsContainer = document.getElementById('writing-slots');
+        const poolContainer = document.getElementById('writing-pool');
+        if (!slotsContainer || !poolContainer) return;
+
+        slotsContainer.innerHTML = '';
+        poolContainer.innerHTML = '';
+
+        const cleanWord = word.replace(/[^a-zA-Z]/g, '').toUpperCase();
+
+        // Slots
+        for (let i = 0; i < cleanWord.length; i++) {
+            const slot = document.createElement('div');
+            slot.className = 'slot';
+            slot.dataset.index = i;
+            slotsContainer.appendChild(slot);
+        }
+
+        // Pool (Scrambled)
+        const letters = cleanWord.split('').sort(() => Math.random() - 0.5);
+        letters.forEach((char, index) => {
+            const tile = document.createElement('div');
+            tile.className = 'letter-tile';
+            tile.textContent = char;
+            tile.onclick = () => this.handleScrambleTileClick(tile, char);
+            poolContainer.appendChild(tile);
+        });
+    },
+
+    handleScrambleTileClick(tile, char) {
+        if (tile.classList.contains('used')) return;
+
+        // Find first empty slot
+        const slots = document.querySelectorAll('#writing-slots .slot');
+        for (let slot of slots) {
+            if (!slot.textContent) {
+                slot.textContent = char;
+                slot.classList.add('filled');
+                tile.classList.add('used');
+                break; // Only fill one
+            }
+        }
+    },
+
+    clearWritingSlots() {
+        const slots = document.querySelectorAll('#writing-slots .slot');
+        slots.forEach(s => {
+            s.textContent = '';
+            s.classList.remove('filled');
+        });
+        const tiles = document.querySelectorAll('#writing-pool .letter-tile');
+        tiles.forEach(t => t.classList.remove('used'));
+    },
+    checkWritingAnswer() { // Scramble Check
+        const slots = document.querySelectorAll('#writing-slots .slot');
+        let answer = '';
+        slots.forEach(s => answer += s.textContent);
+
+        if (!this.state.currentWord) return;
+
+        const target = this.state.currentWord.word.replace(/[^a-zA-Z]/g, '').toUpperCase();
+        const feedbackEl = document.getElementById('writing-feedback');
+
+        if (answer === target) {
+            // Correct
+            if (feedbackEl) {
+                feedbackEl.textContent = "DOĞRU! 🎉";
+                feedbackEl.style.color = "var(--neon-green)";
+            }
+
+            this.state.score += 5;
+            this.saveGlobalScore(); // Sync
+
+            // Switch Buttons
+            const checkBtn = document.getElementById('btn-scramble-check');
+            const nextBtn = document.getElementById('btn-scramble-next');
+            const clearBtn = document.getElementById('btn-scramble-clear');
+
+            if (checkBtn) checkBtn.classList.add('hidden');
+            if (nextBtn) nextBtn.classList.remove('hidden');
+            if (clearBtn) clearBtn.disabled = true; // No clearing after correct
+
+        } else {
+            // Incorrect
+            if (feedbackEl) {
+                feedbackEl.textContent = "Yanlış, tekrar dene! ❌";
+                feedbackEl.style.color = "var(--neon-red)";
+
+                // Shake effect
+                const card = document.querySelector('#view-writing .game-card');
+                if (card) {
+                    card.style.transform = "translateX(10px)";
+                    setTimeout(() => card.style.transform = "translateX(0)", 100);
+                    setTimeout(() => card.style.transform = "translateX(-10px)", 200);
+                    setTimeout(() => card.style.transform = "translateX(0)", 300);
+                }
+            }
+            // Don't clear slots automatically, let user fix it
+        }
+    },
+
+    // Helpers
+    addChatMessage(sender, text) {
+        const container = document.getElementById('ai-chat-messages');
+        if (container) {
+            const bubble = document.createElement('div');
+            bubble.className = `chat-bubble ${sender}`;
+            bubble.textContent = text;
+            container.appendChild(bubble);
+            container.scrollTop = container.scrollHeight;
+        }
+    },
+
+    speakCurrentWord() {
+        if (!this.state.currentWord) return;
+
+        let text = '';
+        if (this.state.currentWord.word) {
+            text = this.state.currentWord.word; // Word object
+        } else if (this.state.currentWord.en) {
+            text = this.state.currentWord.en; // Sentence object
+        }
+
+        if (text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US';
+            window.speechSynthesis.speak(utterance);
+        }
+    },
+    showFeedback(isCorrect) {
+        // Visual feedback (border flash etc)
+        const inputEl = document.getElementById('writing-direct-input');
+        if (inputEl) {
+            inputEl.style.borderColor = isCorrect ? 'var(--neon-green)' : 'var(--neon-red)';
+            setTimeout(() => inputEl.style.borderColor = 'var(--border-glass)', 1000);
+        }
+    },
+
+    toggleWritingDirection() {
+        this.state.writingDirection = this.state.writingDirection === 'EN_TR' ? 'TR_EN' : 'EN_TR';
+        // Refresh question
+        this.nextWritingQuestion();
+
+        // Toggle arrow icon visual
+        const arrow = document.getElementById('toggle-arrow');
+        if (arrow) arrow.style.transform = this.state.writingDirection === 'TR_EN' ? 'rotate(180deg)' : 'rotate(0deg)';
+    },
+
+    goBackFromWriting() {
+        this.openWritingModes();
+    },
+
+    handleWritingKeyPress(e) {
+        // Only if in scramble mode view
+        if (this.state.currentView !== 'writing') return;
+
+        const char = e.key.toUpperCase();
+        if (/^[A-Z]$/.test(char)) {
+            // Find an unused tile with this char
+            const tiles = Array.from(document.querySelectorAll('#writing-pool .letter-tile'));
+            const matchingTile = tiles.find(t => t.textContent === char && !t.classList.contains('used'));
+
+            if (matchingTile) {
+                this.handleScrambleTileClick(matchingTile, char);
+            }
+        } else if (e.key === 'Backspace') {
+            // Remove last filled slot
+            const filledSlots = Array.from(document.querySelectorAll('#writing-slots .slot.filled'));
+            if (filledSlots.length > 0) {
+                const lastSlot = filledSlots[filledSlots.length - 1];
+                const charToRemove = lastSlot.textContent;
+
+                lastSlot.textContent = '';
+                lastSlot.classList.remove('filled');
+
+                // Free up the tile (find last used tile with this char to be safe)
+                const usedTiles = Array.from(document.querySelectorAll('#writing-pool .letter-tile.used'));
+                const tileToFree = usedTiles.reverse().find(t => t.textContent === charToRemove);
+                if (tileToFree) {
+                    tileToFree.classList.remove('used');
+                }
+            }
+        } else if (e.key === 'Enter') {
+            this.checkWritingAnswer();
+        }
+    },
+
+    getAuthErrorMessage(code) {
+        switch (code) {
+            case 'auth/email-already-in-use': return "Bu e-posta zaten kullanılıyor.";
+            case 'auth/user-not-found': return "Kullanıcı bulunamadı.";
+            case 'auth/weak-password': return "Şifre çok zayıf.";
+            case 'auth/operation-not-allowed': return "Giriş yöntemi kapalı.";
+            case 'auth/network-request-failed': return "Bağlantı hatası.";
+            case 'auth/too-many-requests': return "Çok fazla deneme! Biraz bekleyin.";
+            default: return "Bir hata oluştu.";
+        }
     }
 };
 
