@@ -1,5 +1,1931 @@
 window.WORD_DATA = [
     {
+        "id": 20001,
+        "word": "Basket",
+        "meaning": "Sepet",
+        "level": "A1"
+    },
+    {
+        "id": 20002,
+        "word": "Bush",
+        "meaning": "Çalı",
+        "level": "A2"
+    },
+    {
+        "id": 20003,
+        "word": "Collar",
+        "meaning": "Tasma",
+        "level": "A1"
+    },
+    {
+        "id": 20004,
+        "word": "Crawl",
+        "meaning": "Emeklemek, Sürünmek",
+        "level": "B1"
+    },
+    {
+        "id": 20005,
+        "word": "Dirty",
+        "meaning": "Kirli",
+        "level": "A1"
+    },
+    {
+        "id": 20006,
+        "word": "Floppy",
+        "meaning": "Sarkık, Yumuşak",
+        "level": "B1"
+    },
+    {
+        "id": 20007,
+        "word": "Fur",
+        "meaning": "Kürk, Tüy (hayvan)",
+        "level": "B1"
+    },
+    {
+        "id": 20008,
+        "word": "Gently",
+        "meaning": "Nazikçe",
+        "level": "B1"
+    },
+    {
+        "id": 20009,
+        "word": "Goodness",
+        "meaning": "İyilik",
+        "level": "B1"
+    },
+    {
+        "id": 20010,
+        "word": "Lick",
+        "meaning": "Yalamak",
+        "level": "B1"
+    },
+    {
+        "id": 20011,
+        "word": "Pour",
+        "meaning": "Dökmek",
+        "level": "B1"
+    },
+    {
+        "id": 20012,
+        "word": "Puppy",
+        "meaning": "Köpek yavrusu",
+        "level": "A1"
+    },
+    {
+        "id": 20013,
+        "word": "Scared",
+        "meaning": "Korkmuş",
+        "level": "A1"
+    },
+    {
+        "id": 20014,
+        "word": "Shampoo",
+        "meaning": "Şampuan",
+        "level": "A1"
+    },
+    {
+        "id": 20015,
+        "word": "Shout",
+        "meaning": "Bağırmak",
+        "level": "A2"
+    },
+    {
+        "id": 20016,
+        "word": "Slurp",
+        "meaning": "Höpurdetmek",
+        "level": "C1"
+    },
+    {
+        "id": 20017,
+        "word": "Splash",
+        "meaning": "Sıçratmak",
+        "level": "B1"
+    },
+    {
+        "id": 20018,
+        "word": "Tail",
+        "meaning": "Kuyruk",
+        "level": "A2"
+    },
+    {
+        "id": 20019,
+        "word": "Tape",
+        "meaning": "Bantlamak",
+        "level": "A2"
+    },
+    {
+        "id": 20020,
+        "word": "Tear",
+        "meaning": "Gözyaşı",
+        "level": "B1"
+    },
+    {
+        "id": 20021,
+        "word": "Tub",
+        "meaning": "Küvet",
+        "level": "B1"
+    },
+    {
+        "id": 20022,
+        "word": "Wag",
+        "meaning": "Sallamak (kuyruk)",
+        "level": "B2"
+    },
+    {
+        "id": 20023,
+        "word": "Whimper",
+        "meaning": "İnlemek",
+        "level": "C2"
+    },
+    {
+        "id": 20024,
+        "word": "Bold",
+        "meaning": "Cesur, Gözüpek",
+        "level": "B2"
+    },
+    {
+        "id": 20025,
+        "word": "Brave",
+        "meaning": "Cesur",
+        "level": "A2"
+    },
+    {
+        "id": 20026,
+        "word": "Chimney",
+        "meaning": "Baca",
+        "level": "B1"
+    },
+    {
+        "id": 20027,
+        "word": "Compartment",
+        "meaning": "Bölme",
+        "level": "B2"
+    },
+    {
+        "id": 20028,
+        "word": "Dare",
+        "meaning": "Cesaret etmek, Meydan okumak",
+        "level": "B2"
+    },
+    {
+        "id": 20029,
+        "word": "Dearest",
+        "meaning": "En sevgili, Çok sevgili",
+        "level": "A2"
+    },
+    {
+        "id": 20030,
+        "word": "Disappointed",
+        "meaning": "Hayal kırıklığına uğramış",
+        "level": "B1"
+    },
+    {
+        "id": 20031,
+        "word": "Dusty",
+        "meaning": "Tozlu",
+        "level": "B1"
+    },
+    {
+        "id": 20032,
+        "word": "Echo",
+        "meaning": "Yankı",
+        "level": "B2"
+    },
+    {
+        "id": 20033,
+        "word": "Face",
+        "meaning": "Yüzleşmek, Dönük olmak",
+        "level": "B1"
+    },
+    {
+        "id": 20034,
+        "word": "Fireplace",
+        "meaning": "Şömine",
+        "level": "A2"
+    },
+    {
+        "id": 20035,
+        "word": "Footstep",
+        "meaning": "Ayak sesi",
+        "level": "B2"
+    },
+    {
+        "id": 20036,
+        "word": "Freeze",
+        "meaning": "Donmak",
+        "level": "A2"
+    },
+    {
+        "id": 20037,
+        "word": "Ghost",
+        "meaning": "Hayalet",
+        "level": "A2"
+    },
+    {
+        "id": 20038,
+        "word": "Hairpin",
+        "meaning": "Firkete, Tel toka",
+        "level": "B2"
+    },
+    {
+        "id": 20039,
+        "word": "Hallway",
+        "meaning": "Koridor",
+        "level": "A2"
+    },
+    {
+        "id": 20040,
+        "word": "Haunted",
+        "meaning": "Perili",
+        "level": "B1"
+    },
+    {
+        "id": 20041,
+        "word": "Huge",
+        "meaning": "Kocaman",
+        "level": "A2"
+    },
+    {
+        "id": 20042,
+        "word": "Lid",
+        "meaning": "Kapak",
+        "level": "B1"
+    },
+    {
+        "id": 20043,
+        "word": "Musty",
+        "meaning": "Küf kokulu",
+        "level": "C1"
+    },
+    {
+        "id": 20044,
+        "word": "Mystery",
+        "meaning": "Gizem",
+        "level": "B1"
+    },
+    {
+        "id": 20045,
+        "word": "Riddle",
+        "meaning": "Bilmece",
+        "level": "B2"
+    },
+    {
+        "id": 20046,
+        "word": "Rusty",
+        "meaning": "Paslı",
+        "level": "B1"
+    },
+    {
+        "id": 20047,
+        "word": "Sheet",
+        "meaning": "Çarşaf",
+        "level": "A2"
+    },
+    {
+        "id": 20048,
+        "word": "Sneeze",
+        "meaning": "Hapşırmak",
+        "level": "B1"
+    },
+    {
+        "id": 20049,
+        "word": "Soot",
+        "meaning": "Kurum",
+        "level": "C2"
+    },
+    {
+        "id": 20050,
+        "word": "Staircase",
+        "meaning": "Merdiven boşluğu",
+        "level": "B2"
+    },
+    {
+        "id": 20051,
+        "word": "Stiff",
+        "meaning": "Kaskatı",
+        "level": "B2"
+    },
+    {
+        "id": 20052,
+        "word": "Strike",
+        "meaning": "Vurmak (saat çalması)",
+        "level": "B1"
+    },
+    {
+        "id": 20053,
+        "word": "Symbol",
+        "meaning": "Sembol",
+        "level": "B1"
+    },
+    {
+        "id": 20054,
+        "word": "Thump",
+        "meaning": "Gümleme sesi",
+        "level": "C1"
+    },
+    {
+        "id": 20055,
+        "word": "Tick",
+        "meaning": "Tik tak (saat sesi)",
+        "level": "C1"
+    },
+    {
+        "id": 20056,
+        "word": "Tock",
+        "meaning": "Tok (saat sesi)",
+        "level": "C1"
+    },
+    {
+        "id": 20057,
+        "word": "Trespassing",
+        "meaning": "İzinsiz girmek",
+        "level": "C1"
+    },
+    {
+        "id": 20058,
+        "word": "Trip",
+        "meaning": "Tökezlemek",
+        "level": "B1"
+    },
+    {
+        "id": 20059,
+        "word": "Wheelchair",
+        "meaning": "Tekerlekli sandalye",
+        "level": "A2"
+    },
+    {
+        "id": 20060,
+        "word": "Abandon",
+        "meaning": "Terk etmek",
+        "level": "B2"
+    },
+    {
+        "id": 20061,
+        "word": "Axe",
+        "meaning": "Balta",
+        "level": "B1"
+    },
+    {
+        "id": 20062,
+        "word": "Barley",
+        "meaning": "Arpa",
+        "level": "C1"
+    },
+    {
+        "id": 20063,
+        "word": "Beast",
+        "meaning": "Canavar, Hayvan",
+        "level": "B2"
+    },
+    {
+        "id": 20064,
+        "word": "Bound",
+        "meaning": "Bağlı, Yola çıkmış",
+        "level": "B2"
+    },
+    {
+        "id": 20065,
+        "word": "Cable",
+        "meaning": "Kablo, Halat",
+        "level": "A2"
+    },
+    {
+        "id": 20066,
+        "word": "Calendar",
+        "meaning": "Takvim",
+        "level": "A1"
+    },
+    {
+        "id": 20067,
+        "word": "Cannibal",
+        "meaning": "Yamyam",
+        "level": "C1"
+    },
+    {
+        "id": 20068,
+        "word": "Canoe",
+        "meaning": "Kano",
+        "level": "B1"
+    },
+    {
+        "id": 20069,
+        "word": "Captain",
+        "meaning": "Kaptan",
+        "level": "A2"
+    },
+    {
+        "id": 20070,
+        "word": "Cave",
+        "meaning": "Mağara",
+        "level": "B1"
+    },
+    {
+        "id": 20071,
+        "word": "Cedar",
+        "meaning": "Sedir ağacı",
+        "level": "C1"
+    },
+    {
+        "id": 20072,
+        "word": "Ceiling",
+        "meaning": "Tavan",
+        "level": "A2"
+    },
+    {
+        "id": 20073,
+        "word": "Chills",
+        "meaning": "Üşüme, Titreme",
+        "level": "C1"
+    },
+    {
+        "id": 20074,
+        "word": "Clay",
+        "meaning": "Kil",
+        "level": "B2"
+    },
+    {
+        "id": 20075,
+        "word": "Command",
+        "meaning": "Emretmek",
+        "level": "B2"
+    },
+    {
+        "id": 20076,
+        "word": "Companion",
+        "meaning": "Yoldaş, Arkadaş",
+        "level": "B2"
+    },
+    {
+        "id": 20077,
+        "word": "Container",
+        "meaning": "Kap, Konteyner",
+        "level": "B1"
+    },
+    {
+        "id": 20078,
+        "word": "Cross",
+        "meaning": "Haç, Çarpı",
+        "level": "A2"
+    },
+    {
+        "id": 20079,
+        "word": "Crude",
+        "meaning": "Ham, Kaba",
+        "level": "C1"
+    },
+    {
+        "id": 20080,
+        "word": "Descend",
+        "meaning": "Alçalmak, İnmek",
+        "level": "B2"
+    },
+    {
+        "id": 20081,
+        "word": "Desolate",
+        "meaning": "Issız",
+        "level": "C1"
+    },
+    {
+        "id": 20082,
+        "word": "Distress",
+        "meaning": "Sıkıntı, Tehlike",
+        "level": "C1"
+    },
+    {
+        "id": 20083,
+        "word": "Earthquake",
+        "meaning": "Deprem",
+        "level": "B1"
+    },
+    {
+        "id": 20084,
+        "word": "Fever",
+        "meaning": "Ateş (hastalık)",
+        "level": "B1"
+    },
+    {
+        "id": 20085,
+        "word": "Feverish",
+        "meaning": "Ateşli",
+        "level": "C1"
+    },
+    {
+        "id": 20086,
+        "word": "Flame",
+        "meaning": "Alev",
+        "level": "B2"
+    },
+    {
+        "id": 20087,
+        "word": "Flesh",
+        "meaning": "Et (insan/hayvan)",
+        "level": "B2"
+    },
+    {
+        "id": 20088,
+        "word": "Fortress",
+        "meaning": "Kale, Hisar",
+        "level": "B2"
+    },
+    {
+        "id": 20089,
+        "word": "Furiously",
+        "meaning": "Öfkeyle, Şiddetle",
+        "level": "B2"
+    },
+    {
+        "id": 20090,
+        "word": "Goatskin",
+        "meaning": "Keçi derisi",
+        "level": "C1"
+    },
+    {
+        "id": 20091,
+        "word": "Grain",
+        "meaning": "Tahıl",
+        "level": "B2"
+    },
+    {
+        "id": 20092,
+        "word": "Grateful",
+        "meaning": "Minnettar",
+        "level": "B1"
+    },
+    {
+        "id": 20093,
+        "word": "Handsome",
+        "meaning": "Yakışıklı",
+        "level": "A2"
+    },
+    {
+        "id": 20094,
+        "word": "Harvest",
+        "meaning": "Hasat",
+        "level": "B2"
+    },
+    {
+        "id": 20095,
+        "word": "Horrified",
+        "meaning": "Dehşete düşmüş",
+        "level": "B2"
+    },
+    {
+        "id": 20096,
+        "word": "Kiln",
+        "meaning": "Fırın (seramik/tuğla)",
+        "level": "C2"
+    },
+    {
+        "id": 20097,
+        "word": "Mainland",
+        "meaning": "Anakara",
+        "level": "B2"
+    },
+    {
+        "id": 20098,
+        "word": "Mutineer",
+        "meaning": "İsyancı",
+        "level": "C2"
+    },
+    {
+        "id": 20099,
+        "word": "Mutiny",
+        "meaning": "İsyan",
+        "level": "C2"
+    },
+    {
+        "id": 20100,
+        "word": "Naked",
+        "meaning": "Çıplak",
+        "level": "B2"
+    },
+    {
+        "id": 20101,
+        "word": "Native",
+        "meaning": "Yerli",
+        "level": "B2"
+    },
+    {
+        "id": 20102,
+        "word": "Overturn",
+        "meaning": "Alabora olmak, Devirmek",
+        "level": "B2"
+    },
+    {
+        "id": 20103,
+        "word": "Parrot",
+        "meaning": "Papağan",
+        "level": "A2"
+    },
+    {
+        "id": 20104,
+        "word": "Pistol",
+        "meaning": "Tabanca",
+        "level": "B2"
+    },
+    {
+        "id": 20105,
+        "word": "Post",
+        "meaning": "Direk",
+        "level": "A2"
+    },
+    {
+        "id": 20106,
+        "word": "Pot",
+        "meaning": "Çömlek, Tencere",
+        "level": "A2"
+    },
+    {
+        "id": 20107,
+        "word": "Powder",
+        "meaning": "Barut, Toz",
+        "level": "B1"
+    },
+    {
+        "id": 20108,
+        "word": "Prisoner",
+        "meaning": "Mahkum, Esir",
+        "level": "B1"
+    },
+    {
+        "id": 20109,
+        "word": "Raft",
+        "meaning": "Sal",
+        "level": "B1"
+    },
+    {
+        "id": 20110,
+        "word": "Raisin",
+        "meaning": "Kuru üzüm",
+        "level": "B1"
+    },
+    {
+        "id": 20111,
+        "word": "Repentance",
+        "meaning": "Tövbe, Pişmanlık",
+        "level": "C2"
+    },
+    {
+        "id": 20112,
+        "word": "Rescue",
+        "meaning": "Kurtarmak",
+        "level": "B1"
+    },
+    {
+        "id": 20113,
+        "word": "Sailor",
+        "meaning": "Denizci",
+        "level": "A2"
+    },
+    {
+        "id": 20114,
+        "word": "Savage",
+        "meaning": "Vahşi",
+        "level": "C1"
+    },
+    {
+        "id": 20115,
+        "word": "Servant",
+        "meaning": "Hizmetçi",
+        "level": "B1"
+    },
+    {
+        "id": 20116,
+        "word": "Shelter",
+        "meaning": "Barınak",
+        "level": "B1"
+    },
+    {
+        "id": 20117,
+        "word": "Shipwrecked",
+        "meaning": "Gemi kazası geçirmiş",
+        "level": "C1"
+    },
+    {
+        "id": 20118,
+        "word": "Shore",
+        "meaning": "Kıyı",
+        "level": "B1"
+    },
+    {
+        "id": 20119,
+        "word": "Spear",
+        "meaning": "Mızrak",
+        "level": "B2"
+    },
+    {
+        "id": 20120,
+        "word": "Stake",
+        "meaning": "Kazık",
+        "level": "C1"
+    },
+    {
+        "id": 20121,
+        "word": "Surrender",
+        "meaning": "Teslim olmak",
+        "level": "B2"
+    },
+    {
+        "id": 20122,
+        "word": "Survival",
+        "meaning": "Hayatta kalma",
+        "level": "B2"
+    },
+    {
+        "id": 20123,
+        "word": "Swallow",
+        "meaning": "Yutmak",
+        "level": "B1"
+    },
+    {
+        "id": 20124,
+        "word": "Sword",
+        "meaning": "Kılıç",
+        "level": "B1"
+    },
+    {
+        "id": 20125,
+        "word": "Tawny",
+        "meaning": "Esmer, Sarımtran kahverengi",
+        "level": "C2"
+    },
+    {
+        "id": 20126,
+        "word": "Telescope",
+        "meaning": "Teleskop",
+        "level": "B1"
+    },
+    {
+        "id": 20127,
+        "word": "Tent",
+        "meaning": "Çadır",
+        "level": "A2"
+    },
+    {
+        "id": 20128,
+        "word": "Terrified",
+        "meaning": "Dehşete kapılmış",
+        "level": "B1"
+    },
+    {
+        "id": 20129,
+        "word": "Thunderstruck",
+        "meaning": "Yıldırım çarpmışa dönmüş (şaşkın)",
+        "level": "C2"
+    },
+    {
+        "id": 20130,
+        "word": "Umbrella",
+        "meaning": "Şemsiye",
+        "level": "A1"
+    },
+    {
+        "id": 20131,
+        "word": "Weapon",
+        "meaning": "Silah",
+        "level": "B1"
+    },
+    {
+        "id": 20132,
+        "word": "Wreckage",
+        "meaning": "Enkaz",
+        "level": "C1"
+    },
+    {
+        "id": 20133,
+        "word": "Adversary",
+        "meaning": "Rakip, Düşman",
+        "level": "C1"
+    },
+    {
+        "id": 20134,
+        "word": "Amiss",
+        "meaning": "Hatalı, Yanlış",
+        "level": "C1"
+    },
+    {
+        "id": 20135,
+        "word": "Betrothal",
+        "meaning": "Nişanlanma",
+        "level": "C2"
+    },
+    {
+        "id": 20136,
+        "word": "Bonnet",
+        "meaning": "Kadın şapkası, Kaput",
+        "level": "C1"
+    },
+    {
+        "id": 20137,
+        "word": "Brougham",
+        "meaning": "Fayton (bir tür araba)",
+        "level": "C2"
+    },
+    {
+        "id": 20138,
+        "word": "Chaos",
+        "meaning": "Kaos, Kargaşa",
+        "level": "B2"
+    },
+    {
+        "id": 20139,
+        "word": "Clergyman",
+        "meaning": "Rahip",
+        "level": "B2"
+    },
+    {
+        "id": 20140,
+        "word": "Clumsy",
+        "meaning": "Sakar",
+        "level": "B1"
+    },
+    {
+        "id": 20141,
+        "word": "Conceal",
+        "meaning": "Gizlemek",
+        "level": "C1"
+    },
+    {
+        "id": 20142,
+        "word": "Deceive",
+        "meaning": "Aldatmak, Kandırmak",
+        "level": "B2"
+    },
+    {
+        "id": 20143,
+        "word": "Deduce",
+        "meaning": "Sonuç çıkarmak",
+        "level": "C1"
+    },
+    {
+        "id": 20144,
+        "word": "Deduction",
+        "meaning": "Tümdengelim, Çıkarım",
+        "level": "C1"
+    },
+    {
+        "id": 20145,
+        "word": "Disguise",
+        "meaning": "Kılık değiştirmek",
+        "level": "B2"
+    },
+    {
+        "id": 20146,
+        "word": "Dreadful",
+        "meaning": "Korkunç, Berbat",
+        "level": "B2"
+    },
+    {
+        "id": 20147,
+        "word": "Eclipse",
+        "meaning": "Tutulma, Gölgede bırakmak",
+        "level": "C1"
+    },
+    {
+        "id": 20148,
+        "word": "Emerald",
+        "meaning": "Zümrüt",
+        "level": "C1"
+    },
+    {
+        "id": 20149,
+        "word": "Fiancée",
+        "meaning": "Nişanlı (kadın)",
+        "level": "B1"
+    },
+    {
+        "id": 20150,
+        "word": "Groom",
+        "meaning": "Seyis, Damat",
+        "level": "B2"
+    },
+    {
+        "id": 20151,
+        "word": "Harness",
+        "meaning": "Koşum takımı, Dizginlemek",
+        "level": "C1"
+    },
+    {
+        "id": 20152,
+        "word": "Harsh",
+        "meaning": "Sert, Kaba",
+        "level": "B2"
+    },
+    {
+        "id": 20153,
+        "word": "Honour",
+        "meaning": "Onur, Şeref",
+        "level": "B1"
+    },
+    {
+        "id": 20154,
+        "word": "Indebted",
+        "meaning": "Borçlu, Minnettar",
+        "level": "C1"
+    },
+    {
+        "id": 20155,
+        "word": "Instinct",
+        "meaning": "İçgüdü",
+        "level": "B2"
+    },
+    {
+        "id": 20156,
+        "word": "Journey",
+        "meaning": "Yolculuk",
+        "level": "A2"
+    },
+    {
+        "id": 20157,
+        "word": "Kingdom",
+        "meaning": "Krallık",
+        "level": "B1"
+    },
+    {
+        "id": 20158,
+        "word": "Leather",
+        "meaning": "Deri",
+        "level": "A2"
+    },
+    {
+        "id": 20159,
+        "word": "Limb",
+        "meaning": "Uzuv (kol/bacak)",
+        "level": "B2"
+    },
+    {
+        "id": 20160,
+        "word": "Lodging",
+        "meaning": "Kalacak yer, Mesken",
+        "level": "C1"
+    },
+    {
+        "id": 20161,
+        "word": "Luggage",
+        "meaning": "Bagaj",
+        "level": "A2"
+    },
+    {
+        "id": 20162,
+        "word": "Majesty",
+        "meaning": "Majeste",
+        "level": "C1"
+    },
+    {
+        "id": 20163,
+        "word": "Mask",
+        "meaning": "Maske",
+        "level": "A2"
+    },
+    {
+        "id": 20164,
+        "word": "Merry",
+        "meaning": "Neşeli",
+        "level": "B1"
+    },
+    {
+        "id": 20165,
+        "word": "Mistress",
+        "meaning": "Hanımefendi, Metres",
+        "level": "C1"
+    },
+    {
+        "id": 20166,
+        "word": "Nobleman",
+        "meaning": "Asilzade",
+        "level": "C1"
+    },
+    {
+        "id": 20167,
+        "word": "Observe",
+        "meaning": "Gözlemlemek",
+        "level": "B1"
+    },
+    {
+        "id": 20168,
+        "word": "Parallel",
+        "meaning": "Paralel",
+        "level": "B2"
+    },
+    {
+        "id": 20169,
+        "word": "Photograph",
+        "meaning": "Fotoğraf",
+        "level": "A1"
+    },
+    {
+        "id": 20170,
+        "word": "Pity",
+        "meaning": "Acımak, Yazık",
+        "level": "B1"
+    },
+    {
+        "id": 20171,
+        "word": "Predominate",
+        "meaning": "Baskın çıkmak, Hükmetmek",
+        "level": "C2"
+    },
+    {
+        "id": 20172,
+        "word": "Preposterous",
+        "meaning": "Akıl almaz, Saçma",
+        "level": "C2"
+    },
+    {
+        "id": 20173,
+        "word": "Remark",
+        "meaning": "Belirtmek, Düşünce",
+        "level": "B2"
+    },
+    {
+        "id": 20174,
+        "word": "Rocket",
+        "meaning": "Roket, Fişek",
+        "level": "B1"
+    },
+    {
+        "id": 20175,
+        "word": "Scandal",
+        "meaning": "Skandal",
+        "level": "B2"
+    },
+    {
+        "id": 20176,
+        "word": "Scored",
+        "meaning": "Çizilmiş, Puanlanmış",
+        "level": "C1"
+    },
+    {
+        "id": 20177,
+        "word": "Seldom",
+        "meaning": "Nadir",
+        "level": "B1"
+    },
+    {
+        "id": 20178,
+        "word": "Signature",
+        "meaning": "İmza",
+        "level": "B1"
+    },
+    {
+        "id": 20179,
+        "word": "Simplicity",
+        "meaning": "Basitlik",
+        "level": "B2"
+    },
+    {
+        "id": 20180,
+        "word": "Sole",
+        "meaning": "Taban, Tek",
+        "level": "C1"
+    },
+    {
+        "id": 20181,
+        "word": "Soul",
+        "meaning": "Ruh",
+        "level": "B1"
+    },
+    {
+        "id": 20182,
+        "word": "Strict",
+        "meaning": "Katı, Sert",
+        "level": "B1"
+    },
+    {
+        "id": 20183,
+        "word": "Threaten",
+        "meaning": "Tehdit etmek",
+        "level": "B1"
+    },
+    {
+        "id": 20184,
+        "word": "Trifle",
+        "meaning": "Önemsiz şey, Azıcık",
+        "level": "C1"
+    },
+    {
+        "id": 20185,
+        "word": "Victim",
+        "meaning": "Kurban",
+        "level": "B1"
+    },
+    {
+        "id": 20186,
+        "word": "Villain",
+        "meaning": "Kötü adam, Hain",
+        "level": "B2"
+    },
+    {
+        "id": 20187,
+        "word": "Wedlock",
+        "meaning": "Evlilik bağı",
+        "level": "C2"
+    },
+    {
+        "id": 20188,
+        "word": "Witness",
+        "meaning": "Şahit olmak, Tanık",
+        "level": "B2"
+    },
+    {
+        "id": 20189,
+        "word": "Wit",
+        "meaning": "Kıvrak zeka, Esprili",
+        "level": "C1"
+    },
+    {
+        "id": 20190,
+        "word": "Alcove",
+        "meaning": "Cumba, Köşe",
+        "level": "C1"
+    },
+    {
+        "id": 20191,
+        "word": "Bondage",
+        "meaning": "Esaret, Kölelik",
+        "level": "C1"
+    },
+    {
+        "id": 20192,
+        "word": "Capitalist",
+        "meaning": "Kapitalist",
+        "level": "B2"
+    },
+    {
+        "id": 20193,
+        "word": "Comrade",
+        "meaning": "Yoldaş",
+        "level": "C1"
+    },
+    {
+        "id": 20194,
+        "word": "Constrict",
+        "meaning": "Daraltmak, Sıkmak",
+        "level": "C2"
+    },
+    {
+        "id": 20195,
+        "word": "Corrupt",
+        "meaning": "Yozlaşmış",
+        "level": "B2"
+    },
+    {
+        "id": 20196,
+        "word": "Denounce",
+        "meaning": "İhbar etmek, Kınamak",
+        "level": "C1"
+    },
+    {
+        "id": 20197,
+        "word": "Diaphragm",
+        "meaning": "Diyafram",
+        "level": "C2"
+    },
+    {
+        "id": 20198,
+        "word": "Dictatorship",
+        "meaning": "Diktatörlük",
+        "level": "B2"
+    },
+    {
+        "id": 20199,
+        "word": "Dim",
+        "meaning": "Loş, Sönük",
+        "level": "B2"
+    },
+    {
+        "id": 20200,
+        "word": "Distinguishable",
+        "meaning": "Ayırt edilebilir",
+        "level": "C1"
+    },
+    {
+        "id": 20201,
+        "word": "Eddy",
+        "meaning": "Girdap",
+        "level": "C2"
+    },
+    {
+        "id": 20202,
+        "word": "Enormous",
+        "meaning": "Muazzam, Kocaman",
+        "level": "B1"
+    },
+    {
+        "id": 20203,
+        "word": "Eternity",
+        "meaning": "Sonsuzluk",
+        "level": "B2"
+    },
+    {
+        "id": 20204,
+        "word": "Frail",
+        "meaning": "Cılız, Kırılgan",
+        "level": "C1"
+    },
+    {
+        "id": 20205,
+        "word": "Fruity",
+        "meaning": "Meyveli, Tok (ses)",
+        "level": "B1"
+    },
+    {
+        "id": 20206,
+        "word": "Helicopter",
+        "meaning": "Helikopter",
+        "level": "A2"
+    },
+    {
+        "id": 20207,
+        "word": "Hover",
+        "meaning": "Havada asılı kalmak",
+        "level": "C1"
+    },
+    {
+        "id": 20208,
+        "word": "Ignorance",
+        "meaning": "Cehalet",
+        "level": "B2"
+    },
+    {
+        "id": 20209,
+        "word": "Junk",
+        "meaning": "Hurda",
+        "level": "C1"
+    },
+    {
+        "id": 20210,
+        "word": "Liberate",
+        "meaning": "Özgürleştirmek",
+        "level": "C1"
+    },
+    {
+        "id": 20211,
+        "word": "Luxurious",
+        "meaning": "Lüks",
+        "level": "B1"
+    },
+    {
+        "id": 20212,
+        "word": "Meagreness",
+        "meaning": "Zayıflık, Yetersizlik",
+        "level": "C2"
+    },
+    {
+        "id": 20213,
+        "word": "Microphone",
+        "meaning": "Mikrofon",
+        "level": "A2"
+    },
+    {
+        "id": 20214,
+        "word": "Moustache",
+        "meaning": "Bıyık",
+        "level": "B1"
+    },
+    {
+        "id": 20215,
+        "word": "Nuzzle",
+        "meaning": "Burnunu sürtmek",
+        "level": "C2"
+    },
+    {
+        "id": 20216,
+        "word": "Oblong",
+        "meaning": "Dikdörtgen (şekil)",
+        "level": "C1"
+    },
+    {
+        "id": 20217,
+        "word": "Oppress",
+        "meaning": "Ezmek, Zulmetmek",
+        "level": "C1"
+    },
+    {
+        "id": 20218,
+        "word": "Overall",
+        "meaning": "Tulum, Genel",
+        "level": "B2"
+    },
+    {
+        "id": 20219,
+        "word": "Overthrow",
+        "meaning": "Devirmek (hükümet)",
+        "level": "C1"
+    },
+    {
+        "id": 20220,
+        "word": "Pane",
+        "meaning": "Pencere camı",
+        "level": "C1"
+    },
+    {
+        "id": 20221,
+        "word": "Patrol",
+        "meaning": "Devriye",
+        "level": "C1"
+    },
+    {
+        "id": 20222,
+        "word": "Plaque",
+        "meaning": "Plaka",
+        "level": "C1"
+    },
+    {
+        "id": 20223,
+        "word": "Poster",
+        "meaning": "Poster",
+        "level": "A2"
+    },
+    {
+        "id": 20224,
+        "word": "Poverty",
+        "meaning": "Yoksulluk",
+        "level": "B2"
+    },
+    {
+        "id": 20225,
+        "word": "Prison",
+        "meaning": "Hapishane",
+        "level": "A2"
+    },
+    {
+        "id": 20226,
+        "word": "Privacy",
+        "meaning": "Mahremiyet",
+        "level": "B2"
+    },
+    {
+        "id": 20227,
+        "word": "Pyramidal",
+        "meaning": "Piramit şeklinde",
+        "level": "C2"
+    },
+    {
+        "id": 20228,
+        "word": "Rectify",
+        "meaning": "Düzeltmek",
+        "level": "C1"
+    },
+    {
+        "id": 20229,
+        "word": "Revolution",
+        "meaning": "Devrim",
+        "level": "B2"
+    },
+    {
+        "id": 20230,
+        "word": "Rugged",
+        "meaning": "Engebeli, Sert yüzlü",
+        "level": "C1"
+    },
+    {
+        "id": 20231,
+        "word": "Sacrifice",
+        "meaning": "Feda etmek",
+        "level": "C1"
+    },
+    {
+        "id": 20232,
+        "word": "Sanctuary",
+        "meaning": "Sığınak",
+        "level": "C1"
+    },
+    {
+        "id": 20233,
+        "word": "Scented",
+        "meaning": "Kokulu",
+        "level": "C1"
+    },
+    {
+        "id": 20234,
+        "word": "Shallow",
+        "meaning": "Sığ",
+        "level": "B2"
+    },
+    {
+        "id": 20235,
+        "word": "Sink",
+        "meaning": "Lavabo, Batmak",
+        "level": "A2"
+    },
+    {
+        "id": 20236,
+        "word": "Skim",
+        "meaning": "Sıyırıp geçmek, Göz gezdirmek",
+        "level": "C2"
+    },
+    {
+        "id": 20237,
+        "word": "Slavery",
+        "meaning": "Kölelik",
+        "level": "B2"
+    },
+    {
+        "id": 20238,
+        "word": "Slummy",
+        "meaning": "Gecekondu tarzı",
+        "level": "C2"
+    },
+    {
+        "id": 20239,
+        "word": "Snoop",
+        "meaning": "Gözetlemek, Burnunu sokmak",
+        "level": "C1"
+    },
+    {
+        "id": 20240,
+        "word": "Soar",
+        "meaning": "Hızla yükselmek",
+        "level": "C1"
+    },
+    {
+        "id": 20241,
+        "word": "Spiral",
+        "meaning": "Sarmal",
+        "level": "C1"
+    },
+    {
+        "id": 20242,
+        "word": "Stiff",
+        "meaning": "Kaskatı, Sert",
+        "level": "B2"
+    },
+    {
+        "id": 20243,
+        "word": "Stumble",
+        "meaning": "Tökezlemek",
+        "level": "B2"
+    },
+    {
+        "id": 20244,
+        "word": "Surge",
+        "meaning": "Dalgalanmak, Kabarmak",
+        "level": "C1"
+    },
+    {
+        "id": 20245,
+        "word": "Surveillance",
+        "meaning": "Gözetim",
+        "level": "C1"
+    },
+    {
+        "id": 20246,
+        "word": "Telescreen",
+        "meaning": "Tele-ekran",
+        "level": "C2"
+    },
+    {
+        "id": 20247,
+        "word": "Terrace",
+        "meaning": "Teras",
+        "level": "B1"
+    },
+    {
+        "id": 20248,
+        "word": "Terror",
+        "meaning": "Dehşet",
+        "level": "B2"
+    },
+    {
+        "id": 20249,
+        "word": "Torture",
+        "meaning": "İşkence",
+        "level": "B2"
+    },
+    {
+        "id": 20250,
+        "word": "Totalitarianism",
+        "meaning": "Totaliterlik",
+        "level": "C2"
+    },
+    {
+        "id": 20251,
+        "word": "Traitor",
+        "meaning": "Hain",
+        "level": "C1"
+    },
+    {
+        "id": 20252,
+        "word": "Trickle",
+        "meaning": "Damlamak, Sızmak",
+        "level": "C1"
+    },
+    {
+        "id": 20253,
+        "word": "Vile",
+        "meaning": "Aşağılık, İğrenç",
+        "level": "C1"
+    },
+    {
+        "id": 20255,
+        "word": "Aloft",
+        "meaning": "Havada, Yüksekte",
+        "level": "C2"
+    },
+    {
+        "id": 20256,
+        "word": "Anticipation",
+        "meaning": "Beklenti",
+        "level": "C1"
+    },
+    {
+        "id": 20257,
+        "word": "Ashplant",
+        "meaning": "Dişbudağı sopası",
+        "level": "C2"
+    },
+    {
+        "id": 20258,
+        "word": "Barmaid",
+        "meaning": "Barmen kadın",
+        "level": "B2"
+    },
+    {
+        "id": 20259,
+        "word": "Beast",
+        "meaning": "Canavar, Hayvan",
+        "level": "C1"
+    },
+    {
+        "id": 20260,
+        "word": "Canister",
+        "meaning": "Teneke kutu",
+        "level": "C2"
+    },
+    {
+        "id": 20261,
+        "word": "Cavalcade",
+        "meaning": "Atlı alayı, Konvoy",
+        "level": "C2"
+    },
+    {
+        "id": 20262,
+        "word": "Chandelier",
+        "meaning": "Avize",
+        "level": "C1"
+    },
+    {
+        "id": 20263,
+        "word": "Clank",
+        "meaning": "Şıngırdamak",
+        "level": "C2"
+    },
+    {
+        "id": 20264,
+        "word": "Coarsely",
+        "meaning": "Kabaca",
+        "level": "C2"
+    },
+    {
+        "id": 20265,
+        "word": "Coffin",
+        "meaning": "Tabut",
+        "level": "B2"
+    },
+    {
+        "id": 20266,
+        "word": "Deafening",
+        "meaning": "Sağır edici",
+        "level": "C1"
+    },
+    {
+        "id": 20267,
+        "word": "Dressinggown",
+        "meaning": "Sabahlık",
+        "level": "C1"
+    },
+    {
+        "id": 20268,
+        "word": "Exhausted",
+        "meaning": "Tükenmiş",
+        "level": "B2"
+    },
+    {
+        "id": 20269,
+        "word": "Fetus",
+        "meaning": "Cenin",
+        "level": "C2"
+    },
+    {
+        "id": 20270,
+        "word": "Fierce",
+        "meaning": "Şiddetli, Vahşi",
+        "level": "B2"
+    },
+    {
+        "id": 20271,
+        "word": "Funeral",
+        "meaning": "Cenaze",
+        "level": "B1"
+    },
+    {
+        "id": 20272,
+        "word": "Fussy",
+        "meaning": "Mızmız, Titiz",
+        "level": "C1"
+    },
+    {
+        "id": 20273,
+        "word": "Giblet",
+        "meaning": "Sakatat",
+        "level": "C2"
+    },
+    {
+        "id": 20274,
+        "word": "Giggle",
+        "meaning": "Kıkırdamak",
+        "level": "C1"
+    },
+    {
+        "id": 20275,
+        "word": "Gizzard",
+        "meaning": "Taşlık (kuş midesi)",
+        "level": "C2"
+    },
+    {
+        "id": 20276,
+        "word": "Gravely",
+        "meaning": "Ciddiyetle",
+        "level": "C2"
+    },
+    {
+        "id": 20277,
+        "word": "Hallucination",
+        "meaning": "Halüsinasyon",
+        "level": "C1"
+    },
+    {
+        "id": 20278,
+        "word": "Ineluctable",
+        "meaning": "Kaçınılmaz",
+        "level": "C2"
+    },
+    {
+        "id": 20279,
+        "word": "Intellect",
+        "meaning": "Zeka, Akıl",
+        "level": "C1"
+    },
+    {
+        "id": 20280,
+        "word": "Intone",
+        "meaning": "Mırıldanmak, Okumak",
+        "level": "C2"
+    },
+    {
+        "id": 20281,
+        "word": "Jesuit",
+        "meaning": "Cezvit",
+        "level": "C2"
+    },
+    {
+        "id": 20282,
+        "word": "Kidney",
+        "meaning": "Böbrek",
+        "level": "B1"
+    },
+    {
+        "id": 20283,
+        "word": "Labyrinth",
+        "meaning": "Labirent",
+        "level": "C2"
+    },
+    {
+        "id": 20284,
+        "word": "Languid",
+        "meaning": "Halsiz, Baygın",
+        "level": "C2"
+    },
+    {
+        "id": 20285,
+        "word": "Lather",
+        "meaning": "Köpük",
+        "level": "C2"
+    },
+    {
+        "id": 20286,
+        "word": "Lotus",
+        "meaning": "Lotus çiçeği",
+        "level": "C1"
+    },
+    {
+        "id": 20287,
+        "word": "Maternity",
+        "meaning": "Annelik, Doğum",
+        "level": "C1"
+    },
+    {
+        "id": 20288,
+        "word": "Modality",
+        "meaning": "Kiplik, Biçim",
+        "level": "C2"
+    },
+    {
+        "id": 20289,
+        "word": "Mosaic",
+        "meaning": "Mozaik",
+        "level": "C1"
+    },
+    {
+        "id": 20290,
+        "word": "Mutton",
+        "meaning": "Koyun eti",
+        "level": "C1"
+    },
+    {
+        "id": 20291,
+        "word": "Mysticism",
+        "meaning": "Mistiklik",
+        "level": "C2"
+    },
+    {
+        "id": 20292,
+        "word": "Nightmare",
+        "meaning": "Kabus",
+        "level": "B1"
+    },
+    {
+        "id": 20293,
+        "word": "Overpowering",
+        "meaning": "Baskın, Karşı konulmaz",
+        "level": "C2"
+    },
+    {
+        "id": 20294,
+        "word": "Palate",
+        "meaning": "Damak",
+        "level": "C2"
+    },
+    {
+        "id": 20295,
+        "word": "Pang",
+        "meaning": "Sancı",
+        "level": "C2"
+    },
+    {
+        "id": 20296,
+        "word": "Peril",
+        "meaning": "Tehlike",
+        "level": "C1"
+    },
+    {
+        "id": 20297,
+        "word": "Plump",
+        "meaning": "Tombul",
+        "level": "B2"
+    },
+    {
+        "id": 20298,
+        "word": "Razor",
+        "meaning": "Ustura",
+        "level": "B1"
+    },
+    {
+        "id": 20299,
+        "word": "Relish",
+        "meaning": "Haz, Lezzet",
+        "level": "C2"
+    },
+    {
+        "id": 20300,
+        "word": "Repent",
+        "meaning": "Tövbe etmek",
+        "level": "C2"
+    },
+    {
+        "id": 20301,
+        "word": "Roe",
+        "meaning": "Balık yumurtası",
+        "level": "C2"
+    },
+    {
+        "id": 20302,
+        "word": "Savour",
+        "meaning": "Tadını çıkarmak",
+        "level": "C2"
+    },
+    {
+        "id": 20303,
+        "word": "Siren",
+        "meaning": "Siren",
+        "level": "C1"
+    },
+    {
+        "id": 20304,
+        "word": "Skeptically",
+        "meaning": "Şüpheyle",
+        "level": "C1"
+    },
+    {
+        "id": 20305,
+        "word": "Solemnly",
+        "meaning": "Ciddiyetle",
+        "level": "C1"
+    },
+    {
+        "id": 20306,
+        "word": "Stately",
+        "meaning": "Heybetli",
+        "level": "C2"
+    },
+    {
+        "id": 20307,
+        "word": "Stiffly",
+        "meaning": "Sertçe",
+        "level": "C1"
+    },
+    {
+        "id": 20308,
+        "word": "Strand",
+        "meaning": "Kıyı, Tel",
+        "level": "C2"
+    },
+    {
+        "id": 20309,
+        "word": "Stride",
+        "meaning": "Adım atmak",
+        "level": "C1"
+    },
+    {
+        "id": 20310,
+        "word": "Sustained",
+        "meaning": "Sürdürülen",
+        "level": "B2"
+    },
+    {
+        "id": 20311,
+        "word": "Tang",
+        "meaning": "Keskin koku/tat",
+        "level": "C2"
+    },
+    {
+        "id": 20312,
+        "word": "Temperament",
+        "meaning": "Mizaç",
+        "level": "C2"
+    },
+    {
+        "id": 20313,
+        "word": "Thunderclap",
+        "meaning": "Gök gürültüsü",
+        "level": "C2"
+    },
+    {
+        "id": 20314,
+        "word": "Trashy",
+        "meaning": "Değersiz, Çöp",
+        "level": "C1"
+    },
+    {
+        "id": 20315,
+        "word": "Twilight",
+        "meaning": "Alacakaranlık",
+        "level": "C1"
+    },
+    {
+        "id": 20316,
+        "word": "Ungirdled",
+        "meaning": "Kuşaksız, Kemer takılmamış",
+        "level": "C2"
+    },
+    {
+        "id": 20317,
+        "word": "Viceroy",
+        "meaning": "Vali",
+        "level": "C2"
+    },
+    {
+        "id": 20318,
+        "word": "Whirlpool",
+        "meaning": "Girdap",
+        "level": "C2"
+    },
+    {
+        "id": 20319,
+        "word": "Winding",
+        "meaning": "Dolambaçlı",
+        "level": "C1"
+    },
+    {
+        "id": 20320,
+        "word": "Womb",
+        "meaning": "Rahim",
+        "level": "C1"
+    },
+    {
+        "id": 20321,
+        "word": "Wrack",
+        "meaning": "Yosun, Yıkıntı",
+        "level": "C2"
+    },
+    {
+        "id": 20254,
+        "word": "Whirl",
+        "meaning": "Dönmek, Fırıl fırıl dönmek",
+        "level": "C1"
+    },
+    {
         "id": 1001,
         "word": "Ability",
         "meaning": "Yetenek",
@@ -14478,12 +16404,6 @@ window.WORD_DATA = [
         "id": 3413
     },
     {
-        "word": "Alternative",
-        "meaning": "Alternatif",
-        "level": "C1",
-        "id": 3414
-    },
-    {
         "word": "Ambiguous",
         "meaning": "Muğlak, Belirsiz",
         "level": "C1",
@@ -14520,28 +16440,10 @@ window.WORD_DATA = [
         "id": 3420
     },
     {
-        "word": "Appreciate",
-        "meaning": "Takdir etmek, Değeri artmak",
-        "level": "C1",
-        "id": 3421
-    },
-    {
-        "word": "Approach",
-        "meaning": "Yaklaşım, Yaklaşmak",
-        "level": "C1",
-        "id": 3422
-    },
-    {
         "word": "Appropriate",
         "meaning": "Uygun, Yerinde",
         "level": "C1",
         "id": 3423
-    },
-    {
-        "word": "Approximate",
-        "meaning": "Yaklaşık",
-        "level": "C1",
-        "id": 3424
     },
     {
         "word": "Arbitrary",
@@ -14550,34 +16452,16 @@ window.WORD_DATA = [
         "id": 3425
     },
     {
-        "word": "Aspect",
-        "meaning": "Yön, Bakış açısı",
-        "level": "C1",
-        "id": 3426
-    },
-    {
         "word": "Assemble",
         "meaning": "Birleştirmek, Toplamak",
         "level": "C1",
         "id": 3427
     },
     {
-        "word": "Assess",
-        "meaning": "Değerlendirmek",
-        "level": "C1",
-        "id": 3428
-    },
-    {
         "word": "Assign",
         "meaning": "Atamak, Görevlendirmek",
         "level": "C1",
         "id": 3429
-    },
-    {
-        "word": "Assist",
-        "meaning": "Yardım etmek",
-        "level": "C1",
-        "id": 3430
     },
     {
         "word": "Assume",
@@ -14590,12 +16474,6 @@ window.WORD_DATA = [
         "meaning": "Garanti etmek, Güvence vermek",
         "level": "C1",
         "id": 3432
-    },
-    {
-        "word": "Attach",
-        "meaning": "Eklemek, Bağlamak",
-        "level": "C1",
-        "id": 3433
     },
     {
         "word": "Attain",
@@ -14616,18 +16494,6 @@ window.WORD_DATA = [
         "id": 3436
     },
     {
-        "word": "Available",
-        "meaning": "Mevcut, Kullanılabilir",
-        "level": "C1",
-        "id": 3437
-    },
-    {
-        "word": "Aware",
-        "meaning": "Farkında",
-        "level": "C1",
-        "id": 3438
-    },
-    {
         "word": "Behalf",
         "meaning": "Adına, Namına",
         "level": "C1",
@@ -14646,34 +16512,10 @@ window.WORD_DATA = [
         "id": 3441
     },
     {
-        "word": "Brief",
-        "meaning": "Kısa, Öz",
-        "level": "C1",
-        "id": 3442
-    },
-    {
         "word": "Bulk",
         "meaning": "Yığın, Hacim",
         "level": "C1",
         "id": 3443
-    },
-    {
-        "word": "Capable",
-        "meaning": "Yetenekli, Kabiliyetli",
-        "level": "C1",
-        "id": 3444
-    },
-    {
-        "word": "Capacity",
-        "meaning": "Kapasite",
-        "level": "C1",
-        "id": 3445
-    },
-    {
-        "word": "Category",
-        "meaning": "Kategori",
-        "level": "C1",
-        "id": 3446
     },
     {
         "word": "Cease",
@@ -14682,52 +16524,10 @@ window.WORD_DATA = [
         "id": 3447
     },
     {
-        "word": "Challenge",
-        "meaning": "Meydan okuma, Zorluk",
-        "level": "C1",
-        "id": 3448
-    },
-    {
-        "word": "Channel",
-        "meaning": "Kanal, Yönlendirmek",
-        "level": "C1",
-        "id": 3449
-    },
-    {
-        "word": "Chapter",
-        "meaning": "Bölüm",
-        "level": "C1",
-        "id": 3450
-    },
-    {
-        "word": "Chart",
-        "meaning": "Tablo, Grafik",
-        "level": "C1",
-        "id": 3451
-    },
-    {
-        "word": "Chemical",
-        "meaning": "Kimyasal",
-        "level": "C1",
-        "id": 3452
-    },
-    {
-        "word": "Circumstance",
-        "meaning": "Durum, Koşul",
-        "level": "C1",
-        "id": 3453
-    },
-    {
         "word": "Cite",
         "meaning": "Alıntı yapmak, Bahsetmek",
         "level": "C1",
         "id": 3454
-    },
-    {
-        "word": "Civil",
-        "meaning": "Sivil, Medeni",
-        "level": "C1",
-        "id": 3455
     },
     {
         "word": "Clarify",
@@ -14736,22 +16536,10 @@ window.WORD_DATA = [
         "id": 3456
     },
     {
-        "word": "Classic",
-        "meaning": "Klasik",
-        "level": "C1",
-        "id": 3457
-    },
-    {
         "word": "Clause",
         "meaning": "Madde, Fıkra (Hukuk)",
         "level": "C1",
         "id": 3458
-    },
-    {
-        "word": "Code",
-        "meaning": "Kod, Şifre",
-        "level": "C1",
-        "id": 3459
     },
     {
         "word": "Coherent",
@@ -14766,40 +16554,10 @@ window.WORD_DATA = [
         "id": 3461
     },
     {
-        "word": "Collapse",
-        "meaning": "Çökmek, Yıkılmak",
-        "level": "C1",
-        "id": 3462
-    },
-    {
-        "word": "Colleague",
-        "meaning": "Meslektaş",
-        "level": "C1",
-        "id": 3463
-    },
-    {
         "word": "Commence",
         "meaning": "Başlamak",
         "level": "C1",
         "id": 3464
-    },
-    {
-        "word": "Comment",
-        "meaning": "Yorum",
-        "level": "C1",
-        "id": 3465
-    },
-    {
-        "word": "Commission",
-        "meaning": "Komisyon, Görevlendirmek",
-        "level": "C1",
-        "id": 3466
-    },
-    {
-        "word": "Commit",
-        "meaning": "İşlemek (suç), Adamak",
-        "level": "C1",
-        "id": 3467
     },
     {
         "word": "Commodity",
@@ -14830,12 +16588,6 @@ window.WORD_DATA = [
         "meaning": "Tamamlamak",
         "level": "C1",
         "id": 3472
-    },
-    {
-        "word": "Complex",
-        "meaning": "Karmaşık",
-        "level": "C1",
-        "id": 3473
     },
     {
         "word": "Abhor",
@@ -15118,12 +16870,6 @@ window.WORD_DATA = [
         "meaning": "Yoksun, Mahrum",
         "level": "C2",
         "id": 3520
-    },
-    {
-        "word": "Bias",
-        "meaning": "Önyargı",
-        "level": "C2",
-        "id": 3521
     },
     {
         "word": "Bilateral",

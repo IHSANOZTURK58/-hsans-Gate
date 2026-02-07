@@ -20,6 +20,8 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const auth = firebase.auth();
+window.db = db; // Expose for debugging
+window.auth = auth;
 
 const app = {
     // Config
@@ -30,7 +32,7 @@ const app = {
         currentView: 'menu',
         score: 0,
         leaderboard: [], // Global Data
-        wallet: 0,
+
         highScore: 0, // Track Personal Best
         favorites: [],
         customWords: [], // Local legacy
@@ -56,8 +58,6 @@ const app = {
         // Adventure Mode Specific
         currentLevel: 1,
         maxLevel: 1, // Highest Unlocked Level
-        levelProgress: 0,
-        adventureLives: 3,
         levelProgress: 0,
         adventureLives: 3,
         levelWords: [],
@@ -86,106 +86,11 @@ const app = {
 
         this.geminiService.init();
 
-        // Explicitly hide settings button on load
-        const sBtn = document.getElementById('btn-dashboard-settings');
-        if (sBtn) {
-            sBtn.classList.add('hidden');
-            sBtn.style.display = 'none'; // Doubly sure
-        }
 
         // Authenticate
         this.authenticateAndListen();
     },
 
-    openSettings() {
-        this.state.currentView = 'settings';
-
-        // Admin visibility check
-        const adminSection = document.getElementById('admin-api-settings');
-        if (adminSection) {
-            if (this.state.isAdmin) {
-                adminSection.classList.remove('hidden');
-            } else {
-                adminSection.classList.add('hidden');
-            }
-        }
-
-        const input = document.getElementById('settings-api-key');
-        if (input) input.value = this.geminiService.apiKey || '';
-        const input2 = document.getElementById('settings-api-key-2');
-        if (input2) input2.value = this.geminiService.secondaryApiKey || '';
-        this.render();
-    },
-
-    saveSettings() {
-        const input = document.getElementById('settings-api-key');
-        const input2 = document.getElementById('settings-api-key-2');
-
-        if (input) {
-            const key = input.value.trim();
-            localStorage.setItem('gemini_api_key', key);
-            this.geminiService.apiKey = key;
-        }
-
-        if (input2) {
-            const key2 = input2.value.trim();
-            localStorage.setItem('gemini_api_key_2', key2);
-            this.geminiService.secondaryApiKey = key2;
-        }
-
-        alert('Ayarlar kaydedildi! ✅');
-    },
-
-    async testGeminiConnection() {
-        const input = document.getElementById('settings-api-key');
-        const key = input ? input.value.trim() : '';
-
-        // Test Primary
-        if (!key) {
-            alert('Lütfen en az bir anahtar girin.');
-            return;
-        }
-
-        // Simple Test Wrapper
-        const testKey = async (apiKey, label) => {
-            try {
-                const listResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
-                const listData = await listResponse.json();
-                if (!listResponse.ok) throw new Error(listData.error?.message || 'Liste Hatası');
-
-                const models = listData.models || [];
-                const validModel = models.find(m => m.name.includes('gemini-1.5-flash')) ||
-                    models.find(m => m.supportedGenerationMethods?.includes('generateContent') && m.name.includes('flash'));
-
-                if (validModel) {
-                    const modelName = validModel.name.replace('models/', '');
-                    localStorage.setItem('gemini_valid_model', modelName);
-                    this.geminiService.modelName = modelName;
-                    return { success: true, model: modelName };
-                }
-                return { success: false, error: "Model bulunamadı" };
-            } catch (e) {
-                return { success: false, error: e.message };
-            }
-        };
-
-        const res1 = await testKey(key, "Ana");
-        let msg = `1. Anahtar: ${res1.success ? '✅ (' + res1.model + ')' : '❌ ' + res1.error}`;
-
-        const input2 = document.getElementById('settings-api-key-2');
-        const key2 = input2 ? input2.value.trim() : '';
-        if (key2) {
-            const res2 = await testKey(key2, "Yedek");
-            msg += `\n2. Anahtar: ${res2.success ? '✅' : '❌ ' + res2.error}`;
-        }
-
-        alert(msg);
-
-        if (res1.success) {
-            this.geminiService.apiKey = key;
-            if (key2) this.geminiService.secondaryApiKey = key2;
-        }
-    },
 
 
 
@@ -194,6 +99,7 @@ const app = {
         if (stored) {
             const data = JSON.parse(stored);
             this.state.highScore = data.highScore || 0;
+            this.state.score = data.score || 0; // Load Total Score
             this.state.favorites = data.favorites || [];
             this.state.currentLevel = data.currentLevel || 1;
             this.state.maxLevel = data.maxLevel || this.state.currentLevel || 1; // Backwards compat
@@ -223,6 +129,7 @@ const app = {
     saveData() {
         const data = {
             highScore: this.state.highScore,
+            score: this.state.score, // Save Total Score
             favorites: this.state.favorites,
             currentLevel: this.state.currentLevel,
             maxLevel: this.state.maxLevel, // SAVE MAX
@@ -230,6 +137,11 @@ const app = {
         };
         localStorage.setItem('vocab_game_data_v2', JSON.stringify(data));
         this.updateHeaderStats();
+
+        // Sync with Global Leaderboard (Cups)
+        if (this.saveGlobalScore) {
+            this.saveGlobalScore();
+        }
     },
 
     setupUI() {
@@ -263,17 +175,17 @@ const app = {
         if (modal) modal.classList.add('hidden');
     },
 
-    confirmLogout() {
+    async confirmLogout() {
         this.closeLogoutModal();
         this.state.isAdmin = false;
         this.state.playerName = null;
 
-        // Reset Admin UI
-        const settingsBtn = document.getElementById('btn-dashboard-settings');
-        if (settingsBtn) settingsBtn.classList.add('hidden');
-
-        const adminBtn = document.querySelector('.header-left .btn-icon[title="Yönetici Paneli"]');
-        if (adminBtn) adminBtn.style.display = 'none';
+        try {
+            await auth.signOut();
+            console.log("User signed out successfully.");
+        } catch (e) {
+            console.error("SignOut Error:", e);
+        }
 
         this.showLanding();
     },
@@ -339,23 +251,7 @@ const app = {
         this.openPasswordModal("Yönetici Paneline girmek için parolayı girin:");
     },
 
-    showUserLogin() {
-        document.getElementById('login-choices').classList.add('hidden');
-        document.getElementById('user-login-form').classList.remove('hidden');
 
-        // Sync UI with state
-        if (this.selectAvatar) {
-            this.selectAvatar(this.state.selectedAvatar);
-        }
-
-        // Focus input
-        setTimeout(() => document.getElementById('landing-player-name').focus(), 100);
-    },
-
-    cancelUserLogin() {
-        document.getElementById('user-login-form').classList.add('hidden');
-        document.getElementById('login-choices').classList.remove('hidden');
-    },
 
     selectAvatar(id) {
         this.state.selectedAvatar = id;
@@ -411,19 +307,54 @@ const app = {
     },
 
     authenticateAndListen() {
-        auth.onAuthStateChanged((user) => {
-            if (user) {
-                // User is signed in.
-                console.log("Auth State: Signed in as", user.uid);
-                // We don't necessarily update playerName here, as we use localStorage or manual input
-                this.setupFirebaseListener();
+        auth.onAuthStateChanged(async (user) => {
+            if (user && !user.isAnonymous) {
+                // Real User Logged In
+                console.log("Logged in as:", user.email);
+
+                // Load User Profile
+                let username = user.displayName;
+
+                // If displayName is missing (e.g. freshly created before updateProfile finished), fetch from DB
+                if (!username) {
+                    const doc = await db.collection('users').doc(user.uid).get();
+                    if (doc.exists) username = doc.data().username;
+                }
+
+                if (username) {
+                    this.state.playerName = username;
+
+                    // Update UI Names
+                    const headerName = document.getElementById('display-user-name-header');
+                    const welcomeName = document.getElementById('display-user-name-welcome');
+                    if (headerName) headerName.textContent = username;
+                    if (welcomeName) welcomeName.textContent = username;
+
+                    // Auto-enter dashboard if on landing page
+                    if (this.state.currentView === 'menu' || this.state.currentView === 'landing') {
+                        this.enterDashboard();
+                    }
+
+                    // Setup Listeners
+                    this.setupFirebaseListener();
+
+                    // Fetch synced score if available
+                    const userDoc = await db.collection('users').doc(user.uid).get();
+                    if (userDoc.exists && userDoc.data().score) {
+                        this.state.score = userDoc.data().score;
+                        this.updateHeaderStats();
+                    }
+                }
             } else {
-                // User is signed out.
-                console.log("Auth State: Signed out. Signing in anon...");
-                auth.signInAnonymously()
-                    .catch((error) => {
-                        console.error("Auth Error:", error);
-                    });
+                console.log("No active user. Waiting for login.");
+                // Reset header and welcome even if no user
+                const headerName = document.getElementById('display-user-name-header');
+                const welcomeName = document.getElementById('display-user-name-welcome');
+                if (headerName) headerName.textContent = 'Misafir';
+                if (welcomeName) welcomeName.textContent = 'Oyuncu';
+
+                // Clear state
+                this.state.playerName = null;
             }
         });
 
@@ -688,40 +619,15 @@ const app = {
 
 
     enterDashboard() {
-        const nameInput = document.getElementById('landing-player-name');
-        const name = nameInput ? nameInput.value.trim() : '';
-
-        if (!name) {
-            alert("⚠️ Lütfen ismini yaz!");
-            if (nameInput) {
-                nameInput.focus();
-                nameInput.style.border = '2px solid #ef4444';
-                setTimeout(() => nameInput.style.border = '', 2000);
-            }
-            return;
+        // If not logged in, show Login Modal
+        if (!auth.currentUser || auth.currentUser.isAnonymous) {
+            this.openLoginModal();
+        } else {
+            this.showDashboard();
         }
-
-        this.state.playerName = name;
-        this.state.isAdmin = false; // Reset admin status on normal login
-        localStorage.setItem('last_player_name', name);
-        localStorage.setItem('player_avatar', this.state.selectedAvatar);
-
-        // Update Avatar UI
-        this.updateAvatarUI();
-
-        // Update header name
-        const displayName = document.getElementById('display-user-name');
-        if (displayName) displayName.textContent = name;
-
-        // Hide admin button for normal users, Ensure logout is visible
-        const adminBtn = document.querySelector('.header-left .btn-icon[title="Yönetici Paneli"]');
-        const logoutBtn = document.querySelector('.header-left .btn-icon[title="Çıkış Yap"]');
-
-        if (adminBtn) adminBtn.style.display = 'none';
-        if (logoutBtn) logoutBtn.style.display = 'block';
-
-        this.showDashboard();
     },
+
+
 
     showDashboard() {
         if (this.state.timerInterval) clearInterval(this.state.timerInterval);
@@ -748,7 +654,7 @@ const app = {
         }
 
         this.state.gameMode = targetMode;
-        this.state.score = 0;
+        // this.state.score = 0; // REMOVED: Score is now persistent/cumulative
 
         // Apply Background based on Mode
         const gameView = document.getElementById('view-game');
@@ -837,6 +743,11 @@ const app = {
         this.openPasswordModal("İlerlemeyi sıfırlamak için parolayı girin:");
     },
 
+    resetTrophyLeaderboard() {
+        this.state.pendingPasswordAction = 'resetTrophy';
+        this.openPasswordModal("Kupa tablosunu sıfırlamak için parolayı girin:");
+    },
+
     openPasswordModal(message) {
         const modal = document.getElementById('view-password-modal');
         const msgEl = document.getElementById('password-modal-msg');
@@ -870,33 +781,20 @@ const app = {
 
             if (action === 'reset') {
                 await this.performReset();
+            } else if (action === 'resetTrophy') {
+                await this.performTrophyReset();
             } else if (action === 'addWord') {
                 this.performShowAddWord();
             } else if (action === 'adminAccess') {
                 this.state.isAdmin = true;
                 this.state.playerName = "Yönetici";
-                this.state.currentView = 'admin';
+                this.state.currentView = 'dashboard';
 
-                // Show admin button in header since we are now admin
-                const adminBtn = document.querySelector('.header-left .btn-icon[title="Yönetici Paneli"]');
-                const logoutBtn = document.querySelector('.header-left .btn-icon[title="Çıkış Yap"]');
-
-                if (adminBtn) adminBtn.style.display = 'block';
-                if (logoutBtn) logoutBtn.style.display = 'block';
-
-                if (adminBtn) adminBtn.style.display = 'block';
-                if (logoutBtn) logoutBtn.style.display = 'block';
-
-                // Show settings for admin
-                const settingsBtn = document.getElementById('btn-dashboard-settings');
-                if (settingsBtn) {
-                    settingsBtn.classList.remove('hidden');
-                    settingsBtn.style.display = 'block'; // Force display
-                }
-
-                // Update header name
-                const displayName = document.getElementById('display-user-name');
-                if (displayName) displayName.textContent = this.state.playerName;
+                // Update UI Names for Admin
+                const headerName = document.getElementById('display-user-name-header');
+                const welcomeName = document.getElementById('display-user-name-welcome');
+                if (headerName) headerName.textContent = this.state.playerName;
+                if (welcomeName) welcomeName.textContent = this.state.playerName;
 
                 this.render();
             }
@@ -933,6 +831,38 @@ const app = {
         }
     },
 
+    async performTrophyReset() {
+        if (!confirm("⚠️ DİKKAT: Bu işlem TÜM KUPA LİSTESİNİ ve TÜM OYUNCU PUANLARINI sıfırlayacak!\n\nBu işlem geri alınamaz. Devam etmek istiyor musunuz?")) return;
+
+        try {
+            // 1. Clear Global Scores (Trophy Leaderboard)
+            const globalSnapshot = await db.collection("global_scores").get();
+            const batch = db.batch();
+            globalSnapshot.docs.forEach(doc => {
+                batch.delete(doc.ref);
+            });
+
+            // 2. Reset All User Scores to 0
+            const usersSnapshot = await db.collection("users").get();
+            usersSnapshot.docs.forEach(doc => {
+                batch.update(doc.ref, { score: 0 });
+            });
+
+            await batch.commit();
+
+            // 3. Update Current Session State
+            this.state.score = 0;
+            this.state.highScore = 0;
+            this.saveData(); // Sync local storage
+            this.updateHeaderStats();
+
+            alert("✅ Kupa tablosu ve tüm oyuncu puanları başarıyla sıfırlandı!");
+        } catch (e) {
+            console.error("Error resetting trophy leaderboard:", e);
+            alert("Sıfırlama sırasında bir hata oluştu: " + e.message);
+        }
+    },
+
     // ADVENTURE MODE LOGIC
     getDifficultyForLevel(lvl) {
         if (lvl <= 20) return ['A1', 'A2'];
@@ -951,47 +881,39 @@ const app = {
         const requiredCount = 50;
         let pool = this.getAllWords();
 
-        // 0. Deterministic Sort first (to ensure consistency vs browser differences)
-        // IDs can be numbers (static) or strings (firebase), so String() cast is required.
+        // 1. Strict Deterministic Sort (Base Consistency)
         pool.sort((a, b) => String(a.id).localeCompare(String(b.id)));
 
         let targetDiffs = this.getDifficultyForLevel(level);
 
-        // 1. Filter by target difficulty
+        // 2. Filter by Difficulty
         let candidates = pool.filter(w => targetDiffs.includes(w.level));
 
-        // 2. Fallback if insufficient
+        // 3. Fallback logic: If not enough words in level, expand to neighbors
         if (candidates.length < requiredCount) {
-            console.warn(`Level ${level}: Insufficient words in ${targetDiffs}. Found ${candidates.length}. Attempting fallback.`);
-
             const fallbackDiffs = this.getFallbackDifficulty(targetDiffs);
-            const secondaryCandidates = pool.filter(w => fallbackDiffs.includes(w.level));
-
-            // Avoid duplicates
-            const existingIds = new Set(candidates.map(w => w.id));
-            const distinctSecondary = secondaryCandidates.filter(w => !existingIds.has(w.id));
-
-            // Pseudo-random shuffle for secondary candidates (Seed: Level + 1000)
-            this.shuffleArray(distinctSecondary, level + 1000);
-            candidates = [...candidates, ...distinctSecondary];
+            const secondary = pool.filter(w => fallbackDiffs.includes(w.level) && !candidates.includes(w));
+            // Shuffle secondary deterministically
+            this.shuffleArray(secondary, level + 1000);
+            candidates = candidates.concat(secondary);
         }
 
-        // 3. Final Fallback (Global Random) if still insufficient
+        // 4. Fallback logic: Global fill
         if (candidates.length < requiredCount) {
-            const existingIds = new Set(candidates.map(w => w.id));
-            const remaining = pool.filter(w => !existingIds.has(w.id));
-            // Seed: Level + 2000
+            const remaining = pool.filter(w => !candidates.includes(w));
             this.shuffleArray(remaining, level + 2000);
-            candidates = [...candidates, ...remaining];
+            candidates = candidates.concat(remaining);
         }
 
-        // 4. Select deterministic 50 (Seed: Level)
-        // This guarantees we always pick the SAME 50 words for this level.
+        // 5. SELECTION: Shuffle candidates deterministically using Level as SEED
+        // This ensures the same 50 words are picked for everyone at Level X
         this.shuffleArray(candidates, level);
+
+        // Take top 50
         const selectedWords = candidates.slice(0, requiredCount);
 
-        // 5. Randomize Order (User Request: "Sırası farklı olabilir")
-        // The set is fixed, but the order you face them changes every time.
+        // 6. PRESENTATION: Shuffle order for gameplay variety (non-seeded)
+        // The set is fixed, but the order they appear is random each attempt
         this.shuffleArray(selectedWords);
 
         return selectedWords;
@@ -1104,24 +1026,11 @@ const app = {
         const title = modal.querySelector('h3');
         title.innerHTML = `💀 Seviye ${this.state.currentLevel} Başarısız!<br><span style="font-size:1rem; opacity:0.8">Başa dönülüyor...</span>`;
 
-        // Hide Score/Earnings for this specific fail screen if desired, or just show them
-        // For now let's keep it simple
-
-        // Hijack the Restart Button
+        // Configure Restart Button for Adventure Mode
         const btnRetry = modal.querySelector('.btn-primary');
-        const oldOnClick = btnRetry.onclick; // Backup if needed, though we rely on HTML attr usually
-
+        // We now use the HTML onclick="app.retryAdventure()" 
+        // Just update the text to be specific
         btnRetry.textContent = "Tekrar Dene ↺";
-        btnRetry.onclick = () => {
-            this.state.levelProgress = 0;
-            this.state.adventureLives = 3;
-            this.startAdventureLevel();
-            modal.classList.add('hidden');
-
-            // Reset Button for other modes
-            btnRetry.onclick = () => app.startGame();
-            btnRetry.textContent = "Tekrar Oyna ↺";
-        };
 
         // Ensure Secondary Button is "Harita" (Adventure Mode Specific)
         const secondaryBtn = modal.querySelector('.btn-secondary');
@@ -1132,6 +1041,23 @@ const app = {
 
         modal.classList.remove('hidden');
     },
+
+    retryAdventure() {
+        // If in Adventure mode, restart CURRENT level
+        if (this.state.gameMode === 'adventure') {
+            this.state.levelProgress = 0;
+            this.state.adventureLives = 3;
+            document.getElementById('view-gameover').classList.add('hidden');
+            this.startAdventureLevel(); // Uses state.currentLevel, so it restarts existing level
+        } else {
+            // Fallback for other modes (Rush etc.) -> Start Game (Mode Selection or Restart)
+            // For other modes, the button onclick might be different or we handle it here:
+            document.getElementById('view-gameover').classList.add('hidden');
+            this.startGame();
+        }
+    },
+
+
 
 
     // Game Logic
@@ -1196,6 +1122,33 @@ const app = {
 
     },
 
+    handleChoice(option, btn) {
+        if (this.state.isProcessing) return;
+        this.state.isProcessing = true;
+
+        const isCorrect = (option === this.state.currentWord.meaning);
+
+        if (isCorrect) {
+            this.playSound('correct');
+            btn.classList.add('correct');
+            // Points System: +1 for Vocab
+            this.state.score += 1;
+            this.saveData(); // Persist
+
+            // Visual feedback on button?
+        } else {
+            // Handle incorrect choice
+            this.playSound('wrong');
+            btn.classList.add('wrong');
+        }
+
+        // Reset processing state after a delay
+        setTimeout(() => {
+            this.state.isProcessing = false;
+            // Potentially move to next question or handle lives here
+        }, 1000);
+    },
+
     handleAnswer(selectedOption, btnElement) {
         if (!this.state.currentWord) return;
 
@@ -1206,8 +1159,14 @@ const app = {
 
         if (isCorrect) {
             btnElement.classList.add('correct');
-            this.state.score += this.POINTS_PER_QUESTION;
-            this.updateScoreDisplay();
+
+            // Unified Scoring: +1 for Vocab (All modes including Adventure)
+            this.state.score += 1;
+            if (this.state.score > this.state.highScore) this.state.highScore = this.state.score;
+
+            this.updateHeaderStats(); // Show new score immediately
+            this.saveData(); // Persist immediately
+
             this.playSound('correct'); // SFX
 
             if (this.state.gameMode === 'adventure') {
@@ -1292,8 +1251,8 @@ const app = {
             }
         }
 
-        // Leaderboard logic ONLY for Rush mode
-        if (this.state.gameMode === 'rush' && this.state.score > 0) {
+        // Leaderboard logic - Save for ALL modes if score > 0
+        if (this.state.score > 0) {
             this.saveScoreToFirebase();
         }
 
@@ -1447,18 +1406,17 @@ const app = {
 
     // Utilities/Helpers
     updateHeaderStats() {
-        if (this.state.currentView === 'game') {
-            // Logic stripped
-        }
-        this.updateDashboardStats();
-    },
-
-    updateDashboardStats() {
+        // Favorites
         const favCount = document.getElementById('dash-fav-count');
-        const highScore = document.getElementById('dash-high-score');
+        if (favCount) {
+            favCount.textContent = `⭐ ${this.state.favorites.length}`;
+        }
 
-        if (favCount) favCount.textContent = `⭐ ${this.state.favorites.length}`;
-        if (highScore) highScore.textContent = `🏆 ${this.state.highScore}`;
+        // Total Score
+        const headerScore = document.getElementById('header-total-score');
+        if (headerScore) {
+            headerScore.textContent = `${this.state.score}`;
+        }
     },
 
     // Add Custom Word Logic
@@ -1476,6 +1434,109 @@ const app = {
         this.selectLevel('A1'); // Default Reset
     },
 
+
+
+
+
+    // --- GLOBAL LEADERBOARD (CUPS) ---
+    async openGlobalLeaderboard() {
+        this.state.currentView = 'global-leaderboard';
+        this.render();
+
+        const list = document.getElementById('global-leaderboard-list');
+        if (!list) return;
+
+        list.innerHTML = '<li style="padding:1rem; text-align:center;">Yükleniyor...</li>';
+
+        try {
+            // Fetch from "global_scores" collection
+            const snapshot = await db.collection("global_scores")
+                .orderBy("score", "desc")
+                .limit(10)
+                .get();
+
+            if (snapshot.empty) {
+                list.innerHTML = '<li style="padding:1rem; text-align:center;">Henüz kupa kazanan yok.</li>';
+                return;
+            }
+
+            list.innerHTML = '';
+            let rank = 1;
+
+            snapshot.forEach(doc => {
+                const data = doc.data();
+                const isMe = (data.name === this.state.playerName);
+                const medals = ['🥇', '🥈', '🥉'];
+                let rankIcon = `#${rank}`;
+                if (rank <= 3) rankIcon = medals[rank - 1];
+
+                const li = document.createElement('li');
+                li.className = `leaderboard-item ${isMe ? 'active' : ''}`;
+                li.style.display = 'grid';
+                li.style.gridTemplateColumns = '50px 1fr 100px';
+                li.style.padding = '10px';
+                li.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+                li.style.alignItems = 'center';
+
+                li.innerHTML = `
+                    <span style="font-size:1.2rem; text-align:center;">${rankIcon}</span>
+                    <span style="font-weight:bold; color:${isMe ? 'var(--accent-gold)' : 'inherit'}">${data.name}</span>
+                    <span style="text-align:right; font-weight:bold; color:var(--accent-gold);">${data.score} 🏆</span>
+                 `;
+                list.appendChild(li);
+                rank++;
+            });
+
+        } catch (error) {
+            console.error("Global Leaderboard Error:", error);
+            list.innerHTML = `<li style="color:red; text-align:center;">Hata: ${error.message}</li>`;
+        }
+    },
+
+    async saveGlobalScore() {
+        if (!this.state.playerName || this.state.score <= 0) return;
+        if (typeof db === 'undefined') return;
+
+        try {
+            const ref = db.collection("global_scores");
+            // Check existing
+            const snapshot = await ref.where("name", "==", this.state.playerName).limit(1).get();
+
+            if (!snapshot.empty) {
+                const doc = snapshot.docs[0];
+                // Only update if current score is higher (though global score is cumulative, so likely always update)
+                // Actually, global score IS current state.score.
+                await doc.ref.update({
+                    score: this.state.score,
+                    lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
+                });
+                console.log("Global Cup Score Updated:", this.state.score);
+            } else {
+                await ref.add({
+                    name: this.state.playerName,
+                    score: this.state.score,
+                    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                });
+                console.log("Global Cup Score Created:", this.state.score);
+            }
+        } catch (e) {
+            console.error("Save Global Score Error:", e);
+        }
+    },
+
+    // Legacy Rush Mode Leaderboard (Restored & Kept Separate)
+    openLeaderboard() {
+        this.state.currentView = 'leaderboard'; // This maps to #view-modes technically in old logic? No, wait.
+        // The old openLeaderboard opened 'leaderboard' view.
+        // But Rush Mode table is in #view-modes.
+        // Let's leave this alone as it was restored.
+        // However, we changed the button to call openGlobalLeaderboard.
+        // So this function might be dead code or used by internal calls?
+        // Checking usage: The Only usage was the header button.
+        // So we can repurpose or ignore.
+        // Actually, let's keep it safe.
+    },
+
     selectLevel(lvl, btnElement) {
         this.state.selectedAddLevel = lvl;
         if (btnElement) {
@@ -1488,6 +1549,36 @@ const app = {
                 if (b.textContent === lvl) b.classList.add('active');
             });
         }
+    },
+
+    renderLeaderboard() {
+        const tbody = document.getElementById('leaderboard-body');
+        if (!tbody) return;
+        tbody.innerHTML = '';
+
+        if (this.state.leaderboard.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="3" style="text-align:center; padding:1rem;">Henüz rekor yok.</td></tr>';
+            return;
+        }
+
+        const medals = ['🥇', '🥈', '🥉'];
+
+        this.state.leaderboard.forEach((item, index) => {
+            let rankDisplay = index + 1;
+            if (index < 3) {
+                rankDisplay = `<span style="font-size:1.2rem">${medals[index]}</span>`;
+            } else {
+                rankDisplay = `<span class="lb-rank">${index + 1}</span>`;
+            }
+
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${rankDisplay}</td>
+                <td>${item.name}</td>
+                <td>${item.score}</td>
+            `;
+            tbody.appendChild(tr);
+        });
     },
 
     async saveNewWord() {
@@ -1522,35 +1613,7 @@ const app = {
         }
     },
 
-    renderLeaderboard() {
-        const tbody = document.getElementById('leaderboard-body');
-        if (!tbody) return;
-        tbody.innerHTML = '';
 
-        if (this.state.leaderboard.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="3" style="text-align:center; padding:1rem;">Henüz rekor yok.</td></tr>';
-            return;
-        }
-
-        const medals = ['🥇', '🥈', '🥉'];
-
-        this.state.leaderboard.forEach((item, index) => {
-            let rankDisplay = index + 1;
-            if (index < 3) {
-                rankDisplay = `<span style="font-size:1.2rem">${medals[index]}</span>`;
-            } else {
-                rankDisplay = `<span class="lb-rank">${index + 1}</span>`;
-            }
-
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td>${rankDisplay}</td>
-                <td>${item.name}</td>
-                <td>${item.score}</td>
-            `;
-            tbody.appendChild(tr);
-        });
-    },
 
     updateScoreDisplay() {
         document.getElementById('current-score').textContent = this.state.score;
@@ -1619,6 +1682,7 @@ const app = {
         return array;
     },
 
+
     render() {
         // Force close overlays
         document.getElementById('view-gameover').classList.add('hidden');
@@ -1650,20 +1714,27 @@ const app = {
     },
 
     async saveScoreToFirebase() {
+        // Save the TOTAL ACCUMULATED SCORE
         try {
-            // Compat Syntax
+            // Check if user already has a score entry to update, or just add new?
+            // For now, simple "add" might flood. Better to just use the highest score per user logic in query,
+            // or here we just save the current snapshot.
+            // Let's just double check we are saving state.score which is now persistent/accumulating
+
             await db.collection("scores").add({
                 name: this.state.playerName,
-                score: this.state.score,
+                score: this.state.score, // This is now total accumulated
                 date: new Date().toLocaleDateString('tr-TR'),
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
             });
-            console.log("Score saved!");
+            console.log("Total Score saved to Leaderboard!");
         } catch (e) {
             console.error("Error adding score: ", e);
-            alert("Skor kaydedilemedi: " + e.message);
+            // Silent fail or alert?
         }
     },
+
+
 
     // Audio Logic
     initMusic() {
@@ -2227,10 +2298,14 @@ const app = {
 
         if (isCorrect) {
             this.playSound('correct');
-            this.state.writingScore += 10;
+            // Points System: +10 -> +5 for AI Input
+            this.state.score += 5;
+            this.state.writingScore += 5;
+            this.saveData(); // Persist
+
             // document.getElementById('writing-input-score').textContent = this.state.writingScore; // REMOVED
 
-            this.updateChat('ai', `✅ <b>Doğru!</b> ${feedback}`);
+            this.updateChat('ai', `✅ <b>Doğru!</b> ${feedback} (+5 Puan)`);
 
             btn.textContent = "DEVAM ET ->";
             btn.disabled = false;
@@ -2409,7 +2484,7 @@ const app = {
         // Letter Input
         const key = e.key.toLowerCase();
         // Allow Turkish characters too
-        if (key.length === 1 && /[a-zçğıöşü]/i.test(key)) {
+        if (key.length === 1 && /[a-zçğıöşü ]/i.test(key)) {
             const item = this.state.writingPool.find(
                 p => !p.used && p.char.toLowerCase() === key
             );
@@ -2439,13 +2514,15 @@ const app = {
         const formedWord = this.state.writingInput.map(i => i.char).join('');
         const targetWord = this.state.currentWritingWord.word.toUpperCase();
 
-        if (formedWord === targetWord) {
-            // Correct
+        if (isCorrect) {
             this.playSound('correct');
-            this.state.writingScore += 10;
+            // Points System: +10 -> +3 for Scramble
+            this.state.score += 3;
+            this.state.writingScore += 3;
+            this.saveData(); // Persist immediately
 
             const fb = document.getElementById('writing-feedback');
-            fb.textContent = "DOĞRU! 🎉";
+            fb.textContent = "DOĞRU! 🎉 (+3 Puan)";
             fb.style.color = "#22c55e";
 
             setTimeout(() => {
@@ -2664,15 +2741,20 @@ const app = {
 
         if (isCorrect) {
             this.playSound('correct');
-            this.state.grammarScore += 10;
-
-
-
-            if (gap) gap.classList.add('correct');
             btnElement.classList.add('correct');
+            feedbackText.textContent = "DOĞRU! 🎉 (+1 Puan)";
+            feedbackText.style.color = "var(--neon-green)";
 
-            feedbackText.textContent = "DOĞRU! 🎉";
-            feedbackText.style.color = "#22c55e";
+            // Points System: +1 for Grammar
+            this.state.score += 1;
+            this.state.grammarScore += 1;
+            this.saveData(); // Persist
+            this.updateHeaderStats(); // Update UI immediately
+
+            if (gap) {
+                gap.textContent = q.options[q.correct];
+                gap.classList.add('filled', 'correct');
+            }
 
             // Hide Pass button
             if (passBtn) passBtn.style.display = 'none';
@@ -2715,6 +2797,8 @@ const app = {
         this.renderLibrary();
     },
 
+
+
     renderLibrary() {
         const grid = document.getElementById('library-grid');
         grid.innerHTML = '';
@@ -2727,30 +2811,34 @@ const app = {
         const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
         levels.forEach(level => {
-            const book = window.BOOK_DATA[level];
-            if (book) {
-                const card = document.createElement('div');
-                card.className = 'book-card';
-                card.onclick = () => this.openBook(level);
+            const books = window.BOOK_DATA[level];
+            if (books && Array.isArray(books)) {
+                books.forEach((book, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'book-card';
+                    card.onclick = () => this.openBook(level, index);
 
-                card.innerHTML = `
-                    <div class="book-level-badge">${level}</div>
-                    <div class="book-cover">${book.cover}</div>
-                    <div class="book-title">${book.title}</div>
-                    <div class="book-author">${book.author}</div>
-                    <div class="book-desc">${book.description}</div>
-                `;
-                grid.appendChild(card);
+                    card.innerHTML = `
+                        <div class="book-level-badge">${level}</div>
+                        <div class="book-cover">${book.cover}</div>
+                        <div class="book-title">${book.title}</div>
+                        <div class="book-author">${book.author}</div>
+                        <div class="book-desc">${book.description}</div>
+                    `;
+                    grid.appendChild(card);
+                });
             }
         });
     },
 
-    openBook(level) {
-        const book = window.BOOK_DATA[level];
-        if (!book) return;
+    openBook(level, index = 0) {
+        const books = window.BOOK_DATA[level];
+        if (!books || !books[index]) return;
+        const book = books[index];
 
         // Initialize state
-        this.state.currentBook = level;
+        this.state.currentBookLevel = level;
+        this.state.currentBookIndex = index;
         this.state.currentBookPage = 0;
         this.state.totalBookPages = book.pages ? book.pages.length : 1;
 
@@ -2768,14 +2856,18 @@ const app = {
     },
 
     closeBook() {
-        this.state.currentBook = null;
+        this.state.currentBookLevel = null;
+        this.state.currentBookIndex = null;
         this.state.currentBookPage = 0;
         document.getElementById('reading-reader').classList.add('hidden');
         document.getElementById('reading-library').classList.remove('hidden');
     },
 
     renderBookPage() {
-        const book = window.BOOK_DATA[this.state.currentBook];
+        if (!this.state.currentBookLevel) return;
+        const books = window.BOOK_DATA[this.state.currentBookLevel];
+        if (!books) return;
+        const book = books[this.state.currentBookIndex];
         if (!book) return;
 
         const content = book.pages ? book.pages[this.state.currentBookPage] : book.content;
@@ -2969,8 +3061,156 @@ const app = {
                 box.style.display = 'none';
             }, 200);
         }
+    },
+
+    // --- EMAIL AUTH SYSTEM ---
+    openLoginModal() {
+        const modal = document.getElementById('view-login-modal');
+        if (!modal) return;
+
+        modal.classList.remove('hidden');
+        document.getElementById('auth-error-msg').textContent = '';
+
+        const rememberedEmail = localStorage.getItem('remembered_email');
+        const remView = document.getElementById('remembered-account-view');
+        const stdView = document.getElementById('standard-auth-view');
+
+        if (rememberedEmail) {
+            stdView.classList.add('hidden');
+            remView.classList.remove('hidden');
+            document.getElementById('remembered-email-display').textContent = rememberedEmail;
+            document.getElementById('rem-login-password').value = '';
+            document.getElementById('rem-login-password').focus();
+
+            document.getElementById('auth-title').textContent = "Tekrar Hoş Geldin!";
+            document.getElementById('auth-subtitle').textContent = "Kaldığın yerden devam etmek için şifreni gir.";
+        } else {
+            remView.classList.add('hidden');
+            stdView.classList.remove('hidden');
+            this.switchAuthTab('login');
+        }
+    },
+
+    resetRememberedEmail() {
+        localStorage.removeItem('remembered_email');
+        const remView = document.getElementById('remembered-account-view');
+        const stdView = document.getElementById('standard-auth-view');
+        if (remView) remView.classList.add('hidden');
+        if (stdView) stdView.classList.remove('hidden');
+        this.switchAuthTab('login');
+    },
+
+    switchAuthTab(tab) {
+        document.getElementById('tab-login').classList.toggle('active', tab === 'login');
+        document.getElementById('tab-register').classList.toggle('active', tab === 'register');
+
+        document.getElementById('tab-login').style.borderBottom = tab === 'login' ? '2px solid var(--accent-gold)' : 'none';
+        document.getElementById('tab-register').style.borderBottom = tab === 'register' ? '2px solid var(--accent-gold)' : 'none';
+
+        document.getElementById('form-login').classList.toggle('hidden', tab !== 'login');
+        document.getElementById('form-register').classList.toggle('hidden', tab !== 'register');
+
+        document.getElementById('auth-title').textContent = tab === 'login' ? "Hesap Girişi" : "Yeni Hesap Oluştur";
+        document.getElementById('auth-subtitle').textContent = tab === 'login' ?
+            "Skorlarını kaydetmek için giriş yap." : "Hemen kayıt ol ve yarışmaya katıl!";
+
+        document.getElementById('auth-error-msg').textContent = '';
+    },
+
+    async submitLogin(isRemembered = false) {
+        let email, password;
+        if (isRemembered) {
+            email = localStorage.getItem('remembered_email');
+            password = document.getElementById('rem-login-password').value.trim();
+        } else {
+            email = document.getElementById('login-email').value.trim();
+            password = document.getElementById('login-password').value.trim();
+        }
+
+        const errorEl = document.getElementById('auth-error-msg');
+
+        if (!email || !password) {
+            errorEl.textContent = "Lütfen tüm alanları doldur.";
+            return;
+        }
+
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            localStorage.setItem('remembered_email', email); // Save for next time
+            document.getElementById('view-login-modal').classList.add('hidden');
+        } catch (error) {
+            console.error("Login Error:", error);
+            const msg = this.getAuthErrorMessage(error.code);
+            errorEl.textContent = msg;
+        }
+    },
+
+    async submitRegister() {
+        const username = document.getElementById('reg-username').value.trim();
+        const email = document.getElementById('reg-email').value.trim();
+        const password = document.getElementById('reg-password').value.trim();
+        const errorEl = document.getElementById('auth-error-msg');
+
+        if (!username || !email || !password) {
+            errorEl.textContent = "Lütfen tüm alanları doldur.";
+            return;
+        }
+        if (password.length < 6) {
+            errorEl.textContent = "Şifre en az 6 karakter olmalı.";
+            return;
+        }
+
+        try {
+            const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+            const user = userCredential.user;
+
+            await db.collection('users').doc(user.uid).set({
+                username: username,
+                email: email,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                score: 0
+            });
+
+            await user.updateProfile({ displayName: username });
+
+            localStorage.setItem('remembered_email', email); // Save for next time
+            document.getElementById('view-login-modal').classList.add('hidden');
+        } catch (error) {
+            console.error("Register Error:", error);
+            const msg = this.getAuthErrorMessage(error.code);
+            errorEl.textContent = msg;
+        }
+    },
+
+    getAuthErrorMessage(code) {
+        switch (code) {
+            case 'auth/email-already-in-use': return "Bu e-posta zaten kullanılıyor.";
+            case 'auth/invalid-email': return "Geçersiz e-posta adresi.";
+            case 'auth/wrong-password': return "Şifre yanlış.";
+            case 'auth/user-not-found': return "Kullanıcı bulunamadı.";
+            case 'auth/weak-password': return "Şifre çok zayıf.";
+            case 'auth/operation-not-allowed': return "Giriş yöntemi kapalı.";
+            case 'auth/network-request-failed': return "Bağlantı hatası.";
+            case 'auth/too-many-requests': return "Çok fazla deneme! Biraz bekleyin.";
+            default: return "Bir hata oluştu.";
+        }
+    },
+
+    completeLogin(name) {
+        this.showDashboard();
     }
 };
 
-window.onload = () => app.init();
+window.onload = () => {
+    try {
+        if (typeof firebase === 'undefined') {
+            alert("Firebase yüklenemedi! İnternet bağlantınızı kontrol edin.");
+            return;
+        }
+        app.init();
+    } catch (e) {
+        alert("Başlatma Hatası: " + e.message + "\n" + e.stack);
+        console.error(e);
+    }
+};
 window.app = app; // Expose to window for HTML onclick handlers

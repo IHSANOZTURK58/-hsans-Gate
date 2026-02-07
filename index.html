@@ -87,61 +87,15 @@
                     </div>
 
                     <div class="landing-form">
-                        <!-- Login Choice Buttons -->
-                        <div id="login-choices" class="login-choices">
-                            <button class="btn btn-primary btn-large" onclick="app.showUserLogin()">
-                                👤 Kullanıcı Girişi
+                        <div class="login-choices">
+                            <button class="btn btn-primary btn-large" onclick="app.enterDashboard()"
+                                style="width:100%;">
+                                🎮 Oyuna Başla
                             </button>
-                            <button class="btn btn-secondary btn-large" style="margin-top: 1rem;"
+                            <button class="btn btn-secondary btn-large" style="margin-top: 1rem; width:100%;"
                                 onclick="app.checkAdminAuth()">
-                                🛡️ Yönetici Girişi
+                                🛡️ Yönetici Paneli
                             </button>
-                        </div>
-
-                        <!-- User Name Input (Hidden by default, shown after User Login click) -->
-                        <div id="user-login-form" class="hidden">
-
-                            <!-- Avatar Selection -->
-                            <div class="avatar-selection-container">
-                                <span class="avatar-label">Profil Resmi</span>
-
-                                <!-- Current Avatar Display -->
-                                <div class="current-avatar-display">
-                                    <div class="avatar-option selected large" id="current-avatar-preview">
-                                        <img src="assets/avatars/avatar_1.png" alt="Avatar">
-                                    </div>
-                                    <button class="btn-change-avatar" onclick="app.toggleAvatarPicker()" type="button">
-                                        <span id="avatar-picker-text">Değiştir</span>
-                                    </button>
-                                </div>
-
-                                <!-- All Avatars Grid (Hidden by default) -->
-                                <div class="avatar-grid hidden" id="avatar-picker-grid">
-                                    <div class="avatar-option selected" id="av-opt-1" onclick="app.selectAvatar(1)">
-                                        <img src="assets/avatars/avatar_1.png" alt="Samurai">
-                                    </div>
-                                    <div class="avatar-option" id="av-opt-2" onclick="app.selectAvatar(2)">
-                                        <img src="assets/avatars/avatar_2.png" alt="Robot">
-                                    </div>
-                                    <div class="avatar-option" id="av-opt-3" onclick="app.selectAvatar(3)">
-                                        <img src="assets/avatars/avatar_3.png" alt="Astronaut">
-                                    </div>
-                                    <div class="avatar-option" id="av-opt-4" onclick="app.selectAvatar(4)">
-                                        <img src="assets/avatars/avatar_4.png" alt="Ninja">
-                                    </div>
-                                    <div class="avatar-option" id="av-opt-5" onclick="app.selectAvatar(5)">
-                                        <img src="assets/avatars/avatar_5.png" alt="Wolf">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <input type="text" id="landing-player-name" class="landing-input"
-                                placeholder="Adını yaz...">
-
-                            <div style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
-                                <button class="btn btn-secondary" onclick="app.cancelUserLogin()">Geri</button>
-                                <button class="btn btn-primary" onclick="app.enterDashboard()">Başla &rarr;</button>
-                            </div>
                         </div>
                     </div>
 
@@ -156,54 +110,43 @@
                     <!-- WELCOME SECTION -->
                     <div class="hub-header">
                         <!-- Dashboard Top Bar: Profile, Logo & Wallet -->
-                        <div class="dashboard-top-bar"
-                            style="width:100%; display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; border-bottom:1px solid rgba(255,255,255,0.05); padding-bottom:1rem;">
-
-                            <!-- Profile Section (Relocated) -->
-                            <div class="user-profile" style="position:relative;">
-                                <div class="profile-avatar-container" onclick="app.toggleProfileMenu()"
-                                    style="cursor:pointer; display:flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.05); padding:0.4rem 0.8rem; border-radius:30px; border:1px solid var(--border-glass);">
+                        <div class="dashboard-top-bar">
+                            <!-- Profile Section (Left) -->
+                            <div class="user-profile">
+                                <div class="profile-avatar-container" onclick="app.toggleProfileMenu()">
                                     <img id="header-avatar" src="assets/avatars/avatar_1.png" class="header-avatar-img"
                                         style="width:24px; height:24px; border-radius:50%; display:none;">
-                                    <span class="user-name" id="display-user-name"
-                                        style="font-size:0.9rem; font-weight:600;">Misafir</span>
-                                    <span style="font-size:0.7rem; opacity:0.6;">▼</span>
+                                    <span class="user-name" id="display-user-name-header">Misafir</span>
+                                    <span class="dropdown-arrow">▼</span>
                                 </div>
 
                                 <!-- Dropdown -->
-                                <div class="profile-dropdown hidden" id="profile-dropdown"
-                                    style="top:120%; left:0; min-width:160px;">
-                                    <button class="profile-menu-item hidden" id="btn-dashboard-settings"
-                                        onclick="app.openSettings(); event.stopPropagation();">⚙️ Ayarlar</button>
+                                <div class="profile-dropdown hidden" id="profile-dropdown">
                                     <button class="profile-menu-item"
                                         onclick="app.logout(); event.stopPropagation();">🚪 Çıkış</button>
                                 </div>
                             </div>
 
+                            <!-- Logo (Center) -->
                             <div class="logo">
-                                <div class="logo-row" style="display:flex; align-items:center; gap:0.5rem;">
+                                <div class="logo-row">
                                     <span class="logo-icon">🔥</span>
-                                    <h1 style="font-size:1.5rem; margin:0;">İhsans<span class="highlight">Gate</span>
-                                    </h1>
+                                    <h1>İhsans<span class="highlight">Gate</span></h1>
                                 </div>
-                                <!-- Wallet Removed -->
                             </div>
+
+                            <!-- Trophies (Right) -->
+                            <button class="btn-icon trophy-btn" onclick="app.openGlobalLeaderboard()" title="Global Sıralama">
+                                <span class="trophy-icon">🏆</span>
+                                <span id="header-total-score">0</span>
+                            </button>
                         </div>
 
                         <div class="hub-welcome">
-                            <h3>👋 Hoş geldin, <span id="display-user-name">Oyuncu</span></h3>
+                            <h3>👋 Hoş geldin, <span id="display-user-name-welcome">Oyuncu</span></h3>
                             <p class="quote-day">"Her yeni kelime, yeni bir dünyadır."</p>
                         </div>
-                        <div class="daily-mission">
-                            <span class="mission-icon">🎯</span>
-                            <div class="mission-info">
-                                <h4>Günün Görevi</h4>
-                                <p>Günlük 500 Elmas kazan!</p>
-                                <div class="mission-progress">
-                                    <div class="bar" style="width: 30%"></div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
 
                     <!-- MAIN CONTENT GRID -->
@@ -252,16 +195,7 @@
                         </div>
 
                         <!-- Right / Bottom: Stats or Quick Actions -->
-                        <div class="quick-stats-panel">
-                            <div class="stat-item">
-                                <span id="dash-fav-count" class="stat-value">⭐ 0</span>
-                                <span class="stat-label">Favori Kelimeler</span>
-                            </div>
-                            <div class="stat-item">
-                                <span id="dash-high-score" class="stat-value">🏆 0</span>
-                                <span class="stat-label">En Yüksek Skor</span>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -357,6 +291,15 @@
                                     <span class="ai-name">AI Asistan</span>
                                     <span class="ai-status">Çevrimiçi</span>
                                 </div>
+                            </div>
+                            <button id="btn-music" class="btn-music" onclick="app.toggleMusic()" title="Müzik Aç/Kapat">
+                                🎵
+                            </button>
+                            <div class="user-profile">
+                                <img src="assets/avatars/avatar_1.png" alt="Avatar" class="profile-avatar"
+                                    id="header-avatar-chat" onclick="app.toggleAvatarPicker()">
+                                <span class="user-name" id="display-user-name-chat">Misafir</span>
+                                <!-- Score removed from chat pane to avoid ID duplicate -->
                             </div>
 
                             <button id="btn-lang-toggle" class="lang-toggle-btn mode-en-tr"
@@ -552,6 +495,80 @@
                 </div>
             </div>
 
+            <!-- LOGIN / REGISTER MODAL -->
+            <div id="view-login-modal" class="modal-overlay hidden" style="z-index: 2000;">
+                <div class="modal-content" style="max-width:400px; padding:2rem;">
+                    <button class="btn-icon"
+                        onclick="document.getElementById('view-login-modal').classList.add('hidden')"
+                        style="position:absolute; top:1rem; right:1rem;">&times;</button>
+
+                    <div style="text-align:center; margin-bottom:1.5rem;">
+                        <span style="font-size:3rem;">🔐</span>
+                        <h2 id="auth-title" style="margin-top:0.5rem; color:white;">Hesap Girişi</h2>
+                        <p id="auth-subtitle" style="color:var(--text-secondary);">Skorlarını kaydetmek ve sıralamaya
+                            girmek için giriş yap.</p>
+                    </div>
+
+                    <!-- Remembered Account View -->
+                    <div id="remembered-account-view" class="hidden">
+                        <div
+                            style="background:rgba(255,255,255,0.05); padding:1rem; border-radius:12px; margin-bottom:1.5rem; text-align:center; border:1px solid var(--border-glass);">
+                            <div style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:0.3rem;">Kayıtlı
+                                Hesap:</div>
+                            <div id="remembered-email-display"
+                                style="font-weight:bold; color:var(--accent-gold); font-size:1.1rem; word-break:break-all;">
+                                ...</div>
+                        </div>
+                        <input type="password" id="rem-login-password" class="landing-input"
+                            placeholder="Şifrenizi girin" style="margin-bottom:1rem;">
+                        <button class="btn btn-primary" onclick="app.submitLogin(true)"
+                            style="width:100%; padding:0.8rem;">Giriş Yap &rarr;</button>
+                        <button class="btn btn-text" onclick="app.resetRememberedEmail()"
+                            style="width:100%; margin-top:1rem; font-size:0.8rem; opacity:0.7;">Başka bir hesapla giriş
+                            yap</button>
+                    </div>
+
+                    <!-- Standard Auth View -->
+                    <div id="standard-auth-view">
+                        <!-- Tabs -->
+                        <div id="auth-tabs"
+                            style="display:flex; justify-content:center; gap:1rem; margin-bottom:1.5rem; border-bottom:1px solid var(--border-glass); padding-bottom:0.5rem;">
+                            <button id="tab-login" class="btn-text active" onclick="app.switchAuthTab('login')"
+                                style="color:var(--accent-gold); font-weight:bold; border-bottom:2px solid var(--accent-gold);">Giriş
+                                Yap</button>
+                            <button id="tab-register" class="btn-text" onclick="app.switchAuthTab('register')"
+                                style="color:var(--text-secondary);">Kayıt Ol</button>
+                        </div>
+
+                        <!-- Login Form -->
+                        <div id="form-login">
+                            <input type="email" id="login-email" class="landing-input" placeholder="E-Posta Adresi"
+                                style="margin-bottom:1rem;">
+                            <input type="password" id="login-password" class="landing-input" placeholder="Şifre"
+                                style="margin-bottom:1rem;">
+                            <button class="btn btn-primary" onclick="app.submitLogin()"
+                                style="width:100%; padding:0.8rem;">Giriş Yap &rarr;</button>
+                        </div>
+
+                        <!-- Register Form -->
+                        <div id="form-register" class="hidden">
+                            <input type="text" id="reg-username" class="landing-input"
+                                placeholder="Oyun İsmin (Görünecek Ad)" style="margin-bottom:1rem;">
+                            <input type="email" id="reg-email" class="landing-input" placeholder="E-Posta Adresi"
+                                style="margin-bottom:1rem;">
+                            <input type="password" id="reg-password" class="landing-input"
+                                placeholder="Şifre (En az 6 karakter)" style="margin-bottom:1rem;">
+                            <button class="btn btn-primary" onclick="app.submitRegister()"
+                                style="width:100%; padding:0.8rem;">Kayıt Ol &rarr;</button>
+                        </div>
+                    </div>
+
+                    <p id="auth-error-msg"
+                        style="color:#ef4444; font-size:0.9rem; margin-top:1rem; text-align:center; min-height:1.2em;">
+                    </p>
+                </div>
+            </div>
+
             <!-- WORD LIST VIEW -->
             <div id="view-list" class="view hidden">
                 <div class="list-header">
@@ -592,7 +609,36 @@
                 <div id="word-list-items" class="word-list-container">
                     <!-- Items JS -->
                 </div>
+            </div>
 
+            <!-- GLOBAL LEADERBOARD VIEW (Dedicated for Cups) -->
+            <div id="view-global-leaderboard" class="view hidden">
+                <div class="leaderboard-container" style="max-width:600px; margin:0 auto; padding-top:2rem;">
+                    <div class="lb-header" style="text-align:center; margin-bottom:2rem;">
+                        <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Geri"
+                            style="position:absolute; top:1rem; left:1rem;">
+                            &larr;
+                        </button>
+                        <h2
+                            style="font-size:2rem; display:flex; justify-content:center; align-items:center; gap:0.5rem; color:var(--accent-gold);">
+                            <span>🏆</span> Global Sıralama
+                        </h2>
+                        <p style="color:var(--text-secondary);">En çok Kupaya Sahip Oyuncular</p>
+                    </div>
+
+                    <div class="leaderboard-card"
+                        style="background:var(--bg-card); border-radius:16px; padding:1rem; border:1px solid var(--border-glass);">
+                        <div class="lb-table-header"
+                            style="display:grid; grid-template-columns: 50px 1fr 100px; padding:0.5rem; border-bottom:1px solid var(--border-glass); color:var(--text-secondary); font-weight:bold;">
+                            <span>#</span>
+                            <span>Oyuncu</span>
+                            <span style="text-align:right;">Kupa</span>
+                        </div>
+                        <ul id="global-leaderboard-list" style="list-style:none; padding:0; margin:0;">
+                            <li style="padding:1rem; text-align:center;">Yükleniyor...</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <!-- LEVEL MAP VIEW -->
@@ -944,6 +990,36 @@
                 </div>
             </div>
 
+            <!-- LEADERBOARD VIEW (New) -->
+            <div id="view-leaderboard" class="view hidden">
+                <div class="modes-header-group" style="text-align:center; margin-top:4rem; margin-bottom:2rem;">
+                    <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Geri"
+                        style="position:absolute; top:2rem; left:2rem;">
+                        &larr;
+                    </button>
+                    <h2 style="font-size:2.5rem; color:var(--accent-gold);">🏆 Liderlik Tablosu</h2>
+                    <p style="color:var(--text-secondary);">En iyi oyuncular</p>
+                </div>
+
+                <div class="game-card" style="max-width:600px; margin:0 auto; padding:0;">
+                    <table class="leaderboard-table" style="width:100%; border-collapse:collapse;">
+                        <thead>
+                            <tr style="background:rgba(255,255,255,0.05); color:var(--text-secondary);">
+                                <th style="padding:1rem; text-align:left;">#</th>
+                                <th style="padding:1rem; text-align:left;">Oyuncu</th>
+                                <th style="padding:1rem; text-align:left;">Puan</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+                            <!-- Populated by JS -->
+                            <tr>
+                                <td colspan="3" style="text-align:center; padding:2rem;">Yükleniyor...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
             <!-- ADMIN VIEW -->
             <div id="view-admin" class="view hidden">
                 <h2 style="text-align:center; margin-bottom:2rem; color:var(--accent-gold)">Yönetici Paneli</h2>
@@ -957,6 +1033,12 @@
                     <button class="btn btn-secondary" onclick="app.resetProgress()">
                         <span style="font-size:2rem; display:block">🗑️</span>
                         İlerlemeyi Sıfırla
+                    </button>
+
+                    <button class="btn btn-secondary" onclick="app.resetTrophyLeaderboard()"
+                        style="border-color: #ef4444; color: #ef4444;">
+                        <span style="font-size:2rem; display:block">🏆</span>
+                        Kupa Tablosunu Sıfırla
                     </button>
 
                     <button class="btn btn-primary" onclick="app.openModeSelection()"
@@ -1044,55 +1126,6 @@
         </main>
     </div>
 
-    <!-- SETTINGS VIEW (New) -->
-    <div id="view-settings" class="view hidden">
-        <div class="modes-split-layout"
-            style="justify-content:center; align-items:center; flex-direction:column; padding-top:4rem;">
-
-            <div class="modes-header-group" style="text-align:center; margin-bottom:2rem;">
-                <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Geri"
-                    style="position:absolute; top:2rem; left:2rem;">
-                    &larr;
-                </button>
-                <h2 style="font-size:2.5rem;">Ayarlar</h2>
-                <p style="color:var(--text-secondary);">Yapay zeka ve diğer ayarlar.</p>
-            </div>
-
-            <div class="game-card" style="width:100%; max-width:600px; padding:2rem;">
-                <div id="admin-api-settings" class="hidden">
-                    <h3 style="margin-bottom:1rem; color:var(--accent-gold);">🤖 Yapay Zeka (Gemini AI)</h3>
-                    <p style="margin-bottom:1rem; font-size:0.9rem; color:var(--text-secondary);">
-                        Daha akıllı sorular ve cevap kontrolü için Google Gemini API Anahtarınızı girin.<br>
-                        <a href="https://aistudio.google.com/app/apikey" target="_blank"
-                            style="color:var(--neon-blue);">Anahtar almak için tıklayın (Ücretsiz)</a>
-                    </p>
-
-                    <div class="form-group">
-                        <label style="display:block; margin-bottom:0.5rem;">API Anahtarı (API Key)</label>
-                        <input type="password" id="settings-api-key" placeholder="AIzaSy..."
-                            style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.3); border:1px solid var(--border-glass); color:white;">
-                    </div>
-
-                    <div class="form-group" style="margin-top:1rem;">
-                        <label style="display:block; margin-bottom:0.5rem; color:var(--text-secondary);">Yedek API
-                            Anahtarı
-                            (Opsiyonel)</label>
-                        <input type="password" id="settings-api-key-2" placeholder="AIzaSy... (Yedek)"
-                            style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.3); border:1px solid var(--border-glass); color:white;">
-                        <small style="color:var(--text-secondary); display:block; margin-top:5px; font-size:0.75rem;">
-                            İlk anahtarın kotası dolarsa otomatik olarak bu kullanılır.
-                        </small>
-                    </div>
-
-                    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:flex-end;">
-                        <button class="btn btn-secondary" onclick="app.testGeminiConnection()">Test Et ⚡</button>
-                        <button class="btn btn-primary" onclick="app.saveSettings()">Kaydet 💾</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
     </div>
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
@@ -1102,13 +1135,13 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
 
-    <script src="js/words.js?v=20"></script>
+    <script src="js/words.js?v=22"></script>
     <script src="js/basic_vocabulary.js"></script>
-    <script src="js/sentences.js?v=2"></script>
-    <script src="js/grammar.js?v=TIMESTAMP_HERE"></script>
-    <script src="js/grammar_explanations.js?v=TIMESTAMP_HERE"></script>
+    <script src="js/sentences.js?v=4"></script>
+    <script src="js/grammar.js?v=33"></script>
+    <script src="js/grammar_explanations.js?v=33"></script>
     <script src="js/books.js"></script>
-    <script src="js/app.js?v=TIMESTAMP_HERE"></script>
+    <script src="js/app.js?v=34"></script>
 
     <!-- DICTIONARY TOAST (Re-injected) -->
     <div id="dict-toast" class="dict-toast">
