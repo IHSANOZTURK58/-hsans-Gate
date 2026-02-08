@@ -308,6 +308,15 @@ body {
     .trophy-btn {
         padding: 0.3rem 0.5rem;
     }
+
+    /* REDUCED ICONS ON MOBILE (User Request) */
+    .module-card .icon-box {
+        font-size: 2rem !important;
+        /* Reduced from 2.5rem */
+        margin-bottom: 0.5rem;
+    }
+
+
 }
 
 
@@ -4060,4 +4069,92 @@ input:focus {
         text-shadow: none !important;
         /* Remove glow */
     }
+}
+
+/* CLEAN AUTH DESIGN (User Request: Human-Like, Non-Neon) */
+#view-login-modal .modal-content {
+    background: #18181b;
+    /* Zinc 950 - Neutral Dark */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+    /* Standard Modern Radius */
+    padding: 2.5rem;
+}
+
+#view-login-modal h2 {
+    color: #f4f4f5;
+    /* Zinc 100 */
+    font-weight: 600;
+}
+
+#view-login-modal p {
+    color: #a1a1aa;
+    /* Zinc 400 */
+}
+
+/* Override Inputs */
+#view-login-modal .landing-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    /* Standard rounded corners */
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+    box-shadow: none;
+    transition: all 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+#view-login-modal .landing-input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-gold);
+    /* Warm focus */
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#view-login-modal .landing-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Override Buttons */
+#view-login-modal .btn-primary {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    /* Warm Gold/Orange */
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s;
+}
+
+#view-login-modal .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+}
+
+#view-login-modal .btn-text {
+    color: #a1a1aa;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+#view-login-modal .btn-text:hover {
+    color: var(--accent-gold);
+    background: rgba(245, 158, 11, 0.1);
+}
+
+/* Tabs */
+#auth-tabs button {
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+}
+
+#auth-tabs button.active {
+    color: var(--accent-gold) !important;
+    border-bottom-color: var(--accent-gold) !important;
 }

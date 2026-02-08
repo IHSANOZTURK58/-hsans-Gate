@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Preload Critical Images -->
+    <link rel="preload" as="image" href="assets/game-bg-galaxy.png">
+    <link rel="preload" as="image" href="assets/modes-bg.png">
+    <link rel="preload" as="image" href="assets/writing-bg.png">
 </head>
 
 <body>
@@ -269,7 +274,8 @@
 
                             <div class="task-input-wrapper">
                                 <textarea id="writing-direct-input" class="task-textarea"
-                                    placeholder="Türkçesi nedir?..." rows="2"></textarea>
+                                    placeholder="Türkçesi nedir?..." rows="2"
+                                    onkeydown="if(event.key === 'Enter') { event.preventDefault(); app.checkWritingInputAnswer(); }"></textarea>
                             </div>
                         </div>
 

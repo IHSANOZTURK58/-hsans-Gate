@@ -304,6 +304,58 @@
     100% {
         box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
     }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake-hard {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateX(10px) rotate(5deg);
+    }
+
+    75% {
+        transform: translateX(-10px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.correct-anim {
+    animation: pop 0.4s ease-out;
+    border-color: var(--neon-green) !important;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.5) !important;
+}
+
+.wrong-anim {
+    animation: shake-hard 0.4s ease-in-out;
+    border-color: var(--neon-red) !important;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5) !important;
 }
 
 
@@ -319,8 +371,8 @@
         flex: 1;
         /* Takes remaining space */
         padding: 1rem;
-        order: 1;
-        /* Show task first */
+        order: 2;
+        /* Show task below chat */
         border-right: none;
         border-bottom: 1px solid var(--border-glass);
     }
@@ -328,10 +380,12 @@
     .chat-pane {
         width: 100%;
         height: 35vh;
-        /* Fixed height for chat on bottom */
-        order: 2;
+        /* Fixed height for chat on top */
+        order: 1;
+        /* Show chat first */
         border-left: none;
-        border-top: 1px solid var(--border-glass);
+        border-top: none;
+        border-bottom: 1px solid var(--border-glass);
     }
 
     .task-question-text {
@@ -348,5 +402,12 @@
     .btn-action.next {
         font-size: 1.2rem;
         padding: 1rem;
+    }
+
+    /* ONLY Reduce Icons in Writing Mode Menu (User Request) */
+    #view-writing-modes .mode-icon {
+        font-size: 2rem !important;
+        /* Reduced from 3rem */
+        margin-bottom: 0.5rem !important;
     }
 }

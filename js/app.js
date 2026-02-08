@@ -74,8 +74,18 @@ const app = {
         this.setupUI();
         this.initSFX();
 
-        // Start at Landing
-        this.state.currentView = 'landing';
+        // OPTIMIZATION: Check cache to skip Landing Page
+        const cachedName = localStorage.getItem('cached_username');
+        if (cachedName) {
+            this.state.currentView = 'dashboard';
+            this.state.playerName = cachedName;
+            // Update Headers immediately
+            const headerName = document.getElementById('display-user-name-header');
+            if (headerName) headerName.textContent = cachedName;
+        } else {
+            // Start at Landing if no cache
+            this.state.currentView = 'landing';
+        }
 
         // Force hide gameover modal
         const modal = document.getElementById('view-gameover');
@@ -99,7 +109,12 @@ const app = {
         if (stored) {
             const data = JSON.parse(stored);
             this.state.highScore = data.highScore || 0;
-            this.state.score = data.score || 0; // Load Total Score
+            // If we have a cached username, we expect cloud data, so start with 0 to avoid flash of old local data
+            if (localStorage.getItem('cached_username')) {
+                this.state.score = 0;
+            } else {
+                this.state.score = data.score || 0;
+            }
             this.state.favorites = data.favorites || [];
             this.state.currentLevel = data.currentLevel || 1;
             this.state.maxLevel = data.maxLevel || this.state.currentLevel || 1; // Backwards compat
@@ -144,6 +159,29 @@ const app = {
         }
     },
 
+    saveGlobalScore() {
+        const user = firebase.auth().currentUser;
+        console.log("DEBUG: saveGlobalScore called. User UID:", user ? user.uid : 'NULL', "Score:", this.state.score);
+        if (user) {
+            // 1. Write to User Profile (Persistence) - This runs on next refresh
+            db.collection('users').doc(user.uid).set({
+                score: this.state.score,
+                username: this.state.playerName || user.displayName
+            }, { merge: true })
+                .then(() => console.log("✅ Users collection write SUCCESS"))
+                .catch((error) => console.error("❌ Users collection write FAILED:", error));
+
+            // 2. Write to Leaderboard (Public)
+            db.collection('scores').doc(user.uid).set({
+                score: this.state.score,
+                name: this.state.playerName || user.displayName,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            }, { merge: true })
+                .then(() => console.log("✅ Scores collection write SUCCESS"))
+                .catch((error) => console.error("❌ Scores collection write FAILED:", error));
+        }
+    },
+
     setupUI() {
         document.addEventListener('dblclick', (e) => e.preventDefault());
 
@@ -151,7 +189,8 @@ const app = {
         // Input validation for Name
         const nameInput = document.getElementById('landing-player-name');
         if (nameInput) {
-            nameInput.value = localStorage.getItem('last_player_name') || '';
+            // value is empty by default, only fill if explicitly desired (removing auto-fill for security)
+            nameInput.value = '';
             nameInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') this.enterDashboard();
             });
@@ -180,14 +219,22 @@ const app = {
         this.state.isAdmin = false;
         this.state.playerName = null;
 
+        // Clear Local Session Data to prevent auto-login
+        localStorage.removeItem('last_player_name');
+        localStorage.removeItem('player_avatar');
+        localStorage.removeItem('cached_username'); // CRITICAL: This was causing auto-login
+
+        // We keep 'gemini_api_key' and 'gemini_model' for convenience.
+
         try {
-            await auth.signOut();
+            await firebase.auth().signOut();
             console.log("User signed out successfully.");
         } catch (e) {
             console.error("SignOut Error:", e);
         }
 
         this.showLanding();
+        window.location.reload(); // Force reload to clear memory state completely
     },
 
     showGameOverModal() {
@@ -212,6 +259,7 @@ const app = {
     },
 
     showLanding() {
+        this.state.isAdmin = false;
         this.state.currentView = 'landing';
         // Reset login state to choices
         const choices = document.getElementById('login-choices');
@@ -312,17 +360,34 @@ const app = {
                 // Real User Logged In
                 console.log("Logged in as:", user.email);
 
-                // Load User Profile
+                // OPTIMIZATION: Check for cached username to load instantly
+                const cachedName = localStorage.getItem('cached_username');
+                if (cachedName) {
+                    this.state.playerName = cachedName;
+                    const headerName = document.getElementById('display-user-name-header');
+                    if (headerName) headerName.textContent = cachedName;
+
+                    if (this.state.currentView === 'menu' || this.state.currentView === 'landing') {
+                        this.enterDashboard();
+                    }
+                }
+
+                // Load User Profile (Async - Background Update)
                 let username = user.displayName;
 
-                // If displayName is missing (e.g. freshly created before updateProfile finished), fetch from DB
+                // If displayName is missing, fetch from DB
                 if (!username) {
-                    const doc = await db.collection('users').doc(user.uid).get();
-                    if (doc.exists) username = doc.data().username;
+                    try {
+                        const doc = await db.collection('users').doc(user.uid).get();
+                        if (doc.exists) username = doc.data().username;
+                    } catch (e) {
+                        console.error("Profile fetch error", e);
+                    }
                 }
 
                 if (username) {
                     this.state.playerName = username;
+                    localStorage.setItem('cached_username', username); // Save for next time
 
                     // Update UI Names
                     const headerName = document.getElementById('display-user-name-header');
@@ -330,28 +395,55 @@ const app = {
                     if (headerName) headerName.textContent = username;
                     if (welcomeName) welcomeName.textContent = username;
 
-                    // Auto-enter dashboard if on landing page
-                    if (this.state.currentView === 'menu' || this.state.currentView === 'landing') {
+                    // Auto-enter dashboard if on landing page and not already entered via cache
+                    if (!cachedName && (this.state.currentView === 'menu' || this.state.currentView === 'landing')) {
                         this.enterDashboard();
                     }
 
                     // Setup Listeners
                     this.setupFirebaseListener();
 
-                    // Fetch synced score if available
-                    const userDoc = await db.collection('users').doc(user.uid).get();
-                    if (userDoc.exists && userDoc.data().score) {
-                        this.state.score = userDoc.data().score;
-                        this.updateHeaderStats();
+                    // SYNC: Fetch from both 'users' (profile) and 'scores' (leaderboard)
+                    // Use the HIGHER value to heal any discrepancies
+                    try {
+                        console.log("DEBUG: Attempting to fetch scores for UID:", user.uid);
+                        const [userDoc, scoreDoc] = await Promise.all([
+                            db.collection('users').doc(user.uid).get(),
+                            db.collection('scores').doc(user.uid).get()
+                        ]);
+
+                        let finalScore = 0;
+                        console.log("DEBUG: Profile Score:", userDoc.exists ? userDoc.data().score : 'N/A');
+                        console.log("DEBUG: Leaderboard Score:", scoreDoc.exists ? scoreDoc.data().score : 'N/A');
+
+                        if (userDoc.exists && userDoc.data().score) finalScore = Math.max(finalScore, Number(userDoc.data().score) || 0);
+                        if (scoreDoc.exists && scoreDoc.data().score) finalScore = Math.max(finalScore, Number(scoreDoc.data().score) || 0);
+
+                        console.log("DEBUG: Calculated Final Score:", finalScore);
+
+                        if (finalScore > 0) {
+                            console.log(`Synced Score: ${finalScore} (Healed from Profile/Leaderboard)`);
+                            this.state.score = finalScore;
+                            this.updateHeaderStats();
+
+                            // If profile was stale (e.g. 5 vs 8), update it now
+                            if (userDoc.exists && userDoc.data().score < finalScore) {
+                                this.saveGlobalScore();
+                            }
+                        }
+                    } catch (e) {
+                        console.error("Score sync error:", e);
                     }
                 }
+
+
             } else {
                 console.log("No active user. Waiting for login.");
                 // Reset header and welcome even if no user
                 const headerName = document.getElementById('display-user-name-header');
                 const welcomeName = document.getElementById('display-user-name-welcome');
                 if (headerName) headerName.textContent = 'Misafir';
-                if (welcomeName) welcomeName.textContent = 'Oyuncu';
+                if (welcomeName) welcomeName.textContent = 'Misafir';
 
                 // Clear state
                 this.state.playerName = null;
@@ -396,7 +488,7 @@ const app = {
     },
 
     setupFirebaseListener() {
-        // Compat Syntax
+        // Read from 'scores' collection for Rush Mode Leaderboard (Modes View)
         db.collection("scores")
             .orderBy("score", "desc")
             .limit(this.MAX_LEADERBOARD)
@@ -788,7 +880,7 @@ const app = {
             } else if (action === 'adminAccess') {
                 this.state.isAdmin = true;
                 this.state.playerName = "Yönetici";
-                this.state.currentView = 'dashboard';
+                this.state.currentView = 'admin';
 
                 // Update UI Names for Admin
                 const headerName = document.getElementById('display-user-name-header');
@@ -1449,8 +1541,8 @@ const app = {
         list.innerHTML = '<li style="padding:1rem; text-align:center;">Yükleniyor...</li>';
 
         try {
-            // Fetch from "global_scores" collection
-            const snapshot = await db.collection("global_scores")
+            // Fetch from "users" collection for Cup Scores
+            const snapshot = await db.collection("users")
                 .orderBy("score", "desc")
                 .limit(10)
                 .get();
@@ -1465,7 +1557,7 @@ const app = {
 
             snapshot.forEach(doc => {
                 const data = doc.data();
-                const isMe = (data.name === this.state.playerName);
+                const isMe = (data.username === this.state.playerName);
                 const medals = ['🥇', '🥈', '🥉'];
                 let rankIcon = `#${rank}`;
                 if (rank <= 3) rankIcon = medals[rank - 1];
@@ -1480,7 +1572,7 @@ const app = {
 
                 li.innerHTML = `
                     <span style="font-size:1.2rem; text-align:center;">${rankIcon}</span>
-                    <span style="font-weight:bold; color:${isMe ? 'var(--accent-gold)' : 'inherit'}">${data.name}</span>
+                    <span style="font-weight:bold; color:${isMe ? 'var(--accent-gold)' : 'inherit'}">${data.username}</span>
                     <span style="text-align:right; font-weight:bold; color:var(--accent-gold);">${data.score} 🏆</span>
                  `;
                 list.appendChild(li);
@@ -1493,36 +1585,7 @@ const app = {
         }
     },
 
-    async saveGlobalScore() {
-        if (!this.state.playerName || this.state.score <= 0) return;
-        if (typeof db === 'undefined') return;
 
-        try {
-            const ref = db.collection("global_scores");
-            // Check existing
-            const snapshot = await ref.where("name", "==", this.state.playerName).limit(1).get();
-
-            if (!snapshot.empty) {
-                const doc = snapshot.docs[0];
-                // Only update if current score is higher (though global score is cumulative, so likely always update)
-                // Actually, global score IS current state.score.
-                await doc.ref.update({
-                    score: this.state.score,
-                    lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
-                });
-                console.log("Global Cup Score Updated:", this.state.score);
-            } else {
-                await ref.add({
-                    name: this.state.playerName,
-                    score: this.state.score,
-                    createdAt: firebase.firestore.FieldValue.serverTimestamp()
-                });
-                console.log("Global Cup Score Created:", this.state.score);
-            }
-        } catch (e) {
-            console.error("Save Global Score Error:", e);
-        }
-    },
 
     // Legacy Rush Mode Leaderboard (Restored & Kept Separate)
     openLeaderboard() {
@@ -1715,22 +1778,30 @@ const app = {
 
     async saveScoreToFirebase() {
         // Save the TOTAL ACCUMULATED SCORE
-        try {
-            // Check if user already has a score entry to update, or just add new?
-            // For now, simple "add" might flood. Better to just use the highest score per user logic in query,
-            // or here we just save the current snapshot.
-            // Let's just double check we are saving state.score which is now persistent/accumulating
+        if (!auth.currentUser) return;
 
+        try {
+            // 1. Update User Profile (Source of Truth)
+            await db.collection("users").doc(auth.currentUser.uid).update({
+                score: this.state.score,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            });
+
+            // 2. Add to Leaderboard History (Optional, or update if we want unique entry per user)
+            // For now, let's keep the history log as is, but maybe limit it?
+            // Actually, for a leaderboard, usually we want the User's Best Score or Current Score.
+            // The `scores` collection seems to be a log.
+            // Let's just log it for now as requested.
             await db.collection("scores").add({
                 name: this.state.playerName,
-                score: this.state.score, // This is now total accumulated
+                uid: auth.currentUser.uid,
+                score: this.state.score,
                 date: new Date().toLocaleDateString('tr-TR'),
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
             });
-            console.log("Total Score saved to Leaderboard!");
+            console.log("Score synced to Profile & Leaderboard!");
         } catch (e) {
-            console.error("Error adding score: ", e);
-            // Silent fail or alert?
+            console.error("Error syncing score: ", e);
         }
     },
 
@@ -2298,14 +2369,15 @@ const app = {
 
         if (isCorrect) {
             this.playSound('correct');
-            // Points System: +10 -> +5 for AI Input
-            this.state.score += 5;
-            this.state.writingScore += 5;
+            // Award 1 point for correct answer
+            this.state.score += 1;
+            this.state.writingScore += 1;
             this.saveData(); // Persist
+            this.updateHeaderStats(); // Update UI immediately
 
             // document.getElementById('writing-input-score').textContent = this.state.writingScore; // REMOVED
 
-            this.updateChat('ai', `✅ <b>Doğru!</b> ${feedback} (+5 Puan)`);
+            this.updateChat('ai', `✅ <b>Doğru!</b> ${feedback} (+1 Puan)`);
 
             btn.textContent = "DEVAM ET ->";
             btn.disabled = false;
@@ -2502,8 +2574,8 @@ const app = {
     },
 
     checkWritingAnswer() {
+        // Check if word is complete
         if (this.state.writingInput.includes(null)) {
-            // Incomplete
             const fb = document.getElementById('writing-feedback');
             fb.textContent = "Kelime tamamlanmadı!";
             fb.style.color = "#ef4444";
@@ -2511,18 +2583,31 @@ const app = {
             return;
         }
 
+        // Get formed word
         const formedWord = this.state.writingInput.map(i => i.char).join('');
         const targetWord = this.state.currentWritingWord.word.toUpperCase();
+        const isCorrect = (formedWord === targetWord);
 
         if (isCorrect) {
             this.playSound('correct');
-            // Points System: +10 -> +3 for Scramble
-            this.state.score += 3;
-            this.state.writingScore += 3;
-            this.saveData(); // Persist immediately
+
+            // AWARD EXACTLY 1 POINT
+            this.state.score = this.state.score + 1;
+            this.state.writingScore = this.state.writingScore + 1;
+
+            // Save and update UI
+            this.saveData();
+            this.updateHeaderStats();
+
+            // Visual feedback
+            const slots = document.querySelectorAll('.writing-slot');
+            slots.forEach(s => {
+                s.classList.add('correct-anim');
+                s.style.borderColor = '#22c55e';
+            });
 
             const fb = document.getElementById('writing-feedback');
-            fb.textContent = "DOĞRU! 🎉 (+3 Puan)";
+            fb.textContent = "DOĞRU! 🎉 (+1 Puan)";
             fb.style.color = "#22c55e";
 
             setTimeout(() => {
@@ -2530,11 +2615,24 @@ const app = {
             }, 1000);
 
         } else {
-            // Wrong
+            // Wrong answer
             this.playSound('wrong');
             const fb = document.getElementById('writing-feedback');
             fb.textContent = "YANLIŞ! Tekrar dene.";
             fb.style.color = "#ef4444";
+
+            const slots = document.querySelectorAll('.writing-slot');
+            slots.forEach(s => {
+                s.classList.add('wrong-anim');
+                s.style.borderColor = '#ef4444';
+            });
+
+            setTimeout(() => {
+                slots.forEach(s => {
+                    s.classList.remove('wrong-anim');
+                    s.style.borderColor = '';
+                });
+            }, 500);
         }
     },
 
@@ -3200,351 +3298,8 @@ const app = {
         this.showDashboard();
     },
 
-    // ======================================
-    // WRITING MODE (FIX)
-    // ======================================
 
-    // 1. INPUT MODE (Split Screen)
-    openWritingModes() {
-        this.state.currentView = 'writing-modes';
-        this.render();
-        this.renderLeaderboard();
-    },
 
-    startWritingInputMode() {
-        this.state.currentView = 'writing-input';
-        this.render();
-        // Show start overlay
-        const overlay = document.getElementById('writing-input-start-overlay');
-        if (overlay) overlay.classList.remove('hidden');
-    },
-
-    beginProWritingSession() {
-        const overlay = document.getElementById('writing-input-start-overlay');
-        if (overlay) overlay.classList.add('hidden');
-
-        this.nextWritingQuestion();
-    },
-
-    nextWritingQuestion() {
-        // RESET BUTTONS
-        const checkBtn = document.getElementById('btn-check-answer');
-        const nextBtn = document.getElementById('btn-next-question');
-        if (checkBtn) checkBtn.classList.remove('hidden');
-        if (nextBtn) nextBtn.classList.add('hidden');
-
-        // Pick a random SENTENCE
-        const sentences = window.SENTENCE_DATA;
-        if (!sentences || sentences.length === 0) {
-            console.error("Sentence data missing!");
-            return;
-        }
-
-        const randomItem = sentences[Math.floor(Math.random() * sentences.length)];
-        this.state.currentWord = randomItem; // Using same state var, but now it's a sentence obj
-
-        // Update UI
-        const questionEl = document.getElementById('input-target-meaning');
-        const inputEl = document.getElementById('writing-direct-input');
-
-        if (questionEl) {
-            // Check direction
-            if (this.state.writingDirection === 'TR_EN') {
-                questionEl.textContent = randomItem.tr;
-                if (inputEl) inputEl.placeholder = "İngilizcesi nedir?";
-            } else {
-                questionEl.textContent = randomItem.en; // Show English
-                if (inputEl) inputEl.placeholder = "Türkçesi nedir?"; // Ask Turkish
-            }
-        }
-
-        if (inputEl) {
-            inputEl.value = '';
-            inputEl.focus();
-            inputEl.disabled = false;
-            // Reset border
-            inputEl.style.borderColor = 'var(--border-glass)';
-        }
-    },
-
-    checkWritingInputAnswer() {
-        const inputEl = document.getElementById('writing-direct-input');
-        if (!inputEl) return;
-
-        const answer = inputEl.value.trim(); // Keep case for display but lower for check
-        if (!answer) return;
-
-        let target = '';
-        if (this.state.writingDirection === 'TR_EN') {
-            target = this.state.currentWord.en;
-        } else {
-            target = this.state.currentWord.tr;
-        }
-
-        // Normalize for comparison (remove punctuation at end if user forgot, lowercase)
-        const cleanAnswer = answer.toLowerCase().replace(/[.,!?]$/, '');
-        const cleanTarget = target.toLowerCase().replace(/[.,!?]$/, '');
-
-        // CHECK ANSWER
-        if (cleanAnswer === cleanTarget) {
-            // Correct
-            this.showFeedback(true);
-            this.state.score += 20; // More points for sentences
-            this.updateHeaderStats();
-            this.saveGlobalScore();
-
-            this.addChatMessage("ai", "Mükemmel! Doğru cevap. 🎉");
-        } else {
-            // Incorrect
-            this.showFeedback(false);
-            this.addChatMessage("ai", `Üzgünüm yanlış. \nDoğrusu: "${target}"`);
-        }
-
-        // SWITCH BUTTONS (Manual Advance)
-        const checkBtn = document.getElementById('btn-check-answer');
-        const nextBtn = document.getElementById('btn-next-question');
-        if (checkBtn) checkBtn.classList.add('hidden');
-        if (nextBtn) nextBtn.classList.remove('hidden');
-
-        // Disable input to prevent changing answer after check
-        inputEl.disabled = true;
-    },
-
-    // 2. SCRAMBLE MODE
-    startWritingMode() {
-        this.state.currentView = 'writing';
-        this.render();
-        this.nextScrambleQuestion();
-    },
-
-    nextScrambleQuestion() {
-        // RESET BUTTONS & FEEDBACK
-        const checkBtn = document.getElementById('btn-scramble-check');
-        const nextBtn = document.getElementById('btn-scramble-next');
-        const clearBtn = document.getElementById('btn-scramble-clear');
-        const feedbackEl = document.getElementById('writing-feedback');
-
-        if (checkBtn) checkBtn.classList.remove('hidden');
-        if (nextBtn) nextBtn.classList.add('hidden');
-        if (clearBtn) clearBtn.disabled = false;
-        if (feedbackEl) {
-            feedbackEl.textContent = '';
-            feedbackEl.className = '';
-        }
-
-        const words = this.getAllWords();
-        if (!words || !words.length) {
-            console.error("No words found for scramble mode");
-            return;
-        }
-
-        const word = words[Math.floor(Math.random() * words.length)];
-        this.state.currentWord = word;
-
-        // UI Setup
-        const questionEl = document.getElementById('writing-target-meaning');
-        if (questionEl) questionEl.textContent = word.meaning;
-        this.renderScrambleSlots(word.word);
-    },
-
-    renderScrambleSlots(word) {
-        const slotsContainer = document.getElementById('writing-slots');
-        const poolContainer = document.getElementById('writing-pool');
-        if (!slotsContainer || !poolContainer) return;
-
-        slotsContainer.innerHTML = '';
-        poolContainer.innerHTML = '';
-
-        const cleanWord = word.replace(/[^a-zA-Z]/g, '').toUpperCase();
-
-        // Slots
-        for (let i = 0; i < cleanWord.length; i++) {
-            const slot = document.createElement('div');
-            slot.className = 'slot';
-            slot.dataset.index = i;
-            slotsContainer.appendChild(slot);
-        }
-
-        // Pool (Scrambled)
-        const letters = cleanWord.split('').sort(() => Math.random() - 0.5);
-        letters.forEach((char, index) => {
-            const tile = document.createElement('div');
-            tile.className = 'letter-tile';
-            tile.textContent = char;
-            tile.onclick = () => this.handleScrambleTileClick(tile, char);
-            poolContainer.appendChild(tile);
-        });
-    },
-
-    handleScrambleTileClick(tile, char) {
-        if (tile.classList.contains('used')) return;
-
-        // Find first empty slot
-        const slots = document.querySelectorAll('#writing-slots .slot');
-        for (let slot of slots) {
-            if (!slot.textContent) {
-                slot.textContent = char;
-                slot.classList.add('filled');
-                tile.classList.add('used');
-                break; // Only fill one
-            }
-        }
-    },
-
-    clearWritingSlots() {
-        const slots = document.querySelectorAll('#writing-slots .slot');
-        slots.forEach(s => {
-            s.textContent = '';
-            s.classList.remove('filled');
-        });
-        const tiles = document.querySelectorAll('#writing-pool .letter-tile');
-        tiles.forEach(t => t.classList.remove('used'));
-    },
-    checkWritingAnswer() { // Scramble Check
-        const slots = document.querySelectorAll('#writing-slots .slot');
-        let answer = '';
-        slots.forEach(s => answer += s.textContent);
-
-        if (!this.state.currentWord) return;
-
-        const target = this.state.currentWord.word.replace(/[^a-zA-Z]/g, '').toUpperCase();
-        const feedbackEl = document.getElementById('writing-feedback');
-
-        if (answer === target) {
-            // Correct
-            if (feedbackEl) {
-                feedbackEl.textContent = "DOĞRU! 🎉";
-                feedbackEl.style.color = "var(--neon-green)";
-            }
-
-            this.state.score += 5;
-            this.saveGlobalScore(); // Sync
-
-            // Switch Buttons
-            const checkBtn = document.getElementById('btn-scramble-check');
-            const nextBtn = document.getElementById('btn-scramble-next');
-            const clearBtn = document.getElementById('btn-scramble-clear');
-
-            if (checkBtn) checkBtn.classList.add('hidden');
-            if (nextBtn) nextBtn.classList.remove('hidden');
-            if (clearBtn) clearBtn.disabled = true; // No clearing after correct
-
-        } else {
-            // Incorrect
-            if (feedbackEl) {
-                feedbackEl.textContent = "Yanlış, tekrar dene! ❌";
-                feedbackEl.style.color = "var(--neon-red)";
-
-                // Shake effect
-                const card = document.querySelector('#view-writing .game-card');
-                if (card) {
-                    card.style.transform = "translateX(10px)";
-                    setTimeout(() => card.style.transform = "translateX(0)", 100);
-                    setTimeout(() => card.style.transform = "translateX(-10px)", 200);
-                    setTimeout(() => card.style.transform = "translateX(0)", 300);
-                }
-            }
-            // Don't clear slots automatically, let user fix it
-        }
-    },
-
-    // Helpers
-    addChatMessage(sender, text) {
-        const container = document.getElementById('ai-chat-messages');
-        if (container) {
-            const bubble = document.createElement('div');
-            bubble.className = `chat-bubble ${sender}`;
-            bubble.textContent = text;
-            container.appendChild(bubble);
-            container.scrollTop = container.scrollHeight;
-        }
-    },
-
-    speakCurrentWord() {
-        if (!this.state.currentWord) return;
-
-        let text = '';
-        if (this.state.currentWord.word) {
-            text = this.state.currentWord.word; // Word object
-        } else if (this.state.currentWord.en) {
-            text = this.state.currentWord.en; // Sentence object
-        }
-
-        if (text) {
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'en-US';
-            window.speechSynthesis.speak(utterance);
-        }
-    },
-    showFeedback(isCorrect) {
-        // Visual feedback (border flash etc)
-        const inputEl = document.getElementById('writing-direct-input');
-        if (inputEl) {
-            inputEl.style.borderColor = isCorrect ? 'var(--neon-green)' : 'var(--neon-red)';
-            setTimeout(() => inputEl.style.borderColor = 'var(--border-glass)', 1000);
-        }
-    },
-
-    toggleWritingDirection() {
-        this.state.writingDirection = this.state.writingDirection === 'EN_TR' ? 'TR_EN' : 'EN_TR';
-        // Refresh question
-        this.nextWritingQuestion();
-
-        // Toggle arrow icon visual
-        const arrow = document.getElementById('toggle-arrow');
-        if (arrow) arrow.style.transform = this.state.writingDirection === 'TR_EN' ? 'rotate(180deg)' : 'rotate(0deg)';
-    },
-
-    goBackFromWriting() {
-        this.openWritingModes();
-    },
-
-    handleWritingKeyPress(e) {
-        // Only if in scramble mode view
-        if (this.state.currentView !== 'writing') return;
-
-        const char = e.key.toUpperCase();
-        if (/^[A-Z]$/.test(char)) {
-            // Find an unused tile with this char
-            const tiles = Array.from(document.querySelectorAll('#writing-pool .letter-tile'));
-            const matchingTile = tiles.find(t => t.textContent === char && !t.classList.contains('used'));
-
-            if (matchingTile) {
-                this.handleScrambleTileClick(matchingTile, char);
-            }
-        } else if (e.key === 'Backspace') {
-            // Remove last filled slot
-            const filledSlots = Array.from(document.querySelectorAll('#writing-slots .slot.filled'));
-            if (filledSlots.length > 0) {
-                const lastSlot = filledSlots[filledSlots.length - 1];
-                const charToRemove = lastSlot.textContent;
-
-                lastSlot.textContent = '';
-                lastSlot.classList.remove('filled');
-
-                // Free up the tile (find last used tile with this char to be safe)
-                const usedTiles = Array.from(document.querySelectorAll('#writing-pool .letter-tile.used'));
-                const tileToFree = usedTiles.reverse().find(t => t.textContent === charToRemove);
-                if (tileToFree) {
-                    tileToFree.classList.remove('used');
-                }
-            }
-        } else if (e.key === 'Enter') {
-            this.checkWritingAnswer();
-        }
-    },
-
-    getAuthErrorMessage(code) {
-        switch (code) {
-            case 'auth/email-already-in-use': return "Bu e-posta zaten kullanılıyor.";
-            case 'auth/user-not-found': return "Kullanıcı bulunamadı.";
-            case 'auth/weak-password': return "Şifre çok zayıf.";
-            case 'auth/operation-not-allowed': return "Giriş yöntemi kapalı.";
-            case 'auth/network-request-failed': return "Bağlantı hatası.";
-            case 'auth/too-many-requests': return "Çok fazla deneme! Biraz bekleyin.";
-            default: return "Bir hata oluştu.";
-        }
-    }
 };
 
 window.onload = () => {
