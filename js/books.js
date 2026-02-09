@@ -4,6 +4,7 @@ window.BOOK_DATA = {
         author: "Sarah Smith",
         level: "A1",
         cover: "🐶",
+        color: "#4a69bd", // Blue
         description: "A heartwarming story about a boy and a lost dog.",
         pages: [
             `<h3>Chapter 1: A Sunny Morning</h3>
@@ -111,6 +112,7 @@ window.BOOK_DATA = {
         author: "Aesop's Fables (Adapted)",
         level: "A1",
         cover: "🦁",
+        color: "#e67e22", // Orange
         description: "A simple story about friendship and kindness.",
         pages: [
             `<h3>Page 1: The Sleeping Lion</h3>
@@ -148,6 +150,7 @@ window.BOOK_DATA = {
         author: "James Wilson",
         level: "A2",
         cover: "🕰️",
+        color: "#2c3e50", // Midnight Blue
         description: "A group of friends find a secret in an old house.",
         pages: [
             `<h3>Chapter 1: The Haunted House</h3>
@@ -255,6 +258,7 @@ window.BOOK_DATA = {
         author: "O. Henry (Simplified)",
         level: "A2",
         cover: "🎁",
+        color: "#c0392b", // Red
         description: "A touching Christmas story about love and sacrifice.",
         pages: [
             `<h3>Chapter 1: The Problem</h3>
@@ -304,6 +308,7 @@ window.BOOK_DATA = {
         author: "Daniel Defoe",
         level: "B1",
         cover: "🏝️",
+        color: "#16a085", // Teal
         description: "The classic story of survival on a deserted island.",
         pages: [
             `<h3>Chapter 1: The Storm</h3>
@@ -411,6 +416,7 @@ window.BOOK_DATA = {
         author: "Mark Twain (Excerpt)",
         level: "B1",
         cover: "🖌️",
+        color: "#f39c12", // Sun Flower
         description: "Tom Sawyer's clever trick with the fence.",
         pages: [
             `<h3>Chapter 1: Saturday Morning Punishment</h3>
@@ -461,6 +467,7 @@ window.BOOK_DATA = {
         author: "Arthur Conan Doyle",
         level: "B2",
         cover: "🕵️‍♂️",
+        color: "#2980b9", // Belize Hole
         description: "The famous detective faces a brilliant adversary.",
         pages: [
             `<h3>Chapter 1: A Visit to Baker Street</h3>
@@ -569,6 +576,7 @@ window.BOOK_DATA = {
         author: "Edgar Allan Poe",
         level: "B2",
         cover: "💓",
+        color: "#8e44ad", // Wisteria
         description: "A chilling tale of guilt and madness.",
         pages: [
             `<h3>Part 1: True—Nervous</h3>
@@ -628,6 +636,7 @@ window.BOOK_DATA = {
         author: "George Orwell",
         level: "C1",
         cover: "👁️",
+        color: "#7f8c8d", // Asbestos
         description: "A dystopian novel about totalitarianism and surveillance.",
         pages: [
             `<h3>Chapter 1: Big Brother is Watching</h3>
@@ -734,6 +743,7 @@ window.BOOK_DATA = {
         author: "Oscar Wilde (Excerpt)",
         level: "C1",
         cover: "🖼️",
+        color: "#1abc9c", // Turquoise
         description: "The corrupting influence of beauty and vanity.",
         pages: [
             `<h3>Chapter 1: The Studio</h3>

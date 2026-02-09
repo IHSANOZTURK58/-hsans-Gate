@@ -6,23 +6,22 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* Arka plan sabit kalır */
     position: relative;
     min-height: 100vh;
     overflow-y: auto;
+    perspective: 1500px;
+    /* For 3D effects */
 }
 
 #view-reading::before {
     content: '';
     position: fixed;
-    /* Overlay de sabit kalsın */
     inset: 0;
-    background: rgba(15, 23, 42, 0.85);
-    /* Deep dark overlay for premium feel and text readability */
+    background: rgba(255, 255, 255, 0.05);
+    /* Very light overlay instead of dark */
     z-index: 0;
 }
 
-/* Ensure content stays above the background */
 #view-reading>* {
     position: relative;
     z-index: 1;
@@ -30,9 +29,11 @@
 
 .game-header-bar {
     padding: 1rem 2rem;
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-glass);
+    background: rgba(255, 255, 255, 0.15);
+    /* Much lighter glass effect */
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(241, 196, 15, 0.3);
+    /* Gold tint border */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,217 +42,345 @@
     z-index: 100;
 }
 
-/* Library Grid */
+/* --- PHYSICAL BOOKSHELF --- */
 .library-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    /* Increased gap */
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.shelf-group {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.shelf-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+    /* Changed from gold for better contrast on lighter bg */
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.shelf-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 1rem 2rem 3rem 2rem;
+    /* Adjusted padding */
+    background: transparent;
+    /* Removed dark background */
+    border-radius: 10px;
+    position: relative;
+    justify-content: center;
+}
+
+
+/* The Wooden Shelf Ledge */
+.shelf-ledge {
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    right: 10px;
+    height: 15px;
+    background: linear-gradient(to bottom, #5d4037, #3e2723);
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .book-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-glass);
-    border-radius: 20px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
-    height: 450px !important;
-    /* Fixed height for uniformity */
-    justify-content: flex-start;
+    width: 160px;
+    /* Slightly smaller as requested */
+    height: 240px;
+    cursor: pointer;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 5;
 }
 
 .book-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
-    border-color: var(--neon-purple);
-    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+    transform: rotateY(25deg) translateY(-15px);
+    z-index: 10;
 }
 
-.book-cover {
-    font-size: 5rem;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+.book-card::before {
+    /* Spine */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.1));
+    transform: rotateY(-90deg);
+    transform-origin: left;
+    background-color: inherit;
+    z-index: 2;
+}
+
+.book-card {
+    background: #2d3436;
+    border-radius: 2px 4px 4px 2px;
 }
 
 .book-level-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: var(--neon-purple);
-    color: white;
-    padding: 0.2rem 0.8rem;
-    border-radius: 12px;
-    font-weight: bold;
-    font-size: 0.9rem;
+    display: none;
+    /* Grouped by shelf now */
+}
+
+.book-cover {
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    pointer-events: none;
 }
 
 .book-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    height: 3.9rem;
-    /* 1.5rem * 1.3 * 2 lines */
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 .book-author {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    height: 1.35rem;
-    /* 1 line fixed */
-    margin-bottom: 1rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 100%;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin-top: 4px;
 }
 
-.book-desc {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    opacity: 0.8;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    height: 5.4rem;
-    /* 0.9rem * 1.5 * 4 lines */
-    line-height: 1.5;
-}
 
-/* Reader View */
+/* Show in tooltip or expanded view if needed */
+
+/* --- PROFESSIONAL BOOK READER --- */
 .reader-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: rgba(17, 24, 39, 0.95);
-    min-height: 100vh;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
+    max-width: 1000px;
+    margin: 1rem auto;
+    /* Reduced margin */
+    perspective: 2000px;
 }
 
-.reader-header {
-    padding: 1rem 2rem;
-    background: rgba(15, 23, 42, 0.9);
-    /* Slightly more transparent to see the background */
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-glass);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+
+.book-frame {
+    background: #fdf6e3;
+    /* Paper color */
+    background-image:
+        linear-gradient(90deg, transparent 50%, rgba(0, 0, 0, 0.05) 50%),
+        radial-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 0);
+    background-size: 100% 100%, 20px 20px;
+    height: 75vh;
+    /* Fixed height for consistent book feel */
+    min-height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), inset 0 0 100px rgba(0, 0, 0, 0.03);
+    position: relative;
     display: flex;
-    align-items: center;
+    overflow: hidden;
+    border: 10px solid #3d2b1f;
+    /* Wood/Leather frame */
+}
+
+/* Spine shadow in middle */
+.book-frame::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.reader-content {
+    width: 100%;
+    height: 100%;
+    /* Fill the frame */
+    padding: 3rem 5rem 6rem 5rem;
+    /* Reduced bottom padding */
+    font-family: 'Outfit', serif;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform-origin: center;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+
+/* Custom Scrollbar for Paper */
+.reader-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.reader-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.reader-content::-webkit-scrollbar-thumb {
+    background: rgba(61, 43, 31, 0.2);
+    border-radius: 10px;
+}
+
+.reader-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(61, 43, 31, 0.4);
+}
+
+/* --- PAGE FLIP ANIMATIONS --- */
+.flip-next {
+    animation: flipNext 0.6s ease-in-out forwards;
+}
+
+.flip-prev {
+    animation: flipPrev 0.6s ease-in-out forwards;
+}
+
+@keyframes flipNext {
+    0% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotateY(-90deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes flipPrev {
+    0% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotateY(90deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+/* Headers and UX */
+.reader-header {
+    background: rgba(15, 23, 42, 0.9);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    margin: 1rem auto;
+    max-width: 900px;
+    display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-glass);
+    gap: 1.5rem;
+    position: relative;
+    z-index: 100;
+    /* Ensure header and its dropdown are above book */
+}
+
+.reader-header-title {
+    flex: 1;
 }
 
 .reader-header-title h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0;
-    color: var(--text-primary);
+    color: white;
 }
 
 .reader-header-title span {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
+    font-size: 0.75rem;
+    color: var(--accent-gold);
 }
 
 /* Dictionary Search Bar */
 .reader-search-box {
     position: relative;
-    flex: 1;
-    max-width: 300px;
+    flex: 1.5;
+    max-width: 350px;
 }
 
 .reader-search-box input {
     width: 100%;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid var(--border-glass);
-    padding: 0.5rem 1rem;
-    padding-right: 2.5rem;
-    border-radius: 20px;
+    padding: 0.6rem 1.2rem;
+    padding-right: 3rem;
+    border-radius: 30px;
     color: white;
     font-size: 0.9rem;
+    transition: all 0.3s;
 }
 
 .reader-search-box input:focus {
     outline: none;
+    background: rgba(255, 255, 255, 0.2);
     border-color: var(--accent-gold);
-    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 
 .search-icon {
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--text-secondary);
+    color: var(--accent-gold);
     pointer-events: none;
 }
 
-/* Reader Content */
-.reader-container {
-    padding: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.reader-content {
-    padding: 3rem 4rem;
-    background: rgba(15, 23, 42, 0.7);
-    /* Glass effect for contrast */
-    backdrop-filter: blur(10px);
-    border-radius: 24px;
-    border: 1px solid var(--border-glass);
-    font-family: 'Merriweather', 'Georgia', serif;
-    font-size: 1.25rem;
-    line-height: 1.9;
-    color: #f1f5f9;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.reader-content h3 {
-    color: var(--accent-gold);
-    font-family: 'Inter', sans-serif;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.reader-content p {
-    margin-bottom: 1.5rem;
-    text-align: justify;
-}
-
-
-
-/* Search Suggestions */
 .search-suggestions {
     position: absolute;
-    top: 100%;
+    top: 110%;
     left: 0;
-    width: 100%;
-    background: rgba(17, 24, 39, 0.95);
+    width: 180%;
+    /* Widen for full words/meanings */
+    min-width: 300px;
+    background: rgba(15, 23, 42, 0.98);
     border: 1px solid var(--border-glass);
-    border-top: none;
-    border-radius: 0 0 12px 12px;
-    max-height: 200px;
+    border-radius: 15px;
+    max-height: 300px;
     overflow-y: auto;
-    z-index: 101;
+    z-index: 1000;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8);
     display: none;
+}
+
+@media (max-width: 768px) {
+    .search-suggestions {
+        width: 100%;
+        left: 0;
+    }
 }
 
 .search-suggestions.show {
@@ -259,20 +388,29 @@
 }
 
 .suggestion-item {
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 1.2rem;
     cursor: pointer;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    transition: background 0.2s;
     color: #cbd5e1;
-}
-
-.suggestion-item:last-child {
-    border-bottom: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s;
+    display: flex;
+    /* Flex layout for text and star */
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
 .suggestion-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--accent-gold);
+    background: rgba(139, 92, 246, 0.2);
+    color: white;
+}
+
+.suggestion-text {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Fallback for very long meanings */
 }
 
 .suggestion-match {
@@ -280,135 +418,117 @@
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .reader-content {
-        padding: 2rem 1.5rem;
-        font-size: 1.1rem;
-        padding-bottom: 150px;
-        /* Space for bottom toast */
-    }
-
-    .library-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .reader-header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-
-    .reader-search-box {
-        max-width: 100%;
-        margin-top: 0.5rem;
-    }
-
-
+.suggestion-star {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.2s;
 }
 
-/* Dedicated Library Back Button (replaces back-btn-top usage here) */
-.library-back-btn {
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    background: rgba(30, 41, 59, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
+.suggestion-star.active {
+    color: var(--accent-gold);
+}
+
+.suggestion-star:hover {
+    transform: scale(1.2);
+}
+
+/* Back Button */
+.reader-back-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-glass);
+    color: white;
     width: 40px;
     height: 40px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.2s;
-    color: white;
-    /* Relative positioning to avoid overlap */
-    position: relative;
-    margin-right: 1rem;
-}
-
-.library-back-btn:hover {
-    background: var(--neon-purple);
-    transform: scale(1.1);
-}
-
-/* Prominent Reader Back Button */
-.reader-back-btn {
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    background: rgba(30, 41, 59, 0.9);
-    border: 1px solid var(--neon-purple);
-    border-radius: 8px;
-    /* More like a button than a circle if desired, or keep circle */
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .reader-back-btn:hover {
     background: var(--neon-purple);
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
-    transform: translateX(-3px);
+    transform: scale(1.1);
 }
 
-/* Pagination Controls */
 .reader-pagination {
+    position: fixed;
+    bottom: 1rem;
+    /* Moved lower */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 23, 42, 0.95);
+    padding: 0.4rem 1rem;
+    /* Sleeker padding */
+    border-radius: 50px;
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
     align-items: center;
-    padding: 1.5rem 2rem;
-    background: rgba(15, 23, 42, 0.9);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid var(--border-glass);
-    position: sticky;
-    bottom: 0;
-    z-index: 50;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    width: auto;
 }
 
 .pagination-btn {
-    background: rgba(139, 92, 246, 0.2);
-    border: 1px solid var(--neon-purple);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
+    width: 40px;
+    /* Reduced size */
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: all 0.3s;
-    font-family: 'Outfit', sans-serif;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .pagination-btn:hover:not(:disabled) {
     background: var(--neon-purple);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+    border-color: white;
+    transform: scale(1.1);
+}
+
+.pagination-btn:active:not(:disabled) {
+    transform: scale(0.95);
 }
 
 .pagination-btn:disabled {
     opacity: 0.3;
+    /* Adjusted for better visibility */
     cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .page-indicator {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    font-weight: 600;
+    font-size: 0.85rem;
+    /* Slightly smaller text */
+    font-weight: 800;
+    color: var(--accent-gold);
+    min-width: 70px;
+    text-align: center;
 }
 
+
+
 @media (max-width: 768px) {
-    .reader-pagination {
-        padding: 1rem;
+    .reader-content {
+        padding: 2rem;
+        font-size: 1.1rem;
     }
 
-    .pagination-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .page-indicator {
-        font-size: 0.85rem;
+    .book-frame {
+        border-width: 4px;
+        min-height: 400px;
     }
 }

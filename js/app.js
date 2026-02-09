@@ -65,6 +65,9 @@ const app = {
         // Writing Input Settings
         writingDirection: 'EN_TR', // 'EN_TR' (Default) or 'TR_EN'
 
+        // Session Score (For Rush Mode Leaderboard)
+        currentSessionScore: 0,
+
         // Navigation History
         previousView: null
     },
@@ -105,31 +108,40 @@ const app = {
 
 
     loadData() {
-        const stored = localStorage.getItem('vocab_game_data_v2');
+        const storageKey = this.state.isAdmin ? 'vocab_game_admin_data' : 'vocab_game_data_v2';
+        const stored = localStorage.getItem(storageKey);
+
         if (stored) {
             const data = JSON.parse(stored);
             this.state.highScore = data.highScore || 0;
-            // If we have a cached username, we expect cloud data, so start with 0 to avoid flash of old local data
-            if (localStorage.getItem('cached_username')) {
+
+            // If we have a cached username and NOT admin, we expect cloud data
+            if (localStorage.getItem('cached_username') && !this.state.isAdmin) {
                 this.state.score = 0;
             } else {
                 this.state.score = data.score || 0;
             }
+
             this.state.favorites = data.favorites || [];
             this.state.currentLevel = data.currentLevel || 1;
-            this.state.maxLevel = data.maxLevel || this.state.currentLevel || 1; // Backwards compat
+            this.state.maxLevel = data.maxLevel || this.state.currentLevel || 1;
             this.state.customWords = data.customWords || [];
         } else {
+            // Fresh state for new sessions (including first-time admin)
+            this.state.score = 0;
+            this.state.highScore = 0;
+            this.state.currentLevel = 1;
+            this.state.maxLevel = 1;
             this.state.favorites = [];
             this.state.customWords = [];
         }
+
         // Load Avatar
-        const savedAvatar = localStorage.getItem('player_avatar');
+        const savedAvatar = localStorage.getItem(this.state.isAdmin ? 'admin_avatar' : 'player_avatar');
         if (savedAvatar) this.state.selectedAvatar = parseInt(savedAvatar);
 
         // Merge Basic Vocabulary
         if (window.BASIC_VOCAB && window.WORD_DATA) {
-            // Avoid duplicates if run multiple times
             if (!window.WORD_DATA._merged) {
                 window.WORD_DATA = window.WORD_DATA.concat(window.BASIC_VOCAB);
                 window.WORD_DATA._merged = true;
@@ -142,6 +154,7 @@ const app = {
     },
 
     saveData() {
+        const storageKey = this.state.isAdmin ? 'vocab_game_admin_data' : 'vocab_game_data_v2';
         const data = {
             highScore: this.state.highScore,
             score: this.state.score, // Save Total Score
@@ -150,16 +163,22 @@ const app = {
             maxLevel: this.state.maxLevel, // SAVE MAX
             customWords: this.state.customWords
         };
-        localStorage.setItem('vocab_game_data_v2', JSON.stringify(data));
+        localStorage.setItem(storageKey, JSON.stringify(data));
+
+        if (this.state.isAdmin) {
+            localStorage.setItem('admin_avatar', this.state.selectedAvatar);
+        }
+
         this.updateHeaderStats();
 
-        // Sync with Global Leaderboard (Cups)
-        if (this.saveGlobalScore) {
+        // Sync with Global Leaderboard (Cups) - ONLY if NOT admin
+        if (!this.state.isAdmin && this.saveGlobalScore) {
             this.saveGlobalScore();
         }
     },
 
     saveGlobalScore() {
+        if (this.state.isAdmin) return; // Never sync admin scores to cloud
         const user = firebase.auth().currentUser;
         console.log("DEBUG: saveGlobalScore called. User UID:", user ? user.uid : 'NULL', "Score:", this.state.score);
         if (user) {
@@ -259,8 +278,16 @@ const app = {
     },
 
     showLanding() {
-        this.state.isAdmin = false;
+        const wasAdmin = this.state.isAdmin;
+        this.state.isAdmin = false; // Reset admin status on landing
         this.state.currentView = 'landing';
+
+        // If we were in an admin session, reload regular data
+        if (wasAdmin) {
+            console.log("Exiting Admin Session, restoring regular data...");
+            this.loadData();
+        }
+
         // Reset login state to choices
         const choices = document.getElementById('login-choices');
         const form = document.getElementById('user-login-form');
@@ -277,7 +304,9 @@ const app = {
         const displayName = document.getElementById('display-user-name');
         if (displayName) displayName.textContent = 'Misafir';
 
-        if (this.updateAvatarUI) this.updateAvatarUI();
+        // Refresh stats/ui
+        this.updateHeaderStats();
+        this.updateAvatarUI();
 
         this.render();
     },
@@ -488,15 +517,22 @@ const app = {
     },
 
     setupFirebaseListener() {
-        // Read from 'scores' collection for Rush Mode Leaderboard (Modes View)
-        db.collection("scores")
+        // Read from 'rush_scores' collection for Rush Mode Leaderboard (Modes View)
+        // This is specific to the "Rush Mode Leaderboard"
+        db.collection("rush_scores")
             .orderBy("score", "desc")
-            .limit(this.MAX_LEADERBOARD)
+            .limit(10) // Increase limit slightly to allow for filtering
             .onSnapshot((snapshot) => {
                 this.state.leaderboard = [];
                 snapshot.forEach((doc) => {
-                    this.state.leaderboard.push(doc.data());
+                    const data = doc.data();
+                    // We removed the 'Creater' filter because now Creater has a legitimate Rush Score (e.g. 5)
+                    // instead of a huge Global Score (e.g. 2000).
+                    this.state.leaderboard.push(data);
                 });
+
+                // Ensure exactly MAX_LEADERBOARD items
+                this.state.leaderboard = this.state.leaderboard.slice(0, this.MAX_LEADERBOARD);
                 this.renderLeaderboard();
             }, (error) => {
                 console.error("Leaderboard Error:", error);
@@ -534,7 +570,8 @@ const app = {
         if (!container) return;
         container.innerHTML = '';
 
-        const totalLevels = 100;
+        const allWords = this.getAllWords();
+        const totalLevels = Math.max(1, Math.floor(allWords.length / 50)); // Dynamically use all words (50 per lvl)
         let maxUnl = this.state.maxLevel || 1;
 
         // Admin Bypass
@@ -748,6 +785,9 @@ const app = {
         this.state.gameMode = targetMode;
         // this.state.score = 0; // REMOVED: Score is now persistent/cumulative
 
+        // Reset Session Score for Rush Mode
+        this.state.currentSessionScore = 0;
+
         // Apply Background based on Mode
         const gameView = document.getElementById('view-game');
         if (gameView) {
@@ -878,9 +918,14 @@ const app = {
             } else if (action === 'addWord') {
                 this.performShowAddWord();
             } else if (action === 'adminAccess') {
+                // ISOLATE ADMIN SESSION
+                console.log("Switching to Admin Session...");
                 this.state.isAdmin = true;
                 this.state.playerName = "Yönetici";
                 this.state.currentView = 'admin';
+
+                // Load Admin-specific data (Trophies: 0 if first time)
+                this.loadData();
 
                 // Update UI Names for Admin
                 const headerName = document.getElementById('display-user-name-header');
@@ -957,8 +1002,11 @@ const app = {
 
     // ADVENTURE MODE LOGIC
     getDifficultyForLevel(lvl) {
-        if (lvl <= 20) return ['A1', 'A2'];
-        if (lvl <= 50) return ['B1', 'B2'];
+        const allWords = this.getAllWords();
+        const totalLevels = Math.floor(allWords.length / 50);
+
+        if (lvl <= totalLevels * 0.3) return ['A1', 'A2'];
+        if (lvl <= totalLevels * 0.7) return ['B1', 'B2'];
         return ['C1', 'C2'];
     },
 
@@ -973,39 +1021,31 @@ const app = {
         const requiredCount = 50;
         let pool = this.getAllWords();
 
-        // 1. Strict Deterministic Sort (Base Consistency)
-        pool.sort((a, b) => String(a.id).localeCompare(String(b.id)));
+        // 1. Difficulty weight map
+        const weights = { 'A1': 1, 'A2': 2, 'B1': 3, 'B2': 4, 'C1': 5, 'C2': 6 };
 
-        let targetDiffs = this.getDifficultyForLevel(level);
+        // 2. Sort pool by Level weight, then Deterministically by ID
+        pool.sort((a, b) => {
+            const wa = weights[a.level || 'A1'] || 1;
+            const wb = weights[b.level || 'A1'] || 1;
+            if (wa !== wb) return wa - wb;
+            return String(a.id).localeCompare(String(b.id));
+        });
 
-        // 2. Filter by Difficulty
-        let candidates = pool.filter(w => targetDiffs.includes(w.level));
+        // 3. Selection: Take a unique slice for this level
+        // Level 1 -> [0, 50), Level 2 -> [50, 100), etc.
+        const startIndex = (level - 1) * requiredCount;
 
-        // 3. Fallback logic: If not enough words in level, expand to neighbors
-        if (candidates.length < requiredCount) {
-            const fallbackDiffs = this.getFallbackDifficulty(targetDiffs);
-            const secondary = pool.filter(w => fallbackDiffs.includes(w.level) && !candidates.includes(w));
-            // Shuffle secondary deterministically
-            this.shuffleArray(secondary, level + 1000);
-            candidates = candidates.concat(secondary);
+        // Safety: If level is too high, loop back but ideally we stop at maxLevel
+        const realStart = startIndex % pool.length;
+        let selectedWords = pool.slice(realStart, realStart + requiredCount);
+
+        // Fallback: If slice is short (at end of pool), fill from start
+        if (selectedWords.length < requiredCount) {
+            selectedWords = selectedWords.concat(pool.slice(0, requiredCount - selectedWords.length));
         }
 
-        // 4. Fallback logic: Global fill
-        if (candidates.length < requiredCount) {
-            const remaining = pool.filter(w => !candidates.includes(w));
-            this.shuffleArray(remaining, level + 2000);
-            candidates = candidates.concat(remaining);
-        }
-
-        // 5. SELECTION: Shuffle candidates deterministically using Level as SEED
-        // This ensures the same 50 words are picked for everyone at Level X
-        this.shuffleArray(candidates, level);
-
-        // Take top 50
-        const selectedWords = candidates.slice(0, requiredCount);
-
-        // 6. PRESENTATION: Shuffle order for gameplay variety (non-seeded)
-        // The set is fixed, but the order they appear is random each attempt
+        // 4. PRESENTATION: Shuffle order for gameplay variety (non-seeded)
         this.shuffleArray(selectedWords);
 
         return selectedWords;
@@ -1252,8 +1292,16 @@ const app = {
         if (isCorrect) {
             btnElement.classList.add('correct');
 
-            // Unified Scoring: +1 for Vocab (All modes including Adventure)
+            // Unified Scoring: +1 for Vocab (Global Score always +1)
             this.state.score += 1;
+
+            // Session Score: +5 for Rush Mode, +1 for others
+            if (this.state.gameMode === 'rush') {
+                this.state.currentSessionScore += 5;
+            } else {
+                this.state.currentSessionScore += 1;
+            }
+
             if (this.state.score > this.state.highScore) this.state.highScore = this.state.score;
 
             this.updateHeaderStats(); // Show new score immediately
@@ -1350,7 +1398,13 @@ const app = {
 
         this.saveData();
 
-        document.getElementById('final-score').textContent = this.state.score;
+        if (this.state.gameMode === 'rush') {
+            document.getElementById('final-score').textContent = this.state.currentSessionScore;
+        } else {
+            // For other modes, keep existing behavior (or change to session score if desired, but user asked for Rush)
+            // Actually, showing session score is better UX overall for "Game Over"
+            document.getElementById('final-score').textContent = this.state.currentSessionScore > 0 ? this.state.currentSessionScore : this.state.score;
+        }
 
         // Show correct header
         const title = document.querySelector('#view-gameover h3');
@@ -1538,17 +1592,16 @@ const app = {
         const list = document.getElementById('global-leaderboard-list');
         if (!list) return;
 
-        list.innerHTML = '<li style="padding:1rem; text-align:center;">Yükleniyor...</li>';
+        list.innerHTML = '<li class="loading-state">Yükleniyor...</li>';
 
         try {
-            // Fetch from "users" collection for Cup Scores
             const snapshot = await db.collection("users")
                 .orderBy("score", "desc")
                 .limit(10)
                 .get();
 
             if (snapshot.empty) {
-                list.innerHTML = '<li style="padding:1rem; text-align:center;">Henüz kupa kazanan yok.</li>';
+                list.innerHTML = '<li class="loading-state">Henüz kupa kazanan yok.</li>';
                 return;
             }
 
@@ -1559,29 +1612,23 @@ const app = {
                 const data = doc.data();
                 const isMe = (data.username === this.state.playerName);
                 const medals = ['🥇', '🥈', '🥉'];
-                let rankIcon = `#${rank}`;
-                if (rank <= 3) rankIcon = medals[rank - 1];
+                let rankDisplay = rank;
+                if (rank <= 3) rankDisplay = `<span class="rank-medal" style="font-size:1.5rem;">${medals[rank - 1]}</span>`;
 
                 const li = document.createElement('li');
                 li.className = `leaderboard-item ${isMe ? 'active' : ''}`;
-                li.style.display = 'grid';
-                li.style.gridTemplateColumns = '50px 1fr 100px';
-                li.style.padding = '10px';
-                li.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
-                li.style.alignItems = 'center';
-
                 li.innerHTML = `
-                    <span style="font-size:1.2rem; text-align:center;">${rankIcon}</span>
-                    <span style="font-weight:bold; color:${isMe ? 'var(--accent-gold)' : 'inherit'}">${data.username}</span>
-                    <span style="text-align:right; font-weight:bold; color:var(--accent-gold);">${data.score} 🏆</span>
-                 `;
+                    <span class="col-rank">${rankDisplay}</span>
+                    <span class="col-player">${data.username} ${isMe ? '(Sen)' : ''}</span>
+                    <span class="col-score">${data.score} 🏆</span>
+                `;
                 list.appendChild(li);
                 rank++;
             });
 
         } catch (error) {
             console.error("Global Leaderboard Error:", error);
-            list.innerHTML = `<li style="color:red; text-align:center;">Hata: ${error.message}</li>`;
+            list.innerHTML = `<li class="loading-state" style="color:#ef4444;">Hata: ${error.message}</li>`;
         }
     },
 
@@ -1781,25 +1828,52 @@ const app = {
         if (!auth.currentUser) return;
 
         try {
-            // 1. Update User Profile (Source of Truth)
+            // 1. Update User Profile (Source of Truth - GLOBAL SCORE)
+            // Always update total cumulative score
             await db.collection("users").doc(auth.currentUser.uid).update({
                 score: this.state.score,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
             });
 
-            // 2. Add to Leaderboard History (Optional, or update if we want unique entry per user)
-            // For now, let's keep the history log as is, but maybe limit it?
-            // Actually, for a leaderboard, usually we want the User's Best Score or Current Score.
-            // The `scores` collection seems to be a log.
-            // Let's just log it for now as requested.
-            await db.collection("scores").add({
-                name: this.state.playerName,
-                uid: auth.currentUser.uid,
-                score: this.state.score,
-                date: new Date().toLocaleDateString('tr-TR'),
-                timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            });
-            console.log("Score synced to Profile & Leaderboard!");
+            // 2. Rush Mode Leaderboard Logic (Best Session Score)
+            if (this.state.gameMode === 'rush' && this.state.currentSessionScore > 0) {
+                const userRef = db.collection("rush_scores").doc(auth.currentUser.uid);
+
+                // Get current high score for Rush Mode
+                const doc = await userRef.get();
+                let currentBest = 0;
+                if (doc.exists) {
+                    currentBest = doc.data().score || 0;
+                }
+
+                // Only update if current session beat the previous best
+                if (this.state.currentSessionScore > currentBest) {
+                    console.log(`🚀 New Rush Mode High Score: ${this.state.currentSessionScore} (Old: ${currentBest})`);
+                    await userRef.set({
+                        name: this.state.playerName,
+                        uid: auth.currentUser.uid,
+                        score: this.state.currentSessionScore,
+                        date: new Date().toLocaleDateString('tr-TR'),
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                    });
+                }
+            } else {
+                // For logs (optional) or other modes, we keep existing 'scores' logic if needed?
+                // The prompt says "rush mode leaderboard shows rush points, global shows total".
+                // We've handled Rush above.
+                // We already updated Global in step 1.
+                // We can still log to 'scores' for history if we want, but it might be redundant.
+                // Leaving 'scores' log as is for backward compatibility or history log.
+                await db.collection("scores").add({
+                    name: this.state.playerName,
+                    uid: auth.currentUser.uid,
+                    score: this.state.score,
+                    date: new Date().toLocaleDateString('tr-TR'),
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                });
+            }
+
+            console.log("Score synced!");
         } catch (e) {
             console.error("Error syncing score: ", e);
         }
@@ -2910,21 +2984,40 @@ const app = {
 
         levels.forEach(level => {
             const books = window.BOOK_DATA[level];
-            if (books && Array.isArray(books)) {
+            if (books && Array.isArray(books) && books.length > 0) {
+                // Create Shelf Group
+                const group = document.createElement('div');
+                group.className = 'shelf-group';
+
+                const title = document.createElement('div');
+                title.className = 'shelf-title';
+                title.textContent = `Seviye ${level}`;
+                group.appendChild(title);
+
+                const row = document.createElement('div');
+                row.className = 'shelf-row';
+
                 books.forEach((book, index) => {
                     const card = document.createElement('div');
                     card.className = 'book-card';
+                    card.style.backgroundColor = book.color || '#2d3436';
                     card.onclick = () => this.openBook(level, index);
 
                     card.innerHTML = `
-                        <div class="book-level-badge">${level}</div>
-                        <div class="book-cover">${book.cover}</div>
+                        <div class="book-cover">${book.cover || '📖'}</div>
                         <div class="book-title">${book.title}</div>
                         <div class="book-author">${book.author}</div>
-                        <div class="book-desc">${book.description}</div>
                     `;
-                    grid.appendChild(card);
+                    row.appendChild(card);
                 });
+
+                // Add Shelf Ledge
+                const ledge = document.createElement('div');
+                ledge.className = 'shelf-ledge';
+                row.appendChild(ledge);
+
+                group.appendChild(row);
+                grid.appendChild(group);
             }
         });
     },
@@ -2951,6 +3044,41 @@ const app = {
 
         // Reset search
         document.getElementById('dictionary-search').value = '';
+
+        // Add Swipe Support
+        this.setupReaderGestures();
+    },
+
+    setupReaderGestures() {
+        const reader = document.getElementById('reading-reader');
+        if (!reader) return;
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        reader.ontouchstart = (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        };
+
+        reader.ontouchend = (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            this.handleSwipe(touchStartX, touchEndX);
+        };
+    },
+
+    handleSwipe(start, end) {
+        const delta = end - start;
+        const minDistance = 50;
+
+        if (Math.abs(delta) > minDistance) {
+            if (delta > 0) {
+                // Swipe Right (Previous)
+                this.prevBookPage();
+            } else {
+                // Swipe Left (Next)
+                this.nextBookPage();
+            }
+        }
     },
 
     closeBook() {
@@ -2990,15 +3118,27 @@ const app = {
 
     nextBookPage() {
         if (this.state.currentBookPage < this.state.totalBookPages - 1) {
-            this.state.currentBookPage++;
-            this.renderBookPage();
+            const content = document.getElementById('reader-content');
+            content.classList.add('flip-next');
+
+            setTimeout(() => {
+                this.state.currentBookPage++;
+                this.renderBookPage();
+                setTimeout(() => content.classList.remove('flip-next'), 300);
+            }, 300);
         }
     },
 
     prevBookPage() {
         if (this.state.currentBookPage > 0) {
-            this.state.currentBookPage--;
-            this.renderBookPage();
+            const content = document.getElementById('reader-content');
+            content.classList.add('flip-prev');
+
+            setTimeout(() => {
+                this.state.currentBookPage--;
+                this.renderBookPage();
+                setTimeout(() => content.classList.remove('flip-prev'), 300);
+            }, 300);
         }
     },
 

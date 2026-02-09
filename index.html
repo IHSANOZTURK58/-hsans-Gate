@@ -47,10 +47,7 @@
                     <div class="reader-header">
                         <button class="reader-back-btn" onclick="app.closeBook()"
                             title="Kütüphaneye Dön">&larr;</button>
-                        <div class="reader-header-title">
-                            <h3 id="reader-book-title">Book Title</h3>
-                            <span id="reader-book-level">Level A1</span>
-                        </div>
+
                         <div class="reader-search-box">
                             <input type="text" id="dictionary-search" autocomplete="off"
                                 placeholder="Sözlük: Kelime ara..." oninput="app.handleSearchInput(this.value)"
@@ -59,22 +56,29 @@
                             <span class="search-icon">🔍</span>
                             <div id="search-suggestions" class="search-suggestions"></div>
                         </div>
+
+                        <div class="reader-header-title" style="text-align: right;">
+                            <h3 id="reader-book-title">Book Title</h3>
+                            <span id="reader-book-level">Level A1</span>
+                        </div>
                     </div>
                     <div class="reader-container">
-                        <div id="reader-content" class="reader-content">
-                            <!-- Text injected via JS -->
+                        <div class="book-frame">
+                            <div id="reader-content" class="reader-content">
+                                <!-- Text injected via JS -->
+                            </div>
                         </div>
                     </div>
                     <!-- Pagination Controls -->
                     <div class="reader-pagination">
                         <button id="btn-prev-page" class="pagination-btn" onclick="app.prevBookPage()"
                             title="Önceki Sayfa">
-                            ← Önceki
+                            ←
                         </button>
                         <span id="page-indicator" class="page-indicator">Sayfa 1 / 1</span>
                         <button id="btn-next-page" class="pagination-btn" onclick="app.nextBookPage()"
                             title="Sonraki Sayfa">
-                            Sonraki →
+                            →
                         </button>
                     </div>
                 </div>
@@ -621,29 +625,25 @@
 
             <!-- GLOBAL LEADERBOARD VIEW (Dedicated for Cups) -->
             <div id="view-global-leaderboard" class="view hidden">
-                <div class="leaderboard-container" style="max-width:600px; margin:0 auto; padding-top:2rem;">
-                    <div class="lb-header" style="text-align:center; margin-bottom:2rem;">
-                        <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Geri"
-                            style="position:absolute; top:1rem; left:1rem;">
-                            &larr;
-                        </button>
-                        <h2
-                            style="font-size:2rem; display:flex; justify-content:center; align-items:center; gap:0.5rem; color:var(--accent-gold);">
-                            <span>🏆</span> Global Sıralama
-                        </h2>
-                        <p style="color:var(--text-secondary);">En çok Kupaya Sahip Oyuncular</p>
+                <div class="global-leaderboard-header">
+                    <button class="back-btn-top" onclick="app.showDashboard()" title="Geri">
+                        <span class="back-icon">←</span>
+                    </button>
+                    <div class="header-content">
+                        <h2 class="header-title">🏆 Global Sıralama</h2>
+                        <p class="header-subtitle">En çok Kupaya Sahip Oyuncular</p>
                     </div>
+                </div>
 
-                    <div class="leaderboard-card"
-                        style="background:var(--bg-card); border-radius:16px; padding:1rem; border:1px solid var(--border-glass);">
-                        <div class="lb-table-header"
-                            style="display:grid; grid-template-columns: 50px 1fr 100px; padding:0.5rem; border-bottom:1px solid var(--border-glass); color:var(--text-secondary); font-weight:bold;">
-                            <span>#</span>
-                            <span>Oyuncu</span>
-                            <span style="text-align:right;">Kupa</span>
+                <div class="global-leaderboard-container">
+                    <div class="leaderboard-card-main">
+                        <div class="table-header-row">
+                            <span class="col-rank">#</span>
+                            <span class="col-player">Oyuncu</span>
+                            <span class="col-score">Kupa</span>
                         </div>
-                        <ul id="global-leaderboard-list" style="list-style:none; padding:0; margin:0;">
-                            <li style="padding:1rem; text-align:center;">Yükleniyor...</li>
+                        <ul id="global-leaderboard-list">
+                            <li class="loading-state">Yükleniyor...</li>
                         </ul>
                     </div>
                 </div>
