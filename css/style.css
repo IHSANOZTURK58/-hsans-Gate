@@ -168,7 +168,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(2, 6, 23, 0.5), rgba(2, 6, 23, 0.8)), url('../assets/game-bg-galaxy.png') no-repeat center center/cover;
+    background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.9)), url('../assets/game-bg-abstract.png') no-repeat center center/cover;
     z-index: -1;
     /* Behind content */
 }
@@ -1523,9 +1523,6 @@ input:focus {
 }
 
 .back-btn-top {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
     background: rgba(255, 255, 255, 0.1) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     color: white !important;
@@ -4304,4 +4301,386 @@ input:focus {
     color: var(--neon-blue) !important;
     font-weight: bold;
     text-shadow: 0 0 5px rgba(14, 165, 233, 0.5);
+}
+
+/* =========================================
+   LISTENING MODE (The Focus Room)
+   ========================================= */
+#view-listening {
+    background: #0f172a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* Move content up */
+    min-height: 100vh;
+    padding: 8rem 2rem 2rem 2rem;
+    /* Increased top padding to accommodate fixed header */
+    position: relative;
+    overflow: hidden;
+}
+
+#view-listening::before {
+    /* Subtle ambient glow */
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.05) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.listening-header {
+    position: absolute;
+    top: 2rem;
+    left: 1.5rem;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.listening-header>* {
+    pointer-events: auto;
+}
+
+.listening-container {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    z-index: 10;
+}
+
+/* Audio Visualizer (Simple CSS) */
+.visualizer-container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-wave {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 40px;
+}
+
+.audio-wave span {
+    display: block;
+    width: 6px;
+    height: 10%;
+    background: var(--neon-blue);
+    /* Default inactive color */
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    animation: none;
+}
+
+.audio-wave.playing span {
+    background: var(--neon-green);
+    animation: waveAnim 0.5s ease-in-out infinite alternate;
+}
+
+/* Randomize animation delays for nature feel */
+.audio-wave span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.audio-wave span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.audio-wave span:nth-child(3) {
+    animation-delay: 0.0s;
+}
+
+.audio-wave span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.audio-wave span:nth-child(5) {
+    animation-delay: 0.2s;
+}
+
+@keyframes waveAnim {
+    0% {
+        height: 10%;
+        background: #3b82f6;
+    }
+
+    100% {
+        height: 100%;
+        background: #22c55e;
+        box-shadow: 0 0 10px #22c55e;
+    }
+}
+
+/* Playback Controls */
+.playback-controls {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.btn-round-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-round-large {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--neon-blue);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    /* Visual center fix for play icon */
+}
+
+.btn-round-large:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.8);
+}
+
+.btn-round-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Sentence Display */
+.sentence-display {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+    font-weight: 500;
+    min-height: 80px;
+}
+
+.word.gap {
+    display: inline-block;
+    min-width: 80px;
+    border-bottom: 2px solid var(--neon-gold);
+    color: transparent;
+    /* Hide text */
+    margin: 0 0.3rem;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.word.gap.revealed {
+    color: var(--neon-green);
+    border-bottom-color: var(--neon-green);
+    animation: fadeIn 0.5s ease;
+}
+
+/* Input Area */
+.listening-input-area {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+    flex-wrap: wrap;
+    /* Mobile friendly */
+}
+
+#listening-input {
+    flex: 1;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid var(--border-glass);
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 12px;
+}
+
+#listening-input:focus {
+    border-color: var(--neon-blue);
+    outline: none;
+    background: rgba(15, 23, 42, 0.8);
+}
+
+/* Shake Animation for Wrong Answer */
+.shake {
+    animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+/* Voice Selector (Hidden but styled just in case) */
+.voice-select {
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* Progress */
+.listening-progress {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    letter-spacing: 2px;
+}
+
+@keyframes pulseWave {
+    from {
+        transform: scaleY(1);
+        opacity: 0.2;
+    }
+
+    to {
+        transform: scaleY(2.2);
+        opacity: 0.6;
+    }
+}
+
+/* --- SCENARIO CHAT ENHANCEMENTS --- */
+.scenario-player-container {
+    padding-top: 2rem !important;
+}
+
+.scenario-msg-container {
+    display: flex;
+    align-self: stretch;
+    align-items: flex-end;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.scenario-msg-container.left {
+    flex-direction: row;
+}
+
+.scenario-msg-container.right {
+    flex-direction: row-reverse;
+}
+
+.scenario-avatar-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: var(--bg-dark);
+    transition: all 0.3s;
+}
+
+.scenario-avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Override existing chat-bubble for better glass look */
+.chat-bubble {
+    border-radius: 18px !important;
+    padding: 1rem 1.25rem !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 75% !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.3s;
+}
+
+.left .chat-bubble {
+    border-bottom-left-radius: 4px !important;
+    background: rgba(30, 41, 59, 0.85) !important;
+    backdrop-filter: blur(10px);
+}
+
+.right .chat-bubble {
+    border-bottom-right-radius: 4px !important;
+    background: rgba(51, 65, 85, 0.85) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Speaker Label inside bubble */
+.bubble-speaker {
+    font-weight: 800;
+    font-size: 0.7rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+/* Active Highlight */
+.scenario-msg-container.active {
+    opacity: 1 !important;
+}
+
+.scenario-msg-container.active .chat-bubble {
+    border-color: var(--accent-gold) !important;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+    transform: scale(1.02);
+    background: rgba(30, 41, 59, 0.95) !important;
+}
+
+.scenario-msg-container.active .scenario-avatar-box {
+    border-color: var(--accent-gold);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+
+/* Inactive State */
+.scenario-msg-container:not(.active) {
+    opacity: 0.6;
+}
+
+#scenario-dialogue-area {
+    padding-bottom: 100px;
 }

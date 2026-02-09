@@ -46,6 +46,8 @@ const app = {
         isMusicPlaying: false,
         musicVolume: 0.3,
 
+        isReadingBook: false, // Track book reading state
+
         // New Mode State
         playerName: '',
         selectedAvatar: 1,
@@ -70,6 +72,21 @@ const app = {
 
         // Navigation History
         previousView: null
+    },
+
+    // =========================================
+    // NEW MODE: LISTENING (Focus Room)
+    // =========================================
+
+    listeningState: {
+        sentences: [],
+        currentSentence: null,
+        currentGapIndex: 0,
+        score: 0,
+        total: 0,
+        currentIndex: 0,
+        voices: [],
+        selectedVoice: null
     },
 
     init() {
@@ -98,6 +115,7 @@ const app = {
         this.renderLeaderboard();
 
         this.geminiService.init();
+        this.setupVoice(); // PRE-LOAD VOICES GLOBALLY
 
 
         // Authenticate
@@ -1443,6 +1461,311 @@ const app = {
         }
     },
 
+    // =========================================
+    // LISTENING MODE LOGIC
+    // =========================================
+
+    initListeningMode() {
+        this.state.currentView = 'listening';
+        this.render();
+
+        // 1. Load Sentences (Use existing window.SENTENCE_DATA)
+        if (window.SENTENCE_DATA && window.SENTENCE_DATA.length > 0) {
+            // Shuffle all sentences for endless mode
+            this.listeningState.sentences = [...window.SENTENCE_DATA]
+                .sort(() => 0.5 - Math.random());
+            this.listeningState.currentIndex = 0;
+            this.listeningState.currentSentence = this.listeningState.sentences[0];
+
+            this.setupVoice(); // Initialize Voice
+            this.renderListeningLevel();
+        } else {
+            alert("Cümle verisi yüklenemedi!");
+            this.openModeSelection();
+        }
+    },
+
+    setupVoice() {
+        // Load Voices
+        const synth = window.speechSynthesis;
+
+        const loadVoices = () => {
+            const allVoices = synth.getVoices();
+            // Filter for English only
+            const enVoices = allVoices.filter(v => v.lang.startsWith('en'));
+            this.listeningState.voices = enVoices;
+
+            const select = document.getElementById('listening-voice-select');
+            if (select) {
+                select.innerHTML = '';
+                enVoices.forEach((v, index) => {
+                    const opt = document.createElement('option');
+                    opt.value = index;
+                    // Format name for readability
+                    const displayName = v.name.replace("Microsoft ", "").replace("Google ", "");
+                    opt.textContent = displayName + (v.localService ? ' (Cihaz)' : ' (Çevrimiçi)');
+                    select.appendChild(opt);
+                });
+
+                // Handle manual change
+                select.onchange = (e) => {
+                    const idx = e.target.value;
+                    if (enVoices[idx]) {
+                        this.listeningState.selectedVoice = enVoices[idx];
+                        console.log("User selected voice:", enVoices[idx].name);
+                        // Play sample on change
+                        this.playSentence(1);
+                    }
+                };
+            }
+
+            // --- AUTO SELECT BEST DEFAULT (UK Male Focus) ---
+            const ukMaleKeywords = ["UK English Male", "Great Britain Male", "Daniel", "Oliver", "Ryan", "Thomas"];
+            let bestVoice = null;
+
+            // 1. UK Male Specific
+            for (const kw of ukMaleKeywords) {
+                bestVoice = enVoices.find(v =>
+                    (v.name.includes(kw) && (v.name.includes("UK") || v.name.includes("GB") || v.lang.includes("GB")))
+                );
+                if (bestVoice) break;
+            }
+
+            // 2. Any UK voice
+            if (!bestVoice) {
+                bestVoice = enVoices.find(v => v.lang.includes('GB') || v.name.includes('UK'));
+            }
+
+            // 3. General quality
+            if (!bestVoice) {
+                const qualityKeywords = ["(Natural)", "Neural", "Online", "Premium"];
+                for (const kw of qualityKeywords) {
+                    bestVoice = enVoices.find(v => v.name.includes(kw));
+                    if (bestVoice) break;
+                }
+            }
+
+            if (!bestVoice) bestVoice = enVoices[0];
+
+            this.listeningState.selectedVoice = bestVoice;
+
+            // Sync dropdown value
+            if (select && bestVoice) {
+                const idx = enVoices.indexOf(bestVoice);
+                if (idx !== -1) select.value = idx;
+            }
+        };
+
+        if (synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = loadVoices;
+        }
+        loadVoices();
+    },
+
+    renderListeningLevel() {
+        try {
+            // Loop logic for endless mode
+            if (this.listeningState.currentIndex >= this.listeningState.sentences.length) {
+                this.listeningState.currentIndex = 0;
+                this.listeningState.sentences.sort(() => 0.5 - Math.random()); // Reshuffle
+            }
+
+            const sentenceObj = this.listeningState.sentences[this.listeningState.currentIndex];
+            if (!sentenceObj) {
+                this.openModeSelection();
+                return;
+            }
+
+            this.listeningState.currentSentence = sentenceObj;
+
+            // UI Updates (Score removed for endless mode)
+            const feedbackEl = document.getElementById('listening-feedback');
+            if (feedbackEl) feedbackEl.innerHTML = '';
+
+            // Reset Manual Next Button
+            const nextBtn = document.getElementById('btn-listening-next');
+            if (nextBtn) nextBtn.classList.add('hidden');
+
+            const inputEl = document.getElementById('listening-input');
+            if (inputEl) {
+                inputEl.value = '';
+                inputEl.disabled = false;
+                inputEl.focus();
+
+                // 2. ENTER KEY SUPPORT
+                inputEl.onkeydown = (e) => {
+                    if (e.key === 'Enter') {
+                        this.checkListeningAnswer();
+                    }
+                };
+            }
+
+            const btn = document.getElementById('btn-check-listening');
+            if (btn) btn.disabled = false;
+
+            const giveUpBtn = document.getElementById('btn-giveup-listening');
+            if (giveUpBtn) giveUpBtn.disabled = false;
+
+            // Display with GAP
+            const words = sentenceObj.en.split(' ');
+            let gapIndex = Math.floor(Math.random() * words.length);
+
+            // Try to find a longer word
+            for (let i = 0; i < 5; i++) {
+                if (words[gapIndex].length < 3) {
+                    gapIndex = Math.floor(Math.random() * words.length);
+                }
+            }
+            this.listeningState.currentGapIndex = gapIndex;
+
+            const displayContainer = document.getElementById('listening-sentence-display');
+            displayContainer.innerHTML = '';
+
+            words.forEach((word, index) => {
+                const span = document.createElement('span');
+                span.className = 'word';
+                if (index === gapIndex) {
+                    span.className = 'word gap';
+                    span.textContent = '_____';
+                    span.dataset.answer = word.replace(/[.,!?]/g, ''); // Clean punctuation
+                } else {
+                    span.textContent = word + ' ';
+                }
+                displayContainer.appendChild(span);
+            });
+
+            // Auto Play
+            setTimeout(() => this.playSentence(1), 500);
+        } catch (error) {
+            console.error("Listening Error:", error);
+            alert("Bir hata oluştu: " + error.message);
+        }
+    },
+
+    playSentence(rate = 1) {
+        if (!this.listeningState.currentSentence) return;
+
+        const synth = window.speechSynthesis;
+        const utter = new SpeechSynthesisUtterance(this.listeningState.currentSentence.en);
+
+        if (this.listeningState.selectedVoice) {
+            utter.voice = this.listeningState.selectedVoice;
+        }
+
+        utter.rate = rate === 1 ? 0.9 : rate; // Slightly slower for "Natural" feel
+        utter.pitch = 1;
+
+        // Visualizer Effect
+        const wave = document.querySelector('.audio-wave');
+        if (wave) wave.classList.add('playing');
+
+        utter.onend = () => {
+            if (wave) wave.classList.remove('playing');
+        };
+        synth.cancel(); // Stop previous
+        synth.speak(utter);
+    },
+
+    playSFX(type) {
+        const sounds = {
+            'correct': 'https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3',
+            'wrong': 'https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3'
+        };
+        if (sounds[type]) {
+            try {
+                const audio = new Audio(sounds[type]);
+                audio.play().catch(e => console.warn("Audio play failed:", e));
+            } catch (e) {
+                console.warn("Audio setup failed:", e);
+            }
+        }
+    },
+
+    checkListeningAnswer() {
+        const input = document.getElementById('listening-input');
+        const userVal = input.value.trim().toLowerCase();
+        const btn = document.getElementById('btn-check-listening');
+
+        if (!this.listeningState.currentSentence) return;
+
+        const words = this.listeningState.currentSentence.en.split(' ');
+        const correctRaw = words[this.listeningState.currentGapIndex];
+        const correctClean = correctRaw.replace(/[.,!?]/g, '').toLowerCase();
+
+        const feedback = document.getElementById('listening-feedback');
+        const nextBtn = document.getElementById('btn-listening-next');
+
+        if (userVal === correctClean) {
+            feedback.innerHTML = '<span style="color:#4ade80; font-size:1.2rem; font-weight:bold;">Doğru! 🎉 Harikasın!</span>';
+            const gapEl = document.querySelector('.word.gap');
+            if (gapEl) {
+                gapEl.textContent = correctRaw + ' ';
+                gapEl.classList.add('revealed');
+                gapEl.classList.remove('gap');
+            }
+            input.disabled = true;
+            if (btn) btn.disabled = true;
+            if (nextBtn) nextBtn.classList.remove('hidden');
+
+            // 1. UPDATE STATE & SCORE
+            this.state.score++; // Award 1 point
+            this.updateHeaderStats(); // Update header UI
+            this.saveData(); // Save locally
+
+            // Sync with Firebase if available
+            if (this.saveScoreToFirebase) {
+                this.saveScoreToFirebase();
+            }
+
+            this.listeningState.currentIndex++;
+            this.playSFX('correct');
+
+            // AUTO ADVANCE
+            setTimeout(() => {
+                this.renderListeningLevel();
+            }, 1000);
+        } else {
+            feedback.innerHTML = '<span style="color:#ef4444; font-weight:bold;">Tekrar dene!</span>';
+            this.playSFX('wrong');
+            input.classList.add('shake');
+            setTimeout(() => input.classList.remove('shake'), 500);
+            input.focus();
+        }
+    },
+
+    giveUpListening() {
+        if (!this.listeningState.currentSentence) return;
+
+        const words = this.listeningState.currentSentence.en.split(' ');
+        const correctRaw = words[this.listeningState.currentGapIndex];
+
+        const feedback = document.getElementById('listening-feedback');
+        const nextBtn = document.getElementById('btn-listening-next');
+        const checkBtn = document.getElementById('btn-check-listening');
+        const giveUpBtn = document.getElementById('btn-giveup-listening');
+        const input = document.getElementById('listening-input');
+
+        feedback.innerHTML = `<span style="color:#fbbf24; font-weight:bold;">Doğru Cevap: ${correctRaw}</span>`;
+
+        // Reveal word
+        const gapEl = document.querySelector('.word.gap');
+        if (gapEl) {
+            gapEl.textContent = correctRaw + ' ';
+            gapEl.classList.add('revealed');
+            gapEl.classList.remove('gap');
+        }
+
+        input.disabled = true;
+        if (checkBtn) checkBtn.disabled = true;
+        if (giveUpBtn) giveUpBtn.disabled = true;
+        if (nextBtn) nextBtn.classList.remove('hidden');
+
+        // Increment index but NOT score
+        this.listeningState.currentIndex++;
+
+        // No auto-advance here usually, but show "Next" button
+    },
+
     quitGame() {
         if (this.state.timerInterval) clearInterval(this.state.timerInterval);
         if (this.state.gameMode === 'adventure') {
@@ -2014,7 +2337,14 @@ const app = {
         window.speechSynthesis.cancel();
 
         const utterance = new SpeechSynthesisUtterance(textToSpeak);
-        utterance.lang = 'en-US'; // English pronunciation
+
+        // Use Global selected voice if available
+        if (this.listeningState.selectedVoice) {
+            utterance.voice = this.listeningState.selectedVoice;
+        } else {
+            utterance.lang = 'en-GB';
+        }
+
         utterance.rate = 0.8; // Slightly slower for clear pronunciation
 
         window.speechSynthesis.speak(utterance);
@@ -2195,6 +2525,13 @@ const app = {
     openWritingModes() {
         this.state.previousView = this.state.currentView;
         this.state.currentView = 'writing-modes';
+        this.render();
+    },
+
+    // --- READING & LISTENING MODULE (Merged) ---
+    openReadingListeningModes() {
+        this.state.previousView = this.state.currentView;
+        this.state.currentView = 'reading-listening';
         this.render();
     },
 
@@ -2538,6 +2875,17 @@ const app = {
         document.getElementById('writing-target-meaning').textContent = wordData.meaning;
         document.getElementById('writing-feedback').textContent = '';
 
+        // Reset Buttons
+        const nextBtn = document.getElementById('btn-scramble-next');
+        const checkBtn = document.getElementById('btn-scramble-check');
+        const giveUpBtn = document.getElementById('btn-scramble-giveup');
+        const clearBtn = document.getElementById('btn-scramble-clear');
+
+        if (nextBtn) nextBtn.classList.add('hidden');
+        if (checkBtn) checkBtn.disabled = false;
+        if (giveUpBtn) giveUpBtn.disabled = false;
+        if (clearBtn) clearBtn.disabled = false;
+
         // Render Slots
         const slotsContainer = document.getElementById('writing-slots');
         slotsContainer.innerHTML = '';
@@ -2709,6 +3057,38 @@ const app = {
             }, 500);
         }
     },
+
+    giveUpWritingScramble() {
+        if (!this.state.currentWritingWord) return;
+
+        const targetWord = this.state.currentWritingWord.word.toUpperCase();
+        const fb = document.getElementById('writing-feedback');
+        const nextBtn = document.getElementById('btn-scramble-next');
+        const checkBtn = document.getElementById('btn-scramble-check');
+        const giveUpBtn = document.getElementById('btn-scramble-giveup');
+        const clearBtn = document.getElementById('btn-scramble-clear');
+
+        // Fill slots visualy
+        this.state.writingInput = targetWord.split('').map(char => ({ char, id: -1 }));
+        this.renderWritingBoard();
+
+        // Reveal answer text
+        fb.innerHTML = `Cevap: <span style="color:var(--accent-gold)">${targetWord}</span>`;
+        fb.style.color = "var(--text-primary)";
+
+        // Toggle buttons
+        if (nextBtn) nextBtn.classList.remove('hidden');
+        if (checkBtn) checkBtn.disabled = true;
+        if (giveUpBtn) giveUpBtn.disabled = true;
+        if (clearBtn) clearBtn.disabled = true;
+
+        // Visual feedback on slots
+        const slots = document.querySelectorAll('.writing-slot');
+        slots.forEach(s => {
+            s.style.borderColor = 'var(--accent-gold)';
+        });
+    },
+
 
     // --- GRAMMAR MODE ---
 
@@ -3032,6 +3412,7 @@ const app = {
         this.state.currentBookIndex = index;
         this.state.currentBookPage = 0;
         this.state.totalBookPages = book.pages ? book.pages.length : 1;
+        this.state.isReadingBook = false; // Reset state
 
         document.getElementById('reading-library').classList.add('hidden');
         document.getElementById('reading-reader').classList.remove('hidden');
@@ -3085,6 +3466,10 @@ const app = {
         this.state.currentBookLevel = null;
         this.state.currentBookIndex = null;
         this.state.currentBookPage = 0;
+
+        // Stop speech when closing (via new helper)
+        this.stopBookReading();
+
         document.getElementById('reading-reader').classList.add('hidden');
         document.getElementById('reading-library').classList.remove('hidden');
     },
@@ -3095,6 +3480,9 @@ const app = {
         if (!books) return;
         const book = books[this.state.currentBookIndex];
         if (!book) return;
+
+        // Stop speech when changing page
+        if (window.speechSynthesis) window.speechSynthesis.cancel();
 
         const content = book.pages ? book.pages[this.state.currentBookPage] : book.content;
         document.getElementById('reader-content').innerHTML = content;
@@ -3116,7 +3504,90 @@ const app = {
         if (readerContent) readerContent.scrollTop = 0;
     },
 
-    nextBookPage() {
+    speakCurrentPage() {
+        // Toggle Play/Stop
+        if (this.state.isReadingBook) {
+            this.stopBookReading();
+        } else {
+            this.startBookReading();
+        }
+    },
+
+    startBookReading() {
+        const contentArea = document.getElementById('reader-content');
+        if (!contentArea) return;
+
+        // Clean HTML for clean speech
+        const rawText = contentArea.innerHTML.replace(/<[^>]*>/g, ' ');
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = rawText;
+        const cleanText = tempDiv.textContent || tempDiv.innerText || "";
+
+        if (!cleanText || cleanText.trim() === "") return;
+
+        // Update State & UI
+        this.state.isReadingBook = true;
+        const btn = document.getElementById('btn-book-speak');
+        if (btn) {
+            btn.innerHTML = '⏹️'; // Stop Icon
+            btn.style.borderColor = '#ef4444'; // Red border
+            btn.style.color = '#ef4444';
+        }
+
+        const synth = window.speechSynthesis;
+        const utter = new SpeechSynthesisUtterance(cleanText);
+
+        // Usage of globally selected voice
+        if (this.listeningState.selectedVoice) {
+            utter.voice = this.listeningState.selectedVoice;
+        }
+
+        utter.rate = 0.9;
+        utter.pitch = 1;
+
+        // EVENT: On End -> Auto Turn
+        utter.onend = () => {
+            this.handlePageAudioEnd();
+        };
+
+        synth.cancel();
+        synth.speak(utter);
+    },
+
+    stopBookReading() {
+        this.state.isReadingBook = false;
+        if (window.speechSynthesis) window.speechSynthesis.cancel();
+
+        // Update UI
+        const btn = document.getElementById('btn-book-speak');
+        if (btn) {
+            btn.innerHTML = '🔊'; // Play Icon
+            btn.style.borderColor = 'rgba(255,255,255,0.2)'; // Reset border
+            btn.style.color = 'var(--accent-gold)';
+        }
+    },
+
+    handlePageAudioEnd() {
+        // Only auto-turn if we are still in "Reading" state
+        // (i.e., user didn't press stop manually right at the end)
+        if (this.state.isReadingBook) {
+            if (this.state.currentBookPage < this.state.totalBookPages - 1) {
+                // Determine if we should wait a bit?
+                setTimeout(() => {
+                    this.nextBookPage(true); // Auto turn
+                }, 500); // Small pause between pages
+            } else {
+                this.stopBookReading(); // End of book
+            }
+        }
+    },
+
+    nextBookPage(isAuto = false) {
+        // If MANUAL turn (isAuto is false/undefined), stop auto-reading
+        if (!isAuto) {
+            this.stopBookReading();
+        }
+
         if (this.state.currentBookPage < this.state.totalBookPages - 1) {
             const content = document.getElementById('reader-content');
             content.classList.add('flip-next');
@@ -3125,11 +3596,21 @@ const app = {
                 this.state.currentBookPage++;
                 this.renderBookPage();
                 setTimeout(() => content.classList.remove('flip-next'), 300);
+
+                // If AUTO turn, restart reading on new page
+                if (isAuto) {
+                    setTimeout(() => {
+                        this.startBookReading();
+                    }, 400); // Wait for flip animation
+                }
             }, 300);
         }
     },
 
     prevBookPage() {
+        // Manual navigate always stops reading
+        this.stopBookReading();
+
         if (this.state.currentBookPage > 0) {
             const content = document.getElementById('reader-content');
             content.classList.add('flip-prev');
@@ -3439,6 +3920,245 @@ const app = {
     },
 
 
+
+    // --- DAILY SCENARIOS MODE ---
+    scenarioState: {
+        active: null,
+        playing: false,
+        index: 0,
+        showTr: false
+    },
+
+    initScenarioMode() {
+        this.state.previousView = this.state.currentView;
+        this.state.currentView = 'scenarios';
+        this.render();
+        this.renderScenarioList();
+    },
+
+    renderScenarioList() {
+        const listContainer = document.getElementById('scenario-list-container');
+        if (!listContainer) return;
+
+        const scenarios = window.SCENARIO_DATA || [];
+
+        if (scenarios.length === 0) {
+            listContainer.innerHTML = '<p style="grid-column:1/-1; text-align:center; color:white;">Henüz senaryo eklenmemiş.</p>';
+            return;
+        }
+
+        listContainer.innerHTML = scenarios.map(s => `
+            <div class="mode-card" onclick="app.openScenarioPlayer('${s.id}')" 
+                 style="text-align:left; display:flex; gap:1.2rem; align-items:center; cursor:pointer; padding: 1.5rem; background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; transition: all 0.3s;">
+                <div style="font-size:3.5rem; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));">${s.icon}</div>
+                <div style="flex:1;">
+                    <h3 style="margin:0; color:var(--accent-gold); font-size:1.2rem; font-weight: 800; letter-spacing: 0.5px;">${s.title_tr}</h3>
+                    <p style="margin:0.2rem 0; opacity:0.8; font-size:1rem; color: #cbd5e1;">${s.title}</p>
+                    <div style="margin-top:0.6rem; display:flex; gap:0.5rem;">
+                        <span style="background:rgba(245, 158, 11, 0.2); color: #f59e0b; padding:4px 12px; border-radius:50px; font-size:0.75rem; font-weight: bold; border: 1px solid rgba(245, 158, 11, 0.3);">${s.level}</span>
+                        <span style="background:rgba(255, 255, 255, 0.1); color: white; padding:4px 12px; border-radius:50px; font-size:0.75rem; font-weight: bold;">${s.content.length} Cümle</span>
+                    </div>
+                </div>
+                <div style="font-size: 1.5rem; color: var(--accent-gold); opacity: 0.8;">&rarr;</div>
+            </div>
+        `).join('');
+    },
+
+    openScenarioPlayer(id) {
+        const scenario = window.SCENARIO_DATA.find(s => s.id === id);
+        if (!scenario) return;
+
+        this.scenarioState = {
+            active: scenario,
+            playing: false,
+            index: 0,
+            showTr: false // Default hidden
+        };
+
+        this.state.previousView = this.state.currentView;
+        this.state.currentView = 'scenario-player';
+        this.render();
+
+        const titleEl = document.getElementById('scenario-player-title');
+        if (titleEl) titleEl.textContent = scenario.title_tr;
+
+        // Set dynamic background
+        const playerView = document.getElementById('view-scenario-player');
+        if (playerView) {
+            if (scenario.bg) {
+                playerView.style.background = `linear-gradient(rgba(15, 23, 42, 0.7), rgba(2, 6, 23, 0.85)), url('${scenario.bg}') no-repeat center center/cover`;
+            } else {
+                playerView.style.background = 'var(--bg-main)';
+            }
+        }
+
+        this.renderScenarioDialogue();
+    },
+
+    renderScenarioDialogue() {
+        if (!this.scenarioState.active) return;
+
+        const container = document.getElementById('scenario-dialogue-area');
+        if (!container) return;
+
+        const scenario = this.scenarioState.active;
+        const content = scenario.content;
+        const avatars = scenario.avatars || { s1: 'avatar_1.png', s2: 'avatar_2.png' };
+
+        container.innerHTML = content.map((line, idx) => {
+            const isLeft = (idx % 2 === 0);
+            const avatarSrc = isLeft ? avatars.s1 : avatars.s2;
+            const bubbleClass = isLeft ? 'left' : 'right';
+            const isActive = (idx === this.scenarioState.index);
+
+            return `
+                <div id="scenario-msg-${idx}" class="scenario-msg-container ${bubbleClass} ${isActive ? 'active' : ''}" 
+                     onclick="app.playScenarioLine(${idx})">
+                    
+                    <div class="scenario-avatar-box">
+                        <img src="assets/avatars/${avatarSrc}" alt="Avatar">
+                    </div>
+
+                    <div class="chat-bubble">
+                        <span class="bubble-speaker">${line.speaker}</span>
+                        <div style="font-size:1.1rem; line-height:1.5; color:white;">${line.text}</div>
+                        <div class="scenario-tr ${this.scenarioState.showTr ? '' : 'hidden'}" 
+                             style="margin-top:0.5rem; font-size:0.9rem; color:#cbd5e1; border-top:1px solid rgba(255,255,255,0.1); padding-top:0.4rem;">
+                            ${line.tr}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        this.updateScenarioControls();
+        this.scrollToActiveScenarioLine();
+    },
+
+    scrollToActiveScenarioLine() {
+        setTimeout(() => {
+            const activeMsg = document.getElementById(`scenario-msg-${this.scenarioState.index}`);
+            if (activeMsg) activeMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+    },
+
+    updateScenarioControls() {
+        const btnPlay = document.getElementById('btn-scenario-play');
+        if (btnPlay) {
+            btnPlay.textContent = this.scenarioState.playing ? '⏸️' : '▶';
+        }
+    },
+
+    toggleScenarioPlay() {
+        if (this.scenarioState.playing) {
+            this.stopScenario();
+        } else {
+            this.playScenario();
+        }
+    },
+
+    stopScenario() {
+        this.scenarioState.playing = false;
+        window.speechSynthesis.cancel();
+        this.updateScenarioControls();
+    },
+
+    playScenario() {
+        this.scenarioState.playing = true;
+        this.updateScenarioControls();
+        this.playScenarioLine(this.scenarioState.index);
+    },
+
+    playScenarioLine(index) {
+        if (!this.scenarioState.active) return;
+
+        // If index is out of bounds, stop or loop? Stop for now.
+        if (index >= this.scenarioState.active.content.length) {
+            this.stopScenario();
+            this.scenarioState.index = 0;
+            // Optional: Show "Finished" modal
+            return;
+        }
+
+        this.scenarioState.index = index;
+
+        // Use optimized CSS class toggling
+        const allMsgContainers = document.querySelectorAll('.scenario-msg-container');
+        allMsgContainers.forEach((container, idx) => {
+            if (idx === index) {
+                container.classList.add('active');
+            } else {
+                container.classList.remove('active');
+            }
+        });
+        this.scrollToActiveScenarioLine();
+
+        const line = this.scenarioState.active.content[index];
+        const synth = window.speechSynthesis;
+        const utter = new SpeechSynthesisUtterance(line.text);
+
+        // --- Voice Selection Logic ---
+        // 1. Prioritize Edge Neural (Andrew/Ava) if available
+        // 2. Alternate Male/Female based on speaker index (Even = Male, Odd = Female)
+
+        const voices = synth.getVoices();
+        const enVoices = voices.filter(v => v.lang.startsWith('en'));
+
+        let selectedVoice = null;
+
+        // Helper to find specific voices
+        const findVoice = (keywords) => enVoices.find(v => keywords.some(k => v.name.includes(k)));
+
+        // Male Candidates
+        const maleKeywords = ["Andrew", "Ryan", "Christopher", "Male"];
+        const maleVoice = findVoice(maleKeywords);
+
+        // Female Candidates
+        const femaleKeywords = ["Ava", "Emma", "Michelle", "Female"];
+        const femaleVoice = findVoice(femaleKeywords);
+
+        if (line.speaker.includes("(Female)")) {
+            selectedVoice = femaleVoice || defaultVoice;
+        } else if (line.speaker.includes("(Male)")) {
+            selectedVoice = maleVoice || defaultVoice;
+        } else {
+            // Fallback to legacy index-based alternating
+            selectedVoice = (index % 2 === 0) ? (maleVoice || defaultVoice) : (femaleVoice || defaultVoice);
+        }
+
+        if (selectedVoice) utter.voice = selectedVoice;
+
+        utter.rate = 0.95; // Slightly faster for more natural feel
+
+        utter.onend = () => {
+            if (this.scenarioState.playing) {
+                // Determine natural pause based on sentence length (Optimized)
+                const pause = Math.max(600, line.text.length * 20);
+                setTimeout(() => {
+                    if (this.scenarioState.playing) {
+                        this.playScenarioLine(index + 1);
+                    }
+                }, pause);
+            }
+        };
+
+        synth.cancel();
+        synth.speak(utter);
+    },
+
+    restartScenario() {
+        this.stopScenario();
+        this.scenarioState.index = 0;
+        this.renderScenarioDialogue();
+    },
+
+    toggleScenarioTranslation() {
+        this.scenarioState.showTr = !this.scenarioState.showTr;
+        // Toggle class on all existing bubbles
+        document.querySelectorAll('.scenario-tr').forEach(el => {
+            el.classList.toggle('hidden', !this.scenarioState.showTr);
+        });
+    },
 
 };
 

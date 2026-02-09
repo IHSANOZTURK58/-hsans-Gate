@@ -32,8 +32,8 @@
                 <!-- Library View -->
                 <div id="reading-library">
                     <div class="game-header-bar">
-                        <button class="btn-icon library-back-btn" onclick="app.returnToDashboard()"
-                            title="Ana Menü">&larr;</button>
+                        <button class="btn-icon library-back-btn" onclick="app.openReadingListeningModes()"
+                            title="Geri">&larr;</button>
                         <h2 style="margin:0; font-size:1.5rem;">Kütüphane</h2>
                         <div style="width:40px;"></div>
                     </div>
@@ -57,9 +57,15 @@
                             <div id="search-suggestions" class="search-suggestions"></div>
                         </div>
 
-                        <div class="reader-header-title" style="text-align: right;">
-                            <h3 id="reader-book-title">Book Title</h3>
-                            <span id="reader-book-level">Level A1</span>
+                        <div class="reader-header-title"
+                            style="text-align: right; display: flex; align-items: center; gap: 0.5rem; justify-content: flex-end;">
+                            <button id="btn-book-speak" class="btn-icon-small" onclick="app.speakCurrentPage()"
+                                title="Dinle"
+                                style="font-size: 1.2rem; background: rgba(255,255,255,0.1); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.2); color: var(--accent-gold); cursor: pointer; transition: all 0.2s;">🔊</button>
+                            <div>
+                                <h3 id="reader-book-title" style="margin:0;">Book Title</h3>
+                                <span id="reader-book-level">Level A1</span>
+                            </div>
                         </div>
                     </div>
                     <div class="reader-container">
@@ -183,12 +189,12 @@
                                 <div class="hover-glow"></div>
                             </div>
 
-                            <!-- Reading (Unlocked) -->
-                            <div class="module-card" onclick="app.openReadingMode()">
-                                <div class="icon-box">📖</div>
+                            <!-- Reading & Listening (Merged) -->
+                            <div class="module-card hero" onclick="app.openReadingListeningModes()">
+                                <div class="icon-box">📖🎧</div>
                                 <div class="module-info">
-                                    <h4>Okuma</h4>
-                                    <p>Hikaye ve Kitaplar</p>
+                                    <h4>Okuma & Yazma</h4>
+                                    <p>Kitaplar ve Dinleme Odası</p>
                                 </div>
                                 <div class="hover-glow"></div>
                             </div>
@@ -249,6 +255,125 @@
                 </div>
             </div>
 
+            <!-- OKUMA & DINLEME MODES SELECTION -->
+            <div id="view-reading-listening" class="view hidden"
+                style="background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('assets/library-bg.png') no-repeat center center/cover;">
+                <div class="modes-split-layout"
+                    style="justify-content:center; align-items:center; flex-direction:column; padding-top:3rem;">
+
+                    <div class="modes-header-group"
+                        style="text-align:center; margin-bottom:2rem; width:100%; padding:0 1rem;">
+                        <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Geri"
+                            style="position:absolute; top:2rem; left:1rem;">
+                            &larr;
+                        </button>
+                        <h2 style="font-size:1.8rem;">Okuma & Yazma</h2>
+                        <p style="color:var(--text-secondary); font-size:0.9rem;">Hangi modda çalışmak istersin?</p>
+                    </div>
+
+                    <div class="mode-grid-compact"
+                        style="display:flex; gap:1rem; justify-content:center; flex-direction:column; width:90%; max-width:400px; align-items:center;">
+                        <!-- Reading (Library) -->
+                        <div class="mode-card compact" onclick="app.openReadingMode()"
+                            style="width:100%; text-align:center; display:block; padding:1.2rem; border-radius:16px;">
+                            <div class="mode-icon" style="font-size:2.5rem; margin-bottom:0.5rem;">📚</div>
+                            <div class="mode-info">
+                                <h3 style="font-size:1.2rem;">Kütüphane</h3>
+                                <p style="font-size:0.85rem;">Kitaplar ve Hikayeler.</p>
+                            </div>
+                        </div>
+
+                        <!-- Listening Mode -->
+                        <div class="mode-card compact" onclick="app.initListeningMode()"
+                            style="width:100%; text-align:center; display:block; padding:1.2rem; border-radius:16px;">
+                            <div class="mode-icon" style="font-size:2.5rem; margin-bottom:0.5rem;">🎧</div>
+                            <div class="mode-info">
+                                <h3 style="font-size:1.2rem;">Dinleme Odası</h3>
+                                <p style="font-size:0.85rem;">Duyduğunu Yaz.</p>
+                            </div>
+                        </div>
+
+                        <!-- Scenarios Mode (New) -->
+                        <div class="mode-card compact" onclick="app.initScenarioMode()"
+                            style="width:100%; text-align:center; display:block; padding:1.2rem; border-radius:16px;">
+                            <div class="mode-icon" style="font-size:2.5rem; margin-bottom:0.5rem;">🗣️</div>
+                            <div class="mode-info">
+                                <h3 style="font-size:1.2rem;">Günlük Senaryolar</h3>
+                                <p style="font-size:0.85rem;">Uzun Dinleme & Diyaloglar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCENARIO LISTEN LIST VIEW -->
+            <div id="view-scenarios" class="view hidden"
+                style="background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(2, 6, 23, 0.9)), url('assets/game-bg-city.png') no-repeat center center/cover;">
+
+                <div class="modes-header-group"
+                    style="display: flex; align-items: center; justify-content: space-between; padding: 2rem 1.5rem; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(15px); margin-bottom: 1.5rem;">
+                    <button class="btn-icon back-btn-top" onclick="app.openReadingListeningModes()" title="Geri"
+                        style="font-size: 1.8rem; background: rgba(255,255,255,0.15); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s; color: white;">
+                        &larr;
+                    </button>
+                    <p
+                        style="color:var(--text-primary); margin: 0; font-size: 1.1rem; font-weight: 800; letter-spacing: 0.5px; text-align: right; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                        Gerçek hayat diyaloglarını dinle.</p>
+                </div>
+
+                <div class="scenario-grid" id="scenario-list-container"
+                    style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem; padding:0 1rem; max-width:1200px; margin:0 auto; padding-bottom: 2rem;">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+
+            <!-- SCENARIO PLAYER VIEW -->
+            <div id="view-scenario-player" class="view hidden" style="position:relative;">
+                <div class="modes-header-group"
+                    style="display: flex; align-items: center; justify-content: space-between; padding: 2rem 1.5rem; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(15px); margin-bottom: 1.5rem;">
+                    <div style="display:flex; align-items:center; gap:1rem;">
+                        <button class="btn-icon back-btn-top" onclick="app.initScenarioMode()" title="Geri"
+                            style="font-size: 1.8rem; background: rgba(255,255,255,0.15); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s; color: white;">
+                            &larr;
+                        </button>
+                        <h3 id="scenario-player-title"
+                            style="margin:0; font-size:1.2rem; color:var(--accent-gold); font-weight: 800;">
+                            Başlık</h3>
+                    </div>
+                    <p
+                        style="color:var(--text-primary); margin: 0; font-size: 1rem; font-weight: 800; letter-spacing: 0.5px; text-align: right; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                        Gerçek hayat diyaloglarını dinle.</p>
+                </div>
+
+                <div class="scenario-player-container"
+                    style="max-width:800px; margin:0 auto; padding:1rem; padding-bottom:100px;">
+                    <!-- Dialogue Area -->
+                    <div id="scenario-dialogue-area" style="display:flex; flex-direction:column; gap:1rem;">
+                        <!-- Bubbles injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Player Controls (Fixed Bottom) -->
+                <div class="scenario-controls"
+                    style="position:fixed; bottom:0; left:0; width:100%; background:rgba(30, 41, 59, 0.95); backdrop-filter:blur(10px); padding:1rem; display:flex; justify-content:center; align-items:center; gap:1.5rem; border-top:1px solid rgba(255,255,255,0.1); z-index:100;">
+
+                    <button class="btn-round-icon" onclick="app.restartScenario()" title="Başa Dön">
+                        ⏮️
+                    </button>
+
+                    <button id="btn-scenario-play" class="btn-round-large" onclick="app.toggleScenarioPlay()"
+                        title="Oynat/Durdur" style="width:60px; height:60px; font-size:1.5rem;">
+                        ▶
+                    </button>
+
+                    <button class="btn-round-icon" onclick="app.toggleScenarioTranslation()"
+                        title="Çevirileri Göster/Gizle">
+                        🇹🇷
+                    </button>
+                </div>
+            </div>
+
+
             <!-- WRITING INPUT VIEW (Split Layout) -->
             <div id="view-writing-input" class="view hidden" style="position:relative;">
                 <!-- START OVERLAY (Quota Saver) -->
@@ -286,6 +411,9 @@
                         <div class="task-actions">
                             <button id="btn-check-answer" class="btn-action check"
                                 onclick="app.checkWritingInputAnswer()">KONTROL ET</button>
+                            <button id="btn-giveup-input" class="btn-action"
+                                style="border: 1px solid #ef4444; background: rgba(239, 68, 68, 0.1); color: white; display:flex; align-items:center; justify-content:center; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer;"
+                                onclick="app.giveUpWritingInput()">PES ET 🏳️</button>
                             <button id="btn-next-question" class="btn-action next hidden"
                                 onclick="app.nextWritingQuestion()">DEVAM ET ➡</button>
                         </div>
@@ -581,6 +709,89 @@
                 </div>
             </div>
 
+            <!-- LISTENING MODE (Focus Room) -->
+            <div id="view-listening" class="view hidden"
+                style="background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('assets/game-bg-geometric.png') no-repeat center center/cover;">
+
+                <!-- Audio Wave Visual Effect (Concept) -->
+                <div class="audio-wave-container"
+                    style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100%; height:300px; z-index:0; pointer-events:none; opacity:0.1; display:flex; align-items:center; justify-content:center; gap:5px;">
+                    <div class="wave-bar"
+                        style="width:4px; height:20px; background:var(--neon-blue); border-radius:10px; animation: pulseWave 1s infinite alternate;">
+                    </div>
+                    <div class="wave-bar"
+                        style="width:4px; height:40px; background:var(--neon-blue); border-radius:10px; animation: pulseWave 1.2s infinite alternate;">
+                    </div>
+                    <div class="wave-bar"
+                        style="width:4px; height:30px; background:var(--neon-purple); border-radius:10px; animation: pulseWave 0.8s infinite alternate;">
+                    </div>
+                    <div class="wave-bar"
+                        style="width:4px; height:50px; background:var(--neon-blue); border-radius:10px; animation: pulseWave 1.5s infinite alternate;">
+                    </div>
+                    <div class="wave-bar"
+                        style="width:4px; height:25px; background:var(--neon-blue); border-radius:10px; animation: pulseWave 1s infinite alternate;">
+                    </div>
+                </div>
+
+                <div class="listening-header" style="z-index: 10;">
+                    <button class="btn-icon back-btn-top" onclick="app.openReadingListeningModes()">
+                        &larr;
+                    </button>
+                    <!-- Voice Selector (Hidden by default, shown if multiple voices) -->
+                    <select id="voice-select" class="voice-select hidden" onchange="app.setVoice(this.value)">
+                    </select>
+                </div>
+
+                <div class="listening-container">
+                    <div class="visualizer-container">
+                        <!-- Simple CSS Audio Visualizer -->
+                        <div class="audio-wave">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <div class="playback-controls">
+                        <button id="btn-listen-slow" class="btn-round-icon" onclick="app.playSentence(0.7)"
+                            title="Yavaş Dinle (0.7x)">🐢</button>
+                        <button id="btn-listen-normal" class="btn-round-large" onclick="app.playSentence(1)"
+                            title="Tekrar Dinle (1.0x)">▶</button>
+                        <div class="voice-selector-wrapper"
+                            style="position: relative; margin-left: 5px; display: inline-block;">
+                            <button class="btn-round-icon" title="Ses Ayarları">⚙️</button>
+                            <select id="listening-voice-select"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
+                                <option value="">Yükleniyor...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="listening-sentence-display" class="sentence-display">
+                        <!-- Words will be injected here -->
+                        <!-- Example: <span class="word">I</span> <span class="word gap">_____</span> -->
+                    </div>
+
+                    <div class="listening-input-area">
+                        <input type="text" id="listening-input" class="landing-input" placeholder="Boşluğu doldur..."
+                            autocomplete="off">
+                        <button id="btn-check-listening" class="btn btn-primary"
+                            onclick="app.checkListeningAnswer()">Kontrol Et</button>
+                        <button id="btn-giveup-listening" class="btn btn-outline"
+                            style="border: 1px solid #ef4444; background: rgba(239, 68, 68, 0.1); color: white;"
+                            onclick="app.giveUpListening()">Pes Et 🏳️</button>
+                    </div>
+
+                    <div id="listening-feedback" class="feedback-msg"></div>
+
+                    <!-- Manual Next Button (Failsafe) -->
+                    <button id="btn-listening-next" class="btn btn-secondary hidden"
+                        onclick="app.renderListeningLevel()" style="margin-top:1rem;">
+                        Sonraki Soru ➡
+                    </button>
+
+                    <!-- Progress removed for endless mode -->
+                </div>
+            </div>
+
             <!-- WORD LIST VIEW -->
             <div id="view-list" class="view hidden">
                 <div class="list-header">
@@ -711,13 +922,16 @@
                     <div id="writing-feedback" style="height:2rem; font-weight:bold; color:var(--text-primary);"></div>
                 </div>
 
-                <div style="margin-top:2rem; display:flex; justify-content:center; gap:1rem;">
+                <div style="margin-top:2rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
                     <button id="btn-scramble-clear" class="btn btn-secondary" onclick="app.clearWritingSlots()">TEMİZLE
                         🧹</button>
+                    <button id="btn-scramble-giveup" class="btn btn-outline"
+                        style="border: 1px solid #ef4444; background: rgba(239, 68, 68, 0.1); color: white;"
+                        onclick="app.giveUpWritingScramble()">PES ET 🏳️</button>
                     <button id="btn-scramble-check" class="btn btn-primary" onclick="app.checkWritingAnswer()">KONTROL
                         ET ✅</button>
                     <button id="btn-scramble-next" class="btn btn-primary hidden"
-                        onclick="app.nextScrambleQuestion()">DEVAM ET ➡</button>
+                        onclick="app.nextWritingQuestion()">DEVAM ET ➡</button>
                 </div>
             </div>
 
@@ -1152,6 +1366,7 @@
     <script src="js/sentences.js?v=4"></script>
     <script src="js/grammar.js?v=33"></script>
     <script src="js/grammar_explanations.js?v=33"></script>
+    <script src="js/scenarios.js?v=1"></script>
     <script src="js/books.js"></script>
     <script src="js/app.js?v=34"></script>
 
