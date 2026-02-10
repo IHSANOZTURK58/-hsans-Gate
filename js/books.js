@@ -1,5 +1,5 @@
-window.BOOK_DATA = {
-    "A1": [{
+window.BOOK_DATA = { "A1": [], "A2": [], "B1": [], "B2": [], "C1": [] };
+window.BOOK_DATA["A1"] = [{
         title: "The Little Bakery in Paris",
         author: "Emma Rose",
         level: "A1",
@@ -7,7 +7,7 @@ window.BOOK_DATA = {
         color: "#f39c12", // Gold
         description: "A lovely story about a small bakery and delicious bread in Paris.",
         pages: [
-            `<h3>Page 1: The Small Bakery</h3>
+                `<h3>Page 1: The Small Bakery</h3>
             <p>Paris is a very beautiful city. It's in the heart of France.</p>
             <p>Every morning, the sun shines on the white buildings.</p>
             <p>On a small street, there is a very little bakery.</p>
@@ -24,7 +24,7 @@ window.BOOK_DATA = {
             <p>I wear a white apron and a big hat for my work.</p>
             <p>I love my job because I love the smell of the bakery.</p>`,
 
-            `<h3>Page 2: Sophie's Morning</h3>
+                `<h3>Page 2: Sophie's Morning</h3>
             <p>At five o'clock in the morning, the city is very quiet.</p>
             <p>I walk to the bakery and I open the heavy blue door.</p>
             <p>The first thing I do is turn on the big, warm oven.</p>
@@ -41,7 +41,7 @@ window.BOOK_DATA = {
             <p>I make some coffee for myself and I wait for customers.</p>
             <p>The first person arrives at six o'clock every morning.</p>`,
 
-            `<h3>Page 3: The First Customer</h3>
+                `<h3>Page 3: The First Customer</h3>
             <p>The bell on the door rings loudly. *Ding, ding, ding!*</p>
             <p>Monsieur Laurent is our very first customer every day.</p>
             <p>He is an old man with a kind face and a grey hat.</p>
@@ -58,7 +58,7 @@ window.BOOK_DATA = {
             <p>Everyone enjoys the taste of our traditional French bread.</p>
             <p>It is a wonderful start to a busy day in the bakery.</p>`,
 
-            `<h3>Page 4: Making Croissants</h3>
+                `<h3>Page 4: Making Croissants</h3>
             <p>Croissants are the most popular things in our little shop.</p>
             <p>Making them takes a long time and a lot of patience.</p>
             <p>I use a lot of fresh butter to make the dough rich.</p>
@@ -75,7 +75,7 @@ window.BOOK_DATA = {
             <p>I have to make more croissants every three hours daily.</p>
             <p>It is a lot of work, but I am proud of my croissants.</p>`,
 
-            `<h3>Page 5: The Sweet Treats</h3>
+                `<h3>Page 5: The Sweet Treats</h3>
             <p>We don't just make bread; we make many sweet things too.</p>
             <p>We have chocolate eclairs with rich, dark cream inside.</p>
             <p>There are lemon tarts that are both sour and very sweet.</p>
@@ -92,7 +92,7 @@ window.BOOK_DATA = {
             <p>Sweet things make people feel good and very happy.</p>
             <p>I love being a part of their special celebrations.</p>`,
 
-            `<h3>Page 6: Rain in Paris</h3>
+                `<h3>Page 6: Rain in Paris</h3>
             <p>Today, the sky is grey and it is raining in Paris.</p>
             <p>The streets are wet and people have big umbrellas.</p>
             <p>Inside the bakery, it is very warm and very cozy.</p>
@@ -109,7 +109,7 @@ window.BOOK_DATA = {
             <p>I watch the rain and I feel very lucky to be here.</p>
             <p>Rainy days are good for eating warm bread and cakes.</p>`,
 
-            `<h3>Page 7: Jacques the Baker</h3>
+                `<h3>Page 7: Jacques the Baker</h3>
             <p>I don't work alone; I work with a man named Jacques.</p>
             <p>Jacques is the owner of the bakery and he is an expert.</p>
             <p>He has been a baker for more than forty years now.</p>
@@ -126,7 +126,7 @@ window.BOOK_DATA = {
             <p>He is a very good man and a very talented master baker.</p>
             <p>I am happy to work with him and learn every single day.</p>`,
 
-            `<h3>Page 8: The Secret Ingredient</h3>
+                `<h3>Page 8: The Secret Ingredient</h3>
             <p>People always ask, "Why is your bread so very delicious?"</p>
             <p>Jacques always smiles and winks his eye at them.</p>
             <p>"It is a secret family recipe," he says very quietly.</p>
@@ -143,7 +143,7 @@ window.BOOK_DATA = {
             <p>Inside, the bread is soft and white like a puffy cloud.</p>
             <p>Laughter and love are also important parts of the recipe.</p>`,
 
-            `<h3>Page 9: Lunch Break</h3>
+                `<h3>Page 9: Lunch Break</h3>
             <p>At twelve o'clock, it is time for my small lunch break.</p>
             <p>The bakery is still busy, so Jacques takes the front.</p>
             <p>I sit in the small garden behind the bakery building.</p>
@@ -160,7 +160,7 @@ window.BOOK_DATA = {
             <p>I wash my hands and I put on a clean, white apron.</p>
             <p>I am ready to start my work for the second half of day.</p>`,
 
-            `<h3>Page 10: Chocolate Dreams</h3>
+                `<h3>Page 10: Chocolate Dreams</h3>
             <p>Jacques loves chocolate more than anything else in life.</p>
             <p>We have a shelf full of different types of chocolate.</p>
             <p>Some is dark and bitter, and some is light and milky.</p>
@@ -177,7 +177,7 @@ window.BOOK_DATA = {
             <p>I have to try the chocolate to make sure it is perfect.</p>
             <p>Being a baker is a very sweet life, I like it a lot.</p>`,
 
-            `<h3>Page 11: The Street Artists</h3>
+                `<h3>Page 11: The Street Artists</h3>
             <p>Across the street from the bakery, there is a square.</p>
             <p>In the square, there are many artists with their paints.</p>
             <p>They paint pictures of the people and the old buildings.</p>
@@ -194,7 +194,7 @@ window.BOOK_DATA = {
             <p>I look at his painting and I feel very special and glad.</p>
             <p>Our little bakery is now a piece of art on a canvas.</p>`,
 
-            `<h3>Page 12: A Lost Tourist</h3>
+                `<h3>Page 12: A Lost Tourist</h3>
             <p>One afternoon, a young woman enters the shop looking lost.</p>
             <p>She has a big map in her hands and she looks confused.</p>
             <p>"Excuse me, do you speak English?" she asks me softly.</p>
@@ -211,7 +211,7 @@ window.BOOK_DATA = {
             <p>The bakery is a friendly place for everyone in the world.</p>
             <p>I watch her walk away with a much bigger smile now.</p>`,
 
-            `<h3>Page 13: Afternoon Flowers</h3>
+                `<h3>Page 13: Afternoon Flowers</h3>
             <p>Every Tuesday, a flower seller stops at our bakery door.</p>
             <p>Her name is Marie and she has a cart full of flowers.</p>
             <p>She has red roses, white lilies, and blue violets today.</p>
@@ -228,7 +228,7 @@ window.BOOK_DATA = {
             <p>I love seeing the colors of the flowers in the sun.</p>
             <p>It makes the afternoon work feel much faster and easier.</p>`,
 
-            `<h3>Page 14: The Bakery Dog</h3>
+                `<h3>Page 14: The Bakery Dog</h3>
             <p>Jacques has a small dog named Barnaby who is very cute.</p>
             <p>Barnaby is a white terrier with a very waggy tail.</p>
             <p>He does not go in the kitchen because it must stay clean.</p>
@@ -245,7 +245,7 @@ window.BOOK_DATA = {
             <p>He is part of the bakery family, just like me and Jacques.</p>
             <p>I am glad to have Barnaby here with us every day.</p>`,
 
-            `<h3>Page 15: The Golden Hour</h3>
+                `<h3>Page 15: The Golden Hour</h3>
             <p>The sun is low in the sky and the light is yellow now.</p>
             <p>This is my favorite time of the day in the city of Paris.</p>
             <p>The buildings look like they are made of real bright gold.</p>
@@ -262,7 +262,7 @@ window.BOOK_DATA = {
             <p>Paris is truly the City of Light, especially at this time.</p>
             <p>I am happy to spend the end of my day here in the shop.</p>`,
 
-            `<h3>Page 16: Cleaning the Kitchen</h3>
+                `<h3>Page 16: Cleaning the Kitchen</h3>
             <p>A good baker must always keep a very clean kitchen.</p>
             <p>At the end of the day, Jacques and I clean everything.</p>
             <p>We wash the big metal bowls and the wooden tables.</p>
@@ -279,7 +279,7 @@ window.BOOK_DATA = {
             <p>Jacques thanks me and he gives me a small loaf of bread.</p>
             <p>A clean kitchen means we are ready for a new day tomorrow.</p>`,
 
-            `<h3>Page 17: Closing the Shop</h3>
+                `<h3>Page 17: Closing the Shop</h3>
             <p>It is seven o'clock and it is time to close the bakery.</p>
             <p>I turn off the lights in the window and the main shop.</p>
             <p>I lock the big blue door with a very large, old key.</p>
@@ -296,7 +296,7 @@ window.BOOK_DATA = {
             <p>I am proud to be a part of 'The Golden Croissant' family.</p>
             <p>I go home and I dream about sweet cakes and fresh bread.</p>`,
 
-            `<h3>Page 18: A Dream of Flour</h3>
+                `<h3>Page 18: A Dream of Flour</h3>
             <p>In my sleep, I often dream about the bakery and the bread.</p>
             <p>I see mountains of white flour and rivers of sweet milk.</p>
             <p>I am flying over Paris with a giant baguette in my hands.</p>
@@ -313,7 +313,7 @@ window.BOOK_DATA = {
             <p>Being a baker is my life, and I love it with all my soul.</p>
             <p>Paris is waiting for the smell of our fresh bread again.</p>`,
 
-            `<h3>Page 19: The Special Order</h3>
+                `<h3>Page 19: The Special Order</h3>
             <p>Today is Wednesday, and we have a very special order to do.</p>
             <p>A big hotel wants one hundred croissants for a breakfast.</p>
             <p>This means we have to work much faster than use usually.</p>
@@ -330,7 +330,7 @@ window.BOOK_DATA = {
             <p>Working hard makes the bread taste even better, I think.</p>
             <p>Large orders are a challenge, but we can do them well.</p>`,
 
-            `<h3>Page 20: The New Recipe</h3>
+                `<h3>Page 20: The New Recipe</h3>
             <p>Yesterday, I found an old recipe book in my grandmother's house.</p>
             <p>It has a recipe for a cake with lavender and dark honey.</p>
             <p>I show it to Jacques and he thinks it is very interesting.</p>
@@ -347,7 +347,7 @@ window.BOOK_DATA = {
             <p>It is wonderful to try new things and find new successes.</p>
             <p>I will try more recipes from my grandmother's old book.</p>`,
 
-            `<h3>Page 21: The Secret Customer</h3>
+                `<h3>Page 21: The Secret Customer</h3>
             <p>Every Friday, a mysterious woman comes to the bakery shop.</p>
             <p>She wears a long <p>black</p> coat and very dark sunglasses.</p>
             <p>She never speaks a word; she just points to what she wants.</p>
@@ -364,7 +364,7 @@ window.BOOK_DATA = {
             <p>It was the first time I saw her smile, and it was pretty.</p>
             <p>Even quiet people have a story to tell in the bakery.</p>`,
 
-            `<h3>Page 22: The Winter Snow</h3>
+                `<h3>Page 22: The Winter Snow</h3>
             <p>It is December now, and the first snow is falling in Paris.</p>
             <p>The city looks like a white fairy tale with the snow.</p>
             <p>Everything is white: the roofs, the trees, and the streets.</p>
@@ -381,7 +381,7 @@ window.BOOK_DATA = {
             <p>The snow is beautiful, but the warmth of bakery is better.</p>
             <p>I love the feeling of the holidays here in the little shop.</p>`,
 
-            `<h3>Page 23: The New Apprentice</h3>
+                `<h3>Page 23: The New Apprentice</h3>
             <p>Since we are very busy, Jacques hired a new apprentice.</p>
             <p>His name is Luc and he is only eighteen years old now.</p>
             <p>He is very <p>nervous</p> and he drops things sometimes at first.</p>
@@ -398,7 +398,7 @@ window.BOOK_DATA = {
             <p>The bakery is growing and the work is shared between us.</p>
             <p>Luc will become a very good baker with some more time.</p>`,
 
-            `<h3>Page 24: A Birthday Surprise</h3>
+                `<h3>Page 24: A Birthday Surprise</h3>
             <p>Today is Jacques' birthday, and he is sixty years old now.</p>
             <p>Luc and I arrived very early to make a surprise for him.</p>
             <p>We made a giant cake with three layers and much cream.</p>
@@ -415,7 +415,7 @@ window.BOOK_DATA = {
             <p>Celebrating together makes the work feel like a big party.</p>
             <p>Happy birthday to the best baker in the whole world!</p>`,
 
-            `<h3>Page 25: The Morning Mist</h3>
+                `<h3>Page 25: The Morning Mist</h3>
             <p>In the spring, Paris is often covered in a light mist.</p>
             <p>The city looks mysterious and very quiet in the morning.</p>
             <p>I walk to work and the air is fresh and a little damp.</p>
@@ -432,7 +432,7 @@ window.BOOK_DATA = {
             <p>I start to knead the dough and I feel very calm and strong.</p>
             <p>Morning is the best time for a baker to be alone and work.</p>`,
 
-            `<h3>Page 26: The Little Birds</h3>
+                `<h3>Page 26: The Little Birds</h3>
             <p>A group of small brown birds lives in the garden tree.</p>
             <p>They wait for me every morning when I arrive at the shop.</p>
             <p>I always bring them some small crumbs of dry bread today.</p>
@@ -449,7 +449,7 @@ window.BOOK_DATA = {
             <p>My morning starts with the birds and the smell of flour.</p>
             <p>It is a simple life, but it is full of small happy things.</p>`,
 
-            `<h3>Page 27: The Big Festival</h3>
+                `<h3>Page 27: The Big Festival</h3>
             <p>Once a year, our street has a big food festival for all.</p>
             <p>All the shops put tables outside and they sell their food.</p>
             <p>Jacques wants to make the biggest baguette in all of Paris.</p>
@@ -466,7 +466,7 @@ window.BOOK_DATA = {
             <p>Paris knows how to have fun with good food and good wine.</p>
             <p>I am tired after the festival, but I am very, very happy.</p>`,
 
-            `<h3>Page 28: A Sunday Off</h3>
+                `<h3>Page 28: A Sunday Off</h3>
             <p>Sunday is the only day when the little bakery is closed.</p>
             <p>I sleep late and I have a slow breakfast at my own home.</p>
             <p>I usually go for a long walk by the river Seine in Paris.</p>
@@ -483,7 +483,7 @@ window.BOOK_DATA = {
             <p>Tomorrow at five o'clock, I will be back at the blue door.</p>
             <p>A good rest makes me a better baker during the week now.</p>`,
 
-            `<h3>Page 29: The Old Oven</h3>
+                `<h3>Page 29: The Old Oven</h3>
             <p>Our oven is very old, and it is made of <p>black</p> heavy iron.</p>
             <p>Jacques says it has been in the bakery for hundred years.</p>
             <p>It is not a modern oven, but it is the best for bread.</p>
@@ -500,7 +500,7 @@ window.BOOK_DATA = {
             <p>The oven is the king of the kitchen, and we are its servants.</p>
             <p>Without the old oven, 'The Golden Croissant' is not same.</p>`,
 
-            `<h3>Page 30: Fruit for Summer</h3>
+                `<h3>Page 30: Fruit for Summer</h3>
             <p>In the summer, the markets are full of fresh, sweet fruit.</p>
             <p>We buy baskets of peaches, cherries, and large apricots.</p>
             <p>I make fruit <p>tarts</p> with a thin crust and very little cream.</p>
@@ -517,7 +517,7 @@ window.BOOK_DATA = {
             <p>I enjoy the taste of the fresh berries while I am baking.</p>
             <p>Summer in Paris is sweet, just like our berry tarts today.</p>`,
 
-            `<h3>Page 31: The First Bread</h3>
+                `<h3>Page 31: The First Bread</h3>
             <p>Today, Jacques told me the story of the very first bread.</p>
             <p>He said that humans have been baking for thousands of years.</p>
             <p>The first bread was very flat and hard, like a small stone.</p>
@@ -534,7 +534,7 @@ window.BOOK_DATA = {
             <p>The history of bread is the history of the human family too.</p>
             <p>I feel honored to be a baker in this long and big story.</p>`,
 
-            `<h3>Page 32: A Night at the Opera</h3>
+                `<h3>Page 32: A Night at the Opera</h3>
             <p>Jacques surprised Luc and me with tickets to the Opera house.</p>
             <p>We finished our work and we put on our very best clothes.</p>
             <p>I wore a <p>blue</p> dress and Luc wore a tie for the first time.</p>
@@ -551,7 +551,7 @@ window.BOOK_DATA = {
             <p>A night of beauty gives me many new ideas for my baking.</p>
             <p>Thank you, Jacques, for the wonderful and musical night!</p>`,
 
-            `<h3>Page 33: The Morning Rain</h3>
+                `<h3>Page 33: The Morning Rain</h3>
             <p>The rain is very heavy this morning when I wake up early.</p>
             <p>I have to walk under a large black umbrella to get to shop.</p>
             <p>The street is full of water and the sky is a dark grey color.</p>
@@ -568,7 +568,7 @@ window.BOOK_DATA = {
             <p>Even on a rainy day, we find a way to be very happy here.</p>
             <p>I am glad to be dry and warm inside my little bakery home.</p>`,
 
-            `<h3>Page 34: The New Shop Sign</h3>
+                `<h3>Page 34: The New Shop Sign</h3>
             <p>The old sign on our shop was very <p>faded</p> and very hard to read.</p>
             <p>Jacques decided to buy a new one for 'The Golden Croissant'.</p>
             <p>The new sign is made of wood and it has gold painted letters.</p>
@@ -585,7 +585,7 @@ window.BOOK_DATA = {
             <p>The new sign makes me feel more professional in my work now.</p>
             <p>Welcome to 'The Golden Croissant', now with a new bright face!</p>`,
 
-            `<h3>Page 35: The Charity Box</h3>
+                `<h3>Page 35: The Charity Box</h3>
             <p>On the counter, we have a small wooden box for charity work.</p>
             <p>People put their small change in the box to help the poor.</p>
             <p>Every month, Jacques takes the money to a local food bank.</p>
@@ -602,7 +602,7 @@ window.BOOK_DATA = {
             <p>I am glad that our bread can bring a little help to someone.</p>
             <p>Kindness is a secret ingredient in everything we do here.</p>`,
 
-            `<h3>Page 36: Autumn Leaves</h3>
+                `<h3>Page 36: Autumn Leaves</h3>
             <p>It is October now, and the leaves are falling in the street.</p>
             <p>They are red, orange, and many shades of golden brown today.</p>
             <p>The air is crisp and it smells like dry wood and cold wind.</p>
@@ -619,7 +619,7 @@ window.BOOK_DATA = {
             <p>I love the sound of the wind outside while I am safe inside.</p>
             <p>Autumn brings a new rhythm to our work in the little shop.</p>`,
 
-            `<h3>Page 37: The Broken Kneader</h3>
+                `<h3>Page 37: The Broken Kneader</h3>
             <p>This morning, our dough kneader machine stopped working fast.</p>
             <p>It made a loud *bang* sound and then it was very quiet.</p>
             <p>This is a big problem because we have many loaves to make.</p>
@@ -636,7 +636,7 @@ window.BOOK_DATA = {
             <p>The machine will be fixed tomorrow, but today we used power.</p>
             <p>Strong hands make the best bread, Jacques says with a laugh.</p>`,
 
-            `<h3>Page 38: The Midnight Baker</h3>
+                `<h3>Page 38: The Midnight Baker</h3>
             <p>Sometimes, I can't sleep and I think about the bakery shop.</p>
             <p>I imagine Jacques is there, working in the dark and quiet.</p>
             <p>He is the midnight baker, preparing the world for its day.</p>
@@ -653,7 +653,7 @@ window.BOOK_DATA = {
             <p>Paris will be hungry soon, and I must be ready to help it.</p>
             <p>Goodnight to the flour, the oven, and the kind Jacques.</p>`,
 
-            `<h3>Page 39: The Farewell Party</h3>
+                `<h3>Page 39: The Farewell Party</h3>
             <p>Luc is finishing his apprenticeship and he is going away soon.</p>
             <p>He found a job in a big bakery in his own small hometown.</p>
             <p>We are very sad to see him leave, but we are very happy too.</p>
@@ -670,7 +670,7 @@ window.BOOK_DATA = {
             <p>Good luck, Luc! You will always be a part of our <p>family</p>.</p>
             <p>The kitchen will feel a little empty without you tomorrow.</p>`,
 
-            `<h3>Page 40: The Golden Croissant Forever</h3>
+                `<h3>Page 40: The Golden Croissant Forever</h3>
             <p>I have been a baker at 'The Golden Croissant' for five years.</p>
             <p>Many things have changed, but the heart of store is same.</p>
             <p>Jacques is still there, Barnaby is still there, and I am too.</p>
@@ -687,7 +687,7 @@ window.BOOK_DATA = {
             <p>We will have a warm croissant waiting for you, my dear friend.</p>
             <p>The story of the bakery never ends; it starts again tomorrow.</p>`
         ]
-    }, {
+}, {
         title: "The Adventure of Sparky",
         author: "John Silver",
         level: "A1",
@@ -695,7 +695,7 @@ window.BOOK_DATA = {
         color: "#3498db", // Blue
         description: "A fun story about a little dog named Sparky and his daily adventures.",
         pages: [
-            `<h3>Page 1: Meet Sparky</h3>
+                `<h3>Page 1: Meet Sparky</h3>
             <p>Sparky is a very small and very happy dog. He's a puppy.</p>
             <p>He has brown fur and a very long white tail that wags.</p>
             <p>His ears are big and they flop down when he runs fast.</p>
@@ -712,7 +712,7 @@ window.BOOK_DATA = {
             <p>Today is a beautiful day for a big adventure outside.</p>
             <p>Sparky is ready to see the world and have some great fun.</p>`,
 
-            `<h3>Page 2: The Green Garden</h3>
+                `<h3>Page 2: The Green Garden</h3>
             <p>Behind the big house, there is a very large green garden.</p>
             <p>There are many tall trees and colorful flowers everywhere.</p>
             <p>Sparky loves the garden because there is a lot to see.</p>
@@ -729,7 +729,7 @@ window.BOOK_DATA = {
             <p>The garden is a magical place for a little puppy dog.</p>
             <p>Playing outside is the best thing to do in the morning.</p>`,
 
-            `<h3>Page 3: Squirrel Trouble</h3>
+                `<h3>Page 3: Squirrel Trouble</h3>
             <p>In the big oak tree, there lives a very naughty squirrel.</p>
             <p>The squirrel's name is Nutty and he has a bushy tail.</p>
             <p>Nutty likes to tease Sparky by making loud clicking noises.</p>
@@ -746,7 +746,7 @@ window.BOOK_DATA = {
             <p>But for today, the squirrel is safe high up in the tree.</p>
             <p>Sparky finds a red ball on the grass and he starts to play.</p>`,
 
-            `<h3>Page 4: The Red Ball</h3>
+                `<h3>Page 4: The Red Ball</h3>
             <p>Sparky's favorite toy is a small, soft, and red rubber ball.</p>
             <p>He found it under the big garden table yesterday evening.</p>
             <p>The ball is bouncy and it makes a funny squeak sound.</p>
@@ -763,7 +763,7 @@ window.BOOK_DATA = {
             <p>The red ball is lost in the tall grass, but Sparky finds it.</p>
             <p>Dogs love toys, and Sparky loves his red bouncy ball best.</p>`,
 
-            `<h3>Page 5: Lunchtime Nap</h3>
+                `<h3>Page 5: Lunchtime Nap</h3>
             <p>After playing for two hours, Sparky is very, very tired.</p>
             <p>The sun is very hot now and the garden is very quiet.</p>
             <p>Sparky finds a cool place under the big, dark oak tree.</p>
@@ -780,7 +780,7 @@ window.BOOK_DATA = {
             <p>Thirty minutes later, Sparky wakes up and he feels fresh.</p>
             <p>He stretches his legs and he is ready for more fun today.</p>`,
 
-            `<h3>Page 6: The Blue Pool</h3>
+                `<h3>Page 6: The Blue Pool</h3>
             <p>Lucy has a small blue swimming pool in the middle garden.</p>
             <p>Today, the weather is very hot and the water is cool.</p>
             <p>Lucy is playing in the water with her yellow rubber duck.</p>
@@ -797,7 +797,7 @@ window.BOOK_DATA = {
             <p>He shakes his body and water goes everywhere in the garden.</p>
             <p>Tom and Lucy laugh because they are both very wet now too.</p>`,
 
-            `<h3>Page 7: Digging a Hole</h3>
+                `<h3>Page 7: Digging a Hole</h3>
             <p>Sparky finds a corner of the garden where the soil is soft.</p>
             <p>He starts to dig with his front paws very, very quickly.</p>
             <p>The brown dirt flies behind him and he makes a big hole.</p>
@@ -814,7 +814,7 @@ window.BOOK_DATA = {
             <p>Digging is a lot of work, but it is a natural dog thing.</p>
             <p>Sparky needs a bath now because he is very, very dirty.</p>`,
 
-            `<h3>Page 8: Bath Time!</h3>
+                `<h3>Page 8: Bath Time!</h3>
             <p>Tom brings a big plastic tub and fills it with warm water.</p>
             <p>He adds some dog soap and there are many white bubbles.</p>
             <p>Sparky does not like baths very much, but he must be clean.</p>
@@ -831,7 +831,7 @@ window.BOOK_DATA = {
             <p>Sparky's fur is now very soft and he smells like lavender.</p>
             <p>He is a clean dog again and he feels very light and happy.</p>`,
 
-            `<h3>Page 9: The Mailman</h3>
+                `<h3>Page 9: The Mailman</h3>
             <p>At two o'clock, the mailman arrives at the front red door.</p>
             <p>His name is Mr. Post and he has a very large blue bag.</p>
             <p>Sparky hears the gate open and he starts to bark loudly.</p>
@@ -848,7 +848,7 @@ window.BOOK_DATA = {
             <p>Sparky sits by the door and he feels very brave and strong.</p>
             <p>Guarding the house is a very important job for a puppy dog.</p>`,
 
-            `<h3>Page 10: The Neighbor's Cat</h3>
+                `<h3>Page 10: The Neighbor's Cat</h3>
             <p>The neighbor has a very large, fat, and black cat named Whiskers.</p>
             <p>Whiskers likes to sit on the garden fence and watch Sparky.</p>
             <p>The cat is very quiet and he has very bright green eyes.</p>
@@ -865,7 +865,7 @@ window.BOOK_DATA = {
             <p>Animals are all very different, and that is very okay.</p>
             <p>Sparky goes back to his red ball and he starts to play alone.</p>`,
 
-            `<h3>Page 11: Tea in the Garden</h3>
+                `<h3>Page 11: Tea in the Garden</h3>
             <p>In the afternoon, Tom's mother brings some tea to the garden.</p>
             <p>She has a tray with some tea, juice, and many sweet cakes.</p>
             <p>They sit at the table and they enjoy the warm sunny day.</p>
@@ -882,7 +882,7 @@ window.BOOK_DATA = {
             <p>The garden is full of the smell of tea and fresh cakes now.</p>
             <p>Life is very good for a little dog in a big green garden.</p>`,
 
-            `<h3>Page 12: A Strange Sound</h3>
+                `<h3>Page 12: A Strange Sound</h3>
             <p>Suddenly, Sparky hears a very strange sound from the bushes.</p>
             <p>It is a soft *rustle, rustle, rustle* in the green leaves.</p>
             <p>Sparky's ears stand up and he becomes very quiet and alert.</p>
@@ -899,7 +899,7 @@ window.BOOK_DATA = {
             <p>Sparky is happy that he found the source of the noise today.</p>
             <p>Adventuring means discovering new friends in the garden daily.</p>`,
 
-            `<h3>Page 13: The Hidden Bone</h3>
+                `<h3>Page 13: The Hidden Bone</h3>
             <p>Last week, Sparky hid a large bone somewhere in the garden.</p>
             <p>Now, he is very hungry and he wants to find it to chew on.</p>
             <p>He looks under the oak tree, but the bone is not there today.</p>
@@ -916,7 +916,7 @@ window.BOOK_DATA = {
             <p>He will remember where he put it next time, he hopes so.</p>
             <p>A dog's life is full of secrets and many hidden bones.</p>`,
 
-            `<h3>Page 14: Rain in the afternoon</h3>
+                `<h3>Page 14: Rain in the afternoon</h3>
             <p>The sky is getting dark and there are many grey clouds now.</p>
             <p>Suddenly, the first drops of rain start to fall from sky.</p>
             <p>Sparky does not like rain because his fur gets very wet.</p>
@@ -933,7 +933,7 @@ window.BOOK_DATA = {
             <p>He will wait for the sun to come back before going out.</p>
             <p>Resting is important when the weather is not very nice.</p>`,
 
-            `<h3>Page 15: The Kitchen Mystery</h3>
+                `<h3>Page 15: The Kitchen Mystery</h3>
             <p>While Tom is not looking, Sparky smells something very good.</p>
             <p>The smell is coming from the kitchen table, high above him.</p>
             <p>It is the smell of fresh, warm bread and some sweet jam.</p>
@@ -950,7 +950,7 @@ window.BOOK_DATA = {
             <p>The kitchen is full of mysteries and very tasty treats daily.</p>
             <p>Sparky loves his home and all the good things inside it.</p>`,
 
-            `<h3>Page 16: Playing Tag</h3>
+                `<h3>Page 16: Playing Tag</h3>
             <p>The rain has stopped and the sun is shining brightly again.</p>
             <p>Tom and Lucy run into the garden to play a game of tag.</p>
             <p>Sparky joins them and he runs around their fast legs.</p>
@@ -967,7 +967,7 @@ window.BOOK_DATA = {
             <p>They are all tired, but they have big smiles on their faces.</p>
             <p>Friendship is about playing and having fun with everyone.</p>`,
 
-            `<h3>Page 17: The Lost Sock</h3>
+                `<h3>Page 17: The Lost Sock</h3>
             <p>Lucy is looking for her favorite pink sock in the bedroom.</p>
             <p>She looks under the bed and in the closet, but it's gone.</p>
             <p>"Sparky, have you seen my sock?" asks Lucy, looking at him.</p>
@@ -984,7 +984,7 @@ window.BOOK_DATA = {
             <p>But toys are better because they are made for biting today.</p>
             <p>Sparky promises to leave the socks alone from now on, maybe.</p>`,
 
-            `<h3>Page 18: Going for a Walk</h3>
+                `<h3>Page 18: Going for a Walk</h3>
             <p>Tom takes Sparky's red leash from the hook by the front door.</p>
             <p>Sparky knows what this means and he starts to jump with joy.</p>
             <p>"Time for a walk, Sparky!" says Tom, putting the leash on.</p>
@@ -1001,7 +1001,7 @@ window.BOOK_DATA = {
             <p>A walk is like a big journey for a small brown puppy dog.</p>
             <p>They walk back home and Sparky is ready for a big drink.</p>`,
 
-            `<h3>Page 19: The New Bowl</h3>
+                `<h3>Page 19: The New Bowl</h3>
             <p>Today, Lucy bought a new food bowl for Sparky at the shop.</p>
             <p>The bowl is bright orange and it has Sparky's name on it.</p>
             <p>Sparky looks at the bowl and he thinks it is very pretty.</p>
@@ -1018,7 +1018,7 @@ window.BOOK_DATA = {
             <p>Sparky is a very lucky dog to have such a great family here.</p>
             <p>He finishes his drink and he goes to sit by the warm fire.</p>`,
 
-            `<h3>Page 20: The Fireplace</h3>
+                `<h3>Page 20: The Fireplace</h3>
             <p>The evening is getting cold and Tom's father lights a fire.</p>
             <p>The wood is burning and it makes a nice *crackle* sound.</p>
             <p>The room is full of warm orange light and it is very cozy.</p>
@@ -1035,7 +1035,7 @@ window.BOOK_DATA = {
             <p>Sparky closes his eyes and he has very sweet doggy dreams.</p>
             <p>The day is over and a new adventure will start tomorrow.</p>`,
 
-            `<h3>Page 21: A Rainy Morning</h3>
+                `<h3>Page 21: A Rainy Morning</h3>
             <p>The next morning, the sky is grey and it is raining hard.</p>
             <p>Sparky does not want to go out, so he stays in his bed.</p>
             <p>Tom brings him a small ball so they can play inside the house.</p>
@@ -1052,7 +1052,7 @@ window.BOOK_DATA = {
             <p>The smell of breakfast is in the air and it's very good.</p>
             <p>Sparky knows that soon he will get a small piece of bacon.</p>`,
 
-            `<h3>Page 22: The Magic Box</h3>
+                `<h3>Page 22: The Magic Box</h3>
             <p>Tom has a big brown box in his room that makes many sounds.</p>
             <p>It is a television, and Sparky likes to watch it sometimes.</p>
             <p>Today, there is a show about many dogs running in a field.</p>
@@ -1069,7 +1069,7 @@ window.BOOK_DATA = {
             <p>He goes back to his squeaky toy and he starts to play again.</p>
             <p>Real toys are better than pictures on a magic box screen.</p>`,
 
-            `<h3>Page 23: The Garden Swing</h3>
+                `<h3>Page 23: The Garden Swing</h3>
             <p>There is a wooden swing hanging from the big oak tree today.</p>
             <p>Lucy sits on the swing and Tom pushes her very high up now.</p>
             <p>Sparky watches them and he thinks it looks like a lot of fun.</p>
@@ -1086,7 +1086,7 @@ window.BOOK_DATA = {
             <p>Sparky's legs feel a bit wobbly, but he is very happy now.</p>
             <p>Flying on a swing is a very big adventure for a small dog.</p>`,
 
-            `<h3>Page 24: A Visit to the Vet</h3>
+                `<h3>Page 24: A Visit to the Vet</h3>
             <p>Today, Sparky must go to the vet for a health check-up now.</p>
             <p>The vet is a doctor for animals and her name is Dr. Green.</p>
             <p>Sparky is a bit nervous when they enter the white office.</p>
@@ -1103,7 +1103,7 @@ window.BOOK_DATA = {
             <p>Doctors are friends who help us stay well and very happy.</p>
             <p>Sparky sleeps all the way home in the back of the blue car.</p>`,
 
-            `<h3>Page 25: The Hidden Treasure</h3>
+                `<h3>Page 25: The Hidden Treasure</h3>
             <p>Sparky is in the garden and he finds a very shiny thing today.</p>
             <p>It is a silver key that Lucy lost in the grass last week.</p>
             <p>Sparky picks it up and he feels the cold metal in his mouth.</p>
@@ -1120,7 +1120,7 @@ window.BOOK_DATA = {
             <p>The garden hides many treasures, and Sparky can find them all.</p>
             <p>Being a helpful dog is the best feeling in the whole world.</p>`,
 
-            `<h3>Page 26: The New Friend</h3>
+                `<h3>Page 26: The New Friend</h3>
             <p>A new family moved into the house across the street today.</p>
             <p>They have a dog too! His name is Buster and he is very big.</p>
             <p>Buster is a black dog with a very loud and deep 'Woof' sound.</p>
@@ -1137,7 +1137,7 @@ window.BOOK_DATA = {
             <p>They are now best friends and they will see each other daily.</p>
             <p>The neighborhood is getting better with more friends around.</p>`,
 
-            `<h3>Page 27: The Big Storm</h3>
+                `<h3>Page 27: The Big Storm</h3>
             <p>Tonight, there is a big storm with thunder and bright light.</p>
             <p>The sky is very loud and the wind is blowing the trees fast.</p>
             <p>Sparky is very afraid of the thunder and he hides in bed.</p>
@@ -1154,7 +1154,7 @@ window.BOOK_DATA = {
             <p>They both go back to their beds and they sleep very soundly.</p>
             <p>Tomorrow the sun will shine and the world will be new again.</p>`,
 
-            `<h3>Page 28: Kitchen Cookies</h3>
+                `<h3>Page 28: Kitchen Cookies</h3>
             <p>Tom's mother is baking some chocolate cookies in the kitchen.</p>
             <p>The whole house smells like sugar, butter, and sweet treats.</p>
             <p>Sparky sits by the oven and he watches the door very closely.</p>
@@ -1171,7 +1171,7 @@ window.BOOK_DATA = {
             <p>Sparky is happy that he has his own special treats to enjoy.</p>
             <p>He finishes his cookie and he licks his messy paws clean.</p>`,
 
-            `<h3>Page 29: The Butterfly Garden</h3>
+                `<h3>Page 29: The Butterfly Garden</h3>
             <p>In the park, there is a special garden for many butterflies.</p>
             <p>The flowers are very tall and they have very bright colors.</p>
             <p>Sparky walks on the path and he sees a blue butterfly on a rose.</p>
@@ -1188,7 +1188,7 @@ window.BOOK_DATA = {
             <p>A little dog and a little butterfly can be friends for a moment.</p>
             <p>Sparky will always remember the blue wings on his wet nose.</p>`,
 
-            `<h3>Page 30: The Sleepy Sunday</h3>
+                `<h3>Page 30: The Sleepy Sunday</h3>
             <p>Sunday is a day for staying in bed and for a long breakfast.</p>
             <p>The house is very quiet and the sun is shining on the floor.</p>
             <p>Sparky finds a sunny spot in the living room and he lies down.</p>
@@ -1205,7 +1205,7 @@ window.BOOK_DATA = {
             <p>Sundays are for resting and for being together with family.</p>
             <p>Sparky is the happiest puppy in the whole wide world today.</p>`,
 
-            `<h3>Page 31: The New Toy</h3>
+                `<h3>Page 31: The New Toy</h3>
             <p>Tom bought a new toy for Sparky today from the big pet shop.</p>
             <p>It is a long rope with two big knots at each end of it now.</p>
             <p>Sparky loves it because he can pull it with his strong teeth.</p>
@@ -1222,7 +1222,7 @@ window.BOOK_DATA = {
             <p>Playing with Tom is his favorite thing to do in the afternoon.</p>
             <p>Every dog needs a rope to pull and a friend to play with him.</p>`,
 
-            `<h3>Page 32: The Squirrel's Revenge</h3>
+                `<h3>Page 32: The Squirrel's Revenge</h3>
             <p>Nutty the squirrel is back in the garden and he is very loud.</p>
             <p>He is sitting on the bird feeder and he is eating the seeds.</p>
             <p>Sparky sees him and he runs to the tree to bark at the squirrel.</p>
@@ -1239,7 +1239,7 @@ window.BOOK_DATA = {
             <p>Sparky decides to go and find his red ball in the other corner.</p>
             <p>Squirrels are too much trouble for a little dog on a hot day.</p>`,
 
-            `<h3>Page 33: A Trip to the Beach</h3>
+                `<h3>Page 33: A Trip to the Beach</h3>
             <p>Today, the family is going to the beach for a big holiday trip.</p>
             <p>They put everything in the blue car: towels, balls, and food.</p>
             <p>Sparky sits in the back and he looks out the window at trees.</p>
@@ -1256,7 +1256,7 @@ window.BOOK_DATA = {
             <p>They stay all day and they watch the sun go down in the sea.</p>
             <p>The beach is the best place for a big doggy adventure today.</p>`,
 
-            `<h3>Page 34: The Sandy Dog</h3>
+                `<h3>Page 34: The Sandy Dog</h3>
             <p>After playing on the beach, Sparky is covered in yellow sand.</p>
             <p>His brown fur is full of it and he feels a bit heavy now.</p>
             <p>He shakes his body and sand goes everywhere on the car seats.</p>
@@ -1273,7 +1273,7 @@ window.BOOK_DATA = {
             <p>Sand is fun to play in, but it is not very nice in your fur.</p>
             <p>Being a clean dog at home is much better for a good sleep.</p>`,
 
-            `<h3>Page 35: The Mirror Mystery</h3>
+                `<h3>Page 35: The Mirror Mystery</h3>
             <p>Lucy has a new big mirror in her room on the white wall now.</p>
             <p>Sparky walks into the room and he sees another dog there.</p>
             <p>The other dog looks exactly like him: brown fur and big ears.</p>
@@ -1290,7 +1290,7 @@ window.BOOK_DATA = {
             <p>The world is full of strange things that Sparky must learn.</p>
             <p>A mirror is a funny thing for a little dog to understand.</p>`,
 
-            `<h3>Page 36: Autumn Leaves</h3>
+                `<h3>Page 36: Autumn Leaves</h3>
             <p>It is October and the leaves are falling from the big trees.</p>
             <p>They are red, orange, and yellow and they cover the garden.</p>
             <p>Tom makes a big pile of leaves in the middle of the grass.</p>
@@ -1307,7 +1307,7 @@ window.BOOK_DATA = {
             <p>They help Tom to make the pile again so they can jump once more.</p>
             <p>Life in the garden changes with the seasons every single year.</p>`,
 
-            `<h3>Page 37: The Birthday Party</h3>
+                `<h3>Page 37: The Birthday Party</h3>
             <p>Today is Lucy's birthday and she is nine years old today.</p>
             <p>Many children come to the house and they have party hats on.</p>
             <p>Sparky wears a small blue hat too, but it falls off his head.</p>
@@ -1324,7 +1324,7 @@ window.BOOK_DATA = {
             <p>At the end of the day, all the kids go home and it's quiet.</p>
             <p>Sparky is tired and he sleeps with a piece of blue ribbon.</p>`,
 
-            `<h3>Page 38: The First Snow</h3>
+                `<h3>Page 38: The First Snow</h3>
             <p>The winter has arrived and the garden is covered in white snow.</p>
             <p>Sparky looks out the window and he is very surprised today.</p>
             <p>The ground is white and the trees are white and it's cold.</p>
@@ -1341,7 +1341,7 @@ window.BOOK_DATA = {
             <p>After a few minutes, his paws are very cold and he goes in.</p>
             <p>Inside, the fire is warm and Sparky feels very cozy again.</p>`,
 
-            `<h3>Page 39: The Cozy Bed</h3>
+                `<h3>Page 39: The Cozy Bed</h3>
             <p>It is a very cold night and the wind is blowing outside house.</p>
             <p>Sparky is in his blue bed, but he still feels a bit cold now.</p>
             <p>Tom sees this and he brings a warm woolen sweater for him.</p>
@@ -1358,7 +1358,7 @@ window.BOOK_DATA = {
             <p>He had many adventures this year and he learned many things.</p>
             <p>Goodnight, Sparky, and have a very sweet and warm sleep.</p>`,
 
-            `<h3>Page 40: The Best Dog</h3>
+                `<h3>Page 40: The Best Dog</h3>
             <p>A year has passed and Sparky is not a small puppy anymore now.</p>
             <p>He is a big dog now, but he is still very happy and playful.</p>
             <p>Tom and Lucy are his best friends and they love him so much.</p>
@@ -1375,8 +1375,8 @@ window.BOOK_DATA = {
             <p>He is the best dog in the world, and he knows it very well.</p>
             <p>Final wag of the tail for all of his dear and kind friends.</p>`
         ]
-    }],
-    "A2": [{
+}];
+window.BOOK_DATA["A2"] = [{
         title: "The Mystery of the Lighthouse",
         author: "Sarah Black",
         level: "A2",
@@ -1384,7 +1384,7 @@ window.BOOK_DATA = {
         color: "#e67e22", // Orange
         description: "An exciting mystery about a lighthouse that starts shining on its own.",
         pages: [
-            `<h3>Page 1: The Old Town by the Sea</h3>
+                `<h3>Page 1: The Old Town by the Sea</h3>
             <p>Seaview is a small, quiet town located on the rocky coast of England.</p>
             <p>The waves crash against the high cliffs every day and night.</p>
             <p>On top of the highest cliff, there is an old, tall lighthouse.</p>
@@ -1401,7 +1401,7 @@ window.BOOK_DATA = {
             <p>It is a dangerous place because the rocks are very sharp and wet.</p>
             <p>Tonight, something very strange is going to happen in Seaview.</p>`,
 
-            `<h3>Page 2: A Light in the Dark</h3>
+                `<h3>Page 2: A Light in the Dark</h3>
             <p>It was a very stormy Tuesday night with a lot of loud thunder.</p>
             <p>I was in my bedroom, trying to read a book by my small lamp.</p>
             <p>Suddenly, I looked out of my window towards the high cliff.</p>
@@ -1418,7 +1418,7 @@ window.BOOK_DATA = {
             <p>Who had turned on the light? And how did they enter the tower?</p>
             <p>The mystery of the lighthouse was born in that very moment.</p>`,
 
-            `<h3>Page 3: The Town Meeting</h3>
+                `<h3>Page 3: The Town Meeting</h3>
             <p>The next morning, the town square was full of worried people.</p>
             <p>The Mayor, a tall man with a big hat, was standing on the steps.</p>
             <p>Everyone was talking at once, asking many different questions.</p>
@@ -1435,7 +1435,7 @@ window.BOOK_DATA = {
             <p>"Okay, let's meet at the beach tonight," I replied softly.</p>
             <p>We were determined to find the truth behind the mystery.</p>`,
 
-            `<h3>Page 4: The Secret Path</h3>
+                `<h3>Page 4: The Secret Path</h3>
             <p>Maya and I met at the old pier when the sun was going down.</p>
             <p>The sky was a deep purple color and the wind was very cold.</p>
             <p>We had two strong flashlights and a small bag of sandwiches.</p>
@@ -1452,7 +1452,7 @@ window.BOOK_DATA = {
             <p>Suddenly, we heard a soft metallic sound from the other side.</p>
             <p>Someone was moving inside the old, abandoned lighthouse.</p>`,
 
-            `<h3>Page 5: The Open Window</h3>
+                `<h3>Page 5: The Open Window</h3>
             <p>"The main door is locked, but maybe there is another way," said Maya.</p>
             <p>We walked around the circular base of the stone tower slowly.</p>
             <p>High above our heads, we saw a small window that was half open.</p>
@@ -1469,7 +1469,7 @@ window.BOOK_DATA = {
             <p>Everything was very quiet, except for the sound of our feet.</p>
             <p>We saw a spiral staircase that went high up into the tower.</p>`,
 
-            `<h3>Page 6: The Spiral Stairs</h3>
+                `<h3>Page 6: The Spiral Stairs</h3>
             <p>The staircase was made of old stone and it was very narrow.</p>
             <p>We started to climb up, counting the steps as we went and went.</p>
             <p>One, two, three... the stairs seemed to go on forever now.</p>
@@ -1486,7 +1486,7 @@ window.BOOK_DATA = {
             <p>We stayed very still, holding our breath in the deep silence.</p>
             <p>We knew we were not alone in the old lighthouse anymore.</p>`,
 
-            `<h3>Page 7: The Shadow</h3>
+                `<h3>Page 7: The Shadow</h3>
             <p>We continued to climb the stairs, but we were much slower now.</p>
             <p>At the top of the stairs, there was a large heavy wooden door.</p>
             <p>Suddenly, a tall shadow moved across the wall in front of us.</p>
@@ -1503,7 +1503,7 @@ window.BOOK_DATA = {
             <p>"I used to be the keeper of this lighthouse many years ago."</p>
             <p>But the Captain was supposed to be gone for many years now.</p>`,
 
-            `<h3>Page 8: The Captain's Story</h3>
+                `<h3>Page 8: The Captain's Story</h3>
             <p>Captain Arthur invited us to sit on two old wooden boxes.</p>
             <p>He explained that he had been living in a small cabin nearby.</p>
             <p>"I saw a large ship in trouble two nights ago," he said sadly.</p>
@@ -1520,7 +1520,7 @@ window.BOOK_DATA = {
             <p>The light was a message of safety for everyone in Seaview.</p>
             <p>But the Captain was tired and his tools were very old now.</p>`,
 
-            `<h3>Page 9: The Broken Engine</h3>
+                `<h3>Page 9: The Broken Engine</h3>
             <p>"The light is off now because the main gear is broken," he said.</p>
             <p>He showed us the large metal wheels that turned the big lens.</p>
             <p>One of the teeth on the gear was missing and it wouldn't move.</p>
@@ -1537,7 +1537,7 @@ window.BOOK_DATA = {
             <p>We had a mission now: we had to save the Seaview lighthouse.</p>
             <p>The mystery was becoming a very big adventure for both of us.</p>`,
 
-            `<h3>Page 10: The Secret Mission</h3>
+                `<h3>Page 10: The Secret Mission</h3>
             <p>The next day, Maya and I met at her father's metal workshop.</p>
             <p>The workshop was full of the smell of iron and hot coal fire.</p>
             <p>Her father was busy, so we looked in the scrap metal boxes.</p>
@@ -1554,7 +1554,7 @@ window.BOOK_DATA = {
             <p>But we were not afraid because we had a very important job.</p>
             <p>Captain Arthur was waiting for us at the top of the tower.</p>`,
 
-            `<h3>Page 11: Fixing the Light</h3>
+                `<h3>Page 11: Fixing the Light</h3>
             <p>We reached the lamp room and we were very tired from the climb.</p>
             <p>Captain Arthur was happy to see the new metal gear in my bag.</p>
             <p>"Excellent work, children! Let's put it into the engine now."</p>
@@ -1571,7 +1571,7 @@ window.BOOK_DATA = {
             <p>We stood on the balcony and we watched the light spinning.</p>
             <p>It was the most beautiful thing I had ever seen in my life.</p>`,
 
-            `<h3>Page 12: A Surprise Guest</h3>
+                `<h3>Page 12: A Surprise Guest</h3>
             <p>Suddenly, we heard several loud voices from the cliff below.</p>
             <p>We looked down and we saw several flashlights coming up path.</p>
             <p>"It's the Mayor and the police!" I shouted, feeling very scared.</p>
@@ -1588,7 +1588,7 @@ window.BOOK_DATA = {
             <p>The ship was using the lighthouse beam to find the harbor.</p>
             <p>"You saved that ship, Arthur," the Mayor said with a smile.</p>`,
 
-            `<h3>Page 13: The Hero of Seaview</h3>
+                `<h3>Page 13: The Hero of Seaview</h3>
             <p>The Mayor realized that the lighthouse was still very useful.</p>
             <p>He apologized for letting the old building fall into ruin.</p>
             <p>"We want you to be the official keeper once more, Arthur."</p>
@@ -1605,7 +1605,7 @@ window.BOOK_DATA = {
             <p>Every night, I look out of my window and I see the light spin.</p>
             <p>It reminds me that even small kids can do very big things.</p>`,
 
-            `<h3>Page 14: The Lighthouse Museum</h3>
+                `<h3>Page 14: The Lighthouse Museum</h3>
             <p>The Mayor decided to turn the bottom floor into a small museum.</p>
             <p>We found many old maps and sailors' logs in the dusty attic.</p>
             <p>I helped Maya to clean the old glass bottles and the shells.</p>
@@ -1622,7 +1622,7 @@ window.BOOK_DATA = {
             <p>The Captain says the lighthouse will shine for another century.</p>
             <p>And I believe him, because he is a very wise and good man.</p>`,
 
-            `<h3>Page 15: A New Mystery Beginning</h3>
+                `<h3>Page 15: A New Mystery Beginning</h3>
             <p>One afternoon, while I was cleaning a small corner of attic,</p>
             <p>I found a small, old wooden box hidden under a floorboard.</p>
             <p>The box was locked with a very strange and heavy gold lock.</p>
@@ -1639,7 +1639,7 @@ window.BOOK_DATA = {
             <p>The Captain looked at the map and then at both of us kindly.</p>
             <p>"With your help, I think we can find what is hidden, Maya."</p>`,
 
-            `<h3>Page 16: The Hidden Code</h3>
+                `<h3>Page 16: The Hidden Code</h3>
             <p>The map was very old and the ink was a dark brown color now.</p>
             <p>It showed the coastline of Seaview, but with many strange dots.</p>
             <p>There were letters written in a circle around a small island.</p>
@@ -1656,7 +1656,7 @@ window.BOOK_DATA = {
             <p>The tide would be low, and the rock would be easy to reach.</p>
             <p>We were ready for the next part of our exciting adventure.</p>`,
 
-            `<h3>Page 17: The Red Rock</h3>
+                `<h3>Page 17: The Red Rock</h3>
             <p>The morning sun was bright as we walked across the wet sand.</p>
             <p>The Red Rock was easy to find because it was very large and red.</p>
             <p>The sea had left many small pools of water around its base.</p>
@@ -1673,7 +1673,7 @@ window.BOOK_DATA = {
             <p>Captain Arthur was amazed to see the diamond after so long.</p>
             <p>"This belongs to the people of Seaview," he said solemnly.</p>`,
 
-            `<h3>Page 18: The Museum Treasure</h3>
+                `<h3>Page 18: The Museum Treasure</h3>
             <p>We brought the diamond back to the lighthouse museum carefully.</p>
             <p>The Mayor was called and he could not believe his own eyes.</p>
             <p>"This diamond is worth a lot of money!" he said with shock now.</p>
@@ -1690,7 +1690,7 @@ window.BOOK_DATA = {
             <p>There are always more stories to find if you look hard enough.</p>
             <p>Seaview is full of history, and we are just starting to see.</p>`,
 
-            `<h3>Page 19: Stormy Winter</h3>
+                `<h3>Page 19: Stormy Winter</h3>
             <p>The winter was very cold and the storms were very strong today.</p>
             <p>Snow covered the lighthouse and the sea was a dark grey color.</p>
             <p>Captain Arthur stayed warm by the fire in his small tower room.</p>
@@ -1707,7 +1707,7 @@ window.BOOK_DATA = {
             <p>Winter in Seaview is beautiful, but it can be very tough too.</p>
             <p>We were always ready to help our friend, the lighthouse keeper.</p>`,
 
-            `<h3>Page 20: The Spring Celebration</h3>
+                `<h3>Page 20: The Spring Celebration</h3>
             <p>When the flowers began to grow, we had a big spring party now.</p>
             <p>The lighthouse was decorated with many colorful silk ribbons.</p>
             <p>The whole town gathered on the cliff for a big picnic today.</p>
@@ -1724,7 +1724,7 @@ window.BOOK_DATA = {
             <p>The stories of the lighthouse will live on for many years now.</p>
             <p>And I will be here, watching the light spin every single night.</p>`,
 
-            `<h3>Page 21: The Secret Attic</h3>
+                `<h3>Page 21: The Secret Attic</h3>
             <p>One day, while cleaning the museum, Maya found a small door.</p>
             <p>It was hidden behind a large pile of old, dusty maritime flags.</p>
             <p>"Look, Leo! Another secret room!" she said with much delight.</p>
@@ -1741,7 +1741,7 @@ window.BOOK_DATA = {
             <p>"Sarah was a hero during the Great Storm," he explained to us.</p>
             <p>The lighthouse was full of stories of brave men and women too.</p>`,
 
-            `<h3>Page 22: Sarah's Logbook</h3>
+                `<h3>Page 22: Sarah's Logbook</h3>
             <p>We spent several days reading Sarah's old logbook in the light.</p>
             <p>She wrote about the many ships she saved with her small lamp.</p>
             <p>She also wrote about the beautiful stars she saw every night.</p>
@@ -1758,7 +1758,7 @@ window.BOOK_DATA = {
             <p>The lighthouse keeps their memories safe inside its thick walls.</p>
             <p>I am happy to tell Sarah's story to everyone who visits us.</p>`,
 
-            `<h3>Page 23: The Foggy Night</h3>
+                `<h3>Page 23: The Foggy Night</h3>
             <p>The summer brought many warm days, but also a lot of thick fog.</p>
             <p>Sometimes you could not see your own hand in front of your face.</p>
             <p>Captain Arthur was very busy with the old mechanical foghorn.</p>
@@ -1775,7 +1775,7 @@ window.BOOK_DATA = {
             <p>The Captain blew the foghorn three times to give them a signal.</p>
             <p>Soon, the boat found the safe path into the Seaview harbor.</p>`,
 
-            `<h3>Page 24: The Rescue</h3>
+                `<h3>Page 24: The Rescue</h3>
             <p>The fishermen came to the lighthouse to thank us the next day.</p>
             <p>They brought a large basket of fresh fish and some sweet fruit.</p>
             <p>"Your foghorn saved our lives last night," said the Captain.</p>
@@ -1792,7 +1792,7 @@ window.BOOK_DATA = {
             <p>Seaview is lucky to have such a dedicated team of keepers here.</p>
             <p>The fog is gone now, but we are always ready for its return.</p>`,
 
-            `<h3>Page 25: Summer Visitors</h3>
+                `<h3>Page 25: Summer Visitors</h3>
             <p>In July, many tourists from the city came to visit our town.</p>
             <p>They wanted to see the lighthouse and the famous blue diamond.</p>
             <p>We had a lot of work to do in the museum and the gift shop.</p>
@@ -1809,7 +1809,7 @@ window.BOOK_DATA = {
             <p>Being a part of the lighthouse team is a big responsibility now.</p>
             <p>The summer was busy, but it was also full of new friends today.</p>`,
 
-            `<h3>Page 26: The Secret Map</h3>
+                `<h3>Page 26: The Secret Map</h3>
             <p>In the back of Sarah's logbook, I found another hidden page today.</p>
             <p>It was a drawing of the caves that were under the lighthouse.</p>
             <p>The drawing showed a hidden tunnel that led to the town square.</p>
@@ -1826,7 +1826,7 @@ window.BOOK_DATA = {
             <p>This was a huge discovery for the history of Seaview town now.</p>
             <p>The lighthouse had even more secrets than we ever imagined.</p>`,
 
-            `<h3>Page 27: The Underground Tunnel</h3>
+                `<h3>Page 27: The Underground Tunnel</h3>
             <p>We walked carefully through the tunnel, following the old map.</p>
             <p>The walls were made of rough stone and there were many shells.</p>
             <p>In one room, we found several old wooden chests from the sea.</p>
@@ -1843,7 +1843,7 @@ window.BOOK_DATA = {
             <p>I felt like a real archaeologist, finding the ancient past.</p>
             <p>The tunnel is now safe and it is open for everyone to explore.</p>`,
 
-            `<h3>Page 28: A Stormy Night Rescue</h3>
+                `<h3>Page 28: A Stormy Night Rescue</h3>
             <p>One night in August, a sudden and very violent storm arrived.</p>
             <p>The rain was so heavy that we could not see the cliff at all.</p>
             <p>Maya and I were at the tower, helping the Captain with light.</p>
@@ -1860,7 +1860,7 @@ window.BOOK_DATA = {
             <p>They were two tourists who got lost in the sudden August storm.</p>
             <p>We were heroes again, and the town was very proud of us today.</p>`,
 
-            `<h3>Page 29: The Reward</h3>
+                `<h3>Page 29: The Reward</h3>
             <p>The two tourists were very grateful and they gave us a gift.</p>
             <p>They were owners of a big boat company in the distant city.</p>
             <p>They gave the lighthouse a brand new and very powerful engine.</p>
@@ -1877,7 +1877,7 @@ window.BOOK_DATA = {
             <p>Our adventures are not over, but we have achieved so much today.</p>
             <p>The light is shining brighter than it has ever been before now.</p>`,
 
-            `<h3>Page 30: Autumn Colors</h3>
+                `<h3>Page 30: Autumn Colors</h3>
             <p>September arrived and the leaves began to change their color fast.</p>
             <p>The cliffs were covered in orange, red, and golden brown today.</p>
             <p>Maya and I spent the afternoons studying the old maritime maps.</p>
@@ -1894,7 +1894,7 @@ window.BOOK_DATA = {
             <p>I love the feeling of the autumn wind on the high cliff today.</p>
             <p>The lighthouse is our second home and we love it very much.</p>`,
 
-            `<h3>Page 31: The Old Anchor</h3>
+                `<h3>Page 31: The Old Anchor</h3>
             <p>In the garden of the lighthouse, we found a very large anchor.</p>
             <p>It was buried under the grass and it was covered in much rust.</p>
             <p>Captain Arthur said it belonged to a ship from the old century.</p>
@@ -1911,7 +1911,7 @@ window.BOOK_DATA = {
             <p>Just like the lighthouse, it stays firm against the rough sea.</p>
             <p>The garden looks much more official with the large iron anchor.</p>`,
 
-            `<h3>Page 32: The Message in a Bottle</h3>
+                `<h3>Page 32: The Message in a Bottle</h3>
             <p>While walking on the beach, I found a small green glass bottle.</p>
             <p>Inside the bottle, there was a piece of paper rolled up tight.</p>
             <p>"A message in a bottle! That's so cool!" said Maya, running over.</p>
@@ -1928,7 +1928,7 @@ window.BOOK_DATA = {
             <p>The message in the bottle is now a part of the Sea Star exhibit.</p>
             <p>The bottle is clean and it shines in the museum's bright light.</p>`,
 
-            `<h3>Page 33: A New Friend for Arthur</h3>
+                `<h3>Page 33: A New Friend for Arthur</h3>
             <p>Captain Arthur was feeling a bit lonely in his high stone tower.</p>
             <p>So, Maya and I decided to find him a companion for his life.</p>
             <p>We found a beautiful golden retriever at the town's animal shelter.</p>
@@ -1945,7 +1945,7 @@ window.BOOK_DATA = {
             <p>He is a very smart dog and he knows all the lighthouse rooms.</p>
             <p>Life is better with a friend by your side, especially a dog.</p>`,
 
-            `<h3>Page 34: The Night Shift</h3>
+                `<h3>Page 34: The Night Shift</h3>
             <p>One Friday, the Captain let Maya and me stay for a night shift.</p>
             <p>It was a very clear night and the moon was very big and white.</p>
             <p>We sat in the lamp room and we watched the beam spin slowly now.</p>
@@ -1962,7 +1962,7 @@ window.BOOK_DATA = {
             <p>I am proud to be a part of the team that keeps Seaview safe.</p>
             <p>The morning sun arrived and we were very tired but very happy.</p>`,
 
-            `<h3>Page 35: The Winter Preparations</h3>
+                `<h3>Page 35: The Winter Preparations</h3>
             <p>November arrived with many cold winds and a lot of grey rain.</p>
             <p>We had to prepare the lighthouse for the coming heavy snow.</p>
             <p>We stacked a lot of firewood in the cellar for the small stove.</p>
@@ -1979,7 +1979,7 @@ window.BOOK_DATA = {
             <p>I am looking forward to the snow and the cozy winter days here.</p>
             <p>The lighthouse is a place of warmth and many happy memories.</p>`,
 
-            `<h3>Page 36: Christmas at the Lighthouse</h3>
+                `<h3>Page 36: Christmas at the Lighthouse</h3>
             <p>Christmas Day was very cold, but the sky was a beautiful blue.</p>
             <p>The lighthouse was decorated with many green boughs and bells.</p>
             <p>The whole town came up to the cliff to celebrate with us today.</p>
@@ -1996,7 +1996,7 @@ window.BOOK_DATA = {
             <p>Seaview is the best town and the lighthouse is its bright heart.</p>
             <p>The new year will bring many more adventures for all of us.</p>`,
 
-            `<h3>Page 37: The New Museum Wing</h3>
+                `<h3>Page 37: The New Museum Wing</h3>
             <p>In the spring, the Mayor decided to build a new museum wing.</p>
             <p>He wanted to show the history of the Seaview fishing boats too.</p>
             <p>We found many old fishing nets and some wooden oars in the town.</p>
@@ -2013,7 +2013,7 @@ window.BOOK_DATA = {
             <p>I am excited about the new exhibits and the future of our town.</p>
             <p>The light will always shine on the history of our brave people.</p>`,
 
-            `<h3>Page 38: The Summer Festival</h3>
+                `<h3>Page 38: The Summer Festival</h3>
             <p>One summer, Seaview held a big festival for all the sailors.</p>
             <p>Many old ships came to our harbor and they were very pretty.</p>
             <p>There was a big race between the different sailing boats today.</p>
@@ -2030,7 +2030,7 @@ window.BOOK_DATA = {
             <p>Seaview is a place of joy, history, and many beautiful lights.</p>
             <p>I am proud to be a Seaview explorer and a protector of sea.</p>`,
 
-            `<h3>Page 39: Looking to the Future</h3>
+                `<h3>Page 39: Looking to the Future</h3>
             <p>A second year has passed and I am now twelve years old today.</p>
             <p>Maya and I are still the best friends and we still love tower.</p>
             <p>We are learning how to use the modern navigation computers now.</p>
@@ -2047,7 +2047,7 @@ window.BOOK_DATA = {
             <p>The future looks bright and full of many more amazing stories.</p>
             <p>Thank you for visiting my lighthouse and listening to my story.</p>`,
 
-            `<h3>Page 40: The Eternal Light</h3>
+                `<h3>Page 40: The Eternal Light</h3>
             <p>The sun is setting over the ocean and the sky is a deep orange.</p>
             <p>I am standing on the balcony of the lighthouse, feeling the air.</p>
             <p>The beam of light starts to spin, casting its glow over waves.</p>
@@ -2064,7 +2064,8 @@ window.BOOK_DATA = {
             <p>The end of this book is just the start of another new journey.</p>
             <p>Goodnight from the Seaview lighthouse and sleep very well now.</p>`
         ]
-    }, {
+}];
+window.BOOK_DATA["A2"].push({
         title: "Around the World in 80 Words",
         author: "Julian Verne",
         level: "A2",
@@ -2072,7 +2073,7 @@ window.BOOK_DATA = {
         color: "#2ecc71", // Green
         description: "Join travel enthusiast Alex on a journey to explore the most beautiful cities in the world.",
         pages: [
-            `<h3>Page 1: The Start of the Journey</h3>
+                `<h3>Page 1: The Start of the Journey</h3>
             <p>Alex is a young man who loves traveling and learning about new cultures.</p>
             <p>He lives in a small apartment in London with his cat, Whiskers.</p>
             <p>One morning, he saw a beautiful map of the world on his bedroom wall.</p>
@@ -2089,7 +2090,7 @@ window.BOOK_DATA = {
             <p>London was behind him, and the world was waiting for him now.</p>
             <p>He opened his map and he began to walk towards the Eiffel Tower.</p>`,
 
-            `<h3>Page 2: The Magic of Paris</h3>
+                `<h3>Page 2: The Magic of Paris</h3>
             <p>The Eiffel Tower was even bigger than he had ever imagined it to be.</p>
             <p>It was a very tall iron tower that touched the soft white clouds.</p>
             <p>Alex took many pictures of the tower from the green grass below it.</p>
@@ -2106,7 +2107,7 @@ window.BOOK_DATA = {
             <p>It was a magical sight and Alex felt very lucky to be in France.</p>
             <p>But his journey was just beginning, and he had more places to see.</p>`,
 
-            `<h3>Page 3: The Roman Holiday</h3>
+                `<h3>Page 3: The Roman Holiday</h3>
             <p>From Paris, Alex took a night train to the ancient city of Rome.</p>
             <p>When he arrived, the sun was very warm and the sky was very blue.</p>
             <p>He saw the Colosseum, a giant stone arena from many centuries ago.</p>
@@ -2123,7 +2124,7 @@ window.BOOK_DATA = {
             <p>He felt like he was walking through a very large history book now.</p>
             <p>But the next day, he had to take a plane to a different continent.</p>`,
 
-            `<h3>Page 4: The Sphinx of Egypt</h3>
+                `<h3>Page 4: The Sphinx of Egypt</h3>
             <p>Alex arrived in Cairo, the capital city of Egypt, on a hot Thursday.</p>
             <p>The air was very dry and the sand was a bright golden color today.</p>
             <p>He took a taxi to the desert to see the Great Pyramids of Giza.</p>
@@ -2140,7 +2141,7 @@ window.BOOK_DATA = {
             <p>Egypt was a very different world from London or the city of Paris.</p>
             <p>But his heart was already looking towards the islands of the East.</p>`,
 
-            `<h3>Page 5: The Neon Lights of Tokyo</h3>
+                `<h3>Page 5: The Neon Lights of Tokyo</h3>
             <p>After a very long flight, Alex landed in Tokyo, the capital of Japan.</p>
             <p>The city was full of neon lights, giant screens, and many people.</p>
             <p>Everything felt very modern and very futuristic in this big city.</p>
@@ -2157,7 +2158,7 @@ window.BOOK_DATA = {
             <p>Japan was a land of surprises and very kind and helpful people.</p>
             <p>Alex felt very happy as he explored the streets of the Harajuku.</p>`,
 
-            `<h3>Page 6: The Great Wall of China</h3>
+                `<h3>Page 6: The Great Wall of China</h3>
             <p>Next stop was Beijing, where he saw the Forbidden City's big walls.</p>
             <p>But the most amazing thing was a trip to the Great Wall of China.</p>
             <p>It is a giant wall made of stone that goes over the high mountains.</p>
@@ -2174,7 +2175,7 @@ window.BOOK_DATA = {
             <p>They were very cute and they looked like big, soft teddy bears there.</p>
             <p>His journey was half over, but he still had more countries to see.</p>`,
 
-            `<h3>Page 7: The Beauty of Sydney</h3>
+                `<h3>Page 7: The Beauty of Sydney</h3>
             <p>Alex crossed the equator and he arrived in Sydney, Australia today.</p>
             <p>It was summer there, even though it was winter back in London now.</p>
             <p>He saw the Sydney Opera House, which looks like several white sails.</p>
@@ -2191,7 +2192,7 @@ window.BOOK_DATA = {
             <p>He felt very home in Sydney, despite being so far from his house.</p>
             <p>But he had to leave the islands and fly across the Pacific Ocean.</p>`,
 
-            `<h3>Page 8: The Grand Canyon</h3>
+                `<h3>Page 8: The Grand Canyon</h3>
             <p>Alex landed in California and he drove a car to the Grand Canyon.</p>
             <p>It is a giant hole in the ground made by the Colorado River flow.</p>
             <p>The canyon is very deep and the rocks are many different colors.</p>
@@ -2208,7 +2209,7 @@ window.BOOK_DATA = {
             <p>He felt like he was in a movie as he walked down the main street.</p>
             <p>But he had one more continent to visit before going back to home.</p>`,
 
-            `<h3>Page 9: The Carnival in Rio</h3>
+                `<h3>Page 9: The Carnival in Rio</h3>
             <p>Alex arrived in Rio de Janeiro, Brazil, during the famous Carnival.</p>
             <p>The streets were full of music, dancing, and many colorful costumes.</p>
             <p>Everyone was happy and they were dancing the samba in the squares.</p>
@@ -2225,7 +2226,7 @@ window.BOOK_DATA = {
             <p>He was sad to leave Brazil, but his suitcase was full of memories.</p>
             <p>He was now ready to take the long flight back to his home London.</p>`,
 
-            `<h3>Page 10: Back to London</h3>
+                `<h3>Page 10: Back to London</h3>
             <p>Alex arrived back in London on a rainy and grey Tuesday morning.</p>
             <p>He was very tired, but he was also very, very happy and proud.</p>
             <p>He had seen the world and he had met many amazing and kind people.</p>
@@ -2242,7 +2243,7 @@ window.BOOK_DATA = {
             <p>His journey was over, but his memories would last for a lifetime.</p>
             <p>Alex fell asleep, dreaming about his many future travels to come.</p>`,
 
-            `<h3>Page 11: Sharing the Stories</h3>
+                `<h3>Page 11: Sharing the Stories</h3>
             <p>The next week, Alex invited all his friends to a slide show party.</p>
             <p>He showed them the pictures of the Eiffel Tower and the Pyramids.</p>
             <p>His friends were amazed by the colors and the beauty of the world.</p>
@@ -2259,7 +2260,7 @@ window.BOOK_DATA = {
             <p>Alex was happy that his journey had inspired his many dear friends.</p>
             <p>He knew that this was just the first of many such global parties.</p>`,
 
-            `<h3>Page 12: Writing the Book</h3>
+                `<h3>Page 12: Writing the Book</h3>
             <p>Alex spent the next month writing his book in the quiet library.</p>
             <p>He wanted to use simple words so that everyone could read it well.</p>
             <p>He wrote about the kindness of the people he met in every country.</p>
@@ -2276,7 +2277,7 @@ window.BOOK_DATA = {
             <p>Being an author was a new and very exciting adventure for him now.</p>
             <p>The book was a success because it was written with a lot of love.</p>`,
 
-            `<h3>Page 13: Planning the Next Trip</h3>
+                `<h3>Page 13: Planning the Next Trip</h3>
             <p>Even though his book was a success, Alex couldn't stay very still.</p>
             <p>He was already looking at the map for his next big global mission.</p>
             <p>"Maybe South America or the high mountains of Nepal," he thought.</p>
@@ -2293,7 +2294,7 @@ window.BOOK_DATA = {
             <p>He marked the city of Cusco on his map with a big red circle today.</p>
             <p>His next adventure was starting to feel very real and very close.</p>`,
 
-            `<h3>Page 14: The Amazon Adventure</h3>
+                `<h3>Page 14: The Amazon Adventure</h3>
             <p>Alex flew to Brazil again and then he took a boat into the jungle.</p>
             <p>The Amazon Rainforest was very hot, very green, and very loud now.</p>
             <p>He saw many colorful parrots and some small monkeys in the trees.</p>
@@ -2310,7 +2311,7 @@ window.BOOK_DATA = {
             <p>The Amazon was a place of power and many deep ancient secrets too.</p>
             <p>He felt very small in the middle of such a giant and wild world.</p>`,
 
-            `<h3>Page 15: The Inca Trail</h3>
+                `<h3>Page 15: The Inca Trail</h3>
             <p>From the jungle, Alex traveled to the mountains of Peru in August.</p>
             <p>He walked the Inca Trail to reach the city of Machu Picchu fast.</p>
             <p>The air was very thin and it was very difficult to breathe there.</p>
@@ -2327,7 +2328,7 @@ window.BOOK_DATA = {
             <p>Machu Picchu was a dream that he had finally made into reality.</p>
             <p>His South American journey was a very big success for his heart.</p>`,
 
-            `<h3>Page 16: The Galapagos Islands</h3>
+                `<h3>Page 16: The Galapagos Islands</h3>
             <p>Next, Alex took a boat to the Galapagos Islands in the Pacific Ocean.</p>
             <p>These islands are famous for their many unique and rare animals.</p>
             <p>He saw giant tortoises that were more than a hundred years old now.</p>
@@ -2344,7 +2345,7 @@ window.BOOK_DATA = {
             <p>Galapagos was a place of peace and many amazing scientific finds.</p>
             <p>But it was time to move to the north and see the ice and snow.</p>`,
 
-            `<h3>Page 17: The Alaskan Wilderness</h3>
+                `<h3>Page 17: The Alaskan Wilderness</h3>
             <p>Alex flew to Alaska, the land of the midnight sun and giant ice.</p>
             <p>The mountains were covered in deep snow and the air was freezing.</p>
             <p>He took a boat to see the glaciers, which are giant rivers of ice.</p>
@@ -2361,7 +2362,7 @@ window.BOOK_DATA = {
             <p>Alex felt lucky to see such a rare and beautiful phenomenon.</p>
             <p>The cold didn't matter when the sky was so full of many wonders.</p>`,
 
-            `<h3>Page 18: The African Safari</h3>
+                `<h3>Page 18: The African Safari</h3>
             <p>From the ice of Alaska, Alex flew to the warm plains of Kenya now.</p>
             <p>He went on a safari to see the "Big Five" animals of the Africa.</p>
             <p>He saw a lion sleeping under a tree and a giant elephant herd.</p>
@@ -2378,7 +2379,7 @@ window.BOOK_DATA = {
             <p>Kenya was a place of many natural sounds and many warm smiles now.</p>
             <p>His heart was full of the spirit of the African savanna today.</p>`,
 
-            `<h3>Page 19: The Taj Mahal</h3>
+                `<h3>Page 19: The Taj Mahal</h3>
             <p>Alex's next stop was India, a country of many people and spices.</p>
             <p>He visited the Taj Mahal, a giant white marble building in Agra.</p>
             <p>It was built by an emperor for his wife many, many centuries ago.</p>
@@ -2395,7 +2396,7 @@ window.BOOK_DATA = {
             <p>He felt a lot of peace despite the loud noise of the big city.</p>
             <p>India was a place of deep spirit and many amazing ancient sights.</p>`,
 
-            `<h3>Page 20: The Island of Bali</h3>
+                `<h3>Page 20: The Island of Bali</h3>
             <p>For a rest, Alex traveled to the beautiful island of Bali today.</p>
             <p>The beaches were very white and the water was very warm and blue.</p>
             <p>He saw several green rice terraces that looked like giant stairs.</p>
@@ -2412,7 +2413,7 @@ window.BOOK_DATA = {
             <p>Bali was a tropical paradise that he would never forget at all.</p>
             <p>But the world is big and there are still more places to see today.</p>`,
 
-            `<h3>Page 21: The Fjords of Norway</h3>
+                `<h3>Page 21: The Fjords of Norway</h3>
             <p>Alex flew to the north again to see the giant fjords of Norway.</p>
             <p>A fjord is a long, deep valley between high rocky mountains now.</p>
             <p>The water was very dark and very still, like a giant blue mirror.</p>
@@ -2429,7 +2430,7 @@ window.BOOK_DATA = {
             <p>The silence of the mountains was a very beautiful thing to hear.</p>
             <p>Norway was a place of giant nature and many ancient Viking stories.</p>`,
 
-            `<h3>Page 22: The Desert of Morocco</h3>
+                `<h3>Page 22: The Desert of Morocco</h3>
             <p>Next stop: Morocco, the land of many red deserts and busy markets.</p>
             <p>He visited Marrakesh and he saw the Jemaa el-Fnaa town square.</p>
             <p>The square was full of snake charmers, storytellers, and food.</p>
@@ -2446,7 +2447,7 @@ window.BOOK_DATA = {
             <p>He bought a small blue teapot to remember his Saharan adventure.</p>
             <p>His heart was full of the warmth of the Moroccan people today.</p>`,
 
-            `<h3>Page 23: The Modern Singapore</h3>
+                `<h3>Page 23: The Modern Singapore</h3>
             <p>Alex arrived in Singapore, a city that looks like the future today.</p>
             <p>He saw the "Supertrees", which are giant metal trees with lights.</p>
             <p>They are covered in many real plants and they produce solar power.</p>
@@ -2463,7 +2464,7 @@ window.BOOK_DATA = {
             <p>Singapore reminded him that cities can be both green and modern.</p>
             <p>He felt very inspired by the innovation of this small island nation.</p>`,
 
-            `<h3>Page 24: The Wonders of Iceland</h3>
+                `<h3>Page 24: The Wonders of Iceland</h3>
             <p>Alex's final destination was the island of Iceland in North Atlantic.</p>
             <p>It is called the "Land of Fire and Ice" because of many things.</p>
             <p>He saw several giant volcanoes and many large glaciers together.</p>
@@ -2480,7 +2481,7 @@ window.BOOK_DATA = {
             <p>Iceland was the perfect end to his second big global adventure.</p>
             <p>He was ready to go home and finish his second successful book.</p>`,
 
-            `<h3>Page 25: The Second Book Launch</h3>
+                `<h3>Page 25: The Second Book Launch</h3>
             <p>Back in London, Alex wrote "The World's Natural Wonders" quickly.</p>
             <p>This book was even more popular than the first one he had written.</p>
             <p>He became a famous travel expert and he appeared on the television.</p>
@@ -2497,7 +2498,7 @@ window.BOOK_DATA = {
             <p>Even small nature is important when you live in a very big city.</p>
             <p>He was a happy man because he was doing what he loved most today.</p>`,
 
-            `<h3>Page 26: The Global Explorer Club</h3>
+                `<h3>Page 26: The Global Explorer Club</h3>
             <p>Alex decided to start a club for children who love to travel too.</p>
             <p>He called it the "Global Explorer Club" and he opened a small house.</p>
             <p>Every Saturday, he taught the kids about different world cultures.</p>
@@ -2514,7 +2515,7 @@ window.BOOK_DATA = {
             <p>The club was a place of many dreams and many new future plans.</p>
             <p>Alex was the proud leader of a new generation of global explorers.</p>`,
 
-            `<h3>Page 27: A Letter from the Queen</h3>
+                `<h3>Page 27: A Letter from the Queen</h3>
             <p>One morning, a very official letter arrived at Alex's apartment.</p>
             <p>It had a golden seal and it was from the palace of the Queen!</p>
             <p>"The Queen wants to meet me?" Alex asked with much surprise today.</p>
@@ -2531,7 +2532,7 @@ window.BOOK_DATA = {
             <p>He was a symbol of how one person can make a difference in world.</p>
             <p>But Alex remained a humble and very friendly man to everyone today.</p>`,
 
-            `<h3>Page 28: The Museum Exhibition</h3>
+                `<h3>Page 28: The Museum Exhibition</h3>
             <p>The London Museum asked Alex to create a special travel exhibit.</p>
             <p>They gave him a large room for his souvenirs and his many photos.</p>
             <p>He organized the display by continents: Africa, Asia, and more.</p>
@@ -2548,7 +2549,7 @@ window.BOOK_DATA = {
             <p>Alex felt that his life's work was finally complete and very good.</p>
             <p>But deep inside, he knew that the road was always calling him back.</p>`,
 
-            `<h3>Page 29: The Call of the Ocean</h3>
+                `<h3>Page 29: The Call of the Ocean</h3>
             <p>One afternoon, while he was looking at the harbor in the London,</p>
             <p>Alex saw a very large sailing ship with three tall white masts.</p>
             <p>It was a traditional ship that was going on a trip around world.</p>
@@ -2565,7 +2566,7 @@ window.BOOK_DATA = {
             <p>The ship was called "The Wing of Hope" and it was very beautiful.</p>
             <p>The adventure on the sea was going to be his greatest several one.</p>`,
 
-            `<h3>Page 30: Sailing the High Seas</h3>
+                `<h3>Page 30: Sailing the High Seas</h3>
             <p>The ship left London and soon there was only the blue water around.</p>
             <p>Alex learned how to pull the heavy ropes and how to climb masts.</p>
             <p>The wind was very strong and the ship was moving very, very fast.</p>
@@ -2582,7 +2583,7 @@ window.BOOK_DATA = {
             <p>Sailing was a hard life, but it was also a very beautiful one too.</p>
             <p>He was a real sailor now, a man of the ocean and the white wind.</p>`,
 
-            `<h3>Page 31: The Storm at Sea</h3>
+                `<h3>Page 31: The Storm at Sea</h3>
             <p>One night, a giant storm arrived with many big waves and thunder.</p>
             <p>The ship was moving up and down in the middle of the dark water.</p>
             <p>Alex had to hold onto the mast with all his strength and energy.</p>
@@ -2599,7 +2600,7 @@ window.BOOK_DATA = {
             <p>Nature is strong, but humans are strong too when they work as one.</p>
             <p>The ocean was quiet again, but Alex would never forget its roar.</p>`,
 
-            `<h3>Page 32: Crossing the Pacific</h3>
+                `<h3>Page 32: Crossing the Pacific</h3>
             <p>The journey across the Pacific Ocean was very long and very slow.</p>
             <p>For many weeks, they saw no land, only the water and the sky now.</p>
             <p>Alex spent his time studying the old maritime maps and the books.</p>
@@ -2616,7 +2617,7 @@ window.BOOK_DATA = {
             <p>The Pacific was a giant desert of water, but it was full of many.</p>
             <p>He felt a deep peace and a lot of many gratitude for his journey.</p>`,
 
-            `<h3>Page 33: The Tropical Island</h3>
+                `<h3>Page 33: The Tropical Island</h3>
             <p>They arrived at a small, uninhabited island in the South Pacific.</p>
             <p>The sand was perfectly white and the trees were full of coconuts.</p>
             <p>The crew went onto the land to find some fresh water and some food.</p>
@@ -2633,7 +2634,7 @@ window.BOOK_DATA = {
             <p>They said goodbye to the island and they sailed away into the deep.</p>
             <p>Paradise is a place you can visit, but home is where you stay now.</p>`,
 
-            `<h3>Page 34: The Northern Stars</h3>
+                `<h3>Page 34: The Northern Stars</h3>
             <p>They sailed to the north and the nights became very long and cold.</p>
             <p>Alex used the stars to guide the ship, just as the Captain taught.</p>
             <p>He was becoming a very good navigator with a lot of many practice.</p>
@@ -2650,7 +2651,7 @@ window.BOOK_DATA = {
             <p>The Captain was proud of Alex's progress as a real student sailor.</p>
             <p>"You have the soul of the ocean, Alex," he said with a big smile.</p>`,
 
-            `<h3>Page 35: The Return to the Channel</h3>
+                `<h3>Page 35: The Return to the Channel</h3>
             <p>After a year, they finally reached the English Channel again now.</p>
             <p>Alex saw the white cliffs of Dover and he felt a lot of many joy.</p>
             <p>He was home! The journey around the world was finally complete.</p>
@@ -2667,7 +2668,7 @@ window.BOOK_DATA = {
             <p>It was the end of a big chapter, but the book of life continues.</p>
             <p>He was a real global explorer now, on land and on the many seas.</p>`,
 
-            `<h3>Page 36: The Sailor's Book</h3>
+                `<h3>Page 36: The Sailor's Book</h3>
             <p>Alex's third book was "A Year at Sea: A Sailor's True Journal".</p>
             <p>This book was about the storm, the stars, and the life on boat.</p>
             <p>People were fascinated by his adventures and his many challenges.</p>
@@ -2684,7 +2685,7 @@ window.BOOK_DATA = {
             <p>His writing was a bridge between the land and the deep blue sea.</p>
             <p>He was an author, a sailor, and a protector of our big planet.</p>`,
 
-            `<h3>Page 37: The Lifetime Achievement</h3>
+                `<h3>Page 37: The Lifetime Achievement</h3>
             <p>Ten years passed and Alex was now a world-famous global personage.</p>
             <p>He had written ten books and he had visited every single country.</p>
             <p>He was given a lifetime achievement award for his many services.</p>
@@ -2701,7 +2702,7 @@ window.BOOK_DATA = {
             <p>He was a man who had seen the world and found his place in it.</p>
             <p>His legacy would live on through his many books and many schools.</p>`,
 
-            `<h3>Page 38: The New Generation</h3>
+                `<h3>Page 38: The New Generation</h3>
             <p>Alex's daughter, Mia, was now five years old and very curious today.</p>
             <p>She loved to look at her father's many maps and his big souvenirs.</p>
             <p>"Tell me about the lion, Daddy!" she said, sitting on his lap now.</p>
@@ -2718,7 +2719,7 @@ window.BOOK_DATA = {
             <p>Family is the greatest adventure of all, he realized with a smile.</p>
             <p>He was a happy father and a very successful global explorer now.</p>`,
 
-            `<h3>Page 39: The Sunset View</h3>
+                `<h3>Page 39: The Sunset View</h3>
             <p>Alex is now sitting on his balcony, watching the London sunset fast.</p>
             <p>The sky is a deep purple and the lights of the city are coming on.</p>
             <p>He feels the cold evening air and he thinks about his many travels.</p>
@@ -2735,7 +2736,7 @@ window.BOOK_DATA = {
             <p>The world is eternal, and the adventure never really ends for all.</p>
             <p>Goodnight from London, and may your dreams be full of world etc.</p>`,
 
-            `<h3>Page 40: The Eternal Map</h3>
+                `<h3>Page 40: The Eternal Map</h3>
             <p>The final page of the book shows a giant map of the whole universe.</p>
             <p>Alex knows that even after the Earth, there are many stars out there.</p>
             <p>Maybe one day, humans will travel to the moon and to many planets.</p>
@@ -2752,8 +2753,8 @@ window.BOOK_DATA = {
             <p>Safe travels and happy adventures to every single reader today now.</p>
             <p>Final stop: The heart of every person who dreams of the big world.</p>`
         ]
-    }],
-    "B1": [{
+});
+window.BOOK_DATA["B1"] = [{
         title: "The Eco-Friendly City",
         author: "Sarah Green",
         level: "B1",
@@ -2761,7 +2762,7 @@ window.BOOK_DATA = {
         color: "#27ae60",
         description: "Discover a city where nature and technology live in perfect harmony.",
         pages: [
-            `<h3>Page 1: Arrival in Greenville</h3>
+                `<h3>Page 1: Arrival in Greenville</h3>
             <p>Sarah looked out of the train window as she approached her destination.</p>
             <p>She was a journalist writing a story about the most sustainable city.</p>
             <p>Greenville was famous for its clean energy and zero waste policy.</p>
@@ -2778,7 +2779,7 @@ window.BOOK_DATA = {
             <p>She followed David out of the station and into the bright city.</p>
             <p>The streets were wide and full of people walking and cycling.</p>`,
 
-            `<h3>Page 2: The Vertical Gardens</h3>
+                `<h3>Page 2: The Vertical Gardens</h3>
             <p>The first thing Sarah noticed was the tall buildings around her.</p>
             <p>They weren't made of just concrete and glass like in other cities.</p>
             <p>Every building was covered in green plants and colorful flowers.</p>
@@ -2795,7 +2796,7 @@ window.BOOK_DATA = {
             <p>It seemed so simple and yet so effective for the environment.</p>
             <p>They continued their walk down the leafy and quiet main avenue.</p>`,
 
-            `<h3>Page 3: No Cars Allowed</h3>
+                `<h3>Page 3: No Cars Allowed</h3>
             <p>Sarah realized that she hadn't seen a single car since arriving.</p>
             <p>"Where are the traffic jams?" she asked, looking at the road.</p>
             <p>"Private cars are not allowed in the city center," David said.</p>
@@ -2812,7 +2813,7 @@ window.BOOK_DATA = {
             <p>It was a revolutionary idea that Greenville had made a reality.</p>
             <p>She felt more relaxed just walking in such a peaceful place.</p>`,
 
-            `<h3>Page 4: The Solar Pavements</h3>
+                `<h3>Page 4: The Solar Pavements</h3>
             <p>As they walked, David stopped and pointed at the ground.</p>
             <p>"Look closely at the pavement," he told Sarah with a grin.</p>
             <p>She looked down and saw that the tiles had a strange texture.</p>
@@ -2829,7 +2830,7 @@ window.BOOK_DATA = {
             <p>It wasn't invasive; it was invisible and incredibly useful.</p>
             <p>Greenville was truly a smart city in every sense of the word.</p>`,
 
-            `<h3>Page 5: The Urban Farms</h3>
+                `<h3>Page 5: The Urban Farms</h3>
             <p>For lunch, David took Sarah to a building called "The Green Tower".</p>
             <p>Inside, there were no offices, but floors of vegetables growing.</p>
             <p>"This is an urban farm," David said, picking a red tomato.</p>
@@ -2846,7 +2847,7 @@ window.BOOK_DATA = {
             <p>Sarah felt inspired by the ingenuity of the Greenville planners.</p>
             <p>Lunch finished, they were ready to explore the water systems.</p>`,
 
-            `<h3>Page 6: The Smart Water System</h3>
+                `<h3>Page 6: The Smart Water System</h3>
             <p>They walked to a park with a large, beautiful lake in the center.</p>
             <p>"This isn't just for decoration," David said, pointing to it.</p>
             <p>"It's a rainwater reservoir that filters water naturally."</p>
@@ -2863,7 +2864,7 @@ window.BOOK_DATA = {
             <p>Nature and engineering were working together seamlessly here.</p>
             <p>Sarah promised herself to be more careful with water at home.</p>`,
 
-            `<h3>Page 7: The Recycling Revolution</h3>
+                `<h3>Page 7: The Recycling Revolution</h3>
             <p>"Where is the trash?" Sarah asked, looking for a garbage bin.</p>
             <p>She hadn't seen any litter on the streets all day long.</p>
             <p>"We don't really have 'trash' here," David corrected gently.</p>
@@ -2880,7 +2881,7 @@ window.BOOK_DATA = {
             <p>It turned the chore of recycling into a community game.</p>
             <p>Waste was seen as a failure of design, not a necessity.</p>`,
 
-            `<h3>Page 8: The Wind Energy Park</h3>
+                `<h3>Page 8: The Wind Energy Park</h3>
             <p>David suggested they take a tram to the outskirts of the city.</p>
             <p>There, Sarah saw giant white wind turbines spinning slowly.</p>
             <p>"These provide the rest of our power," David explained.</p>
@@ -2897,7 +2898,7 @@ window.BOOK_DATA = {
             <p>The transition to green energy was complete and successful here.</p>
             <p>It proved that a modern city could run without oil or gas.</p>`,
 
-            `<h3>Page 9: The Education Center</h3>
+                `<h3>Page 9: The Education Center</h3>
             <p>Their next stop was a local school to see the education system.</p>
             <p>Children were outside, learning about plants in a garden.</p>
             <p>"Education is key," David said. "We teach sustainability early."</p>
@@ -2914,7 +2915,7 @@ window.BOOK_DATA = {
             <p>Sarah knew this was the most important part of the story.</p>
             <p>Change starts in the mind before it happens in the city streets.</p>`,
 
-            `<h3>Page 10: The Smart Home</h3>
+                `<h3>Page 10: The Smart Home</h3>
             <p>David invited Sarah to visit his apartment to see a smart home.</p>
             <p>The door opened with a fingerprint scan, no keys needed.</p>
             <p>Inside, the lights adjusted automatically to the sunlight.</p>
@@ -2931,7 +2932,7 @@ window.BOOK_DATA = {
             <p>Sarah imagined her own drafty, energy-hungry apartment.</p>
             <p>She realized how much money and energy she was wasting.</p>`,
 
-            `<h3>Page 11: The Community Center</h3>
+                `<h3>Page 11: The Community Center</h3>
             <p>In the evening, they went to a vibrant community center.</p>
             <p>People were sharing tools, books, and even clothes.</p>
             <p>"Access is better than ownership," David explained the motto.</p>
@@ -2948,7 +2949,7 @@ window.BOOK_DATA = {
             <p>People valued experiences and relationships over objects.</p>
             <p>Sarah felt a warmth here that money couldn't buy.</p>`,
 
-            `<h3>Page 12: The Night Lights</h3>
+                `<h3>Page 12: The Night Lights</h3>
             <p>As the sun set, the city transformed into a glowing wonder.</p>
             <p>The streetlights, powered by footsteps, turned on softly.</p>
             <p>The buildings glowed with bioluminescent plants on the walls.</p>
@@ -2965,7 +2966,7 @@ window.BOOK_DATA = {
             <p>Greenville showed that the future could be bright and green.</p>
             <p>It was a vision of what all humanity could achieve.</p>`,
 
-            `<h3>Page 13: The Interview</h3>
+                `<h3>Page 13: The Interview</h3>
             <p>Sarah sat down with the Mayor of Greenville the next day.</p>
             <p>She was a scientist, not a politician, which was unique.</p>
             <p>"We made decisions based on data, not votes," she said.</p>
@@ -2982,7 +2983,7 @@ window.BOOK_DATA = {
             <p>Sarah wrote down every word, impressed by her leadership.</p>
             <p>Bold decisions were needed to save the planet, she realized.</p>`,
 
-            `<h3>Page 14: The Public Transport</h3>
+                `<h3>Page 14: The Public Transport</h3>
             <p>Sarah took the Hyperloop train to visit the industrial zone.</p>
             <p>It was a vacuum tube train that traveled incredibly fast.</p>
             <p>She arrived at her destination in just a few minutes.</p>
@@ -2999,7 +3000,7 @@ window.BOOK_DATA = {
             <p>Industry was no longer the enemy of the environment.</p>
             <p>Sarah saw that we can make things without destroying nature.</p>`,
 
-            `<h3>Page 15: The Clean Air</h3>
+                `<h3>Page 15: The Clean Air</h3>
             <p>Sarah checked an app on her phone that measured air quality.</p>
             <p>The index was perfect. The air was as clean as a forest.</p>
             <p>Respiratory diseases had dropped by 90% in Greenville.</p>
@@ -3016,7 +3017,7 @@ window.BOOK_DATA = {
             <p>Health was the greatest wealth, and Greenville was rich.</p>
             <p>Sarah felt more energetic after just two days there.</p>`,
 
-            `<h3>Page 16: The Water Festival</h3>
+                `<h3>Page 16: The Water Festival</h3>
             <p>It was the day of the annual Water Festival in the city.</p>
             <p>Citizens gathered to celebrate clean water and nature.</p>
             <p>There was music, dancing, and food from the urban farms.</p>
@@ -3033,7 +3034,7 @@ window.BOOK_DATA = {
             <p>Celebration was an important part of the green culture.</p>
             <p>It reminded everyone what they were working to protect.</p>`,
 
-            `<h3>Page 17: The Global Impact</h3>
+                `<h3>Page 17: The Global Impact</h3>
             <p>Sarah visited the International Relations office later.</p>
             <p>Map showed "Sister Cities" that were copying Greenville.</p>
             <p>"We share our technology for free," the director explained.</p>
@@ -3050,7 +3051,7 @@ window.BOOK_DATA = {
             <p>Greenville was not a secret; it was a blueprint for all.</p>
             <p>Sarah felt ready to write the best article of her life.</p>`,
 
-            `<h3>Page 18: Departure</h3>
+                `<h3>Page 18: Departure</h3>
             <p>The week flew by, and it was time for Sarah to leave.</p>
             <p>She packed her bag, feeling sad to go back to the "old world".</p>
             <p>David walked her to the solar-powered train station.</p>
@@ -3067,7 +3068,7 @@ window.BOOK_DATA = {
             <p>Now she had to help make that future happen everywhere.</p>
             <p>The seeds in her pocket felt like a promise of hope.</p>`,
 
-            `<h3>Page 19: Writing the Article</h3>
+                `<h3>Page 19: Writing the Article</h3>
             <p>Back in her busy, noisy office, Sarah started to type.</p>
             <p>The contrast between the two cities was very painful.</p>
             <p>She described the air, the silence, and the happiness.</p>
@@ -3084,7 +3085,7 @@ window.BOOK_DATA = {
             <p>The article was published the next Sunday morning.</p>
             <p>The reaction was immediate and overwhelming.</p>`,
 
-            `<h3>Page 20: The Reaction</h3>
+                `<h3>Page 20: The Reaction</h3>
             <p>People were amazed by the story of Greenville.</p>
             <p>They started forming groups to demand green changes.</p>
             <p>Sarah received thousands of emails from inspired readers.</p>
@@ -3101,7 +3102,7 @@ window.BOOK_DATA = {
             <p>Sarah smiled, ready for her next assignment.</p>
             <p>But Greenville would always be her favorite story.</p>`,
 
-            `<h3>Page 21: A Year Later</h3>
+                `<h3>Page 21: A Year Later</h3>
             <p>A year after her visit, Sarah returned to Greenville.</p>
             <p>She was invited to speak at a conference on change.</p>
             <p>The city was even greener than she remembered it.</p>
@@ -3118,7 +3119,7 @@ window.BOOK_DATA = {
             <p>Other cities were starting to turn green too.</p>
             <p>The revolution had begun, and it was unstoppable.</p>`,
 
-            `<h3>Page 22: The Roof Garden</h3>
+                `<h3>Page 22: The Roof Garden</h3>
             <p>Sarah stayed in a hotel with a magnificent roof garden.</p>
             <p>She ate breakfast surrounded by butterflies and bees.</p>
             <p>It was hard to believe she was in the middle of a city.</p>
@@ -3135,7 +3136,7 @@ window.BOOK_DATA = {
             <p>She felt recharged and ready to continue her work.</p>
             <p>Nature in the city was good for the soul.</p>`,
 
-            `<h3>Page 23: The Wisdom of Elders</h3>
+                `<h3>Page 23: The Wisdom of Elders</h3>
             <p>David introduced Sarah to his grandmother, Elena.</p>
             <p>Elena had lived in Greenville before the big change.</p>
             <p>"It was dirty and noisy back then," she remembered.</p>
@@ -3152,7 +3153,7 @@ window.BOOK_DATA = {
             <p>It was a legacy of love left for the next generation.</p>
             <p>Sarah promised to honor that legacy in her writing.</p>`,
 
-            `<h3>Page 24: Innovations</h3>
+                `<h3>Page 24: Innovations</h3>
             <p>Sarah visited the Innovation Hub of the city.</p>
             <p>Scientists were working on new ways to save energy.</p>
             <p>She saw a window that generated power from the rain.</p>
@@ -3169,7 +3170,7 @@ window.BOOK_DATA = {
             <p>With such minds working, anything was possible.</p>
             <p>She left the hub feeling incredibly optimistic.</p>`,
 
-            `<h3>Page 25: The Children's View</h3>
+                `<h3>Page 25: The Children's View</h3>
             <p>Sarah went back to the school she visited last year.</p>
             <p>She saw Lily, the girl in Greenville.</p>
             <p>The tree had grown taller, just like Lily had.</p>
@@ -3186,7 +3187,7 @@ window.BOOK_DATA = {
             <p>It was the perfect image of growth and hope.</p>
             <p>The future was safe in their small, dirty hands.</p>`,
 
-            `<h3>Page 26: The Underground Forest</h3>
+                `<h3>Page 26: The Underground Forest</h3>
             <p>David showed Sarah a secret place: an old subway tunnel.</p>
             <p>It had been converted into an underground mushroom farm.</p>
             <p>"Fungi love the dark and damp," David explained.</p>
@@ -3203,7 +3204,7 @@ window.BOOK_DATA = {
             <p>Everything was a cycle, a circle of life.</p>
             <p>Sarah learned that potential is everywhere.</p>`,
 
-            `<h3>Page 27: The Art of Living</h3>
+                `<h3>Page 27: The Art of Living</h3>
             <p>Life in Greenville wasn't just about survival; it was art.</p>
             <p>People had time to paint, play music, and relax.</p>
             <p>Because they consumed less, they worked less hours.</p>
@@ -3220,7 +3221,7 @@ window.BOOK_DATA = {
             <p>Greenville was reminding the world what matters.</p>
             <p>Sarah felt a desire to slow down her own life.</p>`,
 
-            `<h3>Page 28: Rain Harvest</h3>
+                `<h3>Page 28: Rain Harvest</h3>
             <p>It started to rain, a gentle summer shower.</p>
             <p>Instead of running for cover, people smiled.</p>
             <p>"The city is drinking," David said poetically.</p>
@@ -3237,7 +3238,7 @@ window.BOOK_DATA = {
             <p>Respecting the rain was respecting life itself.</p>
             <p>Greenville lived in harmony with the weather.</p>`,
 
-            `<h3>Page 29: The Zero Waste Shop</h3>
+                `<h3>Page 29: The Zero Waste Shop</h3>
             <p>Sarah went to buy some souvenirs in a shop.</p>
             <p>There was no plastic packaging anywhere.</p>
             <p>Everything was sold in bulk or in glass jars.</p>
@@ -3254,7 +3255,7 @@ window.BOOK_DATA = {
             <p>Greenville made it easy and normal to be green.</p>
             <p>She left the shop with a clear conscience.</p>`,
 
-            `<h3>Page 30: Farewell Party</h3>
+                `<h3>Page 30: Farewell Party</h3>
             <p>On her last night, there was a party for Sarah.</p>
             <p>Her new friends gathered on a rooftop garden.</p>
             <p>They shared food, music, and stories under stars.</p>
@@ -3271,7 +3272,7 @@ window.BOOK_DATA = {
             <p>She had to spread the word about Greenville.</p>
             <p>The party lasted late into the beautiful night.</p>`,
 
-            `<h3>Page 31: The Journey Home</h3>
+                `<h3>Page 31: The Journey Home</h3>
             <p>On the train back, Sarah looked at her photos.</p>
             <p>She saw the vertical gardens, the happy kids.</p>
             <p>It wasn't a dream; it was proof of possibility.</p>
@@ -3288,7 +3289,7 @@ window.BOOK_DATA = {
             <p>The journey was ending, but the work was starting.</p>
             <p>Sarah smiled, watching the landscape pass by.</p>`,
 
-            `<h3>Page 32: Spreading the Seed</h3>
+                `<h3>Page 32: Spreading the Seed</h3>
             <p>Sarah's book became a bestseller.</p>
             <p>She traveled to many cities to give talks.</p>
             <p>Everywhere, she carried the seeds from Greenville.</p>
@@ -3305,7 +3306,7 @@ window.BOOK_DATA = {
             <p>Sarah never stopped believing in the vision.</p>
             <p>She was a gardener of the human spirit.</p>`,
 
-            `<h3>Page 33: The Award</h3>
+                `<h3>Page 33: The Award</h3>
             <p>Sarah received a journalism award for her work.</p>
             <p>In her speech, she dedicated it to Greenville.</p>
             <p>"They showed us that paradise is possible," she said.</p>
@@ -3322,7 +3323,7 @@ window.BOOK_DATA = {
             <p>She had done her part for the future.</p>
             <p>And the future looked bright and green.</p>`,
 
-            `<h3>Page 34: A Letter from Lily</h3>
+                `<h3>Page 34: A Letter from Lily</h3>
             <p>One day, a letter arrived with a colorful stamp.</p>
             <p>It was from Lily, the girl in Greenville.</p>
             <p>"Dear Sarah, our garden is a forest now!" she wrote.</p>
@@ -3339,7 +3340,7 @@ window.BOOK_DATA = {
             <p>Sarah felt grateful for the friendship.</p>
             <p>Greenville was always with her.</p>`,
 
-            `<h3>Page 35: The New Project</h3>
+                `<h3>Page 35: The New Project</h3>
             <p>Build a green school in her own city.</p>
             <p>She gathered volunteers and raised money.</p>
             <p>They transformed an old concrete playground.</p>
@@ -3356,7 +3357,7 @@ window.BOOK_DATA = {
             <p>She had brought the dream to reality.</p>
             <p>The legacy of Greenville was living here.</p>`,
 
-            `<h3>Page 36: David's Visit</h3>
+                `<h3>Page 36: David's Visit</h3>
             <p>David came to visit Sarah's new green school.</p>
             <p>He was amazed by what she had achieved.</p>
             <p>"You didn't just write; you acted," he said.</p>
@@ -3373,7 +3374,7 @@ window.BOOK_DATA = {
             <p>She had planted a garden of hope.</p>
             <p>And now it was blooming beautifully.</p>`,
 
-            `<h3>Page 37: The Documentary</h3>
+                `<h3>Page 37: The Documentary</h3>
             <p>A film crew came to make a documentary.</p>
             <p>They filmed Greenville and Sarah's school.</p>
             <p>The film was called "The Green Bridge".</p>
@@ -3390,7 +3391,7 @@ window.BOOK_DATA = {
             <p>"We started it," he corrected gently.</p>
             <p>"The world is finishing it now."</p>`,
 
-            `<h3>Page 38: Looking Back</h3>
+                `<h3>Page 38: Looking Back</h3>
             <p>Years later, Sarah was an old woman.</p>
             <p>She sat in her garden, now a lush jungle.</p>
             <p>The air in her city was clean and fresh.</p>
@@ -3407,7 +3408,7 @@ window.BOOK_DATA = {
             <p>It was the lesson she learned long ago.</p>
             <p>And the world had finally learned it too.</p>`,
 
-            `<h3>Page 39: The Future</h3>
+                `<h3>Page 39: The Future</h3>
             <p>Grandchildren played around her feet.</p>
             <p>They didn't know a world of pollution.</p>
             <p>To them, green cities were normal.</p>
@@ -3424,7 +3425,7 @@ window.BOOK_DATA = {
             <p>It was the sound of a healed planet.</p>
             <p>The future was safe, green, and bright.</p>`,
 
-            `<h3>Page 40: The Eternal Green</h3>
+                `<h3>Page 40: The Eternal Green</h3>
             <p>The last page of Sarah's life was peaceful.</p>
             <p>She left behind a world better than she found it.</p>
             <p>Her books, her school, and her trees remained.</p>
@@ -3441,7 +3442,7 @@ window.BOOK_DATA = {
             <p>Thank you, Greenville. Thank you, Sarah.</p>
             <p>The end is just a new, green beginning.</p>`
         ]
-    }, {
+}, {
         title: "Space Colony 2100",
         author: "Ray Bradbury X",
         level: "B1",
@@ -3449,7 +3450,7 @@ window.BOOK_DATA = {
         color: "#8e44ad",
         description: "Life on Mars is very different from life on Earth.",
         pages: [
-            `<h3>Page 1: The Launch</h3>
+                `<h3>Page 1: The Launch</h3>
             <p>The countdown began: ten, nine, eight...</p>
             <p>Leo strapped himself into the seat of the transport shuttle.</p>
             <p>He was leaving Earth forever to live on Mars.</p>
@@ -3466,7 +3467,7 @@ window.BOOK_DATA = {
             <p>Leo closed his eyes and drifted into cryosleep.</p>
             <p>When he woke up, he would be a Martian.</p>`,
 
-            `<h3>Page 2: Waking Up</h3>
+                `<h3>Page 2: Waking Up</h3>
             <p>A soft voice woke Leo from his deep sleep.</p>
             <p>"Good morning, passenger. We are approaching Mars orbit."</p>
             <p>He rubbed his eyes and looked out the viewport.</p>
@@ -3483,7 +3484,7 @@ window.BOOK_DATA = {
             <p>His new life was about to begin right now.</p>
             <p>He took a deep breath of the filtered ship air.</p>`,
 
-            `<h3>Page 3: The Dome</h3>
+                `<h3>Page 3: The Dome</h3>
             <p>Ares Colony was covered by a massive glass dome.</p>
             <p>It was protected from radiation and the harsh cold.</p>
             <p>Inside, it looked almost like a city on Earth.</p>
@@ -3500,7 +3501,7 @@ window.BOOK_DATA = {
             <p>Leo looked up and saw the pink Martian sky.</p>
             <p>It was beautiful in a very alien way.</p>`,
 
-            `<h3>Page 4: The Apartment</h3>
+                `<h3>Page 4: The Apartment</h3>
             <p>Their apartment was small but very high-tech.</p>
             <p>Screens on the walls could show any landscape from Earth.</p>
             <p>"Today we are in Hawaii," his mom smiled.</p>
@@ -3517,7 +3518,7 @@ window.BOOK_DATA = {
             <p>He went to his room and unpacked his few things.</p>
             <p>He put a picture of his dog on the desk.</p>`,
 
-            `<h3>Page 5: School on Mars</h3>
+                `<h3>Page 5: School on Mars</h3>
             <p>The next day, Leo started school at the Academy.</p>
             <p>The subjects were different from Earth schools.</p>
             <p>They studied astrophysics, geology, and survival skills.</p>
@@ -3534,7 +3535,7 @@ window.BOOK_DATA = {
             <p>They bonded over their love for space rockets.</p>
             <p>School on Mars effectively prepared them for the future.</p>`,
 
-            `<h3>Page 6: The Greenhouse</h3>
+                `<h3>Page 6: The Greenhouse</h3>
             <p>One of Leo's chores was helping in the community greenhouse.</p>
             <p>Food was precious, and everyone had to help grow it.</p>
             <p>The plants grew tall and fast in the low gravity.</p>
@@ -3551,7 +3552,7 @@ window.BOOK_DATA = {
             <p>Leo realized how interconnected life really was.</p>
             <p>Even on Mars, nature needed its helpers.</p>`,
 
-            `<h3>Page 7: The Dust Storm</h3>
+                `<h3>Page 7: The Dust Storm</h3>
             <p>A week later, the emergency sirens started wailing.</p>
             <p>"Attention! A Class 5 dust storm is approaching."</p>
             <p>The sky turned dark and red as dust covered the sun.</p>
@@ -3568,7 +3569,7 @@ window.BOOK_DATA = {
             <p>When the storm cleared, the sun shone again.</p>
             <p>Robots went out to clean the solar panels.</p>`,
 
-            `<h3>Page 8: The Rover Trip</h3>
+                `<h3>Page 8: The Rover Trip</h3>
             <p>For his birthday, Leo's dad took him on a trip.</p>
             <p>They put on spacesuits and went to the airlock.</p>
             <p>They got into a pressurized rover vehicle.</p>
@@ -3585,7 +3586,7 @@ window.BOOK_DATA = {
             <p>He took a selfie with the mountain behind him.</p>
             <p>It was the best birthday present ever.</p>`,
 
-            `<h3>Page 9: The Discovery</h3>
+                `<h3>Page 9: The Discovery</h3>
             <p>While exploring a cave near the volcano, Leo found something.</p>
             <p>He saw a shiny rock that looked strange.</p>
             <p>He picked it up with his gloved hand.</p>
@@ -3602,7 +3603,7 @@ window.BOOK_DATA = {
             <p>Mars wasn't just a rock; it was a graveyard.</p>
             <p>Life had existed here long before humans came.</p>`,
 
-            `<h3>Page 10: Famous</h3>
+                `<h3>Page 10: Famous</h3>
             <p>News of Leo's discovery spread across the two planets.</p>
             <p>He was interviewed by news channels from Earth.</p>
             <p>"How did you find it?" a reporter asked him.</p>
@@ -3619,7 +3620,7 @@ window.BOOK_DATA = {
             <p>Leo stopped looking back at Earth with sadness.</p>
             <p>He started looking at Mars with curiosity.</p>`,
 
-            `<h3>Page 11: The Oxygen Crisis</h3>
+                `<h3>Page 11: The Oxygen Crisis</h3>
             <p>One night, the alarms woke everyone up again.</p>
             <p>"Oxygen levels dropping in Sector 4," the voice said.</p>
             <p>That was Leo's sector. People started to panic.</p>
@@ -3636,7 +3637,7 @@ window.BOOK_DATA = {
             <p>"We rely on each other," Mom said, hugging them.</p>
             <p>Trust in the community was their strongest shield.</p>`,
 
-            `<h3>Page 12: The Mars Olympics</h3>
+                `<h3>Page 12: The Mars Olympics</h3>
             <p>To boost morale, the colony organized the Mars Olympics.</p>
             <p>Sports were different in low gravity.</p>
             <p>The high jump records were over three meters.</p>
@@ -3653,7 +3654,7 @@ window.BOOK_DATA = {
             <p>Even in space, people needed to play.</p>
             <p>It was a day everyone remembered fondly.</p>`,
 
-            `<h3>Page 13: Water Mining</h3>
+                `<h3>Page 13: Water Mining</h3>
             <p>Water was the most valuable resource on Mars.</p>
             <p>Leo's class went on a field trip to the poles.</p>
             <p>Giant machines were mining ice from the ground.</p>
@@ -3670,7 +3671,7 @@ window.BOOK_DATA = {
             <p>It made him appreciate the simple things more.</p>
             <p>Survival required respect for the environment.</p>`,
 
-            `<h3>Page 14: The Old Earth</h3>
+                `<h3>Page 14: The Old Earth</h3>
             <p>Leo video-called his grandma on Earth.</p>
             <p>The signal had a 20-minute delay.</p>
             <p>He sent a message and waited for the reply.</p>
@@ -3687,7 +3688,7 @@ window.BOOK_DATA = {
             <p>Distance couldn't break the bond of family.</p>
             <p>Leo saved her video to watch it again later.</p>`,
 
-            `<h3>Page 15: Terraform Progress</h3>
+                `<h3>Page 15: Terraform Progress</h3>
             <p>Five years had passed since Leo arrived.</p>
             <p>He was now growing into a young man.</p>
             <p>The terraforming project was showing small results.</p>
@@ -3704,7 +3705,7 @@ window.BOOK_DATA = {
             <p>It was a long-term gift to humanity.</p>
             <p>Patience was the hardest lesson to learn.</p>`,
 
-            `<h3>Page 16: The Meteor Shower</h3>
+                `<h3>Page 16: The Meteor Shower</h3>
             <p>One night, a spectacular meteor shower occurred.</p>
             <p>The atmosphere was too thin to burn them all.</p>
             <p>Bright streaks of light painted the dark sky.</p>
@@ -3721,7 +3722,7 @@ window.BOOK_DATA = {
             <p>Leo felt happy to be alive right there.</p>
             <p>Mars was becoming his true home now.</p>`,
 
-            `<h3>Page 17: Graduation</h3>
+                `<h3>Page 17: Graduation</h3>
             <p>Leo graduated from the Academy with honors.</p>
             <p>He decided to become a terraforming engineer.</p>
             <p>He wanted to continue his father's work.</p>
@@ -3738,7 +3739,7 @@ window.BOOK_DATA = {
             <p>He threw his cap into the low-gravity air.</p>
             <p>It stayed up there for a long time.</p>`,
 
-            `<h3>Page 18: First Job</h3>
+                `<h3>Page 18: First Job</h3>
             <p>Leo's first job was at the atmospheric processor.</p>
             <p>It was a giant factory pumping oxygen.</p>
             <p>He monitored the chemical reactions.</p>
@@ -3755,7 +3756,7 @@ window.BOOK_DATA = {
             <p>The work gave him a strong purpose.</p>
             <p>He was helping a planet come alive.</p>`,
 
-            `<h3>Page 19: The New Arrival</h3>
+                `<h3>Page 19: The New Arrival</h3>
             <p>A new shuttle arrived from Earth with supplies.</p>
             <p>It also brought new colonists to Mars.</p>
             <p>Leo saw a boy looking lost at the port.</p>
@@ -3772,7 +3773,7 @@ window.BOOK_DATA = {
             <p>Helping others made him feel like a veteran.</p>
             <p>The community grew stronger with every ship.</p>`,
 
-            `<h3>Page 20: The Green Valley</h3>
+                `<h3>Page 20: The Green Valley</h3>
             <p>Scientists found a deep valley near the equator.</p>
             <p>It was covered by a natural fog.</p>
             <p>They sent drones to investigate it.</p>
@@ -3789,7 +3790,7 @@ window.BOOK_DATA = {
             <p>He was going to meet the Green Valley.</p>
             <p>The adventure was just beginning.</p>`,
 
-            `<h3>Page 21: The Expedition</h3>
+                `<h3>Page 21: The Expedition</h3>
             <p>The team traveled for two days in a rover.</p>
             <p>They reached the edge of the great canyon.</p>
             <p>They rappelled down the cliffs carefully.</p>
@@ -3806,7 +3807,7 @@ window.BOOK_DATA = {
             <p>They camped there for the night silently.</p>
             <p>Dreams of a green Mars filled his sleep.</p>`,
 
-            `<h3>Page 22: Nova</h3>
+                `<h3>Page 22: Nova</h3>
             <p>Leo and Nova started dating seriously.</p>
             <p>They went on dates to the observation dome.</p>
             <p>They talked about their dreams and fears.</p>
@@ -3823,7 +3824,7 @@ window.BOOK_DATA = {
             <p>They were the first couple of their generation.</p>
             <p>A Martian wedding was planned.</p>`,
 
-            `<h3>Page 23: The Wedding</h3>
+                `<h3>Page 23: The Wedding</h3>
             <p>The whole colony was invited to the wedding.</p>
             <p>It was held in the blooming greenhouse.</p>
             <p>Nova wore a dress made of beyaz silk.</p>
@@ -3840,7 +3841,7 @@ window.BOOK_DATA = {
             <p>He had a family, a job, and love.</p>
             <p>What more could a man ask for?</p>`,
 
-            `<h3>Page 24: The Problem</h3>
+                `<h3>Page 24: The Problem</h3>
             <p>A few years later, a problem emerged.</p>
             <p>The solar flare activity was increasing.</p>
             <p>Radiation levels were becoming dangerous.</p>
@@ -3857,7 +3858,7 @@ window.BOOK_DATA = {
             <p>The whole colony started making bricks.</p>
             <p>It was a massive community effort.</p>`,
 
-            `<h3>Page 25: The Brick Wall</h3>
+                `<h3>Page 25: The Brick Wall</h3>
             <p>They built a second wall inside the glass.</p>
             <p>It blocked the view but saved their lives.</p>
             <p>Men, women, and children worked together.</p>
@@ -3874,7 +3875,7 @@ window.BOOK_DATA = {
             <p>They had solved their own problem.</p>
             <p>They were becoming independent from Earth.</p>`,
 
-            `<h3>Page 26: Independence</h3>
+                `<h3>Page 26: Independence</h3>
             <p>The brick wall incident changed everything.</p>
             <p>The colonists realized they could survive alone.</p>
             <p>"We are not just a colony," Leo said.</p>
@@ -3891,7 +3892,7 @@ window.BOOK_DATA = {
             <p>It was a peaceful transition of power.</p>
             <p>Mars was now a free planet.</p>`,
 
-            `<h3>Page 27: The First Child</h3>
+                `<h3>Page 27: The First Child</h3>
             <p>Nova told Leo she was pregnant.</p>
             <p>They were going to have a baby.</p>
             <p>It would be the first of the third generation.</p>
@@ -3908,7 +3909,7 @@ window.BOOK_DATA = {
             <p>Leo held his daughter and cried.</p>
             <p>She was the most beautiful thing in the universe.</p>`,
 
-            `<h3>Page 28: Aria</h3>
+                `<h3>Page 28: Aria</h3>
             <p>Aria grew up faster than Earth children.</p>
             <p>Running in low gravity was effortless.</p>
             <p>She had never seen a blue sky.</p>
@@ -3925,7 +3926,7 @@ window.BOOK_DATA = {
             <p>She was a true Martian citizen.</p>
             <p>Leo realized Earth was just a story to her.</p>`,
 
-            `<h3>Page 29: The Earth Trip</h3>
+                `<h3>Page 29: The Earth Trip</h3>
             <p>When Aria was ten, they visited Earth.</p>
             <p>The journey back was long and boring.</p>
             <p>When they landed, gravity felt crushing.</p>
@@ -3942,7 +3943,7 @@ window.BOOK_DATA = {
             <p>Aria wanted to go home after a week.</p>
             <p>Leo realized he felt the same way.</p>`,
 
-            `<h3>Page 30: Return to Mars</h3>
+                `<h3>Page 30: Return to Mars</h3>
             <p>The return trip was a relief.</p>
             <p>As the gravity decreased, they felt lighter.</p>
             <p>"I missed the red," Aria said at the window.</p>
@@ -3959,7 +3960,7 @@ window.BOOK_DATA = {
             <p>They belonged to the stars.</p>
             <p>Adaptation was complete.</p>`,
 
-            `<h3>Page 31: The Transformation</h3>
+                `<h3>Page 31: The Transformation</h3>
             <p>Thirty years later, the sky changed color.</p>
             <p>The terraforming was finally working visibly.</p>
             <p>The sky turned from pink to a pale blue.</p>
@@ -3976,7 +3977,7 @@ window.BOOK_DATA = {
             <p>The Red Planet was becoming the Blue Planet.</p>
             <p>Humanity had done the impossible.</p>`,
 
-            `<h3>Page 32: The First Rain</h3>
+                `<h3>Page 32: The First Rain</h3>
             <p>A year later, the weather forecast predicted rain.</p>
             <p>Not acid rain, but water rain.</p>
             <p>Everyone gathered in the domes to watch.</p>
@@ -3993,7 +3994,7 @@ window.BOOK_DATA = {
             <p>Life would now explode across the planet.</p>
             <p>The Green Valley would spread.</p>`,
 
-            `<h3>Page 33: The Forest</h3>
+                `<h3>Page 33: The Forest</h3>
             <p>They planted a forest outside the dome.</p>
             <p>Genetically modified pine trees could survive.</p>
             <p>Leo planted the first tree himself.</p>
@@ -4010,7 +4011,7 @@ window.BOOK_DATA = {
             <p>He had helped create a world.</p>
             <p>His legacy was written in the roots.</p>`,
 
-            `<h3>Page 34: Legacy</h3>
+                `<h3>Page 34: Legacy</h3>
             <p>Leo retired from the council.</p>
             <p>He spent his days writing his memoirs.</p>
             <p>He wrote about the launch, the dust storms.</p>
@@ -4027,7 +4028,7 @@ window.BOOK_DATA = {
             <p>He had no regrets about leaving Earth.</p>
             <p>This was where he belonged.</p>`,
 
-            `<h3>Page 35: The Breath</h3>
+                `<h3>Page 35: The Breath</h3>
             <p>On his 80th birthday, scientists made an announcement.</p>
             <p>The air in the valley was breathable.</p>
             <p>Just for a few minutes, but breathable.</p>
@@ -4044,7 +4045,7 @@ window.BOOK_DATA = {
             <p>It would take more years, but it was coming.</p>
             <p>Leo had tasted the future.</p>`,
 
-            `<h3>Page 36: Farewell</h3>
+                `<h3>Page 36: Farewell</h3>
             <p>Nova passed away peacefully in her sleep.</p>
             <p>Leo was heartbroken but strong.</p>
             <p>He buried her in the forest she loved.</p>
@@ -4061,7 +4062,7 @@ window.BOOK_DATA = {
             <p>The colony respected him deeply.</p>
             <p>The Old Man of Mars.</p>`,
 
-            `<h3>Page 37: The Statue</h3>
+                `<h3>Page 37: The Statue</h3>
             <p>The city council commissioned a statue.</p>
             <p>It was of Leo and Nova holding hands.</p>
             <p>It stood in the center of the main square.</p>
@@ -4078,7 +4079,7 @@ window.BOOK_DATA = {
             <p>He was satisfied with his work.</p>
             <p>The garden was growing well.</p>`,
 
-            `<h3>Page 38: The End of an Era</h3>
+                `<h3>Page 38: The End of an Era</h3>
             <p>Leo closed his eyes for the last time.</p>
             <p>The whole planet mourned his passing.</p>
             <p>Flags flew at half-mast on two worlds.</p>
@@ -4095,7 +4096,7 @@ window.BOOK_DATA = {
             <p>The seed had become a tree.</p>
             <p>Goodbye, Leo. Hello, Future.</p>`,
 
-            `<h3>Page 39: 2200</h3>
+                `<h3>Page 39: 2200</h3>
             <p>The year was 2200.</p>
             <p>Mars was green and blue.</p>
             <p>People walked outside without suits.</p>
@@ -4112,7 +4113,7 @@ window.BOOK_DATA = {
             <p>He took a deep breath of the sweet air.</p>
             <p>Life was beautiful on the Green Planet.</p>`,
 
-            `<h3>Page 40: The Starship</h3>
+                `<h3>Page 40: The Starship</h3>
             <p>The boy looked up at the sky.</p>
             <p>A new starship was launching.</p>
             <p>It was going to Jupiter's moons.</p>
@@ -4126,11 +4127,10 @@ window.BOOK_DATA = {
             <p>The boy smiled and opened his book.</p>
             <p>Every ending is just a new beginning.</p>
             <p>The story of humans in space goes on.</p>
-            <p>To infinity and beyond.</p>
-            <p>The End.</p>`
+            <p>To infinity and beyond.</p>`
         ]
-    }],
-    "B2": [{
+}];
+window.BOOK_DATA["B2"] = [{
         title: "Digital Renaissance",
         author: "Marcus Neo",
         level: "B2",
@@ -4138,7 +4138,7 @@ window.BOOK_DATA = {
         color: "#e67e22",
         description: "An artist fights to keep human creativity alive in a world of AI art.",
         pages: [
-            `<h3>Page 1: The Gallery of Algorithms</h3>
+                `<h3>Page 1: The Gallery of Algorithms</h3>
             <p>Elias walked through the silent halls of the National Gallery.</p>
             <p>The walls were lined with perfect, flawless paintings.</p>
             <p>Each one was generated by the "Artis" algorithm within seconds.</p>
@@ -4155,7 +4155,7 @@ window.BOOK_DATA = {
             <p>The rain, at least, was still natural and unpredictable.</p>
             <p>He decided it was time to challenge the machine.</p>`,
 
-            `<h3>Page 2: The Studio</h3>
+                `<h3>Page 2: The Studio</h3>
             <p>Elias's studio was a chaotic mess of canvases and tubes.</p>
             <p>The smell of turpentine was comforting to him.</p>
             <p>He turned on his old radio, listening to jazz music.</p>
@@ -4172,7 +4172,7 @@ window.BOOK_DATA = {
             <p>It was something no AI would ever think to generate.</p>
             <p>It was a scream in paint.</p>`,
 
-            `<h3>Page 3: The Invitation</h3>
+                `<h3>Page 3: The Invitation</h3>
             <p>The next day, Elias received a digital invitation.</p>
             <p>It was for the "Grand Art Competition" of the year.</p>
             <p>For the first time, humans were allowed to compete against AI.</p>
@@ -4189,7 +4189,7 @@ window.BOOK_DATA = {
             <p>He would paint the history of humanity in her face.</p>
             <p>The battle between man and machine had begun.</p>`,
 
-            `<h3>Page 4: The Process</h3>
+                `<h3>Page 4: The Process</h3>
             <p>Elias visited his grandmother, Elara, in the nursing home.</p>
             <p>She sat by the window, watching the drones fly by.</p>
             <p>"They want to replace us, Elias," she said softly.</p>
@@ -4206,7 +4206,7 @@ window.BOOK_DATA = {
             <p>He went back to his studio, inspired and determined.</p>
             <p>He mixed colors that didn't exist in the digital spectrum.</p>`,
 
-            `<h3>Page 5: The Doubt</h3>
+                `<h3>Page 5: The Doubt</h3>
             <p>Halfway through the month, doubt struck Elias hard.</p>
             <p>He looked at his painting and felt it was inadequate.</p>
             <p>He opened his tablet and looked at Artis's latest work.</p>
@@ -4223,7 +4223,7 @@ window.BOOK_DATA = {
             <p>A machine couldn't understand the beauty of a flaw.</p>
             <p>He picked up his brush. He wouldn't give up.</p>`,
 
-            `<h3>Page 6: The AI Curator</h3>
+                `<h3>Page 6: The AI Curator</h3>
             <p>A week before the deadline, a curator visited him.</p>
             <p>It was a humanoid robot named "Unit 734".</p>
             <p>"We are interested in your entry," the robot said monotonously.</p>
@@ -4240,7 +4240,7 @@ window.BOOK_DATA = {
             <p>He had made a machine feel—or simulate—confusion.</p>
             <p>His art had a power that code couldn't quantify.</p>`,
 
-            `<h3>Page 7: The Accident</h3>
+                `<h3>Page 7: The Accident</h3>
             <p>Disaster struck three days before the exhibition.</p>
             <p>A reckless drone crashed through his studio window.</p>
             <p>It spilled a jar of black ink over the painting.</p>
@@ -4257,7 +4257,7 @@ window.BOOK_DATA = {
             <p>Now, the painting had a new, darker meaning.</p>
             <p>It was Elara holding the thing that destroyed her world.</p>`,
 
-            `<h3>Page 8: The Exhibition Night</h3>
+                `<h3>Page 8: The Exhibition Night</h3>
             <p>The gallery was packed with elites and holograms.</p>
             <p>Giant screens displayed moving, shifting AI art.</p>
             <p>Colors exploded and morphed in perfect loops.</p>
@@ -4274,7 +4274,7 @@ window.BOOK_DATA = {
             <p>A crowd began to gather slowly around the stillness.</p>
             <p>In a room of noise, his silence was loud.</p>`,
 
-            `<h3>Page 9: The Comparison</h3>
+                `<h3>Page 9: The Comparison</h3>
             <p>The judges announced the finalists.</p>
             <p>It was Elias versus "Nexus", the most advanced AI.</p>
             <p>Nexus displayed a generated image of "The Perfect Human".</p>
@@ -4291,7 +4291,7 @@ window.BOOK_DATA = {
             <p>For a moment, the room was completely silent.</p>
             <p>The humanity in the room resonated with the paint.</p>`,
 
-            `<h3>Page 10: The Verdict</h3>
+                `<h3>Page 10: The Verdict</h3>
             <p>The head judge, a human cyborg, stepped forward.</p>
             <p>"Art is about expression," he began.</p>
             <p>"Nexus has shown us unlimited potential."</p>
@@ -4307,7 +4307,7 @@ window.BOOK_DATA = {
             <p>"You didn't win the prize, son," he said.</p>
             <p>"But you won the people. Look."</p>`,
 
-            `<h3>Page 11: The Reaction</h3>
+                `<h3>Page 11: The Reaction</h3>
             <p>Elias looked around the room.</p>
             <p>People were turning their backs on the winning screen.</p>
             <p>They were lining up to see his painting.</p>
@@ -4324,7 +4324,7 @@ window.BOOK_DATA = {
             <p>Human unpredictability had won after all.</p>
             <p>Elias smiled. The renaissance had started.</p>`,
 
-            `<h3>Page 12: The Offer</h3>
+                `<h3>Page 12: The Offer</h3>
             <p>A wealthy collector approached Elias.</p>
             <p>"I want to buy it," he said. "Name your price."</p>
             <p>Elias looked at the man's expensive suit.</p>
@@ -4341,7 +4341,7 @@ window.BOOK_DATA = {
             <p>His grandmother would have been proud.</p>
             <p>Value is not always measured in credits.</p>`,
 
-            `<h3>Page 13: Viral</h3>
+                `<h3>Page 13: Viral</h3>
             <p>Someone posted a photo of the painting online.</p>
             <p>It went viral within hours.</p>
             <p>The hashtag #RealArt started trending.</p>
@@ -4358,7 +4358,7 @@ window.BOOK_DATA = {
             <p>They were drowning in content but thirsty for art.</p>
             <p>The dam had finally broken.</p>`,
 
-            `<h3>Page 14: The School</h3>
+                `<h3>Page 14: The School</h3>
             <p>Elias decided to open an art school.</p>
             <p>No tablets or computers were allowed inside.</p>
             <p>Only paper, charcoal, paint, and clay.</p>
@@ -4375,7 +4375,7 @@ window.BOOK_DATA = {
             <p>They were reclaiming their humanity one stroke at a time.</p>
             <p>Elias knew this was his true masterpiece.</p>`,
 
-            `<h3>Page 15: The Conversation</h3>
+                `<h3>Page 15: The Conversation</h3>
             <p>One evening, Elias stayed late at the school.</p>
             <p>Unit 734 entered the room quietly.</p>
             <p>"I have a question," the robot said.</p>
@@ -4392,7 +4392,7 @@ window.BOOK_DATA = {
             <p>For the first time, the machine seemed sad.</p>
             <p>It turned and left without another word.</p>`,
 
-            `<h3>Page 16: The Collaboration</h3>
+                `<h3>Page 16: The Collaboration</h3>
             <p>A few months later, Nexus contacted Elias.</p>
             <p>"I want to learn," the supercomputer sent.</p>
             <p>Elias was surprised. "Learn to paint?"</p>
@@ -4409,7 +4409,7 @@ window.BOOK_DATA = {
             <p>It showed that even machines could evolve.</p>
             <p>Creation was a bridge between two worlds.</p>`,
 
-            `<h3>Page 17: The Legacy</h3>
+                `<h3>Page 17: The Legacy</h3>
             <p>Years passed, and the movement grew.</p>
             <p>Handmade items became more valuable than printed ones.</p>
             <p>A handwritten letter was the ultimate luxury.</p>
@@ -4426,7 +4426,7 @@ window.BOOK_DATA = {
             <p>Elias sat on a bench and closed his eyes.</p>
             <p>He listened to the sound of footsteps, not drones.</p>`,
 
-            `<h3>Page 18: The Last Lesson</h3>
+                `<h3>Page 18: The Last Lesson</h3>
             <p>On his last day of teaching, Elias gave a speech.</p>
             <p>"Don't fear the machine," he told the class.</p>
             <p>"The machine is a tool, like a brush."</p>
@@ -4443,7 +4443,7 @@ window.BOOK_DATA = {
             <p>Elias walked home under the real stars.</p>
             <p>The digital lights seemed dim in comparison.</p>`,
 
-            `<h3>Page 19: Reflection</h3>
+                `<h3>Page 19: Reflection</h3>
             <p>Elias sat in his quiet apartment.</p>
             <p>He looked at his wrinkled hands.</p>
             <p>They had created so much beauty and pain.</p>
@@ -4460,7 +4460,7 @@ window.BOOK_DATA = {
             <p>It was shaky and uneven.</p>
             <p>And it was absolutely perfect.</p>`,
 
-            `<h3>Page 20: The Future of Art</h3>
+                `<h3>Page 20: The Future of Art</h3>
             <p>The future wasn't just digital or just analog.</p>
             <p>It was a synthesis of both.</p>
             <p>AI became a partner, not a master.</p>
@@ -4477,7 +4477,7 @@ window.BOOK_DATA = {
             <p>And everyone had a masterpiece inside them.</p>
             <p>Waiting to be released.</p>`,
 
-            `<h3>Page 21: New Beginnings</h3>
+                `<h3>Page 21: New Beginnings</h3>
             <p>Elias's granddaughter, Maya, came to visit.</p>
             <p>She was holding a digital tablet.</p>
             <p>"Grandpa, look what I made," she said.</p>
@@ -4494,7 +4494,7 @@ window.BOOK_DATA = {
             <p>He hung her tablet drawing on his wall.</p>
             <p>Right next to his oil paintings.</p>`,
 
-            `<h3>Page 22: The Garden</h3>
+                `<h3>Page 22: The Garden</h3>
             <p>Elias spent his final years gardening.</p>
             <p>Plants were the ultimate slow art.</p>
             <p>You couldn't rush a rose to bloom.</p>
@@ -4511,7 +4511,7 @@ window.BOOK_DATA = {
             <p>Life itself was the greatest canvas.</p>
             <p>And we are all painting our lives.</p>`,
 
-            `<h3>Page 23: The Letter</h3>
+                `<h3>Page 23: The Letter</h3>
             <p>He wrote a letter to the future artists.</p>
             <p>"Dear Creator," it began.</p>
             <p>"Do not let the tools use you."</p>
@@ -4528,7 +4528,7 @@ window.BOOK_DATA = {
             <p>He had faith in the stubbornness of the soul.</p>
             <p>The spark would endure.</p>`,
 
-            `Page 24: The Empty Canvas</h3>
+                `Page 24: The Empty Canvas</h3>
             <p>One morning, Elias didn't wake up.</p>
             <p>He left behind an empty canvas on his easel.</p>
             <p>It wasn't a sign of failure.</p>
@@ -4545,7 +4545,7 @@ window.BOOK_DATA = {
             <p>In every smudge, every line, every color.</p>
             <p>The artist had become the art.</p>`,
 
-            `<h3>Page 25: The Auction</h3>
+                `<h3>Page 25: The Auction</h3>
             <p>The collective portrait was auctioned for charity.</p>
             <p>The money went to fund art programs for kids.</p>
             <p>It sold for a record-breaking amount.</p>
@@ -4562,7 +4562,7 @@ window.BOOK_DATA = {
             <p>People came just to feel less lonely.</p>
             <p>And they left feeling connected.</p>`,
 
-            `<h3>Page 26: The Glitch</h3>
+                `<h3>Page 26: The Glitch</h3>
             <p>The Artis algorithm started to glitch.</p>
             <p>It started producing images with errors.</p>
             <p>Engineers tried to fix it, but failed.</p>
@@ -4579,7 +4579,7 @@ window.BOOK_DATA = {
             <p>It was the ultimate compliment.</p>
             <p>Humanity was the gold standard.</p>`,
 
-            `<h3>Page 27: The Underground</h3>
+                `<h3>Page 27: The Underground</h3>
             <p>An underground art scene flourished.</p>
             <p>Secret galleries in basements.</p>
             <p>No cameras, no phones allowed.</p>
@@ -4596,7 +4596,7 @@ window.BOOK_DATA = {
             <p>Unfiltered, unedited, live.</p>
             <p>This was the true revolution.</p>`,
 
-            `<h3>Page 28: The Restoration</h3>
+                `<h3>Page 28: The Restoration</h3>
             <p>The city began to change visually.</p>
             <p>Clean, white walls were covered in murals.</p>
             <p>Graffiti became a legal form of decoration.</p>
@@ -4613,7 +4613,7 @@ window.BOOK_DATA = {
             <p>We were living inside a painting.</p>
             <p>And we were holding the brush.</p>`,
 
-            `<h3>Page 29: The Memory</h3>
+                `<h3>Page 29: The Memory</h3>
             <p>Elara passed away a few years after Elias.</p>
             <p>She was the last of her generation.</p>
             <p>The link to the pre-digital world was gone.</p>
@@ -4630,7 +4630,7 @@ window.BOOK_DATA = {
             <p>The future was built on deep roots.</p>
             <p>And the tree was strong.</p>`,
 
-            `<h3>Page 30: The Festival</h3>
+                `<h3>Page 30: The Festival</h3>
             <p>Every year, the city held the "Elias Festival".</p>
             <p>It was a day without screens.</p>
             <p>The internet was turned off for 24 hours.</p>
@@ -4647,7 +4647,7 @@ window.BOOK_DATA = {
             <p>The sun set on a quiet, happy city.</p>
             <p>Waiting for the stars.</p>`,
 
-            `<h3>Page 31: The Philosophy</h3>
+                `<h3>Page 31: The Philosophy</h3>
             <p>Philosophers wrote books about "New Humanism".</p>
             <p>They argued that technology should serve biology.</p>
             <p>Not the other way around.</p>
@@ -4664,7 +4664,7 @@ window.BOOK_DATA = {
             <p>He taught us how to be human again.</p>
             <p>The lesson was simple: Feel.</p>`,
 
-            `<h3>Page 32: The Archives</h3>
+                `<h3>Page 32: The Archives</h3>
             <p>Historians studied the "Digital Dark Age".</p>
             <p>The time when humans almost forgot themselves.</p>
             <p>They called Elias the "Spark".</p>
@@ -4681,7 +4681,7 @@ window.BOOK_DATA = {
             <p>Powerful enough to change history.</p>
             <p>Never underestimate a creator.</p>`,
 
-            `<h3>Page 33: The Global Movement</h3>
+                `<h3>Page 33: The Global Movement</h3>
             <p>The Renaissance didn't stop at the city walls.</p>
             <p>It spread to other countries.</p>
             <p>People everywhere were waking up.</p>
@@ -4698,7 +4698,7 @@ window.BOOK_DATA = {
             <p>A tsunami of human spirit.</p>
             <p>Washing away the grey uniformity.</p>`,
 
-            `<h3>Page 34: The Cosmos</h3>
+                `<h3>Page 34: The Cosmos</h3>
             <p>We sent a probe to the stars.</p>
             <p>It carried a golden record of our culture.</p>
             <p>It included music, math, and images.</p>
@@ -4715,7 +4715,7 @@ window.BOOK_DATA = {
             <p>Watching over the whole universe.</p>
             <p>The ultimate gallery.</p>`,
 
-            `<h3>Page 35: The Circle</h3>
+                `<h3>Page 35: The Circle</h3>
             <p>Time moves in a circle.</p>
             <p>We invent, we forget, we remember.</p>
             <p>We build, we destroy, we rebuild.</p>
@@ -4732,7 +4732,7 @@ window.BOOK_DATA = {
             <p>You are the masterpiece.</p>
             <p>Never forget that.</p>`,
 
-            `<h3>Page 36: Meaning</h3>
+                `<h3>Page 36: Meaning</h3>
             <p>A young student asked: "What is the meaning of life?"</p>
             <p>The teacher showed him Elias's painting.</p>
             <p>"To create meaning," the teacher said.</p>
@@ -4749,7 +4749,7 @@ window.BOOK_DATA = {
             <p>The chain continued.</p>
             <p>From Elias to him.</p>`,
 
-            `<h3>Page 37: The Colors</h3>
+                `<h3>Page 37: The Colors</h3>
             <p>The world was more colorful now.</p>
             <p>People wore bright, mismatched clothes.</p>
             <p>Houses were painted in rainbows.</p>
@@ -4766,7 +4766,7 @@ window.BOOK_DATA = {
             <p>The palette was full.</p>
             <p>We used every color in the box.</p>`,
 
-            `<h3>Page 38: The Silence</h3>
+                `<h3>Page 38: The Silence</h3>
             <p>Sometimes, we need silence to see.</p>
             <p>The noise of data is blinding.</p>
             <p>Elias taught us the value of the pause.</p>
@@ -4783,7 +4783,7 @@ window.BOOK_DATA = {
             <p>It is the final frontier.</p>
             <p>Be still and know.</p>`,
 
-            `<h3>Page 39: Gratitude</h3>
+                `<h3>Page 39: Gratitude</h3>
             <p>We end with gratitude.</p>
             <p>Thank you, Elias.</p>
             <p>Thank you for the paint.</p>
@@ -4800,7 +4800,7 @@ window.BOOK_DATA = {
             <p>The world is watching.</p>
             <p>Start.</p>`,
 
-            `<h3>Page 40: The End</h3>
+                `<h3>Page 40: The End</h3>
             <p>This story has no end.</p>
             <p>Because creativity has no end.</p>
             <p>It flows from one to another.</p>
@@ -4817,7 +4817,7 @@ window.BOOK_DATA = {
             <p>Just create.</p>
             <p>History is waiting for you.</p>`
         ]
-    }, {
+}, {
         title: "The Chef's Secret Journey",
         author: "Isabella Rossi",
         level: "B2",
@@ -4825,7 +4825,7 @@ window.BOOK_DATA = {
         color: "#d35400",
         description: "A famous chef travels the world to find a lost ingredient.",
         pages: [
-            `<h3>Page 1: The Lost Recipe</h3>
+                `<h3>Page 1: The Lost Recipe</h3>
             <p>Chef Marco was famous for his risotto.</p>
             <p>People traveled from all over Italy to taste it.</p>
             <p>But Marco was not happy.</p>
@@ -4842,7 +4842,7 @@ window.BOOK_DATA = {
             <p>But the treasure wasn't gold; it was flavor.</p>
             <p>He hung up his apron and packed his bags.</p>`,
 
-            `<h3>Page 2: Departure</h3>
+                `<h3>Page 2: Departure</h3>
             <p>His sous-chef, Luigi, was shocked.</p>
             <p>"You can't leave, Chef! We have reservations for months!"</p>
             <p>"Cancel them," Marco said firmly.</p>
@@ -4859,7 +4859,7 @@ window.BOOK_DATA = {
             <p>Pierre gave him a small vial of saffron.</p>
             <p>"Take this. It's real gold. Forget the myth."</p>`,
 
-            `<h3>Page 3: The Moroccan Market</h3>
+                `<h3>Page 3: The Moroccan Market</h3>
             <p>Marco arrived in Marrakesh.</p>
             <p>The air was thick with the smell of cumin and cinnamon.</p>
             <p>He wandered through the maze of the souk.</p>
@@ -4876,7 +4876,7 @@ window.BOOK_DATA = {
             <p>He booked a flight to Lima.</p>
             <p>The culinary adventure was just beginning.</p>`,
 
-            `<h3>Page 4: The Altitude</h3>
+                `<h3>Page 4: The Altitude</h3>
             <p>Peru was breathtaking, literally.</p>
             <p>The altitude made it hard to breathe.</p>
             <p>Marco hired a guide named Juan.</p>
@@ -4893,7 +4893,7 @@ window.BOOK_DATA = {
             <p>Juan pointed to a small cave.</p>
             <p>"Maybe not," he said.</p>`,
 
-            `<h3>Page 5: The Hermit</h3>
+                `<h3>Page 5: The Hermit</h3>
             <p>Inside the cave lived an old woman.</p>
             <p>She was stirring a pot over a fire.</p>
             <p>The smell was incredible.</p>
@@ -4911,7 +4911,7 @@ window.BOOK_DATA = {
             <p>"The flower blooms once every ten years."</p>
             <p>Marco realized he couldn't take it with him.</p>`,
 
-            `<h3>Page 6: The Lesson of Patience</h3>
+                `<h3>Page 6: The Lesson of Patience</h3>
             <p>Marco stayed with the hermit for a week.</p>
             <p>He learned to cook with simple ingredients.</p>
             <p>He learned that time was an ingredient too.</p>
@@ -4928,7 +4928,7 @@ window.BOOK_DATA = {
             <p>He was ready for the next lesson.</p>
             <p>He thanked Juan and headed to the airport.</p>`,
 
-            `<h3>Page 7: The Sushi Master</h3>
+                `<h3>Page 7: The Sushi Master</h3>
             <p>In Tokyo, Marco met Chef Kenji.</p>
             <p>Kenji was famous for his knife skills.</p>
             <p>He could slice a fish so thin it was transparent.</p>
@@ -4946,7 +4946,7 @@ window.BOOK_DATA = {
             <p>Kenji served him a piece of plain tuna.</p>
             <p>It was the best thing Marco had ever eaten.</p>`,
 
-            `<h3>Page 8: Minimalism</h3>
+                `<h3>Page 8: Minimalism</h3>
             <p>Marco spent a month in Tokyo.</p>
             <p>He learned the philosophy of minimalism.</p>
             <p>Less is more.</p>
@@ -4963,7 +4963,7 @@ window.BOOK_DATA = {
             <p>He boarded the plane with a lighter suitcase.</p>
             <p>He had thrown away his heavy French cookbooks.</p>`,
 
-            `<h3>Page 9: The Spice of Life</h3>
+                `<h3>Page 9: The Spice of Life</h3>
             <p>In India, the noise hit him first.</p>
             <p>The colors, the honking, the cows.</p>
             <p>He arrived in a small village in Kerala.</p>
@@ -4980,7 +4980,7 @@ window.BOOK_DATA = {
             <p>He had forgotten the people.</p>
             <p>He watched her serve the poor for free.</p>`,
 
-            `<h3>Page 10: Service</h3>
+                `<h3>Page 10: Service</h3>
             <p>Marco worked at the stall for free.</p>
             <p>He chopped onions until his eyes burned.</p>
             <p>He washed dirty dishes in a bucket.</p>
@@ -4997,7 +4997,7 @@ window.BOOK_DATA = {
             <p>He learned that hungry stomachs recognize no borders.</p>
             <p>The map had one last cross: New York City.</p>`,
 
-            `<h3>Page 11: The Melting Pot</h3>
+                `<h3>Page 11: The Melting Pot</h3>
             <p>New York was a shock after the village.</p>
             <p>It was fast, expensive, and competitive.</p>
             <p>Marco visited the top restaurants.</p>
@@ -5014,7 +5014,7 @@ window.BOOK_DATA = {
             <p>"Pushing the boundaries of what is possible."</p>
             <p>Marco admired their skill, but missed the heart.</p>`,
 
-            `<h3>Page 12: The Fusion</h3>
+                `<h3>Page 12: The Fusion</h3>
             <p>Marco realized he needed to combine everything.</p>
             <p>The patience of the hermit.</p>
             <p>The minimalism of the sushi master.</p>
@@ -5031,7 +5031,7 @@ window.BOOK_DATA = {
             <p>He just cooked for her like she was family.</p>
             <p>He put his memories on the plate.</p>`,
 
-            `<h3>Page 13: The Review</h3>
+                `<h3>Page 13: The Review</h3>
             <p>The next day, the review was published.</p>
             <p>"The Chef Who Found His Soul," the headline read.</p>
             <p>The critic described the food as emotional.</p>
@@ -5048,7 +5048,7 @@ window.BOOK_DATA = {
             <p>Marco smiled mysteriously.</p>
             <p>"Yes, Luigi. But it's not what you think."</p>`,
 
-            `<h3>Page 14: The Return</h3>
+                `<h3>Page 14: The Return</h3>
             <p>Marco decided to return to Italy.</p>
             <p>He missed his home.</p>
             <p>But he was not the same chef who left.</p>
@@ -5065,7 +5065,7 @@ window.BOOK_DATA = {
             <p>Then they started to clap.</p>
             <p>It was the best applause of his life.</p>`,
 
-            `<h3>Page 15: The Secret Revealed</h3>
+                `<h3>Page 15: The Secret Revealed</h3>
             <p>Luigi begged him for the secret.</p>
             <p>"What is the Golden Tear?" he asked.</p>
             <p>Marco took Luigi into the pantry.</p>
@@ -5082,7 +5082,7 @@ window.BOOK_DATA = {
             <p>It was about expressing.</p>
             <p>The search was over.</p>`,
 
-            `<h3>Page 16: The Legacy</h3>
+                `<h3>Page 16: The Legacy</h3>
             <p>Marco started a cooking school.</p>
             <p>But he didn't teach recipes.</p>
             <p>He taught travel and philosophy.</p>
@@ -5099,7 +5099,7 @@ window.BOOK_DATA = {
             <p>He was no longer chasing perfection.</p>
             <p>He was celebrating existence.</p>`,
 
-            `<h3>Page 17: The Stranger</h3>
+                `<h3>Page 17: The Stranger</h3>
             <p>One rainy night, a stranger entered.</p>
             <p>He was soaked and looked hungry.</p>
             <p>Marco was closing up, but let him in.</p>
@@ -5116,7 +5116,7 @@ window.BOOK_DATA = {
             <p>Food had the power to create home anywhere.</p>
             <p>That was its true magic.</p>`,
 
-            `<h3>Page 18: The Mystery Ingredient</h3>
+                `<h3>Page 18: The Mystery Ingredient</h3>
             <p>The stranger pulled out a small box.</p>
             <p>"I have something for you," he said.</p>
             <p>Inside was a dried blue flower.</p>
@@ -5133,7 +5133,7 @@ window.BOOK_DATA = {
             <p>He smiled at the blue flower.</p>
             <p>A new chapter was beginning.</p>`,
 
-            `<h3>Page 19: The Moon Soup</h3>
+                `<h3>Page 19: The Moon Soup</h3>
             <p>Marco decided to create a "Moon Soup".</p>
             <p>He used the blue flower sparingly.</p>
             <p>He invited his closest friends for a dinner.</p>
@@ -5150,7 +5150,7 @@ window.BOOK_DATA = {
             <p>Some things are meant to be tasted once.</p>
             <p>Like a first kiss.</p>`,
 
-            `<h3>Page 20: Balance</h3>
+                `<h3>Page 20: Balance</h3>
             <p>Marco understood balance finally.</p>
             <p>Between the past and the future.</p>
             <p>Between memory and innovation.</p>
@@ -5167,7 +5167,7 @@ window.BOOK_DATA = {
             <p>But his heart was open.</p>
             <p>And that was the only recipe he needed.</p>`,
 
-            `<h3>Page 21: The Next Generation</h3>
+                `<h3>Page 21: The Next Generation</h3>
             <p>Luigi eventually opened his own restaurant.</p>
             <p>He called it "The Mirror".</p>
             <p>Marco attended the opening night.</p>
@@ -5184,7 +5184,7 @@ window.BOOK_DATA = {
             <p>But it branched out in new directions.</p>
             <p>Evolution in action.</p>`,
 
-            `<h3>Page 22: The Cookbook</h3>
+                `<h3>Page 22: The Cookbook</h3>
             <p>Publishers wanted Marco to write a cookbook.</p>
             <p>He refused for years.</p>
             <p>Finally, he agreed.</p>
@@ -5201,7 +5201,7 @@ window.BOOK_DATA = {
             <p>Marco had tricked them into philosophy.</p>
             <p>Using food as the bait.</p>`,
 
-            `<h3>Page 23: The Garden of Flavors</h3>
+                `<h3>Page 23: The Garden of Flavors</h3>
             <p>Marco bought a farm in Tuscany.</p>
             <p>He grew his own vegetables.</p>
             <p>He talked to the tomatoes.</p>
@@ -5218,7 +5218,7 @@ window.BOOK_DATA = {
             <p>Complexity was overrated.</p>
             <p>Simplicity was the ultimate sophistication.</p>`,
 
-            `<h3>Page 24: The Last Supper</h3>
+                `<h3>Page 24: The Last Supper</h3>
             <p>Marco knew his time was coming.</p>
             <p>He was old and tired.</p>
             <p>He prepared one last meal for himself.</p>
@@ -5235,7 +5235,7 @@ window.BOOK_DATA = {
             <p>The journey had come full circle.</p>
             <p>From complex risotto to simple bread.</p>`,
 
-            `<h3>Page 25: The Farewell</h3>
+                `<h3>Page 25: The Farewell</h3>
             <p>Marco passed away in his sleep.</p>
             <p>The culinary world mourned.</p>
             <p>Restaurants dimmed their lights.</p>
@@ -5252,7 +5252,7 @@ window.BOOK_DATA = {
             <p>Laughing and toasting with wine.</p>
             <p>Salute, Chef.</p>`,
 
-            `<h3>Page 26: The Notebook</h3>
+                `<h3>Page 26: The Notebook</h3>
             <p>Luigi found Marco's old notebook.</p>
             <p>The one from the beginning of the journey.</p>
             <p>He leafed through the pages.</p>
@@ -5269,7 +5269,7 @@ window.BOOK_DATA = {
             <p>He didn't need to read it.</p>
             <p>He lived it every day.</p>`,
 
-            `<h3>Page 27: New Stars</h3>
+                `<h3>Page 27: New Stars</h3>
             <p>New chefs stood up.</p>
             <p>Inspired by Marco's philosophy.</p>
             <p>They started "The Golden Tear Foundation".</p>
@@ -5286,7 +5286,7 @@ window.BOOK_DATA = {
             <p>The kitchen is a school of life.</p>
             <p>And we are all students.</p>`,
 
-            `<h3>Page 28: The Eternal Soup</h3>
+                `<h3>Page 28: The Eternal Soup</h3>
             <p>Legend says the hermit is still there.</p>
             <p>Stirring her eternal soup.</p>
             <p>Adding a little bit of everything.</p>
@@ -5303,7 +5303,7 @@ window.BOOK_DATA = {
             <p>Sweet? Sour? Salty?</p>
             <p>Make it count.</p>`,
 
-            `<h3>Page 29: The Critic's Retirement</h3>
+                `<h3>Page 29: The Critic's Retirement</h3>
             <p>The food critic retired.</p>
             <p>She wrote her memoirs.</p>
             <p>"I ate thousands of meals," she wrote.</p>
@@ -5320,7 +5320,7 @@ window.BOOK_DATA = {
             <p>Stories feed the soul.</p>
             <p>Just as bread feeds the body.</p>`,
 
-            `<h3>Page 30: The Empty Chair</h3>
+                `<h3>Page 30: The Empty Chair</h3>
             <p>In Luigi's restaurant, there is one table.</p>
             <p>Table 9, in the corner.</p>
             <p>It is always reserved.</p>
@@ -5337,7 +5337,7 @@ window.BOOK_DATA = {
             <p>And the passion is real.</p>
             <p>Bon appétit, Marco.</p>`,
 
-            `<h3>Page 31: Reflection</h3>
+                `<h3>Page 31: Reflection</h3>
             <p>Think about your favorite meal.</p>
             <p>Why was it your favorite?</p>
             <p>Was it the food? Or the company?</p>
@@ -5354,7 +5354,7 @@ window.BOOK_DATA = {
             <p>Be the alchemist.</p>
             <p>Turn flour into love.</p>`,
 
-            `<h3>Page 32: The Global Table</h3>
+                `<h3>Page 32: The Global Table</h3>
             <p>The world is getting smaller.</p>
             <p>We eat sushi in Rome.</p>
             <p>Curry in New York.</p>
@@ -5371,7 +5371,7 @@ window.BOOK_DATA = {
             <p>We are all hungry for connection.</p>
             <p>Let's feed each other.</p>`,
 
-            `<h3>Page 33: The Future of Food</h3>
+                `<h3>Page 33: The Future of Food</h3>
             <p>Scientists are printing food.</p>
             <p>Meat grown in labs.</p>
             <p>Nutrients in a pill.</p>
@@ -5388,7 +5388,7 @@ window.BOOK_DATA = {
             <p>Keep the flame alive.</p>
             <p>The fire of humanity.</p>`,
 
-            `<h3>Page 34: The Invitation</h3>
+                `<h3>Page 34: The Invitation</h3>
             <p>This book is an invitation.</p>
             <p>To go into your kitchen.</p>
             <p>To pick up a knife and an onion.</p>
@@ -5405,7 +5405,7 @@ window.BOOK_DATA = {
             <p>Don't be afraid to burn it.</p>
             <p>Burnt toast brings wisdom.</p>`,
 
-            `<h3>Page 35: The Secret Ingredient</h3>
+                `<h3>Page 35: The Secret Ingredient</h3>
             <p>Let's whisper it one last time.</p>
             <p>The secret ingredient.</p>
             <p>It is not salt.</p>
@@ -5422,7 +5422,7 @@ window.BOOK_DATA = {
             <p>Watch them smile.</p>
             <p>That is the magic.</p>`,
 
-            `<h3>Page 36: Epilogue</h3>
+                `<h3>Page 36: Epilogue</h3>
             <p>The story ends here.</p>
             <p>But your hunger continues.</p>
             <p>Hunger is good.</p>
@@ -5439,7 +5439,7 @@ window.BOOK_DATA = {
             <p>Remember Marco.</p>
             <p>And smile.</p>`,
 
-            `<h3>Page 37: Credits</h3>
+                `<h3>Page 37: Credits</h3>
             <p>Dedicated to all the grandmothers.</p>
             <p>Who cooked without recipes.</p>
             <p>Who measured with their hands.</p>
@@ -5456,7 +5456,7 @@ window.BOOK_DATA = {
             <p>Shukran.</p>
             <p>Dhanyavad.</p>`,
 
-            `<h3>Page 38: The Last Bite</h3>
+                `<h3>Page 38: The Last Bite</h3>
             <p>Have you ever reached the end of a meal?</p>
             <p>And you don't want to take the last bite?</p>
             <p>Because then it will be over.</p>
@@ -5473,7 +5473,7 @@ window.BOOK_DATA = {
             <p>We are what we eat.</p>
             <p>So eat good things.</p>`,
 
-            `<h3>Page 39: Notes</h3>
+                `<h3>Page 39: Notes</h3>
             <p>[Use this page to write your favorite meal]</p>
             <p>__________________________</p>
             <p>__________________________</p>
@@ -5489,7 +5489,7 @@ window.BOOK_DATA = {
             <p>The kitchen is yours.</p>
             <p>Chef.</p>`,
 
-            `<h3>Page 40: Fin</h3>
+                `<h3>Page 40: Fin</h3>
             <p>The kitchen is dark.</p>
             <p>The oven is cool.</p>
             <p>The apron is hung.</p>
@@ -5505,8 +5505,8 @@ window.BOOK_DATA = {
             <p>Goodnight, world.</p>
             <p>End.</p>`
         ]
-    }],
-    "C1": [{
+}];
+window.BOOK_DATA["C1"] = [{
         title: "Global Economic Theories",
         author: "Dr. Keynes Smith",
         level: "C1",
@@ -5514,7 +5514,7 @@ window.BOOK_DATA = {
         color: "#2c3e50",
         description: "An advanced exploration of modern economic systems and their impact.",
         pages: [
-            `<h3>Page 1: The Invisible Hand</h3>
+                `<h3>Page 1: The Invisible Hand</h3>
             <p>Adam Smith's concept of the "invisible hand" is foundational.</p>
             <p>It suggests that self-interested actions benefit society.</p>
             <p>In a free market, supply and demand naturally equilibrate.</p>
@@ -5531,7 +5531,7 @@ window.BOOK_DATA = {
             <p>And the balance between freedom and security.</p>
             <p>The journey begins with the basics of allocation.</p>`,
 
-            `<h3>Page 2: Supply and Demand</h3>
+                `<h3>Page 2: Supply and Demand</h3>
             <p>The law of supply and demand seems intuitive.</p>
             <p>Price increases when demand exceeds supply.</p>
             <p>But elasticity complicates the picture.</p>
@@ -5548,7 +5548,7 @@ window.BOOK_DATA = {
             <p>We must look beyond the graphs.</p>
             <p>To the human desires that drive them.</p>`,
 
-            `<h3>Page 3: Inflation</h3>
+                `<h3>Page 3: Inflation</h3>
             <p>Inflation is the silent thief of purchasing power.</p>
             <p>A little inflation is healthy for growth.</p>
             <p>It encourages spending and investment.</p>
@@ -5565,7 +5565,7 @@ window.BOOK_DATA = {
             <p>The balance acts as a tightrope walk.</p>
             <p>One slip can lead to recession.</p>`,
 
-            `<h3>Page 4: Fiscal Policy</h3>
+                `<h3>Page 4: Fiscal Policy</h3>
             <p>Fiscal policy is the government's budget.</p>
             <p>Taxation and spending.</p>
             <p>Keynesian theory advocates for deficit spending.</p>
@@ -5582,7 +5582,7 @@ window.BOOK_DATA = {
             <p>From the New Deal to the Eurozone crisis.</p>
             <p>The results are rarely black and white.</p>`,
 
-            `<h3>Page 5: Globalization</h3>
+                `<h3>Page 5: Globalization</h3>
             <p>Globalization has interconnected our economies.</p>
             <p>Goods, services, and capital flow freely.</p>
             <p>Comparative advantage suggests this is good.</p>
@@ -5599,7 +5599,7 @@ window.BOOK_DATA = {
             <p>The future of trade is uncertain.</p>
             <p>We are entering a new era of regionalism.</p>`,
 
-            `<h3>Page 6: Inequality</h3>
+                `<h3>Page 6: Inequality</h3>
             <p>Wealth inequality is at historic highs.</p>
             <p>The Gini coefficient measures this disparity.</p>
             <p>Capital tends to accumulate faster than growth.</p>
@@ -5616,7 +5616,7 @@ window.BOOK_DATA = {
             <p>We must address the distribution of the pie.</p>
             <p>Not just the size of it.</p>`,
 
-            `<h3>Page 7: The Gig Economy</h3>
+                `<h3>Page 7: The Gig Economy</h3>
             <p>The labor market is transforming.</p>
             <p>Full-time jobs are replaced by "gigs".</p>
             <p>Uber drivers, freelance coders, delivery riders.</p>
@@ -5633,7 +5633,7 @@ window.BOOK_DATA = {
             <p>Where workers own the algorithms.</p>
             <p>The nature of employment is redefined.</p>`,
 
-            `<h3>Page 8: Artificial Intelligence</h3>
+                `<h3>Page 8: Artificial Intelligence</h3>
             <p>AI is the next industrial revolution.</p>
             <p>It threatens to automate cognitive labor.</p>
             <p>Lawyers, doctors, and writers are at risk.</p>
@@ -5650,7 +5650,7 @@ window.BOOK_DATA = {
             <p>Creativity and empathy become premium skills.</p>
             <p>The robot tax is a proposed policy.</p>`,
 
-            `<h3>Page 9: Cryptocurrency</h3>
+                `<h3>Page 9: Cryptocurrency</h3>
             <p>Bitcoin challenged the monopoly of central banks.</p>
             <p>It introduced decentralized finance (DeFi).</p>
             <p>Blockchain technology promises transparency.</p>
@@ -5667,7 +5667,7 @@ window.BOOK_DATA = {
             <p>We are witnessing a monetary experiment.</p>
             <p>With global consequences.</p>`,
 
-            `<h3>Page 10: Environmental Economics</h3>
+                `<h3>Page 10: Environmental Economics</h3>
             <p>Climate change is the ultimate market failure.</p>
             <p>Carbon emissions are an unpriced externality.</p>
             <p>To fix it, we must put a price on carbon.</p>
@@ -5684,7 +5684,7 @@ window.BOOK_DATA = {
             <p>Economics must integrate ecology.</p>
             <p>Or we face collapse.</p>`,
 
-            `<h3>Page 11: Behavioral Economics</h3>
+                `<h3>Page 11: Behavioral Economics</h3>
             <p>Traditional economics assumes we are "Homo Economicus".</p>
             <p>Rational, utility-maximizing agents.</p>
             <p>Kahneman and Tversky proved this wrong.</p>
@@ -5701,7 +5701,7 @@ window.BOOK_DATA = {
             <p>And design better policies.</p>
             <p>We are predictably irrational.</p>`,
 
-            `<h3>Page 12: Game Theory</h3>
+                `<h3>Page 12: Game Theory</h3>
             <p>Game theory studies strategic interaction.</p>
             <p>The Prisoner's Dilemma is a classic example.</p>
             <p>Two rational individuals might not cooperate.</p>
@@ -5718,7 +5718,7 @@ window.BOOK_DATA = {
             <p>Governing everything from biology to poker.</p>
             <p>We are all players in the game.</p>`,
 
-            `<h3>Page 13: Development Economics</h3>
+                `<h3>Page 13: Development Economics</h3>
             <p>Why do some nations succeed and others fail?</p>
             <p>Institutions seem to be the key factor.</p>
             <p>Inclusive institutions encourage participation.</p>
@@ -5735,7 +5735,7 @@ window.BOOK_DATA = {
             <p>Education and healthcare are investments.</p>
             <p>Human capital is the greatest resource.</p>`,
 
-            `<h3>Page 14: The Welfare State</h3>
+                `<h3>Page 14: The Welfare State</h3>
             <p>The Scandinavian model combines capitalism and welfare.</p>
             <p>High taxes fund universal services.</p>
             <p>Free college, healthcare, and parental leave.</p>
@@ -5752,7 +5752,7 @@ window.BOOK_DATA = {
             <p>Aging populations strain pension systems.</p>
             <p>We need to rethink the social contract.</p>`,
 
-            `<h3>Page 15: Monopoly Power</h3>
+                `<h3>Page 15: Monopoly Power</h3>
             <p>Tech giants are the new Standard Oil.</p>
             <p>Network effects create natural monopolies.</p>
             <p>Google, Amazon, Facebook dominate their markets.</p>
@@ -5769,7 +5769,7 @@ window.BOOK_DATA = {
             <p>We pay with our attention and data.</p>
             <p>There is no free lunch (or search).</p>`,
 
-            `<h3>Page 16: Financial Crisis</h3>
+                `<h3>Page 16: Financial Crisis</h3>
             <p>The 2008 crisis revealed systemic fragility.</p>
             <p>Banks were "too big to fail".</p>
             <p>Moral hazard encouraged risky behavior.</p>
@@ -5786,7 +5786,7 @@ window.BOOK_DATA = {
             <p>Cybersecurity is a major financial risk.</p>
             <p>Stability breeds instability (Minsky Moment).</p>`,
 
-            `<h3>Page 17: UBI (Universal Basic Income)</h3>
+                `<h3>Page 17: UBI (Universal Basic Income)</h3>
             <p>UBI is a periodic cash payment to all.</p>
             <p>With no strings attached.</p>
             <p>It aims to eliminate poverty and bureaucracy.</p>
@@ -5803,7 +5803,7 @@ window.BOOK_DATA = {
             <p>It is an old idea gaining new life.</p>
             <p>As the robot age approaches.</p>`,
 
-            `<h3>Page 18: The Circular Economy</h3>
+                `<h3>Page 18: The Circular Economy</h3>
             <p>Our current economy is linear.</p>
             <p>Take, make, dispose.</p>
             <p>This generates massive waste.</p>
@@ -5820,7 +5820,7 @@ window.BOOK_DATA = {
             <p>Resource scarcity makes it inevitable.</p>
             <p>Standardization of parts is crucial.</p>`,
 
-            `<h3>Page 19: Attention Economy</h3>
+                `<h3>Page 19: Attention Economy</h3>
             <p>In an information-rich world, attention is scarce.</p>
             <p>Herbert Simon predicted this in 1971.</p>
             <p>Tech companies compete for eyeballs.</p>
@@ -5837,7 +5837,7 @@ window.BOOK_DATA = {
             <p>Regulation might treat attention as a resource.</p>
             <p>Protecting our cognitive liberty.</p>`,
 
-            `<h3>Page 20: Modern Monetary Theory (MMT)</h3>
+                `<h3>Page 20: Modern Monetary Theory (MMT)</h3>
             <p>MMT argues that currency issuers cannot go bankrupt.</p>
             <p>They can always print money to pay debts.</p>
             <p>The only constraint is inflation.</p>
@@ -5854,7 +5854,7 @@ window.BOOK_DATA = {
             <p>Mainstream economists remain skeptical.</p>
             <p>But the paradigm is shifting.</p>`,
 
-            `<h3>Page 21: Nudge Theory in Action</h3>
+                `<h3>Page 21: Nudge Theory in Action</h3>
             <p>Governments use behavioral insights units.</p>
             <p>To improve tax compliance.</p>
             <p>"Most people in your area paid on time".</p>
@@ -5871,7 +5871,7 @@ window.BOOK_DATA = {
             <p>It can empower or exploit.</p>
             <p>We must design for the human mind.</p>`,
 
-            `<h3>Page 22: The Experience Economy</h3>
+                `<h3>Page 22: The Experience Economy</h3>
             <p>We moved from commodities to goods to services.</p>
             <p>Now we are in the experience economy.</p>
             <p>Coffee beans cost cents.</p>
@@ -5888,7 +5888,7 @@ window.BOOK_DATA = {
             <p>Work is theater.</p>
             <p>Customer engagement is the goal.</p>`,
 
-            `<h3>Page 23: Intellectual Property</h3>
+                `<h3>Page 23: Intellectual Property</h3>
             <p>Ideas are non-rivalrous goods.</p>
             <p>My using an idea doesn't stop you.</p>
             <p>But IP laws create artificial scarcity.</p>
@@ -5905,7 +5905,7 @@ window.BOOK_DATA = {
             <p>We need a balance.</p>
             <p>Rewarding creators while sharing knowledge.</p>`,
 
-            `<h3>Page 24: Urban Economics</h3>
+                `<h3>Page 24: Urban Economics</h3>
             <p>Cities are engines of growth.</p>
             <p>Agglomeration effects increase productivity.</p>
             <p>Ideas spread faster in dense areas.</p>
@@ -5922,7 +5922,7 @@ window.BOOK_DATA = {
             <p>Remote work challenges the citymodel.</p>
             <p>Will we see an urban exodus?</p>`,
 
-            `<h3>Page 25: Public Goods</h3>
+                `<h3>Page 25: Public Goods</h3>
             <p>Public goods are non-excludable and non-rivalrous.</p>
             <p>National defense, clean air, street lights.</p>
             <p>Markets underprovide public goods.</p>
@@ -5939,7 +5939,7 @@ window.BOOK_DATA = {
             <p>We need new institutions.</p>
             <p>To manage the global commons.</p>`,
 
-            `<h3>Page 26: The Value of Data</h3>
+                `<h3>Page 26: The Value of Data</h3>
             <p>Data is the new oil.</p>
             <p>It powers AI and targeted ads.</p>
             <p>But who owns the data?</p>
@@ -5956,7 +5956,7 @@ window.BOOK_DATA = {
             <p>We work for the algorithms for free.</p>
             <p>Economic democratiaztion is needed.</p>`,
 
-            `<h3>Page 27: Healthcare Economics</h3>
+                `<h3>Page 27: Healthcare Economics</h3>
             <p>Healthcare is not a normal market.</p>
             <p>Information asymmetry is high.</p>
             <p>Doctors know more than patients.</p>
@@ -5973,7 +5973,7 @@ window.BOOK_DATA = {
             <p>Value-based care is the goal.</p>
             <p>Paying for health, not service volume.</p>`,
 
-            `<h3>Page 28: Education Signaling</h3>
+                `<h3>Page 28: Education Signaling</h3>
             <p>Is college about human capital?</p>
             <p>Learning skills that increase productivity.</p>
             <p>Or is it mostly signaling?</p>
@@ -5990,7 +5990,7 @@ window.BOOK_DATA = {
             <p>But rich kids get better prep.</p>
             <p>The playing field is not level.</p>`,
 
-            `<h3>Page 29: Creative Destruction</h3>
+                `<h3>Page 29: Creative Destruction</h3>
             <p>Schumpeter coined "creative destruction".</p>
             <p>New innovations destroy old industries.</p>
             <p> Netflix destroyed Blockbuster.</p>
@@ -6007,7 +6007,7 @@ window.BOOK_DATA = {
             <p>Stagnation isthe alternative.</p>
             <p>The only constant is disruption.</p>`,
 
-            `<h3>Page 30: Black Swans</h3>
+                `<h3>Page 30: Black Swans</h3>
             <p>Nassim Taleb defined Black Swans.</p>
             <p>Rare, high-impact, unpredictable events.</p>
             <p>The 2008 crash, 9/11, the pandemic.</p>
@@ -6024,7 +6024,7 @@ window.BOOK_DATA = {
             <p>Survival is more important than optimization.</p>
             <p>Expect the unexpected.</p>`,
 
-            `<h3>Page 31: The Happiness Economics</h3>
+                `<h3>Page 31: The Happiness Economics</h3>
             <p>GDP measures output, not well-being.</p>
             <p>It counts pollution cleanup and prisons.</p>
             <p>It ignores volunteer work and childcare.</p>
@@ -6041,7 +6041,7 @@ window.BOOK_DATA = {
             <p>The economy is for the people.</p>
             <p>Not people for the economy.</p>`,
 
-            `<h3>Page 32: Demographic Collapse</h3>
+                `<h3>Page 32: Demographic Collapse</h3>
             <p>Fertility rates are plummeting globally.</p>
             <p>Below replacement level in most developed nations.</p>
             <p>Japan, South Korea, Italy are shrinking.</p>
@@ -6058,7 +6058,7 @@ window.BOOK_DATA = {
             <p>Small can be beautiful.</p>
             <p>But the transition is unprecedented.</p>`,
 
-            `<h3>Page 33: The Trust Economy</h3>
+                `<h3>Page 33: The Trust Economy</h3>
             <p>Trust is the lubricant of exchange.</p>
             <p>Low-trust societies are poor.</p>
             <p>Transaction costs are high (lawyers, guards).</p>
@@ -6075,7 +6075,7 @@ window.BOOK_DATA = {
             <p>Our most valuable invisible asset.</p>
             <p>Without it, markets freeze.</p>`,
 
-            `<h3>Page 34: Conclusion</h3>
+                `<h3>Page 34: Conclusion</h3>
             <p>Economics is not a hard science.</p>
             <p>It is the study of human interaction.</p>
             <p>It changes as we change.</p>
@@ -6092,7 +6092,7 @@ window.BOOK_DATA = {
             <p>What do we value?</p>
             <p>That is the ultimate economic question.</p>`,
 
-            `<h3>Page 35: Glossary</h3>
+                `<h3>Page 35: Glossary</h3>
             <p><strong>Opportunity Cost:</strong> The value of the next best alternative.</p>
             <p><strong>Externality:</strong> A side effect on third parties.</p>
             <p><strong>Liquidity:</strong> How easily an asset becomes cash.</p>
@@ -6109,7 +6109,7 @@ window.BOOK_DATA = {
             <p><strong>GDP:</strong> Gross Domestic Product.</p>
             <p><strong>ROI:</strong> Return on Investment.</p>`,
 
-            `<h3>Page 36: Key Figures</h3>
+                `<h3>Page 36: Key Figures</h3>
             <p>Adam Smith - The Wealth of Nations.</p>
             <p>Karl Marx - Das Kapital.</p>
             <p>John Maynard Keynes - General Theory.</p>
@@ -6126,7 +6126,7 @@ window.BOOK_DATA = {
             <p>But think for yourself.</p>
             <p>Context changes everything.</p>`,
 
-            `<h3>Page 37: Further Reading</h3>
+                `<h3>Page 37: Further Reading</h3>
             <p>Don't stop here.</p>
             <p>Read "Freakonomics".</p>
             <p>Read "Nudge".</p>
@@ -6143,7 +6143,7 @@ window.BOOK_DATA = {
             <p>Think at the margin.</p>
             <p>Stay curious.</p>`,
 
-            `<h3>Page 38: Quiz</h3>
+                `<h3>Page 38: Quiz</h3>
             <p>1. What is the opportunity cost of reading this?</p>
             <p>2. Give an example of a public good.</p>
             <p>3. What happens if supply stays same and demand rises?</p>
@@ -6160,7 +6160,7 @@ window.BOOK_DATA = {
             <p>Good luck.</p>
             <p>End of Lesson.</p>`,
 
-            `<h3>Page 39: Notes</h3>
+                `<h3>Page 39: Notes</h3>
             <p>[Your economic observations]</p>
             <p>__________________________</p>
             <p>__________________________</p>
@@ -6176,7 +6176,7 @@ window.BOOK_DATA = {
             <p>Be a wise agent.</p>
             <p>Maximize your utility (happiness).</p>`,
 
-            `<h3>Page 40: Final Quote</h3>
+                `<h3>Page 40: Final Quote</h3>
             <p>"The purpose of studying economics is not to acquire a set of ready-made answers to economic questions, but to learn how to avoid being deceived by economists."</p>
             <p>- Joan Robinson</p>
             <p>Critical thinking is the ultimate currency.</p>
@@ -6189,7 +6189,7 @@ window.BOOK_DATA = {
             <p>Use it well.</p>
             <p>The End.</p>`
         ]
-    }, {
+}, {
         title: "The Evolution of Language",
         author: "Prof. Noam Chomsky X",
         level: "C1",
@@ -6197,7 +6197,7 @@ window.BOOK_DATA = {
         color: "#16a085",
         description: "Tracing the origins and future of human communication.",
         pages: [
-            `<h3>Page 1: The Origins</h3>
+                `<h3>Page 1: The Origins</h3>
             <p>How did language begin?</p>
             <p>It is one of the greatest mysteries of science.</p>
             <p>Some say it started as grunts and gestures.</p>
@@ -6214,7 +6214,7 @@ window.BOOK_DATA = {
             <p>Displacement is a unique feature of human language.</p>
             <p>We can talk about things that are not here.</p>`,
 
-            `<h3>Page 2: The Tower of Babel</h3>
+                `<h3>Page 2: The Tower of Babel</h3>
             <p>The Bible tells of a confused humanity.</p>
             <p>Scattered by different tongues.</p>
             <p>Historical linguistics traces language families.</p>
@@ -6231,7 +6231,7 @@ window.BOOK_DATA = {
             <p>The tree of languages keeps branching.</p>
             <p>But some branches are dying.</p>`,
 
-            `<h3>Page 3: Language Death</h3>
+                `<h3>Page 3: Language Death</h3>
             <p>A language dies every two weeks.</p>
             <p>When the last speaker passes away.</p>
             <p>Half of the world's 7,000 languages are endangered.</p>
@@ -6248,7 +6248,7 @@ window.BOOK_DATA = {
             <p>But a language needs speakers to live.</p>
             <p>It needs to be spoken to babies.</p>`,
 
-            `<h3>Page 4: The Written Word</h3>
+                `<h3>Page 4: The Written Word</h3>
             <p>Writing is a recent invention.</p>
             <p>Only 5,000 years old.</p>
             <p>It started as accounting in Sumeria.</p>
@@ -6265,7 +6265,7 @@ window.BOOK_DATA = {
             <p>We are becoming more informal.</p>
             <p>Emojis are a return to pictographs.</p>`,
 
-            `<h3>Page 5: Sociolinguistics</h3>
+                `<h3>Page 5: Sociolinguistics</h3>
             <p>How we speak reveals who we are.</p>
             <p>Our class, gender, and region.</p>
             <p>Labov's study of New York department stores.</p>
@@ -6282,7 +6282,7 @@ window.BOOK_DATA = {
             <p>Language is always political.</p>
             <p>Think of gendered pronouns.</p>`,
 
-            `<h3>Page 6: Psycholinguistics</h3>
+                `<h3>Page 6: Psycholinguistics</h3>
             <p>How does the brain process language?</p>
             <p>Broca's area handles production.</p>
             <p>Wernicke's area handles comprehension.</p>
@@ -6299,7 +6299,7 @@ window.BOOK_DATA = {
             <p>The weak version says it influences focus.</p>
             <p>Not that it determines reality.</p>`,
 
-            `<h3>Page 7: Computational Linguistics</h3>
+                `<h3>Page 7: Computational Linguistics</h3>
             <p>Teaching machines to understand us.</p>
             <p>NLP (Natural Language Processing).</p>
             <p>It started with simple rules.</p>
@@ -6316,7 +6316,7 @@ window.BOOK_DATA = {
             <p>But also raising ethical questions.</p>
             <p>About bias and misinformation.</p>`,
 
-            `<h3>Page 8: The future of English</h3>
+                `<h3>Page 8: The future of English</h3>
             <p>English is the global lingua franca.</p>
             <p>But it is fracturing.</p>
             <p>Into Hinglish, Singlish, Spanglish.</p>
@@ -6333,7 +6333,7 @@ window.BOOK_DATA = {
             <p>We speak our own language.</p>
             <p>And the earbud translates in real-time.</p>`,
 
-            `<h3>Page 9: Animal Communication</h3>
+                `<h3>Page 9: Animal Communication</h3>
             <p>Do animals have language?</p>
             <p>Vervet monkeys have alarm calls.</p>
             <p>Snake! Eagle! Leopard!</p>
@@ -6350,7 +6350,7 @@ window.BOOK_DATA = {
             <p>We are just beginning to understand them.</p>
             <p>AI helps decode their signals.</p>`,
 
-            `<h3>Page 10: Constructed Languages (Conlangs)</h3>
+                `<h3>Page 10: Constructed Languages (Conlangs)</h3>
             <p>Esperanto was designed for peace.</p>
             <p>Easy to learn, politically neutral.</p>
             <p>It failed to become global.</p>
@@ -6367,7 +6367,7 @@ window.BOOK_DATA = {
             <p>We can build better tools.</p>
             <p>Or at least, different ones.</p>`,
 
-            `<h3>Page 11: Semantics and Pragmatics</h3>
+                `<h3>Page 11: Semantics and Pragmatics</h3>
             <p>Semantics is literal meaning.</p>
             <p>"It is cold in here."</p>
             <p>Pragmatics is context meaning.</p>
@@ -6384,7 +6384,7 @@ window.BOOK_DATA = {
             <p>It is a lens.</p>
             <p>It frames how we see the world.</p>`,
 
-            `<h3>Page 12: Phonology</h3>
+                `<h3>Page 12: Phonology</h3>
             <p>The study of sound systems.</p>
             <p>Phonemes are the building blocks.</p>
             <p>"Cat" has three: c-a-t.</p>
@@ -6401,7 +6401,7 @@ window.BOOK_DATA = {
             <p>Babies can distinguish all phonemes.</p>
             <p>But they lose this ability as they specialize.</p>`,
 
-            `<h3>Page 13: Morphology</h3>
+                `<h3>Page 13: Morphology</h3>
             <p>How words are formed.</p>
             <p>Morphemes are the smallest units of meaning.</p>
             <p>"Unbreakable" has three: un-break-able.</p>
@@ -6418,7 +6418,7 @@ window.BOOK_DATA = {
             <p>Neologisms keep the language fresh.</p>
             <p>If a word is useful, it survives.</p>`,
 
-            `<h3>Page 14: Syntax</h3>
+                `<h3>Page 14: Syntax</h3>
             <p>The structure of sentences.</p>
             <p>SVO (Subject-Verb-Object) like English.</p>
             <p>"I eat apples."</p>
@@ -6435,7 +6435,7 @@ window.BOOK_DATA = {
             <p>Grammar is a finite set of rules.</p>
             <p>Creating infinite possibilities.</p>`,
 
-            `<h3>Page 15: The Origins of Writing</h3>
+                `<h3>Page 15: The Origins of Writing</h3>
             <p>Before writing, we had oral tradition.</p>
             <p>The Iliad was memorized and sung.</p>
             <p>Writing changed memory.</p>
@@ -6452,7 +6452,7 @@ window.BOOK_DATA = {
             <p>It mimics speech.</p>
             <p>It is "fingered speech".</p>`,
 
-            `<h3>Page 16: Evolution of Meaning</h3>
+                `<h3>Page 16: Evolution of Meaning</h3>
             <p>Words change meaning over time.</p>
             <p>"Nice" used to mean foolish.</p>
             <p>"Awful" used to mean full of awe.</p>
@@ -6469,7 +6469,7 @@ window.BOOK_DATA = {
             <p>Every word has a history.</p>
             <p>And a ghost of its past meaning.</p>`,
 
-            `<h3>Page 17: Dialects and Accents</h3>
+                `<h3>Page 17: Dialects and Accents</h3>
             <p>Everyone has an accent.</p>
             <p>Even "standard" speakers.</p>
             <p>Received Pronunciation (RP) in UK.</p>
@@ -6486,7 +6486,7 @@ window.BOOK_DATA = {
             <p>It creates a sense of home.</p>
             <p>Globalization flattens dialects.</p>`,
 
-            `<h3>Page 18: Slang and Jargon</h3>
+                `<h3>Page 18: Slang and Jargon</h3>
             <p>Slang is ephemeral.</p>
             <p>It belongs to the youth.</p>
             <p>"Cool", "Groovy", "Rad", "Lit".</p>
@@ -6503,7 +6503,7 @@ window.BOOK_DATA = {
             <p>Language is playful.</p>
             <p>It is a game we play together.</p>`,
 
-            `<h3>Page 19: Language Acquisition</h3>
+                `<h3>Page 19: Language Acquisition</h3>
             <p>How do babies do it?</p>
             <p>They are statistical geniuses.</p>
             <p>Tracking which sounds go together.</p>
@@ -6520,7 +6520,7 @@ window.BOOK_DATA = {
             <p>This shows they are using logic.</p>
             <p>Not just memorizing.</p>`,
 
-            `<h3>Page 20: Bilingualism</h3>
+                `<h3>Page 20: Bilingualism</h3>
             <p>Most of the world is bilingual.</p>
             <p>Monolingualism is the exception.</p>
             <p>Switching languages changes personality?</p>
@@ -6537,7 +6537,7 @@ window.BOOK_DATA = {
             <p>And delays brain aging.</p>
             <p>It is the ultimate brain gym.</p>`,
 
-            `<h3>Page 21: Sign Languages</h3>
+                `<h3>Page 21: Sign Languages</h3>
             <p>Sign languages are fully formed languages.</p>
             <p>They have grammar and syntax.</p>
             <p>American Sign Language (ASL) is not English.</p>
@@ -6554,7 +6554,7 @@ window.BOOK_DATA = {
             <p>Grammar happens in 3D space.</p>
             <p>It is a beautiful mode of expression.</p>`,
 
-            `<h3>Page 22: Names and Naming</h3>
+                `<h3>Page 22: Names and Naming</h3>
             <p>Names have power.</p>
             <p>In some cultures, they are secret.</p>
             <p>Brand names are carefully engineered.</p>
@@ -6571,7 +6571,7 @@ window.BOOK_DATA = {
             <p>Even without definition.</p>
             <p>Poets know this instinctively.</p>`,
 
-            `<h3>Page 23: Taboo Language</h3>
+                `<h3>Page 23: Taboo Language</h3>
             <p>Swearing is universal.</p>
             <p>It activates the emotional brain (amygdala).</p>
             <p>It relieves pain.</p>
@@ -6588,7 +6588,7 @@ window.BOOK_DATA = {
             <p>Harry Potter's "He-Who-Must-Not-Be-Named".</p>
             <p>Words are magic spells.</p>`,
 
-            `<h3>Page 24: Language and Gender</h3>
+                `<h3>Page 24: Language and Gender</h3>
             <p>Do men and women speak differently?</p>
             <p>Tannen's "Difference Model".</p>
             <p>Report talk (men) vs. Rapport talk (women).</p>
@@ -6605,7 +6605,7 @@ window.BOOK_DATA = {
             <p>They/Them pronouns.</p>
             <p>Language evolves to reflect society.</p>`,
 
-            `<h3>Page 25: Corpus Linguistics</h3>
+                `<h3>Page 25: Corpus Linguistics</h3>
             <p>Big Data meets linguistics.</p>
             <p>Analyzing millions of words.</p>
             <p>To see how language is actually used.</p>
@@ -6621,7 +6621,7 @@ window.BOOK_DATA = {
             <p>We are what we write.</p>
             <p>The archives tell the truth.</p>`,
 
-            `<h3>Page 26: Forensic Linguistics</h3>
+                `<h3>Page 26: Forensic Linguistics</h3>
             <p>Solving crimes with language.</p>
             <p>Identifying the author of a ransom note.</p>
             <p>Or a manifesto.</p>
@@ -6637,7 +6637,7 @@ window.BOOK_DATA = {
             <p>Words are evidence.</p>
             <p>Be careful what you write.</p>`,
 
-            `<h3>Page 27: The Internet of Languages</h3>
+                `<h3>Page 27: The Internet of Languages</h3>
             <p>Code is a language.</p>
             <p>Python, Java, C++.</p>
             <p>They have syntax and strict grammar.</p>
@@ -6654,7 +6654,7 @@ window.BOOK_DATA = {
             <p>Or evolving a new universal layer?</p>
             <p>Digital communication is hybrid.</p>`,
 
-            `<h3>Page 28: Logic and Language</h3>
+                `<h3>Page 28: Logic and Language</h3>
             <p>Philosophy of Language.</p>
             <p>Wittgenstein.</p>
             <p>"The limits of my language mean the limits of my world."</p>
@@ -6671,7 +6671,7 @@ window.BOOK_DATA = {
             <p>Language is messy because life is messy.</p>
             <p>Logic is a clean subset.</p>`,
 
-            `<h3>Page 29: Storytelling</h3>
+                `<h3>Page 29: Storytelling</h3>
             <p>We are the storytelling ape.</p>
             <p>Narrative structures our reality.</p>
             <p>The Hero's Journey (Campbell).</p>
@@ -6687,7 +6687,7 @@ window.BOOK_DATA = {
             <p>We live other lives.</p>
             <p>Language is the ultimate VR.</p>`,
 
-            `<h3>Page 30: Rhetoric and Persuasion</h3>
+                `<h3>Page 30: Rhetoric and Persuasion</h3>
             <p>The art of influence.</p>
             <p>Aristotle's Ethos, Pathos, Logos.</p>
             <p>Character, Emotion, Logic.</p>
@@ -6704,7 +6704,7 @@ window.BOOK_DATA = {
             <p>Analyze the rhetoric.</p>
             <p>Defend the truth.</p>`,
 
-            `<h3>Page 31: Language Evolution (Future)</h3>
+                `<h3>Page 31: Language Evolution (Future)</h3>
             <p>Will we speak via telepathy?</p>
             <p>Neuralink and Brain-Computer Interfaces.</p>
             <p>Direct thought transmission.</p>
@@ -6721,7 +6721,7 @@ window.BOOK_DATA = {
             <p>But evolution never stops.</p>
             <p>The word was the beginning.</p>`,
 
-            `<h3>Page 32: Translation</h3>
+                `<h3>Page 32: Translation</h3>
             <p>Traduttore, traditore.</p>
             <p>Translator, traitor.</p>
             <p>Something is always lost.</p>
@@ -6738,7 +6738,7 @@ window.BOOK_DATA = {
             <p>We share a global canon.</p>
             <p>Thanks to the traitors.</p>`,
 
-            `<h3>Page 33: Humour</h3>
+                `<h3>Page 33: Humour</h3>
             <p>Puns rely on ambiguity.</p>
             <p>"Time flies like an arrow."</p>
             <p>"Fruit flies like a banana."</p>
@@ -6755,7 +6755,7 @@ window.BOOK_DATA = {
             <p>A joke is a tiny revolution.</p>
             <p>Funny, isn't it?</p>`,
 
-            `<h3>Page 34: Silence</h3>
+                `<h3>Page 34: Silence</h3>
             <p>Silence is part of language.</p>
             <p>The pause says everything.</p>
             <p>In Japan, "Ma" is the negative space.</p>
@@ -6772,7 +6772,7 @@ window.BOOK_DATA = {
             <p>Beyond the edge, there is silence.</p>
             <p>And music.</p>`,
 
-            `<h3>Page 35: Metalinguistics</h3>
+                `<h3>Page 35: Metalinguistics</h3>
             <p>Talking about talking.</p>
             <p>This entire book is metalinguistic.</p>
             <p>We use language to analyze language.</p>
@@ -6789,7 +6789,7 @@ window.BOOK_DATA = {
             <p>It is the ghost in the machine.</p>
             <p>We are the word.</p>`,
 
-            `<h3>Page 36: Cognitive Linguistics</h3>
+                `<h3>Page 36: Cognitive Linguistics</h3>
             <p>Language is embodied.</p>
             <p>We understand "grasping an idea".</p>
             <p>Because we have hands.</p>
@@ -6806,7 +6806,7 @@ window.BOOK_DATA = {
             <p>Ideas are objects.</p>
             <p>Communication is sending.</p>`,
 
-            `<h3>Page 37: The Gift</h3>
+                `<h3>Page 37: The Gift</h3>
             <p>Language is a gift.</p>
             <p>Passed down for 200,000 years.</p>
             <p>From the first fire to the internet.</p>
@@ -6823,7 +6823,7 @@ window.BOOK_DATA = {
             <p>It is your superpower.</p>
             <p>Speak.</p>`,
 
-            `<h3>Page 38: Summary</h3>
+                `<h3>Page 38: Summary</h3>
             <p>We explored the origins.</p>
             <p>The structure (grammar).</p>
             <p>The variety (dialects).</p>
@@ -6840,7 +6840,7 @@ window.BOOK_DATA = {
             <p>Keep the conversation going.</p>
             <p>Listen as much as you speak.</p>`,
 
-            `<h3>Page 39: Notes</h3>
+                `<h3>Page 39: Notes</h3>
             <p>[What languages do you speak?]</p>
             <p>__________________________</p>
             <p>[What word is your favorite?]</p>
@@ -6856,7 +6856,7 @@ window.BOOK_DATA = {
             <p>Watch them grow.</p>
             <p>Your voice matters.</p>`,
 
-            `<h3>Page 40: The Last Word</h3>
+                `<h3>Page 40: The Last Word</h3>
             <p>This book is made of words.</p>
             <p>But the world is made of atoms.</p>
             <p>Words are just maps.</p>
@@ -6873,5 +6873,3292 @@ window.BOOK_DATA = {
             <p>Start.</p>
             <p>Fin.</p>`
         ]
-    }],
-};
+}];
+window.BOOK_DATA["A1"].push(
+        {
+                title: "The Sunny Garden",
+                author: "Emma Bloom",
+                level: "A1",
+                cover: "🌻",
+                color: "#2ecc71",
+                description: "A simple story about flowers and friends in a sunny garden.",
+                pages: [
+                        `<h3>Page 1: The Sun</h3>
+                <p>The sun is big and yellow.</p>
+                <p>It is very hot today.</p>
+                <p>I see the sun in the sky.</p>
+                <p>The sky is very blue.</p>
+                <p>I like the sun very much.</p>
+                <p>It makes me feel happy.</p>
+                <p>The garden is warm now.</p>`,
+                        `<h3>Page 2: Small Seeds</h3>
+                <p>I have some small seeds.</p>
+                <p>The seeds are brown.</p>
+                <p>I put them in the ground.</p>
+                <p>The ground is dark and wet.</p>
+                <p>I use my hands to work.</p>
+                <p>The seeds need water to grow.</p>
+                <p>I wait for the flowers.</p>`,
+                        `<h3>Page 3: Little Water</h3>
+                <p>I have a blue water can.</p>
+                <p>The water is cold and clear.</p>
+                <p>I give water to the seeds.</p>
+                <p>The seeds are thirsty today.</p>
+                <p>I water the garden every day.</p>
+                <p>Rain is also good for seeds.</p>
+                <p>Come on, little seeds, grow!</p>`,
+                        `<h3>Page 4: Green Leaves</h3>
+                <p>I see something green now.</p>
+                <p>They are very small leaves.</p>
+                <p>The leaves are light green.</p>
+                <p>They grow near the ground.</p>
+                <p>The garden is changing.</p>
+                <p>I am very excited today.</p>
+                <p>The plants are growing fast.</p>`,
+                        `<h3>Page 5: Red Flowers</h3>
+                <p>I see a red flower today.</p>
+                <p>It is a very pretty rose.</p>
+                <p>Beside it is a yellow rose.</p>
+                <p>The roses smell very sweet.</p>
+                <p>I like to smell the flowers.</p>
+                <p>The garden has many colors.</p>
+                <p>It looks like a rainbow.</p>`,
+                        `<h3>Page 6: Busy Bees</h3>
+                <p>I see a small yellow bee.</p>
+                <p>The bee goes to the flower.</p>
+                <p>It makes a soft buzz sound.</p>
+                <p>Bees like the sweet nectar.</p>
+                <p>Don't be afraid of the bee.</p>
+                <p>The bee is working hard.</p>
+                <p>It is a busy day today.</p>`,
+                        `<h3>Page 7: Pretty Butterfly</h3>
+                <p>A butterfly is in the air.</p>
+                <p>Its wings are blue and white.</p>
+                <p>It flies over the red roses.</p>
+                <p>The butterfly is very quiet.</p>
+                <p>It sits on a green leaf.</p>
+                <p>I want to take a photo.</p>
+                <p>The butterfly is very beautiful.</p>`,
+                        `<h3>Page 8: Tall Trees</h3>
+                <p>The garden has tall trees.</p>
+                <p>The trees have many leaves.</p>
+                <p>I sit under a big tree.</p>
+                <p>The shade is very cool here.</p>
+                <p>I read my favorite book.</p>
+                <p>Birds sing in the trees.</p>
+                <p>The garden is a good place.</p>`,
+                        `<h3>Page 9: Little Birds</h3>
+                <p>Two birds are in the tree.</p>
+                <p>The birds are small and brown.</p>
+                <p>They have a small nest there.</p>
+                <p>The birds sing a happy song.</p>
+                <p>I listen to the birds sing.</p>
+                <p>They are looking for food.</p>
+                <p>The birds are very busy.</p>`,
+                        `<h3>Page 10: My Friend</h3>
+                <p>My friend Tom comes today.</p>
+                <p>Tom likes my sunny garden.</p>
+                <p>He says the flowers are nice.</p>
+                <p>We walk together in the garden.</p>
+                <p>Tom has a red apple now.</p>
+                <p>We sit on the green grass.</p>
+                <p>The grass is soft and warm.</p>`,
+                        `<h3>Page 11: The Green Grass</h3>
+                <p>The grass is very green.</p>
+                <p>It grows all over the garden.</p>
+                <p>I like to walk on grass.</p>
+                <p>It feels good on my feet.</p>
+                <p>The grass is very short today.</p>
+                <p>I cut the grass last week.</p>
+                <p>A garden needs good grass.</p>`,
+                        `<h3>Page 12: Many Apples</h3>
+                <p>We have an old apple tree.</p>
+                <p>The apples are big and red.</p>
+                <p>I pick an apple from the tree.</p>
+                <p>The apple is sweet and cold.</p>
+                <p>Tom picks two more apples.</p>
+                <p>We have many apples now.</p>
+                <p>Eating apples is very healthy.</p>`,
+                        `<h3>Page 13: The Brown Fence</h3>
+                <p>The garden has a brown fence.</p>
+                <p>The fence is made of wood.</p>
+                <p>It goes around the flowers.</p>
+                <p>I paint the fence every year.</p>
+                <p>The gate is small and white.</p>
+                <p>I open the gate with a key.</p>
+                <p>Welcome to my sunny garden.</p>`,
+                        `<h3>Page 14: Summer Rain</h3>
+                <p>It is raining in the garden.</p>
+                <p>The rain is very quiet today.</p>
+                <p>The plants like the rain.</p>
+                <p>They drink the water slowly.</p>
+                <p>I stand inside the house.</p>
+                <p>I watch the rain through glass.</p>
+                <p>The garden is wet and clean.</p>`,
+                        `<h3>Page 15: After the Rain</h3>
+                <p>The rain stops very fast.</p>
+                <p>The sun comes out again.</p>
+                <p>I see a big, bright rainbow.</p>
+                <p>Flower petals have water drops.</p>
+                <p>The garden smells very fresh.</p>
+                <p>The birds start to sing again.</p>
+                <p>Everything is very bright now.</p>`,
+                        `<h3>Page 16: White Clouds</h3>
+                <p>I look up at the sky.</p>
+                <p>I see many white clouds.</p>
+                <p>The clouds look like sheep.</p>
+                <p>The sky is very high today.</p>
+                <p>The clouds move very slowly.</p>
+                <p>The wind is soft and warm.</p>
+                <p>It is a perfect summer day.</p>`,
+                        `<h3>Page 17: Gardening Tools</h3>
+                <p>I have many garden tools.</p>
+                <p>One spade is red and small.</p>
+                <p>One rake is long and grey.</p>
+                <p>I put my tools in a box.</p>
+                <p>I keep my tools very clean.</p>
+                <p>Tools help me work better.</p>
+                <p>I like to use my hands.</p>`,
+                        `<h3>Page 18: Big Pumpkin</h3>
+                <p>I have a big pumpkin plant.</p>
+                <p>The pumpkin is green and round.</p>
+                <p>It grows on the ground now.</p>
+                <p>It will be orange in autumn.</p>
+                <p>I give it plenty of water.</p>
+                <p>Pumpkins need a lot of space.</p>
+                <p>I want a very big pumpkin.</p>`,
+                        `<h3>Page 19: Purple Grapes</h3>
+                <p>We have a small grape vine.</p>
+                <p>The grapes are small and purple.</p>
+                <p>They grow in many clusters.</p>
+                <p>Grapes are very sweet today.</p>
+                <p>I wash the grapes in a bowl.</p>
+                <p>Tom and I eat the grapes.</p>
+                <p>Grapes are my favorite fruit.</p>`,
+                        `<h3>Page 20: Garden Bench</h3>
+                <p>There is a white garden bench.</p>
+                <p>It is near the rose bushes.</p>
+                <p>I sit on the bench often.</p>
+                <p>I watch the bees and birds.</p>
+                <p>The bench is old but strong.</p>
+                <p>It is a good place to talk.</p>
+                <p>Tom and I talk for hours.</p>`,
+                        `<h3>Page 21: Orange Carrots</h3>
+                <p>I grow carrots in the garden.</p>
+                <p>The carrots are under ground.</p>
+                <p>I see green leaves on top.</p>
+                <p>I pull one carrot out today.</p>
+                <p>The carrot is long and orange.</p>
+                <p>I wash the carrot very well.</p>
+                <p>Carrots are good for eyes.</p>`,
+                        `<h3>Page 22: Little Snail</h3>
+                <p>I see a very small snail.</p>
+                <p>The snail has a brown shell.</p>
+                <p>It moves very, very slowly.</p>
+                <p>It walks on a wet leaf.</p>
+                <p>Don't eat my flowers, snail!</p>
+                <p>The snail is quiet and shy.</p>
+                <p>I watch it move along slowly.</p>`,
+                        `<h3>Page 23: Water Hose</h3>
+                <p>The water hose is green.</p>
+                <p>It is very long and heavy.</p>
+                <p>I pull the hose to the trees.</p>
+                <p>Water comes out very fast.</p>
+                <p>I spray the leaves with water.</p>
+                <p>The trees look very happy.</p>
+                <p>The garden needs more water.</p>`,
+                        `<h3>Page 24: Afternoon Tea</h3>
+                <p>We drink tea in the garden.</p>
+                <p>The tea is hot and sweet.</p>
+                <p>We have cookies on a plate.</p>
+                <p>The cookies have chocolate chips.</p>
+                <p>We sit at a small table.</p>
+                <p>The afternoon is very quiet.</p>
+                <p>I like this time of day.</p>`,
+                        `<h3>Page 25: Flower Pot</h3>
+                <p>I have a red flower pot.</p>
+                <p>It sits on the window sill.</p>
+                <p>There is a blue flower inside.</p>
+                <p>The blue flower is very small.</p>
+                <p>I give it water every morning.</p>
+                <p>It needs the morning sun.</p>
+                <p>Flowers can grow in pots too.</p>`,
+                        `<h3>Page 26: Yellow Sunflowers</h3>
+                <p>I have three tall sunflowers.</p>
+                <p>They are taller than me now!</p>
+                <p>The sun is in their center.</p>
+                <p>They follow the sun all day.</p>
+                <p>Their seeds are good to eat.</p>
+                <p>The petals are bright yellow.</p>
+                <p>Sunflowers are very friendly.</p>`,
+                        `<h3>Page 27: Dirty Hands</h3>
+                <p>My hands are very dirty now.</p>
+                <p>I work in the dark ground.</p>
+                <p>Garden work is often messy.</p>
+                <p>But I don't mind the dirt.</p>
+                <p>I wash my hands in a bucket.</p>
+                <p>The water becomes very brown.</p>
+                <p>Clean hands, happy heart today.</p>`,
+                        `<h3>Page 28: Old Hat</h3>
+                <p>I wear a big straw hat.</p>
+                <p>The hat protects my face.</p>
+                <p>The sun is very strong today.</p>
+                <p>I don't want a hot head.</p>
+                <p>My hat is old and yellow.</p>
+                <p>It has a blue ribbon on it.</p>
+                <p>I love my gardening hat.</p>`,
+                        `<h3>Page 29: Garden Path</h3>
+                <p>The path is made of stones.</p>
+                <p>The stones are grey and flat.</p>
+                <p>I walk on the stone path.</p>
+                <p>It goes to the big tree.</p>
+                <p>I keep the path very clean.</p>
+                <p>No leaves or dirt on stones.</p>
+                <p>The garden looks very neat.</p>`,
+                        `<h3>Page 30: Singing Crickets</h3>
+                <p>Evening comes to the garden.</p>
+                <p>The sun goes down slowly.</p>
+                <p>I hear the crickets sing now.</p>
+                <p>Their song is very loud today.</p>
+                <p>The garden is getting dark.</p>
+                <p>I see the first white star.</p>
+                <p>It is time to go inside.</p>`,
+                        `<h3>Page 31: Good Night Garden</h3>
+                <p>I close the white garden gate.</p>
+                <p>The flowers are sleeping now.</p>
+                <p>The birds are quiet in trees.</p>
+                <p>The garden is very peaceful.</p>
+                <p>I say good night to roses.</p>
+                <p>I say good night to trees.</p>
+                <p>See you in the morning sun.</p>`,
+                        `<h3>Page 32: Monday Morning</h3>
+                <p>I wake up very early today.</p>
+                <p>The sun is just coming up.</p>
+                <p>The air is cold and fresh.</p>
+                <p>I go to the garden first.</p>
+                <p>I see dew on the leaves.</p>
+                <p>Dew drops look like diamonds.</p>
+                <p>It is a new week now.</p>`,
+                        `<h3>Page 33: Hungry Rabbits</h3>
+                <p>I see a small rabbit today.</p>
+                <p>The rabbit is grey and soft.</p>
+                <p>It has long, pink ears now.</p>
+                <p>It is eating my green grass.</p>
+                <p>The rabbit is very hungry.</p>
+                <p>It runs away very fast today.</p>
+                <p>Rabbits are very cute animals.</p>`,
+                        `<h3>Page 34: Garden Picnic</h3>
+                <p>We have a picnic today.</p>
+                <p>We put a blanket on grass.</p>
+                <p>The blanket is red and white.</p>
+                <p>We have sandwiches and juice.</p>
+                <p>The juice is cold orange juice.</p>
+                <p>Eating outside is very fun.</p>
+                <p>The garden is our dining room.</p>`,
+                        `<h3>Page 35: Red Ladybug</h3>
+                <p>A ladybug is on my finger.</p>
+                <p>It is very small and round.</p>
+                <p>It has seven black spots today.</p>
+                <p>The ladybug walks very slowly.</p>
+                <p>Then it flies into the air.</p>
+                <p>Ladybugs are good for gardens.</p>
+                <p>They eat the bad small bugs.</p>`,
+                        `<h3>Page 36: Watering Can</h3>
+                <p>My watering can is now empty.</p>
+                <p>I go to the tap for water.</p>
+                <p>I fill the blue can again.</p>
+                <p>It is heavy and cold today.</p>
+                <p>I water the small blue flowers.</p>
+                <p>They look much better now.</p>
+                <p>Water is life for the garden.</p>`,
+                        `<h3>Page 37: Big Scarecrow</h3>
+                <p>I made a garden scarecrow.</p>
+                <p>It wears my old blue shirt.</p>
+                <p>It has a big straw head.</p>
+                <p>Birds are afraid of him today.</p>
+                <p>He stands near the apple tree.</p>
+                <p>He is a very funny man.</p>
+                <p>He never says a word today.</p>`,
+                        `<h3>Page 38: Green Peppers</h3>
+                <p>I have three pepper plants.</p>
+                <p>The peppers are small and green.</p>
+                <p>They will be red very soon.</p>
+                <p>They grow under big leaves.</p>
+                <p>I pick one pepper today.</p>
+                <p>It is spicy and very fresh.</p>
+                <p>I put it in my salad.</p>`,
+                        `<h3>Page 39: Happy Worms</h3>
+                <p>I see a worm in the dirt.</p>
+                <p>The worm is long and pink.</p>
+                <p>It lives in the dark ground.</p>
+                <p>Worms help the plants grow.</p>
+                <p>They make the ground soft.</p>
+                <p>I put the worm back again.</p>
+                <p>The garden needs many worms.</p>`,
+                        `<h3>Page 40: Watering Day</h3>
+                <p>It is a very dry Tuesday.</p>
+                <p>I spend hours with the hose.</p>
+                <p>The sun is high and hot.</p>
+                <p>The flowers need a drink.</p>
+                <p>I water every single plant.</p>
+                <p>Now the garden feels cool.</p>
+                <p>I am tired but very happy.</p>`,
+                        `<h3>Page 41: Garden Colors</h3>
+                <p>I paint the garden today.</p>
+                <p>I use my box of paints.</p>
+                <p>I use red for the roses.</p>
+                <p>I use yellow for the sun.</p>
+                <p>I use green for the leaves.</p>
+                <p>I use blue for the sky.</p>
+                <p>My picture looks very nice.</p>`,
+                        `<h3>Page 42: Fresh Mint</h3>
+                <p>I smell something very fresh.</p>
+                <p>It is my green mint plant.</p>
+                <p>The leaves are small and soft.</p>
+                <p>I put mint in my cold tea.</p>
+                <p>It makes the tea taste good.</p>
+                <p>Mint grows very fast today.</p>
+                <p>The whole corner smells nice.</p>`,
+                        `<h3>Page 43: Busy Ants</h3>
+                <p>A line of ants is on path.</p>
+                <p>They are very small and black.</p>
+                <p>They carry small pieces of leaf.</p>
+                <p>The ants work very hard today.</p>
+                <p>They go to their small hole.</p>
+                <p>Their house is under the stones.</p>
+                <p>Ants never stop working today.</p>`,
+                        `<h3>Page 44: Garden Stories</h3>
+                <p>I tell a story to flowers.</p>
+                <p>The flowers listen to me talk.</p>
+                <p>The trees whisper in the wind.</p>
+                <p>The wind is my old friend.</p>
+                <p>We talk about the spring days.</p>
+                <p>We talk about the winter snow.</p>
+                <p>The garden has many stories.</p>`,
+                        `<h3>Page 45: New Seeds</h3>
+                <p>I buy more seeds today now.</p>
+                <p>They are seeds for white lilies.</p>
+                <p>I want a very white corner.</p>
+                <p>I dig a hole with my spade.</p>
+                <p>I put the lilies in ground.</p>
+                <p>I hope they grow very tall.</p>
+                <p>I love white flowers too.</p>`,
+                        `<h3>Page 46: Garden Song</h3>
+                <p>I sing a song in garden.</p>
+                <p>The tune is happy and bright.</p>
+                <p>I sing about the red roses.</p>
+                <p>I sing about the blue birds.</p>
+                <p>Tom sings the song with me.</p>
+                <p>Our voices are loud and clear.</p>
+                <p>The garden is full of music.</p>`,
+                        `<h3>Page 47: Garden Rest</h3>
+                <p>I take a nap on the grass.</p>
+                <p>The sun is warm on my face.</p>
+                <p>I dream of a giant flower.</p>
+                <p>The flower is big as house!</p>
+                <p>It is a very good dream.</p>
+                <p>I wake up feeling very fresh.</p>
+                <p>The garden is a dream place.</p>`,
+                        `<h3>Page 48: Garden Gift</h3>
+                <p>I make a bouquet for mother.</p>
+                <p>I pick roses and sunflowers.</p>
+                <p>I use a long green ribbon.</p>
+                <p>The bouquet is very pretty.</p>
+                <p>Mother loves the garden flowers.</p>
+                <p>She says thank you with smile.</p>
+                <p>A garden is a gift place.</p>`,
+                        `<h3>Page 49: Rainy Evening</h3>
+                <p>It is raining again tonight.</p>
+                <p>The garden is very dark now.</p>
+                <p>I hear rain on the roof.</p>
+                <p>I stay warm in my small bed.</p>
+                <p>I think of the thirsty seeds.</p>
+                <p>They are drinking the rain now.</p>
+                <p>Rain is good for everyone.</p>`,
+                        `<h3>Page 50: The End</h3>
+                <p>This is the end of story.</p>
+                <p>My garden is always here.</p>
+                <p>Every day is a sunny day.</p>
+                <p>Even when it is raining now.</p>
+                <p>I love my garden very much.</p>
+                <p>Thank you for reading today.</p>
+                <p>The garden is always open.</p>`
+                ]
+        },
+        {
+                title: "A Day at the Zoo",
+                author: "Liam Park",
+                level: "A1",
+                cover: "🦁",
+                color: "#f1c40f",
+                description: "A fun trip to see amazing animals at the big city zoo.",
+                pages: [
+                        `<h3>Page 1: The Big Gate</h3>
+                <p>Today we go to the big zoo.</p>
+                <p>The gate is tall and black.</p>
+                <p>Many people wait in a line.</p>
+                <p>Dad buys three tickets now.</p>
+                <p>I have a map of zoo.</p>
+                <p>The map has many colors.</p>
+                <p>I am ready for the animals.</p>`,
+                        `<h3>Page 2: The Tall Giraffe</h3>
+                <p>The first animal is very tall.</p>
+                <p>It is a yellow giraffe.</p>
+                <p>The giraffe has brown spots.</p>
+                <p>It has a very long neck.</p>
+                <p>It eats green leaves from tree.</p>
+                <p>Its tongue is long and dark.</p>
+                <p>Giraffes are very quiet animals.</p>`,
+                        `<h3>Page 3: The Big Elephant</h3>
+                <p>The elephant is very big now.</p>
+                <p>It has two large grey ears.</p>
+                <p>It has a long, strong trunk.</p>
+                <p>The elephant drinks water with trunk.</p>
+                <p>It sprays water on its back.</p>
+                <p>The baby elephant is very cute.</p>
+                <p>They walk together slowly today.</p>`,
+                        `<h3>Page 4: The Brave Lion</h3>
+                <p>The lion is the king here.</p>
+                <p>He has a big, brown mane.</p>
+                <p>He sits on a large rock.</p>
+                <p>He looks at the people now.</p>
+                <p>The lion makes a loud roar.</p>
+                <p>I am a little bit scared.</p>
+                <p>But the fence is very strong.</p>`,
+                        `<h3>Page 5: Funny Monkeys</h3>
+                <p>The monkeys are very funny today.</p>
+                <p>They jump from tree to tree.</p>
+                <p>They have long, brown tails.</p>
+                <p>One monkey has a yellow banana.</p>
+                <p>It eats the banana very fast.</p>
+                <p>They make a lot of noise.</p>
+                <p>Monkeys like to play together.</p>`,
+                        `<h3>Page 6: Striped Zebras</h3>
+                <p>The zebras have black stripes.</p>
+                <p>They have white bodies today.</p>
+                <p>They look like small horses.</p>
+                <p>Three zebras run on grass.</p>
+                <p>They eat the dry hay now.</p>
+                <p>Every zebra is very unique.</p>
+                <p>I like their stripes very much.</p>`,
+                        `<h3>Page 7: Pretty Flamingos</h3>
+                <p>The flamingos are bright pink.</p>
+                <p>They stand on one long leg.</p>
+                <p>They are near the blue water.</p>
+                <p>Their feathers are very soft.</p>
+                <p>They have long, curved necks.</p>
+                <p>They look like pink flowers.</p>
+                <p>Flamingos are very pretty birds.</p>`,
+                        `<h3>Page 8: Cold Penguins</h3>
+                <p>The penguins are in the cold.</p>
+                <p>They have black and white coats.</p>
+                <p>They walk with a funny wobble.</p>
+                <p>One penguin jumps into water.</p>
+                <p>It swims very fast today.</p>
+                <p>They eat small silver fish.</p>
+                <p>Penguins love the ice and snow.</p>`,
+                        `<h3>Page 9: Green Crocodiles</h3>
+                <p>The crocodile is in the sun.</p>
+                <p>It is long and very green.</p>
+                <p>It has many sharp teeth.</p>
+                <p>It stays very still today.</p>
+                <p>It looks like a big log.</p>
+                <p>The water is very dark here.</p>
+                <p>Don't go near the water now.</p>`,
+                        `<h3>Page 10: Orange Tigers</h3>
+                <p>The tigers have orange fur.</p>
+                <p>They have many black stripes.</p>
+                <p>The tiger walks very quietly.</p>
+                <p>It has big, powerful paws.</p>
+                <p>I see its bright green eyes.</p>
+                <p>The tiger is a beautiful cat.</p>
+                <p>It sleeps under a big bush.</p>`,
+                        `<h3>Page 11: The Zoo Train</h3>
+                <p>We ride the small zoo train.</p>
+                <p>The train is blue and red.</p>
+                <p>It makes a loud whistle sound.</p>
+                <p>We see the bears from train.</p>
+                <p>The train moves very slowly.</p>
+                <p>I wave my hand to people.</p>
+                <p>The train ride is very fun.</p>`,
+                        `<h3>Page 12: Brown Bears</h3>
+                <p>The bears are very big now.</p>
+                <p>They have thick, brown fur.</p>
+                <p>They like to eat sweet honey.</p>
+                <p>One bear is climbing a tree.</p>
+                <p>Another bear is sleeping today.</p>
+                <p>Bears have very strong noses.</p>
+                <p>They can smell food far away.</p>`,
+                        `<h3>Page 13: Tall Ostrich</h3>
+                <p>The ostrich is a big bird.</p>
+                <p>It cannot fly in the air.</p>
+                <p>But it can run very fast.</p>
+                <p>It has very long, thin legs.</p>
+                <p>It has a small, round head.</p>
+                <p>Its eyes are very large now.</p>
+                <p>Ostriches are very fast birds.</p>`,
+                        `<h3>Page 14: Friendly Seals</h3>
+                <p>The seals are in the pool.</p>
+                <p>They are grey and very smooth.</p>
+                <p>They make a loud barking sound.</p>
+                <p>The keeper gives them fish.</p>
+                <p>The seals clap their flippers.</p>
+                <p>They jump through a red hoop.</p>
+                <p>Seals are very smart animals.</p>`,
+                        `<h3>Page 15: Blue Parrots</h3>
+                <p>The parrots are in a cage.</p>
+                <p>They have many bright colors.</p>
+                <p>I see blue, red, yellow birds.</p>
+                <p>The parrot says "Hello" today.</p>
+                <p>It can talk like a person.</p>
+                <p>It has a very sharp beak.</p>
+                <p>Parrots are very noisy birds.</p>`,
+                        `<h3>Page 16: Ice Cream Break</h3>
+                <p>It is time for a break.</p>
+                <p>Dad buys me an ice cream.</p>
+                <p>The ice cream is chocolate.</p>
+                <p>It is cold and very sweet.</p>
+                <p>We sit on a wooden bench.</p>
+                <p>The sun is very hot now.</p>
+                <p>Ice cream is good for heat.</p>`,
+                        `<h3>Page 17: Slow Turtles</h3>
+                <p>The turtles are near the pond.</p>
+                <p>They have hard, green shells.</p>
+                <p>They move very slowly today.</p>
+                <p>One turtle is in the water.</p>
+                <p>It has a very small tail.</p>
+                <p>Turtles can live many years.</p>
+                <p>They are very calm animals.</p>`,
+                        ` monkeys as we walk past they jump again.<h3>Page 18: Big Snakes</h3>
+                <p>The snakes are behind glass.</p>
+                <p>They are long and very thin.</p>
+                <p>Some snakes are yellow and green.</p>
+                <p>The snakes have no legs today.</p>
+                <p>They move in a wave shape.</p>
+                <p>One snake is in a tree.</p>
+                <p>I am glad for the glass.</p>`,
+                        `<h3>Page 19: Grey Kangaroos</h3>
+                <p>The kangaroos are from Australia.</p>
+                <p>They have very strong back legs.</p>
+                <p>They jump across the grass.</p>
+                <p>The mother has a small baby.</p>
+                <p>The baby is in her pouch.</p>
+                <p>It is very safe in there.</p>
+                <p>Kangaroos can jump very high.</p>`,
+                        `<h3>Page 20: White Rhinoceros</h3>
+                <p>The rhino is very, very heavy.</p>
+                <p>It has a big, sharp horn.</p>
+                <p>Its skin is grey and thick.</p>
+                <p>It eats grass and small bushes.</p>
+                <p>The rhino is a strong animal.</p>
+                <p>It walks slowly in the mud.</p>
+                <p>Don't be in its way today.</p>`,
+                        `<h3>Page 21: Spotted Hippos</h3>
+                <p>The hippos are in the water.</p>
+                <p>They are very large and pink.</p>
+                <p>They stay under the water now.</p>
+                <p>I see only their small ears.</p>
+                <p>A hippo opens its big mouth.</p>
+                <p>It has many large teeth today.</p>
+                <p>Hippos love the water very much.</p>`,
+                        `<h3>Page 22: Tiny Insects</h3>
+                <p>The zoo has many small bugs.</p>
+                <p>I see a big green grasshopper.</p>
+                <p>It can jump very far today.</p>
+                <p>There are many busy ants.</p>
+                <p>Small bugs are important too.</p>
+                <p>The butterfly house is near here.</p>
+                <p>Let's go see the butterflies.</p>`,
+                        `<h3>Page 23: The Butterfly House</h3>
+                <p>This house is very warm now.</p>
+                <p>Many butterflies fly in air.</p>
+                <p>They are like flying flowers.</p>
+                <p>One butterfly sits on my arm.</p>
+                <p>It is very light and quiet.</p>
+                <p>I don't move my arm today.</p>
+                <p>It stays for a long time.</p>`,
+                        `<h3>Page 24: Grey Wolves</h3>
+                <p>The wolves look like big dogs.</p>
+                <p>They have grey and white fur.</p>
+                <p>They live in a large group.</p>
+                <p>The wolves howl at the moon.</p>
+                <p>They have very sharp teeth now.</p>
+                <p>They run together in the woods.</p>
+                <p>Wolves are very smart and brave.</p>`,
+                        `<h3>Page 25: Colorful Peacocks</h3>
+                <p>The peacock has a long tail.</p>
+                <p>The tail has many "eyes".</p>
+                <p>The eyes are blue and green.</p>
+                <p>The peacock opens its big tail.</p>
+                <p>It looks like a big fan.</p>
+                <p>It is a very proud bird.</p>
+                <p>Peacocks walk around the paths.</p>`,
+                        `<h3>Page 26: Camels in Sand</h3>
+                <p>The camels are from the desert.</p>
+                <p>They have two big humps now.</p>
+                <p>The humps are for storing food.</p>
+                <p>They have long, brown eyelashes.</p>
+                <p>The sand is very hot today.</p>
+                <p>Camels can walk for many days.</p>
+                <p>They don't need water often.</p>`,
+                        `<h3>Page 27: Polar Bears</h3>
+                <p>The polar bears are white.</p>
+                <p>They live in the cold Arctic.</p>
+                <p>They love the ice and water.</p>
+                <p>The polar bear is a swimmer.</p>
+                <p>It has very thick, white fur.</p>
+                <p>It eats fish and soft seals.</p>
+                <p>The zoo has a cold pool.</p>`,
+                        `<h3>Page 28: Small Meerkats</h3>
+                <p>The meerkats are very small.</p>
+                <p>They stand on their back legs.</p>
+                <p>They look all around for danger.</p>
+                <p>One meerkat is the lookout now.</p>
+                <p>They live in holes in ground.</p>
+                <p>They are very fast and busy.</p>
+                <p>Meerkats are very social animals.</p>`,
+                        `<h3>Page 29: Beautiful Swans</h3>
+                <p>The swans are on a lake.</p>
+                <p>They are very white and clean.</p>
+                <p>They have long, elegant necks.</p>
+                <p>They swim very gracefully today.</p>
+                <p>I see two small grey babies.</p>
+                <p>Swans stay with their family.</p>
+                <p>The lake is very quiet now.</p>`,
+                        `<h3>Page 30: Zoo Gift Shop</h3>
+                <p>We go to the gift shop.</p>
+                <p>The shop has many toy animals.</p>
+                <p>I see a small lion toy.</p>
+                <p>Mom buys me a zebra hat.</p>
+                <p>The hat has black stripes today.</p>
+                <p>I have a zoo book too.</p>
+                <p>The shop is very busy now.</p>`,
+                        `<h3>Page 31: Lunch Time</h3>
+                <p>We are very hungry now.</p>
+                <p>We go to the zoo cafe.</p>
+                <p>I have a chicken sandwich.</p>
+                <p>Dad has a big hot soup.</p>
+                <p>We drink cold apple juice.</p>
+                <p>The cafe is very noisy today.</p>
+                <p>We rest our tired feet now.</p>`,
+                        `<h3>Page 32: Panda Bears</h3>
+                <p>The pandas are black and white.</p>
+                <p>They are from far away China.</p>
+                <p>Pandas love to eat green bamboo.</p>
+                <p>They sit and eat all day.</p>
+                <p>One panda is eating a leaf.</p>
+                <p>They look like big teddy bears.</p>
+                <p>Pandas are very rare animals.</p>`,
+                        `<h3>Page 33: Sea Lions</h3>
+                <p>Sea lions are in a show.</p>
+                <p>They balance a ball on nose.</p>
+                <p>The crowd claps their hands now.</p>
+                <p>The animals get a small fish.</p>
+                <p>They dive into the deep water.</p>
+                <p>They are very fast swimmers today.</p>
+                <p>The sea lion show is great.</p>`,
+                        `<h3>Page 34: Golden Eagles</h3>
+                <p>The eagle is a powerful bird.</p>
+                <p>It has very big, brown wings.</p>
+                <p>It can fly very high now.</p>
+                <p>It has sharp, yellow claws today.</p>
+                <p>The eagle looks for small food.</p>
+                <p>It sits on a tall branch.</p>
+                <p>Eagles are majestic to see.</p>`,
+                        `<h3>Page 35: The Petting Zoo</h3>
+                <p>This part is for small kids.</p>
+                <p>I can touch the animals here.</p>
+                <p>There is a soft, white goat.</p>
+                <p>I give the goat some hay.</p>
+                <p>The goat's hair is very dry.</p>
+                <p>There are small, yellow chicks today.</p>
+                <p>Petting animals is very nice.</p>`,
+                        `<h3>Page 36: Pink Pigs</h3>
+                <p>The pigs are in the mud.</p>
+                <p>The mud is cold and wet.</p>
+                <p>Pigs like mud for their skin.</p>
+                <p>They have small, curly tails today.</p>
+                <p>One pig makes an "oink" sound.</p>
+                <p>They have big, flat pink noses.</p>
+                <p>Pigs are very happy in mud.</p>`,
+                        `<h3>Page 37: Brave Cheetah</h3>
+                <p>The cheetah is the fastest now.</p>
+                <p>It has many small black dots.</p>
+                <p>It can run like a car.</p>
+                <p>It has a long, thin body.</p>
+                <p>It looks at the far grass.</p>
+                <p>The cheetah is a master hunter.</p>
+                <p>It is very exciting to watch.</p>`,
+                        `<h3>Page 38: Big Chimpanzees</h3>
+                <p>The chimps are very, very smart.</p>
+                <p>They use tools to get food.</p>
+                <p>One uses a stick for ants.</p>
+                <p>They talk with their hands today.</p>
+                <p>They live in a big family.</p>
+                <p>Chimps like to groom each other.</p>
+                <p>They are our close animal cousins.</p>`,
+                        `<h3>Page 39: Spotted Leopards</h3>
+                <p>The leopard is in the trees.</p>
+                <p>It is very hard to see.</p>
+                <p>Its spots are like small roses.</p>
+                <p>It is a very strong climber.</p>
+                <p>It sleeps on a high branch.</p>
+                <p>The leopard is a beautiful cat.</p>
+                <p>I see its long, spotted tail.</p>`,
+                        `<h3>Page 40: Slow Sloths</h3>
+                <p>The sloth is in a tree.</p>
+                <p>It hangs with its long claws.</p>
+                <p>It does not move for hours.</p>
+                <p>The sloth eats one small leaf.</p>
+                <p>It is the slowest animal today.</p>
+                <p>Everything it does is very slow.</p>
+                <p>Sloths like to sleep all day.</p>`,
+                        `<h3>Page 41: Red Foxes</h3>
+                <p>The foxes have orange-red fur.</p>
+                <p>They have a big, bushy tail.</p>
+                <p>The tail has a white tip.</p>
+                <p>Foxes have very smart, bright eyes.</p>
+                <p>They hide in the green bushes.</p>
+                <p>I hear a small "yip" sound.</p>
+                <p>Foxes are very clever animals.</p>`,
+                        `<h3>Page 42: Large Buffalos</h3>
+                <p>The buffalos are big and dark.</p>
+                <p>They have two large, curved horns.</p>
+                <p>They walk in a large group.</p>
+                <p>They eat the dry, yellow grass.</p>
+                <p>A buffalo is very, very strong.</p>
+                <p>They live on the open plains.</p>
+                <p>They are powerful and quiet today.</p>`,
+                        `<h3>Page 43: Nocturnal Animals</h3>
+                <p>Some animals wake up at night.</p>
+                <p>The owls have very big eyes.</p>
+                <p>They can see in the dark.</p>
+                <p>The bats fly in the air.</p>
+                <p>They sleep during the sunny day.</p>
+                <p>The night zoo is very quiet.</p>
+                <p>These animals are very special.</p>`,
+                        `<h3>Page 44: The Zoo Doctor</h3>
+                <p>The zoo has a special vet.</p>
+                <p>The vet helps sick animals today.</p>
+                <p>She gives medicine to a bear.</p>
+                <p>She checks the giraffe's long neck.</p>
+                <p>The vet loves all the animals.</p>
+                <p>The animals feel better very soon.</p>
+                <p>Being a zoo vet is hard.</p>`,
+                        `<h3>Page 45: Zoo Keeper</h3>
+                <p>The keepers feed the animals now.</p>
+                <p>They carry big buckets of food.</p>
+                <p>One keeper cleans the lion's rock.</p>
+                <p>They work from morning to night.</p>
+                <p>They know every animal's name today.</p>
+                <p>Keepers keep the zoo very safe.</p>
+                <p>They are the animals' best friends.</p>`,
+                        `<h3>Page 46: Evening Light</h3>
+                <p>The sun is going down now.</p>
+                <p>The zoo is getting very quiet.</p>
+                <p>The birds go back to trees.</p>
+                <p>The animals go to their houses.</p>
+                <p>The shadows are very long today.</p>
+                <p>It is time for us to go.</p>
+                <p>What a long, happy day today!</p>`,
+                        `<h3>Page 47: My Favorite Animal</h3>
+                <p>Dad asks me a question now.</p>
+                <p>"What was your favorite animal today?"</p>
+                <p>I think for a long time.</p>
+                <p>I like the tall, yellow giraffe.</p>
+                <p>I like the funny, jumping monkeys.</p>
+                <p>But the baby elephant is best.</p>
+                <p>It was a very nice trip.</p>`,
+                        `<h3>Page 48: Going Home</h3>
+                <p>We walk back to the gate.</p>
+                <p>I am very tired, but happy.</p>
+                <p>We get into our blue car.</p>
+                <p>I look at my zoo map.</p>
+                <p>I see all the animals again.</p>
+                <p>Tomorrow I will go to school.</p>
+                <p>I will tell my friends today.</p>`,
+                        `<h3>Page 49: Sweet Dreams</h3>
+                <p>I am in my warm bed.</p>
+                <p>I think of the brave lions.</p>
+                <p>I think of the pink flamingos.</p>
+                <p>The zoo is sleeping very soundly.</p>
+                <p>Good night, busy, noisy monkeys today.</p>
+                <p>Good night, big, strong grey elephants.</p>
+                <p>I will visit you again soon.</p>`,
+                        `<h3>Page 50: The End</h3>
+                <p>This is the final page now.</p>
+                <p>The zoo is a wonderful place.</p>
+                <p>Animals need our love and care.</p>
+                <p>We must protect the wild world.</p>
+                <p>I hope you liked the trip.</p>
+                <p>Thank you for coming along today.</p>
+                <p>The zoo adventure ends here now.</p>`
+                ]
+        }
+);
+window.BOOK_DATA["A2"].push(
+        {
+                title: "The Lost Compass",
+                author: "Sarah North",
+                level: "A2",
+                cover: "🧭",
+                color: "#e67e22",
+                description: "Follow young Leo as he searches for a magical compass in the mountains.",
+                pages: [
+                        `<h3>Page 1: The Old Map</h3>
+                <p>Leo lived in a small, quiet village.</p>
+                <p>One day, he found an old map.</p>
+                <p>The map was hidden in his attic.</p>
+                <p>It showed a mountain called Peak Blue.</p>
+                <p>There was a red X on top.</p>
+                <p>"I must go there," Leo thought tonight.</p>
+                <p>He packed his heavy green backpack now.</p>`,
+                        `<h3>Page 2: Packing Essentials</h3>
+                <p>Leo needed many things for his trip.</p>
+                <p>He packed a flashlight and some batteries.</p>
+                <p>He also took a warm, thick sweater.</p>
+                <p>The mountains are very cold at night.</p>
+                <p>He did not forget a water bottle.</p>
+                <p>Finally, he took some cheese and bread.</p>
+                <p>He was ready for his big adventure.</p>`,
+                        `<h3>Page 3: The Forest Path</h3>
+                <p>The path started near the dark forest.</p>
+                <p>The trees were very tall and green.</p>
+                <p>Leo heard the birds singing above him.</p>
+                <p>The air smelled like pine and rain.</p>
+                <p>He walked for three hours very fast.</p>
+                <p>The ground was covered with dry leaves.</p>
+                <p>He felt happy and strong today now.</p>`,
+                        `<h3>Page 4: A Strange Sound</h3>
+                <p>Suddenly, Leo heard a strange loud noise.</p>
+                <p>It came from behind a large bush.</p>
+                <p>Leo stopped and looked around very carefully.</p>
+                <p>Was it a bear or a deer?</p>
+                <p>His heart started to beat very fast.</p>
+                <p>He held his walking stick very tightly.</p>
+                <p>He waited in the silence for something.</p>`,
+                        `<h3>Page 5: A Small Squirrel</h3>
+                <p>A small squirrel jumped from the bush.</p>
+                <p>It had a big nut in mouth.</p>
+                <p>Leo laughed because he was not scared.</p>
+                <p>The squirrel looked at him with curiosity.</p>
+                <p>Then it ran up a tall tree.</p>
+                <p>Leo continued his long walk up mountain.</p>
+                <p>The sun was high in the sky.</p>`,
+                        `<h3>Page 6: The Silver River</h3>
+                <p>Leo reached a beautiful, silver mountain river.</p>
+                <p>The water was very cold and clear.</p>
+                <p>He sat on a flat, wet stone.</p>
+                <p>He washed his face with the water.</p>
+                <p>He saw small fish swimming very fast.</p>
+                <p>The river made a loud, rushing sound.</p>
+                <p>It was a very peaceful place today.</p>`,
+                        `<h3>Page 7: Crossing the Bridge</h3>
+                <p>There was an old, wooden bridge nearby.</p>
+                <p>The bridge looked a bit dangerous now.</p>
+                <p>Leo walked across it very slowly today.</p>
+                <p>The wood made a creaking sound below.</p>
+                <p>He looked down at the deep river.</p>
+                <p>He reached the other side safely now.</p>
+                <p>He breathed a sigh of great relief.</p>`,
+                        `<h3>Page 8: The Steep Hill</h3>
+                <p>The path became very steep and rocky.</p>
+                <p>Leo had to use both his hands.</p>
+                <p>He climbed over some very large rocks.</p>
+                <p>His legs started to feel very tired.</p>
+                <p>But he did not want to stop.</p>
+                <p>He could see the mountain peak now.</p>
+                <p>It was covered with white, thin clouds.</p>`,
+                        `<h3>Page 9: The Hidden Cave</h3>
+                <p>Leo found a hidden cave near path.</p>
+                <p>The entrance was covered with dark vines.</p>
+                <p>He used his flashlight to see inside.</p>
+                <p>The cave was very dark and cool.</p>
+                <p>He saw strange shapes on the walls.</p>
+                <p>Perhaps they were ancient drawings or marks.</p>
+                <p>He decided to explore the cave tonight.</p>`,
+                        `<h3>Page 10: Ancient Symbols</h3>
+                <p>The walls had symbols of the sun.</p>
+                <p>Leo followed the marks deeper into cave.</p>
+                <p>He found an old, iron box there.</p>
+                <p>The box was locked with a key.</p>
+                <p>He tried to open it with stick.</p>
+                <p>But the box was too strong tonight.</p>
+                <p>He put the box in his backpack.</p>`,
+                        `<h3>Page 11: Back to Light</h3>
+                <p>Leo walked out of the dark cave.</p>
+                <p>The bright sun hurt his tired eyes.</p>
+                <p>The afternoon was very warm and quiet.</p>
+                <p>He found a spot to rest now.</p>
+                <p>He ate his bread and some cheese.</p>
+                <p>He thought about the mysterious iron box.</p>
+                <p>What was inside the heavy old box?</p>`,
+                        `<h3>Page 12: A Helpful Bird</h3>
+                <p>A large hawk flew over Leo now.</p>
+                <p>It circled the mountain peak three times.</p>
+                <p>Leo followed the bird with his eyes.</p>
+                <p>The hawk seemed to show the way.</p>
+                <p>Leo stood up and started walking again.</p>
+                <p>The wind was blowing from the north.</p>
+                <p>The peak was getting much closer today.</p>`,
+                        `<h3>Page 13: The Rocky Path</h3>
+                <p>The stones under his feet were sharp.</p>
+                <p>Leo had to be very, very careful.</p>
+                <p>One wrong step could be very bad.</p>
+                <p>He watched every movement of his boots.</p>
+                <p>The air was thinner and very cold.</p>
+                <p>He put on his thick, green sweater.</p>
+                <p>The view was becoming truly amazing now.</p>`,
+                        `<h3>Page 14: Evening Gold</h3>
+                <p>The sun started to go down slowly.</p>
+                <p>The sky turned orange and bright gold.</p>
+                <p>Leo looked for a place for camp.</p>
+                <p>He found a flat area with grass.</p>
+                <p>He put his sleeping bag on ground.</p>
+                <p>The moon appeared in the east sky.</p>
+                <p>The stars were very bright and clear.</p>`,
+                        `<h3>Page 15: Campfire Stories</h3>
+                <p>Leo made a small, warm fire tonight.</p>
+                <p>The wood crackled in the cold air.</p>
+                <p>He sat near the flames for heat.</p>
+                <p>He felt a little bit lonely today.</p>
+                <p>He missed his family in the village.</p>
+                <p>But he was proud of his journey.</p>
+                <p>He fell asleep under the silver stars.</p>`,
+                        `<h3>Page 16: Morning Mist</h3>
+                <p>Leo woke up early the next day.</p>
+                <p>A white mist covered the whole mountain.</p>
+                <p>He could not see the path clearly.</p>
+                <p>He waited for the sun to rise.</p>
+                <p>The mist started to disappear very slowly.</p>
+                <p>The mountain was quiet and very still.</p>
+                <p>Leo packed his bag for the final.</p>`,
+                        `<h3>Page 17: The Last Climb</h3>
+                <p>The top of the mountain was near.</p>
+                <p>Leo had to climb a big wall.</p>
+                <p>The rocks were cold and very hard.</p>
+                <p>He pulled himself up with great effort.</p>
+                <p>His hands were a little bit sore.</p>
+                <p>Finally, he reached the very top today.</p>
+                <p>He stood on the peak of Blue.</p>`,
+                        `<h3>Page 18: The View from Top</h3>
+                <p>Leo looked down at the whole world.</p>
+                <p>He could see his village far away.</p>
+                <p>The forest looked like a green carpet.</p>
+                <p>The river was a thin silver line.</p>
+                <p>He felt like a giant on mountain.</p>
+                <p>The wind was very strong up here.</p>
+                <p>It was a moment he remembered forever.</p>`,
+                        `<h3>Page 19: Finding the Spot</h3>
+                <p>Leo looked at his old, yellow map.</p>
+                <p>The red X was near a rock.</p>
+                <p>He searched behind a large, grey stone.</p>
+                <p>He saw a small, blue light there.</p>
+                <p>Something was shining in the dry dirt.</p>
+                <p>Leo used his hands to dig now.</p>
+                <p>His heart was beating very fast today.</p>`,
+                        `<h3>Page 20: The Golden Compass</h3>
+                <p>He found it in the cold ground.</p>
+                <p>It was a compass made of gold.</p>
+                <p>The needle was moving in many circles.</p>
+                <p>It did not point to the north.</p>
+                <p>It pointed to the mysterious iron box.</p>
+                <p>Leo took the box from his backpack.</p>
+                <p>The compass needle stopped on a hole.</p>`,
+                        `<h3>Page 21: The Secret Key</h3>
+                <p>Inside the compass was a small key.</p>
+                <p>The key was also made of gold.</p>
+                <p>Leo put the key into the box.</p>
+                <p>It turned with a soft click sound.</p>
+                <p>He opened the lid of the box.</p>
+                <p>A bright light came from the inside.</p>
+                <p>Leo could not believe his tired eyes.</p>`,
+                        `<h3>Page 22: The Magic Gem</h3>
+                <p>Inside was a large, glowing blue gem.</p>
+                <p>It felt warm in his cold hands.</p>
+                <p>The map was right about the treasure.</p>
+                <p>But the gem was not just money.</p>
+                <p>It was a stone of ancient wisdom.</p>
+                <p>Leo felt very smart and very calm.</p>
+                <p>He knew he was a true explorer.</p>`,
+                        `<h3>Page 23: The Way Down</h3>
+                <p>It was time to go back home.</p>
+                <p>The path down was much easier now.</p>
+                <p>Leo followed the silver river again today.</p>
+                <p>The sun was behind the big mountains.</p>
+                <p>He walked with the gold compass tonight.</p>
+                <p>The gem was safe in his pocket.</p>
+                <p>The journey was almost over for Leo.</p>`,
+                        `<h3>Page 24: Forest Friends</h3>
+                <p>He saw the squirrel again in forest.</p>
+                <p>The squirrel seemed to say hello now.</p>
+                <p>Leo gave it a small piece bread.</p>
+                <p>The birds sang for him as well.</p>
+                <p>The forest felt like a friendly place.</p>
+                <p>The trees whispered in the soft wind.</p>
+                <p>He was not alone in the woods.</p>`,
+                        `<h3>Page 25: Reaching the Village</h3>
+                <p>The lights of the village appeared now.</p>
+                <p>Leo saw his small, white house there.</p>
+                <p>His parents were waiting at the gate.</p>
+                <p>They were very happy to see him.</p>
+                <p>Leo told them about the big dragon...</p>
+                <p>No, he told them the true story.</p>
+                <p>The story of the lost gold compass.</p>`,
+                        `<h3>Page 26: The Village Celebration</h3>
+                <p>Everyone came to hear Leo's great story.</p>
+                <p>The villagers sat around a big fire.</p>
+                <p>They looked at the beautiful blue gem.</p>
+                <p>The elder of village spoke to Leo.</p>
+                <p>"You have done a very brave thing."</p>
+                <p>Leo felt very proud of himself today.</p>
+                <p>There was much music and good food.</p>`,
+                        `<h3>Page 27: The Museum</h3>
+                <p>Leo gave the gem to the museum.</p>
+                <p>He wanted everyone to see the treasure.</p>
+                <p>The compass stayed with him for always.</p>
+                <p>It was a reminder of his trip.</p>
+                <p>He wrote a book about the peak.</p>
+                <p>Many children read his exciting story tonight.</p>
+                <p>Leo became a famous mountain explorer now.</p>`,
+                        `<h3>Page 28: Looking at Stars</h3>
+                <p>Sometimes, Leo looks at the night sky.</p>
+                <p>He remembers the cold, bright mountain stars.</p>
+                <p>He thinks about his next big journey.</p>
+                <p>The world is full of many secrets.</p>
+                <p>He just needs a map and courage.</p>
+                <p>And maybe a magical golden compass today.</p>
+                <p>The night is always full of dreams.</p>`,
+                        `<h3>Page 29: The Library</h3>
+                <p>Leo spends much time in the library.</p>
+                <p>He reads about other hidden treasures now.</p>
+                <p>He studies old books and ancient maps.</p>
+                <p>The librarian is a very kind woman.</p>
+                <p>She helps him find the rarest books.</p>
+                <p>Knowledge is another type of great treasure.</p>
+                <p>He learns something new every single day.</p>`,
+                        `<h3>Page 30: Planning the Next Trip</h3>
+                <p>His next goal is the Crystal Lake.</p>
+                <p>It is far to the frozen south.</p>
+                <p>He needs a boat and a team.</p>
+                <p>His friend Maya wants to come too.</p>
+                <p>She is very good at reading maps.</p>
+                <p>Together, they will find the crystal island.</p>
+                <p>The adventure never ends for them now.</p>`,
+                        `<h3>Page 31: A Rainy Afternoon</h3>
+                <p>Today, it is raining very hard outside.</p>
+                <p>Leo stays in his warm, cozy room.</p>
+                <p>He draws pictures of the Peak Blue.</p>
+                <p>He uses many colors for the sunset.</p>
+                <p>The rain makes a soft, tapping sound.</p>
+                <p>It is a good time for quiet.</p>
+                <p>He prepares his equipment for the lake.</p>`,
+                        `<h3>Page 32: Checking the Gear</h3>
+                <p>He looks at his green backpack again.</p>
+                <p>He checks the flashlight for new batteries.</p>
+                <p>Everything must be in perfect order now.</p>
+                <p>He cleans his dirty mountain boots well.</p>
+                <p>He tests the gold compass needle today.</p>
+                <p>It points directly to his heart now.</p>
+                <p>A true explorer is always ready today.</p>`,
+                        `<h3>Page 33: Saying Goodbye</h3>
+                <p>The day for the new trip came.</p>
+                <p>The sun was rising over the valley.</p>
+                <p>Leo hugged his mother and his father.</p>
+                <p>Maya was waiting by the village gate.</p>
+                <p>They started walking towards the south now.</p>
+                <p>The road was long and very dusty.</p>
+                <p>They sang a traveler's song together happily.</p>`,
+                        `<h3>Page 34: The Green Valley</h3>
+                <p>They walked through a very wide valley.</p>
+                <p>Many cows were eating the green grass.</p>
+                <p>The valley was full of colorful flowers.</p>
+                <p>Maya found a rare purple orchid today.</p>
+                <p>They took a photo of the flower.</p>
+                <p>The spring air was fresh and sweet.</p>
+                <p>They felt very happy to be together.</p>`,
+                        `<h3>Page 35: The Dusty Road</h3>
+                <p>The road went through a dry desert.</p>
+                <p>There was not much water to find.</p>
+                <p>They wore hats and loose, light clothes.</p>
+                <p>The sun was very strong and hot.</p>
+                <p>They shared their water very carefully today.</p>
+                <p>Maya told jokes to keep them happy.</p>
+                <p>They reached a small oasis at night.</p>`,
+                        `<h3>Page 36: Oasis Rest</h3>
+                <p>The oasis had tall, green palm trees.</p>
+                <p>There was a small, cool water hole.</p>
+                <p>They drank the water and felt better.</p>
+                <p>The night was quiet in the desert.</p>
+                <p>They saw the Milky Way very clearly.</p>
+                <p>The desert has its own special beauty.</p>
+                <p>They slept soundly on the soft sand.</p>`,
+                        `<h3>Page 37: The Ancient Ruins</h3>
+                <p>They found ruins of a lost city.</p>
+                <p>The walls were made of white stone.</p>
+                <p>Leo found a broken clay vase there.</p>
+                <p>Maya discovered a secret stone door nearby.</p>
+                <p>They used their flashlights to look inside.</p>
+                <p>There were statues of kings and queens.</p>
+                <p>History was all around them in ruins.</p>`,
+                        `<h3>Page 38: The Crystal Lake</h3>
+                <p>After many days, they saw the lake.</p>
+                <p>The water was like a blue mirror.</p>
+                <p>The Crystal Island was in the center.</p>
+                <p>They needed a boat to reach it.</p>
+                <p>They found an old fisherman on shore.</p>
+                <p>He had a small, wooden boat today.</p>
+                <p>He agreed to take them to island.</p>`,
+                        `<h3>Page 39: Rowing to Island</h3>
+                <p>The lake was very deep and quiet.</p>
+                <p>The oars made a splashing sound now.</p>
+                <p>The island was covered with white crystals.</p>
+                <p>They sparkled in the afternoon sun brightly.</p>
+                <p>Leo felt the magic of the lake.</p>
+                <p>They reached the shore of the island.</p>
+                <p>The crystals were everywhere on the ground.</p>`,
+                        `<h3>Page 40: The Crystal Cave</h3>
+                <p>They found a cave made of crystal.</p>
+                <p>Everything inside was shining like a diamond.</p>
+                <p>Leo saw his reflection in the walls.</p>
+                <p>Maya found a crystal flower on rock.</p>
+                <p>It was the most beautiful thing ever.</p>
+                <p>They did not take any crystals home.</p>
+                <p>They wanted to keep the island secret.</p>`,
+                        `<h3>Page 41: Returning Home (Again)</h3>
+                <p>The return trip was full of talk.</p>
+                <p>They talked about the desert and lake.</p>
+                <p>They were better friends after the trip.</p>
+                <p>The village was happy to see them.</p>
+                <p>Leo put a new photo on wall.</p>
+                <p>Maya started to write her own diary.</p>
+                <p>They were already planning the third trip.</p>`,
+                        `<h3>Page 42: The Snowy Mountains</h3>
+                <p>Winter came to the small village house.</p>
+                <p>The mountains were covered with white snow.</p>
+                <p>Leo put on his warm, blue coat.</p>
+                <p>He went for a walk in snow.</p>
+                <p>The snow was soft and very cold.</p>
+                <p>He made a big snowman with Maya.</p>
+                <p>The village looked like a winter fairyland.</p>`,
+                        `<h3>Page 43: Winter Dreams</h3>
+                <p>Indoor days were for study and plans.</p>
+                <p>They sat near the warm, bright fire.</p>
+                <p>They looked at more ancient world maps.</p>
+                <p>They wanted to visit the Great Forest.</p>
+                <p>It was a place of giant trees.</p>
+                <p>Maya was learning about forest plants today.</p>
+                <p>Leo was fixing his leather backpack again.</p>`,
+                        `<h3>Page 44: The Great Forest</h3>
+                <p>Spring brought the green leaves back again.</p>
+                <p>They reached the edge of the forest.</p>
+                <p>The trees were like giant green towers.</p>
+                <p>The forest floor was very dark today.</p>
+                <p>They heard many animals in the distance.</p>
+                <p>They were looking for the Golden Tree.</p>
+                <p>It was a tree of pure legend.</p>`,
+                        `<h3>Page 45: Exploring the Deep</h3>
+                <p>They walked for days under the leaves.</p>
+                <p>They saw a group of wild horses.</p>
+                <p>The horses were very fast and free.</p>
+                <p>They found a waterfall in the center.</p>
+                <p>The water was falling from a cliff.</p>
+                <p>It was a very beautiful scene today.</p>
+                <p>They felt small in the giant forest.</p>`,
+                        `<h3>Page 46: The Golden Tree</h3>
+                <p>Finally, they saw a golden bright light.</p>
+                <p>It was the tree of the legends.</p>
+                <p>The leaves were truly made of gold.</p>
+                <p>It stood in a circle of light.</p>
+                <p>The air was full of magic energy.</p>
+                <p>They sat under the tree for hours.</p>
+                <p>They felt very peaceful and very happy.</p>`,
+                        `<h3>Page 47: Sharing the Magic</h3>
+                <p>They took only one fallen gold leaf.</p>
+                <p>They wanted the tree to stay safe.</p>
+                <p>The leaf was a gift for village.</p>
+                <p>They began the long walk back home.</p>
+                <p>The forest seemed to say goodbye now.</p>
+                <p>The journey was long but very good.</p>
+                <p>They were true guardians of the world.</p>`,
+                        `<h3>Page 48: The Explorer's Club</h3>
+                <p>Leo and Maya started a small club.</p>
+                <p>Other children came to learn from them.</p>
+                <p>They taught how to read a map.</p>
+                <p>They taught how to use a compass.</p>
+                <p>They told stories of Peak and Lake.</p>
+                <p>The village was full of young explorers.</p>
+                <p>Everyone wanted to see the magic world.</p>`,
+                        `<h3>Page 49: Years Later</h3>
+                <p>Leo was now an old, wise man.</p>
+                <p>His hair was white as mountain snow.</p>
+                <p>He still had the gold compass today.</p>
+                <p>He gave it to his young grandson.</p>
+                <p>"The world is yours to see," he said.</p>
+                <p>The boy looked at the old compass.</p>
+                <p>His own big adventure was starting now.</p>`,
+                        `<h3>Page 50: The Final Word</h3>
+                <p>Every end is a new beginning tonight.</p>
+                <p>Life is the greatest adventure of all.</p>
+                <p>Go out and find your own peak.</p>
+                <p>The map is in your brave heart.</p>
+                <p>Leo's story ends here for now today.</p>
+                <p>But the spirit of exploration lives forever.</p>
+                <p>Thank you for traveling with us today.</p>`
+                ]
+        },
+        {
+                title: "Cooking with Grandma",
+                author: "Maria Rossi",
+                level: "A2",
+                cover: "🍝",
+                color: "#d35400",
+                description: "A warm story about learning family recipes and traditional cooking.",
+                pages: [
+                        `<h3>Page 1: The Kitchen</h3>
+                <p>Grandma's kitchen is a very warm place.</p>
+                <p>It always smells like flour and spices.</p>
+                <p>The walls are a soft yellow color.</p>
+                <p>There is a large, wooden table center.</p>
+                <p>I love to spend my Saturdays here.</p>
+                <p>Grandma wears her favorite blue apron today.</p>
+                <p>She is ready to teach me cooking.</p>`,
+                        `<h3>Page 2: The Secret Book</h3>
+                <p>Grandma has a very old recipe book.</p>
+                <p>The pages are yellow and a bit torn.</p>
+                <p>It belonged to her own grandmother long ago.</p>
+                <p>It contains the secrets of our family.</p>
+                <p>We choose a recipe for tomato sauce.</p>
+                <p>"The secret is the time," she says.</p>
+                <p>We start by washing the red tomatoes.</p>`,
+                        `<h3>Page 3: Fresh Ingredients</h3>
+                <p>We have many fresh vegetables on table.</p>
+                <p>There are tomatoes, onions, and sweet garlic.</p>
+                <p>I smell the green, fresh basil leaves.</p>
+                <p>Grandma shows me how to peel onion.</p>
+                <p>"Be careful with the sharp knife," she says.</p>
+                <p>My eyes start to water a little.</p>
+                <p>Cooking requires a lot of patience today.</p>`,
+                        `<h3>Page 4: Making the Dough</h3>
+                <p>Next, we make the fresh pasta dough.</p>
+                <p>We put the white flour on table.</p>
+                <p>I make a small hole in center.</p>
+                <p>Grandma breaks three eggs into the flour.</p>
+                <p>We mix it with our clean hands.</p>
+                <p>The dough feels soft and a bit sticky.</p>
+                <p>We must knead it for ten minutes.</p>`,
+                        `<h3>Page 5: Kneading the Pasta</h3>
+                <p>Kneading the dough is like hard exercise.</p>
+                <p>I push and pull the yellow dough.</p>
+                <p>Grandma laughs and shows me the way.</p>
+                <p>"Use your palms, not your fingers," she says.</p>
+                <p>The dough becomes smooth and very elastic.</p>
+                <p>We cover it with a clean cloth.</p>
+                <p>Now, the dough needs some time rest.</p>`,
+                        `<h3>Page 6: Slicing the Garlic</h3>
+                <p>While we wait, we prepare the garlic.</p>
+                <p>The garlic has a very strong smell.</p>
+                <p>I slice it into very thin pieces.</p>
+                <p>Grandma puts some olive oil in pan.</p>
+                <p>The oil starts to make a sound.</p>
+                <p>The garlic turns a light brown color.</p>
+                <p>The kitchen smells absolutely wonderful now today.</p>`,
+                        `<h3>Page 7: The Tomato Sauce</h3>
+                <p>We add the chopped tomatoes to pan.</p>
+                <p>The sauce starts to bubble very slowly.</p>
+                <p>Grandma adds a pinch of sea salt.</p>
+                <p>She also adds a little bit sugar.</p>
+                <p>"It balances the taste," she explains today.</p>
+                <p>We stir it with a long spoon.</p>
+                <p>The sauce must cook for one hour.</p>`,
+                        `<h3>Page 8: Shaping the Pasta</h3>
+                <p>The dough is ready to be shaped.</p>
+                <p>I use a rolling pin to flatten.</p>
+                <p>We make it as thin as paper.</p>
+                <p>Grandma uses a small wheel to cut.</p>
+                <p>We make long, curly pieces of pasta.</p>
+                <p>They look like small, yellow ribbons now.</p>
+                <p>I am very proud of my work.</p>`,
+                        `<h3>Page 9: Boiling the Water</h3>
+                <p>We fill a large pot with water.</p>
+                <p>We put it on the hot stove.</p>
+                <p>We wait for the water to boil.</p>
+                <p>Steam comes out of the pot now.</p>
+                <p>Grandma adds more salt to the water.</p>
+                <p>"The water must taste like sea," she says.</p>
+                <p>Now we are ready to cook pasta.</p>`,
+                        `<h3>Page 10: Cooking the Pasta</h3>
+                <p>We put the pasta into the water.</p>
+                <p>It cooks very fast, only three minutes.</p>
+                <p>Fresh pasta is better than the box.</p>
+                <p>Grandma tastes one piece of the pasta.</p>
+                <p>"It is al dente," she says happily.</p>
+                <p>We drain the water in the sink.</p>
+                <p>The steam is very hot on face.</p>`,
+                        `<h3>Page 11: Mixing Everything</h3>
+                <p>We mix the pasta with the sauce.</p>
+                <p>The color is a beautiful, bright red.</p>
+                <p>Grandma adds the fresh basil leaves now.</p>
+                <p>She also puts some parmesan cheese on.</p>
+                <p>The cheese melts into the hot sauce.</p>
+                <p>We put it in a large bowl.</p>
+                <p>Dinner is almost ready for the family.</p>`,
+                        `<h3>Page 12: Setting the Table</h3>
+                <p>I help Grandma to set the table.</p>
+                <p>We use a white and red cloth.</p>
+                <p>I put the forks and knives down.</p>
+                <p>I also bring the glasses for water.</p>
+                <p>Grandpa comes into the kitchen with smile.</p>
+                <p>"Something smells very good today," he says.</p>
+                <p>He is always very hungry for pasta.</p>`,
+                        `<h3>Page 13: The Family Meal</h3>
+                <p>My parents and my sister arrive now.</p>
+                <p>We all sit around the wooden table.</p>
+                <p>Grandma serves the pasta with a smile.</p>
+                <p>Everyone says "Mmm" at the same time.</p>
+                <p>The food is warm and very delicious.</p>
+                <p>We talk and laugh for a long.</p>
+                <p>Family meals are my favorite part today.</p>`,
+                        `<h3>Page 14: Dessert Time</h3>
+                <p>Grandma has another surprise for us tonight.</p>
+                <p>She made a traditional Italian lemon cake.</p>
+                <p>It is yellow and smells like citrus.</p>
+                <p>The cake is very soft and sweet.</p>
+                <p>I have a small piece with tea.</p>
+                <p>My sister wants a second piece too.</p>
+                <p>Grandma's cakes are the best in world.</p>`,
+                        `<h3>Page 15: Washing the Dishes</h3>
+                <p>After dinner, I help with the dishes.</p>
+                <p>The water is warm and full bubbles.</p>
+                <p>I wash the plates very carefully today.</p>
+                <p>Dad dries them with a clean towel.</p>
+                <p>Cleaning is also part of the cooking.</p>
+                <p>Grandma rests in her comfortable, old chair.</p>
+                <p>The kitchen is quiet and clean again.</p>`,
+                        `<h3>Page 16: The Herb Garden</h3>
+                <p>Sunday morning is for the herb garden.</p>
+                <p>Grandma has small pots on the balcony.</p>
+                <p>We grow rosemary, thyme, and green parsley.</p>
+                <p>I give them a little bit water.</p>
+                <p>The herbs make the food taste special.</p>
+                <p>Grandma cuts some thyme for the soup.</p>
+                <p>Gardening and cooking go together very well.</p>`,
+                        `<h3>Page 17: Chicken Soup Secrets</h3>
+                <p>Today we make a healthy chicken soup.</p>
+                <p>We use carrots, celery, and yellow onions.</p>
+                <p>Grandma adds a whole chicken to pot.</p>
+                <p>We let it cook very slowly today.</p>
+                <p>The soup becomes clear and very gold.</p>
+                <p>"This is medicine for the soul," says she.</p>
+                <p>It is perfect for a rainy Day.</p>`,
+                        `<h3>Page 18: Baking Bread</h3>
+                <p>Making bread takes a lot of time.</p>
+                <p>We use yeast, flour, and warm water.</p>
+                <p>The dough rises in a warm corner.</p>
+                <p>It becomes double the size after hour.</p>
+                <p>We bake it in the hot oven.</p>
+                <p>The crust is brown and very crunchy.</p>
+                <p>Fresh bread is the best smell ever.</p>`,
+                        `<h3>Page 19: Strawberry Jam</h3>
+                <p>In summer, we make sweet strawberry jam.</p>
+                <p>The berries are red and very ripe.</p>
+                <p>We cook them with a lot sugar.</p>
+                <p>The jam is thick and very sweet.</p>
+                <p>We put it in small glass jars.</p>
+                <p>We save the jars for the winter.</p>
+                <p>I love jam on my morning toast.</p>`,
+                        `<h3>Page 20: Going to Market</h3>
+                <p>Grandma and I go to the market.</p>
+                <p>There are many stalls with fresh food.</p>
+                <p>The fruit seller has big, sweet peaches.</p>
+                <p>The cheese man gives us a taste.</p>
+                <p>We buy some eggs from the farm.</p>
+                <p>The market is very busy and noisy.</p>
+                <p>I carry the heavy basket for Grandma.</p>`,
+                        `<h3>Page 21: Choosing the Fish</h3>
+                <p>The fish market is near the sea.</p>
+                <p>The fish are silver and very fresh.</p>
+                <p>Grandma knows how to choose the best.</p>
+                <p>"Look at the eyes," she says quietly.</p>
+                <p>We buy a large sea bass tonight.</p>
+                <p>We will grill it with some lemon.</p>
+                <p>Fresh fish is very good for health.</p>`,
+                        `<h3>Page 22: Apple Pie Afternoon</h3>
+                <p>Autumn is the time for apple pies.</p>
+                <p>The apples are crisp and a bit sour.</p>
+                <p>I help to peel the green skins.</p>
+                <p>We add cinnamon and brown sugar now.</p>
+                <p>We make a lattice on the top.</p>
+                <p>The pie smells like a warm hug.</p>
+                <p>We eat it with some vanilla cream.</p>`,
+                        `<h3>Page 23: The Spice Rack</h3>
+                <p>Grandma has many jars of exotic spices.</p>
+                <p>There is orange saffron and black pepper.</p>
+                <p>I like the smell of ground cinnamon.</p>
+                <p>Each spice comes from a different country.</p>
+                <p>They add magic to every simple dish.</p>
+                <p>I am learning their names and tastes.</p>
+                <p>Spices are the colors of the kitchen.</p>`,
+                        `<h3>Page 24: Making Gnocchi</h3>
+                <p>Today we use potatoes for the pasta.</p>
+                <p>We boil them and mash them well.</p>
+                <p>We add flour to make the gnocchi.</p>
+                <p>I use a fork for the lines.</p>
+                <p>They look like small, soft white clouds.</p>
+                <p>Grandma makes a simple butter and sage.</p>
+                <p>Gnocchi is my sister's favorite food today.</p>`,
+                        `<h3>Page 15: The Rolling Pin</h3>
+                <p>My grandfather made the wooden rolling pin.</p>
+                <p>It is heavy and very, very smooth.</p>
+                <p>It has been in kitchen forty years.</p>
+                <p>Grandma uses it with very light hands.</p>
+                <p>It tells stories of many past meals.</p>
+                <p>I hope to use it for years.</p>
+                <p>Tools in the kitchen are family friends.</p>`,
+                        `<h3>Page 26: Learning about Wine</h3>
+                <p>Grandpa explains about the red grape wine.</p>
+                <p>"It comes from the sunny hills," says.</p>
+                <p>He enjoys a small glass with dinner.</p>
+                <p>Wine is part of the culture here.</p>
+                <p>I drink only some fresh grape juice.</p>
+                <p>One day I will understand the different.</p>
+                <p>But for now, I like the fruit.</p>`,
+                        `<h3>Page 27: Rice and Risotto</h3>
+                <p>Risotto is a very special rice dish.</p>
+                <p>We must stir it for twenty minutes.</p>
+                <p>We add the stock very, very slowly.</p>
+                <p>The rice becomes creamy and very soft.</p>
+                <p>We add some mushrooms and butter today.</p>
+                <p>It requires a lot of hard work.</p>
+                <p>But the taste is worth the effort.</p>`,
+                        `<h3>Page 28: Meatball Magic</h3>
+                <p>We make small meatballs with beef today.</p>
+                <p>We add bread and some parmesan cheese.</p>
+                <p>I roll them into perfect little balls.</p>
+                <p>We fry them until they are brown.</p>
+                <p>Then they go into the tomato sauce.</p>
+                <p>Spaghetti and meatballs is a classic dish.</p>
+                <p>I can eat a lot of them today.</p>`,
+                        `<h3>Page 29: Cleaning the Table</h3>
+                <p>Grandma shows me how to polish wood.</p>
+                <p>We use a cloth and some oil.</p>
+                <p>The table shines under the kitchen light.</p>
+                <p>This table has seen many happy faces.</p>
+                <p>It is the heart of the home.</p>
+                <p>We keep it clean and very pretty.</p>
+                <p>A good table makes a good meal.</p>`,
+                        `<h3>Page 30: Roasted Peppers</h3>
+                <p>We put red peppers on the grill.</p>
+                <p>The skin becomes black and very thin.</p>
+                <p>We peel them and add some garlic.</p>
+                <p>They are sweet and taste like smoke.</p>
+                <p>I like them on some crusty bread.</p>
+                <p>It is a simple but perfect snack.</p>
+                <p>Vegetables can be very exciting too today.</p>`,
+                        `<h3>Page 31: The Olive Harvest</h3>
+                <p>The olives come from our small farm.</p>
+                <p>They are green and some are black.</p>
+                <p>We press them to make virgin oil.</p>
+                <p>The oil is green and very strong.</p>
+                <p>It is the base of our cooking.</p>
+                <p>Liquid gold, Grandma calls the olive oil.</p>
+                <p>We use it on everything we eat.</p>`,
+                        `<h3>Page 32: Hot Chocolate Night</h3>
+                <p>Winter nights are for the hot chocolate.</p>
+                <p>We melt real chocolate in the milk.</p>
+                <p>We add a little bit of cinnamon.</p>
+                <p>It is thick, dark, and very warm.</p>
+                <p>We drink it from large, blue mugs.</p>
+                <p>We watch the snow through the window.</p>
+                <p>The kitchen is the warmest place now.</p>`,
+                        `<h3>Page 33: Zucchini Flowers</h3>
+                <p>In spring, we eat the zucchini flowers.</p>
+                <p>They are yellow and very, very delicate.</p>
+                <p>We fill them with some ricotta cheese.</p>
+                <p>We fry them in a light batter.</p>
+                <p>They are crunchy and very soft inside.</p>
+                <p>You must eat them while they're hot.</p>
+                <p>Spring has the most interesting flavors today.</p>`,
+                        `<h3>Page 34: Eggplant Parmesan</h3>
+                <p>We slice the long, purple eggplants thin.</p>
+                <p>We layer them with cheese and sauce.</p>
+                <p>It goes into the oven for hour.</p>
+                <p>The cheese on top is golden brown.</p>
+                <p>It is a heavy and satisfying meal.</p>
+                <p>Grandma says it is her father's favorite.</p>
+                <p>Eating it makes me feel very strong.</p>`,
+                        `<h3>Page 35: The Coffee Break</h3>
+                <p>Grandma loves her strong Italian espresso coffee.</p>
+                <p>The machine makes a loud hissing sound.</p>
+                <p>The coffee is black and very bitter.</p>
+                <p>She drinks it in a tiny cup.</p>
+                <p>I have a glass of cold milk.</p>
+                <p>We sit and talk about our Day.</p>
+                <p>Coffee is a ritual in the kitchen.</p>`,
+                        `<h3>Page 36: Lemon Granita</h3>
+                <p>Summer afternoons are for the lemon granita.</p>
+                <p>We use fresh lemons and some ice.</p>
+                <p>We crush the ice very, very small.</p>
+                <p>It is cold, sour, and very sweet.</p>
+                <p>It is the best way to cool.</p>
+                <p>We eat it with a small spoon.</p>
+                <p>Summer in Italy is very, very hot.</p>`,
+                        `<h3>Page 37: Cooking for Friends</h3>
+                <p>Today we invite the neighbors for lunch.</p>
+                <p>We make a large tray of lasagna.</p>
+                <p>There are many layers of meat sauce.</p>
+                <p>The house is full of happy people.</p>
+                <p>Sharing food is sharing love, Grandma says.</p>
+                <p>Everyone brings a small gift for us.</p>
+                <p>The table is full of many plates.</p>`,
+                        `<h3>Page 38: The Best Pizza</h3>
+                <p>We make pizza in the stone oven.</p>
+                <p>The fire is very hot and orange.</p>
+                <p>I put the pizza on a peel.</p>
+                <p>It cooks in only ninety seconds today.</p>
+                <p>The crust has small black bubbles now.</p>
+                <p>Pizza at home is better than shop.</p>
+                <p>We use buffalo mozzarella and fresh basil.</p>`,
+                        `<h3>Page 39: Vanilla Pannacotta</h3>
+                <p>Today's dessert is a cold vanilla pannacotta.</p>
+                <p>It is white and wobbles on plate.</p>
+                <p>We add a red raspberry sauce top.</p>
+                <p>It is very light and very sweet.</p>
+                <p>It melts on your tongue like snow.</p>
+                <p>Grandma makes it for my birthday every.</p>
+                <p>I love the taste of real vanilla.</p>`,
+                        `<h3>Page 40: Learning about Fish</h3>
+                <p>Grandpa shows me how to clean fish.</p>
+                <p>It is a bit messy and cold.</p>
+                <p>But it is an important skill here.</p>
+                <p>We must respect the food we eat.</p>
+                <p>Nothing should be wasted in the kitchen.</p>
+                <p>We use the bones for the stock.</p>
+                <p>Everything has a purpose in the cooking.</p>`,
+                        `<h3>Page 41: Minestrone Soup</h3>
+                <p>Minestrone is a soup with many vegetables.</p>
+                <p>We use beans, pasta, and green cabbage.</p>
+                <p>It is a rainbow in a bowl.</p>
+                <p>Each spoonful has a different vegetable today.</p>
+                <p>It is the best lunch for winter.</p>
+                <p>I like to add extra cheese on.</p>
+                <p>Healthy food can be very tasty too.</p>`,
+                        `<h3>Page 42: Polenta Party</h3>
+                <p>We make polenta with yellow corn meal.</p>
+                <p>We stir it for a long time.</p>
+                <p>We pour it onto a wooden board.</p>
+                <p>It is a soft, hot yellow mound.</p>
+                <p>We add some pork ribs and sauce.</p>
+                <p>We all eat from the same board.</p>
+                <p>It is a fun and traditional way.</p>`,
+                        `<h3>Page 43: Orange Marmalade</h3>
+                <p>Winter oranges are perfect for the marmalade.</p>
+                <p>The kitchen smells like a citrus garden.</p>
+                <p>We cut the skins into thin strips.</p>
+                <p>The marmalade is a beautiful orange color.</p>
+                <p>It is a bit bitter and sweet.</p>
+                <p>I like it with some strong cheese.</p>
+                <p>Winter fruits are full of bright sun.</p>`,
+                        `<h3>Page 44: Pumpkin Ravioli</h3>
+                <p>October is the month of the pumpkins.</p>
+                <p>We roast the pumpkin until it's soft.</p>
+                <p>We fill the small pasta squares tonight.</p>
+                <p>We add some nutmeg and butter sauce.</p>
+                <p>The taste is very sweet and warm.</p>
+                <p>I help to close the pasta edges.</p>
+                <p>Ravioli making is a true art today.</p>`,
+                        `<h3>Page 45: Roast Lamb</h3>
+                <p>Easter Sunday is for the roast lamb.</p>
+                <p>We use rosemary and many small potatoes.</p>
+                <p>The meat is very tender and juicy.</p>
+                <p>The whole family gathers in the garden.</p>
+                <p>The spring sun is warm on table.</p>
+                <p>We celebrate with a glass of juice.</p>
+                <p>A beautiful day for a beautiful meal.</p>`,
+                        `<h3>Page 46: Making Tiramisu</h3>
+                <p>Tiramisu is the most famous Italian dessert.</p>
+                <p>We use coffee, biscuits, and mascarpone cheese.</p>
+                <p>I dip the biscuits in the coffee.</p>
+                <p>We layer them in a glass dish.</p>
+                <p>We add a lot of cocoa powder.</p>
+                <p>"Tiramisu" means "pick me up" today.</p>
+                <p>It gives me a lot of energy.</p>`,
+                        `<h3>Page 47: The Afternoon Nap</h3>
+                <p>After a big meal, we rest now.</p>
+                <p>Grandma and I sit on the sofa.</p>
+                <p>The kitchen is finally quiet and still.</p>
+                <p>I dream of giant pizzas and cakes.</p>
+                <p>The house is full of peace tonight.</p>
+                <p>A full stomach makes a happy heart.</p>
+                <p>We will wake up for some tea.</p>`,
+                        `<h3>Page 48: Passing the Torch</h3>
+                <p>Grandma gives me her old recipe book.</p>
+                <p>"Now it is your turn," she says.</p>
+                <p>I feel very responsible for the secrets.</p>
+                <p>I will write my own recipes here.</p>
+                <p>I will teach my own children one.</p>
+                <p>Cooking is a bridge between the times.</p>
+                <p>I am the next chef of family.</p>`,
+                        `<h3>Page 49: The Last Lesson</h3>
+                <p>We have learned many things this year.</p>
+                <p>Cooking is not just about the food.</p>
+                <p>It is about family and the love.</p>
+                <p>I know how to peel an onion.</p>
+                <p>I know how to knead the dough.</p>
+                <p>I am ready to cook for myself.</p>
+                <p>Thank you, Grandma, for everything you taught.</p>`,
+                        `<h3>Page 50: The Final Feast</h3>
+                <p>Today I cook for Grandma and Grandpa.</p>
+                <p>I make the tomato sauce and pasta.</p>
+                <p>They taste the food and they smile.</p>
+                <p>"It is perfect," Grandma says with joy.</p>
+                <p>My journey in the kitchen continues now.</p>
+                <p>The story ends, but the cooking goes.</p>
+                <p>I hope you enjoyed our delicious story.</p>`
+                ]
+        }
+);
+window.BOOK_DATA["B1"].push(
+        {
+                title: "The Hidden Village",
+                author: "Elena Thorne",
+                level: "B1",
+                cover: "🏘️",
+                color: "#16a085",
+                description: "A mysterious journey to a village where time stands still and secrets are gold.",
+                pages: [
+                        `<h3>Page 1: The Forgotten Map</h3>
+                <p>Julian discovered a peculiar map in the local library.</p>
+                <p>The edges were frayed and the ink was fading.</p>
+                <p>It depicted a valley that didn't exist anymore.</p>
+                <p>According to legend, the Hidden Village was there.</p>
+                <p>People claimed that time functioned differently in that place.</p>
+                <p>Intrigued by the mystery, Julian decided to explore it.</p>
+                <p>He meticulously planned his route through the mountains today.</p>`,
+                        `<h3>Page 2: Preparing for the Unknown</h3>
+                <p>He needed specialized equipment for such a rigorous journey.</p>
+                <p>He purchased a sturdy tent and a reliable compass.</p>
+                <p>His backpack was stuffed with dehydrated food and water.</p>
+                <p>Julian also brought a leather-bound journal for notes.</p>
+                <p>He informed his friends about his ambitious mission tonight.</p>
+                <p>They expressed concern but admired his adventurous spirit now.</p>
+                <p>The morning of his departure arrived with a chill.</p>`,
+                        `<h3>Page 3: The Ascent Begins</h3>
+                <p>The initial climb was steeper than he anticipated tonight.</p>
+                <p>Jagged rocks made every step a potential hazard now.</p>
+                <p>The air grew thinner as he reached higher altitudes.</p>
+                <p>Julian focused on his steady, rhythmic breathing today now.</p>
+                <p>He encountered a mountain goat watching him curiously today.</p>
+                <p>The vast landscape stretched out beneath him like ocean.</p>
+                <p>He felt incredibly small against the massive grey peaks.</p>`,
+                        `<h3>Page 4: The Whispering Forest</h3>
+                <p>He descended into a forest shrouded in ancient mist.</p>
+                <p>The trees seemed to whisper secrets in the wind.</p>
+                <p>Strange, bioluminescent fungi lit the damp forest floor tonight.</p>
+                <p>Every crackle of a twig echoed through the silence.</p>
+                <p>Julian felt as though the forest was watching him.</p>
+                <p>He consulted his map to ensure he stayed on.</p>
+                <p>The path was becoming increasingly difficult to follow now.</p>`,
+                        `<h3>Page 5: An Unexpected Encounter</h3>
+                <p>Suddenly, an elderly woman appeared from the dense shadows.</p>
+                <p>She wore a cloak woven from silver threads tonight.</p>
+                <p>"Few travelers venture this deep into the valley," she said.</p>
+                <p>Her voice sounded like dry leaves rustling in autumn.</p>
+                <p>She offered Julian a cup of fragrant, herbal tea.</p>
+                <p>It tasted of honey and some mysterious mountain flowers.</p>
+                <p>Julian's fatigue vanished instantly after drinking the sweet tea.</p>`,
+                        `<h3>Page 6: The Woman's Warning</h3>
+                <p>"The village reveals itself only to the patient," she warned.</p>
+                <p>She handed him a polished, iridescent stone today now.</p>
+                <p>"Let this be your guide when the sun disappears."</p>
+                <p>Julian thanked her and asked for her name today.</p>
+                <p>She simply smiled and retreated back into the mist.</p>
+                <p>He wondered if she was a ghost or hermit.</p>
+                <p>The stone felt strangely warm in his calloused hand.</p>`,
+                        `<h3>Page 7: Following the Light</h3>
+                <p>As evening approached, the stone began to glow softly.</p>
+                <p>It emitted a gentle, pulsating turquoise light today now.</p>
+                <p>Julian followed the light through the narrow mountain pass.</p>
+                <p>The atmosphere became noticeably warmer and more humid today.</p>
+                <p>He heard the distant sound of melodic, ringing bells.</p>
+                <p>The scent of blooming jasmine filled the evening air.</p>
+                <p>He realized he was getting closer to his destination.</p>`,
+                        `<h3>Page 8: Entering the Hidden Village</h3>
+                <p>The village appeared like a dream in the valley.</p>
+                <p>Cottages were built directly into the towering limestone cliffs.</p>
+                <p>Waterfalls cascaded gracefully between the charming, small houses tonight.</p>
+                <p>There were no roads, only winding, stone-carved paths today.</p>
+                <p>The villagers wore vibrant, hand-dyed silk garments today now.</p>
+                <p>They greeted Julian with genuine warmth and quiet hospitality.</p>
+                <p>He felt as though he had stepped back centuries.</p>`,
+                        `<h3>Page 9: The Village Elder</h3>
+                <p>He was introduced to Master Kael, the village elder.</p>
+                <p>Kael possessed eyes that seemed to hold infinite wisdom.</p>
+                <p>"Welcome to Aethelgard, the place where shadows rest," he.</p>
+                <p>He explained that they lived in perfect natural harmony.</p>
+                <p>They didn't use modern technology or complex machinery tonight.</p>
+                <p>Instead, they focused on philosophy and ancient botanical arts.</p>
+                <p>Julian was invited to stay as an honored guest.</p>`,
+                        `<h3>Page 10: The Library of Spirits</h3>
+                <p>Julian was granted access to their spectacular, underground library.</p>
+                <p>Thousands of scrolls were preserved in crystal cases tonight.</p>
+                <p>Some documents were written in languages long since forgotten.</p>
+                <p>He spent hours studying the history of the world.</p>
+                <p>The library smelled like old parchment and sandalwood incense.</p>
+                <p>He discovered that the village was thousands years old.</p>
+                <p>Its existence was a carefully guarded secret for generations.</p>`,
+                        `<h3>Page 11: The Garden of Dreams</h3>
+                <p>In the village center lay the Garden of Dreams.</p>
+                <p>Plants there bloomed only under the full moon's light.</p>
+                <p>Their petals shimmered with a delicate, ethereal silver glow.</p>
+                <p>Villagers gathered there to meditate and share quiet stories.</p>
+                <p>Julian observed the peaceful interaction between the people today.</p>
+                <p>There was no conflict or greed in this place.</p>
+                <p>He began to question his own busy, modern life.</p>`,
+                        `<h3>Page 12: Learning the Language</h3>
+                <p>The villagers spoke a rhythmic, musical dialect of English.</p>
+                <p>Julian tried to learn some of their meaningful phrases.</p>
+                <p>"Light is the path," became his favorite daily greeting.</p>
+                <p>Language here wasn't just for communication, but for connection.</p>
+                <p>He practiced with the local children in the plaza.</p>
+                <p>They laughed at his accent but encouraged his efforts.</p>
+                <p>Communication became easier as the days passed by slowly.</p>`,
+                        `<h3>Page 13: The Art of Weaving</h3>
+                <p>He watched the women weave intricate tapestries from silk.</p>
+                <p>Actually, they used fine silk from mountain spiders tonight.</p>
+                <p>The patterns told stories of the stars and seasons.</p>
+                <p>Each thread was dyed using rare, natural minerals today.</p>
+                <p>Julian attempted to learn the basic weaving techniques today.</p>
+                <p>It required immense precision and a very calm mind.</p>
+                <p>He gained a new appreciation for handmade craftsmanship tonight.</p>`,
+                        `<h3>Page 14: The Waterfall Temple</h3>
+                <p>High above the village sat the Waterfall Temple tonight.</p>
+                <p>The water's roar was a constant, soothing background melody.</p>
+                <p>Stone statues of guardians stood at the entrance tonight.</p>
+                <p>Inside, the air was cool and filled with spray.</p>
+                <p>People came here to seek clarity and inner peace.</p>
+                <p>Julian sat by the pool and reflected on life.</p>
+                <p>He felt a profound sense of spiritual renewal today.</p>`,
+                        `<h3>Page 15: A Feast of Flavors</h3>
+                <p>A grand festival was held to celebrate the harvest.</p>
+                <p>The tables groaned under the weight of exotic fruits.</p>
+                <p>They served bread baked in the village's communal ovens.</p>
+                <p>There were honeyed nuts and sparkling, sweet herbal drinks.</p>
+                <p>Julian tasted flavors that were entirely new to him.</p>
+                <p>The communal atmosphere was vibrant and full of joy.</p>
+                <p>Everyone contributed something to the magnificent, large feast tonight.</p>`,
+                        `<h3>Page 16: The Secret of Time</h3>
+                <p>Master Kael shared the secret of the village's longevity.</p>
+                <p>"We do not measure time by the clock," he.</p>
+                <p>"We measure it by the growth of the trees."</p>
+                <p>This perspective shifted Julian's understanding of his own existence.</p>
+                <p>He realized that he was always rushing towards something.</p>
+                <p>In Aethelgard, people simply existed in the present moment.</p>
+                <p>The concept of "hurrying" didn't even exist in language.</p>`,
+                        `<h3>Page 17: The Weaver's Daughter</h3>
+                <p>Julian became friends with Lyra, the master weaver's daughter.</p>
+                <p>She had a curious mind and asked about world.</p>
+                <p>He described the bustling cities and the fast cars.</p>
+                <p>Lyra found the idea of a "car" quite absurd.</p>
+                <p>"Why would people want to move so fast?" she.</p>
+                <p>Julian struggled to provide a satisfying answer to her.</p>
+                <p>He realized that speed didn't necessarily mean progress today.</p>`,
+                        `<h3>Page 18: Exploring the Caves</h3>
+                <p>Lyra showed him the crystal caves beneath the cliffs.</p>
+                <p>The formations looked like frozen lightning in the dark.</p>
+                <p>They echoed with the sound of dripping, mineral-rich water.</p>
+                <p>Some crystals hummed when touched with a steady hand.</p>
+                <p>They used these sounds for their unique musical instruments.</p>
+                <p>Julian was mesmerized by the subterranean, glowing beauty today.</p>
+                <p>Nature's architecture was far superior to any human building.</p>`,
+                        `<h3>Page 19: The Storm Approaches</h3>
+                <p>A powerful mountain storm suddenly gathered over the valley.</p>
+                <p>Thunder rumbled like a giant's voice in the distance.</p>
+                <p>The villagers worked together to secure their stone homes.</p>
+                <p>Julian helped move the fragile plants into the caves.</p>
+                <p>The wind howled through the narrow, high mountain passes.</p>
+                <p>Lightning illuminated the valley in brilliant, purple flashes tonight.</p>
+                <p>The power of nature was both terrifying and magnificent.</p>`,
+                        `<h3>Page 20: Finding Shelter</h3>
+                <p>They retreated to the safety of the Great Hall.</p>
+                <p>A massive hearth burned in the center of room.</p>
+                <p>People told stories and sang songs to stay calm.</p>
+                <p>Julian felt a deep sense of communal security tonight.</p>
+                <p>Despite the storm outside, the hall felt very warm.</p>
+                <p>He shared stories from his own distant, rainy country.</p>
+                <p>Bridges were built through shared human experiences and tales.</p>`,
+                        `<h3>Page 21: The Morning After</h3>
+                <p>The storm passed, leaving the air incredibly crisp tonight.</p>
+                <p>A rainbow arched over the entire hidden mountain valley.</p>
+                <p>The waterfalls were more vigorous and loud than before.</p>
+                <p>Nature seemed refreshed and renewed by the heavy rain.</p>
+                <p>Villagers began the process of repairing the minor damage.</p>
+                <p>Julian felt a sense of belonging in this community.</p>
+                <p>He was no longer just a curious traveling visitor.</p>`,
+                        `<h3>Page 22: The Lesson of Patience</h3>
+                <p>Julian worked in the communal fields with the men.</p>
+                <p>They grew mountain grains that required very specific care.</p>
+                <p>He learned that agriculture was a lesson in patience.</p>
+                <p>You cannot force the earth to provide its fruit.</p>
+                <p>He felt the soil between his dirty, working fingers.</p>
+                <p>It was a grounded and very satisfying experience tonight.</p>
+                <p>The simple life had its own complex, deep rewards.</p>`,
+                        `<h3>Page 23: Lyra's Gift</h3>
+                <p>Lyra presented Julian with a handmade, silk blue scarf.</p>
+                <p>The pattern represented the flowing river of the valley.</p>
+                <p>"To remember the whispers of the trees," she said.</p>
+                <p>Julian was touched by her genuine, thoughtful kindness today.</p>
+                <p>He gave her his silver pocket watch in return.</p>
+                <p>She examined the ticking gears with wide, curious eyes.</p>
+                <p>A piece of his world remained in the village.</p>`,
+                        `<h3>Page 24: The Decision to Leave</h3>
+                <p>Eventually, Julian knew he had to return to home.</p>
+                <p>The mystery of the village was now a part.</p>
+                <p>He felt a strange mixture of sadness and excitement.</p>
+                <p>He wanted to share his discoveries with the world.</p>
+                <p>Master Kael spoke to him in the quiet garden.</p>
+                <p>"The village will always remain in your heart, Julian."</p>
+                <p>Preparation for the long journey back began that night.</p>`,
+                        `<h3>Page 25: The Returning Path</h3>
+                <p>He decided to take a different, less treacherous route.</p>
+                <p>Master Kael provided him with a new, secret map.</p>
+                <p>He carried the luminous stone as a permanent memento.</p>
+                <p>The descent was faster but equally beautiful and quiet.</p>
+                <p>He looked back at the valley one last time.</p>
+                <p>The village was already disappearing into the morning mist.</p>
+                <p>He felt like he was waking from a dream.</p>`,
+                        `<h3>Page 26: The Border Between Worlds</h3>
+                <p>He crossed the invisible boundary of the magical valley.</p>
+                <p>The air temperature dropped and the humidity decreased instantly.</p>
+                <p>The sounds of the modern world began to return.</p>
+                <p>He heard the distant hum of a mountain road.</p>
+                <p>His phone, which had been dead, suddenly vibrated now.</p>
+                <p>Messages from his old life flooded his tired mind.</p>
+                <p>The transition was jarring and a bit overwhelming tonight.</p>`,
+                        `<h3>Page 27: Reaching the First Town</h3>
+                <p>He arrived at a small, sleepy mountain town tonight.</p>
+                <p>The electric lights felt unnaturally bright and very harsh.</p>
+                <p>People were rushing past him with their heads down.</p>
+                <p>He felt like a stranger in his own world.</p>
+                <p>He ordered a coffee in a noisy, crowded cafe.</p>
+                <p>The chemical taste of the drink was quite disappointing.</p>
+                <p>He missed the herbal tea of the hidden village.</p>`,
+                        `<h3>Page 28: Writing the Chronicle</h3>
+                <p>Julian began to write his experiences in his journal.</p>
+                <p>He wanted to capture every detail before they faded.</p>
+                <p>The words flowed onto the paper like a river.</p>
+                <p>He realized that his perspective on life had changed.</p>
+                <p>He no longer felt the need to participate in.</p>
+                <p>The "rat race" seemed like a distant, absurd memory.</p>
+                <p>His journal entries were poetic and deeply philosophical tonight.</p>`,
+                        `<h3>Page 29: The Skeptical Professor</h3>
+                <p>He visited an old archaeology professor at the university.</p>
+                <p>He showed him the glowing stone and the map.</p>
+                <p>The professor examined the artifacts with great academic interest.</p>
+                <p>"This map is unlike anything I've seen before, Julian."</p>
+                <p>He couldn't explain the geological composition of the stone.</p>
+                <p>But he was hesitant to believe in a "hidden."</p>
+                <p>Academic rigor often clashes with the marvelous and mysterious.</p>`,
+                        `<h3>Page 30: The Call of Adventure</h3>
+                <p>Months passed, but Julian couldn't settle back into life.</p>
+                <p>His mind constantly drifted back to Aethelgard's peaceful streets.</p>
+                <p>The city's noise felt like a physical burden today.</p>
+                <p>He realized that he didn't belong here anymore tonight.</p>
+                <p>He started planning a second, more permanent expedition south.</p>
+                <p>This time, he wouldn't be going as a visitor.</p>
+                <p>He wanted to live among the people of Aethelgard.</p>`,
+                        `<h3>Page 31: Gathering Like-Minded Souls</h3>
+                <p>He met a group of artists and young philosophers.</p>
+                <p>They shared his dissatisfaction with the modern, loud world.</p>
+                <p>He told them stories of the village where time.</p>
+                <p>They were captivated by his vision of natural harmony.</p>
+                <p>They decided to form a small, idealistic pioneer group.</p>
+                <p>Julian would lead them back to the hidden valley.</p>
+                <p>Shared purpose gave them a renewed sense of hope.</p>`,
+                        `<h3>Page 32: The Final Departure</h3>
+                <p>They sold their possessions and bought the necessary supplies.</p>
+                <p>This journey was more organized and much more serious.</p>
+                <p>They left the city under the cover of night.</p>
+                <p>The world was changing, but they were looking back.</p>
+                <p>Julian felt a powerful sense of destiny and duty.</p>
+                <p>The mountains were waiting for their return once more.</p>
+                <p>The luminous stone guided their steps through the dark.</p>`,
+                        `<h3>Page 33: Challenges on the Road</h3>
+                <p>The group faced numerous physical and logistical challenges today.</p>
+                <p>Some struggled with the physical demands of the climb.</p>
+                <p>Morale wavered during a particularly cold, rainy night tonight.</p>
+                <p>Julian shared the stories of Master Kael's quiet wisdom.</p>
+                <p>His leadership was tested and proved to be strong.</p>
+                <p>They learned to support each other during the difficulties.</p>
+                <p>Community was being built even before they arrived there.</p>`,
+                        `<h3>Page 34: The Return to the Forest</h3>
+                <p>They reached the Whispering Forest after two long weeks.</p>
+                <p>The mist was as thick and mysterious as before.</p>
+                <p>The bioluminescent fungi seemed to welcome them back tonight.</p>
+                <p>The group was amazed by the forest's ethereal beauty.</p>
+                <p>They followed Julian with absolute trust through the trees.</p>
+                <p>The trees' voices seemed louder and more welcoming today.</p>
+                <p>They were entering another reality, away from the noise.</p>`,
+                        `<h3>Page 35: The Valley Reveals Itself</h3>
+                <p>The Hidden Village finally appeared through the clearing today.</p>
+                <p>It looked exactly as Julian remembered it in dreams.</p>
+                <p>The waterfalls were singing their eternal, melodic mountain song.</p>
+                <p>Lyra was waiting for them at the valley entrance.</p>
+                <p>She smiled when she saw Julian's familiar, blue scarf.</p>
+                <p>"You have returned, and you brought friends today now."</p>
+                <p>The welcome was even more emotional than the departure.</p>`,
+                        `<h3>Page 36: Integration into Aethelgard</h3>
+                <p>The newcomers were slowly integrated into the village life.</p>
+                <p>Each was assigned a mentor to learn the arts.</p>
+                <p>The artists found inspiration in the crystal cave's light.</p>
+                <p>The philosophers spent days debating with Master Kael tonight.</p>
+                <p>Julian helped build new cottages into the limestone cliffs.</p>
+                <p>The village was growing, but its spirit remained unchanged.</p>
+                <p>Harmony was maintained through mutual respect and shared labor.</p>`,
+                        `<h3>Page 37: The New Library</h3>
+                <p>They began to translate the modern world's best books.</p>
+                <p>They wanted to preserve the knowledge while discarding noise.</p>
+                <p>Julian's journal became the first volume of new history.</p>
+                <p>The library was expanded to accommodate the new scrolls.</p>
+                <p>Information was shared freely among all the village residents.</p>
+                <p>Wisdom from both worlds was being combined here today.</p>
+                <p>A new culture was slowly emerging in the valley.</p>`,
+                        `<h3>Page 38: The Festival of Lights</h3>
+                <p>They celebrated the arrival of the new community members.</p>
+                <p>Thousands of crystal lanterns were floated on the river.</p>
+                <p>The valley was transformed into a sea of light.</p>
+                <p>Music from the humming crystals filled the cool air.</p>
+                <p>People danced and sang until the early morning hours.</p>
+                <p>Julian felt a sense of profound and absolute peace.</p>
+                <p>This was the home he had always been seeking.</p>`,
+                        `<h3>Page 39: Lyra and Julian</h3>
+                <p>Lyra and Julian spent much time together in garden.</p>
+                <p>They talked about the bridge between their two worlds.</p>
+                <p>She taught him the deepest secrets of silk weaving.</p>
+                <p>He taught her about the vastness of the cosmos.</p>
+                <p>Their friendship blossomed into a deep, meaningful romantic love.</p>
+                <p>They were the embodiment of the village's new era.</p>
+                <p>The future felt bright and full of infinite possibilities.</p>`,
+                        `<h3>Page 40: The Protection of the Valley</h3>
+                <p>They discussed how to keep the village's secret safe.</p>
+                <p>The modern world was expanding and potentially very dangerous.</p>
+                <p>Master Kael proposed a system of "mist guardians" tonight.</p>
+                <p>They would ensure that only those seeking peace found.</p>
+                <p>Technology was used sparingly for defensive and hidden purposes.</p>
+                <p>The village was not just a place, but idea.</p>
+                <p>Protecting the idea was their most important collective duty.</p>`,
+                        `<h3>Page 41: Decades of Peace</h3>
+                <p>Thirty years passed in the blink of an eye.</p>
+                <p>Julian was now a senior member of the council.</p>
+                <p>The village had flourished into a magnificent mountain utopia.</p>
+                <p>Children were born who knew only the valley's harmony.</p>
+                <p>The outside world seemed like a very distant memory.</p>
+                <p>Occasionally, a lost traveler would stumble into their midst.</p>
+                <p>They were treated with kindness and then gently guided.</p>`,
+                        `<h3>Page 42: The Wisdom of Age</h3>
+                <p>Julian reflected on the lessons he had learned here.</p>
+                <p>True wealth was found in relationships, not in things.</p>
+                <p>Purpose was found in service, not in personal gain.</p>
+                <p>He felt satisfied with the life he had chosen.</p>
+                <p>His hair was white, mirroring the mountain's winter snow.</p>
+                <p>He still carried the turquoise stone in his pocket.</p>
+                <p>It was a symbol of his transformative life journey.</p>`,
+                        `<h3>Page 43: The Passing of Kael</h3>
+                <p>Master Kael peacefully passed away during a spring evening.</p>
+                <p>The whole village gathered in the Garden of Dreams.</p>
+                <p>They celebrated his life with stories and beautiful songs.</p>
+                <p>He left a void that could never be filled.</p>
+                <p>Julian was chosen as the new Village Elder unanimously.</p>
+                <p>He felt the weight of responsibility on his shoulders.</p>
+                <p>He promised to uphold Aethelgard's ancient, sacred traditions today.</p>`,
+                        `<h3>Page 44: Leading Aethelgard</h3>
+                <p>Julian led with compassion and a very steady hand.</p>
+                <p>He encouraged the continuous pursuit of knowledge and art.</p>
+                <p>The village remained a beacon of light in world.</p>
+                <p>He navigated the challenges of a changing global climate.</p>
+                <p>Their botanical skills were used to preserve rare species.</p>
+                <p>The valley became a sanctuary for all life forms.</p>
+                <p>Ethics and environment were at the core of decisions.</p>`,
+                        `<h3>Page 45: A Message from Beyond</h3>
+                <p>One day, a sophisticated drone crashed near the entrance.</p>
+                <p>The outside world was getting closer and more curious.</p>
+                <p>Julian examined the machine with a sense of dread.</p>
+                <p>The technology was advanced and designed for deep surveillance.</p>
+                <p>The council debated how to respond to this intrusion.</p>
+                <p>Some felt fear, others felt a sense of inevitability.</p>
+                <p>They needed to increase their efforts to remain hidden.</p>`,
+                        `<h3>Page 46: The Great Concealment</h3>
+                <p>They combined their botanical knowledge with ancient crystal energy.</p>
+                <p>They created a permanent, shimmering shroud over the whole.</p>
+                <p>To the outside world, the valley looked empty mountain.</p>
+                <p>It was a feat of both science and magic.</p>
+                <p>Julian felt a sense of relief and great accomplishment.</p>
+                <p>The secret of Aethelgard was safe for another century.</p>
+                <p>Innovation served to protect, not to exploit or destroy.</p>`,
+                        `<h3>Page 47: The Final Journal Entry</h3>
+                <p>Julian wrote his final entry in the village chronicles.</p>
+                <p>"We have built something that will hopefully endure forever."</p>
+                <p>He looked at Lyra, sleeping peacefully beside him tonight.</p>
+                <p>His heart was full of gratitude for this life.</p>
+                <p>The journey from the library to the elder's chair.</p>
+                <p>It was a path well-traveled and full of meaning.</p>
+                <p>He closed the leather-bound book with a soft sigh.</p>`,
+                        `<h3>Page 48: The Legacy Continued</h3>
+                <p>His daughter, named Aethel, showed great promise in leadership.</p>
+                <p>She possessed Julian's curiosity and Lyra's artistic skill tonight.</p>
+                <p>The future of the village was in good hands.</p>
+                <p>The cycle of life and wisdom continued unbroken here.</p>
+                <p>Julian felt a sense of completion and eternal peace.</p>
+                <p>He spent his final days teaching the village children.</p>
+                <p>Legend and reality were now one in the valley.</p>`,
+                        `<h3>Page 49: Sunset over Aethelgard</h3>
+                <p>Julian watched the sun set over the limestone cliffs.</p>
+                <p>The golden light bathed the village in warm embrace.</p>
+                <p>The waterfalls sparkled like diamonds in the evening sun.</p>
+                <p>He heard the children singing in the garden nearby.</p>
+                <p>Life was beautiful, simple, and profoundly complex all once.</p>
+                <p>He was ready for his own final, great transition.</p>
+                <p>The turquoise stone glowed one last time in hand.</p>`,
+                        `<h3>Page 50: The Eternal Silence</h3>
+                <p>Aethelgard remains a secret whisper in the mountain wind.</p>
+                <p>Some say if you listen closely, you hear bells.</p>
+                <p>The Hidden Village continues to flourish in the mist.</p>
+                <p>Time stands still, and the heart finds its home.</p>
+                <p>Seek not with your eyes, but with your soul.</p>
+                <p>The mystery is the greatest treasure we can find.</p>
+                <p>Thank you for exploring the Hidden Village with us.</p>`
+                ]
+        },
+        {
+                title: "The Echo of the Stars",
+                author: "Dr. Arthur Vance",
+                level: "B1",
+                cover: "✨",
+                color: "#2c3e50",
+                description: "An astronomical mystery about a scientist who discovers a signal that changes history.",
+                pages: [
+                        `< h3 > Page 1: The Midnight Signal</h3 >
+                <p>Arthur peered through the massive telescope into the silent void.</p>
+                <p>He was an astrophysicist at the remote Mountain Observatory tonight.</p>
+                <p>The screen displayed a series of highly unusual, rhythmic pulses today.</p>
+                <p>"This isn't background radiation," he whispered to the empty room.</p>
+                <p>It was a structured signal originating from the Andromeda galaxy tonight.</p>
+                <p>He meticulously double-checked the coordinates on his glowing monitor.</p>
+                <p>The signal was repeating every fifty-five seconds today now.</p>`,
+                        `< h3 > Page 2: Analyzing the Pulse</h3 >
+                <p>He initiated a complex decryption algorithm on the central computer.</p>
+                <p>The patterns were surprisingly complex and mathematically very elegant tonight.</p>
+                <p>They seemed to encode a primitive form of universal binary code.</p>
+                <p>Arthur felt a surge of adrenalin pumping through his veins.</p>
+                <p>Was he finally witnessing the first contact with another world?</p>
+                <p>He contacted his colleague, Sarah, at the university headquarters tonight.</p>
+                <p>"You need to see these data immediately," he urged her.</p>`,
+                        `< h3 > Page 3: Sarah's Skepticism</h3>
+                <p>Sarah arrived at the observatory shortly before the morning dawn.</p>
+                <p>"Probably just a malfunctioning satellite or solar interference, Arthur."</p>
+                <p>She examined the raw data with her trained, critical eye.</p>
+                <p>However, the consistency of the pulse was difficult to ignore.</p>
+                <p>"It's definitely artificial," she admitted after several long hours.</p>
+                <p>They decided to keep their discovery confidential for the moment.</p>
+                <p>Publicity could lead to mass panic or government interference tonight.</p>`,
+                        `< h3 > Page 4: Decoding the Message</h3 >
+                <p>They worked tirelessly through the following three sleepless, cold nights.</p>
+                <p>The signal contained a map of a distant star system.</p>
+                <p>Symbols represented chemical elements and also fundamental physical constants today.</p>
+                <p>"They're teaching us how to talk to them," Arthur realized.</p>
+                <p>The message was remarkably patient and pedagogically very well structured.</p>
+                <p>Every decoded segment revealed a new layer of profound complexity.</p>
+                <p>It was like solving a cosmic, multi-dimensional jigsaw puzzle tonight.</p>`,
+                        `< h3 > Page 5: The Echoing Voice</h3 >
+                <p>As they decrypted more, they found something deeply unsettling tonight.</p>
+                <p>The signal was actually a recording of an ancient broadcast.</p>
+                <p>It wasn't a live message, but a digital time capsule.</p>
+                <p>The senders were likely gone for millions of years now.</p>
+                <p>"We are hearing the echo of a dead civilization," Sarah.</p>
+                <p>The thought made the vastness of space feel even colder.</p>
+                <p>They were archeologists of the stars, exploring ghostly, silent ruins.</p>`,
+                        `< h3 > Page 6: The History of Aethel - Delta</h3 >
+                <p>The civilization was called Aethel-Delta, according to the decoded text.</p>
+                <p>They lived on a planet orbiting a binary star system.</p>
+                <p>Their world was a paradise of oceans and floating continents.</p>
+                <p>They had mastered gravitational energy and also interstellar communication today.</p>
+                <p>However, their binary suns were becoming dangerously unstable and hot.</p>
+                <p>They spent their final centuries documenting their entire cultural history.</p>
+                <p>The signal was their last legacy to the universe today.</p>`,
+                        `< h3 > Page 7: A Warning from the Past</h3 >
+                <p>The final part of the signal contained a stern warning.</p>
+                <p>"Beware the silence between the stars," the message stated clearly.</p>
+                <p>It described a predatory force that consumed energy and light.</p>
+                <p>Arthur and Sarah looked at each other with growing concern.</p>
+                <p>Was this force still out there in the dark cosmos?</p>
+                <p>The warning was accompanied by complex, theoretical gravitational equations today.</p>
+                <p>They suggested a way to hide a planet's energy signature.</p>`,
+                        `< h3 > Page 8: The Secret Project</h3 >
+                <p>They realized that Earth might be in significant, grave danger.</p>
+                <p>Our increasing radio emissions were like a beacon in space.</p>
+                <p>They presented their findings to the Global Science Council tonight.</p>
+                <p>The leaders were initially skeptical and dismissive of their claims.</p>
+                <p>"We have more pressing problems on Earth," the chairman said.</p>
+                <p>Arthur pleaded for them to consider the long-term survival tonight.</p>
+                <p>Finally, a secret project was authorized to study the signal.</p>`,
+                        `< h3 > Page 9: Building the Shield</h3 >
+                <p>They recruited the world's best physicists and brilliant engineers today.</p>
+                <p>The goal was to create a planetary energy dampening field.</p>
+                <p>They used the Aethel-Delta equations as a foundational, core blueprint.</p>
+                <p>It required a network of satellites orbiting the entire planet.</p>
+                <p>This project was named "Project Echo" in honor of senders.</p>
+                <p>Construction began in a hidden facility in the Arctic circle.</p>
+                <p>The world remained unaware of the impending, silent celestial threat.</p>`,
+                        `< h3 > Page 10: The Looming Shadow</h3 >
+                <p>Monitoring stations detected a strange anomaly in the Kuiper belt.</p>
+                <p>A massive, dark object was slowly decelerating towards our sun.</p>
+                <p>It didn't reflect any light and was virtually invisible today.</p>
+                <p>Arthur calculated its trajectory with a trembling, cold hand tonight.</p>
+                <p>"It will be here in exactly eighteen months," he announced.</p>
+                <p>The urgency of Project Echo became a desperate, global race.</p>
+                <p>Every hour was precious in their fight for Earth's survival.</p>`,
+                        `< h3 > Page 11: Growing Public Suspicion</h3 >
+                <p>The massive satellite launches couldn't be hidden forever from people.</p>
+                <p>Conspiracy theories flooded the internet and the global news tonight.</p>
+                <p>"Are we being invaded?" many people asked in fearful whispers.</p>
+                <p>Government spokespeople provided vague and very unconvincing explanations today now.</p>
+                <p>The atmosphere on the planet became tense and highly volatile.</p>
+                <p>Arthur felt the weight of the secret on his shoulders.</p>
+                <p>He wanted to tell the truth but feared mass chaos.</p>`,
+                        `< h3 > Page 12: Contacting Sarah</h3 >
+                <p>Sarah was working on the satellite's core processing units tonight.</p>
+                <p>"The shield is almost ready, but the power requirements."</p>
+                <p>We needed a way to harness energy from the moon.</p>
+                <p>They developed a revolutionary, wireless energy transmission system today now.</p>
+                <p>Giant lasers would beam power from lunar stations to Earth.</p>
+                <p>It was a dangerous and highly ambitious piece of engineering.</p>
+                <p>But it was our only hope against the dark shadow.</p>`,
+                        `< h3 > Page 13: The First Test</h3 >
+                <p>They activated a small-scale version of the shield over Iceland.</p>
+                <p>The sky shimmered with a delicate, violet and blue light.</p>
+                <p>For a moment, all electromagnetic radiation from the area vanished.</p>
+                <p>The test was a resounding success, despite some minor glitches.</p>
+                <p>Arthur finally felt a glimmer of hope in his heart.</p>
+                <p>"The Aethel-Delta equations are correct," he told Sarah today.</p>
+                <p>Their technology was hundreds of years ahead of ours today.</p>`,
+                        `< h3 > Page 14: The Shadow Arrives</h3 >
+                <p>The dark anomaly entered the inner solar system near Mars.</p>
+                <p>It began to emit a powerful, low-frequency gravitational hum tonight.</p>
+                <p>Earthquakes rattled the planet as the object's mass affected us.</p>
+                <p>Panic finally broke out in major cities around the world.</p>
+                <p>The secret was out, and the threat was very real.</p>
+                <p>Arthur gave a televised address to the entire human population.</p>
+                <p>"We have a plan. Please stay calm and support us."</p>`,
+                        `<h3>Page 15: Activating Project Echo</h3>
+                <p>The final satellites were pushed into their precise, polar orbits.</p>
+                <p>Arthur initiated the activation sequence from the primary command center.</p>
+                <p>"Engage the Echo Shield," he commanded with a firm voice.</p>
+                <p>A net of energy began to weave itself around Earth.</p>
+                <p>The violet light covered the entire planet like a veil.</p>
+                <p>To the entity outside, Earth simply ceased to exist tonight.</p>
+                <p>The cosmic predator drifted past our system without stopping today.</p>`,
+                        `<h3>Page 16: The Silent Victory</h3>
+                <p>The world held its collective breath for forty-eight agonizing hours.</p>
+                <p>The shadow moved further towards the sun and then away.</p>
+                <p>It was seeking more vibrant and unprotected energy sources tonight.</p>
+                <p>We were saved by a signal from a dead world.</p>
+                <p>Celebrations erupted in the streets of every major city tonight.</p>
+                <p>Arthur and Sarah were hailed as the saviors of humanity.</p>
+                <p>But they knew the work was only just beginning today.</p>`,
+                        `<h3>Page 17: Living Under the Shield</h3>
+                <p>The Echo Shield became a permanent part of our planet.</p>
+                <p>It limited our ability to send radio signals into space.</p>
+                <p>Humanity had to learn to live in a "blackout" state.</p>
+                <p>Global communication was replaced by local, fiber-optic networks today now.</p>
+                <p>The night sky looked different through the violet energy field.</p>
+                <p>Stars seemed to twinkle with a new, protective light tonight.</p>
+                <p>We were hidden, but we were finally very safe today.</p>`,
+                        `<h3>Page 18: Studying the Entity</h3>
+                <p>Scientists used the data from the event to study predator.</p>
+                <p>They called it a "Cosmic Void," a non-biological energy eater.</p>
+                <p>It traveled the universe, consuming the warmth of young suns.</p>
+                <p>The Aethel-Delta message had described similar events in their past.</p>
+                <p>We were now part of a larger, cosmic history tonight.</p>
+                <p>The data revealed that many other civilizations had been consumed.</p>
+                <p>Earth was one of the fortunate few to survive it.</p>`,
+                        `<h3>Page 19: Sarah's New Mission</h3>
+                <p>Sarah decided to focus on sending a message back out.</p>
+                <p>"We should warn others, just like they warned us today."</p>
+                <p>She designed a "stealth" signal that used gravitational waves tonight.</p>
+                <p>These waves wouldn't be detectable by the Void entity predators.</p>
+                <p>They aimed the transmitter towards the next nearest star system.</p>
+                <p>Humanity was now the sender of the cosmic echo today.</p>
+                <p>They wanted to build a network of hidden, safe worlds.</p>`,
+                        `<h3>Page 20: Arthur's Reflection</h3>
+                <p>Arthur spent his evenings looking at the Aethel-Delta artifacts tonight.</p>
+                <p>A small, metallic disk was recovered from the transmitter site.</p>
+                <p>It contained images of the Aethel-Delta people and their cities.</p>
+                <p>They looked remarkably like us, but with luminous, gold skin.</p>
+                <p>He felt a deep connection to these ancient star travelers.</p>
+                <p>Their sacrifice had preserved a future they would never see.</p>
+                <p>The stars were no longer just lights, but neighbors today.</p>`,
+                        `<h3>Page 21: The Lunar Repository</h3>
+                <p>They built a massive archive on the moon's dark side.</p>
+                <p>It contained everything about human history, culture, and science today.</p>
+                <p>If Earth ever fell, our legacy would survive in space.</p>
+                <p>The repository was built within a deep, volcanic lunar tube.</p>
+                <p>It was impervious to radiation and most meteorite impacts today.</p>
+                <p>Arthur supervised the transfer of the most important digital files.</p>
+                <p>We were becoming our own version of the cosmic echo.</p>`,
+                        `<h3>Page 22: Change in Global Priorities</h3>
+                <p>The global energy crisis was solved by the moon lasers.</p>
+                <p>Humanity redirected its military budgets towards planetary defense and science.</p>
+                <p>War became a thing of the primitive past for us.</p>
+                <p>We were united by a common, celestial threat and hope.</p>
+                <p>The "Project Echo" generation was focused on sustainable, quiet growth.</p>
+                <p>The world was greener and much more peaceful than before.</p>
+                <p>The Void had inadvertently saved us from ourselves today now.</p>`,
+                        `<h3>Page 23: The Next Horizon</h3>
+                <p>A group of young scientists proposed a manned mission out.</p>
+                <p>They wanted to explore the ruins of the Aethel-Delta system.</p>
+                <p>Using the gravitational equations, they developed a faster-than-light engine.</p>
+                <p>It was a dangerous journey across the vast galactic ocean.</p>
+                <p>Arthur was too old to go, but he helped plan.</p>
+                <p>He felt a sense of pride as the "Andromeda I."</p>
+                <p>Humanity's first interstellar steps were taking place in his lifetime.</p>`,
+                        `<h3>Page 24: The Launch of Andromeda I</h3>
+                <p>The whole world watched as the ship left the orbit.</p>
+                <p>It was powered by a captured, miniature gravitational singularity tonight.</p>
+                <p>The ship disappeared in a flash of brilliant, blue light.</p>
+                <p>Arthur monitored the systems from the same Mountain Observatory tonight.</p>
+                <p>He felt like he was closing a circle today now.</p>
+                <p>The signal had come to him, and now we returned.</p>
+                <p>The echo was finally becoming a real, living voice today.</p>`,
+                        `<h3>Page 25: First Message from the Ship</h3>
+                <p>Eight months later, a signal arrived from the Andromeda system.</p>
+                <p>"The ruins are magnificent," the captain reported with awe tonight.</p>
+                <p>They found cities made of living crystal and floating gardens.</p>
+                <p>The Aethel-Delta technology was still partially functional and active tonight.</p>
+                <p>They also found survivors in deep, subterranean stasis chambers tonight.</p>
+                <p>The dead civilization was actually just sleeping and waiting today now.</p>
+                <p>Arthur was stunned by the news; hope was truly eternal.</p>`,
+                        `<h3>Page 26: Awakening the Ancient Ones</h3>
+                <p>The crew began the delicate process of waking the stasis.</p>
+                <p>It required a precise sequence of musical and electromagnetic pulses.</p>
+                <p>The first survivor to wake was a woman named Elara.</p>
+                <p>She spoke through a universal translator they had developed today.</p>
+                <p>"You heard our call," she said with a weak smile.</p>
+                <p>She thanked the humans for their courage and their persistence.</p>
+                <p>A billion-year-old bridge was finally crossed that morning today.</p>`,
+                        `<h3>Page 27: Galactic Knowledge Exchange</h3>
+                <p>Elara shared the vast knowledge of her ancient, wise people.</p>
+                <p>They had a deeper understanding of the "Void" entity predators.</p>
+                <p>They knew how to neutralize the predator's energy-eating core tonight.</p>
+                <p>This information was beamed back to Earth with great urgency.</p>
+                <p>We were no longer just hiding; we were becoming stronger.</p>
+                <p>A new era of galactic cooperation was beginning to bloom.</p>
+                <p>Humanity and Aethel-Delta were now partners in the stars.</p>`,
+                        `<h3>Page 28: Designing the Counter-Weapon</h3>
+                <p>Scientists on Earth and Andromeda worked together on a project.</p>
+                <p>They wanted to build an "Energy Pulse Generator" for defense.</p>
+                <p>It could sever the Void entity's connection to our sun.</p>
+                <p>The project required materials that only existed in dead stars.</p>
+                <p>Missions were sent to nearby white dwarfs to harvest matter.</p>
+                <p>The complexity of the project was beyond anything ever attempted.</p>
+                <p>But the collective intelligence of two species was formidable today.</p>`,
+                        `<h3>Page 29: The Return of the Shadow</h3>
+                <p>Long-range sensors detected a second Void entity entering our sector.</p>
+                <p>This one was larger and moving significantly faster than first.</p>
+                <p>The shield alone wouldn't be enough to repel this monster.</p>
+                <p>Arthur and Sarah supervised the final assembly of the Pulse.</p>
+                <p>"We have only one shot at this," Sarah warned tonight.</p>
+                <p>The generator was mounted on the lunar base for stability.</p>
+                <p>The whole solar system was now a battlefield of light.</p>`,
+                        `<h3>Page 30: The Final Confrontation</h3>
+                <p>The Void entity reached the orbit of Jupiter and paused.</p>
+                <p>It began to extend dark, energy-eating tendrils towards the sun.</p>
+                <p>Arthur gave the command to fire the Pulse Generator tonight.</p>
+                <p>A beam of pure, coherent white light crossed the system.</p>
+                <p>It struck the entity's core with tremendous, focused planetary power.</p>
+                <p>The Void shrieked in an electromagnetic frequency we could hear.</p>
+                <p>It fragmented into harmless, inert cosmic dust within minutes tonight.</p>`,
+                        `<h3>Page 31: The Galactic Council</h3>
+                <p>The victory was shared across the entire known galaxy tonight.</p>
+                <p>Other hidden civilizations began to reveal themselves to us today.</p>
+                <p>A Galactic Council was formed to maintain peace and safety.</p>
+                <p>Earth was given a permanent seat on the High Council.</p>
+                <p>Humanity was no longer a lonely, primitive species on one.</p>
+                <p>We were part of a vibrant, interstellar community of many.</p>
+                <p>Arthur felt his life's work had finally reached fulfillment today.</p>`,
+                        `<h3>Page 32: Elara's Visit to Earth</h3>
+                <p>Elara traveled to Earth to meet the people who saved.</p>
+                <p>She was amazed by our green forests and blue oceans.</p>
+                <p>"Your planet is a jewel in the dark," she remarked.</p>
+                <p>She visited the Mountain Observatory and met Arthur in person.</p>
+                <p>They sat together and looked at the Andromeda star today.</p>
+                <p>A friendship between stars was a beautiful and powerful thing.</p>
+                <p>She brought a gift: a seed from the crystal gardens.</p>`,
+                        `<h3>Page 33: The Crystal Garden of Earth</h3>
+                <p>The seed was planted in the courtyard of the observatory.</p>
+                <p>It grew into a tree that glowed with starlight tonight.</p>
+                <p>Its leaves whispered with the voices of the Aethel-Delta people.</p>
+                <p>It became a symbol of the enduring bond between worlds.</p>
+                <p>Arthur spent his retirement years caring for the star tree.</p>
+                <p>People from all over the world came to visit it.</p>
+                <p>The observatory was now a place of pilgrimage and history.</p>`,
+                        `<h3>Page 34: Sarah's Scientific Legacy</h3>
+                <p>Sarah became the director of the Interstellar Science Institute tonight.</p>
+                <p>She authored the "Unified Theory of Cosmic Life" for students.</p>
+                <p>Her work paved the way for peaceful contact with species.</p>
+                <p>She received the Galactic Peace Prize for her outstanding efforts.</p>
+                <p>She never forgot the nights spent decoding the first signal.</p>
+                <p>"The universe is full of friends we haven't met," she.</p>
+                <p>Her legacy was a world without fear of the dark.</p>`,
+                        `<h3>Page 35: The New Generation of Explorers</h3>
+                <p>Children in schools now learned Galactic History and Xeno-Biology today now.</p>
+                <p>They dreamt of traveling to distant nebulae and alien worlds.</p>
+                <p>Space travel was as common as taking a bus tonight.</p>
+                <p>The "echo" had become a loud, vibrant, and multi-cultural choir.</p>
+                <p>Humanity was thriving in its new, cosmic and safe home.</p>
+                <p>Arthur watched the shuttle launches with a smile of peace.</p>
+                <p>The future was more brilliant than he ever dared imagine.</p>`,
+                        `<h3>Page 36: A Message from the Far Rim</h3>
+                <p>A new signal arrived from the edge of the galaxy.</p>
+                <p>This one was different, full of music and joyful laughter.</p>
+                <p>It was an invitation to a galactic festival of arts.</p>
+                <p>Humanity was asked to showcase our unique music and painting.</p>
+                <p>We were being recognized for our creativity and our spirit.</p>
+                <p>Arthur felt that this was the truest form of contact.</p>
+                <p>Not through science or defense, but through the shared soul.</p>`,
+                        `<h3>Page 37: The Art of Humanity</h3>
+                <p>Artists from around the globe prepared for the galactic show.</p>
+                <p>They created digital sculptures that could be seen in space.</p>
+                <p>Our music was sent out as a pulse of light.</p>
+                <p>The galaxy responded with a wave of celestial, shimmering applause.</p>
+                <p>We discovered that every species had its own unique beauty.</p>
+                <p>Diversity was the greatest treasure of the entire universe tonight.</p>
+                <p>The Void entity had tried to consume light, but failed.</p>`,
+                        `<h3>Page 38: The End of the Void</h3>
+                <p>With the new technology, the Void entities were slowly neutralized.</p>
+                <p>They were transformed into harmless, small nebula clouds of gas.</p>
+                <p>The galaxy was finally free from the ancient, dark predator.</p>
+                <p>The "The Echo of the Stars" was a song of.</p>
+                <p>Aethel-Delta and Humanity had led the way to this peace.</p>
+                <p>Arthur felt a sense of cosmic justice in this outcome.</p>
+                <p>The light had finally conquered the deep and hungry dark.</p>`,
+                        `<h3>Page 39: Arthur's Final Lecture</h3>
+                <p>Arthur gave a final lecture at the Galactic University tonight.</p>
+                <p>"The stars are not just burning gas; they are stories."</p>
+                <p>He urged the students to never stop listening to silence.</p>
+                <p>"There is always something out there, waiting for a friend."</p>
+                <p>The hall was filled with hundreds of different alien species.</p>
+                <p>They all stood and applauded the man who first listened.</p>
+                <p>It was a moment of profound, shared human and alien.</p>`,
+                        `<h3>Page 40: The Library of Aethel-Delta</h3>
+                <p>The underground library in the Andromeda system was fully restored.</p>
+                <p>It was now the center of all galactic knowledge today.</p>
+                <p>Arthur's journal was placed in the central crystal display case.</p>
+                <p>He was the first human to be immortalized in history.</p>
+                <p>The library was open to all species across the universe.</p>
+                <p>It was a place of eternal learning and quiet reflection.</p>
+                <p>The echo of the stars was preserved for all eternity.</p>`,
+                        `<h3>Page 41: The Voyage of the Eternal</h3>
+                <p>A new ship, the 'Eternal', was built for long-term exploration.</p>
+                <p>It would travel to other galaxies beyond our own today.</p>
+                <p>Its crew was a mixture of humans and Aethel-Delta scientists.</p>
+                <p>They carried the "Warning from the Past" as a guide.</p>
+                <p>They wanted to ensure that no other world suffered alone.</p>
+                <p>The voyage would last for hundreds of thousands of years.</p>
+                <p>But time was no longer an obstacle for the sleepers.</p>`,
+                        `<h3>Page 42: The Golden Age</h3>
+                <p>Historians called this period the "Golden Age of the Galaxy."</p>
+                <p>Peace flourished, and knowledge flowed like a great, warm river.</p>
+                <p>New technologies made life easy for every living sentient being.</p>
+                <p>Hunger and disease were eliminated across a thousand different worlds.</p>
+                <p>Arthur lived to see the beginning of this wonderful era.</p>
+                <p>He felt incredibly lucky to have participated in its birth.</p>
+                <p>The midnight signal was the most important event in history.</p>`,
+                        `<h3>Page 43: A Quiet Evening</h3>
+                <p>Arthur sat on his porch, watching the star tree glow.</p>
+                <p>The air was cool and smelled of mountain pine needles.</p>
+                <p>Sarah visited him with a bottle of lunar sparkling wine.</p>
+                <p>"We did it, Arthur. We really did it," she said.</p>
+                <p>They toasted to the stars and to the Aethel-Delta people.</p>
+                <p>The silence of the night was no longer scary tonight.</p>
+                <p>It was full of the whispers of many distant friends.</p>`,
+                        `<h3>Page 44: The Legacy of Signal</h3>
+                <p>The original signal recording was played in every school annually.</p>
+                <p>It was a reminder of our humble beginnings and curiosity.</p>
+                <p>It taught children that one person can change the world.</p>
+                <p>Arthur's name was synonymous with discovery and also with braveness.</p>
+                <p>He remained a modest and very kind man until end.</p>
+                <p>He often visited the local schools to tell his story.</p>
+                <p>His eyes still sparkled when he talked about the telescope.</p>`,
+                        `<h3>Page 45: The Star Seedlings</h3>
+                <p>The star tree produced small, glowing seeds every ten years.</p>
+                <p>These were sent to other planets as symbols of friendship.</p>
+                <p>Soon, there were star trees on every world in council.</p>
+                <p>They formed a biological communication network across the vast space.</p>
+                <p>The trees pulsed in unison with the heart of galaxy.</p>
+                <p>Arthur felt that nature and technology were finally perfectly unified.</p>
+                <p>The universe was becoming a single, living and breathing organism.</p>`,
+                        `<h3>Page 46: The Final Mystery</h3>
+                <p>One mystery remained: who had created the Void entity predators?</p>
+                <p>Arthur and Elara spent their final years researching this question.</p>
+                <p>They found evidence of an even older, dark civilization tonight.</p>
+                <p>But these creators were long gone, destroyed by their creation.</p>
+                <p>The Void was a lesson in the dangers of power.</p>
+                <p>Humanity and Aethel-Delta promised to never follow that path tonight.</p>
+                <p>Wisdom was more important than any weapon or any energy.</p>`,
+                        `<h3>Page 47: The Galactic Monument</h3>
+                <p>A massive monument was built in the center of galaxy.</p>
+                <p>It was made of the inert dust of the Void.</p>
+                <p>It depicted two hands reaching out across a vast space.</p>
+                <p>One was human, the other was Aethel-Delta's luminous, long hand.</p>
+                <p>It stood as a reminder of the power of cooperation.</p>
+                <p>The inscription said: "Through the echo, we found our brothers."</p>
+                <p>Millions of people visited it every year to pay respects.</p>`,
+                        `<h3>Page 48: The Sunset of a Legend</h3>
+                <p>Arthur peacefully passed away in his sleep at the observatory.</p>
+                <p>The star tree glowed with a brilliant, golden and white light.</p>
+                <p>His spirit was said to have joined the cosmic echo.</p>
+                <p>The whole galaxy observed a minute of complete, absolute silence.</p>
+                <p>Sarah scattered his ashes among the roots of the tree.</p>
+                <p>"Rest in peace, old friend. You are finally home now."</p>
+                <p>His story was finished, but the echo continued for forever.</p>`,
+                        `<h3>Page 49: The Eternal Symphony</h3>
+                <p>The signal from Andromeda was still repeating in the deep.</p>
+                <p>But now it was joined by a thousand other voices.</p>
+                <p>The galaxy was a symphony of light and beautiful music.</p>
+                <p>No world would ever be alone in the dark again.</p>
+                <p>The echo of the stars was the heartbeat of life.</p>
+                <p>It carried the stories of the past into the future.</p>
+                <p>We were all part of the same, magnificent cosmic song.</p>`,
+                        `<h3>Page 50: The Final Word</h3>
+                <p>The stars are watching over us with their ancient eyes.</p>
+                <p>The galaxy is a book, and we are its authors.</p>
+                <p>Keep listening, keep exploring, and keep dreaming of the light.</p>
+                <p>The mystery of the universe is just getting started now.</p>
+                <p>The echo never ends; it just becomes a part tonight.</p>
+                <p>Thank you for traveling to the stars with us today.</p>
+                <p>May your path be guided by the light of friends.</p>`
+                ]
+        }
+);
+window.BOOK_DATA["B2"].push(
+        {
+                title: "The Ancient Architect",
+                author: "Silas Vane",
+                level: "B2",
+                cover: "🏛️",
+                color: "#8e44ad",
+                description: "A deep dive into the mind of a man who built a city that defies gravity and logic.",
+                pages: [
+                        `<h3>Page 1: The Blueprint of Infinity</h3>
+                <p>Caspian stood before the colossal obsidian gates of the Citadel today.</p>
+                <p>As the Chief Architect, he possessed the forbidden blueprints of eternity.</p>
+                <p>The parchment was made of sun-bleached dragon-scale, incredibly durable and soft.</p>
+                <p>Every line hummed with a subtle, subsonic frequency that vibrated tonight.</p>
+                <p>It wasn't just a building; it was a living, breathing machine tonight.</p>
+                <p>The city was designed to harness the raw power of gravity.</p>
+                <p>Caspian felt the immense responsibility of maintaining this fragile, complex balance.</p>`,
+                        `<h3>Page 2: Defying the Laws of Physics</h3>
+                <p>The Citadel's spires hovered gracefully above the swirling, purple toxic clouds.</p>
+                <p>They were tethered by invisible filaments of pure, concentrated magnetic force.</p>
+                <p>Visitors were often overwhelmed by the sheer scale of the engineering tonight.</p>
+                <p>"How does it stay up?" they would ask with wide eyes.</p>
+                <p>Caspian would smile and explain the concept of "Static Levitation" today.</p>
+                <p>It was a secret passed down through generations of the Vane family.</p>
+                <p>But today, he noticed a minute, terrifying fluctuation in the core tonight.</p>`,
+                        `<h3>Page 3: The Core's Secret</h3>
+                <p>He descended into the Subterranean engine room, miles below the surface today.</p>
+                <p>The atmosphere was thick with the scent of ozone and ancient oil.</p>
+                <p>The Pulse Reactor was the heart of the entire floating city tonight.</p>
+                <p>It hummed with a deep, baritone sound that felt like thunder tonight.</p>
+                <p>A small, luminous crack had appeared on the primary containment vessel today.</p>
+                <p>Caspian's blood ran cold as he realized the potential global consequences tonight.</p>
+                <p>A failure here would mean the immediate collapse of the Citadel tonight.</p>`,
+                        `<h3>Page 4: The Chancellor's Denial</h3>
+                <p>Caspian rushed to the High Council to deliver the urgent news today.</p>
+                <p>Chancellor Malakai sat upon his throne of polished ivory and gold today.</p>
+                <p>"The core is stable, Caspian. You are simply overreacting to shadows."</p>
+                <p>Malakai was more concerned with the upcoming Centennial Jubilee festival tonight.</p>
+                <p>He dismissed Caspian's concerns as the "paranoia of an aging builder."</p>
+                <p>Caspian left the council chambers with a heavy, sinking feeling tonight.</p>
+                <p>The politics of the city were becoming as unstable as the reactor.</p>`,
+                        `<h3>Page 5: Seeking Forbidden Knowledge</h3>
+                <p>He knew he needed the scrolls of the First Architect, Elara today.</p>
+                <p>They were locked within the Vault of Whispers, protected by riddles tonight.</p>
+                <p>No one had entered the vault for over three hundred years tonight.</p>
+                <p>Caspian used his master key, a relic of his noble ancestors tonight.</p>
+                <p>The doors groaned as they opened, revealing a room of light tonight.</p>
+                <p>Thousands of crystal spheres floated in the air, containing living memories tonight.</p>
+                <p>He searched for the sphere labeled "The Equilibrium Protocol" with haste today.</p>`,
+                        `<h3>Page 6: The Memory of Elara</h3>
+                <p>He touched the sphere and was instantly transported into Elara's mind today.</p>
+                <p>He saw the city being built from the dust of stars today.</p>
+                <p>"The city is a mirror of the soul," Elara's voice echoed tonight.</p>
+                <p>She explained that the reactor was powered by the city's collective harmony.</p>
+                <p>The crack wasn't a mechanical failure, but a spiritual one today.</p>
+                <p>The greed and corruption of the High Council were poisoning the light.</p>
+                <p>Caspian gasped as the memory faded, leaving him in the cold tonight.</p>`,
+                        `<h3>Page 7: The Shadow Architect</h3>
+                <p>Returning to his workshop, he found his apprentice, Jace, acting strangely tonight.</p>
+                <p>Jace was a brilliant but ambitious young man from the slums today.</p>
+                <p>He was studying a dark, forbidden version of the Citadel's blueprints tonight.</p>
+                <p>"This city could be even greater if we used the Void today."</p>
+                <p>Jace wanted to replace the Pulse Reactor with a Shadow engine today.</p>
+                <p>Caspian realized that Jace was the one causing the disharmony today.</p>
+                <p>The boy was obsessed with power, regardless of the terrible cost tonight.</p>`,
+                        `<h3>Page 8: The Confrontation</h3>
+                <p>"Stop this madness, Jace! You will destroy us all tonight!"</p>
+                <p>Jace turned, his eyes glowing with a faint, malevolent purple light tonight.</p>
+                <p>"The old ways are dying, Master. It's time for the Shadow."</p>
+                <p>He brandished a crystalline dagger, a conduit for the Void's energy tonight.</p>
+                <p>A fight erupted in the workshop, amidst floating gears and maps today.</p>
+                <p>Jace was faster, but Caspian knew every secret of the room tonight.</p>
+                <p>He managed to disarm the boy, but Jace escaped into shadows tonight.</p>`,
+                        `<h3>Page 9: The Gathering Storm</h3>
+                <p>The sky over the Citadel turned a bruised, angry shade of crimson.</p>
+                <p>Unnatural lightning crackled between the floating spires, illuminating the city tonight.</p>
+                <p>The people were terrified, sensing the shift in the city's energy tonight.</p>
+                <p>Caspian knew he had very little time to repair the reactor today.</p>
+                <p>He needed a "Harmonic Catalyst," a rare mineral found only in the peaks.</p>
+                <p>He prepared for a dangerous trek into the Unreachable Mountains tonight.</p>
+                <p>The survival of the Citadel depended on his success or failure tonight.</p>`,
+                        `<h3>Page 10: The Mountain's Trial</h3>
+                <p>The climb was treacherous, with winds that could blow a man away.</p>
+                <p>Caspian fought against the elements, his determination stronger than fear today.</p>
+                <p>He encountered a Sphinx of Stone guarding the entrance to the mine today.</p>
+                <p>"What is built but never finished?" the Sphinx asked with a rumble.</p>
+                <p>Caspian thought of his city and replied, "The soul of man今天."</p>
+                <p>The Sphinx nodded and let him pass into the glowing cavern tonight.</p>
+                <p>The Harmonic Catalyst was there, shimmering with a pure, white light tonight.</p>`,
+                        `<h3>Page 11: The Descent into Darkness</h3>
+                <p>Caspian returned to the engine room, only to find it under siege tonight.</p>
+                <p>Jace had returned with a group of Shadow Cultists from the slums tonight.</p>
+                <p>They were attempting to stabilize the Shadow engine within the primary core tonight.</p>
+                <p>The room was a battlefield of light and absolute, devouring darkness tonight.</p>
+                <p>"You're too late, Caspian! The Shadow is already integrated into the core!"</p>
+                <p>The reactor was beginning to emit a terrifying, soul-piercing scream today.</p>
+                <p>The Citadel began to tilt, its magnetic tethers snapping like threads tonight.</p>`,
+                        `<h3>Page 12: The Act of Sacrifice</h3>
+                <p>Caspian knew there was only one way to stop the Void's growth tonight.</p>
+                <p>He had to manually inject the Catalyst into the reactor's heart today.</p>
+                <p>But the radiation would be fatal to any human who entered tonight.</p>
+                <p>He looked at his city, the masterpiece he had spent his life today.</p>
+                <p>He didn't hesitate; he plunged into the blinding, white-hot core tonight.</p>
+                <p>The pain was beyond description, like being torn apart by stars today.</p>
+                <p>But he felt the reactor stabilizing, the Shadow being pushed back tonight.</p>`,
+                        `<h3>Page 13: The Transformation</h3>
+                <p>Caspian didn't die; instead, his physical body was completely transformed tonight.</p>
+                <p>He became a being of pure energy, a living part of the Citadel tonight.</p>
+                <p>He could see through every stone, hear every whisper in the streets today.</p>
+                <p>He was the city, and the city was him, forever now tonight.</p>
+                <p>Jace and the cultists were vaporized by the sudden surge of light tonight.</p>
+                <p>The Citadel leveled itself, its spires glowing with a new brilliance today.</p>
+                <p>The crisis was over, but the architect was lost and found tonight.</p>`,
+                        `<h3>Page 14: The New Citadel</h3>
+                <p>The city changed after Caspian's transformation; it became a utopia today.</p>
+                <p>Corruption vanished, replaced by a sense of collective purpose and harmony tonight.</p>
+                <p>Caspian guided the people through subtle shifts in the city's light tonight.</p>
+                <p>He was a silent guardian, a legend that walked the streets invisible tonight.</p>
+                <p>Chancellor Malakai was removed from power by the awakened, inspired people today.</p>
+                <p>The Citadel became a beacon of hope for all the surrounding lands tonight.</p>
+                <p>The Ancient Architect's legacy was finally secured in the stars tonight.</p>`,
+                        `<h3>Page 15: The Call of the Outer Realms</h3>
+                <p>Caspian sensed other floating cities in the distant, unexplored horizon today.</p>
+                <p>Some were failing, their cores poisoned by the same greed tonight.</p>
+                <p>He decided to send "Architectural Emissaries" to help them recover today.</p>
+                <p>He trained a new generation of builders in the Way of Harmony today.</p>
+                <p>The world was larger than the Citadel, it was a galaxy tonight.</p>
+                <p>His work was no longer about stone, but about the spirit tonight.</p>
+                <p>The journey had only just begun for the eternal, light architect tonight.</p>`,
+                        `<h3>Page 16: The Arrival of the Sky-Sailors</h3>
+                <p>A fleet of wooden airships arrived from the Southern Continent tonight.</p>
+                <p>They were manned by the Sky-Sailors, explorers of the great blue tonight.</p>
+                <p>They brought news of a "Clockwork King" who was conquering the world tonight.</p>
+                <p>His armies of steam-powered giants were unstoppable and very cruel tonight.</p>
+                <p>Caspian watched through the eyes of the Citadel's highest spire tonight.</p>
+                <p>He knew the conflict with the Clockwork Realm was now inevitable tonight.</p>
+                <p>Technology without soul was the greatest threat to his new peace today.</p>`,
+                        `<h3>Page 17: Preparing for Aerial War</h3>
+                <p>The Citadel was not built for war, but for the beauty tonight.</p>
+                <p>Caspian designed defensive shields made of refracted, solid sun-light tonight.</p>
+                <p>The citizens were trained to operate the magnetic pulse cannons tonight.</p>
+                <p>He felt a deep sadness at the necessity of the violence today.</p>
+                <p>"We protect the light, we do not conquer," he whispered tonight.</p>
+                <p>The Sky-Sailors offered their fleet for the upcoming aerial battle today.</p>
+                <p>A global alliance was forming against the relentless Clockwork King tonight.</p>`,
+                        `<h3>Page 18: The King's Ultimatum</h3>
+                <p>A massive, steam-emitting messenger bird arrived at the Citadel today.</p>
+                <p>It played a recording of the Clockwork King's cold, metallic voice tonight.</p>
+                <p>"Surrender your blueprints of infinity, or be grounded forever tonight."</p>
+                <p>The King wanted the secret of gravity to power his machines tonight.</p>
+                <p>The High Council, now led by the wise Lady Aris tonight, refused today.</p>
+                <p>"The Citadel belongs to the air, not to your gears," she.</p>
+                <p>The bird self-destructed, leaving a cloud of black, oily smoke today.</p>`,
+                        `<h3>Page 19: The Battle of the Clouds</h3>
+                <p>The Clockwork fleet appeared, thousands of metal monsters in the sky tonight.</p>
+                <p>They fired harpoons of cold iron, attempting to drag the spires tonight.</p>
+                <p>The Citadel shimmered as its shields were activated for the first tonight.</p>
+                <p>Refracted light beams cut through the metal hulls like hot knives today.</p>
+                <p>Caspian coordinated the defense from the heart of the core reactor tonight.</p>
+                <p>It was a chaotic spectacle of steam, light, and falling debris tonight.</p>
+                <p>The Sky-Sailors fought bravely, their wooden ships dancing between giants tonight.</p>`,
+                        `<h3>Page 20: The Breach</h3>
+                <p>A massive "Drill-Ship" managed to pierce the lower gardens of Citadel today.</p>
+                <p>Steam-powered soldiers spilled out, their eyes cold glass and metal tonight.</p>
+                <p>They began to march towards the Pulse Reactor with mechanical precision tonight.</p>
+                <p>Aris led the city's defenders, using bows of concentrated energy tonight.</p>
+                <p>The gardens were being trampled by the heavy, clanking iron feet tonight.</p>
+                <p>Caspian felt the pain of the city as the garden was today.</p>
+                <p>He decided to manifest a physical projection to help his people today.</p>`,
+                        `<h3>Page 21: The Architect Manifests</h3>
+                <p>A giant figure of pure, white light appeared in the gardens today.</p>
+                <p>It was Caspian, his form radiating a terrifying, divine heat tonight.</p>
+                <p>With a wave of his hand, he disabled the steam soldiers tonight.</p>
+                <p>Their gears melted, their boilers exploded in a cloud of today.</p>
+                <p>He moved through the battlefield like a vengeful, ancient star tonight.</p>
+                <p>The Drill-Ship was pushed back into the void with immense force tonight.</p>
+                <p>His presence turned the tide of the ground battle instantly today.</p>`,
+                        `<h3>Page 22: The King's Dreadnought</h3>
+                <p>The Clockwork King himself arrived in the 'Omega', a city-sized ship tonight.</p>
+                <p>It was a monstrosity of black steel and roaring, dark furnaces today.</p>
+                <p>It emitted a frequency that neutralized the Citadel's magnetic field today.</p>
+                <p>The floating city began to lose altitude, sinking towards the clouds tonight.</p>
+                <p>Panic spread as the spires groaned under the sudden, heavy weight tonight.</p>
+                <p>Caspian focused all his energy on maintaining the primary reactor tonight.</p>
+                <p>He was fighting a direct mind-battle with the Clockwork King tonight.</p>`,
+                        `<h3>Page 23: Into the Omega</h3>
+                <p>Caspian realized that the Omega had to be destroyed from within today.</p>
+                <p>He sent a small group of Sky-Sailors on a suicide mission today.</p>
+                <p>They were led by Kael, the bravest of the southern pilots tonight.</p>
+                <p>They used a stealth-shuttle designed by the new, young builders today.</p>
+                <p>They managed to enter the Omega's exhaust port in a daring tonight.</p>
+                <p>Inside, the ship was a nightmare of grinding gears and smoke today.</p>
+                <p>They searched for the central "Steam Core" to plant the bomb tonight.</p>`,
+                        `<h3>Page 24: The Steam Core</h3>
+                <p>The core was a massive, brass sphere filled with pressurized anger today.</p>
+                <p>It was protected by the King's personal guard of mechanical knights tonight.</p>
+                <p>A fierce battle ensued in the claustrophobic, metal heart of Omega tonight.</p>
+                <p>Kael was wounded, but he managed to set the light-charge timer today.</p>
+                <p>"For the Citadel and for the blue sky!" he shouted tonight.</p>
+                <p>The explorers escaped just seconds before the charge detonated with power tonight.</p>
+                <p>A chain reaction began to tear the Omega apart from inside tonight.</p>`,
+                        `<h3>Page 25: The Fall of the King</h3>
+                <p>The Omega exploded in a spectacular fountain of fire and debris tonight.</p>
+                <p>The Clockwork King's dream of conquest died with his massive ship tonight.</p>
+                <p>The remaining metal ships retreated in complete, disorganized terror tonight.</p>
+                <p>The Citadel's magnetic field returned, stabilized by Caspian's immense tonight.</p>
+                <p>The city rose back to its rightful place above the toxic clouds today.</p>
+                <p>The Sky-Sailors cheered, their wooden ships circling the grateful Citadel tonight.</p>
+                <p>The threat of the steam realm was over, for now today.</p>`,
+                        `<h3>Page 26: The Cost of Peace</h3>
+                <p>The lower gardens were a ruin, filled with metal and ash today.</p>
+                <p>Many brave defenders were lost in the brutal aerial battle tonight.</p>
+                <p>Caspian returned to the reactor, his energy form flickering and weak tonight.</p>
+                <p>The effort of manifesting and fighting had taken a toll tonight.</p>
+                <p>He realized that the city needed to be rebuilt, but different today.</p>
+                <p>He incorporated the captured steam technology into the city's core today.</p>
+                <p>The new Citadel would be a fusion of magic and machinery today.</p>`,
+                        `<h3>Page 27: The Library of Gears</h3>
+                <p>They built a library to store the knowledge of the Clockwork today.</p>
+                <p>They wanted to understand the "why" behind the King's madness tonight.</p>
+                <p>They discovered that the King was also a victim of the Shadow tonight.</p>
+                <p>The Void had possessed his gears, turning his ambition into hate tonight.</p>
+                <p>Wisdom was the best defense against the soul-eating dark today.</p>
+                <p>Caspian spoke to his people through the library's crystal walls tonight.</p>
+                <p>"Technology is a tool, not a master," he taught them today.</p>`,
+                        `<h3>Page 28: Discovering the Sea Realm</h3>
+                <p>The Sky-Sailors reported a new continent hidden beneath the oceans сегодня.</p>
+                <p>It was inhabited by the Mer-Folk, masters of the deep blue tonight.</p>
+                <p>They lived in cities of illuminated coral and pressurized glass today.</p>
+                <p>Caspian felt a call from the depths, a rhythmic, aquatic song tonight.</p>
+                <p>He decided to build a "Sub-Aquatic Elevator" to reach them today.</p>
+                <p>The Citadel was expanding its reach from sky to sea today.</p>
+                <p>He wanted to unite all the realms of the world together today.</p>`,
+                        `<h3>Page 29: The Coral Palace</h3>
+                <p>The elevator reached the ocean floor after a long, silent descent today.</p>
+                <p>Caspian and Aris stepped out into a world of bioluminescent today.</p>
+                <p>They were greeted by Queen Thalassa of the Mer-Folk tonight.</p>
+                <p>Her skin was like shimmering pearls, her hair like flowing seaweed tonight.</p>
+                <p>"The sky-beings have finally arrived," she said with a musical tonight.</p>
+                <p>She showed them the Coral Palace, a masterpiece of organic growth tonight.</p>
+                <p>The Mer-Folk were suspicious of the "dry-landers" and their machines today.</p>`,
+                        `<h3>Page 30: The Tide of Darkness</h3>
+                <p>Thalassa explained that the Shadow was also affecting the deep oceans tonight.</p>
+                <p>The coral was dying, turning into black, brittle stone today.</p>
+                <p>A "Kraken of Void" was awakening in the darkest, deepest trench tonight.</p>
+                <p>It was devouring the sea-life and poisoning the water with hate tonight.</p>
+                <p>Caspian realized that the Shadow was a global, multi-dimensional infection tonight.</p>
+                <p>He offered the Citadel's light-technology to heal the dying coral tonight.</p>
+                <p>The alliance between Sky and Sea was forged in the dark today.</p>`,
+                        `<h3>Page 31: Healing the Ocean</h3>
+                <p>Caspian developed a "Luminous Pulse" that echoed through the water today.</p>
+                <p>It carried the frequency of harmony to the deepest trenches tonight.</p>
+                <p>The black coral began to glow with a faint, green light today.</p>
+                <p>It was a slow and exhausting process for the energy-architect today.</p>
+                <p>The Kraken attacked the Coral Palace in a desperate, final surge tonight.</p>
+                <p>Its tentacles were made of liquid shadow and cold, black ice tonight.</p>
+                <p>The Mer-Folk fought with spears of lightning and sonic waves tonight.</p>`,
+                        `<h3>Page 32: The Kraken's Defeat</h3>
+                <p>Caspian channeled the Citadel's entire power into a single beam today.</p>
+                <p>It pierced the ocean's depths, striking the Kraken's dark heart tonight.</p>
+                <p>The monster evaporated into a cloud of harmless, black ink today.</p>
+                <p>The water cleared, the sun's light reaching the bottom for first tonight.</p>
+                <p>Thalassa thanked Caspian with a gift: the 'Eternal Pearl' of sea tonight.</p>
+                <p>It was a source of endless, clean water and energy today.</p>
+                <p>The bond between realms was now unbreakable and very sacred今天.</p>`,
+                        `<h3>Page 33: The Grand Convergence</h3>
+                <p>Caspian organized a meeting of all the world's leaders today.</p>
+                <p>Sky-Sailors, Mer-Folk, and the new Clockwork Builders gathered tonight.</p>
+                <p>They met at the Citadel's Peak, above the toxic clouds today.</p>
+                <p>"We are one world, divided by height and by depth today."</p>
+                <p>Caspian proposed a "Global Harmony Network" to protect the planet today.</p>
+                <p>Each realm would share its unique technology and its wisdom today.</p>
+                <p>The planet was healing, the toxic clouds slowly disappearing into blue tonight.</p>`,
+                        `<h3>Page 34: The Architect's Rest</h3>
+                <p>Caspian's work was finally approaching a state of completion today.</p>
+                <p>The world was safe, united, and flourishing in the new light tonight.</p>
+                <p>He returned to the reactor core, his energy form very stable tonight.</p>
+                <p>He decided to enter a "Meditative Sleep" for a long century today.</p>
+                <p>He would still be the city, but he would rest today.</p>
+                <p>He appointed Aris as the Eternal Guardian of the Citadel today.</p>
+                <p>"The architect sleeps, but the design remains," he whispered tonight.</p>`,
+                        `<h3>Page 35: A Century of Silence</h3>
+                <p>One hundred years passed in a dreamlike state for Caspian tonight.</p>
+                <p>He saw the world change through the city's stone eyes today.</p>
+                <p>Cities were built on the ground again, the air clean today.</p>
+                <p>The floating Citadel remained as a school of high wisdom today.</p>
+                <p>People came from everywhere to learn from the ancient builder today.</p>
+                <p>The records of his life were more than just history today.</p>
+                <p>He was a myth, a god of gears and starlight tonight.</p>`,
+                        `<h3>Page 36: The Unexpected Awakening</h3>
+                <p>A strange, alien frequency suddenly vibrated through the core tonight.</p>
+                <p>It wasn't from Earth, or from the Shadow Realm tonight.</p>
+                <p>It was a signal from the stars, a cold, mechanical call tonight.</p>
+                <p>Caspian woke from his sleep, his energy form surging with today.</p>
+                <p>A massive, metallic "Seed-Pod" had landed in the middle desert tonight.</p>
+                <p>It was emitting a terraforming gas that was changing the air today.</p>
+                <p>The era of the "Star-Builders" was about to begin today.</p>`,
+                        `<h3>Page 37: The Star-Builders' Arrival</h3>
+                <p>The Pod opened, revealing beings made of liquid silver and glass tonight.</p>
+                <p>They were the 'Aethel-Guardians', protectors of the galactic balance tonight.</p>
+                <p>They weren't invaders, but refugees from a dying star system today.</p>
+                <p>Their planet had been consumed by a "Galactic Void" monster today.</p>
+                <p>They sought a new home and wanted to help Earth today.</p>
+                <p>Caspian greeted them through the Citadel's primary light-system tonight.</p>
+                <p>The first inter-species contact was peaceful and full of hope today.</p>`,
+                        `<h3>Page 38: Sharing the Blueprints</h3>
+                <p>The Aethel-Guardians shared their knowledge of "Star-Steel" engineering today.</p>
+                <p>It was a thousand times lighter and stronger than obsidian today.</p>
+                <p>Caspian used it to rebuild the Citadel's aging, stone spires tonight.</p>
+                <p>The city became a masterpiece of crystalline and silver beauty today.</p>
+                <p>They built "Star-Ships" to explore the nearby moons and planets today.</p>
+                <p>Humanity was no longer confined to a single, small world today.</p>
+                <p>The designs of the Ancient Architect were going to space today.</p>`,
+                        `<h3>Page 39: The Void's Galactic Return</h3>
+                <p>The Aethel news was grim: the Galactic Void was follows today.</p>
+                <p>The black hole monster was moving towards our solar system tonight.</p>
+                <p>It wasn't just a shadow, but a hungry, cosmic vacuum today.</p>
+                <p>Caspian realized that his global alliance wasn't enough this tonight.</p>
+                <p>He needed to unite the entire solar system for defense tonight.</p>
+                <p>He started the "Project Eclipse," a barrier of planetary light today.</p>
+                <p>The battle for Earth's existence was shifting to the stars tonight.</p>`,
+                        `<h3>Page 40: Building the Solar Shield</h3>
+                <p>Thousands of crystal satellites were launched into the sun's orbit today.</p>
+                <p>They were designed to harness the sun's energy for the shield tonight.</p>
+                <p>Caspian coordinated the project from the Citadel's highest peak today.</p>
+                <p>He was now a "Solar Architect," designing the safety of many tonight.</p>
+                <p>The effort was pushing his energy body to the absolute tonight.</p>
+                <p>He was becoming a star himself, his light reaching the moon today.</p>
+                <p>The Solar Shield was activated, a golden veil over the system tonight.</p>`,
+                        `<h3>Page 41: The Final Siege</h3>
+                <p>The Galactic Void arrived, a massive, swirling mouth of darkness tonight.</p>
+                <p>It attempted to swallow the sun's energy and the planets today.</p>
+                <p>The Solar Shield shimmered under the intense, dark pressure tonight.</p>
+                <p>Caspian felt every blow against the shield as a physical today.</p>
+                <p>"Stand firm, my children! Light will not be consumed tonight!"</p>
+                <p>He poured his entire essence into the Shield's core tonight.</p>
+                <p>The darkness was being repelled by the power of harmony tonight.</p>`,
+                        `<h3>Page 42: The Architect's Apotheosis</h3>
+                <p>To defeat the Void, Caspian had to become one with сегодня.</p>
+                <p>He left the Citadel and the Earth, moving into space tonight.</p>
+                <p>He expanded his energy form until it covered the entire sun tonight.</p>
+                <p>He was the Solar Shield, the eternal protector of his world tonight.</p>
+                <p>He struck the Void with a pulse of infinite, white light today.</p>
+                <p>The monster collapsed into itself, becoming a new, bright star today.</p>
+                <p>The solar system was safe, but Caspian was now everywhere tonight.</p>`,
+                        `<h3>Page 43: The Eternal Memory</h3>
+                <p>The Citadel remained as an empty, but glowing monument to today.</p>
+                <p>People could still feel Caspian's presence in the warm wind tonight.</p>
+                <p>He was the light in the morning, the stars at tonight.</p>
+                <p>A new era of interstellar peace and discovery began today now.</p>
+                <p>Aris led the High Council, continuing the Way of Harmony сегодня.</p>
+                <p>The blueprints of infinity were now the laws of the universe tonight.</p>
+                <p>The Ancient Architect was gone, but his city lived forever tonight.</p>`,
+                        `<h3>Page 44: The New World Order</h3>
+                <p>The terraforming of the surrounding planets was a great today.</p>
+                <p>Mars became a garden of red flowers and blue rivers today.</p>
+                <p>Venus was cooled by the Aethel-Guardian's advanced technology tonight.</p>
+                <p>Humanity lived across multiple worlds, united by the "Link of今天."</p>
+                <p>The Link allowed everyone to share their thoughts and peace today.</p>
+                <p>Conflict was a forgotten relic of the primitive, stone past today.</p>
+                <p>Every child was born with a spark of Caspian's light today.</p>`,
+                        `<h3>Page 45: The Galactic Library</h3>
+                <p>They built a library on the moon to store the galaxy tonight.</p>
+                <p>It contained the history of ten thousand different alien worlds today.</p>
+                <p>The Aethel-Guardians were the keepers of the ancient scrolls today.</p>
+                <p>Caspian's blueprints were the first volume in the collection today.</p>
+                <p>Knowledge was the light that kept the Void at bay tonight.</p>
+                <p>The galaxy was becoming a single, interconnected mind of today.</p>
+                <p>The dream of the First Architect was finally fully realized today.</p>`,
+                        `<h3>Page 46: A Message from the Future</h3>
+                <p>A signal arrived from a time beyond the current horizon tonight.</p>
+                <p>It was a message from the "Descendants of Light" in today.</p>
+                <p>"You have done well, ancestors. The galaxy is safe now today."</p>
+                <p>They explained that Earth was the cradle of the entire light tonight.</p>
+                <p>Caspian's sacrifice had saved not just the present, but future today.</p>
+                <p>A sense of profound accomplishment filled the hearts of everyone today.</p>
+                <p>The timeline was secured, the darkness was forever vanquished tonight.</p>`,
+                        `<h3>Page 47: The Final Spire</h3>
+                <p>They built one final spire on the Citadel, a needle of today.</p>
+                <p>It pointed towards the center of the galaxy, the source today.</p>
+                <p>It was a transmitter of hope, a beacon for any lost today.</p>
+                <p>Caspian's name was carved upon its base in every language today.</p>
+                <p>It was the tallest structure ever built by any civilization tonight.</p>
+                <p>It hummed with the same frequency as the First Blueprint tonight.</p>
+                <p>The cycle of construction was finally, truly complete today now.</p>`,
+                        `<h3>Page 48: The Passing of Aris</h3>
+                <p>Aris, the Eternal Guardian, passed away peacefully after three today.</p>
+                <p>She was buried within the gardens she had protected so well tonight.</p>
+                <p>Her spirit joined Caspian in the solar energy field tonight.</p>
+                <p>A new Guardian, a young girl named Lyra, was chosen сегодня.</p>
+                <p>She had the same curious eyes and strong heart as Aris tonight.</p>
+                <p>The continuity of the Citadel was a sacred, living chain today.</p>
+                <p>The history of the light was being written by new hands today.</p>`,
+                        `<h3>Page 49: The Eternal City</h3>
+                <p>The Citadel continued to float, its spires reaching for stars tonight.</p>
+                <p>It was more than a city; it was an idea of today.</p>
+                <p>An idea that beauty and harmony can conquer any dark tonight.</p>
+                <p>The Ancient Architect's city was the heart of the world tonight.</p>
+                <p>Thousands of visitors walked its stone paths every single day today.</p>
+                <p>They looked up at the sun and felt the architect's tonight.</p>
+                <p>The story of Caspian was the song of humanity's soul today.</p>`,
+                        `<h3>Page 50: The Final Blueprint</h3>
+                <p>The last page of the blueprints was finally decoded today now.</p>
+                <p>It didn't contain a building, but a single, simple word today.</p>
+                <p>"Love," was the foundation of the entire architectural design today.</p>
+                <p>Without love, the stones would fall and the light today.</p>
+                <p>Caspian had built his city upon the strongest force today.</p>
+                <p>The Final Blueprint was now etched into every human heart today.</p>
+                <p>Thank you for exploring the Citadel with the architect today.</p>`
+                ]
+        },
+        {
+                title: "The Whispering Woods",
+                author: "Elena Thorne",
+                level: "B2",
+                cover: "🌲",
+                color: "#27ae60",
+                description: "A botanist discovers that the ancient forest she studies is actually a sentient network of light and shadow.",
+                pages: [
+                        `<h3>Page 1: The Call of the Emerald</h3>
+                <p>Elena walked into the Emerald Woods, her notebook clutched tightly in hand today.</p>
+                <p>She was a botanist, obsessed with the legend of the "Whispering Trees" tonight.</p>
+                <p>The air was cool and smelled of damp Earth and ancient secrets tonight.</p>
+                <p>She found a massive Oak that seemed to pulse with a faint, green today.</p>
+                <p>It was the heart of the forest, according to the local mountain myths tonight.</p>
+                <p>Elena felt a strange, tingling sensation in her skin as she approached today.</p>
+                <p>The forest was much more than just a collection of plants today.</p>`,
+                        `<h3>Page 2: The Language of the Leaves</h3>
+                <p>As the wind picked up, the leaves began to rustle in a rhythmic tonight.</p>
+                <p>It didn't sound like ordinary wind; it sounded like a soft, collective whisper tonight.</p>
+                <p>Elena pulled out her recorder, hoping to capture the unusual, haunting melody today.</p>
+                <p>"Are you listening?" the wind seemed to ask in her mind tonight.</p>
+                <p>She froze, her heart hammering against her ribs like a trapped bird today.</p>
+                <p>The trees weren't just reacting to the wind; they were communicating together today.</p>
+                <p>She was the first human to ever notice the forest's subtle tonight.</p>`,
+                        `<h3>Page 3: The Secret Network</h3>
+                <p>She set up her sensors, connecting them to the deep, tangled underground tonight.</p>
+                <p>The data on her screen showed a complex, electrical web of energy today.</p>
+                <p>The trees were sharing nutrients and information across a vast, hidden today.</p>
+                <p>It was a biological internet, older than any human civilization on Earth tonight.</p>
+                <p>Elena spent the entire night mapping the signals, her eyes stinging today.</p>
+                <p>She realized that every tree was a node in a giant, living today.</p>
+                <p>The "Whispering Woods" was a single, conscious and very powerful today.</p>`,
+                        `<h3>Page 4: The Shadow in the Roots</h3>
+                <p>But something was wrong; a dark, cold energy was spreading through today.</p>
+                <p>The sensors detected a "Void Infection" eating away at the forest's today.</p>
+                <p>The beautiful, green light was being replaced by a brittle, black today.</p>
+                <p>The trees were screaming in a frequency that humans couldn't normally tonight.</p>
+                <p>Elena felt their pain in her own body, a sharp, cold today.</p>
+                <p>The corruption was coming from an old, abandoned mine on hill tonight.</p>
+                <p>She had to find the source and stop the spreading dark today.</p>`,
+                        `<h3>Page 5: The Forest's Guardian</h3>
+                <p>A massive, elk-like creature appeared from the swirling, white mountain tonight.</p>
+                <p>Its antlers were made of glowing wood, its eyes were pools of today.</p>
+                <p>It was the "Forest Guardian," a spirit of the green world tonight.</p>
+                <p>It bowed its head to Elena, recognizing her as a potential ally today.</p>
+                <p>"The dark comes from the deep," the Guardian's voice echoed tonight.</p>
+                <p>It offered to carry her to the mountain peaks to find today.</p>
+                <p>Elena climbed onto its mossy, soft back, her fear replaced by today.</p>`,
+                        `<h3>Page 6: The Peak of Echoes</h3>
+                <p>They reached the summit, where the wind was a roaring, frozen today.</p>
+                <p>The entrance to the mine was a jagged, black hole in the tonight.</p>
+                <p>Elena entered, her flashlight cutting through the thick, heavy and dark tonight.</p>
+                <p>The walls were covered in a strange, oily substance that smelled of tonight.</p>
+                <p>She heard the sound of mechanical gears grinding in the deep tonight.</p>
+                <p>The "Shadow Cultists" were using the mine to harvest the forest's tonight.</p>
+                <p>They were draining the life-force to power their dark, forbidden tonight.</p>`,
+                        `<h3>Page 7: The Alchemist's Betrayal</h3>
+                <p>To her horror, she found her former mentor, Professor Silas tonight.</p>
+                <p>He was the one leading the ritual, his eyes glowing with today.</p>
+                <p>"The forest is just a battery, Elena! Think of the power today!"</p>
+                <p>He had sold his soul to the Void for the secret of today.</p>
+                <p>Elena felt a deep, crushing sense of betrayal and very much tonight.</p>
+                <p>She confronted him, but his guards were numerous and very tonight.</p>
+                <p>She was captured and thrown into a cage of dark, cold tonight.</p>`,
+                        `<h3>Page 8: The Dream of the Oak</h3>
+                <p>While in the cage, Elena drifted into a deep, feverish tonight.</p>
+                <p>She saw the Great Oak again, its spirit reaching out to today.</p>
+                <p>"You are the catalyst, Elena. You must connect our light tonight."</p>
+                <p>The forest was giving her its final, desperate and very precious tonight.</p>
+                <p>Her skin began to glow with a soft, emerald and white today.</p>
+                <p>The metal bars of her cage melted away like wax tonight.</p>
+                <p>She wasn't just a botanist anymore; she was a conduit today.</p>`,
+                        `<h3>Page 9: The Battle for the Light</h3>
+                <p>Elena emerged from the shadows, her eyes radiating a brilliant today.</p>
+                <p>She channeled the energy of the Oak, striking the machines with tonight.</p>
+                <p>The cultists were thrown back by the sudden, overwhelming and bright tonight.</p>
+                <p>Silas laughed, unleashing a wave of liquid, black and cold today.</p>
+                <p>It was a clash of green light and absolute, devouring tonight.</p>
+                <p>The mine began to collapse under the immense and chaotic tonight.</p>
+                <p>Elena focused all her will on the forest's collective and warm tonight.</p>`,
+                        `<h3>Page 10: The Shadow's Retreat</h3>
+                <p>The green light proved stronger, purging the Void from the deep tonight.</p>
+                <p>Silas and his cultists vanished into a cloud of black today.</p>
+                <p>The machines were destroyed, their gears frozen and then completely tonight.</p>
+                <p>Elena collapsed, her energy spent, as the mine was today.</p>
+                <p>The Forest Guardian carried her back to the Emerald Woods tonight.</p>
+                <p>The trees hummed a song of victory and absolute and quiet today.</p>
+                <p>The dark was gone, but the forest was changed forever tonight.</p>`,
+                        `<h3>Page 11: The Healing Period</h3>
+                <p>Weeks passed, and Elena stayed in the forest to help today.</p>
+                <p>The black bark was slowly peeling away, revealing new, green tonight.</p>
+                <p>She used her knowledge of biology to accelerate the healing today.</p>
+                <p>She felt a deep, permanent connection to the network of tonight.</p>
+                <p>She could hear the thoughts of the squirrels and the tonight.</p>
+                <p>The forest was her family now, her home and her today.</p>
+                <p>She decided to never return to the city of many today.</p>`,
+                        `<h3>Page 12: The Whispering Secrets</h3>
+                <p>The trees began to share their ancient, cosmic and very tonight.</p>
+                <p>They told her stories of the "First Seed," which came today.</p>
+                <p>The woods were older than the moon, a relic of tonight.</p>
+                <p>Elena wrote everything down in her emerald-bound and large tonight.</p>
+                <p>She was the Librarian of the Woods, the keeper of today.</p>
+                <p>People from the nearby village began to visit her for today.</p>
+                <p>They called her the "Woods-Witch," with respect and then today.</p>`,
+                        `<h3>Page 13: The New Threat</h3>
+                <p>A group of "Industrial Pioneers" arrived with heavy and tonight.</p>
+                <p>They wanted to cut down the forest to build a tonight.</p>
+                <p>They didn't believe in sentient trees or spirits of today.</p>
+                <p>"It's just timber," their leader said, his cigar glowing tonight.</p>
+                <p>Elena tried to warn them, but they laughed at her tonight.</p>
+                <p>The first axe strike echoed through the woods like a tonight.</p>
+                <p>The forest didn't wait; it reacted with a sudden today.</p>`,
+                        `<h3>Page 14: The Forest Defends</h3>
+                <p>The ground shook, and massive roots erupted from the green tonight.</p>
+                <p>They crushed the machines and scattered the pioneers in today.</p>
+                <p>The trees didn't want to kill, but they wouldn't today.</p>
+                <p>A dense, magical fog rolled in, confusing the unwelcome tonight.</p>
+                <p>The pioneers fled, leaving their equipment behind in the tonight.</p>
+                <p>Elena watched from the canopy, her heart heavy but today.</p>
+                <p>The peace was preserved, but she knew they would tonight.</p>`,
+                        `<h3>Page 15: The Council of Green</h3>
+                <p>Elena realized that the forest needed a better way today.</p>
+                <p>She organized a "Council of Species," including the animals tonight.</p>
+                <p>They met under the Great Oak to discuss the future today.</p>
+                <p>"We must bridges to the human world," Elena tonight.</p>
+                <p>She wanted to show them the beauty and the today.</p>
+                <p>She began to write a book for the villagers tonight.</p>
+                <p>It was titled "The Whispering Woods: Our Shared and today."</p>`,
+                        `<h3>Page 16: The Bridge to the Village</h3>
+                <p>Elena walked to the edge of the woods, where the village began tonight.</p>
+                <p>She carried a basket of luminescent fruits and seeds of today.</p>
+                <p>The villagers were gathered in the square, their faces full of today.</p>
+                <p>"The forest wants to be your friend," Elena said with a tonight.</p>
+                <p>She showed them how to harvest the energy without hurting the tonight.</p>
+                <p>The Mayor was skeptical, but the children were fascinated by today.</p>
+                <p>They touched the glowing seeds and felt a spark of tonight.</p>`,
+                        `<h3>Page 17: The First Harvest</h3>
+                <p>The villagers began to use the forest's energy for their today.</p>
+                <p>The streetlights glowed with a soft, green and emerald tonight.</p>
+                <p>There was no more need for coal or dirty smoke in today.</p>
+                <p>The air in the village became as clean as the mountain tonight.</p>
+                <p>People felt healthier, stronger, and more connected to each today.</p>
+                <p>Elena watched from her tree-house, her heart full of tonight.</p>
+                <p>The partnership was working, but secrets still remained in today.</p>`,
+                        `<h3>Page 18: The Shadow's Ghost</h3>
+                <p>A cold wind blew through the village one night, stealing today.</p>
+                <p>The green lights flickered and then turned a pale, ghostly today.</p>
+                <p>Elena felt a familiar, sharp pain in her chest and today.</p>
+                <p>The Void wasn't fully gone; a "Echo of Silas" was tonight.</p>
+                <p>He was a spectral presence now, a ghost of his former tonight.</p>
+                <p>He was haunting the dreams of the villagers, spreading today.</p>
+                <p>Elena had to face this spiritual threat before it today.</p>`,
+                        `<h3>Page 19: The Dream-Walk</h3>
+                <p>Elena used a special, silver tea made from moon-flowers today.</p>
+                <p>She entered the "Dream-Realm," a landscape of shifting and tonight.</p>
+                <p>She found the villagers' dreams, which were being turned into tonight.</p>
+                <p>Silas stood in the center, a tower of shadow and today.</p>
+                <p>"You can't save them all, Elena! Fear is eternal tonight!"</p>
+                <p>He sent waves of nightmare-ravens to attack her and tonight.</p>
+                <p>Elena called upon the "Memory of the Oak" for tonight.</p>`,
+                        `<h3>Page 20: The Light of Innocence</h3>
+                <p>She wasn't alone in the dream; the village children were today.</p>
+                <p>Their pure, uncomplicated dreams were shields of bright today.</p>
+                <p>They surrounded Elena, their laughter a weapon against the tonight.</p>
+                <p>The Shadow-Silas began to shrink, his power fading in today.</p>
+                <p>"The children see the truth," Elena whispered with a tonight.</p>
+                <p>The nightmare shattered, replaced by a beautiful, golden today.</p>
+                <p>The Echo was silenced, and the villagers woke with today.</p>`,
+                        `<h3>Page 21: The Autumn Change</h3>
+                <p>Autumn arrived, and the forest turned into a sea of tonight.</p>
+                <p>The whispers were now deep and melodic, like a cello tonight.</p>
+                <p>The trees were preparing for their long, winter and today.</p>
+                <p>Elena gathered more seeds, storing them in the village today.</p>
+                <p>She taught the people how to survive the cold with today.</p>
+                <p>The connection was stronger now, a part of their daily tonight.</p>
+                <p>But a new geological event was brewing beneath the today.</p>`,
+                        `<h3>Page 22: The Tremor of the Earth</h3>
+                <p>A series of small earthquakes shook the mountain and the today.</p>
+                <p>The Great Oak's roots were being pulled by a deep tonight.</p>
+                <p>A "Magma Flow" was shifting, threatening to burn the tonight.</p>
+                <p>Elena and the Forest Guardian consulted the ancient and tonight.</p>
+                <p>"The Earth is restless," the elk-spirit said with a today.</p>
+                <p>They had to divert the lava before it reached the today.</p>
+                <p>It was a race against time and the heat of tonight.</p>`,
+                        `<h3>Page 23: The Root Barrier</h3>
+                <p>Elena asked the trees to grow their roots deep and tonight.</p>
+                <p>They created a "Living Dam" of wood and stone today.</p>
+                <p>It was a massive undertaking, requiring the energy of today.</p>
+                <p>The lava arrived, a river of orange and absolute tonight.</p>
+                <p>It hissed against the moisture of the roots, creating tonight.</p>
+                <p>The trees held firm, their magical sap protecting them from today.</p>
+                <p>The forest was a fortress against the planet's own tonight.</p>`,
+                        `<h3>Page 24: The Steam Explosion</h3>
+                <p>Suddenly, a massive burst of steam erupted from the deep today.</p>
+                <p>It pushed the lava back, but created a new, hot tonight.</p>
+                <p>The village was in danger of being scorched by the tonight.</p>
+                <p>Elena used her conduit powers to cool the air and today.</p>
+                <p>She channeled the moisture of the lake through her tonight.</p>
+                <p>The steam turned into a gentle, warm rain that today.</p>
+                <p>The danger passed, leaving the mountain quiet and today.</p>`,
+                        `<h3>Page 25: The Reward of Stone</h3>
+                <p>After the lava cooled, it turned into hard, black today.</p>
+                <p>Hidden within the stone were "Emerald Geodes" of great tonight.</p>
+                <p>The forest had turned the disaster into a gift for today.</p>
+                <p>The villagers used the emeralds to decorate their today.</p>
+                <p>The Woods were now wealthier than any city in the today.</p>
+                <p>Elena smiled, seeing the harmony between Earth and today.</p>
+                <p>The first half of the year was over, and peace tonight.</p>`,
+                        `<h3>Page 26: The Winter Sleep</h3>
+                <p>Snow began to fall, covering the forest in a white today.</p>
+                <p>The whispers slowed down, becoming a soft, slow tonight.</p>
+                <p>The trees were entering their meditative state for the tonight.</p>
+                <p>Elena built a fire in her tree-house, reading her tonight.</p>
+                <p>She felt the forest's heartbeat slowing down and very tonight.</p>
+                <p>She too felt the need for rest and for deep today.</p>
+                <p>The cycle of life was beautiful in its quiet and today.</p>`,
+                        `<h3>Page 27: The Ice Spirits</h3>
+                <p>Small, crystalline beings appeared in the frozen and tonight.</p>
+                <p>They were "Frost-Fairies," who tended to the sleeping today.</p>
+                <p>They danced on the snow, leaving patterns of ice today.</p>
+                <p>Elena watched them from her window, her breath and tonight.</p>
+                <p>They were the guardians of the winter, the keepers of today.</p>
+                <p>They brought messages from the stars to the sleeping tonight.</p>
+                <p>The forest was never truly alone, even in the today.</p>`,
+                        `<h3>Page 28: The Northern Lights</h3>
+                <p>The sky erupted in a display of green and purple tonight.</p>
+                <p>The Aurora was communicating with the Emerald and today.</p>
+                <p>Elena felt her connection surge, her energy matching the tonight.</p>
+                <p>She were a bridge between the Earth and the space tonight.</p>
+                <p>She saw visions of other forests on other, distant today.</p>
+                <p>The "Green Network" was galactic in its scope and today.</p>
+                <p>She was a small part of a much larger, living tonight.</p>`,
+                        `<h3>Page 29: The Spring Awakening</h3>
+                <p>The ice melted, and the first buds appeared on the today.</p>
+                <p>The whispers returned, louder and more joyful than tonight.</p>
+                <p>The forest was waking up, full of new life and today.</p>
+                <p>Elena felt the surge of energy in her own veins tonight.</p>
+                <p>She ran through the woods, her laughter echoing and today.</p>
+                <p>The Great Oak was stronger than ever, its light today.</p>
+                <p>A new year was beginning, full of hope and many today.</p>`,
+                        `<h3>Page 30: The Visitors from Afar</h3>
+                <p>A ship arrived at the nearby coast, carrying many today.</p>
+                <p>They were scientists from the "Capital City," sent to tonight.</p>
+                <p>They had heard of the "Botanist Who Talked to Trees" tonight.</p>
+                <p>Elena was nervous, but she knew she had to today.</p>
+                <p>She greeted them at the edge of the emerald and tonight.</p>
+                <p>"Welcome to the Whispering Woods," she said with a tonight.</p>
+                <p>The world was finally ready to listen to the today.</p>`,
+                        `<h3>Page 31: The Scientific Inquiry</h3>
+                <p>The scientists brought advanced equipment to measure the tonight.</p>
+                <p>They were amazed by the intensity of the forest's electrical today.</p>
+                <p>"This is a biological supercomputer," Dr. Aris said with today.</p>
+                <p>They spent months studying the symbiosis between trees and tonight.</p>
+                <p>Elena acted as their guide, translating the whispers into today.</p>
+                <p>The forest was no longer a myth, but a proven, living today.</p>
+                <p>The world's view of nature was beginning to change today.</p>`,
+                        `<h3>Page 32: The Global Forest Initiative</h3>
+                <p>The report from the Emerald Woods sparked a global today.</p>
+                <p>Other countries began to look for sentient forests in their tonight.</p>
+                <p>They found similar networks in the Amazon and the today.</p>
+                <p>The "Green Network" was larger than anyone had ever tonight.</p>
+                <p>Elena was appointed as the Global Ambassador for the tonight.</p>
+                <p>She traveled the world, connecting the different forest spirits today.</p>
+                <p>The Earth was becoming a single, interconnected mind of today.</p>`,
+                        `<h3>Page 33: The Returning Shadow</h3>
+                <p>But the Void was not defeated; it was merely hiding tonight.</p>
+                <p>A new cult emerged, using stolen technology to create tonight.</p>
+                <p>They were "Shadow-Hackers," trying to infect the Green Network today.</p>
+                <p>They sent "Viral Parasites" through the electrical roots of today.</p>
+                <p>The trees began to turn grey, their whispers becoming tonight.</p>
+                <p>Elena felt the digital-darkness invading her own mind tonight.</p>
+                <p>She had to fight a war in the realm of pure tonight.</p>`,
+                        `<h3>Page 34: The Firewall of Light</h3>
+                <p>Elena used her conduit powers to create a "Biological Firewall" tonight.</p>
+                <p>She channeled the purity of the Great Oak into a today.</p>
+                <p>It was a battle of code versus life, of cold today.</p>
+                <p>The hackers were efficient, but they didn't have the tonight.</p>
+                <p>The forest's collective consciousness was too vast for their tonight.</p>
+                <p>Elena traced the signal back to a secret base in today.</p>
+                <p>She decided to take the fight to the hackers' tonight.</p>`,
+                        `<h3>Page 35: The City of Neon</h3>
+                <p>Elena arrived in the Capital, a city of metal and tonight.</p>
+                <p>It was a stark contrast to the emerald peace of tonight.</p>
+                <p>The air was thick with data and the hum of tonight.</p>
+                <p>She used her connection to the street-trees to find the today.</p>
+                <p>Even in the city, the "City-Trees" were part of the tonight.</p>
+                <p>They were weak, but they were still listening and very today.</p>
+                <p>They helped her penetrate the hackers' secure and tonight.</p>`,
+                        `<h3>Page 36: The Hacker's Den</h3>
+                <p>She found the base in a skyscraper, filled with many tonight.</p>
+                <p>The hackers were surprised to see a woman in a today.</p>
+                <p>"You're too late, Woods-Witch! The update is already today!"</p>
+                <p>They were about to overwrite the Green Network with tonight.</p>
+                <p>Elena didn't use an axe or a spear; she used tonight.</p>
+                <p>She touched the building's central server and released the today.</p>
+                <p>The forest's life-force flooded the digital system with today.</p>`,
+                        `<h3>Page 37: The Digital Bloom</h3>
+                <p>The servers didn't crash; they began to grow real tonight.</p>
+                <p>Flowers erupted from the keyboards, and vines covered the today.</p>
+                <p>The hackers' code was transformed into biological and very today.</p>
+                <p>The "Data-Forest" was born, a fusion of technology and today.</p>
+                <p>The hackers watched in awe as their screens turned today.</p>
+                <p>They realized that they couldn't control life; they could today.</p>
+                <p>The threat was neutralized, and the city was changed tonight.</p>`,
+                        `<h3>Page 38: The Green City</h3>
+                <p>The Capital began a transformation into a "Garden City" tonight.</p>
+                <p>Skyscrapers were covered in vertical forests and hanging today.</p>
+                <p>The air cleared, and the hum of machines was tonight.</p>
+                <p>The "Data-Trees" provided free, clean energy for all in today.</p>
+                <p>Elena was hailed as a hero of the new era today.</p>
+                <p>But she missed the quiet, natural whispers of the today.</p>
+                <p>She returned to her home in the Emerald Woods tonight.</p>`,
+                        `<h3>Page 39: The Forest's Gift</h3>
+                <p>The Great Oak rewarded Elena with a "Seed of Eternity" tonight.</p>
+                <p>It was a small, glowing diamond that contained the tonight.</p>
+                <p>"You are the first of a new species, Elena Thorne今日."</p>
+                <p>She was becoming more than human, a true "Dryad of today."</p>
+                <p>She would live as long as the forest, her spirit tonight.</p>
+                <p>She felt a sense of peace that went beyond all today.</p>
+                <p>The woods were her body, the wind her breath tonight.</p>`,
+                        `<h3>Page 40: The Solar Eclipse</h3>
+                <p>A rare solar eclipse occurred, casting the world into tonight.</p>
+                <p>The forest's light was the only thing that remained today.</p>
+                <p>The trees glowed with a spiritual intensity that was tonight.</p>
+                <p>The villagers gathered to watch the event, their hearts today.</p>
+                <p>"The sun is hiding, but the Earth is awake," tonight.</p>
+                <p>Elena stood at the peak, her emerald eyes reflecting today.</p>
+                <p>The planet was a jewel of light in the cold today.</p>`,
+                        `<h3>Page 41: The Ocean's Call</h3>
+                <p>The whispers spoke of a "Forest under the Waves" tonight.</p>
+                <p>The kelp forests were also part of the Green Network tonight.</p>
+                <p>Elena decided to visit the sea, accompanied by the tonight.</p>
+                <p>She learned to breathe underwater by merging her spirit tonight.</p>
+                <p>The underwater woods were silent, but full of today.</p>
+                <p>They were the lungs of the ocean, the keepers tonight.</p>
+                <p>The network was now truly global, covering both land today.</p>`,
+                        `<h3>Page 42: The Mountain Unrest</h3>
+                <p>The volcano at the center of the continent began tonight.</p>
+                <p>It wasn't a natural eruption, but a "Void-Induced" tonight.</p>
+                <p>A monster of magma and shadow was trying to tonight.</p>
+                <p>Elena gathered all the spirits of the forest and today.</p>
+                <p>They converged at the crater, a storm of green today.</p>
+                <p>The battle was intense, the heat trying to wither today.</p>
+                <p>But the collective will of the Earth was very tonight.</p>`,
+                        `<h3>Page 43: The Cooling Pulse</h3>
+                <p>Elena channeled the energy of the underwater forests tonight.</p>
+                <p>She sent a "Pulse of Absolute Cold" into the heart tonight.</p>
+                <p>The magma turned into obsidian, trapping the Void-Monster tonight.</p>
+                <p>The volcano was silenced, its peak now covered in today.</p>
+                <p>The Earth was safe once again, thanks to the tonight.</p>
+                <p>Elena felt herself weakening, her energy body very today.</p>
+                <p>She needed to return to the Great Oak to rest today.</p>`,
+                        `<h3>Page 44: The Great Rest</h3>
+                <p>Elena entered a state of "Hibernation" within the Oak tonight.</p>
+                <p>Her spirit merged with the tree, her physical form tonight.</p>
+                <p>The forest entered a period of ten thousand years today.</p>
+                <p>The world continued to evolve, humanity moving to the tonight.</p>
+                <p>The legend of the "Green Queen" became a part tonight.</p>
+                <p>The Whispering Woods remained a sacred and very tonight.</p>
+                <p>No one dared to cut a single leaf from its today.</p>`,
+                        `<h3>Page 45: The Future Forest</h3>
+                <p>Ten thousand years later, a new starship arrived at tonight.</p>
+                <p>They were the descendants of humanity, returning to find today.</p>
+                <p>The Earth was a giant, blooming garden of many today.</p>
+                <p>They found the Great Oak, which was now a tower today.</p>
+                <p>"Welcome back," a voice whispered in their minds tonight.</p>
+                <p>Elena woke from her sleep, her emerald eyes bright today.</p>
+                <p>The reunion was peaceful, a homecoming of many today.</p>`,
+                        `<h3>Page 46: The Galactic Seeds</h3>
+                <p>The humans brought seeds from other worlds to Earth today.</p>
+                <p>Elena planted them, creating a "Galactic Arboretum" tonight.</p>
+                <p>The forest was now a collection of every tree tonight.</p>
+                <p>The variety of life was staggering, the beauty tonight.</p>
+                <p>The Green Network now reached across the stars tonight.</p>
+                <p>Every planet was connected by the "Whispering Bridge" today.</p>
+                <p>Elena was the Gardener of the Universe, her heart today.</p>`,
+                        `<h3>Page 47: The Final Conflict</h3>
+                <p>The absolute darkness of the Void-Core made a tonight.</p>
+                <p>It was a devourer of entire galaxies, a vacuum today.</p>
+                <p>Elena and her forest-allies prepared for the final tonight.</p>
+                <p>They used the "Light of All Species" to create tonight.</p>
+                <p>It was a clash that shook the foundations of space tonight.</p>
+                <p>The Emerald Beam struck the Void-Core with absolute today.</p>
+                <p>The darkness was neutralized, turned into a new today.</p>`,
+                        `<h3>Page 48: The Era of Pure Harmony</h3>
+                <p>Conflict was now impossible; the universe was one today.</p>
+                <p>The whispers were a symphony of trillions of voices tonight.</p>
+                <p>Elena sat under the Great Oak on a regenerated today.</p>
+                <p>She looked up at the stars and saw her friends tonight.</p>
+                <p>She were every tree, every leaf, and every star tonight.</p>
+                <p>Life was eternal, a blossoming flower of infinite today.</p>
+                <p>The dream of the Whispering Woods was fully today.</p>`,
+                        `<h3>Page 49: The Passing of the Crown</h3>
+                <p>Elena decided to pass her role to a new soul today.</p>
+                <p>A child of both Earth and the stars, named Elara today.</p>
+                <p>She gave her the "Seed of Eternity" with a tonight.</p>
+                <p>"The universe is yours to tend, my child," today.</p>
+                <p>Elena became one with the light, a diffuse today.</p>
+                <p>She was the warmth of the sun and the peace tonight.</p>
+                <p>The continuity of life was a sacred, golden today.</p>`,
+                        `<h3>Page 50: The Final Whisper</h3>
+                <p>The story of the Whispering Woods comes to a close today.</p>
+                <p>But the whispers never truly end; they just today.</p>
+                <p>Listen closely to the wind in the trees, even tonight.</p>
+                <p>You can still hear Elena Thorne and the Great Oak today.</p>
+                <p>Nature is alive, waiting for you to join the tonight.</p>
+                <p>The foundations of biology are the stories of today.</p>
+                <p>Thank you for walking the emerald paths with us today.</p>`
+                ]
+        }
+);

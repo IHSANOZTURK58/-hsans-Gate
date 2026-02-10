@@ -193,7 +193,7 @@
                             <div class="module-card hero" onclick="app.openReadingListeningModes()">
                                 <div class="icon-box">📖🎧</div>
                                 <div class="module-info">
-                                    <h4>Okuma & Yazma</h4>
+                                    <h4>Okuma & Dinleme</h4>
                                     <p>Kitaplar ve Dinleme Odası</p>
                                 </div>
                                 <div class="hover-glow"></div>
@@ -267,7 +267,7 @@
                             style="position:absolute; top:2rem; left:1rem;">
                             &larr;
                         </button>
-                        <h2 style="font-size:1.8rem;">Okuma & Yazma</h2>
+                        <h2 style="font-size:1.8rem;">Okuma & Dinleme</h2>
                         <p style="color:var(--text-secondary); font-size:0.9rem;">Hangi modda çalışmak istersin?</p>
                     </div>
 
@@ -307,8 +307,7 @@
             </div>
 
             <!-- SCENARIO LISTEN LIST VIEW -->
-            <div id="view-scenarios" class="view hidden"
-                style="background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(2, 6, 23, 0.9)), url('assets/game-bg-city.png') no-repeat center center/cover;">
+            <div id="view-scenarios" class="view hidden">
 
                 <div class="modes-header-group"
                     style="display: flex; align-items: center; justify-content: space-between; padding: 2rem 1.5rem; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(15px); margin-bottom: 1.5rem;">
@@ -328,7 +327,7 @@
             </div>
 
             <!-- SCENARIO PLAYER VIEW -->
-            <div id="view-scenario-player" class="view hidden" style="position:relative;">
+            <div id="view-scenario-player" class="view hidden">
                 <div class="modes-header-group"
                     style="display: flex; align-items: center; justify-content: space-between; padding: 2rem 1.5rem; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(15px); margin-bottom: 1.5rem;">
                     <div style="display:flex; align-items:center; gap:1rem;">
@@ -783,8 +782,8 @@
                     <div id="listening-feedback" class="feedback-msg"></div>
 
                     <!-- Manual Next Button (Failsafe) -->
-                    <button id="btn-listening-next" class="btn btn-secondary hidden"
-                        onclick="app.renderListeningLevel()" style="margin-top:1rem;">
+                    <button id="btn-listening-next" class="btn btn-secondary hidden" onclick="app.nextListeningLevel()"
+                        style="margin-top:1rem;">
                         Sonraki Soru ➡
                     </button>
 
@@ -1368,6 +1367,7 @@
     <script src="js/grammar_explanations.js?v=33"></script>
     <script src="js/scenarios.js?v=1"></script>
     <script src="js/books.js"></script>
+    <script src="js/tts.js"></script>
     <script src="js/app.js?v=34"></script>
 
     <!-- DICTIONARY TOAST (Re-injected) -->

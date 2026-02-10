@@ -46,8 +46,6 @@ const app = {
         isMusicPlaying: false,
         musicVolume: 0.3,
 
-        isReadingBook: false, // Track book reading state
-
         // New Mode State
         playerName: '',
         selectedAvatar: 1,
@@ -67,26 +65,20 @@ const app = {
         // Writing Input Settings
         writingDirection: 'EN_TR', // 'EN_TR' (Default) or 'TR_EN'
 
-        // Session Score (For Rush Mode Leaderboard)
-        currentSessionScore: 0,
-
         // Navigation History
-        previousView: null
-    },
+        previousView: null,
 
-    // =========================================
-    // NEW MODE: LISTENING (Focus Room)
-    // =========================================
-
-    listeningState: {
-        sentences: [],
-        currentSentence: null,
-        currentGapIndex: 0,
-        score: 0,
-        total: 0,
-        currentIndex: 0,
-        voices: [],
-        selectedVoice: null
+        // --- NEW: LISTENING MODE STATE ---
+        listening: {
+            sentences: [],
+            currentSentence: null,
+            currentGapIndex: 0,
+            score: 0,
+            currentIndex: 0,
+            // Voice Preference: 'andrew', 'ava', 'emma', 'brian', 'jenny', 'guy'
+            voicePreference: 'andrew',
+            selectedVoice: null
+        }
     },
 
     init() {
@@ -115,7 +107,6 @@ const app = {
         this.renderLeaderboard();
 
         this.geminiService.init();
-        this.setupVoice(); // PRE-LOAD VOICES GLOBALLY
 
 
         // Authenticate
@@ -189,33 +180,27 @@ const app = {
 
         this.updateHeaderStats();
 
-        // Sync with Global Leaderboard (Cups) - ONLY if NOT admin
+        // Debounced Firebase sync - fires 3s after last save call (prevents spam)
         if (!this.state.isAdmin && this.saveGlobalScore) {
-            this.saveGlobalScore();
+            if (this._saveDebounce) clearTimeout(this._saveDebounce);
+            this._saveDebounce = setTimeout(() => this.saveGlobalScore(), 3000);
         }
     },
 
     saveGlobalScore() {
-        if (this.state.isAdmin) return; // Never sync admin scores to cloud
+        if (this.state.isAdmin) return;
         const user = firebase.auth().currentUser;
-        console.log("DEBUG: saveGlobalScore called. User UID:", user ? user.uid : 'NULL', "Score:", this.state.score);
         if (user) {
-            // 1. Write to User Profile (Persistence) - This runs on next refresh
             db.collection('users').doc(user.uid).set({
                 score: this.state.score,
                 username: this.state.playerName || user.displayName
-            }, { merge: true })
-                .then(() => console.log("✅ Users collection write SUCCESS"))
-                .catch((error) => console.error("❌ Users collection write FAILED:", error));
+            }, { merge: true }).catch(e => console.error('Users write failed:', e));
 
-            // 2. Write to Leaderboard (Public)
             db.collection('scores').doc(user.uid).set({
                 score: this.state.score,
                 name: this.state.playerName || user.displayName,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            }, { merge: true })
-                .then(() => console.log("✅ Scores collection write SUCCESS"))
-                .catch((error) => console.error("❌ Scores collection write FAILED:", error));
+            }, { merge: true }).catch(e => console.error('Scores write failed:', e));
         }
     },
 
@@ -535,22 +520,15 @@ const app = {
     },
 
     setupFirebaseListener() {
-        // Read from 'rush_scores' collection for Rush Mode Leaderboard (Modes View)
-        // This is specific to the "Rush Mode Leaderboard"
-        db.collection("rush_scores")
+        // Read from 'scores' collection for Rush Mode Leaderboard (Modes View)
+        db.collection("scores")
             .orderBy("score", "desc")
-            .limit(10) // Increase limit slightly to allow for filtering
+            .limit(this.MAX_LEADERBOARD)
             .onSnapshot((snapshot) => {
                 this.state.leaderboard = [];
                 snapshot.forEach((doc) => {
-                    const data = doc.data();
-                    // We removed the 'Creater' filter because now Creater has a legitimate Rush Score (e.g. 5)
-                    // instead of a huge Global Score (e.g. 2000).
-                    this.state.leaderboard.push(data);
+                    this.state.leaderboard.push(doc.data());
                 });
-
-                // Ensure exactly MAX_LEADERBOARD items
-                this.state.leaderboard = this.state.leaderboard.slice(0, this.MAX_LEADERBOARD);
                 this.renderLeaderboard();
             }, (error) => {
                 console.error("Leaderboard Error:", error);
@@ -802,9 +780,6 @@ const app = {
 
         this.state.gameMode = targetMode;
         // this.state.score = 0; // REMOVED: Score is now persistent/cumulative
-
-        // Reset Session Score for Rush Mode
-        this.state.currentSessionScore = 0;
 
         // Apply Background based on Mode
         const gameView = document.getElementById('view-game');
@@ -1295,8 +1270,7 @@ const app = {
         // Reset processing state after a delay
         setTimeout(() => {
             this.state.isProcessing = false;
-            // Potentially move to next question or handle lives here
-        }, 1000);
+        }, 400);
     },
 
     handleAnswer(selectedOption, btnElement) {
@@ -1310,29 +1284,20 @@ const app = {
         if (isCorrect) {
             btnElement.classList.add('correct');
 
-            // Unified Scoring: +1 for Vocab (Global Score always +1)
+            // Unified Scoring: +1 for Vocab (All modes including Adventure)
             this.state.score += 1;
-
-            // Session Score: +5 for Rush Mode, +1 for others
-            if (this.state.gameMode === 'rush') {
-                this.state.currentSessionScore += 5;
-            } else {
-                this.state.currentSessionScore += 1;
-            }
-
             if (this.state.score > this.state.highScore) this.state.highScore = this.state.score;
 
-            this.updateHeaderStats(); // Show new score immediately
-            this.saveData(); // Persist immediately
+            this.saveData(); // Persist + updateHeaderStats
 
             this.playSound('correct'); // SFX
 
             if (this.state.gameMode === 'adventure') {
                 this.state.levelProgress++;
                 this.updateLevelUI();
-                setTimeout(() => this.nextAdventureQuestion(), 800);
+                setTimeout(() => this.nextAdventureQuestion(), 400);
             } else {
-                setTimeout(() => this.nextQuestion(), 800);
+                setTimeout(() => this.nextQuestion(), 400);
             }
         } else {
             btnElement.classList.add('wrong');
@@ -1348,24 +1313,12 @@ const app = {
                 this.updateLevelUI();
 
                 if (this.state.adventureLives <= 0) {
-                    setTimeout(() => this.failAdventureLevel(), 1500);
+                    setTimeout(() => this.failAdventureLevel(), 800);
                 } else {
-                    // Repeat same question or allow to proceed?
-                    // "Yanlış cevapta 1 can gider" -> usually you retry or move on?
-                    // User said: "Can 0 olursa o level resetlenir (1. kelimeye döner)."
-                    // Implicitly, if you have lives, you probably just stay on same word or next?
-                    // Standard logic: Show correct, wait, then NEXT word? 
-                    // But if we move to next word, we miss 1 progress count?
-                    // To get 50/50, we must answer 50 correctly.
-                    // If we skip, we can't reach 50.
-                    // So we must RETRY the same word or just count it as fail?
-                    // "50 kelime bitince" -> implying we go through 50 Qs?
-                    // Let's assume we move to next question but don't increment progress?
-                    // NO, if we don't increment progress, we never finish.
-                    // Let's assume we just retry the same word until correct or lives run out.
+                    // Repeat same question
                     setTimeout(() => {
                         this.prepareGameForWord(this.state.currentWord); // Retry same word
-                    }, 1500);
+                    }, 500);
                 }
             } else if (this.state.gameMode === 'rush') {
                 this.state.lives--;
@@ -1375,9 +1328,9 @@ const app = {
                 if (livesEl) livesEl.textContent = "❤️".repeat(this.state.lives);
 
                 if (this.state.lives <= 0) {
-                    setTimeout(() => this.endGame(), 1500);
+                    setTimeout(() => this.endGame(), 800);
                 } else {
-                    setTimeout(() => this.nextQuestion(), 1000);
+                    setTimeout(() => this.nextQuestion(), 500);
                 }
             } else if (this.state.gameMode === 'favorites') {
                 this.state.lives--;
@@ -1386,13 +1339,13 @@ const app = {
                 if (livesEl) livesEl.textContent = "❤️".repeat(this.state.lives);
 
                 if (this.state.lives <= 0) {
-                    setTimeout(() => this.endGame(), 1500);
+                    setTimeout(() => this.endGame(), 800);
                 } else {
-                    setTimeout(() => this.nextQuestion(), 1000);
+                    setTimeout(() => this.nextQuestion(), 500);
                 }
             } else {
                 // Survival - Instant Death
-                setTimeout(() => this.endGame(), 1500);
+                setTimeout(() => this.endGame(), 800);
             }
         }
     },
@@ -1416,13 +1369,7 @@ const app = {
 
         this.saveData();
 
-        if (this.state.gameMode === 'rush') {
-            document.getElementById('final-score').textContent = this.state.currentSessionScore;
-        } else {
-            // For other modes, keep existing behavior (or change to session score if desired, but user asked for Rush)
-            // Actually, showing session score is better UX overall for "Game Over"
-            document.getElementById('final-score').textContent = this.state.currentSessionScore > 0 ? this.state.currentSessionScore : this.state.score;
-        }
+        document.getElementById('final-score').textContent = this.state.score;
 
         // Show correct header
         const title = document.querySelector('#view-gameover h3');
@@ -1459,311 +1406,6 @@ const app = {
         } else {
             this.openModeSelection();
         }
-    },
-
-    // =========================================
-    // LISTENING MODE LOGIC
-    // =========================================
-
-    initListeningMode() {
-        this.state.currentView = 'listening';
-        this.render();
-
-        // 1. Load Sentences (Use existing window.SENTENCE_DATA)
-        if (window.SENTENCE_DATA && window.SENTENCE_DATA.length > 0) {
-            // Shuffle all sentences for endless mode
-            this.listeningState.sentences = [...window.SENTENCE_DATA]
-                .sort(() => 0.5 - Math.random());
-            this.listeningState.currentIndex = 0;
-            this.listeningState.currentSentence = this.listeningState.sentences[0];
-
-            this.setupVoice(); // Initialize Voice
-            this.renderListeningLevel();
-        } else {
-            alert("Cümle verisi yüklenemedi!");
-            this.openModeSelection();
-        }
-    },
-
-    setupVoice() {
-        // Load Voices
-        const synth = window.speechSynthesis;
-
-        const loadVoices = () => {
-            const allVoices = synth.getVoices();
-            // Filter for English only
-            const enVoices = allVoices.filter(v => v.lang.startsWith('en'));
-            this.listeningState.voices = enVoices;
-
-            const select = document.getElementById('listening-voice-select');
-            if (select) {
-                select.innerHTML = '';
-                enVoices.forEach((v, index) => {
-                    const opt = document.createElement('option');
-                    opt.value = index;
-                    // Format name for readability
-                    const displayName = v.name.replace("Microsoft ", "").replace("Google ", "");
-                    opt.textContent = displayName + (v.localService ? ' (Cihaz)' : ' (Çevrimiçi)');
-                    select.appendChild(opt);
-                });
-
-                // Handle manual change
-                select.onchange = (e) => {
-                    const idx = e.target.value;
-                    if (enVoices[idx]) {
-                        this.listeningState.selectedVoice = enVoices[idx];
-                        console.log("User selected voice:", enVoices[idx].name);
-                        // Play sample on change
-                        this.playSentence(1);
-                    }
-                };
-            }
-
-            // --- AUTO SELECT BEST DEFAULT (UK Male Focus) ---
-            const ukMaleKeywords = ["UK English Male", "Great Britain Male", "Daniel", "Oliver", "Ryan", "Thomas"];
-            let bestVoice = null;
-
-            // 1. UK Male Specific
-            for (const kw of ukMaleKeywords) {
-                bestVoice = enVoices.find(v =>
-                    (v.name.includes(kw) && (v.name.includes("UK") || v.name.includes("GB") || v.lang.includes("GB")))
-                );
-                if (bestVoice) break;
-            }
-
-            // 2. Any UK voice
-            if (!bestVoice) {
-                bestVoice = enVoices.find(v => v.lang.includes('GB') || v.name.includes('UK'));
-            }
-
-            // 3. General quality
-            if (!bestVoice) {
-                const qualityKeywords = ["(Natural)", "Neural", "Online", "Premium"];
-                for (const kw of qualityKeywords) {
-                    bestVoice = enVoices.find(v => v.name.includes(kw));
-                    if (bestVoice) break;
-                }
-            }
-
-            if (!bestVoice) bestVoice = enVoices[0];
-
-            this.listeningState.selectedVoice = bestVoice;
-
-            // Sync dropdown value
-            if (select && bestVoice) {
-                const idx = enVoices.indexOf(bestVoice);
-                if (idx !== -1) select.value = idx;
-            }
-        };
-
-        if (synth.onvoiceschanged !== undefined) {
-            synth.onvoiceschanged = loadVoices;
-        }
-        loadVoices();
-    },
-
-    renderListeningLevel() {
-        try {
-            // Loop logic for endless mode
-            if (this.listeningState.currentIndex >= this.listeningState.sentences.length) {
-                this.listeningState.currentIndex = 0;
-                this.listeningState.sentences.sort(() => 0.5 - Math.random()); // Reshuffle
-            }
-
-            const sentenceObj = this.listeningState.sentences[this.listeningState.currentIndex];
-            if (!sentenceObj) {
-                this.openModeSelection();
-                return;
-            }
-
-            this.listeningState.currentSentence = sentenceObj;
-
-            // UI Updates (Score removed for endless mode)
-            const feedbackEl = document.getElementById('listening-feedback');
-            if (feedbackEl) feedbackEl.innerHTML = '';
-
-            // Reset Manual Next Button
-            const nextBtn = document.getElementById('btn-listening-next');
-            if (nextBtn) nextBtn.classList.add('hidden');
-
-            const inputEl = document.getElementById('listening-input');
-            if (inputEl) {
-                inputEl.value = '';
-                inputEl.disabled = false;
-                inputEl.focus();
-
-                // 2. ENTER KEY SUPPORT
-                inputEl.onkeydown = (e) => {
-                    if (e.key === 'Enter') {
-                        this.checkListeningAnswer();
-                    }
-                };
-            }
-
-            const btn = document.getElementById('btn-check-listening');
-            if (btn) btn.disabled = false;
-
-            const giveUpBtn = document.getElementById('btn-giveup-listening');
-            if (giveUpBtn) giveUpBtn.disabled = false;
-
-            // Display with GAP
-            const words = sentenceObj.en.split(' ');
-            let gapIndex = Math.floor(Math.random() * words.length);
-
-            // Try to find a longer word
-            for (let i = 0; i < 5; i++) {
-                if (words[gapIndex].length < 3) {
-                    gapIndex = Math.floor(Math.random() * words.length);
-                }
-            }
-            this.listeningState.currentGapIndex = gapIndex;
-
-            const displayContainer = document.getElementById('listening-sentence-display');
-            displayContainer.innerHTML = '';
-
-            words.forEach((word, index) => {
-                const span = document.createElement('span');
-                span.className = 'word';
-                if (index === gapIndex) {
-                    span.className = 'word gap';
-                    span.textContent = '_____';
-                    span.dataset.answer = word.replace(/[.,!?]/g, ''); // Clean punctuation
-                } else {
-                    span.textContent = word + ' ';
-                }
-                displayContainer.appendChild(span);
-            });
-
-            // Auto Play
-            setTimeout(() => this.playSentence(1), 500);
-        } catch (error) {
-            console.error("Listening Error:", error);
-            alert("Bir hata oluştu: " + error.message);
-        }
-    },
-
-    playSentence(rate = 1) {
-        if (!this.listeningState.currentSentence) return;
-
-        const synth = window.speechSynthesis;
-        const utter = new SpeechSynthesisUtterance(this.listeningState.currentSentence.en);
-
-        if (this.listeningState.selectedVoice) {
-            utter.voice = this.listeningState.selectedVoice;
-        }
-
-        utter.rate = rate === 1 ? 0.9 : rate; // Slightly slower for "Natural" feel
-        utter.pitch = 1;
-
-        // Visualizer Effect
-        const wave = document.querySelector('.audio-wave');
-        if (wave) wave.classList.add('playing');
-
-        utter.onend = () => {
-            if (wave) wave.classList.remove('playing');
-        };
-        synth.cancel(); // Stop previous
-        synth.speak(utter);
-    },
-
-    playSFX(type) {
-        const sounds = {
-            'correct': 'https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3',
-            'wrong': 'https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3'
-        };
-        if (sounds[type]) {
-            try {
-                const audio = new Audio(sounds[type]);
-                audio.play().catch(e => console.warn("Audio play failed:", e));
-            } catch (e) {
-                console.warn("Audio setup failed:", e);
-            }
-        }
-    },
-
-    checkListeningAnswer() {
-        const input = document.getElementById('listening-input');
-        const userVal = input.value.trim().toLowerCase();
-        const btn = document.getElementById('btn-check-listening');
-
-        if (!this.listeningState.currentSentence) return;
-
-        const words = this.listeningState.currentSentence.en.split(' ');
-        const correctRaw = words[this.listeningState.currentGapIndex];
-        const correctClean = correctRaw.replace(/[.,!?]/g, '').toLowerCase();
-
-        const feedback = document.getElementById('listening-feedback');
-        const nextBtn = document.getElementById('btn-listening-next');
-
-        if (userVal === correctClean) {
-            feedback.innerHTML = '<span style="color:#4ade80; font-size:1.2rem; font-weight:bold;">Doğru! 🎉 Harikasın!</span>';
-            const gapEl = document.querySelector('.word.gap');
-            if (gapEl) {
-                gapEl.textContent = correctRaw + ' ';
-                gapEl.classList.add('revealed');
-                gapEl.classList.remove('gap');
-            }
-            input.disabled = true;
-            if (btn) btn.disabled = true;
-            if (nextBtn) nextBtn.classList.remove('hidden');
-
-            // 1. UPDATE STATE & SCORE
-            this.state.score++; // Award 1 point
-            this.updateHeaderStats(); // Update header UI
-            this.saveData(); // Save locally
-
-            // Sync with Firebase if available
-            if (this.saveScoreToFirebase) {
-                this.saveScoreToFirebase();
-            }
-
-            this.listeningState.currentIndex++;
-            this.playSFX('correct');
-
-            // AUTO ADVANCE
-            setTimeout(() => {
-                this.renderListeningLevel();
-            }, 1000);
-        } else {
-            feedback.innerHTML = '<span style="color:#ef4444; font-weight:bold;">Tekrar dene!</span>';
-            this.playSFX('wrong');
-            input.classList.add('shake');
-            setTimeout(() => input.classList.remove('shake'), 500);
-            input.focus();
-        }
-    },
-
-    giveUpListening() {
-        if (!this.listeningState.currentSentence) return;
-
-        const words = this.listeningState.currentSentence.en.split(' ');
-        const correctRaw = words[this.listeningState.currentGapIndex];
-
-        const feedback = document.getElementById('listening-feedback');
-        const nextBtn = document.getElementById('btn-listening-next');
-        const checkBtn = document.getElementById('btn-check-listening');
-        const giveUpBtn = document.getElementById('btn-giveup-listening');
-        const input = document.getElementById('listening-input');
-
-        feedback.innerHTML = `<span style="color:#fbbf24; font-weight:bold;">Doğru Cevap: ${correctRaw}</span>`;
-
-        // Reveal word
-        const gapEl = document.querySelector('.word.gap');
-        if (gapEl) {
-            gapEl.textContent = correctRaw + ' ';
-            gapEl.classList.add('revealed');
-            gapEl.classList.remove('gap');
-        }
-
-        input.disabled = true;
-        if (checkBtn) checkBtn.disabled = true;
-        if (giveUpBtn) giveUpBtn.disabled = true;
-        if (nextBtn) nextBtn.classList.remove('hidden');
-
-        // Increment index but NOT score
-        this.listeningState.currentIndex++;
-
-        // No auto-advance here usually, but show "Next" button
     },
 
     quitGame() {
@@ -2151,52 +1793,25 @@ const app = {
         if (!auth.currentUser) return;
 
         try {
-            // 1. Update User Profile (Source of Truth - GLOBAL SCORE)
-            // Always update total cumulative score
+            // 1. Update User Profile (Source of Truth)
             await db.collection("users").doc(auth.currentUser.uid).update({
                 score: this.state.score,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
             });
 
-            // 2. Rush Mode Leaderboard Logic (Best Session Score)
-            if (this.state.gameMode === 'rush' && this.state.currentSessionScore > 0) {
-                const userRef = db.collection("rush_scores").doc(auth.currentUser.uid);
-
-                // Get current high score for Rush Mode
-                const doc = await userRef.get();
-                let currentBest = 0;
-                if (doc.exists) {
-                    currentBest = doc.data().score || 0;
-                }
-
-                // Only update if current session beat the previous best
-                if (this.state.currentSessionScore > currentBest) {
-                    console.log(`🚀 New Rush Mode High Score: ${this.state.currentSessionScore} (Old: ${currentBest})`);
-                    await userRef.set({
-                        name: this.state.playerName,
-                        uid: auth.currentUser.uid,
-                        score: this.state.currentSessionScore,
-                        date: new Date().toLocaleDateString('tr-TR'),
-                        timestamp: firebase.firestore.FieldValue.serverTimestamp()
-                    });
-                }
-            } else {
-                // For logs (optional) or other modes, we keep existing 'scores' logic if needed?
-                // The prompt says "rush mode leaderboard shows rush points, global shows total".
-                // We've handled Rush above.
-                // We already updated Global in step 1.
-                // We can still log to 'scores' for history if we want, but it might be redundant.
-                // Leaving 'scores' log as is for backward compatibility or history log.
-                await db.collection("scores").add({
-                    name: this.state.playerName,
-                    uid: auth.currentUser.uid,
-                    score: this.state.score,
-                    date: new Date().toLocaleDateString('tr-TR'),
-                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
-                });
-            }
-
-            console.log("Score synced!");
+            // 2. Add to Leaderboard History (Optional, or update if we want unique entry per user)
+            // For now, let's keep the history log as is, but maybe limit it?
+            // Actually, for a leaderboard, usually we want the User's Best Score or Current Score.
+            // The `scores` collection seems to be a log.
+            // Let's just log it for now as requested.
+            await db.collection("scores").add({
+                name: this.state.playerName,
+                uid: auth.currentUser.uid,
+                score: this.state.score,
+                date: new Date().toLocaleDateString('tr-TR'),
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            });
+            console.log("Score synced to Profile & Leaderboard!");
         } catch (e) {
             console.error("Error syncing score: ", e);
         }
@@ -2333,21 +1948,9 @@ const app = {
 
         if (!textToSpeak) return;
 
-        // Cancel any ongoing speech to prevent queueing
-        window.speechSynthesis.cancel();
-
-        const utterance = new SpeechSynthesisUtterance(textToSpeak);
-
-        // Use Global selected voice if available
-        if (this.listeningState.selectedVoice) {
-            utterance.voice = this.listeningState.selectedVoice;
-        } else {
-            utterance.lang = 'en-GB';
+        if (window.ttsManager) {
+            window.ttsManager.speak(textToSpeak, this.state.listening.voicePreference);
         }
-
-        utterance.rate = 0.8; // Slightly slower for clear pronunciation
-
-        window.speechSynthesis.speak(utterance);
     },
 
     // --- GEMINI AI SERVICE ---
@@ -2525,13 +2128,6 @@ const app = {
     openWritingModes() {
         this.state.previousView = this.state.currentView;
         this.state.currentView = 'writing-modes';
-        this.render();
-    },
-
-    // --- READING & LISTENING MODULE (Merged) ---
-    openReadingListeningModes() {
-        this.state.previousView = this.state.currentView;
-        this.state.currentView = 'reading-listening';
         this.render();
     },
 
@@ -2875,17 +2471,6 @@ const app = {
         document.getElementById('writing-target-meaning').textContent = wordData.meaning;
         document.getElementById('writing-feedback').textContent = '';
 
-        // Reset Buttons
-        const nextBtn = document.getElementById('btn-scramble-next');
-        const checkBtn = document.getElementById('btn-scramble-check');
-        const giveUpBtn = document.getElementById('btn-scramble-giveup');
-        const clearBtn = document.getElementById('btn-scramble-clear');
-
-        if (nextBtn) nextBtn.classList.add('hidden');
-        if (checkBtn) checkBtn.disabled = false;
-        if (giveUpBtn) giveUpBtn.disabled = false;
-        if (clearBtn) clearBtn.disabled = false;
-
         // Render Slots
         const slotsContainer = document.getElementById('writing-slots');
         slotsContainer.innerHTML = '';
@@ -3034,7 +2619,7 @@ const app = {
 
             setTimeout(() => {
                 this.nextWritingQuestion();
-            }, 1000);
+            }, 500);
 
         } else {
             // Wrong answer
@@ -3057,38 +2642,6 @@ const app = {
             }, 500);
         }
     },
-
-    giveUpWritingScramble() {
-        if (!this.state.currentWritingWord) return;
-
-        const targetWord = this.state.currentWritingWord.word.toUpperCase();
-        const fb = document.getElementById('writing-feedback');
-        const nextBtn = document.getElementById('btn-scramble-next');
-        const checkBtn = document.getElementById('btn-scramble-check');
-        const giveUpBtn = document.getElementById('btn-scramble-giveup');
-        const clearBtn = document.getElementById('btn-scramble-clear');
-
-        // Fill slots visualy
-        this.state.writingInput = targetWord.split('').map(char => ({ char, id: -1 }));
-        this.renderWritingBoard();
-
-        // Reveal answer text
-        fb.innerHTML = `Cevap: <span style="color:var(--accent-gold)">${targetWord}</span>`;
-        fb.style.color = "var(--text-primary)";
-
-        // Toggle buttons
-        if (nextBtn) nextBtn.classList.remove('hidden');
-        if (checkBtn) checkBtn.disabled = true;
-        if (giveUpBtn) giveUpBtn.disabled = true;
-        if (clearBtn) clearBtn.disabled = true;
-
-        // Visual feedback on slots
-        const slots = document.querySelectorAll('.writing-slot');
-        slots.forEach(s => {
-            s.style.borderColor = 'var(--accent-gold)';
-        });
-    },
-
 
     // --- GRAMMAR MODE ---
 
@@ -3341,6 +2894,216 @@ const app = {
         this.render();
     },
 
+    openReadingListeningModes() {
+        this.state.previousView = this.state.currentView;
+        this.state.currentView = 'reading-listening';
+        this.render();
+    },
+
+    initScenarioMode() {
+        this.state.previousView = this.state.currentView;
+        this.state.currentView = 'scenarios';
+        this.render();
+        this.renderScenarios();
+    },
+
+    renderScenarios() {
+        const container = document.getElementById('scenario-list-container');
+        if (!container) return;
+        container.innerHTML = '';
+
+        if (!window.SCENARIO_DATA) {
+            container.innerHTML = '<p style="color:white; text-align:center; grid-column:1/-1;">Senaryolar yüklenemedi.</p>';
+            return;
+        }
+
+        // --- SORT BY LEVEL (A1 -> C2) ---
+        const levelOrder = { 'A1': 1, 'A2': 2, 'B1': 3, 'B2': 4, 'C1': 5, 'C2': 6 };
+        const getLevelWeight = (lvl) => {
+            if (!lvl) return 99;
+            const primary = lvl.split('-')[0].trim().toUpperCase();
+            return levelOrder[primary] || 99;
+        };
+
+        const sortedScenarios = [...window.SCENARIO_DATA].sort((a, b) => {
+            return getLevelWeight(a.level) - getLevelWeight(b.level);
+        });
+
+        sortedScenarios.forEach(scenario => {
+            const card = document.createElement('div');
+            card.className = 'book-card';
+            card.style.background = scenario.bg
+                ? `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url(${scenario.bg}) center/cover`
+                : 'var(--card-bg)';
+            card.style.border = '1px solid rgba(255,255,255,0.1)';
+            card.onclick = () => this.openScenario(scenario.id);
+
+            card.innerHTML = `
+                <div class="book-cover" style="font-size:2.5rem; margin-bottom:0.8rem; filter:drop-shadow(0 4px 10px rgba(0,0,0,0.5));">${scenario.icon || '💬'}</div>
+                <div class="book-title" style="color:var(--accent-gold); font-weight:800; font-size:1.1rem; margin-bottom:0.2rem;">${scenario.title_tr || scenario.title}</div>
+                <div class="book-author" style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:0.8rem; opacity:0.8;">${scenario.title}</div>
+                <div style="display:inline-block; padding:4px 10px; background:rgba(255,255,255,0.1); border-radius:12px; font-size:0.7rem; color:var(--accent-gold); border: 1px solid rgba(212, 175, 55, 0.3);">
+                    ${scenario.level || 'B1-B2'}
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    },
+
+    openScenario(id) {
+        const scenario = window.SCENARIO_DATA.find(s => s.id === id);
+        if (!scenario) return;
+
+        this.state.currentScenario = scenario;
+        this.state.currentDialogueIndex = 0;
+        this.state.isScenarioPlaying = true; // Auto start
+        this.state.showScenarioTranslation = true;
+
+        this.state.previousView = this.state.currentView;
+        this.state.currentView = 'scenario-player';
+        this.render();
+
+        document.getElementById('scenario-player-title').textContent = scenario.title_tr || scenario.title;
+        const dialogueArea = document.getElementById('scenario-dialogue-area');
+        if (dialogueArea) dialogueArea.innerHTML = '';
+
+        const playBtn = document.getElementById('btn-scenario-play');
+        if (playBtn) playBtn.textContent = '⏸';
+
+        this.renderScenarioStep();
+    },
+
+    renderScenarioStep() {
+        const scenario = this.state.currentScenario;
+        const dialogueArea = document.getElementById('scenario-dialogue-area');
+        if (!scenario || !dialogueArea) return;
+
+        const item = scenario.content[this.state.currentDialogueIndex];
+        if (!item) return;
+
+        const bubble = document.createElement('div');
+        bubble.className = 'dialogue-bubble ' + (this.state.currentDialogueIndex % 2 === 0 ? 'speaker-1' : 'speaker-2');
+
+        // Dynamic styles if CSS classes are missing
+        const isSpeaker1 = this.state.currentDialogueIndex % 2 === 0;
+        bubble.style.cssText = `
+            max-width: 85%;
+            margin-bottom: 1rem;
+            padding: 1rem 1.2rem;
+            border-radius: 1.5rem;
+            position: relative;
+            align-self: ${isSpeaker1 ? 'flex-start' : 'flex-end'};
+            background: ${isSpeaker1 ? 'rgba(30, 41, 59, 0.8)' : 'rgba(212, 175, 55, 0.15)'};
+            border: 1px solid ${isSpeaker1 ? 'rgba(255,255,255,0.1)' : 'rgba(212, 175, 55, 0.3)'};
+            color: white;
+            animation: fadeInDialog 0.5s ease-out;
+            backdrop-filter: blur(10px);
+        `;
+
+        bubble.innerHTML = `
+            <div style="font-size:0.75rem; color:var(--accent-gold); margin-bottom:0.3rem; font-weight:bold;">${item.speaker}</div>
+            <div style="font-size:1rem; line-height:1.4;">${item.text}</div>
+            <div class="tr-text" style="font-size:0.85rem; color:rgba(255,255,255,0.6); margin-top:0.5rem; font-style:italic; display: ${this.state.showScenarioTranslation ? 'block' : 'none'};">
+                ${item.tr}
+            </div>
+        `;
+
+        dialogueArea.appendChild(bubble);
+        bubble.scrollIntoView({ behavior: 'smooth', block: 'end' });
+
+        // Auto play speech with gender-based voice
+        const speakerGender = this._getScenarioSpeakerGender(item.speaker, this.state.currentDialogueIndex);
+        this.speakScenarioItem(item.text, speakerGender);
+    },
+
+    // Determine speaker gender from the speaker label
+    _getScenarioSpeakerGender(speaker, index) {
+        if (!speaker) return index % 2 === 0 ? 'male' : 'female';
+
+        // Check all content for this speaker's first appearance with gender tag
+        const scenario = this.state.currentScenario;
+        if (scenario && scenario.content) {
+            // Get the base name of the speaker (without gender tag)
+            const baseName = speaker.replace(/\s*\((?:Male|Female)\)/, '').trim();
+
+            // Search through all dialogues to find gender tag for this base name
+            for (const item of scenario.content) {
+                const itemBase = item.speaker.replace(/\s*\((?:Male|Female)\)/, '').trim();
+                if (itemBase === baseName) {
+                    if (item.speaker.includes('(Female)')) return 'female';
+                    if (item.speaker.includes('(Male)')) return 'male';
+                }
+            }
+        }
+
+        // Direct check on current speaker
+        if (speaker.includes('(Female)')) return 'female';
+        if (speaker.includes('(Male)')) return 'male';
+
+        // Fallback: alternate by index
+        return index % 2 === 0 ? 'male' : 'female';
+    },
+
+    speakScenarioItem(text, gender) {
+        if (!window.ttsManager) return;
+
+        // Male = andrew (deep voice), Female = ava (soft voice)
+        const voice = gender === 'female' ? 'ava' : 'andrew';
+
+        window.ttsManager.speak(text, voice).then(() => {
+            if (this.state.isScenarioPlaying) {
+                setTimeout(() => {
+                    if (this.state.currentDialogueIndex < this.state.currentScenario.content.length - 1) {
+                        this.state.currentDialogueIndex++;
+                        this.renderScenarioStep();
+                    } else {
+                        this.state.isScenarioPlaying = false;
+                        const playBtn = document.getElementById('btn-scenario-play');
+                        if (playBtn) playBtn.textContent = '▶';
+                    }
+                }, 600); // Reduced delay for more natural flow
+            }
+        });
+    },
+
+    toggleScenarioPlay() {
+        this.state.isScenarioPlaying = !this.state.isScenarioPlaying;
+        const btn = document.getElementById('btn-scenario-play');
+        btn.textContent = this.state.isScenarioPlaying ? '⏸' : '▶';
+
+        if (this.state.isScenarioPlaying) {
+            if (this.state.currentDialogueIndex < this.state.currentScenario.content.length - 1) {
+                // If not at end, maybe move to next or just restart current if paused?
+                // Let's just start/resume
+                this.renderScenarioStep();
+            } else {
+                // Finished scenario - restart
+                this.restartScenario();
+                this.state.isScenarioPlaying = true;
+                btn.textContent = '⏸';
+            }
+        } else {
+            if (window.ttsManager) window.ttsManager.stop();
+        }
+    },
+
+    restartScenario() {
+        this.state.currentDialogueIndex = 0;
+        this.state.isScenarioPlaying = false;
+        document.getElementById('btn-scenario-play').textContent = '▶';
+        document.getElementById('scenario-dialogue-area').innerHTML = '';
+        if (window.ttsManager) window.ttsManager.stop();
+        this.renderScenarioStep();
+    },
+
+    toggleScenarioTranslation() {
+        this.state.showScenarioTranslation = !this.state.showScenarioTranslation;
+        const trTexts = document.querySelectorAll('.tr-text');
+        trTexts.forEach(el => {
+            el.style.display = this.state.showScenarioTranslation ? 'block' : 'none';
+        });
+    },
+
     // --- READING MODE ---
     openReadingMode() {
         this.state.previousView = this.state.currentView;
@@ -3402,17 +3165,46 @@ const app = {
         });
     },
 
+    getPaginatedPages(originalPages, maxLines = 7) {
+        if (!originalPages || originalPages.length === 0) return [];
+
+        let allLines = [];
+        originalPages.forEach(page => {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = page;
+            const children = Array.from(tempDiv.children);
+
+            if (children.length === 0 && page.trim()) {
+                allLines.push(`<p>${page.trim()}</p>`);
+            } else {
+                children.forEach(child => {
+                    allLines.push(child.outerHTML);
+                });
+            }
+        });
+
+        let newPages = [];
+        for (let i = 0; i < allLines.length; i += maxLines) {
+            newPages.push(allLines.slice(i, i + maxLines).join('\n'));
+        }
+        return newPages;
+    },
+
+
     openBook(level, index = 0) {
         const books = window.BOOK_DATA[level];
         if (!books || !books[index]) return;
         const book = books[index];
 
+        // Apply Dynamic Re-pagination (7 lines max for mobile)
+        const paginatedPages = this.getPaginatedPages(book.pages, 7);
+
         // Initialize state
         this.state.currentBookLevel = level;
         this.state.currentBookIndex = index;
         this.state.currentBookPage = 0;
-        this.state.totalBookPages = book.pages ? book.pages.length : 1;
-        this.state.isReadingBook = false; // Reset state
+        this.state.paginatedPages = paginatedPages;
+        this.state.totalBookPages = paginatedPages.length;
 
         document.getElementById('reading-library').classList.add('hidden');
         document.getElementById('reading-reader').classList.remove('hidden');
@@ -3467,8 +3259,7 @@ const app = {
         this.state.currentBookIndex = null;
         this.state.currentBookPage = 0;
 
-        // Stop speech when closing (via new helper)
-        this.stopBookReading();
+        this.stopBookReading(); // Stop Audio
 
         document.getElementById('reading-reader').classList.add('hidden');
         document.getElementById('reading-library').classList.remove('hidden');
@@ -3476,20 +3267,17 @@ const app = {
 
     renderBookPage() {
         if (!this.state.currentBookLevel) return;
-        const books = window.BOOK_DATA[this.state.currentBookLevel];
-        if (!books) return;
-        const book = books[this.state.currentBookIndex];
-        if (!book) return;
 
-        // Stop speech when changing page
-        if (window.speechSynthesis) window.speechSynthesis.cancel();
+        // Use paginated pages from state
+        const pages = this.state.paginatedPages;
+        if (!pages || pages.length === 0) return;
 
-        const content = book.pages ? book.pages[this.state.currentBookPage] : book.content;
+        const content = pages[this.state.currentBookPage];
         document.getElementById('reader-content').innerHTML = content;
 
         // Update page indicator
         const indicator = document.getElementById('page-indicator');
-        if (indicator && book.pages) {
+        if (indicator) {
             indicator.textContent = `Sayfa ${this.state.currentBookPage + 1} / ${this.state.totalBookPages}`;
         }
 
@@ -3505,7 +3293,6 @@ const app = {
     },
 
     speakCurrentPage() {
-        // Toggle Play/Stop
         if (this.state.isReadingBook) {
             this.stopBookReading();
         } else {
@@ -3517,7 +3304,7 @@ const app = {
         const contentArea = document.getElementById('reader-content');
         if (!contentArea) return;
 
-        // Clean HTML for clean speech
+        // Clean HTML
         const rawText = contentArea.innerHTML.replace(/<[^>]*>/g, ' ');
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = rawText;
@@ -3525,68 +3312,51 @@ const app = {
 
         if (!cleanText || cleanText.trim() === "") return;
 
-        // Update State & UI
         this.state.isReadingBook = true;
+
+        // Update Icon to Stop
         const btn = document.getElementById('btn-book-speak');
         if (btn) {
-            btn.innerHTML = '⏹️'; // Stop Icon
-            btn.style.borderColor = '#ef4444'; // Red border
+            btn.innerHTML = '⏹️';
+            btn.style.borderColor = '#ef4444';
             btn.style.color = '#ef4444';
         }
 
-        const synth = window.speechSynthesis;
-        const utter = new SpeechSynthesisUtterance(cleanText);
-
-        // Usage of globally selected voice
-        if (this.listeningState.selectedVoice) {
-            utter.voice = this.listeningState.selectedVoice;
+        // USE NEW PYTHON TTS MANAGER
+        if (window.ttsManager) {
+            window.ttsManager.speak(cleanText, this.state.listening.voicePreference).then(() => {
+                if (this.state.isReadingBook) {
+                    setTimeout(() => {
+                        if (this.state.isReadingBook && this.state.currentBookPage < this.state.totalBookPages - 1) {
+                            this.nextBookPage(true);
+                        } else {
+                            this.stopBookReading();
+                        }
+                    }, 600);
+                }
+            }).catch(err => {
+                console.log("[Book] Reading interrupted or failed:", err.message);
+            });
         }
-
-        utter.rate = 0.9;
-        utter.pitch = 1;
-
-        // EVENT: On End -> Auto Turn
-        utter.onend = () => {
-            this.handlePageAudioEnd();
-        };
-
-        synth.cancel();
-        synth.speak(utter);
     },
 
     stopBookReading() {
         this.state.isReadingBook = false;
-        if (window.speechSynthesis) window.speechSynthesis.cancel();
 
-        // Update UI
+        if (window.ttsManager) {
+            window.ttsManager.stop();
+        }
+
         const btn = document.getElementById('btn-book-speak');
         if (btn) {
-            btn.innerHTML = '🔊'; // Play Icon
-            btn.style.borderColor = 'rgba(255,255,255,0.2)'; // Reset border
+            btn.innerHTML = '🔊';
+            btn.style.borderColor = 'rgba(255,255,255,0.2)';
             btn.style.color = 'var(--accent-gold)';
         }
     },
 
-    handlePageAudioEnd() {
-        // Only auto-turn if we are still in "Reading" state
-        // (i.e., user didn't press stop manually right at the end)
-        if (this.state.isReadingBook) {
-            if (this.state.currentBookPage < this.state.totalBookPages - 1) {
-                // Determine if we should wait a bit?
-                setTimeout(() => {
-                    this.nextBookPage(true); // Auto turn
-                }, 500); // Small pause between pages
-            } else {
-                this.stopBookReading(); // End of book
-            }
-        }
-    },
-
     nextBookPage(isAuto = false) {
-        // If MANUAL turn (isAuto is false/undefined), stop auto-reading
-        if (!isAuto) {
-            this.stopBookReading();
-        }
+        if (!isAuto) this.stopBookReading(); // Manual turn stops audio
 
         if (this.state.currentBookPage < this.state.totalBookPages - 1) {
             const content = document.getElementById('reader-content');
@@ -3595,21 +3365,19 @@ const app = {
             setTimeout(() => {
                 this.state.currentBookPage++;
                 this.renderBookPage();
-                setTimeout(() => content.classList.remove('flip-next'), 300);
 
-                // If AUTO turn, restart reading on new page
+                // If Auto Turn, Restart Audio
                 if (isAuto) {
-                    setTimeout(() => {
-                        this.startBookReading();
-                    }, 400); // Wait for flip animation
+                    setTimeout(() => this.startBookReading(), 400);
                 }
+
+                setTimeout(() => content.classList.remove('flip-next'), 300);
             }, 300);
         }
     },
 
     prevBookPage() {
-        // Manual navigate always stops reading
-        this.stopBookReading();
+        this.stopBookReading(); // Always stop on prev
 
         if (this.state.currentBookPage > 0) {
             const content = document.getElementById('reader-content');
@@ -3916,248 +3684,236 @@ const app = {
     },
 
     completeLogin(name) {
+        // Fix: Remove recursive call to self
+        this.state.playerName = name;
         this.showDashboard();
     },
 
+    // =========================================
+    // NEW SMART AUDIO MANAGER (Restored & Improved)
+    // =========================================
 
-
-    // --- DAILY SCENARIOS MODE ---
-    scenarioState: {
-        active: null,
-        playing: false,
-        index: 0,
-        showTr: false
-    },
-
-    initScenarioMode() {
-        this.state.previousView = this.state.currentView;
-        this.state.currentView = 'scenarios';
-        this.render();
-        this.renderScenarioList();
-    },
-
-    renderScenarioList() {
-        const listContainer = document.getElementById('scenario-list-container');
-        if (!listContainer) return;
-
-        const scenarios = window.SCENARIO_DATA || [];
-
-        if (scenarios.length === 0) {
-            listContainer.innerHTML = '<p style="grid-column:1/-1; text-align:center; color:white;">Henüz senaryo eklenmemiş.</p>';
-            return;
-        }
-
-        listContainer.innerHTML = scenarios.map(s => `
-            <div class="mode-card" onclick="app.openScenarioPlayer('${s.id}')" 
-                 style="text-align:left; display:flex; gap:1.2rem; align-items:center; cursor:pointer; padding: 1.5rem; background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; transition: all 0.3s;">
-                <div style="font-size:3.5rem; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));">${s.icon}</div>
-                <div style="flex:1;">
-                    <h3 style="margin:0; color:var(--accent-gold); font-size:1.2rem; font-weight: 800; letter-spacing: 0.5px;">${s.title_tr}</h3>
-                    <p style="margin:0.2rem 0; opacity:0.8; font-size:1rem; color: #cbd5e1;">${s.title}</p>
-                    <div style="margin-top:0.6rem; display:flex; gap:0.5rem;">
-                        <span style="background:rgba(245, 158, 11, 0.2); color: #f59e0b; padding:4px 12px; border-radius:50px; font-size:0.75rem; font-weight: bold; border: 1px solid rgba(245, 158, 11, 0.3);">${s.level}</span>
-                        <span style="background:rgba(255, 255, 255, 0.1); color: white; padding:4px 12px; border-radius:50px; font-size:0.75rem; font-weight: bold;">${s.content.length} Cümle</span>
-                    </div>
-                </div>
-                <div style="font-size: 1.5rem; color: var(--accent-gold); opacity: 0.8;">&rarr;</div>
-            </div>
-        `).join('');
-    },
-
-    openScenarioPlayer(id) {
-        const scenario = window.SCENARIO_DATA.find(s => s.id === id);
-        if (!scenario) return;
-
-        this.scenarioState = {
-            active: scenario,
-            playing: false,
-            index: 0,
-            showTr: false // Default hidden
-        };
-
-        this.state.previousView = this.state.currentView;
-        this.state.currentView = 'scenario-player';
+    initListeningMode() {
+        this.state.currentView = 'listening';
         this.render();
 
-        const titleEl = document.getElementById('scenario-player-title');
-        if (titleEl) titleEl.textContent = scenario.title_tr;
+        // Load Sentences
+        if (window.SENTENCE_DATA && window.SENTENCE_DATA.length > 0) {
+            // Shuffle initial list
+            this.state.listening.sentences = [...window.SENTENCE_DATA].sort(() => 0.5 - Math.random());
+            this.state.listening.currentIndex = 0;
 
-        // Set dynamic background
-        const playerView = document.getElementById('view-scenario-player');
-        if (playerView) {
-            if (scenario.bg) {
-                playerView.style.background = `linear-gradient(rgba(15, 23, 42, 0.7), rgba(2, 6, 23, 0.85)), url('${scenario.bg}') no-repeat center center/cover`;
-            } else {
-                playerView.style.background = 'var(--bg-main)';
-            }
+            // Ensure UI is ready
+            setTimeout(() => {
+                this.setupSmartVoiceUI();
+                this.renderListeningLevel();
+            }, 100);
+        } else {
+            alert("Cümle verisi yüklenemedi!");
+            this.openModeSelection();
         }
-
-        this.renderScenarioDialogue();
     },
 
-    renderScenarioDialogue() {
-        if (!this.scenarioState.active) return;
-
-        const container = document.getElementById('scenario-dialogue-area');
-        if (!container) return;
-
-        const scenario = this.scenarioState.active;
-        const content = scenario.content;
-        const avatars = scenario.avatars || { s1: 'avatar_1.png', s2: 'avatar_2.png' };
-
-        container.innerHTML = content.map((line, idx) => {
-            const isLeft = (idx % 2 === 0);
-            const avatarSrc = isLeft ? avatars.s1 : avatars.s2;
-            const bubbleClass = isLeft ? 'left' : 'right';
-            const isActive = (idx === this.scenarioState.index);
-
-            return `
-                <div id="scenario-msg-${idx}" class="scenario-msg-container ${bubbleClass} ${isActive ? 'active' : ''}" 
-                     onclick="app.playScenarioLine(${idx})">
-                    
-                    <div class="scenario-avatar-box">
-                        <img src="assets/avatars/${avatarSrc}" alt="Avatar">
-                    </div>
-
-                    <div class="chat-bubble">
-                        <span class="bubble-speaker">${line.speaker}</span>
-                        <div style="font-size:1.1rem; line-height:1.5; color:white;">${line.text}</div>
-                        <div class="scenario-tr ${this.scenarioState.showTr ? '' : 'hidden'}" 
-                             style="margin-top:0.5rem; font-size:0.9rem; color:#cbd5e1; border-top:1px solid rgba(255,255,255,0.1); padding-top:0.4rem;">
-                            ${line.tr}
-                        </div>
-                    </div>
-                </div>
+    setupSmartVoiceUI() {
+        const select = document.getElementById('listening-voice-select');
+        if (select) {
+            select.innerHTML = `
+                <option value="andrew">🇺🇸 Amerikan - Andrew (Erkek)</option>
+                <option value="ava">🇺🇸 Amerikan - Ava (Kadın)</option>
+                <option value="emma">🇺🇸 Amerikan - Emma (Kadın)</option>
+                <option value="brian">🇺🇸 Amerikan - Brian (Erkek)</option>
+                <option value="jenny">🇺🇸 Amerikan - Jenny (Kadın)</option>
+                <option value="guy">🇺🇸 Amerikan - Guy (Erkek)</option>
             `;
-        }).join('');
 
-        this.updateScenarioControls();
-        this.scrollToActiveScenarioLine();
-    },
+            // Set current
+            select.value = this.state.listening.voicePreference || 'andrew';
 
-    scrollToActiveScenarioLine() {
-        setTimeout(() => {
-            const activeMsg = document.getElementById(`scenario-msg-${this.scenarioState.index}`);
-            if (activeMsg) activeMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 100);
-    },
-
-    updateScenarioControls() {
-        const btnPlay = document.getElementById('btn-scenario-play');
-        if (btnPlay) {
-            btnPlay.textContent = this.scenarioState.playing ? '⏸️' : '▶';
+            select.onchange = (e) => {
+                this.setVoicePreference(e.target.value);
+            };
         }
     },
 
-    toggleScenarioPlay() {
-        if (this.scenarioState.playing) {
-            this.stopScenario();
-        } else {
-            this.playScenario();
-        }
+    setVoicePreference(pref) {
+        this.state.listening.voicePreference = pref;
+        console.log("Voice Preference Set:", pref);
+
+        // Play sample
+        this.playSentence(1);
     },
 
-    stopScenario() {
-        this.scenarioState.playing = false;
-        window.speechSynthesis.cancel();
-        this.updateScenarioControls();
+    // Voice resolution is now handled by Python backend/TTSManager
+    resolveActualVoice() {
+        this.state.listening.selectedVoice = { name: 'Python Edge-TTS' };
     },
 
-    playScenario() {
-        this.scenarioState.playing = true;
-        this.updateScenarioControls();
-        this.playScenarioLine(this.scenarioState.index);
-    },
-
-    playScenarioLine(index) {
-        if (!this.scenarioState.active) return;
-
-        // If index is out of bounds, stop or loop? Stop for now.
-        if (index >= this.scenarioState.active.content.length) {
-            this.stopScenario();
-            this.scenarioState.index = 0;
-            // Optional: Show "Finished" modal
-            return;
+    renderListeningLevel() {
+        // Loop safety: if we reach the end, reshuffle and restart
+        if (this.state.listening.currentIndex >= this.state.listening.sentences.length) {
+            this.state.listening.sentences.sort(() => 0.5 - Math.random());
+            this.state.listening.currentIndex = 0;
         }
 
-        this.scenarioState.index = index;
+        const sentenceObj = this.state.listening.sentences[this.state.listening.currentIndex];
+        if (!sentenceObj) return;
 
-        // Use optimized CSS class toggling
-        const allMsgContainers = document.querySelectorAll('.scenario-msg-container');
-        allMsgContainers.forEach((container, idx) => {
-            if (idx === index) {
-                container.classList.add('active');
-            } else {
-                container.classList.remove('active');
-            }
-        });
-        this.scrollToActiveScenarioLine();
+        this.state.listening.currentSentence = sentenceObj;
 
-        const line = this.scenarioState.active.content[index];
-        const synth = window.speechSynthesis;
-        const utter = new SpeechSynthesisUtterance(line.text);
-
-        // --- Voice Selection Logic ---
-        // 1. Prioritize Edge Neural (Andrew/Ava) if available
-        // 2. Alternate Male/Female based on speaker index (Even = Male, Odd = Female)
-
-        const voices = synth.getVoices();
-        const enVoices = voices.filter(v => v.lang.startsWith('en'));
-
-        let selectedVoice = null;
-
-        // Helper to find specific voices
-        const findVoice = (keywords) => enVoices.find(v => keywords.some(k => v.name.includes(k)));
-
-        // Male Candidates
-        const maleKeywords = ["Andrew", "Ryan", "Christopher", "Male"];
-        const maleVoice = findVoice(maleKeywords);
-
-        // Female Candidates
-        const femaleKeywords = ["Ava", "Emma", "Michelle", "Female"];
-        const femaleVoice = findVoice(femaleKeywords);
-
-        if (line.speaker.includes("(Female)")) {
-            selectedVoice = femaleVoice || defaultVoice;
-        } else if (line.speaker.includes("(Male)")) {
-            selectedVoice = maleVoice || defaultVoice;
-        } else {
-            // Fallback to legacy index-based alternating
-            selectedVoice = (index % 2 === 0) ? (maleVoice || defaultVoice) : (femaleVoice || defaultVoice);
+        // Reset voice selection for Python mode
+        if (!this.state.listening.selectedVoice) {
+            this.state.listening.selectedVoice = { name: 'Python Edge-TTS' };
         }
 
-        if (selectedVoice) utter.voice = selectedVoice;
-
-        utter.rate = 0.95; // Slightly faster for more natural feel
-
-        utter.onend = () => {
-            if (this.scenarioState.playing) {
-                // Determine natural pause based on sentence length (Optimized)
-                const pause = Math.max(600, line.text.length * 20);
-                setTimeout(() => {
-                    if (this.scenarioState.playing) {
-                        this.playScenarioLine(index + 1);
+        // Setup UI (Gap, Inputs etc.)
+        const inputEl = document.getElementById('listening-input');
+        if (inputEl) {
+            inputEl.value = '';
+            inputEl.disabled = false;
+            inputEl.readOnly = false;
+            inputEl.focus();
+            inputEl.onkeydown = (e) => {
+                if (e.key === 'Enter') {
+                    const nextBtn = document.getElementById('btn-listening-next');
+                    if (nextBtn && !nextBtn.classList.contains('hidden')) {
+                        this.nextListeningLevel();
+                    } else {
+                        this.checkListeningAnswer();
                     }
-                }, pause);
+                }
+            };
+        }
+
+        const feedbackEl = document.getElementById('listening-feedback');
+        if (feedbackEl) feedbackEl.innerHTML = '';
+
+        const checkBtn = document.getElementById('btn-check-listening');
+        if (checkBtn) checkBtn.disabled = false;
+
+        const giveUpBtn = document.getElementById('btn-giveup-listening');
+        if (giveUpBtn) giveUpBtn.disabled = false;
+
+        const nextBtn = document.getElementById('btn-listening-next');
+        if (nextBtn) nextBtn.classList.add('hidden');
+
+        // Logic for Gaps
+        const words = sentenceObj.en.split(' ');
+        let gapIndex = Math.floor(Math.random() * words.length);
+        // Try to find a longer word
+        for (let i = 0; i < 5; i++) {
+            if (words[gapIndex].length < 3) gapIndex = Math.floor(Math.random() * words.length);
+        }
+        this.state.listening.currentGapIndex = gapIndex;
+
+        const displayContainer = document.getElementById('listening-sentence-display');
+        if (displayContainer) {
+            displayContainer.innerHTML = '';
+            words.forEach((word, index) => {
+                const span = document.createElement('span');
+                span.className = 'word';
+                if (index === gapIndex) {
+                    span.className = 'word gap';
+                    span.textContent = '_____';
+                    span.dataset.answer = word.replace(/[.,!?]/g, '');
+                } else {
+                    span.textContent = word + ' ';
+                }
+                displayContainer.appendChild(span);
+            });
+        }
+
+        // Auto Play
+        setTimeout(() => this.playSentence(1), 500);
+    },
+
+    playSentence(rate = 1) {
+        if (!this.state.listening.currentSentence) return;
+
+        const text = this.state.listening.currentSentence.en;
+        const voice = this.state.listening.voicePreference;
+
+        // Visuals
+        const wave = document.querySelector('.audio-wave');
+        if (wave) wave.classList.add('playing');
+
+        if (window.ttsManager) {
+            window.ttsManager.speak(text, voice).then(() => {
+                if (wave) wave.classList.remove('playing');
+            }).catch(() => {
+                if (wave) wave.classList.remove('playing');
+            });
+        }
+    },
+
+    checkListeningAnswer() {
+        const input = document.getElementById('listening-input');
+        const userVal = input.value.trim().toLowerCase();
+
+        const words = this.state.listening.currentSentence.en.split(' ');
+        const correctRaw = words[this.state.listening.currentGapIndex];
+        const correctClean = correctRaw.replace(/[.,!?]/g, '').toLowerCase();
+
+        const feedback = document.getElementById('listening-feedback');
+        const nextBtn = document.getElementById('btn-listening-next');
+
+        if (userVal === correctClean) {
+            feedback.innerHTML = '<span style="color:#4ade80; font-weight:bold;">Doğru! 🎉</span>';
+            const gapEl = document.querySelector('.word.gap');
+            if (gapEl) {
+                gapEl.textContent = correctRaw + ' ';
+                gapEl.classList.add('revealed');
+                gapEl.classList.remove('gap');
             }
-        };
+            input.readOnly = true;
+            document.getElementById('btn-check-listening').disabled = true;
+            document.getElementById('btn-giveup-listening').disabled = true;
+            if (nextBtn) nextBtn.classList.remove('hidden');
 
-        synth.cancel();
-        synth.speak(utter);
+            this.state.score++;
+            this.updateHeaderStats();
+            this.saveData();
+            this.playSound('correct');
+
+            if (this.listeningTimeout) clearTimeout(this.listeningTimeout);
+            this.listeningTimeout = setTimeout(() => this.nextListeningLevel(), 500);
+        } else {
+            feedback.innerHTML = '<span style="color:#ef4444;">Tekrar dene!</span>';
+            this.playSound('wrong');
+            input.classList.add('shake');
+            setTimeout(() => input.classList.remove('shake'), 500);
+            input.focus();
+        }
     },
 
-    restartScenario() {
-        this.stopScenario();
-        this.scenarioState.index = 0;
-        this.renderScenarioDialogue();
+    giveUpListening() {
+        const words = this.state.listening.currentSentence.en.split(' ');
+        const correctRaw = words[this.state.listening.currentGapIndex];
+
+        const feedback = document.getElementById('listening-feedback');
+        if (feedback) feedback.innerHTML = `<span style="color:#fbbf24;">Cevap: ${correctRaw}</span>`;
+
+        const gapEl = document.querySelector('.word.gap');
+        if (gapEl) {
+            gapEl.textContent = correctRaw + ' ';
+            gapEl.classList.add('revealed');
+            gapEl.classList.remove('gap');
+        }
+
+        const input = document.getElementById('listening-input');
+        if (input) input.readOnly = true;
+
+        document.getElementById('btn-check-listening').disabled = true;
+        document.getElementById('btn-giveup-listening').disabled = true;
+
+        const nextBtn = document.getElementById('btn-listening-next');
+        if (nextBtn) nextBtn.classList.remove('hidden');
+
     },
 
-    toggleScenarioTranslation() {
-        this.scenarioState.showTr = !this.scenarioState.showTr;
-        // Toggle class on all existing bubbles
-        document.querySelectorAll('.scenario-tr').forEach(el => {
-            el.classList.toggle('hidden', !this.scenarioState.showTr);
-        });
+    nextListeningLevel() {
+        if (this.listeningTimeout) clearTimeout(this.listeningTimeout);
+        this.state.listening.currentIndex++;
+        this.renderListeningLevel();
     },
 
 };

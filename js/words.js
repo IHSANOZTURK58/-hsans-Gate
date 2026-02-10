@@ -1,4 +1,4 @@
-﻿window.WORD_DATA = [
+window.WORD_DATA = [
     {
         "id": 20001,
         "word": "Basket",
@@ -8,7 +8,7 @@
     {
         "id": 20002,
         "word": "Bush",
-        "meaning": "Ã‡alÄ±",
+        "meaning": "Çalı",
         "level": "A2"
     },
     {
@@ -20,7 +20,7 @@
     {
         "id": 20004,
         "word": "Crawl",
-        "meaning": "Emeklemek, SÃ¼rÃ¼nmek",
+        "meaning": "Emeklemek, Sürünmek",
         "level": "B1"
     },
     {
@@ -32,25 +32,25 @@
     {
         "id": 20006,
         "word": "Floppy",
-        "meaning": "SarkÄ±k, YumuÅŸak",
+        "meaning": "Sarkık, Yumuşak",
         "level": "B1"
     },
     {
         "id": 20007,
         "word": "Fur",
-        "meaning": "KÃ¼rk, TÃ¼y (hayvan)",
+        "meaning": "Kürk, Tüy (hayvan)",
         "level": "B1"
     },
     {
         "id": 20008,
         "word": "Gently",
-        "meaning": "NazikÃ§e",
+        "meaning": "Nazikçe",
         "level": "B1"
     },
     {
         "id": 20009,
         "word": "Goodness",
-        "meaning": "Ä°yilik",
+        "meaning": "İyilik",
         "level": "B1"
     },
     {
@@ -62,43 +62,43 @@
     {
         "id": 20011,
         "word": "Pour",
-        "meaning": "DÃ¶kmek",
+        "meaning": "Dökmek",
         "level": "B1"
     },
     {
         "id": 20012,
         "word": "Puppy",
-        "meaning": "KÃ¶pek yavrusu",
+        "meaning": "Köpek yavrusu",
         "level": "A1"
     },
     {
         "id": 20013,
         "word": "Scared",
-        "meaning": "KorkmuÅŸ",
+        "meaning": "Korkmuş",
         "level": "A1"
     },
     {
         "id": 20014,
         "word": "Shampoo",
-        "meaning": "Åampuan",
+        "meaning": "Şampuan",
         "level": "A1"
     },
     {
         "id": 20015,
         "word": "Shout",
-        "meaning": "BaÄŸÄ±rmak",
+        "meaning": "Bağırmak",
         "level": "A2"
     },
     {
         "id": 20016,
         "word": "Slurp",
-        "meaning": "HÃ¶purdetmek",
+        "meaning": "Höpurdetmek",
         "level": "C1"
     },
     {
         "id": 20017,
         "word": "Splash",
-        "meaning": "SÄ±Ã§ratmak",
+        "meaning": "Sıçratmak",
         "level": "B1"
     },
     {
@@ -116,13 +116,13 @@
     {
         "id": 20020,
         "word": "Tear",
-        "meaning": "GÃ¶zyaÅŸÄ±",
+        "meaning": "Gözyaşı",
         "level": "B1"
     },
     {
         "id": 20021,
         "word": "Tub",
-        "meaning": "KÃ¼vet",
+        "meaning": "Küvet",
         "level": "B1"
     },
     {
@@ -134,13 +134,13 @@
     {
         "id": 20023,
         "word": "Whimper",
-        "meaning": "Ä°nlemek",
+        "meaning": "İnlemek",
         "level": "C2"
     },
     {
         "id": 20024,
         "word": "Bold",
-        "meaning": "Cesur, GÃ¶zÃ¼pek",
+        "meaning": "Cesur, Gözüpek",
         "level": "B2"
     },
     {
@@ -158,7 +158,7 @@
     {
         "id": 20027,
         "word": "Compartment",
-        "meaning": "BÃ¶lme",
+        "meaning": "Bölme",
         "level": "B2"
     },
     {
@@ -170,13 +170,13 @@
     {
         "id": 20029,
         "word": "Dearest",
-        "meaning": "En sevgili, Ã‡ok sevgili",
+        "meaning": "En sevgili, Çok sevgili",
         "level": "A2"
     },
     {
         "id": 20030,
         "word": "Disappointed",
-        "meaning": "Hayal kÄ±rÄ±klÄ±ÄŸÄ±na uÄŸramÄ±ÅŸ",
+        "meaning": "Hayal kırıklığına uğramış",
         "level": "B1"
     },
     {
@@ -188,19 +188,19 @@
     {
         "id": 20032,
         "word": "Echo",
-        "meaning": "YankÄ±",
+        "meaning": "Yankı",
         "level": "B2"
     },
     {
         "id": 20033,
         "word": "Face",
-        "meaning": "YÃ¼zleÅŸmek, DÃ¶nÃ¼k olmak",
+        "meaning": "Yüzleşmek, Dönük olmak",
         "level": "B1"
     },
     {
         "id": 20034,
         "word": "Fireplace",
-        "meaning": "ÅÃ¶mine",
+        "meaning": "Şömine",
         "level": "A2"
     },
     {
@@ -254,7 +254,7 @@
     {
         "id": 20043,
         "word": "Musty",
-        "meaning": "KÃ¼f kokulu",
+        "meaning": "Küf kokulu",
         "level": "C1"
     },
     {
@@ -272,19 +272,19 @@
     {
         "id": 20046,
         "word": "Rusty",
-        "meaning": "PaslÄ±",
+        "meaning": "Paslı",
         "level": "B1"
     },
     {
         "id": 20047,
         "word": "Sheet",
-        "meaning": "Ã‡arÅŸaf",
+        "meaning": "Çarşaf",
         "level": "A2"
     },
     {
         "id": 20048,
         "word": "Sneeze",
-        "meaning": "HapÅŸÄ±rmak",
+        "meaning": "Hapşırmak",
         "level": "B1"
     },
     {
@@ -296,19 +296,19 @@
     {
         "id": 20050,
         "word": "Staircase",
-        "meaning": "Merdiven boÅŸluÄŸu",
+        "meaning": "Merdiven boşluğu",
         "level": "B2"
     },
     {
         "id": 20051,
         "word": "Stiff",
-        "meaning": "KaskatÄ±",
+        "meaning": "Kaskatı",
         "level": "B2"
     },
     {
         "id": 20052,
         "word": "Strike",
-        "meaning": "Vurmak (saat Ã§almasÄ±)",
+        "meaning": "Vurmak (saat çalması)",
         "level": "B1"
     },
     {
@@ -320,7 +320,7 @@
     {
         "id": 20054,
         "word": "Thump",
-        "meaning": "GÃ¼mleme sesi",
+        "meaning": "Gümleme sesi",
         "level": "C1"
     },
     {
@@ -338,13 +338,13 @@
     {
         "id": 20057,
         "word": "Trespassing",
-        "meaning": "Ä°zinsiz girmek",
+        "meaning": "İzinsiz girmek",
         "level": "C1"
     },
     {
         "id": 20058,
         "word": "Trip",
-        "meaning": "TÃ¶kezlemek",
+        "meaning": "Tökezlemek",
         "level": "B1"
     },
     {
@@ -380,7 +380,7 @@
     {
         "id": 20064,
         "word": "Bound",
-        "meaning": "BaÄŸlÄ±, Yola Ã§Ä±kmÄ±ÅŸ",
+        "meaning": "Bağlı, Yola çıkmış",
         "level": "B2"
     },
     {
@@ -416,13 +416,13 @@
     {
         "id": 20070,
         "word": "Cave",
-        "meaning": "MaÄŸara",
+        "meaning": "Mağara",
         "level": "B1"
     },
     {
         "id": 20071,
         "word": "Cedar",
-        "meaning": "Sedir aÄŸacÄ±",
+        "meaning": "Sedir ağacı",
         "level": "C1"
     },
     {
@@ -434,7 +434,7 @@
     {
         "id": 20073,
         "word": "Chills",
-        "meaning": "ÃœÅŸÃ¼me, Titreme",
+        "meaning": "Üşüme, Titreme",
         "level": "C1"
     },
     {
@@ -452,7 +452,7 @@
     {
         "id": 20076,
         "word": "Companion",
-        "meaning": "YoldaÅŸ, ArkadaÅŸ",
+        "meaning": "Yoldaş, Arkadaş",
         "level": "B2"
     },
     {
@@ -464,7 +464,7 @@
     {
         "id": 20078,
         "word": "Cross",
-        "meaning": "HaÃ§, Ã‡arpÄ±",
+        "meaning": "Haç, Çarpı",
         "level": "A2"
     },
     {
@@ -476,19 +476,19 @@
     {
         "id": 20080,
         "word": "Descend",
-        "meaning": "AlÃ§almak, Ä°nmek",
+        "meaning": "Alçalmak, İnmek",
         "level": "B2"
     },
     {
         "id": 20081,
         "word": "Desolate",
-        "meaning": "IssÄ±z",
+        "meaning": "Issız",
         "level": "C1"
     },
     {
         "id": 20082,
         "word": "Distress",
-        "meaning": "SÄ±kÄ±ntÄ±, Tehlike",
+        "meaning": "Sıkıntı, Tehlike",
         "level": "C1"
     },
     {
@@ -500,13 +500,13 @@
     {
         "id": 20084,
         "word": "Fever",
-        "meaning": "AteÅŸ (hastalÄ±k)",
+        "meaning": "Ateş (hastalık)",
         "level": "B1"
     },
     {
         "id": 20085,
         "word": "Feverish",
-        "meaning": "AteÅŸli",
+        "meaning": "Ateşli",
         "level": "C1"
     },
     {
@@ -530,19 +530,19 @@
     {
         "id": 20089,
         "word": "Furiously",
-        "meaning": "Ã–fkeyle, Åiddetle",
+        "meaning": "Öfkeyle, Şiddetle",
         "level": "B2"
     },
     {
         "id": 20090,
         "word": "Goatskin",
-        "meaning": "KeÃ§i derisi",
+        "meaning": "Keçi derisi",
         "level": "C1"
     },
     {
         "id": 20091,
         "word": "Grain",
-        "meaning": "TahÄ±l",
+        "meaning": "Tahıl",
         "level": "B2"
     },
     {
@@ -554,7 +554,7 @@
     {
         "id": 20093,
         "word": "Handsome",
-        "meaning": "YakÄ±ÅŸÄ±klÄ±",
+        "meaning": "Yakışıklı",
         "level": "A2"
     },
     {
@@ -566,13 +566,13 @@
     {
         "id": 20095,
         "word": "Horrified",
-        "meaning": "DehÅŸete dÃ¼ÅŸmÃ¼ÅŸ",
+        "meaning": "Dehşete düşmüş",
         "level": "B2"
     },
     {
         "id": 20096,
         "word": "Kiln",
-        "meaning": "FÄ±rÄ±n (seramik/tuÄŸla)",
+        "meaning": "Fırın (seramik/tuğla)",
         "level": "C2"
     },
     {
@@ -584,19 +584,19 @@
     {
         "id": 20098,
         "word": "Mutineer",
-        "meaning": "Ä°syancÄ±",
+        "meaning": "İsyancı",
         "level": "C2"
     },
     {
         "id": 20099,
         "word": "Mutiny",
-        "meaning": "Ä°syan",
+        "meaning": "İsyan",
         "level": "C2"
     },
     {
         "id": 20100,
         "word": "Naked",
-        "meaning": "Ã‡Ä±plak",
+        "meaning": "Çıplak",
         "level": "B2"
     },
     {
@@ -614,7 +614,7 @@
     {
         "id": 20103,
         "word": "Parrot",
-        "meaning": "PapaÄŸan",
+        "meaning": "Papağan",
         "level": "A2"
     },
     {
@@ -632,7 +632,7 @@
     {
         "id": 20106,
         "word": "Pot",
-        "meaning": "Ã‡Ã¶mlek, Tencere",
+        "meaning": "Çömlek, Tencere",
         "level": "A2"
     },
     {
@@ -656,13 +656,13 @@
     {
         "id": 20110,
         "word": "Raisin",
-        "meaning": "Kuru Ã¼zÃ¼m",
+        "meaning": "Kuru üzüm",
         "level": "B1"
     },
     {
         "id": 20111,
         "word": "Repentance",
-        "meaning": "TÃ¶vbe, PiÅŸmanlÄ±k",
+        "meaning": "Tövbe, Pişmanlık",
         "level": "C2"
     },
     {
@@ -680,43 +680,43 @@
     {
         "id": 20114,
         "word": "Savage",
-        "meaning": "VahÅŸi",
+        "meaning": "Vahşi",
         "level": "C1"
     },
     {
         "id": 20115,
         "word": "Servant",
-        "meaning": "HizmetÃ§i",
+        "meaning": "Hizmetçi",
         "level": "B1"
     },
     {
         "id": 20116,
         "word": "Shelter",
-        "meaning": "BarÄ±nak",
+        "meaning": "Barınak",
         "level": "B1"
     },
     {
         "id": 20117,
         "word": "Shipwrecked",
-        "meaning": "Gemi kazasÄ± geÃ§irmiÅŸ",
+        "meaning": "Gemi kazası geçirmiş",
         "level": "C1"
     },
     {
         "id": 20118,
         "word": "Shore",
-        "meaning": "KÄ±yÄ±",
+        "meaning": "Kıyı",
         "level": "B1"
     },
     {
         "id": 20119,
         "word": "Spear",
-        "meaning": "MÄ±zrak",
+        "meaning": "Mızrak",
         "level": "B2"
     },
     {
         "id": 20120,
         "word": "Stake",
-        "meaning": "KazÄ±k",
+        "meaning": "Kazık",
         "level": "C1"
     },
     {
@@ -740,13 +740,13 @@
     {
         "id": 20124,
         "word": "Sword",
-        "meaning": "KÄ±lÄ±Ã§",
+        "meaning": "Kılıç",
         "level": "B1"
     },
     {
         "id": 20125,
         "word": "Tawny",
-        "meaning": "Esmer, SarÄ±mtran kahverengi",
+        "meaning": "Esmer, Sarımtran kahverengi",
         "level": "C2"
     },
     {
@@ -758,25 +758,25 @@
     {
         "id": 20127,
         "word": "Tent",
-        "meaning": "Ã‡adÄ±r",
+        "meaning": "Çadır",
         "level": "A2"
     },
     {
         "id": 20128,
         "word": "Terrified",
-        "meaning": "DehÅŸete kapÄ±lmÄ±ÅŸ",
+        "meaning": "Dehşete kapılmış",
         "level": "B1"
     },
     {
         "id": 20129,
         "word": "Thunderstruck",
-        "meaning": "YÄ±ldÄ±rÄ±m Ã§arpmÄ±ÅŸa dÃ¶nmÃ¼ÅŸ (ÅŸaÅŸkÄ±n)",
+        "meaning": "Yıldırım çarpmışa dönmüş (şaşkın)",
         "level": "C2"
     },
     {
         "id": 20130,
         "word": "Umbrella",
-        "meaning": "Åemsiye",
+        "meaning": "Şemsiye",
         "level": "A1"
     },
     {
@@ -794,37 +794,37 @@
     {
         "id": 20133,
         "word": "Adversary",
-        "meaning": "Rakip, DÃ¼ÅŸman",
+        "meaning": "Rakip, Düşman",
         "level": "C1"
     },
     {
         "id": 20134,
         "word": "Amiss",
-        "meaning": "HatalÄ±, YanlÄ±ÅŸ",
+        "meaning": "Hatalı, Yanlış",
         "level": "C1"
     },
     {
         "id": 20135,
         "word": "Betrothal",
-        "meaning": "NiÅŸanlanma",
+        "meaning": "Nişanlanma",
         "level": "C2"
     },
     {
         "id": 20136,
         "word": "Bonnet",
-        "meaning": "KadÄ±n ÅŸapkasÄ±, Kaput",
+        "meaning": "Kadın şapkası, Kaput",
         "level": "C1"
     },
     {
         "id": 20137,
         "word": "Brougham",
-        "meaning": "Fayton (bir tÃ¼r araba)",
+        "meaning": "Fayton (bir tür araba)",
         "level": "C2"
     },
     {
         "id": 20138,
         "word": "Chaos",
-        "meaning": "Kaos, KargaÅŸa",
+        "meaning": "Kaos, Kargaşa",
         "level": "B2"
     },
     {
@@ -848,49 +848,49 @@
     {
         "id": 20142,
         "word": "Deceive",
-        "meaning": "Aldatmak, KandÄ±rmak",
+        "meaning": "Aldatmak, Kandırmak",
         "level": "B2"
     },
     {
         "id": 20143,
         "word": "Deduce",
-        "meaning": "SonuÃ§ Ã§Ä±karmak",
+        "meaning": "Sonuç çıkarmak",
         "level": "C1"
     },
     {
         "id": 20144,
         "word": "Deduction",
-        "meaning": "TÃ¼mdengelim, Ã‡Ä±karÄ±m",
+        "meaning": "Tümdengelim, Çıkarım",
         "level": "C1"
     },
     {
         "id": 20145,
         "word": "Disguise",
-        "meaning": "KÄ±lÄ±k deÄŸiÅŸtirmek",
+        "meaning": "Kılık değiştirmek",
         "level": "B2"
     },
     {
         "id": 20146,
         "word": "Dreadful",
-        "meaning": "KorkunÃ§, Berbat",
+        "meaning": "Korkunç, Berbat",
         "level": "B2"
     },
     {
         "id": 20147,
         "word": "Eclipse",
-        "meaning": "Tutulma, GÃ¶lgede bÄ±rakmak",
+        "meaning": "Tutulma, Gölgede bırakmak",
         "level": "C1"
     },
     {
         "id": 20148,
         "word": "Emerald",
-        "meaning": "ZÃ¼mrÃ¼t",
+        "meaning": "Zümrüt",
         "level": "C1"
     },
     {
         "id": 20149,
-        "word": "FiancÃ©e",
-        "meaning": "NiÅŸanlÄ± (kadÄ±n)",
+        "word": "Fiancé©e",
+        "meaning": "Nişanlı (kadın)",
         "level": "B1"
     },
     {
@@ -902,7 +902,7 @@
     {
         "id": 20151,
         "word": "Harness",
-        "meaning": "KoÅŸum takÄ±mÄ±, Dizginlemek",
+        "meaning": "Koşum takımı, Dizginlemek",
         "level": "C1"
     },
     {
@@ -914,19 +914,19 @@
     {
         "id": 20153,
         "word": "Honour",
-        "meaning": "Onur, Åeref",
+        "meaning": "Onur, Şeref",
         "level": "B1"
     },
     {
         "id": 20154,
         "word": "Indebted",
-        "meaning": "BorÃ§lu, Minnettar",
+        "meaning": "Borçlu, Minnettar",
         "level": "C1"
     },
     {
         "id": 20155,
         "word": "Instinct",
-        "meaning": "Ä°Ã§gÃ¼dÃ¼",
+        "meaning": "İçgüdü",
         "level": "B2"
     },
     {
@@ -938,7 +938,7 @@
     {
         "id": 20157,
         "word": "Kingdom",
-        "meaning": "KrallÄ±k",
+        "meaning": "Krallık",
         "level": "B1"
     },
     {
@@ -980,13 +980,13 @@
     {
         "id": 20164,
         "word": "Merry",
-        "meaning": "NeÅŸeli",
+        "meaning": "Neşeli",
         "level": "B1"
     },
     {
         "id": 20165,
         "word": "Mistress",
-        "meaning": "HanÄ±mefendi, Metres",
+        "meaning": "Hanımefendi, Metres",
         "level": "C1"
     },
     {
@@ -998,7 +998,7 @@
     {
         "id": 20167,
         "word": "Observe",
-        "meaning": "GÃ¶zlemlemek",
+        "meaning": "Gözlemlemek",
         "level": "B1"
     },
     {
@@ -1010,37 +1010,37 @@
     {
         "id": 20169,
         "word": "Photograph",
-        "meaning": "FotoÄŸraf",
+        "meaning": "Fotoğraf",
         "level": "A1"
     },
     {
         "id": 20170,
         "word": "Pity",
-        "meaning": "AcÄ±mak, YazÄ±k",
+        "meaning": "Acımak, Yazık",
         "level": "B1"
     },
     {
         "id": 20171,
         "word": "Predominate",
-        "meaning": "BaskÄ±n Ã§Ä±kmak, HÃ¼kmetmek",
+        "meaning": "Baskın çıkmak, Hükmetmek",
         "level": "C2"
     },
     {
         "id": 20172,
         "word": "Preposterous",
-        "meaning": "AkÄ±l almaz, SaÃ§ma",
+        "meaning": "Akıl almaz, Saçma",
         "level": "C2"
     },
     {
         "id": 20173,
         "word": "Remark",
-        "meaning": "Belirtmek, DÃ¼ÅŸÃ¼nce",
+        "meaning": "Belirtmek, Düşünce",
         "level": "B2"
     },
     {
         "id": 20174,
         "word": "Rocket",
-        "meaning": "Roket, FiÅŸek",
+        "meaning": "Roket, Fişek",
         "level": "B1"
     },
     {
@@ -1052,7 +1052,7 @@
     {
         "id": 20176,
         "word": "Scored",
-        "meaning": "Ã‡izilmiÅŸ, PuanlanmÄ±ÅŸ",
+        "meaning": "Çizilmiş, Puanlanmış",
         "level": "C1"
     },
     {
@@ -1064,7 +1064,7 @@
     {
         "id": 20178,
         "word": "Signature",
-        "meaning": "Ä°mza",
+        "meaning": "İmza",
         "level": "B1"
     },
     {
@@ -1088,7 +1088,7 @@
     {
         "id": 20182,
         "word": "Strict",
-        "meaning": "KatÄ±, Sert",
+        "meaning": "Katı, Sert",
         "level": "B1"
     },
     {
@@ -1100,7 +1100,7 @@
     {
         "id": 20184,
         "word": "Trifle",
-        "meaning": "Ã–nemsiz ÅŸey, AzÄ±cÄ±k",
+        "meaning": "Önemsiz şey, Azıcık",
         "level": "C1"
     },
     {
@@ -1112,37 +1112,37 @@
     {
         "id": 20186,
         "word": "Villain",
-        "meaning": "KÃ¶tÃ¼ adam, Hain",
+        "meaning": "Kötü adam, Hain",
         "level": "B2"
     },
     {
         "id": 20187,
         "word": "Wedlock",
-        "meaning": "Evlilik baÄŸÄ±",
+        "meaning": "Evlilik bağı",
         "level": "C2"
     },
     {
         "id": 20188,
         "word": "Witness",
-        "meaning": "Åahit olmak, TanÄ±k",
+        "meaning": "Şahit olmak, Tanık",
         "level": "B2"
     },
     {
         "id": 20189,
         "word": "Wit",
-        "meaning": "KÄ±vrak zeka, Esprili",
+        "meaning": "Kıvrak zeka, Esprili",
         "level": "C1"
     },
     {
         "id": 20190,
         "word": "Alcove",
-        "meaning": "Cumba, KÃ¶ÅŸe",
+        "meaning": "Cumba, Köşe",
         "level": "C1"
     },
     {
         "id": 20191,
         "word": "Bondage",
-        "meaning": "Esaret, KÃ¶lelik",
+        "meaning": "Esaret, Kölelik",
         "level": "C1"
     },
     {
@@ -1154,25 +1154,25 @@
     {
         "id": 20193,
         "word": "Comrade",
-        "meaning": "YoldaÅŸ",
+        "meaning": "Yoldaş",
         "level": "C1"
     },
     {
         "id": 20194,
         "word": "Constrict",
-        "meaning": "Daraltmak, SÄ±kmak",
+        "meaning": "Daraltmak, Sıkmak",
         "level": "C2"
     },
     {
         "id": 20195,
         "word": "Corrupt",
-        "meaning": "YozlaÅŸmÄ±ÅŸ",
+        "meaning": "Yozlaşmış",
         "level": "B2"
     },
     {
         "id": 20196,
         "word": "Denounce",
-        "meaning": "Ä°hbar etmek, KÄ±namak",
+        "meaning": "İhbar etmek, Kınamak",
         "level": "C1"
     },
     {
@@ -1184,19 +1184,19 @@
     {
         "id": 20198,
         "word": "Dictatorship",
-        "meaning": "DiktatÃ¶rlÃ¼k",
+        "meaning": "Diktatörlük",
         "level": "B2"
     },
     {
         "id": 20199,
         "word": "Dim",
-        "meaning": "LoÅŸ, SÃ¶nÃ¼k",
+        "meaning": "Loş, Sönük",
         "level": "B2"
     },
     {
         "id": 20200,
         "word": "Distinguishable",
-        "meaning": "AyÄ±rt edilebilir",
+        "meaning": "Ayırt edilebilir",
         "level": "C1"
     },
     {
@@ -1220,7 +1220,7 @@
     {
         "id": 20204,
         "word": "Frail",
-        "meaning": "CÄ±lÄ±z, KÄ±rÄ±lgan",
+        "meaning": "Cılız, Kırılgan",
         "level": "C1"
     },
     {
@@ -1238,7 +1238,7 @@
     {
         "id": 20207,
         "word": "Hover",
-        "meaning": "Havada asÄ±lÄ± kalmak",
+        "meaning": "Havada asılı kalmak",
         "level": "C1"
     },
     {
@@ -1256,19 +1256,19 @@
     {
         "id": 20210,
         "word": "Liberate",
-        "meaning": "Ã–zgÃ¼rleÅŸtirmek",
+        "meaning": "Özgürleştirmek",
         "level": "C1"
     },
     {
         "id": 20211,
         "word": "Luxurious",
-        "meaning": "LÃ¼ks",
+        "meaning": "Lüks",
         "level": "B1"
     },
     {
         "id": 20212,
         "word": "Meagreness",
-        "meaning": "ZayÄ±flÄ±k, Yetersizlik",
+        "meaning": "Zayıflık, Yetersizlik",
         "level": "C2"
     },
     {
@@ -1280,19 +1280,19 @@
     {
         "id": 20214,
         "word": "Moustache",
-        "meaning": "BÄ±yÄ±k",
+        "meaning": "Bıyık",
         "level": "B1"
     },
     {
         "id": 20215,
         "word": "Nuzzle",
-        "meaning": "Burnunu sÃ¼rtmek",
+        "meaning": "Burnunu sürtmek",
         "level": "C2"
     },
     {
         "id": 20216,
         "word": "Oblong",
-        "meaning": "DikdÃ¶rtgen (ÅŸekil)",
+        "meaning": "Dikdörtgen (şekil)",
         "level": "C1"
     },
     {
@@ -1310,13 +1310,13 @@
     {
         "id": 20219,
         "word": "Overthrow",
-        "meaning": "Devirmek (hÃ¼kÃ¼met)",
+        "meaning": "Devirmek (hükümet)",
         "level": "C1"
     },
     {
         "id": 20220,
         "word": "Pane",
-        "meaning": "Pencere camÄ±",
+        "meaning": "Pencere camı",
         "level": "C1"
     },
     {
@@ -1358,13 +1358,13 @@
     {
         "id": 20227,
         "word": "Pyramidal",
-        "meaning": "Piramit ÅŸeklinde",
+        "meaning": "Piramit şeklinde",
         "level": "C2"
     },
     {
         "id": 20228,
         "word": "Rectify",
-        "meaning": "DÃ¼zeltmek",
+        "meaning": "Düzeltmek",
         "level": "C1"
     },
     {
@@ -1376,7 +1376,7 @@
     {
         "id": 20230,
         "word": "Rugged",
-        "meaning": "Engebeli, Sert yÃ¼zlÃ¼",
+        "meaning": "Engebeli, Sert yüzlü",
         "level": "C1"
     },
     {
@@ -1388,7 +1388,7 @@
     {
         "id": 20232,
         "word": "Sanctuary",
-        "meaning": "SÄ±ÄŸÄ±nak",
+        "meaning": "Sığınak",
         "level": "C1"
     },
     {
@@ -1400,7 +1400,7 @@
     {
         "id": 20234,
         "word": "Shallow",
-        "meaning": "SÄ±ÄŸ",
+        "meaning": "Sığ",
         "level": "B2"
     },
     {
@@ -1412,31 +1412,31 @@
     {
         "id": 20236,
         "word": "Skim",
-        "meaning": "SÄ±yÄ±rÄ±p geÃ§mek, GÃ¶z gezdirmek",
+        "meaning": "Sıyırıp geçmek, Göz gezdirmek",
         "level": "C2"
     },
     {
         "id": 20237,
         "word": "Slavery",
-        "meaning": "KÃ¶lelik",
+        "meaning": "Kölelik",
         "level": "B2"
     },
     {
         "id": 20238,
         "word": "Slummy",
-        "meaning": "Gecekondu tarzÄ±",
+        "meaning": "Gecekondu tarzı",
         "level": "C2"
     },
     {
         "id": 20239,
         "word": "Snoop",
-        "meaning": "GÃ¶zetlemek, Burnunu sokmak",
+        "meaning": "Gözetlemek, Burnunu sokmak",
         "level": "C1"
     },
     {
         "id": 20240,
         "word": "Soar",
-        "meaning": "HÄ±zla yÃ¼kselmek",
+        "meaning": "Hızla yükselmek",
         "level": "C1"
     },
     {
@@ -1448,13 +1448,13 @@
     {
         "id": 20242,
         "word": "Stiff",
-        "meaning": "KaskatÄ±, Sert",
+        "meaning": "Kaskatı, Sert",
         "level": "B2"
     },
     {
         "id": 20243,
         "word": "Stumble",
-        "meaning": "TÃ¶kezlemek",
+        "meaning": "Tökezlemek",
         "level": "B2"
     },
     {
@@ -1466,7 +1466,7 @@
     {
         "id": 20245,
         "word": "Surveillance",
-        "meaning": "GÃ¶zetim",
+        "meaning": "Gözetim",
         "level": "C1"
     },
     {
@@ -1484,13 +1484,13 @@
     {
         "id": 20248,
         "word": "Terror",
-        "meaning": "DehÅŸet",
+        "meaning": "Dehşet",
         "level": "B2"
     },
     {
         "id": 20249,
         "word": "Torture",
-        "meaning": "Ä°ÅŸkence",
+        "meaning": "İşkence",
         "level": "B2"
     },
     {
@@ -1508,19 +1508,19 @@
     {
         "id": 20252,
         "word": "Trickle",
-        "meaning": "Damlamak, SÄ±zmak",
+        "meaning": "Damlamak, Sızmak",
         "level": "C1"
     },
     {
         "id": 20253,
         "word": "Vile",
-        "meaning": "AÅŸaÄŸÄ±lÄ±k, Ä°ÄŸrenÃ§",
+        "meaning": "Aşağılık, İğrenç",
         "level": "C1"
     },
     {
         "id": 20255,
         "word": "Aloft",
-        "meaning": "Havada, YÃ¼ksekte",
+        "meaning": "Havada, Yüksekte",
         "level": "C2"
     },
     {
@@ -1532,13 +1532,13 @@
     {
         "id": 20257,
         "word": "Ashplant",
-        "meaning": "DiÅŸbudaÄŸÄ± sopasÄ±",
+        "meaning": "Dişbudağı sopası",
         "level": "C2"
     },
     {
         "id": 20258,
         "word": "Barmaid",
-        "meaning": "Barmen kadÄ±n",
+        "meaning": "Barmen kadın",
         "level": "B2"
     },
     {
@@ -1556,7 +1556,7 @@
     {
         "id": 20261,
         "word": "Cavalcade",
-        "meaning": "AtlÄ± alayÄ±, Konvoy",
+        "meaning": "Atlı alayı, Konvoy",
         "level": "C2"
     },
     {
@@ -1568,7 +1568,7 @@
     {
         "id": 20263,
         "word": "Clank",
-        "meaning": "ÅÄ±ngÄ±rdamak",
+        "meaning": "Şıngırdamak",
         "level": "C2"
     },
     {
@@ -1586,19 +1586,19 @@
     {
         "id": 20266,
         "word": "Deafening",
-        "meaning": "SaÄŸÄ±r edici",
+        "meaning": "Sağır edici",
         "level": "C1"
     },
     {
         "id": 20267,
         "word": "Dressinggown",
-        "meaning": "SabahlÄ±k",
+        "meaning": "Sabahlık",
         "level": "C1"
     },
     {
         "id": 20268,
         "word": "Exhausted",
-        "meaning": "TÃ¼kenmiÅŸ",
+        "meaning": "Tükenmiş",
         "level": "B2"
     },
     {
@@ -1610,7 +1610,7 @@
     {
         "id": 20270,
         "word": "Fierce",
-        "meaning": "Åiddetli, VahÅŸi",
+        "meaning": "Şiddetli, Vahşi",
         "level": "B2"
     },
     {
@@ -1622,7 +1622,7 @@
     {
         "id": 20272,
         "word": "Fussy",
-        "meaning": "MÄ±zmÄ±z, Titiz",
+        "meaning": "Mızmız, Titiz",
         "level": "C1"
     },
     {
@@ -1634,13 +1634,13 @@
     {
         "id": 20274,
         "word": "Giggle",
-        "meaning": "KÄ±kÄ±rdamak",
+        "meaning": "Kıkırdamak",
         "level": "C1"
     },
     {
         "id": 20275,
         "word": "Gizzard",
-        "meaning": "TaÅŸlÄ±k (kuÅŸ midesi)",
+        "meaning": "Taşlık (kuş midesi)",
         "level": "C2"
     },
     {
@@ -1652,25 +1652,25 @@
     {
         "id": 20277,
         "word": "Hallucination",
-        "meaning": "HalÃ¼sinasyon",
+        "meaning": "Halüsinasyon",
         "level": "C1"
     },
     {
         "id": 20278,
         "word": "Ineluctable",
-        "meaning": "KaÃ§Ä±nÄ±lmaz",
+        "meaning": "Kaçınılmaz",
         "level": "C2"
     },
     {
         "id": 20279,
         "word": "Intellect",
-        "meaning": "Zeka, AkÄ±l",
+        "meaning": "Zeka, Akıl",
         "level": "C1"
     },
     {
         "id": 20280,
         "word": "Intone",
-        "meaning": "MÄ±rÄ±ldanmak, Okumak",
+        "meaning": "Mırıldanmak, Okumak",
         "level": "C2"
     },
     {
@@ -1682,7 +1682,7 @@
     {
         "id": 20282,
         "word": "Kidney",
-        "meaning": "BÃ¶brek",
+        "meaning": "Böbrek",
         "level": "B1"
     },
     {
@@ -1694,31 +1694,31 @@
     {
         "id": 20284,
         "word": "Languid",
-        "meaning": "Halsiz, BaygÄ±n",
+        "meaning": "Halsiz, Baygın",
         "level": "C2"
     },
     {
         "id": 20285,
         "word": "Lather",
-        "meaning": "KÃ¶pÃ¼k",
+        "meaning": "Köpük",
         "level": "C2"
     },
     {
         "id": 20286,
         "word": "Lotus",
-        "meaning": "Lotus Ã§iÃ§eÄŸi",
+        "meaning": "Lotus çiçeği",
         "level": "C1"
     },
     {
         "id": 20287,
         "word": "Maternity",
-        "meaning": "Annelik, DoÄŸum",
+        "meaning": "Annelik, Doğum",
         "level": "C1"
     },
     {
         "id": 20288,
         "word": "Modality",
-        "meaning": "Kiplik, BiÃ§im",
+        "meaning": "Kiplik, Biçim",
         "level": "C2"
     },
     {
@@ -1748,7 +1748,7 @@
     {
         "id": 20293,
         "word": "Overpowering",
-        "meaning": "BaskÄ±n, KarÅŸÄ± konulmaz",
+        "meaning": "Baskın, Karşı konulmaz",
         "level": "C2"
     },
     {
@@ -1760,7 +1760,7 @@
     {
         "id": 20295,
         "word": "Pang",
-        "meaning": "SancÄ±",
+        "meaning": "Sancı",
         "level": "C2"
     },
     {
@@ -1790,19 +1790,19 @@
     {
         "id": 20300,
         "word": "Repent",
-        "meaning": "TÃ¶vbe etmek",
+        "meaning": "Tövbe etmek",
         "level": "C2"
     },
     {
         "id": 20301,
         "word": "Roe",
-        "meaning": "BalÄ±k yumurtasÄ±",
+        "meaning": "Balık yumurtası",
         "level": "C2"
     },
     {
         "id": 20302,
         "word": "Savour",
-        "meaning": "TadÄ±nÄ± Ã§Ä±karmak",
+        "meaning": "Tadını çıkarmak",
         "level": "C2"
     },
     {
@@ -1814,7 +1814,7 @@
     {
         "id": 20304,
         "word": "Skeptically",
-        "meaning": "ÅÃ¼pheyle",
+        "meaning": "Şüpheyle",
         "level": "C1"
     },
     {
@@ -1832,25 +1832,25 @@
     {
         "id": 20307,
         "word": "Stiffly",
-        "meaning": "SertÃ§e",
+        "meaning": "Sertçe",
         "level": "C1"
     },
     {
         "id": 20308,
         "word": "Strand",
-        "meaning": "KÄ±yÄ±, Tel",
+        "meaning": "Kıyı, Tel",
         "level": "C2"
     },
     {
         "id": 20309,
         "word": "Stride",
-        "meaning": "AdÄ±m atmak",
+        "meaning": "Adım atmak",
         "level": "C1"
     },
     {
         "id": 20310,
         "word": "Sustained",
-        "meaning": "SÃ¼rdÃ¼rÃ¼len",
+        "meaning": "Sürdürülen",
         "level": "B2"
     },
     {
@@ -1862,31 +1862,31 @@
     {
         "id": 20312,
         "word": "Temperament",
-        "meaning": "MizaÃ§",
+        "meaning": "Mizaç",
         "level": "C2"
     },
     {
         "id": 20313,
         "word": "Thunderclap",
-        "meaning": "GÃ¶k gÃ¼rÃ¼ltÃ¼sÃ¼",
+        "meaning": "Gök gürültüsü",
         "level": "C2"
     },
     {
         "id": 20314,
         "word": "Trashy",
-        "meaning": "DeÄŸersiz, Ã‡Ã¶p",
+        "meaning": "Değersiz, Çöp",
         "level": "C1"
     },
     {
         "id": 20315,
         "word": "Twilight",
-        "meaning": "AlacakaranlÄ±k",
+        "meaning": "Alacakaranlık",
         "level": "C1"
     },
     {
         "id": 20316,
         "word": "Ungirdled",
-        "meaning": "KuÅŸaksÄ±z, Kemer takÄ±lmamÄ±ÅŸ",
+        "meaning": "Kuşaksız, Kemer takılmamış",
         "level": "C2"
     },
     {
@@ -1904,7 +1904,7 @@
     {
         "id": 20319,
         "word": "Winding",
-        "meaning": "DolambaÃ§lÄ±",
+        "meaning": "Dolambaçlı",
         "level": "C1"
     },
     {
@@ -1916,13 +1916,13 @@
     {
         "id": 20321,
         "word": "Wrack",
-        "meaning": "Yosun, YÄ±kÄ±ntÄ±",
+        "meaning": "Yosun, Yıkıntı",
         "level": "C2"
     },
     {
         "id": 20254,
         "word": "Whirl",
-        "meaning": "DÃ¶nmek, FÄ±rÄ±l fÄ±rÄ±l dÃ¶nmek",
+        "meaning": "Dönmek, Fırıl fırıl dönmek",
         "level": "C1"
     },
     {
@@ -1934,7 +1934,7 @@
     {
         "id": 1002,
         "word": "Abroad",
-        "meaning": "Yurt dÄ±ÅŸÄ±",
+        "meaning": "Yurt dışı",
         "level": "A2"
     },
     {
@@ -1946,7 +1946,7 @@
     {
         "id": 1004,
         "word": "Access",
-        "meaning": "EriÅŸim",
+        "meaning": "Erişim",
         "level": "B1"
     },
     {
@@ -1964,7 +1964,7 @@
     {
         "id": 1007,
         "word": "Achieve",
-        "meaning": "BaÅŸarmak",
+        "meaning": "Başarmak",
         "level": "B1"
     },
     {
@@ -1994,13 +1994,13 @@
     {
         "id": 1012,
         "word": "Actually",
-        "meaning": "AslÄ±nda",
+        "meaning": "Aslında",
         "level": "A2"
     },
     {
         "id": 1013,
         "word": "Adult",
-        "meaning": "YetiÅŸkin",
+        "meaning": "Yetişkin",
         "level": "A1"
     },
     {
@@ -2036,7 +2036,7 @@
     {
         "id": 1019,
         "word": "Afraid",
-        "meaning": "KorkmuÅŸ",
+        "meaning": "Korkmuş",
         "level": "A2"
     },
     {
@@ -2048,7 +2048,7 @@
     {
         "id": 1021,
         "word": "Against",
-        "meaning": "KarÅŸÄ±",
+        "meaning": "Karşı",
         "level": "A1"
     },
     {
@@ -2060,25 +2060,25 @@
     {
         "id": 1023,
         "word": "Agree",
-        "meaning": "KatÄ±lmak",
+        "meaning": "Katılmak",
         "level": "A2"
     },
     {
         "id": 1024,
         "word": "Agreement",
-        "meaning": "AnlaÅŸma",
+        "meaning": "Anlaşma",
         "level": "B1"
     },
     {
         "id": 1025,
         "word": "Ahead",
-        "meaning": "Ä°lerde",
+        "meaning": "İlerde",
         "level": "B1"
     },
     {
         "id": 1026,
         "word": "Aim",
-        "meaning": "AmaÃ§",
+        "meaning": "Amaç",
         "level": "B1"
     },
     {
@@ -2090,7 +2090,7 @@
     {
         "id": 1028,
         "word": "Airport",
-        "meaning": "HavalimanÄ±",
+        "meaning": "Havalimanı",
         "level": "A2"
     },
     {
@@ -2102,7 +2102,7 @@
     {
         "id": 1030,
         "word": "Alive",
-        "meaning": "CanlÄ±",
+        "meaning": "Canlı",
         "level": "A2"
     },
     {
@@ -2114,7 +2114,7 @@
     {
         "id": 1032,
         "word": "Allow",
-        "meaning": "Ä°zin vermek",
+        "meaning": "İzin vermek",
         "level": "A1"
     },
     {
@@ -2126,7 +2126,7 @@
     {
         "id": 1034,
         "word": "Alone",
-        "meaning": "YalnÄ±z",
+        "meaning": "Yalnız",
         "level": "A1"
     },
     {
@@ -2144,7 +2144,7 @@
     {
         "id": 1037,
         "word": "Also",
-        "meaning": "AyrÄ±ca",
+        "meaning": "Ayrıca",
         "level": "A2"
     },
     {
@@ -2156,7 +2156,7 @@
     {
         "id": 1039,
         "word": "Although",
-        "meaning": "RaÄŸmen",
+        "meaning": "Rağmen",
         "level": "B1"
     },
     {
@@ -2168,19 +2168,19 @@
     {
         "id": 1041,
         "word": "Amazing",
-        "meaning": "ÅaÅŸÄ±rtÄ±cÄ±",
+        "meaning": "Şaşırtıcı",
         "level": "A2"
     },
     {
         "id": 1042,
         "word": "Ambition",
-        "meaning": "HÄ±rs",
+        "meaning": "Hırs",
         "level": "B1"
     },
     {
         "id": 1043,
         "word": "Among",
-        "meaning": "ArasÄ±nda",
+        "meaning": "Arasında",
         "level": "A2"
     },
     {
@@ -2210,7 +2210,7 @@
     {
         "id": 1048,
         "word": "Angry",
-        "meaning": "KÄ±zgÄ±n",
+        "meaning": "Kızgın",
         "level": "A2"
     },
     {
@@ -2222,13 +2222,13 @@
     {
         "id": 1050,
         "word": "Ankle",
-        "meaning": "Ayak bileÄŸi",
+        "meaning": "Ayak bileği",
         "level": "A2"
     },
     {
         "id": 1051,
         "word": "Anniversary",
-        "meaning": "YÄ±l dÃ¶nÃ¼mÃ¼",
+        "meaning": "Yıl dönümü",
         "level": "B1"
     },
     {
@@ -2240,19 +2240,19 @@
     {
         "id": 1053,
         "word": "Annoy",
-        "meaning": "RahatsÄ±z etmek",
+        "meaning": "Rahatsız etmek",
         "level": "B1"
     },
     {
         "id": 1054,
         "word": "Annual",
-        "meaning": "YÄ±llÄ±k",
+        "meaning": "Yıllık",
         "level": "B1"
     },
     {
         "id": 1055,
         "word": "Another",
-        "meaning": "DiÄŸer",
+        "meaning": "Diğer",
         "level": "A2"
     },
     {
@@ -2264,7 +2264,7 @@
     {
         "id": 1057,
         "word": "Anxious",
-        "meaning": "EndiÅŸeli",
+        "meaning": "Endişeli",
         "level": "B1"
     },
     {
@@ -2288,7 +2288,7 @@
     {
         "id": 1061,
         "word": "Apart",
-        "meaning": "AyrÄ±",
+        "meaning": "Ayrı",
         "level": "B1"
     },
     {
@@ -2300,7 +2300,7 @@
     {
         "id": 1063,
         "word": "Apologize",
-        "meaning": "Ã–zÃ¼r dilemek",
+        "meaning": "Özür dilemek",
         "level": "B1"
     },
     {
@@ -2312,19 +2312,19 @@
     {
         "id": 1065,
         "word": "Appear",
-        "meaning": "GÃ¶rÃ¼nmek",
+        "meaning": "Görünmek",
         "level": "A1"
     },
     {
         "id": 1066,
         "word": "Appearance",
-        "meaning": "GÃ¶rÃ¼nÃ¼ÅŸ",
+        "meaning": "Görünüş",
         "level": "A2"
     },
     {
         "id": 1067,
         "word": "Application",
-        "meaning": "BaÅŸvuru",
+        "meaning": "Başvuru",
         "level": "B1"
     },
     {
@@ -2348,13 +2348,13 @@
     {
         "id": 1071,
         "word": "Approach",
-        "meaning": "YaklaÅŸÄ±m",
+        "meaning": "Yaklaşım",
         "level": "B1"
     },
     {
         "id": 1072,
         "word": "Approximate",
-        "meaning": "YaklaÅŸÄ±k",
+        "meaning": "Yaklaşık",
         "level": "B1"
     },
     {
@@ -2378,13 +2378,13 @@
     {
         "id": 1076,
         "word": "Argue",
-        "meaning": "TartÄ±ÅŸmak",
+        "meaning": "Tartışmak",
         "level": "A2"
     },
     {
         "id": 1077,
         "word": "Argument",
-        "meaning": "ArgÃ¼man",
+        "meaning": "Argüman",
         "level": "A1"
     },
     {
@@ -2396,13 +2396,13 @@
     {
         "id": 1079,
         "word": "Arrange",
-        "meaning": "DÃ¼zenlemek",
+        "meaning": "Düzenlemek",
         "level": "A2"
     },
     {
         "id": 1080,
         "word": "Arrangement",
-        "meaning": "DÃ¼zenleme",
+        "meaning": "Düzenleme",
         "level": "B1"
     },
     {
@@ -2414,7 +2414,7 @@
     {
         "id": 1082,
         "word": "Arrival",
-        "meaning": "VarÄ±ÅŸ",
+        "meaning": "Varış",
         "level": "B1"
     },
     {
@@ -2444,7 +2444,7 @@
     {
         "id": 1087,
         "word": "Artist",
-        "meaning": "SanatÃ§Ä±",
+        "meaning": "Sanatçı",
         "level": "A2"
     },
     {
@@ -2462,7 +2462,7 @@
     {
         "id": 1090,
         "word": "Ashamed",
-        "meaning": "UtanmÄ±ÅŸ",
+        "meaning": "Utanmış",
         "level": "B1"
     },
     {
@@ -2474,31 +2474,31 @@
     {
         "id": 1092,
         "word": "Aspect",
-        "meaning": "YÃ¶n, BakÄ±ÅŸ aÃ§Ä±sÄ±",
+        "meaning": "Yön, Bakış açısı",
         "level": "B2"
     },
     {
         "id": 1093,
         "word": "Assess",
-        "meaning": "DeÄŸerlendirmek",
+        "meaning": "Değerlendirmek",
         "level": "B2"
     },
     {
         "id": 1094,
         "word": "Assessment",
-        "meaning": "DeÄŸerlendirme",
+        "meaning": "Değerlendirme",
         "level": "C1"
     },
     {
         "id": 1095,
         "word": "Assignment",
-        "meaning": "Ã–dev, Atama",
+        "meaning": "Ödev, Atama",
         "level": "B1"
     },
     {
         "id": 1096,
         "word": "Assist",
-        "meaning": "YardÄ±m etmek",
+        "meaning": "Yardım etmek",
         "level": "B1"
     },
     {
@@ -2510,13 +2510,13 @@
     {
         "id": 1098,
         "word": "Associate",
-        "meaning": "Ä°liÅŸkilendirmek",
+        "meaning": "İlişkilendirmek",
         "level": "B2"
     },
     {
         "id": 1099,
         "word": "Assumption",
-        "meaning": "VarsayÄ±m",
+        "meaning": "Varsayım",
         "level": "C1"
     },
     {
@@ -2534,19 +2534,19 @@
     {
         "id": 1102,
         "word": "Attack",
-        "meaning": "SaldÄ±rÄ±",
+        "meaning": "Saldırı",
         "level": "A2"
     },
     {
         "id": 1103,
         "word": "Attempt",
-        "meaning": "GiriÅŸim",
+        "meaning": "Girişim",
         "level": "B1"
     },
     {
         "id": 1104,
         "word": "Attend",
-        "meaning": "KatÄ±lmak",
+        "meaning": "Katılmak",
         "level": "A1"
     },
     {
@@ -2564,7 +2564,7 @@
     {
         "id": 1107,
         "word": "Attract",
-        "meaning": "Ã‡ekmek (ilgi)",
+        "meaning": "Çekmek (ilgi)",
         "level": "B1"
     },
     {
@@ -2576,7 +2576,7 @@
     {
         "id": 1109,
         "word": "Attractive",
-        "meaning": "Ã‡ekici",
+        "meaning": "Çekici",
         "level": "A2"
     },
     {
@@ -2612,19 +2612,19 @@
     {
         "id": 1115,
         "word": "Avoid",
-        "meaning": "KaÃ§Ä±nmak",
+        "meaning": "Kaçınmak",
         "level": "A2"
     },
     {
         "id": 1116,
         "word": "Award",
-        "meaning": "Ã–dÃ¼l",
+        "meaning": "Ödül",
         "level": "A2"
     },
     {
         "id": 1117,
         "word": "Aware",
-        "meaning": "FarkÄ±nda",
+        "meaning": "Farkında",
         "level": "B1"
     },
     {
@@ -2648,7 +2648,7 @@
     {
         "id": 1121,
         "word": "Back",
-        "meaning": "SÄ±rt, Geri",
+        "meaning": "Sırt, Geri",
         "level": "A1"
     },
     {
@@ -2660,7 +2660,7 @@
     {
         "id": 1123,
         "word": "Backward",
-        "meaning": "Geriye doÄŸru",
+        "meaning": "Geriye doğru",
         "level": "B1"
     },
     {
@@ -2672,25 +2672,25 @@
     {
         "id": 1125,
         "word": "Bad",
-        "meaning": "KÃ¶tÃ¼",
+        "meaning": "Kötü",
         "level": "A2"
     },
     {
         "id": 1126,
         "word": "Badly",
-        "meaning": "KÃ¶tÃ¼ bir ÅŸekilde",
+        "meaning": "Kötü bir şekilde",
         "level": "A2"
     },
     {
         "id": 1127,
         "word": "Bag",
-        "meaning": "Ã‡anta",
+        "meaning": "Çanta",
         "level": "A1"
     },
     {
         "id": 1128,
         "word": "Bake",
-        "meaning": "FÄ±rÄ±nda piÅŸirmek",
+        "meaning": "Fırında pişirmek",
         "level": "A1"
     },
     {
@@ -2714,7 +2714,7 @@
     {
         "id": 1132,
         "word": "Band",
-        "meaning": "MÃ¼zik grubu",
+        "meaning": "Müzik grubu",
         "level": "A2"
     },
     {
@@ -2726,7 +2726,7 @@
     {
         "id": 1134,
         "word": "Bar",
-        "meaning": "Ã‡ubuk, Bar",
+        "meaning": "Çubuk, Bar",
         "level": "A2"
     },
     {
@@ -2738,7 +2738,7 @@
     {
         "id": 1136,
         "word": "Base",
-        "meaning": "Taban, Ãœs",
+        "meaning": "Taban, Üs",
         "level": "B1"
     },
     {
@@ -2768,7 +2768,7 @@
     {
         "id": 1141,
         "word": "Bathroom",
-        "meaning": "Banyo odasÄ±",
+        "meaning": "Banyo odası",
         "level": "A2"
     },
     {
@@ -2780,7 +2780,7 @@
     {
         "id": 1143,
         "word": "Battle",
-        "meaning": "SavaÅŸ",
+        "meaning": "Savaş",
         "level": "B1"
     },
     {
@@ -2798,7 +2798,7 @@
     {
         "id": 1146,
         "word": "Bear",
-        "meaning": "AyÄ±, Katlanmak",
+        "meaning": "Ayı, Katlanmak",
         "level": "B1"
     },
     {
@@ -2810,19 +2810,19 @@
     {
         "id": 1148,
         "word": "Beautiful",
-        "meaning": "GÃ¼zel",
+        "meaning": "Güzel",
         "level": "A2"
     },
     {
         "id": 1149,
         "word": "Beauty",
-        "meaning": "GÃ¼zellik",
+        "meaning": "Güzellik",
         "level": "B1"
     },
     {
         "id": 1150,
         "word": "Become",
-        "meaning": "Olmak (dÃ¶nÃ¼ÅŸmek)",
+        "meaning": "Olmak (dönüşmek)",
         "level": "A2"
     },
     {
@@ -2834,25 +2834,25 @@
     {
         "id": 1152,
         "word": "Bedroom",
-        "meaning": "Yatak odasÄ±",
+        "meaning": "Yatak odası",
         "level": "A2"
     },
     {
         "id": 1153,
         "word": "Before",
-        "meaning": "Ã–nce",
+        "meaning": "Önce",
         "level": "A2"
     },
     {
         "id": 1154,
         "word": "Begin",
-        "meaning": "BaÅŸlamak",
+        "meaning": "Başlamak",
         "level": "A2"
     },
     {
         "id": 1155,
         "word": "Beginning",
-        "meaning": "BaÅŸlangÄ±Ã§",
+        "meaning": "Başlangıç",
         "level": "A2"
     },
     {
@@ -2864,7 +2864,7 @@
     {
         "id": 1157,
         "word": "Behavior",
-        "meaning": "DavranÄ±ÅŸ",
+        "meaning": "Davranış",
         "level": "A2"
     },
     {
@@ -2876,13 +2876,13 @@
     {
         "id": 1159,
         "word": "Belief",
-        "meaning": "Ä°nanÃ§",
+        "meaning": "İnanç",
         "level": "B1"
     },
     {
         "id": 1160,
         "word": "Believe",
-        "meaning": "Ä°nanmak",
+        "meaning": "İnanmak",
         "level": "A2"
     },
     {
@@ -2900,7 +2900,7 @@
     {
         "id": 1163,
         "word": "Below",
-        "meaning": "AÅŸaÄŸÄ±da",
+        "meaning": "Aşağıda",
         "level": "A2"
     },
     {
@@ -2912,7 +2912,7 @@
     {
         "id": 1165,
         "word": "Bend",
-        "meaning": "EÄŸmek",
+        "meaning": "Eğmek",
         "level": "B1"
     },
     {
@@ -2942,13 +2942,13 @@
     {
         "id": 1170,
         "word": "Between",
-        "meaning": "ArasÄ±nda",
+        "meaning": "Arasında",
         "level": "A2"
     },
     {
         "id": 1171,
         "word": "Beyond",
-        "meaning": "Ã–tesinde",
+        "meaning": "Ötesinde",
         "level": "B1"
     },
     {
@@ -2960,7 +2960,7 @@
     {
         "id": 1173,
         "word": "Big",
-        "meaning": "BÃ¼yÃ¼k",
+        "meaning": "Büyük",
         "level": "A2"
     },
     {
@@ -2984,7 +2984,7 @@
     {
         "id": 1177,
         "word": "Bin",
-        "meaning": "Ã‡Ã¶p kutusu",
+        "meaning": "Çöp kutusu",
         "level": "A2"
     },
     {
@@ -2996,25 +2996,25 @@
     {
         "id": 1179,
         "word": "Bird",
-        "meaning": "KuÅŸ",
+        "meaning": "Kuş",
         "level": "A2"
     },
     {
         "id": 1180,
         "word": "Birth",
-        "meaning": "DoÄŸum",
+        "meaning": "Doğum",
         "level": "A2"
     },
     {
         "id": 1181,
         "word": "Birthday",
-        "meaning": "DoÄŸum gÃ¼nÃ¼",
+        "meaning": "Doğum günü",
         "level": "A2"
     },
     {
         "id": 1182,
         "word": "Biscuit",
-        "meaning": "BiskÃ¼vi",
+        "meaning": "Bisküvi",
         "level": "A2"
     },
     {
@@ -3026,13 +3026,13 @@
     {
         "id": 1184,
         "word": "Bite",
-        "meaning": "IsÄ±rmak",
+        "meaning": "Isırmak",
         "level": "B1"
     },
     {
         "id": 1185,
         "word": "Bitter",
-        "meaning": "AcÄ±",
+        "meaning": "Acı",
         "level": "B1"
     },
     {
@@ -3044,19 +3044,19 @@
     {
         "id": 1187,
         "word": "Blame",
-        "meaning": "SuÃ§lamak",
+        "meaning": "Suçlamak",
         "level": "B1"
     },
     {
         "id": 1188,
         "word": "Blank",
-        "meaning": "BoÅŸ",
+        "meaning": "Boş",
         "level": "A2"
     },
     {
         "id": 1189,
         "word": "Blind",
-        "meaning": "KÃ¶r",
+        "meaning": "Kör",
         "level": "B1"
     },
     {
@@ -3074,7 +3074,7 @@
     {
         "id": 1192,
         "word": "Blonde",
-        "meaning": "SarÄ±ÅŸÄ±n",
+        "meaning": "Sarışın",
         "level": "A2"
     },
     {
@@ -3086,7 +3086,7 @@
     {
         "id": 1194,
         "word": "Blow",
-        "meaning": "Ãœflemek",
+        "meaning": "Üflemek",
         "level": "B1"
     },
     {
@@ -3110,7 +3110,7 @@
     {
         "id": 1198,
         "word": "Body",
-        "meaning": "VÃ¼cut",
+        "meaning": "Vücut",
         "level": "A1"
     },
     {
@@ -3128,7 +3128,7 @@
     {
         "id": 1201,
         "word": "Bond",
-        "meaning": "BaÄŸ",
+        "meaning": "Bağ",
         "level": "B2"
     },
     {
@@ -3152,31 +3152,31 @@
     {
         "id": 1205,
         "word": "Border",
-        "meaning": "SÄ±nÄ±r",
+        "meaning": "Sınır",
         "level": "B1"
     },
     {
         "id": 1206,
         "word": "Bored",
-        "meaning": "SÄ±kÄ±lmÄ±ÅŸ",
+        "meaning": "Sıkılmış",
         "level": "A2"
     },
     {
         "id": 1207,
         "word": "Boring",
-        "meaning": "SÄ±kÄ±cÄ±",
+        "meaning": "Sıkıcı",
         "level": "A2"
     },
     {
         "id": 1208,
         "word": "Born",
-        "meaning": "DoÄŸmuÅŸ",
+        "meaning": "Doğmuş",
         "level": "A2"
     },
     {
         "id": 1209,
         "word": "Borrow",
-        "meaning": "Ã–dÃ¼nÃ§ almak",
+        "meaning": "Ödünç almak",
         "level": "A2"
     },
     {
@@ -3194,13 +3194,13 @@
     {
         "id": 1212,
         "word": "Bother",
-        "meaning": "RahatsÄ±z etmek",
+        "meaning": "Rahatsız etmek",
         "level": "B1"
     },
     {
         "id": 1213,
         "word": "Bottle",
-        "meaning": "ÅiÅŸe",
+        "meaning": "Şişe",
         "level": "A2"
     },
     {
@@ -3224,7 +3224,7 @@
     {
         "id": 1217,
         "word": "Boy",
-        "meaning": "Erkek Ã§ocuk",
+        "meaning": "Erkek çocuk",
         "level": "A2"
     },
     {
@@ -3236,7 +3236,7 @@
     {
         "id": 1219,
         "word": "Branch",
-        "meaning": "Dal, Åube",
+        "meaning": "Dal, Şube",
         "level": "B1"
     },
     {
@@ -3260,13 +3260,13 @@
     {
         "id": 1223,
         "word": "Break",
-        "meaning": "KÄ±rmak, Mola",
+        "meaning": "Kırmak, Mola",
         "level": "A2"
     },
     {
         "id": 1224,
         "word": "Breakfast",
-        "meaning": "KahvaltÄ±",
+        "meaning": "Kahvaltı",
         "level": "A2"
     },
     {
@@ -3296,13 +3296,13 @@
     {
         "id": 1229,
         "word": "Bridge",
-        "meaning": "KÃ¶prÃ¼",
+        "meaning": "Köprü",
         "level": "A2"
     },
     {
         "id": 1230,
         "word": "Brief",
-        "meaning": "KÄ±sa, Ã–z",
+        "meaning": "Kısa, Öz",
         "level": "B2"
     },
     {
@@ -3314,7 +3314,7 @@
     {
         "id": 1232,
         "word": "Brilliant",
-        "meaning": "MuhteÅŸem",
+        "meaning": "Muhteşem",
         "level": "A2"
     },
     {
@@ -3326,25 +3326,25 @@
     {
         "id": 1234,
         "word": "Broad",
-        "meaning": "GeniÅŸ",
+        "meaning": "Geniş",
         "level": "C2"
     },
     {
         "id": 1235,
         "word": "Broadcast",
-        "meaning": "YayÄ±n, YayÄ±nlamak",
+        "meaning": "Yayın, Yayınlamak",
         "level": "B2"
     },
     {
         "id": 1236,
         "word": "Broken",
-        "meaning": "KÄ±rÄ±k",
+        "meaning": "Kırık",
         "level": "A2"
     },
     {
         "id": 1237,
         "word": "Brother",
-        "meaning": "Erkek kardeÅŸ",
+        "meaning": "Erkek kardeş",
         "level": "A2"
     },
     {
@@ -3356,7 +3356,7 @@
     {
         "id": 1239,
         "word": "Brush",
-        "meaning": "FÄ±rÃ§a, FÄ±rÃ§alamak",
+        "meaning": "Fırça, Fırçalamak",
         "level": "A2"
     },
     {
@@ -3368,13 +3368,13 @@
     {
         "id": 1241,
         "word": "Budget",
-        "meaning": "BÃ¼tÃ§e",
+        "meaning": "Bütçe",
         "level": "B2"
     },
     {
         "id": 1242,
         "word": "Build",
-        "meaning": "Ä°nÅŸa etmek",
+        "meaning": "İnşa etmek",
         "level": "A2"
     },
     {
@@ -3392,7 +3392,7 @@
     {
         "id": 1245,
         "word": "Bunch",
-        "meaning": "Demet, SalkÄ±m",
+        "meaning": "Demet, Salkım",
         "level": "B2"
     },
     {
@@ -3404,37 +3404,37 @@
     {
         "id": 1247,
         "word": "Bury",
-        "meaning": "GÃ¶mmek",
+        "meaning": "Gömmek",
         "level": "B1"
     },
     {
         "id": 1248,
         "word": "Bus",
-        "meaning": "OtobÃ¼s",
+        "meaning": "Otobüs",
         "level": "A2"
     },
     {
         "id": 1249,
         "word": "Bush",
-        "meaning": "Ã‡alÄ±",
+        "meaning": "Çalı",
         "level": "B2"
     },
     {
         "id": 1250,
         "word": "Business",
-        "meaning": "Ä°ÅŸ",
+        "meaning": "İş",
         "level": "A2"
     },
     {
         "id": 1251,
         "word": "Businessman",
-        "meaning": "Ä°ÅŸ adamÄ±",
+        "meaning": "İş adamı",
         "level": "A2"
     },
     {
         "id": 1252,
         "word": "Busy",
-        "meaning": "MeÅŸgul",
+        "meaning": "Meşgul",
         "level": "A2"
     },
     {
@@ -3446,31 +3446,31 @@
     {
         "id": 1254,
         "word": "Butter",
-        "meaning": "TereyaÄŸÄ±",
+        "meaning": "Tereyağı",
         "level": "A2"
     },
     {
         "id": 1255,
         "word": "Button",
-        "meaning": "DÃ¼ÄŸme",
+        "meaning": "Düğme",
         "level": "A2"
     },
     {
         "id": 1256,
         "word": "Buy",
-        "meaning": "SatÄ±n almak",
+        "meaning": "Satın almak",
         "level": "A2"
     },
     {
         "id": 1257,
         "word": "By",
-        "meaning": "TarafÄ±ndan",
+        "meaning": "Tarafından",
         "level": "A1"
     },
     {
         "id": 1258,
         "word": "Bye",
-        "meaning": "HoÅŸÃ§akal",
+        "meaning": "Hoşçakal",
         "level": "A2"
     },
     {
@@ -3536,7 +3536,7 @@
     {
         "id": 1269,
         "word": "Campus",
-        "meaning": "KampÃ¼s",
+        "meaning": "Kampüs",
         "level": "B1"
     },
     {
@@ -3548,7 +3548,7 @@
     {
         "id": 1271,
         "word": "Cancel",
-        "meaning": "Ä°ptal etmek",
+        "meaning": "İptal etmek",
         "level": "B2"
     },
     {
@@ -3566,13 +3566,13 @@
     {
         "id": 1274,
         "word": "Candy",
-        "meaning": "Åeker",
+        "meaning": "Şeker",
         "level": "A2"
     },
     {
         "id": 1275,
         "word": "Cap",
-        "meaning": "Kapak, Åapka",
+        "meaning": "Kapak, Şapka",
         "level": "B1"
     },
     {
@@ -3590,7 +3590,7 @@
     {
         "id": 1278,
         "word": "Capital",
-        "meaning": "BaÅŸkent, Sermaye",
+        "meaning": "Başkent, Sermaye",
         "level": "A2"
     },
     {
@@ -3620,7 +3620,7 @@
     {
         "id": 1283,
         "word": "Care",
-        "meaning": "BakÄ±m, Ã–nemsemek",
+        "meaning": "Bakım, Önemsemek",
         "level": "A2"
     },
     {
@@ -3650,19 +3650,19 @@
     {
         "id": 1288,
         "word": "Carpet",
-        "meaning": "HalÄ±",
+        "meaning": "Halı",
         "level": "A1"
     },
     {
         "id": 1289,
         "word": "Carrot",
-        "meaning": "HavuÃ§",
+        "meaning": "Havuç",
         "level": "A2"
     },
     {
         "id": 1290,
         "word": "Carry",
-        "meaning": "TaÅŸÄ±mak",
+        "meaning": "Taşımak",
         "level": "A2"
     },
     {
@@ -3734,13 +3734,13 @@
     {
         "id": 1302,
         "word": "Celebrity",
-        "meaning": "ÃœnlÃ¼",
+        "meaning": "Ünlü",
         "level": "A2"
     },
     {
         "id": 1303,
         "word": "Cell",
-        "meaning": "HÃ¼cre",
+        "meaning": "Hücre",
         "level": "B2"
     },
     {
@@ -3770,13 +3770,13 @@
     {
         "id": 1308,
         "word": "Century",
-        "meaning": "YÃ¼zyÄ±l",
+        "meaning": "Yüzyıl",
         "level": "A2"
     },
     {
         "id": 1309,
         "word": "Ceremony",
-        "meaning": "TÃ¶ren",
+        "meaning": "Tören",
         "level": "B1"
     },
     {
@@ -3806,7 +3806,7 @@
     {
         "id": 1314,
         "word": "Chairman",
-        "meaning": "BaÅŸkan (Kurul)",
+        "meaning": "Başkan (Kurul)",
         "level": "C1"
     },
     {
@@ -3818,19 +3818,19 @@
     {
         "id": 1316,
         "word": "Champion",
-        "meaning": "Åampiyon",
+        "meaning": "Şampiyon",
         "level": "B1"
     },
     {
         "id": 1317,
         "word": "Chance",
-        "meaning": "Åans",
+        "meaning": "Şans",
         "level": "A2"
     },
     {
         "id": 1318,
         "word": "Change",
-        "meaning": "DeÄŸiÅŸim, DeÄŸiÅŸmek",
+        "meaning": "Değişim, Değişmek",
         "level": "A1"
     },
     {
@@ -3842,7 +3842,7 @@
     {
         "id": 1320,
         "word": "Chapter",
-        "meaning": "BÃ¶lÃ¼m",
+        "meaning": "Bölüm",
         "level": "B1"
     },
     {
@@ -3854,19 +3854,19 @@
     {
         "id": 1322,
         "word": "Characteristic",
-        "meaning": "Ã–zellik",
+        "meaning": "Özellik",
         "level": "B2"
     },
     {
         "id": 1323,
         "word": "Charge",
-        "meaning": "Åarj, Ãœcret",
+        "meaning": "Şarj, Ücret",
         "level": "B1"
     },
     {
         "id": 1324,
         "word": "Charity",
-        "meaning": "HayÄ±r kurumu",
+        "meaning": "Hayır kurumu",
         "level": "A2"
     },
     {
@@ -3902,7 +3902,7 @@
     {
         "id": 1330,
         "word": "Cheerful",
-        "meaning": "NeÅŸeli",
+        "meaning": "Neşeli",
         "level": "B1"
     },
     {
@@ -3920,7 +3920,7 @@
     {
         "id": 1333,
         "word": "Chest",
-        "meaning": "GÃ¶ÄŸÃ¼s",
+        "meaning": "Göğüs",
         "level": "B1"
     },
     {
@@ -3932,43 +3932,43 @@
     {
         "id": 1335,
         "word": "Chief",
-        "meaning": "Åef",
+        "meaning": "Şef",
         "level": "B2"
     },
     {
         "id": 1336,
         "word": "Child",
-        "meaning": "Ã‡ocuk",
+        "meaning": "Çocuk",
         "level": "A2"
     },
     {
         "id": 1337,
         "word": "Childhood",
-        "meaning": "Ã‡ocukluk",
+        "meaning": "Çocukluk",
         "level": "B1"
     },
     {
         "id": 1338,
         "word": "Chip",
-        "meaning": "Ã‡ip, Cips",
+        "meaning": "Çip, Cips",
         "level": "A2"
     },
     {
         "id": 1339,
         "word": "Chocolate",
-        "meaning": "Ã‡ikolata",
+        "meaning": "Çikolata",
         "level": "A2"
     },
     {
         "id": 1340,
         "word": "Choice",
-        "meaning": "SeÃ§im",
+        "meaning": "Seçim",
         "level": "A2"
     },
     {
         "id": 1341,
         "word": "Choose",
-        "meaning": "SeÃ§mek",
+        "meaning": "Seçmek",
         "level": "A2"
     },
     {
@@ -3998,19 +3998,19 @@
     {
         "id": 1346,
         "word": "Circumstance",
-        "meaning": "Durum, KoÅŸul",
+        "meaning": "Durum, Koşul",
         "level": "B2"
     },
     {
         "id": 1347,
         "word": "Citizen",
-        "meaning": "VatandaÅŸ",
+        "meaning": "Vatandaş",
         "level": "C1"
     },
     {
         "id": 1348,
         "word": "City",
-        "meaning": "Åehir",
+        "meaning": "Şehir",
         "level": "A2"
     },
     {
@@ -4022,13 +4022,13 @@
     {
         "id": 1350,
         "word": "Claim",
-        "meaning": "Ä°ddia etmek",
+        "meaning": "İddia etmek",
         "level": "B1"
     },
     {
         "id": 1351,
         "word": "Class",
-        "meaning": "SÄ±nÄ±f",
+        "meaning": "Sınıf",
         "level": "A2"
     },
     {
@@ -4040,7 +4040,7 @@
     {
         "id": 1353,
         "word": "Classroom",
-        "meaning": "SÄ±nÄ±f odasÄ±",
+        "meaning": "Sınıf odası",
         "level": "A2"
     },
     {
@@ -4052,13 +4052,13 @@
     {
         "id": 1355,
         "word": "Clear",
-        "meaning": "AÃ§Ä±k, Net",
+        "meaning": "Açık, Net",
         "level": "A2"
     },
     {
         "id": 1356,
         "word": "Clearly",
-        "meaning": "AÃ§Ä±kÃ§a",
+        "meaning": "Açıkça",
         "level": "A1"
     },
     {
@@ -4076,25 +4076,25 @@
     {
         "id": 1359,
         "word": "Click",
-        "meaning": "TÄ±klamak",
+        "meaning": "Tıklamak",
         "level": "B1"
     },
     {
         "id": 1360,
         "word": "Client",
-        "meaning": "MÃ¼ÅŸteri",
+        "meaning": "Müşteri",
         "level": "B1"
     },
     {
         "id": 1361,
         "word": "Climate",
-        "meaning": "Ä°klim",
+        "meaning": "İklim",
         "level": "A1"
     },
     {
         "id": 1362,
         "word": "Climb",
-        "meaning": "TÄ±rmanmak",
+        "meaning": "Tırmanmak",
         "level": "A2"
     },
     {
@@ -4106,19 +4106,19 @@
     {
         "id": 1364,
         "word": "Close",
-        "meaning": "Kapatmak, YakÄ±n",
+        "meaning": "Kapatmak, Yakın",
         "level": "A2"
     },
     {
         "id": 1365,
         "word": "Closely",
-        "meaning": "YakÄ±ndan",
+        "meaning": "Yakından",
         "level": "B2"
     },
     {
         "id": 1366,
         "word": "Clothes",
-        "meaning": "KÄ±yafetler",
+        "meaning": "Kıyafetler",
         "level": "A2"
     },
     {
@@ -4136,19 +4136,19 @@
     {
         "id": 1369,
         "word": "Club",
-        "meaning": "KulÃ¼p",
+        "meaning": "Kulüp",
         "level": "A2"
     },
     {
         "id": 1370,
         "word": "Coach",
-        "meaning": "KoÃ§",
+        "meaning": "Koç",
         "level": "A2"
     },
     {
         "id": 1371,
         "word": "Coal",
-        "meaning": "KÃ¶mÃ¼r",
+        "meaning": "Kömür",
         "level": "B1"
     },
     {
@@ -4184,19 +4184,19 @@
     {
         "id": 1377,
         "word": "Cold",
-        "meaning": "SoÄŸuk",
+        "meaning": "Soğuk",
         "level": "A2"
     },
     {
         "id": 1378,
         "word": "Collapse",
-        "meaning": "Ã‡Ã¶kmek",
+        "meaning": "Çökmek",
         "level": "B2"
     },
     {
         "id": 1379,
         "word": "Colleague",
-        "meaning": "MeslektaÅŸ",
+        "meaning": "Meslektaş",
         "level": "A2"
     },
     {
@@ -4226,13 +4226,13 @@
     {
         "id": 1384,
         "word": "Colour",
-        "meaning": "Renk (Ä°ng)",
+        "meaning": "Renk (İng)",
         "level": "A1"
     },
     {
         "id": 1385,
         "word": "Column",
-        "meaning": "SÃ¼tun",
+        "meaning": "Sütun",
         "level": "B1"
     },
     {
@@ -4244,7 +4244,7 @@
     {
         "id": 1387,
         "word": "Combine",
-        "meaning": "BirleÅŸtirmek",
+        "meaning": "Birleştirmek",
         "level": "B1"
     },
     {
@@ -4298,13 +4298,13 @@
     {
         "id": 1396,
         "word": "Commit",
-        "meaning": "Adamak, SuÃ§ iÅŸlemek",
+        "meaning": "Adamak, Suç işlemek",
         "level": "B1"
     },
     {
         "id": 1397,
         "word": "Commitment",
-        "meaning": "BaÄŸlÄ±lÄ±k",
+        "meaning": "Bağlılık",
         "level": "B2"
     },
     {
@@ -4316,25 +4316,25 @@
     {
         "id": 1399,
         "word": "Common",
-        "meaning": "YaygÄ±n",
+        "meaning": "Yaygın",
         "level": "A2"
     },
     {
         "id": 1400,
         "word": "Commonly",
-        "meaning": "YaygÄ±n olarak",
+        "meaning": "Yaygın olarak",
         "level": "B2"
     },
     {
         "id": 1401,
         "word": "Communicate",
-        "meaning": "Ä°letiÅŸim kurmak",
+        "meaning": "İletişim kurmak",
         "level": "A2"
     },
     {
         "id": 1402,
         "word": "Communication",
-        "meaning": "Ä°letiÅŸim",
+        "meaning": "İletişim",
         "level": "B1"
     },
     {
@@ -4346,49 +4346,49 @@
     {
         "id": 1404,
         "word": "Company",
-        "meaning": "Åirket",
+        "meaning": "Şirket",
         "level": "A2"
     },
     {
         "id": 1405,
         "word": "Compare",
-        "meaning": "KarÅŸÄ±laÅŸtÄ±rmak",
+        "meaning": "Karşılaştırmak",
         "level": "A2"
     },
     {
         "id": 1406,
         "word": "Comparison",
-        "meaning": "KarÅŸÄ±laÅŸtÄ±rma",
+        "meaning": "Karşılaştırma",
         "level": "B1"
     },
     {
         "id": 1407,
         "word": "Compete",
-        "meaning": "YarÄ±ÅŸmak",
+        "meaning": "Yarışmak",
         "level": "A1"
     },
     {
         "id": 1408,
         "word": "Competition",
-        "meaning": "YarÄ±ÅŸma",
+        "meaning": "Yarışma",
         "level": "A2"
     },
     {
         "id": 1409,
         "word": "Competitive",
-        "meaning": "RekabetÃ§i",
+        "meaning": "Rekabetçi",
         "level": "B1"
     },
     {
         "id": 1410,
         "word": "Complain",
-        "meaning": "Åikayet etmek",
+        "meaning": "Şikayet etmek",
         "level": "A1"
     },
     {
         "id": 1411,
         "word": "Complaint",
-        "meaning": "Åikayet",
+        "meaning": "Şikayet",
         "level": "B1"
     },
     {
@@ -4406,19 +4406,19 @@
     {
         "id": 1414,
         "word": "Complex",
-        "meaning": "KarmaÅŸÄ±k",
+        "meaning": "Karmaşık",
         "level": "B1"
     },
     {
         "id": 1415,
         "word": "Complicated",
-        "meaning": "KarÄ±ÅŸÄ±k",
+        "meaning": "Karışık",
         "level": "B2"
     },
     {
         "id": 1416,
         "word": "Component",
-        "meaning": "BileÅŸen",
+        "meaning": "Bileşen",
         "level": "B2"
     },
     {
@@ -4448,13 +4448,13 @@
     {
         "id": 1421,
         "word": "Concern",
-        "meaning": "EndiÅŸe",
+        "meaning": "Endişe",
         "level": "B2"
     },
     {
         "id": 1422,
         "word": "Concerned",
-        "meaning": "EndiÅŸeli",
+        "meaning": "Endişeli",
         "level": "C1"
     },
     {
@@ -4466,13 +4466,13 @@
     {
         "id": 1424,
         "word": "Conclude",
-        "meaning": "SonuÃ§landÄ±rmak",
+        "meaning": "Sonuçlandırmak",
         "level": "B1"
     },
     {
         "id": 1425,
         "word": "Conclusion",
-        "meaning": "SonuÃ§",
+        "meaning": "Sonuç",
         "level": "B1"
     },
     {
@@ -4484,7 +4484,7 @@
     {
         "id": 1427,
         "word": "Conduct",
-        "meaning": "YÃ¶netmek, Ä°letmek",
+        "meaning": "Yönetmek, İletmek",
         "level": "B2"
     },
     {
@@ -4496,61 +4496,61 @@
     {
         "id": 1429,
         "word": "Confidence",
-        "meaning": "GÃ¼ven",
+        "meaning": "Güven",
         "level": "B1"
     },
     {
         "id": 1430,
         "word": "Confident",
-        "meaning": "Kendine gÃ¼venen",
+        "meaning": "Kendine güvenen",
         "level": "B1"
     },
     {
         "id": 1431,
         "word": "Conflict",
-        "meaning": "Ã‡atÄ±ÅŸma",
+        "meaning": "Çatışma",
         "level": "B2"
     },
     {
         "id": 1432,
         "word": "Confuse",
-        "meaning": "KafasÄ±nÄ± karÄ±ÅŸtÄ±rmak",
+        "meaning": "Kafasını karıştırmak",
         "level": "B1"
     },
     {
         "id": 1433,
         "word": "Confused",
-        "meaning": "KafasÄ± karÄ±ÅŸÄ±k",
+        "meaning": "Kafası karışık",
         "level": "B1"
     },
     {
         "id": 1434,
         "word": "Confusing",
-        "meaning": "Kafa karÄ±ÅŸtÄ±rÄ±cÄ±",
+        "meaning": "Kafa karıştırıcı",
         "level": "B1"
     },
     {
         "id": 1435,
         "word": "Connect",
-        "meaning": "BaÄŸlamak",
+        "meaning": "Bağlamak",
         "level": "A1"
     },
     {
         "id": 1436,
         "word": "Connection",
-        "meaning": "BaÄŸlantÄ±",
+        "meaning": "Bağlantı",
         "level": "B1"
     },
     {
         "id": 1437,
         "word": "Conscious",
-        "meaning": "BilinÃ§li",
+        "meaning": "Bilinçli",
         "level": "B2"
     },
     {
         "id": 1438,
         "word": "Consequence",
-        "meaning": "SonuÃ§",
+        "meaning": "Sonuç",
         "level": "B1"
     },
     {
@@ -4562,73 +4562,73 @@
     {
         "id": 1440,
         "word": "Consider",
-        "meaning": "GÃ¶z Ã¶nÃ¼nde bulundurmak",
+        "meaning": "Göz önünde bulundurmak",
         "level": "A1"
     },
     {
         "id": 1441,
         "word": "Consideration",
-        "meaning": "DÃ¼ÅŸÃ¼nce, Husus",
+        "meaning": "Düşünce, Husus",
         "level": "B2"
     },
     {
         "id": 1442,
         "word": "Consist",
-        "meaning": "OluÅŸmak",
+        "meaning": "Oluşmak",
         "level": "B1"
     },
     {
         "id": 1443,
         "word": "Consistent",
-        "meaning": "TutarlÄ±",
+        "meaning": "Tutarlı",
         "level": "C2"
     },
     {
         "id": 1444,
         "word": "Constant",
-        "meaning": "SÃ¼rekli",
+        "meaning": "Sürekli",
         "level": "C2"
     },
     {
         "id": 1445,
         "word": "Constantly",
-        "meaning": "SÃ¼rekli olarak",
+        "meaning": "Sürekli olarak",
         "level": "B2"
     },
     {
         "id": 1446,
         "word": "Construct",
-        "meaning": "Ä°nÅŸa etmek",
+        "meaning": "İnşa etmek",
         "level": "B2"
     },
     {
         "id": 1447,
         "word": "Construction",
-        "meaning": "Ä°nÅŸaat",
+        "meaning": "İnşaat",
         "level": "B1"
     },
     {
         "id": 1448,
         "word": "Consume",
-        "meaning": "TÃ¼ketmek",
+        "meaning": "Tüketmek",
         "level": "B1"
     },
     {
         "id": 1449,
         "word": "Consumer",
-        "meaning": "TÃ¼ketici",
+        "meaning": "Tüketici",
         "level": "B1"
     },
     {
         "id": 1450,
         "word": "Contact",
-        "meaning": "Ä°letiÅŸim",
+        "meaning": "İletişim",
         "level": "A2"
     },
     {
         "id": 1451,
         "word": "Contain",
-        "meaning": "Ä°Ã§ermek",
+        "meaning": "İçermek",
         "level": "A2"
     },
     {
@@ -4640,31 +4640,31 @@
     {
         "id": 1453,
         "word": "Contemporary",
-        "meaning": "Ã‡aÄŸdaÅŸ",
+        "meaning": "Çağdaş",
         "level": "B2"
     },
     {
         "id": 1454,
         "word": "Content",
-        "meaning": "Ä°Ã§erik",
+        "meaning": "İçerik",
         "level": "B1"
     },
     {
         "id": 1455,
         "word": "Contest",
-        "meaning": "YarÄ±ÅŸma",
+        "meaning": "Yarışma",
         "level": "C1"
     },
     {
         "id": 1456,
         "word": "Context",
-        "meaning": "BaÄŸlam",
+        "meaning": "Bağlam",
         "level": "B2"
     },
     {
         "id": 1457,
         "word": "Continent",
-        "meaning": "KÄ±ta",
+        "meaning": "Kıta",
         "level": "A2"
     },
     {
@@ -4676,31 +4676,31 @@
     {
         "id": 1459,
         "word": "Continuous",
-        "meaning": "SÃ¼rekli",
+        "meaning": "Sürekli",
         "level": "B1"
     },
     {
         "id": 1460,
         "word": "Contract",
-        "meaning": "SÃ¶zleÅŸme",
+        "meaning": "Sözleşme",
         "level": "B1"
     },
     {
         "id": 1461,
         "word": "Contrast",
-        "meaning": "ZÄ±tlÄ±k",
+        "meaning": "Zıtlık",
         "level": "B1"
     },
     {
         "id": 1462,
         "word": "Contribute",
-        "meaning": "KatkÄ±da bulunmak",
+        "meaning": "Katkıda bulunmak",
         "level": "B2"
     },
     {
         "id": 1463,
         "word": "Contribution",
-        "meaning": "KatkÄ±",
+        "meaning": "Katkı",
         "level": "B2"
     },
     {
@@ -4712,31 +4712,31 @@
     {
         "id": 1465,
         "word": "Convenient",
-        "meaning": "Uygun, ElveriÅŸli",
+        "meaning": "Uygun, Elverişli",
         "level": "B1"
     },
     {
         "id": 1466,
         "word": "Conversation",
-        "meaning": "KonuÅŸma",
+        "meaning": "Konuşma",
         "level": "A1"
     },
     {
         "id": 1467,
         "word": "Convert",
-        "meaning": "DÃ¶nÃ¼ÅŸtÃ¼rmek",
+        "meaning": "Dönüştürmek",
         "level": "B2"
     },
     {
         "id": 1468,
         "word": "Convince",
-        "meaning": "Ä°kna etmek",
+        "meaning": "İkna etmek",
         "level": "B1"
     },
     {
         "id": 1469,
         "word": "Cook",
-        "meaning": "PiÅŸirmek",
+        "meaning": "Pişirmek",
         "level": "A1"
     },
     {
@@ -4754,7 +4754,7 @@
     {
         "id": 1472,
         "word": "Cooking",
-        "meaning": "Yemek piÅŸirme",
+        "meaning": "Yemek pişirme",
         "level": "A2"
     },
     {
@@ -4772,13 +4772,13 @@
     {
         "id": 1475,
         "word": "Core",
-        "meaning": "Ã‡ekirdek, Ã–z",
+        "meaning": "Çekirdek, Öz",
         "level": "B2"
     },
     {
         "id": 1476,
         "word": "Corner",
-        "meaning": "KÃ¶ÅŸe",
+        "meaning": "Köşe",
         "level": "A1"
     },
     {
@@ -4790,7 +4790,7 @@
     {
         "id": 1478,
         "word": "Correct",
-        "meaning": "DoÄŸru",
+        "meaning": "Doğru",
         "level": "A2"
     },
     {
@@ -4802,13 +4802,13 @@
     {
         "id": 1480,
         "word": "Costume",
-        "meaning": "KostÃ¼m",
+        "meaning": "Kostüm",
         "level": "B1"
     },
     {
         "id": 1481,
         "word": "Cottage",
-        "meaning": "KulÃ¼be",
+        "meaning": "Kulübe",
         "level": "B1"
     },
     {
@@ -4820,7 +4820,7 @@
     {
         "id": 1483,
         "word": "Cough",
-        "meaning": "Ã–ksÃ¼rmek",
+        "meaning": "Öksürmek",
         "level": "B1"
     },
     {
@@ -4844,25 +4844,25 @@
     {
         "id": 1487,
         "word": "Country",
-        "meaning": "Ãœlke",
+        "meaning": "Ülke",
         "level": "A2"
     },
     {
         "id": 1488,
         "word": "Countryside",
-        "meaning": "KÄ±rsal bÃ¶lge",
+        "meaning": "Kırsal bölge",
         "level": "B1"
     },
     {
         "id": 1489,
         "word": "County",
-        "meaning": "Ä°lÃ§e",
+        "meaning": "İlçe",
         "level": "C1"
     },
     {
         "id": 1490,
         "word": "Couple",
-        "meaning": "Ã‡ift",
+        "meaning": "Çift",
         "level": "A2"
     },
     {
@@ -4898,25 +4898,25 @@
     {
         "id": 1496,
         "word": "Covered",
-        "meaning": "KaplÄ±",
+        "meaning": "Kaplı",
         "level": "B1"
     },
     {
         "id": 1497,
         "word": "Cow",
-        "meaning": "Ä°nek",
+        "meaning": "İnek",
         "level": "A2"
     },
     {
         "id": 1498,
         "word": "Crash",
-        "meaning": "Ã‡arpmak",
+        "meaning": "Çarpmak",
         "level": "B1"
     },
     {
         "id": 1499,
         "word": "Crazy",
-        "meaning": "Ã‡Ä±lgÄ±n",
+        "meaning": "Çılgın",
         "level": "A1"
     },
     {
@@ -4934,19 +4934,19 @@
     {
         "id": 1502,
         "word": "Creation",
-        "meaning": "YaratÄ±lÄ±ÅŸ",
+        "meaning": "Yaratılış",
         "level": "B2"
     },
     {
         "id": 1503,
         "word": "Creative",
-        "meaning": "YaratÄ±cÄ±",
+        "meaning": "Yaratıcı",
         "level": "A2"
     },
     {
         "id": 1504,
         "word": "Creature",
-        "meaning": "YaratÄ±k",
+        "meaning": "Yaratık",
         "level": "B2"
     },
     {
@@ -4958,19 +4958,19 @@
     {
         "id": 1506,
         "word": "Crew",
-        "meaning": "MÃ¼rettebat",
+        "meaning": "Mürettebat",
         "level": "B1"
     },
     {
         "id": 1507,
         "word": "Crime",
-        "meaning": "SuÃ§",
+        "meaning": "Suç",
         "level": "A1"
     },
     {
         "id": 1508,
         "word": "Criminal",
-        "meaning": "SuÃ§lu",
+        "meaning": "Suçlu",
         "level": "A2"
     },
     {
@@ -4988,7 +4988,7 @@
     {
         "id": 1511,
         "word": "Critic",
-        "meaning": "EleÅŸtirmen",
+        "meaning": "Eleştirmen",
         "level": "B2"
     },
     {
@@ -5000,13 +5000,13 @@
     {
         "id": 1513,
         "word": "Criticism",
-        "meaning": "EleÅŸtiri",
+        "meaning": "Eleştiri",
         "level": "B2"
     },
     {
         "id": 1514,
         "word": "Criticize",
-        "meaning": "EleÅŸtirmek",
+        "meaning": "Eleştirmek",
         "level": "B2"
     },
     {
@@ -5018,25 +5018,25 @@
     {
         "id": 1516,
         "word": "Cross",
-        "meaning": "GeÃ§mek (karÅŸÄ±ya)",
+        "meaning": "Geçmek (karşıya)",
         "level": "A2"
     },
     {
         "id": 1517,
         "word": "Crowd",
-        "meaning": "KalabalÄ±k",
+        "meaning": "Kalabalık",
         "level": "A1"
     },
     {
         "id": 1518,
         "word": "Crowded",
-        "meaning": "KalabalÄ±k",
+        "meaning": "Kalabalık",
         "level": "A2"
     },
     {
         "id": 1519,
         "word": "Crucial",
-        "meaning": "Ã‡ok Ã¶nemli",
+        "meaning": "Çok önemli",
         "level": "B2"
     },
     {
@@ -5048,19 +5048,19 @@
     {
         "id": 1521,
         "word": "Cry",
-        "meaning": "AÄŸlamak",
+        "meaning": "Ağlamak",
         "level": "A2"
     },
     {
         "id": 1522,
         "word": "Cultural",
-        "meaning": "KÃ¼ltÃ¼rel",
+        "meaning": "Kültürel",
         "level": "B1"
     },
     {
         "id": 1523,
         "word": "Culture",
-        "meaning": "KÃ¼ltÃ¼r",
+        "meaning": "Kültür",
         "level": "B1"
     },
     {
@@ -5084,7 +5084,7 @@
     {
         "id": 1527,
         "word": "Curly",
-        "meaning": "KÄ±vÄ±rcÄ±k",
+        "meaning": "Kıvırcık",
         "level": "A2"
     },
     {
@@ -5102,7 +5102,7 @@
     {
         "id": 1530,
         "word": "Currently",
-        "meaning": "Åu anda",
+        "meaning": "Şu anda",
         "level": "B1"
     },
     {
@@ -5114,7 +5114,7 @@
     {
         "id": 1532,
         "word": "Curve",
-        "meaning": "EÄŸri",
+        "meaning": "Eğri",
         "level": "C2"
     },
     {
@@ -5132,7 +5132,7 @@
     {
         "id": 1535,
         "word": "Customer",
-        "meaning": "MÃ¼ÅŸteri",
+        "meaning": "Müşteri",
         "level": "A2"
     },
     {
@@ -5156,7 +5156,7 @@
     {
         "id": 1539,
         "word": "Daily",
-        "meaning": "GÃ¼nlÃ¼k",
+        "meaning": "Günlük",
         "level": "A2"
     },
     {
@@ -5174,7 +5174,7 @@
     {
         "id": 1542,
         "word": "Dancer",
-        "meaning": "DansÃ§Ä±",
+        "meaning": "Dansçı",
         "level": "A2"
     },
     {
@@ -5198,7 +5198,7 @@
     {
         "id": 1546,
         "word": "Dark",
-        "meaning": "KaranlÄ±k",
+        "meaning": "Karanlık",
         "level": "A1"
     },
     {
@@ -5216,19 +5216,19 @@
     {
         "id": 1549,
         "word": "Daughter",
-        "meaning": "KÄ±z evlat",
+        "meaning": "Kız evlat",
         "level": "A2"
     },
     {
         "id": 1550,
         "word": "Dead",
-        "meaning": "Ã–lÃ¼",
+        "meaning": "Ölü",
         "level": "B1"
     },
     {
         "id": 1551,
         "word": "Deal",
-        "meaning": "AnlaÅŸma",
+        "meaning": "Anlaşma",
         "level": "B1"
     },
     {
@@ -5240,31 +5240,31 @@
     {
         "id": 1553,
         "word": "Death",
-        "meaning": "Ã–lÃ¼m",
+        "meaning": "Ölüm",
         "level": "B1"
     },
     {
         "id": 1554,
         "word": "Debate",
-        "meaning": "TartÄ±ÅŸma",
+        "meaning": "Tartışma",
         "level": "B2"
     },
     {
         "id": 1555,
         "word": "Debt",
-        "meaning": "BorÃ§",
+        "meaning": "Borç",
         "level": "B2"
     },
     {
         "id": 1556,
         "word": "Decade",
-        "meaning": "On yÄ±l",
+        "meaning": "On yıl",
         "level": "B1"
     },
     {
         "id": 1557,
         "word": "December",
-        "meaning": "AralÄ±k",
+        "meaning": "Aralık",
         "level": "A2"
     },
     {
@@ -5282,31 +5282,31 @@
     {
         "id": 1560,
         "word": "Dentist",
-        "meaning": "DiÅŸÃ§i",
+        "meaning": "Dişçi",
         "level": "A2"
     },
     {
         "id": 1561,
         "word": "Department",
-        "meaning": "BÃ¶lÃ¼m",
+        "meaning": "Bölüm",
         "level": "A2"
     },
     {
         "id": 1562,
         "word": "Depend",
-        "meaning": "BaÄŸlÄ± olmak",
+        "meaning": "Bağlı olmak",
         "level": "A2"
     },
     {
         "id": 1563,
         "word": "Desert",
-        "meaning": "Ã‡Ã¶l",
+        "meaning": "Çöl",
         "level": "A2"
     },
     {
         "id": 1564,
         "word": "Designer",
-        "meaning": "TasarÄ±mcÄ±",
+        "meaning": "Tasarımcı",
         "level": "A2"
     },
     {
@@ -5324,7 +5324,7 @@
     {
         "id": 1567,
         "word": "Develop",
-        "meaning": "GeliÅŸtirmek",
+        "meaning": "Geliştirmek",
         "level": "A2"
     },
     {
@@ -5336,13 +5336,13 @@
     {
         "id": 1569,
         "word": "Diary",
-        "meaning": "GÃ¼nlÃ¼k",
+        "meaning": "Günlük",
         "level": "A2"
     },
     {
         "id": 1570,
         "word": "Differently",
-        "meaning": "FarklÄ± ÅŸekilde",
+        "meaning": "Farklı şekilde",
         "level": "A2"
     },
     {
@@ -5354,31 +5354,31 @@
     {
         "id": 1572,
         "word": "Direct",
-        "meaning": "DoÄŸrudan",
+        "meaning": "Doğrudan",
         "level": "A2"
     },
     {
         "id": 1573,
         "word": "Direction",
-        "meaning": "YÃ¶n",
+        "meaning": "Yön",
         "level": "A2"
     },
     {
         "id": 1574,
         "word": "Director",
-        "meaning": "YÃ¶netmen",
+        "meaning": "Yönetmen",
         "level": "A2"
     },
     {
         "id": 1575,
         "word": "Disagree",
-        "meaning": "KatÄ±lmamak",
+        "meaning": "Katılmamak",
         "level": "A2"
     },
     {
         "id": 1576,
         "word": "Disappear",
-        "meaning": "GÃ¶zden kaybolmak",
+        "meaning": "Gözden kaybolmak",
         "level": "A2"
     },
     {
@@ -5390,25 +5390,25 @@
     {
         "id": 1578,
         "word": "Discover",
-        "meaning": "KeÅŸfetmek",
+        "meaning": "Keşfetmek",
         "level": "A1"
     },
     {
         "id": 1579,
         "word": "Discovery",
-        "meaning": "KeÅŸif",
+        "meaning": "Keşif",
         "level": "A2"
     },
     {
         "id": 1580,
         "word": "Discussion",
-        "meaning": "TartÄ±ÅŸma",
+        "meaning": "Tartışma",
         "level": "A2"
     },
     {
         "id": 1581,
         "word": "Disease",
-        "meaning": "HastalÄ±k",
+        "meaning": "Hastalık",
         "level": "A1"
     },
     {
@@ -5420,7 +5420,7 @@
     {
         "id": 1583,
         "word": "Divorced",
-        "meaning": "BoÅŸanmÄ±ÅŸ",
+        "meaning": "Boşanmış",
         "level": "A2"
     },
     {
@@ -5432,13 +5432,13 @@
     {
         "id": 1585,
         "word": "Double",
-        "meaning": "Ã‡ift",
+        "meaning": "Çift",
         "level": "A2"
     },
     {
         "id": 1586,
         "word": "Download",
-        "meaning": "Ä°ndirmek",
+        "meaning": "İndirmek",
         "level": "A2"
     },
     {
@@ -5456,37 +5456,37 @@
     {
         "id": 1589,
         "word": "Drawing",
-        "meaning": "Ã‡izim",
+        "meaning": "Çizim",
         "level": "A2"
     },
     {
         "id": 1590,
         "word": "Dream",
-        "meaning": "RÃ¼ya",
+        "meaning": "Rüya",
         "level": "A2"
     },
     {
         "id": 1591,
         "word": "Drive",
-        "meaning": "SÃ¼rmek",
+        "meaning": "Sürmek",
         "level": "A2"
     },
     {
         "id": 1592,
         "word": "Driving",
-        "meaning": "SÃ¼rÃ¼ÅŸ",
+        "meaning": "Sürüş",
         "level": "A1"
     },
     {
         "id": 1593,
         "word": "Drop",
-        "meaning": "DÃ¼ÅŸÃ¼rmek",
+        "meaning": "Düşürmek",
         "level": "A1"
     },
     {
         "id": 1594,
         "word": "Drug",
-        "meaning": "Ä°laÃ§",
+        "meaning": "İlaç",
         "level": "A1"
     },
     {
@@ -5504,7 +5504,7 @@
     {
         "id": 1597,
         "word": "Earth",
-        "meaning": "DÃ¼nya",
+        "meaning": "Dünya",
         "level": "A2"
     },
     {
@@ -5516,7 +5516,7 @@
     {
         "id": 1599,
         "word": "Education",
-        "meaning": "EÄŸitim",
+        "meaning": "Eğitim",
         "level": "A2"
     },
     {
@@ -5540,7 +5540,7 @@
     {
         "id": 1603,
         "word": "Effort",
-        "meaning": "Ã‡aba",
+        "meaning": "Çaba",
         "level": "A2"
     },
     {
@@ -5576,19 +5576,19 @@
     {
         "id": 1609,
         "word": "Elderly",
-        "meaning": "YaÅŸlÄ±",
+        "meaning": "Yaşlı",
         "level": "B2"
     },
     {
         "id": 1610,
         "word": "Elect",
-        "meaning": "SeÃ§mek (oyla)",
+        "meaning": "Seçmek (oyla)",
         "level": "B2"
     },
     {
         "id": 1611,
         "word": "Election",
-        "meaning": "SeÃ§im",
+        "meaning": "Seçim",
         "level": "B1"
     },
     {
@@ -5630,7 +5630,7 @@
     {
         "id": 1618,
         "word": "Elevator",
-        "meaning": "AsansÃ¶r",
+        "meaning": "Asansör",
         "level": "A2"
     },
     {
@@ -5642,13 +5642,13 @@
     {
         "id": 1620,
         "word": "Else",
-        "meaning": "BaÅŸka",
+        "meaning": "Başka",
         "level": "A2"
     },
     {
         "id": 1621,
         "word": "Elsewhere",
-        "meaning": "BaÅŸka yerde",
+        "meaning": "Başka yerde",
         "level": "B2"
     },
     {
@@ -5660,13 +5660,13 @@
     {
         "id": 1623,
         "word": "Embarrassed",
-        "meaning": "UtanmÄ±ÅŸ",
+        "meaning": "Utanmış",
         "level": "B1"
     },
     {
         "id": 1624,
         "word": "Emerge",
-        "meaning": "Ortaya Ã§Ä±kmak",
+        "meaning": "Ortaya çıkmak",
         "level": "B2"
     },
     {
@@ -5702,43 +5702,43 @@
     {
         "id": 1630,
         "word": "Employ",
-        "meaning": "Ä°ÅŸe almak",
+        "meaning": "İşe almak",
         "level": "A1"
     },
     {
         "id": 1631,
         "word": "Employee",
-        "meaning": "Ã‡alÄ±ÅŸan",
+        "meaning": "Çalışan",
         "level": "A1"
     },
     {
         "id": 1632,
         "word": "Employer",
-        "meaning": "Ä°ÅŸveren",
+        "meaning": "İşveren",
         "level": "A1"
     },
     {
         "id": 1633,
         "word": "Employment",
-        "meaning": "Ä°stihdam",
+        "meaning": "İstihdam",
         "level": "B1"
     },
     {
         "id": 1634,
         "word": "Empty",
-        "meaning": "BoÅŸ",
+        "meaning": "Boş",
         "level": "A2"
     },
     {
         "id": 1635,
         "word": "Enable",
-        "meaning": "Olanak saÄŸlamak",
+        "meaning": "Olanak sağlamak",
         "level": "B2"
     },
     {
         "id": 1636,
         "word": "Encounter",
-        "meaning": "KarÅŸÄ±laÅŸmak",
+        "meaning": "Karşılaşmak",
         "level": "B2"
     },
     {
@@ -5756,13 +5756,13 @@
     {
         "id": 1639,
         "word": "Ending",
-        "meaning": "BitiÅŸ",
+        "meaning": "Bitiş",
         "level": "A1"
     },
     {
         "id": 1640,
         "word": "Enemy",
-        "meaning": "DÃ¼ÅŸman",
+        "meaning": "Düşman",
         "level": "B1"
     },
     {
@@ -5774,7 +5774,7 @@
     {
         "id": 1642,
         "word": "Engage",
-        "meaning": "Ä°lgi Ã§ekmek, NiÅŸanlanmak",
+        "meaning": "İlgi çekmek, Nişanlanmak",
         "level": "B2"
     },
     {
@@ -5786,19 +5786,19 @@
     {
         "id": 1644,
         "word": "Engineer",
-        "meaning": "MÃ¼hendis",
+        "meaning": "Mühendis",
         "level": "A2"
     },
     {
         "id": 1645,
         "word": "Engineering",
-        "meaning": "MÃ¼hendislik",
+        "meaning": "Mühendislik",
         "level": "B1"
     },
     {
         "id": 1646,
         "word": "Enhance",
-        "meaning": "GeliÅŸtirmek",
+        "meaning": "Geliştirmek",
         "level": "B2"
     },
     {
@@ -5822,7 +5822,7 @@
     {
         "id": 1650,
         "word": "Enquiry",
-        "meaning": "SoruÅŸturma",
+        "meaning": "Soruşturma",
         "level": "B2"
     },
     {
@@ -5840,13 +5840,13 @@
     {
         "id": 1653,
         "word": "Entertain",
-        "meaning": "EÄŸlendirmek",
+        "meaning": "Eğlendirmek",
         "level": "B1"
     },
     {
         "id": 1654,
         "word": "Entertainment",
-        "meaning": "EÄŸlence",
+        "meaning": "Eğlence",
         "level": "B1"
     },
     {
@@ -5864,43 +5864,43 @@
     {
         "id": 1657,
         "word": "Entire",
-        "meaning": "TÃ¼m",
+        "meaning": "Tüm",
         "level": "B2"
     },
     {
         "id": 1658,
         "word": "Entrance",
-        "meaning": "GiriÅŸ",
+        "meaning": "Giriş",
         "level": "B1"
     },
     {
         "id": 1659,
         "word": "Entry",
-        "meaning": "GiriÅŸ",
+        "meaning": "Giriş",
         "level": "B1"
     },
     {
         "id": 1660,
         "word": "Environment",
-        "meaning": "Ã‡evre",
+        "meaning": "Çevre",
         "level": "A2"
     },
     {
         "id": 1661,
         "word": "Environmental",
-        "meaning": "Ã‡evresel",
+        "meaning": "Çevresel",
         "level": "B1"
     },
     {
         "id": 1662,
         "word": "Episode",
-        "meaning": "BÃ¶lÃ¼m",
+        "meaning": "Bölüm",
         "level": "B1"
     },
     {
         "id": 1663,
         "word": "Equal",
-        "meaning": "EÅŸit",
+        "meaning": "Eşit",
         "level": "B1"
     },
     {
@@ -5918,19 +5918,19 @@
     {
         "id": 1666,
         "word": "Escape",
-        "meaning": "KaÃ§mak",
+        "meaning": "Kaçmak",
         "level": "B1"
     },
     {
         "id": 1667,
         "word": "Especially",
-        "meaning": "Ã–zellikle",
+        "meaning": "Özellikle",
         "level": "A2"
     },
     {
         "id": 1668,
         "word": "Essay",
-        "meaning": "Deneme (yazÄ±)",
+        "meaning": "Deneme (yazı)",
         "level": "A2"
     },
     {
@@ -5948,7 +5948,7 @@
     {
         "id": 1671,
         "word": "Estate",
-        "meaning": "MÃ¼lk",
+        "meaning": "Mülk",
         "level": "B2"
     },
     {
@@ -5972,7 +5972,7 @@
     {
         "id": 1675,
         "word": "Evaluate",
-        "meaning": "DeÄŸerlendirmek",
+        "meaning": "Değerlendirmek",
         "level": "B2"
     },
     {
@@ -5984,7 +5984,7 @@
     {
         "id": 1677,
         "word": "Evening",
-        "meaning": "AkÅŸam",
+        "meaning": "Akşam",
         "level": "A2"
     },
     {
@@ -6002,7 +6002,7 @@
     {
         "id": 1680,
         "word": "Ever",
-        "meaning": "HiÃ§",
+        "meaning": "Hiç",
         "level": "A2"
     },
     {
@@ -6020,7 +6020,7 @@
     {
         "id": 1683,
         "word": "Everyday",
-        "meaning": "GÃ¼ndelik",
+        "meaning": "Gündelik",
         "level": "A2"
     },
     {
@@ -6032,7 +6032,7 @@
     {
         "id": 1685,
         "word": "Everything",
-        "meaning": "Her ÅŸey",
+        "meaning": "Her şey",
         "level": "A1"
     },
     {
@@ -6044,13 +6044,13 @@
     {
         "id": 1687,
         "word": "Evidence",
-        "meaning": "KanÄ±t",
+        "meaning": "Kanıt",
         "level": "A2"
     },
     {
         "id": 1688,
         "word": "Evil",
-        "meaning": "KÃ¶tÃ¼",
+        "meaning": "Kötü",
         "level": "C1"
     },
     {
@@ -6068,49 +6068,49 @@
     {
         "id": 1691,
         "word": "Exam",
-        "meaning": "SÄ±nav",
+        "meaning": "Sınav",
         "level": "A2"
     },
     {
         "id": 1692,
         "word": "Examination",
-        "meaning": "Ä°nceleme, SÄ±nav",
+        "meaning": "İnceleme, Sınav",
         "level": "B2"
     },
     {
         "id": 1693,
         "word": "Examine",
-        "meaning": "Ä°ncelemek",
+        "meaning": "İncelemek",
         "level": "B1"
     },
     {
         "id": 1694,
         "word": "Example",
-        "meaning": "Ã–rnek",
+        "meaning": "Örnek",
         "level": "A2"
     },
     {
         "id": 1695,
         "word": "Excellent",
-        "meaning": "MÃ¼kemmel",
+        "meaning": "Mükemmel",
         "level": "A2"
     },
     {
         "id": 1696,
         "word": "Except",
-        "meaning": "HariÃ§",
+        "meaning": "Hariç",
         "level": "A2"
     },
     {
         "id": 1697,
         "word": "Exchange",
-        "meaning": "DeÄŸiÅŸ tokuÅŸ",
+        "meaning": "Değiş tokuş",
         "level": "B1"
     },
     {
         "id": 1698,
         "word": "Excited",
-        "meaning": "HeyecanlÄ±",
+        "meaning": "Heyecanlı",
         "level": "A2"
     },
     {
@@ -6134,7 +6134,7 @@
     {
         "id": 1702,
         "word": "Executive",
-        "meaning": "YÃ¶netici",
+        "meaning": "Yönetici",
         "level": "B2"
     },
     {
@@ -6158,13 +6158,13 @@
     {
         "id": 1706,
         "word": "Existence",
-        "meaning": "VarlÄ±k",
+        "meaning": "Varlık",
         "level": "B2"
     },
     {
         "id": 1707,
         "word": "Expand",
-        "meaning": "GeniÅŸlemek",
+        "meaning": "Genişlemek",
         "level": "B1"
     },
     {
@@ -6188,7 +6188,7 @@
     {
         "id": 1711,
         "word": "Expensive",
-        "meaning": "PahalÄ±",
+        "meaning": "Pahalı",
         "level": "A2"
     },
     {
@@ -6218,13 +6218,13 @@
     {
         "id": 1716,
         "word": "Explain",
-        "meaning": "AÃ§Ä±klamak",
+        "meaning": "Açıklamak",
         "level": "A1"
     },
     {
         "id": 1717,
         "word": "Explanation",
-        "meaning": "AÃ§Ä±klama",
+        "meaning": "Açıklama",
         "level": "A1"
     },
     {
@@ -6236,7 +6236,7 @@
     {
         "id": 1719,
         "word": "Explore",
-        "meaning": "KeÅŸfetmek",
+        "meaning": "Keşfetmek",
         "level": "B1"
     },
     {
@@ -6248,25 +6248,25 @@
     {
         "id": 1721,
         "word": "Export",
-        "meaning": "Ä°hracat",
+        "meaning": "İhracat",
         "level": "B1"
     },
     {
         "id": 1722,
         "word": "Expose",
-        "meaning": "Maruz bÄ±rakmak",
+        "meaning": "Maruz bırakmak",
         "level": "B2"
     },
     {
         "id": 1723,
         "word": "Express",
-        "meaning": "Ä°fade etmek",
+        "meaning": "İfade etmek",
         "level": "A2"
     },
     {
         "id": 1724,
         "word": "Expression",
-        "meaning": "Ä°fade",
+        "meaning": "İfade",
         "level": "A2"
     },
     {
@@ -6278,13 +6278,13 @@
     {
         "id": 1726,
         "word": "Extension",
-        "meaning": "UzantÄ±",
+        "meaning": "Uzantı",
         "level": "B2"
     },
     {
         "id": 1727,
         "word": "Extensive",
-        "meaning": "KapsamlÄ±",
+        "meaning": "Kapsamlı",
         "level": "B2"
     },
     {
@@ -6308,13 +6308,13 @@
     {
         "id": 1731,
         "word": "Extraordinary",
-        "meaning": "OlaÄŸanÃ¼stÃ¼",
+        "meaning": "Olağanüstü",
         "level": "C1"
     },
     {
         "id": 1732,
         "word": "Extreme",
-        "meaning": "AÅŸÄ±rÄ±",
+        "meaning": "Aşırı",
         "level": "A2"
     },
     {
@@ -6326,13 +6326,13 @@
     {
         "id": 1734,
         "word": "Eye",
-        "meaning": "GÃ¶z",
+        "meaning": "Göz",
         "level": "A2"
     },
     {
         "id": 1735,
         "word": "Face",
-        "meaning": "YÃ¼z",
+        "meaning": "Yüz",
         "level": "A2"
     },
     {
@@ -6344,13 +6344,13 @@
     {
         "id": 1737,
         "word": "Fact",
-        "meaning": "GerÃ§ek",
+        "meaning": "Gerçek",
         "level": "A1"
     },
     {
         "id": 1738,
         "word": "Factor",
-        "meaning": "FaktÃ¶r",
+        "meaning": "Faktör",
         "level": "A2"
     },
     {
@@ -6362,13 +6362,13 @@
     {
         "id": 1740,
         "word": "Fail",
-        "meaning": "BaÅŸarÄ±sÄ±z olmak",
+        "meaning": "Başarısız olmak",
         "level": "A1"
     },
     {
         "id": 1741,
         "word": "Failure",
-        "meaning": "BaÅŸarÄ±sÄ±zlÄ±k",
+        "meaning": "Başarısızlık",
         "level": "C1"
     },
     {
@@ -6380,31 +6380,31 @@
     {
         "id": 1743,
         "word": "Fairly",
-        "meaning": "OldukÃ§a",
+        "meaning": "Oldukça",
         "level": "B1"
     },
     {
         "id": 1744,
         "word": "Faith",
-        "meaning": "Ä°nanÃ§",
+        "meaning": "İnanç",
         "level": "B2"
     },
     {
         "id": 1745,
         "word": "Fall",
-        "meaning": "DÃ¼ÅŸmek",
+        "meaning": "Düşmek",
         "level": "A2"
     },
     {
         "id": 1746,
         "word": "False",
-        "meaning": "YanlÄ±ÅŸ",
+        "meaning": "Yanlış",
         "level": "A2"
     },
     {
         "id": 1747,
         "word": "Familiar",
-        "meaning": "TanÄ±dÄ±k",
+        "meaning": "Tanıdık",
         "level": "B1"
     },
     {
@@ -6416,19 +6416,19 @@
     {
         "id": 1749,
         "word": "Famous",
-        "meaning": "ÃœnlÃ¼",
+        "meaning": "Ünlü",
         "level": "A2"
     },
     {
         "id": 1750,
         "word": "Fan",
-        "meaning": "Hayran, VantilatÃ¶r",
+        "meaning": "Hayran, Vantilatör",
         "level": "A2"
     },
     {
         "id": 1751,
         "word": "Fancy",
-        "meaning": "SÃ¼slÃ¼",
+        "meaning": "Süslü",
         "level": "B1"
     },
     {
@@ -6440,25 +6440,25 @@
     {
         "id": 1753,
         "word": "Farm",
-        "meaning": "Ã‡iftlik",
+        "meaning": "Çiftlik",
         "level": "A1"
     },
     {
         "id": 1754,
         "word": "Farmer",
-        "meaning": "Ã‡iftÃ§i",
+        "meaning": "Çiftçi",
         "level": "A2"
     },
     {
         "id": 1755,
         "word": "Farming",
-        "meaning": "Ã‡iftÃ§ilik",
+        "meaning": "Çiftçilik",
         "level": "A2"
     },
     {
         "id": 1756,
         "word": "Fascinating",
-        "meaning": "BÃ¼yÃ¼leyici",
+        "meaning": "Büyüleyici",
         "level": "B2"
     },
     {
@@ -6470,13 +6470,13 @@
     {
         "id": 1758,
         "word": "Fast",
-        "meaning": "HÄ±zlÄ±",
+        "meaning": "Hızlı",
         "level": "A2"
     },
     {
         "id": 1759,
         "word": "Fat",
-        "meaning": "ÅiÅŸman",
+        "meaning": "Şişman",
         "level": "A2"
     },
     {
@@ -6494,7 +6494,7 @@
     {
         "id": 1762,
         "word": "Favor",
-        "meaning": "Ä°yilik",
+        "meaning": "İyilik",
         "level": "B2"
     },
     {
@@ -6512,25 +6512,25 @@
     {
         "id": 1765,
         "word": "Feather",
-        "meaning": "TÃ¼y",
+        "meaning": "Tüy",
         "level": "C2"
     },
     {
         "id": 1766,
         "word": "Feature",
-        "meaning": "Ã–zellik",
+        "meaning": "Özellik",
         "level": "A2"
     },
     {
         "id": 1767,
         "word": "February",
-        "meaning": "Åubat",
+        "meaning": "Şubat",
         "level": "A1"
     },
     {
         "id": 1768,
         "word": "Fee",
-        "meaning": "Ãœcret",
+        "meaning": "Ücret",
         "level": "B2"
     },
     {
@@ -6566,13 +6566,13 @@
     {
         "id": 1774,
         "word": "Female",
-        "meaning": "DiÅŸi",
+        "meaning": "Dişi",
         "level": "A2"
     },
     {
         "id": 1775,
         "word": "Fence",
-        "meaning": "Ã‡it",
+        "meaning": "Çit",
         "level": "B1"
     },
     {
@@ -6602,13 +6602,13 @@
     {
         "id": 1780,
         "word": "Fifteen",
-        "meaning": "On beÅŸ",
+        "meaning": "On beş",
         "level": "A2"
     },
     {
         "id": 1781,
         "word": "Fifth",
-        "meaning": "BeÅŸinci",
+        "meaning": "Beşinci",
         "level": "A2"
     },
     {
@@ -6620,19 +6620,19 @@
     {
         "id": 1783,
         "word": "Fight",
-        "meaning": "DÃ¶vÃ¼ÅŸmek",
+        "meaning": "Dövüşmek",
         "level": "A2"
     },
     {
         "id": 1784,
         "word": "Fighting",
-        "meaning": "DÃ¶vÃ¼ÅŸ",
+        "meaning": "Dövüş",
         "level": "A2"
     },
     {
         "id": 1785,
         "word": "Figure",
-        "meaning": "Rakam, Åekil",
+        "meaning": "Rakam, Şekil",
         "level": "A2"
     },
     {
@@ -6692,7 +6692,7 @@
     {
         "id": 1795,
         "word": "Fine",
-        "meaning": "Ä°yi, Ä°nce",
+        "meaning": "İyi, İnce",
         "level": "A1"
     },
     {
@@ -6710,7 +6710,7 @@
     {
         "id": 1798,
         "word": "Fire",
-        "meaning": "AteÅŸ",
+        "meaning": "Ateş",
         "level": "A2"
     },
     {
@@ -6728,13 +6728,13 @@
     {
         "id": 1801,
         "word": "Fish",
-        "meaning": "BalÄ±k",
+        "meaning": "Balık",
         "level": "A2"
     },
     {
         "id": 1802,
         "word": "Fishing",
-        "meaning": "BalÄ±kÃ§Ä±lÄ±k",
+        "meaning": "Balıkçılık",
         "level": "A2"
     },
     {
@@ -6752,13 +6752,13 @@
     {
         "id": 1805,
         "word": "Five",
-        "meaning": "BeÅŸ",
+        "meaning": "Beş",
         "level": "A2"
     },
     {
         "id": 1806,
         "word": "Fix",
-        "meaning": "DÃ¼zeltmek",
+        "meaning": "Düzeltmek",
         "level": "A2"
     },
     {
@@ -6782,13 +6782,13 @@
     {
         "id": 1810,
         "word": "Flash",
-        "meaning": "FlaÅŸ",
+        "meaning": "Flaş",
         "level": "B2"
     },
     {
         "id": 1811,
         "word": "Flat",
-        "meaning": "DÃ¼z, Daire",
+        "meaning": "Düz, Daire",
         "level": "A2"
     },
     {
@@ -6800,13 +6800,13 @@
     {
         "id": 1813,
         "word": "Flight",
-        "meaning": "UÃ§uÅŸ",
+        "meaning": "Uçuş",
         "level": "A2"
     },
     {
         "id": 1814,
         "word": "Float",
-        "meaning": "YÃ¼zmek (su Ã¼stÃ¼nde)",
+        "meaning": "Yüzmek (su üstünde)",
         "level": "B2"
     },
     {
@@ -6830,13 +6830,13 @@
     {
         "id": 1818,
         "word": "Flow",
-        "meaning": "AkÄ±ÅŸ",
+        "meaning": "Akış",
         "level": "B1"
     },
     {
         "id": 1819,
         "word": "Flower",
-        "meaning": "Ã‡iÃ§ek",
+        "meaning": "Çiçek",
         "level": "A1"
     },
     {
@@ -6848,13 +6848,13 @@
     {
         "id": 1821,
         "word": "Fly",
-        "meaning": "UÃ§mak",
+        "meaning": "Uçmak",
         "level": "A2"
     },
     {
         "id": 1822,
         "word": "Flying",
-        "meaning": "UÃ§an",
+        "meaning": "Uçan",
         "level": "A2"
     },
     {
@@ -6872,7 +6872,7 @@
     {
         "id": 1825,
         "word": "Folding",
-        "meaning": "KatlanÄ±r",
+        "meaning": "Katlanır",
         "level": "B2"
     },
     {
@@ -6908,19 +6908,19 @@
     {
         "id": 1831,
         "word": "For",
-        "meaning": "Ä°Ã§in",
+        "meaning": "İçin",
         "level": "A2"
     },
     {
         "id": 1832,
         "word": "Force",
-        "meaning": "GÃ¼Ã§",
+        "meaning": "Güç",
         "level": "B1"
     },
     {
         "id": 1833,
         "word": "Foreign",
-        "meaning": "YabancÄ±",
+        "meaning": "Yabancı",
         "level": "A2"
     },
     {
@@ -6950,7 +6950,7 @@
     {
         "id": 1838,
         "word": "Fork",
-        "meaning": "Ã‡atal",
+        "meaning": "Çatal",
         "level": "A2"
     },
     {
@@ -6968,7 +6968,7 @@
     {
         "id": 1841,
         "word": "Former",
-        "meaning": "Eski, Ã–nceki",
+        "meaning": "Eski, Önceki",
         "level": "B2"
     },
     {
@@ -6980,19 +6980,19 @@
     {
         "id": 1843,
         "word": "Fortune",
-        "meaning": "Servet, Åans",
+        "meaning": "Servet, Şans",
         "level": "B2"
     },
     {
         "id": 1844,
         "word": "Forty",
-        "meaning": "KÄ±rk",
+        "meaning": "Kırk",
         "level": "A1"
     },
     {
         "id": 1845,
         "word": "Forward",
-        "meaning": "Ä°leri",
+        "meaning": "İleri",
         "level": "A2"
     },
     {
@@ -7004,37 +7004,37 @@
     {
         "id": 1847,
         "word": "Four",
-        "meaning": "DÃ¶rt",
+        "meaning": "Dört",
         "level": "A1"
     },
     {
         "id": 1848,
         "word": "Fourteen",
-        "meaning": "On dÃ¶rt",
+        "meaning": "On dört",
         "level": "A1"
     },
     {
         "id": 1849,
         "word": "Fourth",
-        "meaning": "DÃ¶rdÃ¼ncÃ¼",
+        "meaning": "Dördüncü",
         "level": "A1"
     },
     {
         "id": 1850,
         "word": "Frame",
-        "meaning": "Ã‡erÃ§eve",
+        "meaning": "Çerçeve",
         "level": "B1"
     },
     {
         "id": 1851,
         "word": "Free",
-        "meaning": "Ã–zgÃ¼r, Bedava",
+        "meaning": "Özgür, Bedava",
         "level": "A1"
     },
     {
         "id": 1852,
         "word": "Freedom",
-        "meaning": "Ã–zgÃ¼rlÃ¼k",
+        "meaning": "Özgürlük",
         "level": "B2"
     },
     {
@@ -7046,13 +7046,13 @@
     {
         "id": 1854,
         "word": "Frequency",
-        "meaning": "SÄ±klÄ±k",
+        "meaning": "Sıklık",
         "level": "B2"
     },
     {
         "id": 1855,
         "word": "Frequently",
-        "meaning": "SÄ±k sÄ±k",
+        "meaning": "Sık sık",
         "level": "B2"
     },
     {
@@ -7070,25 +7070,25 @@
     {
         "id": 1858,
         "word": "Fridge",
-        "meaning": "BuzdolabÄ±",
+        "meaning": "Buzdolabı",
         "level": "A2"
     },
     {
         "id": 1859,
         "word": "Friend",
-        "meaning": "ArkadaÅŸ",
+        "meaning": "Arkadaş",
         "level": "A2"
     },
     {
         "id": 1860,
         "word": "Friendly",
-        "meaning": "ArkadaÅŸ canlÄ±sÄ±",
+        "meaning": "Arkadaş canlısı",
         "level": "A1"
     },
     {
         "id": 1861,
         "word": "Friendship",
-        "meaning": "ArkadaÅŸlÄ±k",
+        "meaning": "Arkadaşlık",
         "level": "B1"
     },
     {
@@ -7100,7 +7100,7 @@
     {
         "id": 1863,
         "word": "Frightened",
-        "meaning": "KorkmuÅŸ",
+        "meaning": "Korkmuş",
         "level": "B1"
     },
     {
@@ -7112,7 +7112,7 @@
     {
         "id": 1865,
         "word": "Frog",
-        "meaning": "KurbaÄŸa",
+        "meaning": "Kurbağa",
         "level": "A2"
     },
     {
@@ -7124,13 +7124,13 @@
     {
         "id": 1867,
         "word": "Front",
-        "meaning": "Ã–n",
+        "meaning": "Ön",
         "level": "A1"
     },
     {
         "id": 1868,
         "word": "Frozen",
-        "meaning": "DonmuÅŸ",
+        "meaning": "Donmuş",
         "level": "B1"
     },
     {
@@ -7142,13 +7142,13 @@
     {
         "id": 1870,
         "word": "Fry",
-        "meaning": "KÄ±zartmak",
+        "meaning": "Kızartmak",
         "level": "B1"
     },
     {
         "id": 1871,
         "word": "Fuel",
-        "meaning": "YakÄ±t",
+        "meaning": "Yakıt",
         "level": "B1"
     },
     {
@@ -7166,7 +7166,7 @@
     {
         "id": 1874,
         "word": "Fun",
-        "meaning": "EÄŸlence",
+        "meaning": "Eğlence",
         "level": "A1"
     },
     {
@@ -7202,7 +7202,7 @@
     {
         "id": 1880,
         "word": "Fur",
-        "meaning": "KÃ¼rk",
+        "meaning": "Kürk",
         "level": "B1"
     },
     {
@@ -7244,13 +7244,13 @@
     {
         "id": 1887,
         "word": "Gang",
-        "meaning": "Ã‡ete",
+        "meaning": "Çete",
         "level": "B2"
     },
     {
         "id": 1888,
         "word": "Gap",
-        "meaning": "BoÅŸluk",
+        "meaning": "Boşluk",
         "level": "A2"
     },
     {
@@ -7262,7 +7262,7 @@
     {
         "id": 1890,
         "word": "Garden",
-        "meaning": "BahÃ§e",
+        "meaning": "Bahçe",
         "level": "A2"
     },
     {
@@ -7274,7 +7274,7 @@
     {
         "id": 1892,
         "word": "Gate",
-        "meaning": "KapÄ± (BÃ¼yÃ¼k)",
+        "meaning": "Kapı (Büyük)",
         "level": "A2"
     },
     {
@@ -7298,7 +7298,7 @@
     {
         "id": 1896,
         "word": "Generate",
-        "meaning": "Ãœretmek",
+        "meaning": "Üretmek",
         "level": "B2"
     },
     {
@@ -7310,13 +7310,13 @@
     {
         "id": 1898,
         "word": "Generous",
-        "meaning": "CÃ¶mert",
+        "meaning": "Cömert",
         "level": "B1"
     },
     {
         "id": 1899,
         "word": "Genre",
-        "meaning": "TÃ¼r",
+        "meaning": "Tür",
         "level": "B2"
     },
     {
@@ -7334,7 +7334,7 @@
     {
         "id": 1902,
         "word": "Geography",
-        "meaning": "CoÄŸrafya",
+        "meaning": "Coğrafya",
         "level": "A2"
     },
     {
@@ -7364,13 +7364,13 @@
     {
         "id": 1907,
         "word": "Girl",
-        "meaning": "KÄ±z",
+        "meaning": "Kız",
         "level": "A2"
     },
     {
         "id": 1908,
         "word": "Girlfriend",
-        "meaning": "KÄ±z arkadaÅŸ",
+        "meaning": "Kız arkadaş",
         "level": "A2"
     },
     {
@@ -7394,7 +7394,7 @@
     {
         "id": 1912,
         "word": "Global",
-        "meaning": "KÃ¼resel",
+        "meaning": "Küresel",
         "level": "B1"
     },
     {
@@ -7418,13 +7418,13 @@
     {
         "id": 1916,
         "word": "God",
-        "meaning": "TanrÄ±",
+        "meaning": "Tanrı",
         "level": "A2"
     },
     {
         "id": 1917,
         "word": "Gold",
-        "meaning": "AltÄ±n",
+        "meaning": "Altın",
         "level": "A2"
     },
     {
@@ -7436,13 +7436,13 @@
     {
         "id": 1919,
         "word": "Good",
-        "meaning": "Ä°yi",
+        "meaning": "İyi",
         "level": "A2"
     },
     {
         "id": 1920,
         "word": "Goodbye",
-        "meaning": "HoÅŸÃ§akal",
+        "meaning": "Hoşçakal",
         "level": "A1"
     },
     {
@@ -7454,13 +7454,13 @@
     {
         "id": 1922,
         "word": "Govern",
-        "meaning": "YÃ¶netmek",
+        "meaning": "Yönetmek",
         "level": "B2"
     },
     {
         "id": 1923,
         "word": "Government",
-        "meaning": "HÃ¼kÃ¼met",
+        "meaning": "Hükümet",
         "level": "A2"
     },
     {
@@ -7490,43 +7490,43 @@
     {
         "id": 1928,
         "word": "Grain",
-        "meaning": "TahÄ±l",
+        "meaning": "Tahıl",
         "level": "B1"
     },
     {
         "id": 1929,
         "word": "Grand",
-        "meaning": "BÃ¼yÃ¼k, GÃ¶rkemli",
+        "meaning": "Büyük, Görkemli",
         "level": "B2"
     },
     {
         "id": 1930,
         "word": "Grandfather",
-        "meaning": "BÃ¼yÃ¼kbaba",
+        "meaning": "Büyükbaba",
         "level": "A1"
     },
     {
         "id": 1931,
         "word": "Grandmother",
-        "meaning": "BÃ¼yÃ¼kanne",
+        "meaning": "Büyükanne",
         "level": "A1"
     },
     {
         "id": 1932,
         "word": "Grandparent",
-        "meaning": "BÃ¼yÃ¼kanne/baba",
+        "meaning": "Büyükanne/baba",
         "level": "A2"
     },
     {
         "id": 1933,
         "word": "Grant",
-        "meaning": "BaÄŸÄ±ÅŸlamak, Onaylamak",
+        "meaning": "Bağışlamak, Onaylamak",
         "level": "B2"
     },
     {
         "id": 1934,
         "word": "Grass",
-        "meaning": "Ã‡im",
+        "meaning": "Çim",
         "level": "A2"
     },
     {
@@ -7544,7 +7544,7 @@
     {
         "id": 1937,
         "word": "Green",
-        "meaning": "YeÅŸil",
+        "meaning": "Yeşil",
         "level": "A2"
     },
     {
@@ -7574,13 +7574,13 @@
     {
         "id": 1942,
         "word": "Grow",
-        "meaning": "BÃ¼yÃ¼mek",
+        "meaning": "Büyümek",
         "level": "A1"
     },
     {
         "id": 1943,
         "word": "Growth",
-        "meaning": "BÃ¼yÃ¼me",
+        "meaning": "Büyüme",
         "level": "B1"
     },
     {
@@ -7592,7 +7592,7 @@
     {
         "id": 1945,
         "word": "Guard",
-        "meaning": "Korumak, NÃ¶betÃ§i",
+        "meaning": "Korumak, Nöbetçi",
         "level": "B1"
     },
     {
@@ -7616,7 +7616,7 @@
     {
         "id": 1949,
         "word": "Guilty",
-        "meaning": "SuÃ§lu",
+        "meaning": "Suçlu",
         "level": "B1"
     },
     {
@@ -7646,19 +7646,19 @@
     {
         "id": 1954,
         "word": "Habit",
-        "meaning": "AlÄ±ÅŸkanlÄ±k",
+        "meaning": "Alışkanlık",
         "level": "B1"
     },
     {
         "id": 1955,
         "word": "Hair",
-        "meaning": "SaÃ§",
+        "meaning": "Saç",
         "level": "A2"
     },
     {
         "id": 1956,
         "word": "Half",
-        "meaning": "YarÄ±m",
+        "meaning": "Yarım",
         "level": "A2"
     },
     {
@@ -7718,7 +7718,7 @@
     {
         "id": 1966,
         "word": "Hardly",
-        "meaning": "Neredeyse hiÃ§",
+        "meaning": "Neredeyse hiç",
         "level": "B1"
     },
     {
@@ -7730,13 +7730,13 @@
     {
         "id": 1968,
         "word": "Harmful",
-        "meaning": "ZararlÄ±",
+        "meaning": "Zararlı",
         "level": "B2"
     },
     {
         "id": 1969,
         "word": "Hat",
-        "meaning": "Åapka",
+        "meaning": "Şapka",
         "level": "A2"
     },
     {
@@ -7760,31 +7760,31 @@
     {
         "id": 1973,
         "word": "Head",
-        "meaning": "BaÅŸ",
+        "meaning": "Baş",
         "level": "A2"
     },
     {
         "id": 1974,
         "word": "Headache",
-        "meaning": "BaÅŸ aÄŸrÄ±sÄ±",
+        "meaning": "Baş ağrısı",
         "level": "A2"
     },
     {
         "id": 1975,
         "word": "Headline",
-        "meaning": "ManÅŸet",
+        "meaning": "Manşet",
         "level": "B1"
     },
     {
         "id": 1976,
         "word": "Health",
-        "meaning": "SaÄŸlÄ±k",
+        "meaning": "Sağlık",
         "level": "A2"
     },
     {
         "id": 1977,
         "word": "Healthy",
-        "meaning": "SaÄŸlÄ±klÄ±",
+        "meaning": "Sağlıklı",
         "level": "A2"
     },
     {
@@ -7796,7 +7796,7 @@
     {
         "id": 1979,
         "word": "Hearing",
-        "meaning": "Duyma, DuruÅŸma",
+        "meaning": "Duyma, Duruşma",
         "level": "C2"
     },
     {
@@ -7808,13 +7808,13 @@
     {
         "id": 1981,
         "word": "Heat",
-        "meaning": "IsÄ±",
+        "meaning": "Isı",
         "level": "A2"
     },
     {
         "id": 1982,
         "word": "Heating",
-        "meaning": "IsÄ±tma",
+        "meaning": "Isıtma",
         "level": "B1"
     },
     {
@@ -7826,7 +7826,7 @@
     {
         "id": 1984,
         "word": "Heavy",
-        "meaning": "AÄŸÄ±r",
+        "meaning": "Ağır",
         "level": "A1"
     },
     {
@@ -7838,7 +7838,7 @@
     {
         "id": 1986,
         "word": "Height",
-        "meaning": "YÃ¼kseklik",
+        "meaning": "Yükseklik",
         "level": "A2"
     },
     {
@@ -7862,19 +7862,19 @@
     {
         "id": 1990,
         "word": "Help",
-        "meaning": "YardÄ±m",
+        "meaning": "Yardım",
         "level": "A1"
     },
     {
         "id": 1991,
         "word": "Helpful",
-        "meaning": "YardÄ±msever",
+        "meaning": "Yardımsever",
         "level": "A2"
     },
     {
         "id": 1992,
         "word": "Her",
-        "meaning": "Onun (KadÄ±n)",
+        "meaning": "Onun (Kadın)",
         "level": "A1"
     },
     {
@@ -7892,19 +7892,19 @@
     {
         "id": 1995,
         "word": "Hers",
-        "meaning": "Onunki (KadÄ±n)",
+        "meaning": "Onunki (Kadın)",
         "level": "A2"
     },
     {
         "id": 1996,
         "word": "Herself",
-        "meaning": "Kendisi (KadÄ±n)",
+        "meaning": "Kendisi (Kadın)",
         "level": "A2"
     },
     {
         "id": 1997,
         "word": "Hesitate",
-        "meaning": "TereddÃ¼t etmek",
+        "meaning": "Tereddüt etmek",
         "level": "B2"
     },
     {
@@ -7922,7 +7922,7 @@
     {
         "id": 2000,
         "word": "High",
-        "meaning": "YÃ¼ksek",
+        "meaning": "Yüksek",
         "level": "A2"
     },
     {
@@ -7934,7 +7934,7 @@
     {
         "id": 2002,
         "word": "Highly",
-        "meaning": "OldukÃ§a",
+        "meaning": "Oldukça",
         "level": "B1"
     },
     {
@@ -7964,7 +7964,7 @@
     {
         "id": 2007,
         "word": "Hire",
-        "meaning": "Kiralamak, Ä°ÅŸe almak",
+        "meaning": "Kiralamak, İşe almak",
         "level": "B1"
     },
     {
@@ -8042,13 +8042,13 @@
     {
         "id": 2020,
         "word": "Homework",
-        "meaning": "Ã–dev",
+        "meaning": "Ödev",
         "level": "A2"
     },
     {
         "id": 2021,
         "word": "Honest",
-        "meaning": "DÃ¼rÃ¼st",
+        "meaning": "Dürüst",
         "level": "B1"
     },
     {
@@ -8078,7 +8078,7 @@
     {
         "id": 2026,
         "word": "Horrible",
-        "meaning": "KorkunÃ§",
+        "meaning": "Korkunç",
         "level": "B1"
     },
     {
@@ -8108,7 +8108,7 @@
     {
         "id": 2031,
         "word": "Hot",
-        "meaning": "SÄ±cak",
+        "meaning": "Sıcak",
         "level": "A1"
     },
     {
@@ -8132,7 +8132,7 @@
     {
         "id": 2035,
         "word": "Household",
-        "meaning": "Ev halkÄ±",
+        "meaning": "Ev halkı",
         "level": "B2"
     },
     {
@@ -8144,7 +8144,7 @@
     {
         "id": 2037,
         "word": "How",
-        "meaning": "NasÄ±l",
+        "meaning": "Nasıl",
         "level": "A2"
     },
     {
@@ -8162,7 +8162,7 @@
     {
         "id": 2040,
         "word": "Human",
-        "meaning": "Ä°nsan",
+        "meaning": "İnsan",
         "level": "A2"
     },
     {
@@ -8180,13 +8180,13 @@
     {
         "id": 2043,
         "word": "Hundred",
-        "meaning": "YÃ¼z",
+        "meaning": "Yüz",
         "level": "A1"
     },
     {
         "id": 2044,
         "word": "Hungry",
-        "meaning": "AÃ§",
+        "meaning": "Aç",
         "level": "A2"
     },
     {
@@ -8198,13 +8198,13 @@
     {
         "id": 2046,
         "word": "Hunting",
-        "meaning": "AvcÄ±lÄ±k",
+        "meaning": "Avcılık",
         "level": "B2"
     },
     {
         "id": 2047,
         "word": "Hurricane",
-        "meaning": "KasÄ±rga",
+        "meaning": "Kasırga",
         "level": "B1"
     },
     {
@@ -8216,7 +8216,7 @@
     {
         "id": 2049,
         "word": "Hurt",
-        "meaning": "Ä°ncitmek",
+        "meaning": "İncitmek",
         "level": "A1"
     },
     {
@@ -8228,7 +8228,7 @@
     {
         "id": 2051,
         "word": "Hut",
-        "meaning": "KulÃ¼be",
+        "meaning": "Kulübe",
         "level": "C1"
     },
     {
@@ -8246,13 +8246,13 @@
     {
         "id": 2054,
         "word": "Ideal",
-        "meaning": "Ä°deal",
+        "meaning": "İdeal",
         "level": "A2"
     },
     {
         "id": 2055,
         "word": "Identify",
-        "meaning": "TanÄ±mlamak",
+        "meaning": "Tanımlamak",
         "level": "A1"
     },
     {
@@ -8264,13 +8264,13 @@
     {
         "id": 2057,
         "word": "If",
-        "meaning": "EÄŸer",
+        "meaning": "Eğer",
         "level": "A2"
     },
     {
         "id": 2058,
         "word": "Ignore",
-        "meaning": "GÃ¶rmezden gelmek",
+        "meaning": "Görmezden gelmek",
         "level": "B1"
     },
     {
@@ -8282,31 +8282,31 @@
     {
         "id": 2060,
         "word": "Illegal",
-        "meaning": "YasadÄ±ÅŸÄ±",
+        "meaning": "Yasadışı",
         "level": "B1"
     },
     {
         "id": 2061,
         "word": "Illness",
-        "meaning": "HastalÄ±k",
+        "meaning": "Hastalık",
         "level": "A1"
     },
     {
         "id": 2062,
         "word": "Illustrate",
-        "meaning": "Ã–rneklemek, Resimlemek",
+        "meaning": "Örneklemek, Resimlemek",
         "level": "B2"
     },
     {
         "id": 2063,
         "word": "Illustration",
-        "meaning": "Ä°llÃ¼strasyon",
+        "meaning": "İllüstrasyon",
         "level": "B2"
     },
     {
         "id": 2064,
         "word": "Image",
-        "meaning": "GÃ¶rÃ¼ntÃ¼",
+        "meaning": "Görüntü",
         "level": "A2"
     },
     {
@@ -8318,7 +8318,7 @@
     {
         "id": 2066,
         "word": "Imagination",
-        "meaning": "Hayal gÃ¼cÃ¼",
+        "meaning": "Hayal gücü",
         "level": "B1"
     },
     {
@@ -8342,7 +8342,7 @@
     {
         "id": 2070,
         "word": "Immigrant",
-        "meaning": "GÃ¶Ã§men",
+        "meaning": "Göçmen",
         "level": "B1"
     },
     {
@@ -8354,31 +8354,31 @@
     {
         "id": 2072,
         "word": "Impatient",
-        "meaning": "SabÄ±rsÄ±z",
+        "meaning": "Sabırsız",
         "level": "B2"
     },
     {
         "id": 2073,
         "word": "Imply",
-        "meaning": "Ä°ma etmek",
+        "meaning": "İma etmek",
         "level": "B2"
     },
     {
         "id": 2074,
         "word": "Import",
-        "meaning": "Ä°thalat",
+        "meaning": "İthalat",
         "level": "B1"
     },
     {
         "id": 2075,
         "word": "Importance",
-        "meaning": "Ã–nem",
+        "meaning": "Önem",
         "level": "B1"
     },
     {
         "id": 2076,
         "word": "Important",
-        "meaning": "Ã–nemli",
+        "meaning": "Önemli",
         "level": "A2"
     },
     {
@@ -8390,7 +8390,7 @@
     {
         "id": 2078,
         "word": "Impossible",
-        "meaning": "Ä°mkansÄ±z",
+        "meaning": "İmkansız",
         "level": "A2"
     },
     {
@@ -8402,7 +8402,7 @@
     {
         "id": 2080,
         "word": "Impression",
-        "meaning": "Ä°zlenim",
+        "meaning": "İzlenim",
         "level": "B1"
     },
     {
@@ -8414,19 +8414,19 @@
     {
         "id": 2082,
         "word": "Improve",
-        "meaning": "GeliÅŸtirmek",
+        "meaning": "Geliştirmek",
         "level": "A2"
     },
     {
         "id": 2083,
         "word": "Improvement",
-        "meaning": "GeliÅŸme",
+        "meaning": "Gelişme",
         "level": "B1"
     },
     {
         "id": 2084,
         "word": "In",
-        "meaning": "Ä°Ã§inde",
+        "meaning": "İçinde",
         "level": "A2"
     },
     {
@@ -8462,31 +8462,31 @@
     {
         "id": 2090,
         "word": "Increasingly",
-        "meaning": "Giderek artan ÅŸekilde",
+        "meaning": "Giderek artan şekilde",
         "level": "B2"
     },
     {
         "id": 2091,
         "word": "Incredible",
-        "meaning": "Ä°nanÄ±lmaz",
+        "meaning": "İnanılmaz",
         "level": "A2"
     },
     {
         "id": 2092,
         "word": "Incredibly",
-        "meaning": "Ä°nanÄ±lmaz derecede",
+        "meaning": "İnanılmaz derecede",
         "level": "B1"
     },
     {
         "id": 2093,
         "word": "Indeed",
-        "meaning": "GerÃ§ekten",
+        "meaning": "Gerçekten",
         "level": "B1"
     },
     {
         "id": 2094,
         "word": "Independent",
-        "meaning": "BaÄŸÄ±msÄ±z",
+        "meaning": "Bağımsız",
         "level": "A2"
     },
     {
@@ -8498,7 +8498,7 @@
     {
         "id": 2096,
         "word": "Indirect",
-        "meaning": "DolaylÄ±",
+        "meaning": "Dolaylı",
         "level": "B1"
     },
     {
@@ -8510,25 +8510,25 @@
     {
         "id": 2098,
         "word": "Indoor",
-        "meaning": "KapalÄ± mekan",
+        "meaning": "Kapalı mekan",
         "level": "B1"
     },
     {
         "id": 2099,
         "word": "Indoors",
-        "meaning": "Ä°Ã§eri",
+        "meaning": "İçeri",
         "level": "B1"
     },
     {
         "id": 2100,
         "word": "Industrial",
-        "meaning": "EndÃ¼striyel",
+        "meaning": "Endüstriyel",
         "level": "B2"
     },
     {
         "id": 2101,
         "word": "Industry",
-        "meaning": "EndÃ¼stri",
+        "meaning": "Endüstri",
         "level": "A2"
     },
     {
@@ -8564,19 +8564,19 @@
     {
         "id": 2107,
         "word": "Initial",
-        "meaning": "BaÅŸlangÄ±Ã§",
+        "meaning": "Başlangıç",
         "level": "B2"
     },
     {
         "id": 2108,
         "word": "Initially",
-        "meaning": "BaÅŸlangÄ±Ã§ta",
+        "meaning": "Başlangıçta",
         "level": "B2"
     },
     {
         "id": 2109,
         "word": "Initiative",
-        "meaning": "GiriÅŸim",
+        "meaning": "Girişim",
         "level": "B2"
     },
     {
@@ -8588,7 +8588,7 @@
     {
         "id": 2111,
         "word": "Injured",
-        "meaning": "YaralÄ±",
+        "meaning": "Yaralı",
         "level": "B1"
     },
     {
@@ -8600,13 +8600,13 @@
     {
         "id": 2113,
         "word": "Ink",
-        "meaning": "MÃ¼rekkep",
+        "meaning": "Mürekkep",
         "level": "B1"
     },
     {
         "id": 2114,
         "word": "Inner",
-        "meaning": "Ä°Ã§",
+        "meaning": "İç",
         "level": "B2"
     },
     {
@@ -8618,7 +8618,7 @@
     {
         "id": 2116,
         "word": "Insect",
-        "meaning": "BÃ¶cek",
+        "meaning": "Böcek",
         "level": "A1"
     },
     {
@@ -8630,13 +8630,13 @@
     {
         "id": 2118,
         "word": "Inside",
-        "meaning": "Ä°Ã§eride",
+        "meaning": "İçeride",
         "level": "A2"
     },
     {
         "id": 2119,
         "word": "Insight",
-        "meaning": "Ä°Ã§gÃ¶rÃ¼",
+        "meaning": "İçgörü",
         "level": "B2"
     },
     {
@@ -8648,7 +8648,7 @@
     {
         "id": 2121,
         "word": "Inspire",
-        "meaning": "Ä°lham vermek",
+        "meaning": "İlham vermek",
         "level": "B2"
     },
     {
@@ -8660,7 +8660,7 @@
     {
         "id": 2123,
         "word": "Instance",
-        "meaning": "Ã–rnek",
+        "meaning": "Örnek",
         "level": "B2"
     },
     {
@@ -8672,7 +8672,7 @@
     {
         "id": 2125,
         "word": "Institute",
-        "meaning": "EnstitÃ¼",
+        "meaning": "Enstitü",
         "level": "B2"
     },
     {
@@ -8690,13 +8690,13 @@
     {
         "id": 2128,
         "word": "Instructor",
-        "meaning": "EÄŸitmen",
+        "meaning": "Eğitmen",
         "level": "A2"
     },
     {
         "id": 2129,
         "word": "Instrument",
-        "meaning": "EnstrÃ¼man",
+        "meaning": "Enstrüman",
         "level": "A1"
     },
     {
@@ -8714,7 +8714,7 @@
     {
         "id": 2132,
         "word": "Intellectual",
-        "meaning": "EntelektÃ¼el",
+        "meaning": "Entelektüel",
         "level": "B2"
     },
     {
@@ -8738,7 +8738,7 @@
     {
         "id": 2136,
         "word": "Intense",
-        "meaning": "YoÄŸun",
+        "meaning": "Yoğun",
         "level": "C1"
     },
     {
@@ -8750,19 +8750,19 @@
     {
         "id": 2138,
         "word": "Interest",
-        "meaning": "Ä°lgi",
+        "meaning": "İlgi",
         "level": "A2"
     },
     {
         "id": 2139,
         "word": "Interested",
-        "meaning": "Ä°lgili",
+        "meaning": "İlgili",
         "level": "A2"
     },
     {
         "id": 2140,
         "word": "Interesting",
-        "meaning": "Ä°lginÃ§",
+        "meaning": "İlginç",
         "level": "A2"
     },
     {
@@ -8774,13 +8774,13 @@
     {
         "id": 2142,
         "word": "International",
-        "meaning": "UluslararasÄ±",
+        "meaning": "Uluslararası",
         "level": "A2"
     },
     {
         "id": 2143,
         "word": "Internet",
-        "meaning": "Ä°nternet",
+        "meaning": "İnternet",
         "level": "A2"
     },
     {
@@ -8792,61 +8792,61 @@
     {
         "id": 2145,
         "word": "Interrupt",
-        "meaning": "SÃ¶zÃ¼nÃ¼ kesmek",
+        "meaning": "Sözünü kesmek",
         "level": "B1"
     },
     {
         "id": 2146,
         "word": "Interview",
-        "meaning": "RÃ¶portaj",
+        "meaning": "Röportaj",
         "level": "A2"
     },
     {
         "id": 2147,
         "word": "Into",
-        "meaning": "Ä°Ã§ine",
+        "meaning": "İçine",
         "level": "A1"
     },
     {
         "id": 2148,
         "word": "Introduction",
-        "meaning": "GiriÅŸ",
+        "meaning": "Giriş",
         "level": "A2"
     },
     {
         "id": 2149,
         "word": "Invent",
-        "meaning": "Ä°cat etmek",
+        "meaning": "İcat etmek",
         "level": "A1"
     },
     {
         "id": 2150,
         "word": "Invention",
-        "meaning": "Ä°cat",
+        "meaning": "İcat",
         "level": "A2"
     },
     {
         "id": 2151,
         "word": "Invest",
-        "meaning": "YatÄ±rÄ±m yapmak",
+        "meaning": "Yatırım yapmak",
         "level": "B1"
     },
     {
         "id": 2152,
         "word": "Investigate",
-        "meaning": "AraÅŸtÄ±rmak",
+        "meaning": "Araştırmak",
         "level": "B1"
     },
     {
         "id": 2153,
         "word": "Investigation",
-        "meaning": "SoruÅŸturma",
+        "meaning": "Soruşturma",
         "level": "B2"
     },
     {
         "id": 2154,
         "word": "Investment",
-        "meaning": "YatÄ±rÄ±m",
+        "meaning": "Yatırım",
         "level": "B2"
     },
     {
@@ -8864,19 +8864,19 @@
     {
         "id": 2157,
         "word": "Involve",
-        "meaning": "Ä°Ã§ermek",
+        "meaning": "İçermek",
         "level": "A2"
     },
     {
         "id": 2158,
         "word": "Involved",
-        "meaning": "Dahil olmuÅŸ",
+        "meaning": "Dahil olmuş",
         "level": "B1"
     },
     {
         "id": 2159,
         "word": "Iron",
-        "meaning": "Demir, ÃœtÃ¼",
+        "meaning": "Demir, Ütü",
         "level": "B1"
     },
     {
@@ -8894,25 +8894,25 @@
     {
         "id": 2162,
         "word": "It",
-        "meaning": "O (cansÄ±z)",
+        "meaning": "O (cansız)",
         "level": "A2"
     },
     {
         "id": 2163,
         "word": "Item",
-        "meaning": "Ã–ÄŸe",
+        "meaning": "Öğe",
         "level": "A2"
     },
     {
         "id": 2164,
         "word": "Its",
-        "meaning": "Onun (cansÄ±z)",
+        "meaning": "Onun (cansız)",
         "level": "A2"
     },
     {
         "id": 2165,
         "word": "Itself",
-        "meaning": "Kendisi (cansÄ±z)",
+        "meaning": "Kendisi (cansız)",
         "level": "A2"
     },
     {
@@ -8924,7 +8924,7 @@
     {
         "id": 2167,
         "word": "Jam",
-        "meaning": "ReÃ§el, SÄ±kÄ±ÅŸÄ±klÄ±k",
+        "meaning": "Reçel, Sıkışıklık",
         "level": "A2"
     },
     {
@@ -8936,7 +8936,7 @@
     {
         "id": 2169,
         "word": "Jealous",
-        "meaning": "KÄ±skanÃ§",
+        "meaning": "Kıskanç",
         "level": "B1"
     },
     {
@@ -8948,31 +8948,31 @@
     {
         "id": 2171,
         "word": "Jelly",
-        "meaning": "JÃ¶le",
+        "meaning": "Jöle",
         "level": "B1"
     },
     {
         "id": 2172,
         "word": "Jewellery",
-        "meaning": "MÃ¼cevher",
+        "meaning": "Mücevher",
         "level": "A2"
     },
     {
         "id": 2173,
         "word": "Job",
-        "meaning": "Ä°ÅŸ",
+        "meaning": "İş",
         "level": "A2"
     },
     {
         "id": 2174,
         "word": "Join",
-        "meaning": "KatÄ±lmak",
+        "meaning": "Katılmak",
         "level": "A1"
     },
     {
         "id": 2175,
         "word": "Joke",
-        "meaning": "Åaka",
+        "meaning": "Şaka",
         "level": "A2"
     },
     {
@@ -8990,19 +8990,19 @@
     {
         "id": 2178,
         "word": "Joy",
-        "meaning": "NeÅŸe",
+        "meaning": "Neşe",
         "level": "C1"
     },
     {
         "id": 2179,
         "word": "Judge",
-        "meaning": "YargÄ±Ã§",
+        "meaning": "Yargıç",
         "level": "B1"
     },
     {
         "id": 2180,
         "word": "Judgment",
-        "meaning": "YargÄ±",
+        "meaning": "Yargı",
         "level": "C1"
     },
     {
@@ -9020,7 +9020,7 @@
     {
         "id": 2183,
         "word": "Jump",
-        "meaning": "ZÄ±plamak",
+        "meaning": "Zıplamak",
         "level": "A2"
     },
     {
@@ -9032,7 +9032,7 @@
     {
         "id": 2185,
         "word": "Junior",
-        "meaning": "KÄ±demsiz",
+        "meaning": "Kıdemsiz",
         "level": "B2"
     },
     {
@@ -9050,7 +9050,7 @@
     {
         "id": 2188,
         "word": "Justify",
-        "meaning": "HaklÄ± Ã§Ä±karmak",
+        "meaning": "Haklı çıkarmak",
         "level": "C2"
     },
     {
@@ -9080,19 +9080,19 @@
     {
         "id": 2193,
         "word": "Kid",
-        "meaning": "Ã‡ocuk",
+        "meaning": "Çocuk",
         "level": "A2"
     },
     {
         "id": 2194,
         "word": "Kill",
-        "meaning": "Ã–ldÃ¼rmek",
+        "meaning": "Öldürmek",
         "level": "A2"
     },
     {
         "id": 2195,
         "word": "Killing",
-        "meaning": "Ã–ldÃ¼rme",
+        "meaning": "Öldürme",
         "level": "B1"
     },
     {
@@ -9104,7 +9104,7 @@
     {
         "id": 2197,
         "word": "Kind",
-        "meaning": "TÃ¼r, Nazik",
+        "meaning": "Tür, Nazik",
         "level": "A2"
     },
     {
@@ -9116,7 +9116,7 @@
     {
         "id": 2199,
         "word": "Kiss",
-        "meaning": "Ã–pmek",
+        "meaning": "Öpmek",
         "level": "A2"
     },
     {
@@ -9140,13 +9140,13 @@
     {
         "id": 2203,
         "word": "Knife",
-        "meaning": "BÄ±Ã§ak",
+        "meaning": "Bıçak",
         "level": "A2"
     },
     {
         "id": 2204,
         "word": "Knock",
-        "meaning": "KapÄ± Ã§almak",
+        "meaning": "Kapı çalmak",
         "level": "A2"
     },
     {
@@ -9176,7 +9176,7 @@
     {
         "id": 2209,
         "word": "Labour",
-        "meaning": "Emek, Ä°ÅŸ gÃ¼cÃ¼",
+        "meaning": "Emek, İş gücü",
         "level": "C2"
     },
     {
@@ -9194,7 +9194,7 @@
     {
         "id": 2212,
         "word": "Lake",
-        "meaning": "GÃ¶l",
+        "meaning": "Göl",
         "level": "A2"
     },
     {
@@ -9218,7 +9218,7 @@
     {
         "id": 2216,
         "word": "Lane",
-        "meaning": "Åerit, Yol",
+        "meaning": "Şerit, Yol",
         "level": "B1"
     },
     {
@@ -9230,31 +9230,31 @@
     {
         "id": 2218,
         "word": "Laptop",
-        "meaning": "DizÃ¼stÃ¼ bilgisayar",
+        "meaning": "Dizüstü bilgisayar",
         "level": "A1"
     },
     {
         "id": 2219,
         "word": "Large",
-        "meaning": "GeniÅŸ, BÃ¼yÃ¼k",
+        "meaning": "Geniş, Büyük",
         "level": "A1"
     },
     {
         "id": 2220,
         "word": "Largely",
-        "meaning": "BÃ¼yÃ¼k oranda",
+        "meaning": "Büyük oranda",
         "level": "C1"
     },
     {
         "id": 2221,
         "word": "Last",
-        "meaning": "Son, GeÃ§en",
+        "meaning": "Son, Geçen",
         "level": "A1"
     },
     {
         "id": 2222,
         "word": "Late",
-        "meaning": "GeÃ§",
+        "meaning": "Geç",
         "level": "A2"
     },
     {
@@ -9272,13 +9272,13 @@
     {
         "id": 2225,
         "word": "Laugh",
-        "meaning": "GÃ¼lmek",
+        "meaning": "Gülmek",
         "level": "A1"
     },
     {
         "id": 2226,
         "word": "Launch",
-        "meaning": "BaÅŸlatmak, FÄ±rlatmak",
+        "meaning": "Başlatmak, Fırlatmak",
         "level": "B1"
     },
     {
@@ -9296,7 +9296,7 @@
     {
         "id": 2229,
         "word": "Lay",
-        "meaning": "YatÄ±rmak, Koymak",
+        "meaning": "Yatırmak, Koymak",
         "level": "B1"
     },
     {
@@ -9314,7 +9314,7 @@
     {
         "id": 2232,
         "word": "Lead",
-        "meaning": "Liderlik etmek, Yol gÃ¶stermek",
+        "meaning": "Liderlik etmek, Yol göstermek",
         "level": "A2"
     },
     {
@@ -9332,7 +9332,7 @@
     {
         "id": 2235,
         "word": "Leading",
-        "meaning": "Ã–nde gelen",
+        "meaning": "Önde gelen",
         "level": "B1"
     },
     {
@@ -9350,19 +9350,19 @@
     {
         "id": 2238,
         "word": "Lean",
-        "meaning": "EÄŸilmek, Yaslanmak",
+        "meaning": "Eğilmek, Yaslanmak",
         "level": "B2"
     },
     {
         "id": 2239,
         "word": "Learn",
-        "meaning": "Ã–ÄŸrenmek",
+        "meaning": "Öğrenmek",
         "level": "A2"
     },
     {
         "id": 2240,
         "word": "Learning",
-        "meaning": "Ã–ÄŸrenme",
+        "meaning": "Öğrenme",
         "level": "A1"
     },
     {
@@ -9380,7 +9380,7 @@
     {
         "id": 2243,
         "word": "Leave",
-        "meaning": "AyrÄ±lmak",
+        "meaning": "Ayrılmak",
         "level": "A1"
     },
     {
@@ -9416,7 +9416,7 @@
     {
         "id": 2249,
         "word": "Leisure",
-        "meaning": "BoÅŸ vakit",
+        "meaning": "Boş vakit",
         "level": "B2"
     },
     {
@@ -9428,7 +9428,7 @@
     {
         "id": 2251,
         "word": "Lend",
-        "meaning": "Ã–dÃ¼nÃ§ vermek",
+        "meaning": "Ödünç vermek",
         "level": "A1"
     },
     {
@@ -9452,7 +9452,7 @@
     {
         "id": 2255,
         "word": "Let",
-        "meaning": "Ä°zin vermek",
+        "meaning": "İzin vermek",
         "level": "A2"
     },
     {
@@ -9476,7 +9476,7 @@
     {
         "id": 2259,
         "word": "Library",
-        "meaning": "KÃ¼tÃ¼phane",
+        "meaning": "Kütüphane",
         "level": "A2"
     },
     {
@@ -9488,31 +9488,31 @@
     {
         "id": 2261,
         "word": "Lie",
-        "meaning": "Yalan sÃ¶ylemek, Uzanmak",
+        "meaning": "Yalan söylemek, Uzanmak",
         "level": "A2"
     },
     {
         "id": 2262,
         "word": "Life",
-        "meaning": "YaÅŸam",
+        "meaning": "Yaşam",
         "level": "A2"
     },
     {
         "id": 2263,
         "word": "Lifestyle",
-        "meaning": "YaÅŸam tarzÄ±",
+        "meaning": "Yaşam tarzı",
         "level": "B1"
     },
     {
         "id": 2264,
         "word": "Lift",
-        "meaning": "AsansÃ¶r, KaldÄ±rmak",
+        "meaning": "Asansör, Kaldırmak",
         "level": "A2"
     },
     {
         "id": 2265,
         "word": "Light",
-        "meaning": "IÅŸÄ±k, Hafif",
+        "meaning": "Işık, Hafif",
         "level": "A2"
     },
     {
@@ -9536,19 +9536,19 @@
     {
         "id": 2269,
         "word": "Limited",
-        "meaning": "KÄ±sÄ±tlÄ±",
+        "meaning": "Kısıtlı",
         "level": "B2"
     },
     {
         "id": 2270,
         "word": "Line",
-        "meaning": "Ã‡izgi, Hat",
+        "meaning": "Çizgi, Hat",
         "level": "A2"
     },
     {
         "id": 2271,
         "word": "Link",
-        "meaning": "BaÄŸlantÄ±",
+        "meaning": "Bağlantı",
         "level": "B1"
     },
     {
@@ -9566,7 +9566,7 @@
     {
         "id": 2274,
         "word": "Liquid",
-        "meaning": "SÄ±vÄ±",
+        "meaning": "Sıvı",
         "level": "B1"
     },
     {
@@ -9596,31 +9596,31 @@
     {
         "id": 2279,
         "word": "Little",
-        "meaning": "KÃ¼Ã§Ã¼k, Az",
+        "meaning": "Küçük, Az",
         "level": "A2"
     },
     {
         "id": 2280,
         "word": "Live",
-        "meaning": "YaÅŸamak",
+        "meaning": "Yaşamak",
         "level": "A2"
     },
     {
         "id": 2281,
         "word": "Living",
-        "meaning": "YaÅŸayan",
+        "meaning": "Yaşayan",
         "level": "A2"
     },
     {
         "id": 2282,
         "word": "Load",
-        "meaning": "YÃ¼k",
+        "meaning": "Yük",
         "level": "B1"
     },
     {
         "id": 2283,
         "word": "Loan",
-        "meaning": "Kredi, BorÃ§",
+        "meaning": "Kredi, Borç",
         "level": "B2"
     },
     {
@@ -9632,7 +9632,7 @@
     {
         "id": 2285,
         "word": "Locate",
-        "meaning": "YerleÅŸtirmek, Bulmak",
+        "meaning": "Yerleştirmek, Bulmak",
         "level": "B2"
     },
     {
@@ -9650,19 +9650,19 @@
     {
         "id": 2288,
         "word": "Logic",
-        "meaning": "MantÄ±k",
+        "meaning": "Mantık",
         "level": "B1"
     },
     {
         "id": 2289,
         "word": "Logical",
-        "meaning": "MantÄ±klÄ±",
+        "meaning": "Mantıklı",
         "level": "B1"
     },
     {
         "id": 2290,
         "word": "Lonely",
-        "meaning": "YalnÄ±z (hissetmek)",
+        "meaning": "Yalnız (hissetmek)",
         "level": "B1"
     },
     {
@@ -9680,7 +9680,7 @@
     {
         "id": 2293,
         "word": "Loose",
-        "meaning": "GevÅŸek",
+        "meaning": "Gevşek",
         "level": "B1"
     },
     {
@@ -9704,31 +9704,31 @@
     {
         "id": 2297,
         "word": "Loss",
-        "meaning": "KayÄ±p",
+        "meaning": "Kayıp",
         "level": "B1"
     },
     {
         "id": 2298,
         "word": "Lost",
-        "meaning": "KayÄ±p",
+        "meaning": "Kayıp",
         "level": "A2"
     },
     {
         "id": 2299,
         "word": "Lot",
-        "meaning": "Ã‡ok fazla",
+        "meaning": "Çok fazla",
         "level": "A2"
     },
     {
         "id": 2300,
         "word": "Loud",
-        "meaning": "YÃ¼ksek sesli",
+        "meaning": "Yüksek sesli",
         "level": "A1"
     },
     {
         "id": 2301,
         "word": "Loudly",
-        "meaning": "YÃ¼ksek sesle",
+        "meaning": "Yüksek sesle",
         "level": "A1"
     },
     {
@@ -9740,55 +9740,55 @@
     {
         "id": 2303,
         "word": "Lovely",
-        "meaning": "Sevimli, GÃ¼zel",
+        "meaning": "Sevimli, Güzel",
         "level": "A1"
     },
     {
         "id": 2304,
         "word": "Low",
-        "meaning": "DÃ¼ÅŸÃ¼k",
+        "meaning": "Düşük",
         "level": "A2"
     },
     {
         "id": 2305,
         "word": "Lower",
-        "meaning": "Daha dÃ¼ÅŸÃ¼k, Alt",
+        "meaning": "Daha düşük, Alt",
         "level": "B1"
     },
     {
         "id": 2306,
         "word": "Loyal",
-        "meaning": "SadÄ±k",
+        "meaning": "Sadık",
         "level": "B2"
     },
     {
         "id": 2307,
         "word": "Luck",
-        "meaning": "Åans",
+        "meaning": "Şans",
         "level": "A2"
     },
     {
         "id": 2308,
         "word": "Lucky",
-        "meaning": "ÅanslÄ±",
+        "meaning": "Şanslı",
         "level": "A2"
     },
     {
         "id": 2309,
         "word": "Lunch",
-        "meaning": "Ã–ÄŸle yemeÄŸi",
+        "meaning": "Öğle yemeği",
         "level": "A2"
     },
     {
         "id": 2310,
         "word": "Lung",
-        "meaning": "AkciÄŸer",
+        "meaning": "Akciğer",
         "level": "B1"
     },
     {
         "id": 2311,
         "word": "Luxury",
-        "meaning": "LÃ¼ks",
+        "meaning": "Lüks",
         "level": "B1"
     },
     {
@@ -9800,7 +9800,7 @@
     {
         "id": 2313,
         "word": "Mad",
-        "meaning": "Deli, KÄ±zgÄ±n",
+        "meaning": "Deli, Kızgın",
         "level": "A2"
     },
     {
@@ -9812,7 +9812,7 @@
     {
         "id": 2315,
         "word": "Magic",
-        "meaning": "BÃ¼yÃ¼, Sihir",
+        "meaning": "Büyü, Sihir",
         "level": "B1"
     },
     {
@@ -9836,19 +9836,19 @@
     {
         "id": 2319,
         "word": "Maintain",
-        "meaning": "Korumak, SÃ¼rdÃ¼rmek",
+        "meaning": "Korumak, Sürdürmek",
         "level": "B2"
     },
     {
         "id": 2320,
         "word": "Major",
-        "meaning": "BaÅŸlÄ±ca, Ã–nemli",
+        "meaning": "Başlıca, Önemli",
         "level": "B1"
     },
     {
         "id": 2321,
         "word": "Majority",
-        "meaning": "Ã‡oÄŸunluk",
+        "meaning": "Çoğunluk",
         "level": "C1"
     },
     {
@@ -9866,7 +9866,7 @@
     {
         "id": 2324,
         "word": "Mall",
-        "meaning": "AlÄ±ÅŸveriÅŸ merkezi",
+        "meaning": "Alışveriş merkezi",
         "level": "A2"
     },
     {
@@ -9878,31 +9878,31 @@
     {
         "id": 2326,
         "word": "Manage",
-        "meaning": "YÃ¶netmek",
+        "meaning": "Yönetmek",
         "level": "A2"
     },
     {
         "id": 2327,
         "word": "Management",
-        "meaning": "YÃ¶netim",
+        "meaning": "Yönetim",
         "level": "B1"
     },
     {
         "id": 2328,
         "word": "Manager",
-        "meaning": "MÃ¼dÃ¼r",
+        "meaning": "Müdür",
         "level": "A1"
     },
     {
         "id": 2329,
         "word": "Manner",
-        "meaning": "Tarz, TavÄ±r",
+        "meaning": "Tarz, Tavır",
         "level": "B2"
     },
     {
         "id": 2330,
         "word": "Many",
-        "meaning": "Pek Ã§ok",
+        "meaning": "Pek çok",
         "level": "A2"
     },
     {
@@ -9920,7 +9920,7 @@
     {
         "id": 2333,
         "word": "Mark",
-        "meaning": "Ä°ÅŸaret, Not",
+        "meaning": "İşaret, Not",
         "level": "A2"
     },
     {
@@ -9974,7 +9974,7 @@
     {
         "id": 2342,
         "word": "Match",
-        "meaning": "MaÃ§, EÅŸleÅŸmek",
+        "meaning": "Maç, Eşleşmek",
         "level": "A2"
     },
     {
@@ -10010,7 +10010,7 @@
     {
         "id": 2348,
         "word": "May",
-        "meaning": "MayÄ±s",
+        "meaning": "Mayıs",
         "level": "A2"
     },
     {
@@ -10022,7 +10022,7 @@
     {
         "id": 2350,
         "word": "Meal",
-        "meaning": "Ã–ÄŸÃ¼n",
+        "meaning": "Öğün",
         "level": "A2"
     },
     {
@@ -10040,25 +10040,25 @@
     {
         "id": 2353,
         "word": "Means",
-        "meaning": "AraÃ§lar",
+        "meaning": "Araçlar",
         "level": "B2"
     },
     {
         "id": 2354,
         "word": "Meanwhile",
-        "meaning": "Bu sÄ±rada",
+        "meaning": "Bu sırada",
         "level": "B1"
     },
     {
         "id": 2355,
         "word": "Measure",
-        "meaning": "Ã–lÃ§mek",
+        "meaning": "Ölçmek",
         "level": "B1"
     },
     {
         "id": 2356,
         "word": "Measurement",
-        "meaning": "Ã–lÃ§Ã¼",
+        "meaning": "Ölçü",
         "level": "B2"
     },
     {
@@ -10082,13 +10082,13 @@
     {
         "id": 2360,
         "word": "Medical",
-        "meaning": "TÄ±bbi",
+        "meaning": "Tıbbi",
         "level": "B1"
     },
     {
         "id": 2361,
         "word": "Medicine",
-        "meaning": "Ä°laÃ§",
+        "meaning": "İlaç",
         "level": "A2"
     },
     {
@@ -10100,31 +10100,31 @@
     {
         "id": 2363,
         "word": "Meet",
-        "meaning": "BuluÅŸmak",
+        "meaning": "Buluşmak",
         "level": "A2"
     },
     {
         "id": 2364,
         "word": "Meeting",
-        "meaning": "ToplantÄ±",
+        "meaning": "Toplantı",
         "level": "A1"
     },
     {
         "id": 2365,
         "word": "Member",
-        "meaning": "Ãœye",
+        "meaning": "Üye",
         "level": "A2"
     },
     {
         "id": 2366,
         "word": "Membership",
-        "meaning": "Ãœyelik",
+        "meaning": "Üyelik",
         "level": "B1"
     },
     {
         "id": 2367,
         "word": "Memory",
-        "meaning": "HafÄ±za",
+        "meaning": "Hafıza",
         "level": "A2"
     },
     {
@@ -10142,7 +10142,7 @@
     {
         "id": 2370,
         "word": "Menu",
-        "meaning": "MenÃ¼",
+        "meaning": "Menü",
         "level": "A2"
     },
     {
@@ -10154,7 +10154,7 @@
     {
         "id": 2372,
         "word": "Merely",
-        "meaning": "YalnÄ±zca",
+        "meaning": "Yalnızca",
         "level": "B2"
     },
     {
@@ -10172,7 +10172,7 @@
     {
         "id": 2375,
         "word": "Method",
-        "meaning": "YÃ¶ntem",
+        "meaning": "Yöntem",
         "level": "A1"
     },
     {
@@ -10190,19 +10190,19 @@
     {
         "id": 2378,
         "word": "Midnight",
-        "meaning": "Gece yarÄ±sÄ±",
+        "meaning": "Gece yarısı",
         "level": "A2"
     },
     {
         "id": 2379,
         "word": "Might",
-        "meaning": "-bilir (Ä°htimal)",
+        "meaning": "-bilir (İhtimal)",
         "level": "A2"
     },
     {
         "id": 2380,
         "word": "Mild",
-        "meaning": "IlÄ±man",
+        "meaning": "Ilıman",
         "level": "B1"
     },
     {
@@ -10220,7 +10220,7 @@
     {
         "id": 2383,
         "word": "Milk",
-        "meaning": "SÃ¼t",
+        "meaning": "Süt",
         "level": "A2"
     },
     {
@@ -10232,7 +10232,7 @@
     {
         "id": 2385,
         "word": "Mind",
-        "meaning": "Zihin, AkÄ±l",
+        "meaning": "Zihin, Akıl",
         "level": "A2"
     },
     {
@@ -10256,13 +10256,13 @@
     {
         "id": 2389,
         "word": "Minor",
-        "meaning": "KÃ¼Ã§Ã¼k, Ã–nemsiz",
+        "meaning": "Küçük, Önemsiz",
         "level": "B2"
     },
     {
         "id": 2390,
         "word": "Minority",
-        "meaning": "AzÄ±nlÄ±k",
+        "meaning": "Azınlık",
         "level": "B2"
     },
     {
@@ -10280,7 +10280,7 @@
     {
         "id": 2393,
         "word": "Miss",
-        "meaning": "Ã–zlemek, KaÃ§Ä±rmak",
+        "meaning": "Özlemek, Kaçırmak",
         "level": "A2"
     },
     {
@@ -10292,7 +10292,7 @@
     {
         "id": 2395,
         "word": "Mission",
-        "meaning": "GÃ¶rev",
+        "meaning": "Görev",
         "level": "B1"
     },
     {
@@ -10304,19 +10304,19 @@
     {
         "id": 2397,
         "word": "Mix",
-        "meaning": "KarÄ±ÅŸtÄ±rmak",
+        "meaning": "Karıştırmak",
         "level": "B1"
     },
     {
         "id": 2398,
         "word": "Mixed",
-        "meaning": "KarÄ±ÅŸÄ±k",
+        "meaning": "Karışık",
         "level": "B1"
     },
     {
         "id": 2399,
         "word": "Mixture",
-        "meaning": "KarÄ±ÅŸÄ±m",
+        "meaning": "Karışım",
         "level": "B2"
     },
     {
@@ -10358,7 +10358,7 @@
     {
         "id": 2406,
         "word": "Monitor",
-        "meaning": "Ä°zlemek, MonitÃ¶r",
+        "meaning": "İzlemek, Monitör",
         "level": "B1"
     },
     {
@@ -10376,7 +10376,7 @@
     {
         "id": 2409,
         "word": "Moon",
-        "meaning": "Ay (GÃ¶kyÃ¼zÃ¼)",
+        "meaning": "Ay (Gökyüzü)",
         "level": "A2"
     },
     {
@@ -10394,7 +10394,7 @@
     {
         "id": 2412,
         "word": "Moreover",
-        "meaning": "AyrÄ±ca",
+        "meaning": "Ayrıca",
         "level": "B2"
     },
     {
@@ -10406,13 +10406,13 @@
     {
         "id": 2414,
         "word": "Most",
-        "meaning": "En Ã§ok",
+        "meaning": "En çok",
         "level": "A2"
     },
     {
         "id": 2415,
         "word": "Mostly",
-        "meaning": "Ã‡oÄŸunlukla",
+        "meaning": "Çoğunlukla",
         "level": "A1"
     },
     {
@@ -10442,7 +10442,7 @@
     {
         "id": 2420,
         "word": "Mountain",
-        "meaning": "DaÄŸ",
+        "meaning": "Dağ",
         "level": "A1"
     },
     {
@@ -10454,13 +10454,13 @@
     {
         "id": 2422,
         "word": "Mouth",
-        "meaning": "AÄŸÄ±z",
+        "meaning": "Ağız",
         "level": "A1"
     },
     {
         "id": 2423,
         "word": "Move",
-        "meaning": "Hareket etmek, TaÅŸÄ±nmak",
+        "meaning": "Hareket etmek, Taşınmak",
         "level": "A1"
     },
     {
@@ -10478,25 +10478,25 @@
     {
         "id": 2426,
         "word": "Much",
-        "meaning": "Ã‡ok",
+        "meaning": "Çok",
         "level": "A2"
     },
     {
         "id": 2427,
         "word": "Mud",
-        "meaning": "Ã‡amur",
+        "meaning": "Çamur",
         "level": "B1"
     },
     {
         "id": 2428,
         "word": "Multiple",
-        "meaning": "Ã‡oklu",
+        "meaning": "Çoklu",
         "level": "B1"
     },
     {
         "id": 2429,
         "word": "Multiply",
-        "meaning": "Ã‡arpmak",
+        "meaning": "Çarpmak",
         "level": "B1"
     },
     {
@@ -10514,31 +10514,31 @@
     {
         "id": 2432,
         "word": "Museum",
-        "meaning": "MÃ¼ze",
+        "meaning": "Müze",
         "level": "A1"
     },
     {
         "id": 2433,
         "word": "Music",
-        "meaning": "MÃ¼zik",
+        "meaning": "Müzik",
         "level": "A2"
     },
     {
         "id": 2434,
         "word": "Musical",
-        "meaning": "MÃ¼zikal",
+        "meaning": "Müzikal",
         "level": "A2"
     },
     {
         "id": 2435,
         "word": "Musician",
-        "meaning": "MÃ¼zisyen",
+        "meaning": "Müzisyen",
         "level": "A2"
     },
     {
         "id": 2436,
         "word": "Must",
-        "meaning": "-meli, -malÄ±",
+        "meaning": "-meli, -malı",
         "level": "A2"
     },
     {
@@ -10568,13 +10568,13 @@
     {
         "id": 2441,
         "word": "Nail",
-        "meaning": "TÄ±rnak, Ã‡ivi",
+        "meaning": "Tırnak, Çivi",
         "level": "B1"
     },
     {
         "id": 2442,
         "word": "Name",
-        "meaning": "Ä°sim",
+        "meaning": "İsim",
         "level": "A2"
     },
     {
@@ -10604,31 +10604,31 @@
     {
         "id": 2447,
         "word": "Natural",
-        "meaning": "DoÄŸal",
+        "meaning": "Doğal",
         "level": "A2"
     },
     {
         "id": 2448,
         "word": "Naturally",
-        "meaning": "DoÄŸal olarak",
+        "meaning": "Doğal olarak",
         "level": "B1"
     },
     {
         "id": 2449,
         "word": "Nature",
-        "meaning": "DoÄŸa",
+        "meaning": "Doğa",
         "level": "A2"
     },
     {
         "id": 2450,
         "word": "Near",
-        "meaning": "YakÄ±n",
+        "meaning": "Yakın",
         "level": "A2"
     },
     {
         "id": 2451,
         "word": "Nearby",
-        "meaning": "YakÄ±nlarda",
+        "meaning": "Yakınlarda",
         "level": "A1"
     },
     {
@@ -10640,7 +10640,7 @@
     {
         "id": 2453,
         "word": "Neat",
-        "meaning": "DÃ¼zenli",
+        "meaning": "Düzenli",
         "level": "B2"
     },
     {
@@ -10658,13 +10658,13 @@
     {
         "id": 2456,
         "word": "Need",
-        "meaning": "Ä°htiyaÃ§ duymak",
+        "meaning": "İhtiyaç duymak",
         "level": "A2"
     },
     {
         "id": 2457,
         "word": "Needle",
-        "meaning": "Ä°ÄŸne",
+        "meaning": "İğne",
         "level": "B1"
     },
     {
@@ -10676,7 +10676,7 @@
     {
         "id": 2459,
         "word": "Neighbour",
-        "meaning": "KomÅŸu",
+        "meaning": "Komşu",
         "level": "A2"
     },
     {
@@ -10712,13 +10712,13 @@
     {
         "id": 2465,
         "word": "Net",
-        "meaning": "AÄŸ, Net",
+        "meaning": "Ağ, Net",
         "level": "B1"
     },
     {
         "id": 2466,
         "word": "Network",
-        "meaning": "AÄŸ",
+        "meaning": "Ağ",
         "level": "B1"
     },
     {
@@ -10766,7 +10766,7 @@
     {
         "id": 2474,
         "word": "Nice",
-        "meaning": "HoÅŸ",
+        "meaning": "Hoş",
         "level": "A2"
     },
     {
@@ -10796,31 +10796,31 @@
     {
         "id": 2479,
         "word": "No",
-        "meaning": "HayÄ±r",
+        "meaning": "Hayır",
         "level": "A2"
     },
     {
         "id": 2480,
         "word": "Nobody",
-        "meaning": "HiÃ§ kimse",
+        "meaning": "Hiç kimse",
         "level": "A2"
     },
     {
         "id": 2481,
         "word": "Noise",
-        "meaning": "GÃ¼rÃ¼ltÃ¼",
+        "meaning": "Gürültü",
         "level": "A2"
     },
     {
         "id": 2482,
         "word": "Noisy",
-        "meaning": "GÃ¼rÃ¼ltÃ¼lÃ¼",
+        "meaning": "Gürültülü",
         "level": "A1"
     },
     {
         "id": 2483,
         "word": "None",
-        "meaning": "HiÃ§biri",
+        "meaning": "Hiçbiri",
         "level": "B1"
     },
     {
@@ -10856,7 +10856,7 @@
     {
         "id": 2489,
         "word": "Not",
-        "meaning": "DeÄŸil",
+        "meaning": "Değil",
         "level": "A1"
     },
     {
@@ -10868,13 +10868,13 @@
     {
         "id": 2491,
         "word": "Nothing",
-        "meaning": "HiÃ§bir ÅŸey",
+        "meaning": "Hiçbir şey",
         "level": "A1"
     },
     {
         "id": 2492,
         "word": "Notice",
-        "meaning": "Fark etmek, Ä°lan",
+        "meaning": "Fark etmek, İlan",
         "level": "A1"
     },
     {
@@ -10886,61 +10886,61 @@
     {
         "id": 2494,
         "word": "November",
-        "meaning": "KasÄ±m",
+        "meaning": "Kasım",
         "level": "A2"
     },
     {
         "id": 2495,
         "word": "Now",
-        "meaning": "Åimdi",
+        "meaning": "Şimdi",
         "level": "A2"
     },
     {
         "id": 2496,
         "word": "Nowadays",
-        "meaning": "BugÃ¼nlerde",
+        "meaning": "Bugünlerde",
         "level": "B1"
     },
     {
         "id": 2497,
         "word": "Nuclear",
-        "meaning": "NÃ¼kleer",
+        "meaning": "Nükleer",
         "level": "B1"
     },
     {
         "id": 2498,
         "word": "Number",
-        "meaning": "SayÄ±",
+        "meaning": "Sayı",
         "level": "A1"
     },
     {
         "id": 2499,
         "word": "Nurse",
-        "meaning": "HemÅŸire",
+        "meaning": "Hemşire",
         "level": "A2"
     },
     {
         "id": 2500,
         "word": "Nut",
-        "meaning": "Somun, FÄ±ndÄ±k",
+        "meaning": "Somun, Fındık",
         "level": "A1"
     },
     {
         "id": 2501,
         "word": "Oak",
-        "meaning": "MeÅŸe",
+        "meaning": "Meşe",
         "level": "B2"
     },
     {
         "id": 2502,
         "word": "Obey",
-        "meaning": "Ä°taat etmek",
+        "meaning": "İtaat etmek",
         "level": "B1"
     },
     {
         "id": 2503,
         "word": "Object",
-        "meaning": "Nesne, Ä°tiraz etmek",
+        "meaning": "Nesne, İtiraz etmek",
         "level": "A2"
     },
     {
@@ -10952,43 +10952,43 @@
     {
         "id": 2505,
         "word": "Obligation",
-        "meaning": "YÃ¼kÃ¼mlÃ¼lÃ¼k",
+        "meaning": "Yükümlülük",
         "level": "B2"
     },
     {
         "id": 2506,
         "word": "Observation",
-        "meaning": "GÃ¶zlem",
+        "meaning": "Gözlem",
         "level": "B1"
     },
     {
         "id": 2507,
         "word": "Observe",
-        "meaning": "GÃ¶zlemlemek",
+        "meaning": "Gözlemlemek",
         "level": "B1"
     },
     {
         "id": 2508,
         "word": "Obvious",
-        "meaning": "AÃ§Ä±k, Bariz",
+        "meaning": "Açık, Bariz",
         "level": "B1"
     },
     {
         "id": 2509,
         "word": "Obviously",
-        "meaning": "AÃ§Ä±kÃ§a",
+        "meaning": "Açıkça",
         "level": "B1"
     },
     {
         "id": 2510,
         "word": "Occasion",
-        "meaning": "FÄ±rsat, Durum",
+        "meaning": "Fırsat, Durum",
         "level": "B1"
     },
     {
         "id": 2511,
         "word": "Occasionally",
-        "meaning": "Ara sÄ±ra",
+        "meaning": "Ara sıra",
         "level": "B1"
     },
     {
@@ -11012,37 +11012,37 @@
     {
         "id": 2515,
         "word": "Odd",
-        "meaning": "Garip, Tek (sayÄ±)",
+        "meaning": "Garip, Tek (sayı)",
         "level": "B1"
     },
     {
         "id": 2516,
         "word": "Of",
-        "meaning": "Onun, -Ä±n, -in",
+        "meaning": "Onun, -ın, -in",
         "level": "A2"
     },
     {
         "id": 2517,
         "word": "Off",
-        "meaning": "KapalÄ±, Uzak",
+        "meaning": "Kapalı, Uzak",
         "level": "A2"
     },
     {
         "id": 2518,
         "word": "Offence",
-        "meaning": "SuÃ§, Taarruz",
+        "meaning": "Suç, Taarruz",
         "level": "B1"
     },
     {
         "id": 2519,
         "word": "Offend",
-        "meaning": "GÃ¼cendirmek",
+        "meaning": "Gücendirmek",
         "level": "C1"
     },
     {
         "id": 2520,
         "word": "Offensive",
-        "meaning": "SaldÄ±rgan",
+        "meaning": "Saldırgan",
         "level": "B1"
     },
     {
@@ -11072,7 +11072,7 @@
     {
         "id": 2525,
         "word": "Often",
-        "meaning": "SÄ±k sÄ±k",
+        "meaning": "Sık sık",
         "level": "A2"
     },
     {
@@ -11084,7 +11084,7 @@
     {
         "id": 2527,
         "word": "Oil",
-        "meaning": "YaÄŸ, Petrol",
+        "meaning": "Yağ, Petrol",
         "level": "A2"
     },
     {
@@ -11096,7 +11096,7 @@
     {
         "id": 2529,
         "word": "Old",
-        "meaning": "Eski, YaÅŸlÄ±",
+        "meaning": "Eski, Yaşlı",
         "level": "A2"
     },
     {
@@ -11108,7 +11108,7 @@
     {
         "id": 2531,
         "word": "On",
-        "meaning": "Ãœzerinde",
+        "meaning": "Üzerinde",
         "level": "A2"
     },
     {
@@ -11126,13 +11126,13 @@
     {
         "id": 2534,
         "word": "Onion",
-        "meaning": "SoÄŸan",
+        "meaning": "Soğan",
         "level": "A2"
     },
     {
         "id": 2535,
         "word": "Online",
-        "meaning": "Ã‡evrimiÃ§i",
+        "meaning": "Çevrimiçi",
         "level": "A2"
     },
     {
@@ -11144,25 +11144,25 @@
     {
         "id": 2537,
         "word": "Onto",
-        "meaning": "Ãœzerine",
+        "meaning": "Üzerine",
         "level": "A2"
     },
     {
         "id": 2538,
         "word": "Open",
-        "meaning": "AÃ§Ä±k, AÃ§mak",
+        "meaning": "Açık, Açmak",
         "level": "A2"
     },
     {
         "id": 2539,
         "word": "Opening",
-        "meaning": "AÃ§Ä±lÄ±ÅŸ",
+        "meaning": "Açılış",
         "level": "B1"
     },
     {
         "id": 2540,
         "word": "Operate",
-        "meaning": "Ä°ÅŸletmek, Ameliyat etmek",
+        "meaning": "İşletmek, Ameliyat etmek",
         "level": "C1"
     },
     {
@@ -11174,7 +11174,7 @@
     {
         "id": 2542,
         "word": "Opinion",
-        "meaning": "GÃ¶rÃ¼ÅŸ",
+        "meaning": "Görüş",
         "level": "A1"
     },
     {
@@ -11186,13 +11186,13 @@
     {
         "id": 2544,
         "word": "Opportunity",
-        "meaning": "FÄ±rsat",
+        "meaning": "Fırsat",
         "level": "B1"
     },
     {
         "id": 2545,
         "word": "Opposite",
-        "meaning": "ZÄ±t, KarÅŸÄ±t",
+        "meaning": "Zıt, Karşıt",
         "level": "A2"
     },
     {
@@ -11204,7 +11204,7 @@
     {
         "id": 2547,
         "word": "Option",
-        "meaning": "SeÃ§enek",
+        "meaning": "Seçenek",
         "level": "B1"
     },
     {
@@ -11222,13 +11222,13 @@
     {
         "id": 2550,
         "word": "Order",
-        "meaning": "DÃ¼zen, Emir, SipariÅŸ",
+        "meaning": "Düzen, Emir, Sipariş",
         "level": "A2"
     },
     {
         "id": 2551,
         "word": "Ordinary",
-        "meaning": "SÄ±radan",
+        "meaning": "Sıradan",
         "level": "B1"
     },
     {
@@ -11246,7 +11246,7 @@
     {
         "id": 2554,
         "word": "Orient",
-        "meaning": "YÃ¶neltmek, DoÄŸu",
+        "meaning": "Yöneltmek, Doğu",
         "level": "B2"
     },
     {
@@ -11264,7 +11264,7 @@
     {
         "id": 2557,
         "word": "Other",
-        "meaning": "DiÄŸer",
+        "meaning": "Diğer",
         "level": "A2"
     },
     {
@@ -11276,7 +11276,7 @@
     {
         "id": 2559,
         "word": "Ought",
-        "meaning": "-meli, -malÄ±",
+        "meaning": "-meli, -malı",
         "level": "B1"
     },
     {
@@ -11300,61 +11300,61 @@
     {
         "id": 2563,
         "word": "Out",
-        "meaning": "DÄ±ÅŸarÄ±",
+        "meaning": "Dışarı",
         "level": "A1"
     },
     {
         "id": 2564,
         "word": "Outcome",
-        "meaning": "SonuÃ§",
+        "meaning": "Sonuç",
         "level": "B2"
     },
     {
         "id": 2565,
         "word": "Outdoor",
-        "meaning": "AÃ§Ä±k hava",
+        "meaning": "Açık hava",
         "level": "B1"
     },
     {
         "id": 2566,
         "word": "Outdoors",
-        "meaning": "DÄ±ÅŸarÄ±da",
+        "meaning": "Dışarıda",
         "level": "B1"
     },
     {
         "id": 2567,
         "word": "Outer",
-        "meaning": "DÄ±ÅŸ",
+        "meaning": "Dış",
         "level": "B1"
     },
     {
         "id": 2568,
         "word": "Output",
-        "meaning": "Ã‡Ä±ktÄ±",
+        "meaning": "Çıktı",
         "level": "C1"
     },
     {
         "id": 2569,
         "word": "Outside",
-        "meaning": "DÄ±ÅŸarÄ±da",
+        "meaning": "Dışarıda",
         "level": "A1"
     },
     {
         "id": 2570,
         "word": "Outstanding",
-        "meaning": "OlaÄŸanÃ¼stÃ¼",
+        "meaning": "Olağanüstü",
         "level": "C1"
     },
     {
         "id": 2571,
         "word": "Oven",
-        "meaning": "FÄ±rÄ±n",
+        "meaning": "Fırın",
         "level": "A2"
     },
     {
         "id": 2572,
         "word": "Over",
-        "meaning": "Ãœzerinde, Bitti",
+        "meaning": "Üzerinde, Bitti",
         "level": "A1"
     },
     {
@@ -11366,19 +11366,19 @@
     {
         "id": 2574,
         "word": "Overcome",
-        "meaning": "Ãœstesinden gelmek",
+        "meaning": "Üstesinden gelmek",
         "level": "B2"
     },
     {
         "id": 2575,
         "word": "Overseas",
-        "meaning": "Deniz aÅŸÄ±rÄ±",
+        "meaning": "Deniz aşırı",
         "level": "B2"
     },
     {
         "id": 2576,
         "word": "Owe",
-        "meaning": "BorÃ§lu olmak",
+        "meaning": "Borçlu olmak",
         "level": "B1"
     },
     {
@@ -11396,7 +11396,7 @@
     {
         "id": 2579,
         "word": "Pace",
-        "meaning": "AdÄ±m, HÄ±z",
+        "meaning": "Adım, Hız",
         "level": "B1"
     },
     {
@@ -11432,13 +11432,13 @@
     {
         "id": 2585,
         "word": "Pain",
-        "meaning": "AÄŸrÄ±",
+        "meaning": "Ağrı",
         "level": "A2"
     },
     {
         "id": 2586,
         "word": "Painful",
-        "meaning": "AÄŸrÄ±lÄ±",
+        "meaning": "Ağrılı",
         "level": "B1"
     },
     {
@@ -11462,7 +11462,7 @@
     {
         "id": 2590,
         "word": "Pair",
-        "meaning": "Ã‡ift",
+        "meaning": "Çift",
         "level": "A1"
     },
     {
@@ -11498,7 +11498,7 @@
     {
         "id": 2596,
         "word": "Paper",
-        "meaning": "KaÄŸÄ±t",
+        "meaning": "Kağıt",
         "level": "A2"
     },
     {
@@ -11540,31 +11540,31 @@
     {
         "id": 2603,
         "word": "Part",
-        "meaning": "ParÃ§a, BÃ¶lÃ¼m",
+        "meaning": "Parça, Bölüm",
         "level": "A2"
     },
     {
         "id": 2604,
         "word": "Participate",
-        "meaning": "KatÄ±lmak",
+        "meaning": "Katılmak",
         "level": "B1"
     },
     {
         "id": 2605,
         "word": "Particular",
-        "meaning": "Belirli, Ã–zel",
+        "meaning": "Belirli, Özel",
         "level": "B1"
     },
     {
         "id": 2606,
         "word": "Particularly",
-        "meaning": "Ã–zellikle",
+        "meaning": "Özellikle",
         "level": "B1"
     },
     {
         "id": 2607,
         "word": "Partly",
-        "meaning": "KÄ±smen",
+        "meaning": "Kısmen",
         "level": "B1"
     },
     {
@@ -11576,7 +11576,7 @@
     {
         "id": 2609,
         "word": "Partnership",
-        "meaning": "OrtaklÄ±k",
+        "meaning": "Ortaklık",
         "level": "B2"
     },
     {
@@ -11588,13 +11588,13 @@
     {
         "id": 2611,
         "word": "Pass",
-        "meaning": "GeÃ§mek",
+        "meaning": "Geçmek",
         "level": "A2"
     },
     {
         "id": 2612,
         "word": "Passage",
-        "meaning": "Pasaj, GeÃ§it",
+        "meaning": "Pasaj, Geçit",
         "level": "B1"
     },
     {
@@ -11624,7 +11624,7 @@
     {
         "id": 2617,
         "word": "Past",
-        "meaning": "GeÃ§miÅŸ",
+        "meaning": "Geçmiş",
         "level": "A2"
     },
     {
@@ -11636,19 +11636,19 @@
     {
         "id": 2619,
         "word": "Patience",
-        "meaning": "SabÄ±r",
+        "meaning": "Sabır",
         "level": "B2"
     },
     {
         "id": 2620,
         "word": "Patient",
-        "meaning": "Hasta, SabÄ±rlÄ±",
+        "meaning": "Hasta, Sabırlı",
         "level": "A2"
     },
     {
         "id": 2621,
         "word": "Pattern",
-        "meaning": "Desen, KalÄ±p",
+        "meaning": "Desen, Kalıp",
         "level": "B1"
     },
     {
@@ -11660,19 +11660,19 @@
     {
         "id": 2623,
         "word": "Pay",
-        "meaning": "Ã–demek",
+        "meaning": "Ödemek",
         "level": "A2"
     },
     {
         "id": 2624,
         "word": "Payment",
-        "meaning": "Ã–deme",
+        "meaning": "Ödeme",
         "level": "B1"
     },
     {
         "id": 2625,
         "word": "Peace",
-        "meaning": "BarÄ±ÅŸ",
+        "meaning": "Barış",
         "level": "A2"
     },
     {
@@ -11702,25 +11702,25 @@
     {
         "id": 2630,
         "word": "Pencil",
-        "meaning": "KurÅŸun kalem",
+        "meaning": "Kurşun kalem",
         "level": "A1"
     },
     {
         "id": 2631,
         "word": "Penny",
-        "meaning": "KuruÅŸ",
+        "meaning": "Kuruş",
         "level": "A2"
     },
     {
         "id": 2632,
         "word": "Pension",
-        "meaning": "Emekli maaÅŸÄ±",
+        "meaning": "Emekli maaşı",
         "level": "B2"
     },
     {
         "id": 2633,
         "word": "People",
-        "meaning": "Ä°nsanlar",
+        "meaning": "İnsanlar",
         "level": "A2"
     },
     {
@@ -11732,25 +11732,25 @@
     {
         "id": 2635,
         "word": "Per",
-        "meaning": "BaÅŸÄ±na",
+        "meaning": "Başına",
         "level": "A1"
     },
     {
         "id": 2636,
         "word": "Percentage",
-        "meaning": "YÃ¼zde",
+        "meaning": "Yüzde",
         "level": "B1"
     },
     {
         "id": 2637,
         "word": "Perfect",
-        "meaning": "MÃ¼kemmel",
+        "meaning": "Mükemmel",
         "level": "A1"
     },
     {
         "id": 2638,
         "word": "Perfectly",
-        "meaning": "MÃ¼kemmelce",
+        "meaning": "Mükemmelce",
         "level": "B1"
     },
     {
@@ -11774,43 +11774,43 @@
     {
         "id": 2642,
         "word": "Period",
-        "meaning": "DÃ¶nem",
+        "meaning": "Dönem",
         "level": "A1"
     },
     {
         "id": 2643,
         "word": "Permanent",
-        "meaning": "KalÄ±cÄ±",
+        "meaning": "Kalıcı",
         "level": "C1"
     },
     {
         "id": 2644,
         "word": "Permission",
-        "meaning": "Ä°zin",
+        "meaning": "İzin",
         "level": "B1"
     },
     {
         "id": 2645,
         "word": "Permit",
-        "meaning": "Ä°zin vermek",
+        "meaning": "İzin vermek",
         "level": "B2"
     },
     {
         "id": 2646,
         "word": "Person",
-        "meaning": "KiÅŸi",
+        "meaning": "Kişi",
         "level": "A1"
     },
     {
         "id": 2647,
         "word": "Personal",
-        "meaning": "KiÅŸisel",
+        "meaning": "Kişisel",
         "level": "A2"
     },
     {
         "id": 2648,
         "word": "Personally",
-        "meaning": "Åahsen",
+        "meaning": "Şahsen",
         "level": "B1"
     },
     {
@@ -11822,7 +11822,7 @@
     {
         "id": 2650,
         "word": "Persuade",
-        "meaning": "Ä°kna etmek",
+        "meaning": "İkna etmek",
         "level": "B1"
     },
     {
@@ -11864,31 +11864,31 @@
     {
         "id": 2657,
         "word": "Photo",
-        "meaning": "FotoÄŸraf",
+        "meaning": "Fotoğraf",
         "level": "A2"
     },
     {
         "id": 2658,
         "word": "Photograph",
-        "meaning": "FotoÄŸraf",
+        "meaning": "Fotoğraf",
         "level": "A2"
     },
     {
         "id": 2659,
         "word": "Photographer",
-        "meaning": "FotoÄŸrafÃ§Ä±",
+        "meaning": "Fotoğrafçı",
         "level": "B1"
     },
     {
         "id": 2660,
         "word": "Photography",
-        "meaning": "FotoÄŸrafÃ§Ä±lÄ±k",
+        "meaning": "Fotoğrafçılık",
         "level": "B1"
     },
     {
         "id": 2661,
         "word": "Phrase",
-        "meaning": "Ä°fade, Tabir",
+        "meaning": "İfade, Tabir",
         "level": "A1"
     },
     {
@@ -11918,7 +11918,7 @@
     {
         "id": 2666,
         "word": "Pick",
-        "meaning": "SeÃ§mek",
+        "meaning": "Seçmek",
         "level": "A2"
     },
     {
@@ -11930,7 +11930,7 @@
     {
         "id": 2668,
         "word": "Piece",
-        "meaning": "ParÃ§a",
+        "meaning": "Parça",
         "level": "A2"
     },
     {
@@ -11942,7 +11942,7 @@
     {
         "id": 2670,
         "word": "Pile",
-        "meaning": "YÄ±ÄŸÄ±n",
+        "meaning": "Yığın",
         "level": "B1"
     },
     {
@@ -11960,7 +11960,7 @@
     {
         "id": 2673,
         "word": "Pin",
-        "meaning": "Ä°ÄŸne, Rapdiye",
+        "meaning": "İğne, Rapdiye",
         "level": "B2"
     },
     {
@@ -11984,7 +11984,7 @@
     {
         "id": 2677,
         "word": "Pit",
-        "meaning": "Ã‡ukur",
+        "meaning": "Çukur",
         "level": "B2"
     },
     {
@@ -11996,7 +11996,7 @@
     {
         "id": 2679,
         "word": "Pity",
-        "meaning": "YazÄ±k, AcÄ±ma",
+        "meaning": "Yazık, Acıma",
         "level": "B1"
     },
     {
@@ -12020,7 +12020,7 @@
     {
         "id": 2683,
         "word": "Plane",
-        "meaning": "UÃ§ak",
+        "meaning": "Uçak",
         "level": "A2"
     },
     {
@@ -12080,7 +12080,7 @@
     {
         "id": 2693,
         "word": "Please",
-        "meaning": "LÃ¼tfen",
+        "meaning": "Lütfen",
         "level": "A2"
     },
     {
@@ -12110,7 +12110,7 @@
     {
         "id": 2698,
         "word": "Plug",
-        "meaning": "FiÅŸ",
+        "meaning": "Fiş",
         "level": "B1"
     },
     {
@@ -12122,19 +12122,19 @@
     {
         "id": 2700,
         "word": "Poem",
-        "meaning": "Åiir",
+        "meaning": "Şiir",
         "level": "B1"
     },
     {
         "id": 2701,
         "word": "Poet",
-        "meaning": "Åair",
+        "meaning": "Şair",
         "level": "B1"
     },
     {
         "id": 2702,
         "word": "Poetry",
-        "meaning": "Åiir (Sanat)",
+        "meaning": "Şiir (Sanat)",
         "level": "B2"
     },
     {
@@ -12146,7 +12146,7 @@
     {
         "id": 2704,
         "word": "Pointless",
-        "meaning": "AnlamsÄ±z",
+        "meaning": "Anlamsız",
         "level": "C2"
     },
     {
@@ -12182,7 +12182,7 @@
     {
         "id": 2710,
         "word": "Policy",
-        "meaning": "Politika, Ä°lke",
+        "meaning": "Politika, İlke",
         "level": "B1"
     },
     {
@@ -12206,7 +12206,7 @@
     {
         "id": 2714,
         "word": "Politician",
-        "meaning": "PolitikacÄ±",
+        "meaning": "Politikacı",
         "level": "B1"
     },
     {
@@ -12242,19 +12242,19 @@
     {
         "id": 2720,
         "word": "Pop",
-        "meaning": "Pop (MÃ¼zik)",
+        "meaning": "Pop (Müzik)",
         "level": "A2"
     },
     {
         "id": 2721,
         "word": "Popular",
-        "meaning": "PopÃ¼ler",
+        "meaning": "Popüler",
         "level": "A2"
     },
     {
         "id": 2722,
         "word": "Population",
-        "meaning": "NÃ¼fus",
+        "meaning": "Nüfus",
         "level": "B1"
     },
     {
@@ -12302,19 +12302,19 @@
     {
         "id": 2730,
         "word": "Possession",
-        "meaning": "MÃ¼lk, Sahiplik",
+        "meaning": "Mülk, Sahiplik",
         "level": "B2"
     },
     {
         "id": 2731,
         "word": "Possibility",
-        "meaning": "OlasÄ±lÄ±k",
+        "meaning": "Olasılık",
         "level": "B1"
     },
     {
         "id": 2732,
         "word": "Possible",
-        "meaning": "MÃ¼mkÃ¼n",
+        "meaning": "Mümkün",
         "level": "A1"
     },
     {
@@ -12326,7 +12326,7 @@
     {
         "id": 2734,
         "word": "Post",
-        "meaning": "Posta, GÃ¶nderi",
+        "meaning": "Posta, Gönderi",
         "level": "A2"
     },
     {
@@ -12368,13 +12368,13 @@
     {
         "id": 2741,
         "word": "Pound",
-        "meaning": "Pound (Para/AÄŸÄ±rlÄ±k)",
+        "meaning": "Pound (Para/Ağırlık)",
         "level": "A2"
     },
     {
         "id": 2742,
         "word": "Pour",
-        "meaning": "DÃ¶kmek",
+        "meaning": "Dökmek",
         "level": "B1"
     },
     {
@@ -12392,13 +12392,13 @@
     {
         "id": 2745,
         "word": "Power",
-        "meaning": "GÃ¼Ã§",
+        "meaning": "Güç",
         "level": "A2"
     },
     {
         "id": 2746,
         "word": "Powerful",
-        "meaning": "GÃ¼Ã§lÃ¼",
+        "meaning": "Güçlü",
         "level": "B1"
     },
     {
@@ -12416,13 +12416,13 @@
     {
         "id": 2749,
         "word": "Practise",
-        "meaning": "AlÄ±ÅŸtÄ±rma yapmak",
+        "meaning": "Alıştırma yapmak",
         "level": "A1"
     },
     {
         "id": 2750,
         "word": "Praise",
-        "meaning": "Ã–vmek",
+        "meaning": "Övmek",
         "level": "C2"
     },
     {
@@ -12464,19 +12464,19 @@
     {
         "id": 2757,
         "word": "Preparation",
-        "meaning": "HazÄ±rlÄ±k",
+        "meaning": "Hazırlık",
         "level": "B1"
     },
     {
         "id": 2758,
         "word": "Prepare",
-        "meaning": "HazÄ±rlamak",
+        "meaning": "Hazırlamak",
         "level": "A2"
     },
     {
         "id": 2759,
         "word": "Presence",
-        "meaning": "VarlÄ±k",
+        "meaning": "Varlık",
         "level": "B2"
     },
     {
@@ -12500,19 +12500,19 @@
     {
         "id": 2763,
         "word": "President",
-        "meaning": "BaÅŸkan",
+        "meaning": "Başkan",
         "level": "A2"
     },
     {
         "id": 2764,
         "word": "Press",
-        "meaning": "BasÄ±n, Basmak",
+        "meaning": "Basın, Basmak",
         "level": "B1"
     },
     {
         "id": 2765,
         "word": "Pressure",
-        "meaning": "BasÄ±nÃ§",
+        "meaning": "Basınç",
         "level": "B1"
     },
     {
@@ -12524,31 +12524,31 @@
     {
         "id": 2767,
         "word": "Pretend",
-        "meaning": "Yapar gibi gÃ¶rÃ¼nmek",
+        "meaning": "Yapar gibi görünmek",
         "level": "B1"
     },
     {
         "id": 2768,
         "word": "Pretty",
-        "meaning": "GÃ¼zel, Epey",
+        "meaning": "Güzel, Epey",
         "level": "A2"
     },
     {
         "id": 2769,
         "word": "Prevent",
-        "meaning": "Ã–nlemek",
+        "meaning": "Önlemek",
         "level": "B1"
     },
     {
         "id": 2770,
         "word": "Previous",
-        "meaning": "Ã–nceki",
+        "meaning": "Önceki",
         "level": "B1"
     },
     {
         "id": 2771,
         "word": "Previously",
-        "meaning": "Ã–nceden",
+        "meaning": "Önceden",
         "level": "B1"
     },
     {
@@ -12572,13 +12572,13 @@
     {
         "id": 2775,
         "word": "Primary",
-        "meaning": "Birincil, Ä°lkokul",
+        "meaning": "Birincil, İlkokul",
         "level": "B2"
     },
     {
         "id": 2776,
         "word": "Prime",
-        "meaning": "BaÅŸlÄ±ca",
+        "meaning": "Başlıca",
         "level": "C2"
     },
     {
@@ -12596,7 +12596,7 @@
     {
         "id": 2779,
         "word": "Principal",
-        "meaning": "Okul mÃ¼dÃ¼rÃ¼, BaÅŸlÄ±ca",
+        "meaning": "Okul müdürü, Başlıca",
         "level": "B2"
     },
     {
@@ -12608,25 +12608,25 @@
     {
         "id": 2781,
         "word": "Print",
-        "meaning": "Basmak, YazdÄ±rmak",
+        "meaning": "Basmak, Yazdırmak",
         "level": "A1"
     },
     {
         "id": 2782,
         "word": "Printer",
-        "meaning": "YazÄ±cÄ±",
+        "meaning": "Yazıcı",
         "level": "A2"
     },
     {
         "id": 2783,
         "word": "Prior",
-        "meaning": "Ã–nceki",
+        "meaning": "Önceki",
         "level": "B1"
     },
     {
         "id": 2784,
         "word": "Priority",
-        "meaning": "Ã–ncelik",
+        "meaning": "Öncelik",
         "level": "B2"
     },
     {
@@ -12644,13 +12644,13 @@
     {
         "id": 2787,
         "word": "Private",
-        "meaning": "Ã–zel",
+        "meaning": "Özel",
         "level": "B1"
     },
     {
         "id": 2788,
         "word": "Prize",
-        "meaning": "Ã–dÃ¼l",
+        "meaning": "Ödül",
         "level": "A2"
     },
     {
@@ -12668,37 +12668,37 @@
     {
         "id": 2791,
         "word": "Procedure",
-        "meaning": "ProsedÃ¼r",
+        "meaning": "Prosedür",
         "level": "C1"
     },
     {
         "id": 2792,
         "word": "Process",
-        "meaning": "SÃ¼reÃ§",
+        "meaning": "Süreç",
         "level": "B1"
     },
     {
         "id": 2793,
         "word": "Produce",
-        "meaning": "Ãœretmek",
+        "meaning": "Üretmek",
         "level": "A2"
     },
     {
         "id": 2794,
         "word": "Producer",
-        "meaning": "YapÄ±mcÄ±",
+        "meaning": "Yapımcı",
         "level": "B1"
     },
     {
         "id": 2795,
         "word": "Product",
-        "meaning": "ÃœrÃ¼n",
+        "meaning": "Ürün",
         "level": "A2"
     },
     {
         "id": 2796,
         "word": "Production",
-        "meaning": "Ãœretim",
+        "meaning": "Üretim",
         "level": "B1"
     },
     {
@@ -12716,7 +12716,7 @@
     {
         "id": 2799,
         "word": "Professor",
-        "meaning": "ProfesÃ¶r",
+        "meaning": "Profesör",
         "level": "B1"
     },
     {
@@ -12728,7 +12728,7 @@
     {
         "id": 2801,
         "word": "Profit",
-        "meaning": "KÃ¢r",
+        "meaning": "Ké¢r",
         "level": "B1"
     },
     {
@@ -12740,13 +12740,13 @@
     {
         "id": 2803,
         "word": "Programme",
-        "meaning": "Program (Ä°ng)",
+        "meaning": "Program (İng)",
         "level": "A2"
     },
     {
         "id": 2804,
         "word": "Progress",
-        "meaning": "Ä°lerleme",
+        "meaning": "İlerleme",
         "level": "B1"
     },
     {
@@ -12758,7 +12758,7 @@
     {
         "id": 2806,
         "word": "Promise",
-        "meaning": "SÃ¶z vermek",
+        "meaning": "Söz vermek",
         "level": "A1"
     },
     {
@@ -12770,13 +12770,13 @@
     {
         "id": 2808,
         "word": "Promotion",
-        "meaning": "TanÄ±tÄ±m, Terfi",
+        "meaning": "Tanıtım, Terfi",
         "level": "B1"
     },
     {
         "id": 2809,
         "word": "Prompt",
-        "meaning": "Ã‡abuk, TeÅŸvik etmek",
+        "meaning": "Çabuk, Teşvik etmek",
         "level": "B2"
     },
     {
@@ -12788,7 +12788,7 @@
     {
         "id": 2811,
         "word": "Proof",
-        "meaning": "KanÄ±t",
+        "meaning": "Kanıt",
         "level": "B1"
     },
     {
@@ -12800,13 +12800,13 @@
     {
         "id": 2813,
         "word": "Properly",
-        "meaning": "DÃ¼zgÃ¼nce",
+        "meaning": "Düzgünce",
         "level": "B1"
     },
     {
         "id": 2814,
         "word": "Property",
-        "meaning": "MÃ¼lk, Ã–zellik",
+        "meaning": "Mülk, Özellik",
         "level": "B1"
     },
     {
@@ -12830,7 +12830,7 @@
     {
         "id": 2818,
         "word": "Prospect",
-        "meaning": "OlasÄ±lÄ±k, Beklenti",
+        "meaning": "Olasılık, Beklenti",
         "level": "B2"
     },
     {
@@ -12866,13 +12866,13 @@
     {
         "id": 2824,
         "word": "Prove",
-        "meaning": "KanÄ±tlamak",
+        "meaning": "Kanıtlamak",
         "level": "B1"
     },
     {
         "id": 2825,
         "word": "Provide",
-        "meaning": "SaÄŸlamak",
+        "meaning": "Sağlamak",
         "level": "A2"
     },
     {
@@ -12896,31 +12896,31 @@
     {
         "id": 2829,
         "word": "Publication",
-        "meaning": "YayÄ±n",
+        "meaning": "Yayın",
         "level": "B2"
     },
     {
         "id": 2830,
         "word": "Publicly",
-        "meaning": "Halka aÃ§Ä±kÃ§a",
+        "meaning": "Halka açıkça",
         "level": "B2"
     },
     {
         "id": 2831,
         "word": "Publish",
-        "meaning": "YayÄ±nlamak",
+        "meaning": "Yayınlamak",
         "level": "B1"
     },
     {
         "id": 2832,
         "word": "Publisher",
-        "meaning": "YayÄ±ncÄ±",
+        "meaning": "Yayıncı",
         "level": "C2"
     },
     {
         "id": 2833,
         "word": "Pull",
-        "meaning": "Ã‡ekmek",
+        "meaning": "Çekmek",
         "level": "A2"
     },
     {
@@ -12938,7 +12938,7 @@
     {
         "id": 2836,
         "word": "Punish",
-        "meaning": "CezalandÄ±rmak",
+        "meaning": "Cezalandırmak",
         "level": "B1"
     },
     {
@@ -12950,13 +12950,13 @@
     {
         "id": 2838,
         "word": "Pupil",
-        "meaning": "Ã–ÄŸrenci, GÃ¶zbebeÄŸi",
+        "meaning": "Öğrenci, Gözbebeği",
         "level": "B1"
     },
     {
         "id": 2839,
         "word": "Purchase",
-        "meaning": "SatÄ±n almak",
+        "meaning": "Satın almak",
         "level": "B1"
     },
     {
@@ -12968,7 +12968,7 @@
     {
         "id": 2841,
         "word": "Purely",
-        "meaning": "SÄ±rf, Tamamen",
+        "meaning": "Sırf, Tamamen",
         "level": "B2"
     },
     {
@@ -12980,19 +12980,19 @@
     {
         "id": 2843,
         "word": "Purpose",
-        "meaning": "AmaÃ§",
+        "meaning": "Amaç",
         "level": "A2"
     },
     {
         "id": 2844,
         "word": "Pursue",
-        "meaning": "PeÅŸinden koÅŸmak",
+        "meaning": "Peşinden koşmak",
         "level": "B2"
     },
     {
         "id": 2845,
         "word": "Push",
-        "meaning": "Ä°tmek",
+        "meaning": "İtmek",
         "level": "A2"
     },
     {
@@ -13028,13 +13028,13 @@
     {
         "id": 2851,
         "word": "Quarter",
-        "meaning": "Ã‡eyrek",
+        "meaning": "Çeyrek",
         "level": "A2"
     },
     {
         "id": 2852,
         "word": "Queen",
-        "meaning": "KraliÃ§e",
+        "meaning": "Kraliçe",
         "level": "A1"
     },
     {
@@ -13046,13 +13046,13 @@
     {
         "id": 2854,
         "word": "Quick",
-        "meaning": "HÄ±zlÄ±",
+        "meaning": "Hızlı",
         "level": "A2"
     },
     {
         "id": 2855,
         "word": "Quickly",
-        "meaning": "HÄ±zlÄ±ca",
+        "meaning": "Hızlıca",
         "level": "A2"
     },
     {
@@ -13070,31 +13070,31 @@
     {
         "id": 2858,
         "word": "Quit",
-        "meaning": "VazgeÃ§mek, Ã‡Ä±kmak",
+        "meaning": "Vazgeçmek, Çıkmak",
         "level": "B1"
     },
     {
         "id": 2859,
         "word": "Quite",
-        "meaning": "Epey, OldukÃ§a",
+        "meaning": "Epey, Oldukça",
         "level": "A2"
     },
     {
         "id": 2860,
         "word": "Quote",
-        "meaning": "AlÄ±ntÄ±",
+        "meaning": "Alıntı",
         "level": "B2"
     },
     {
         "id": 2861,
         "word": "Race",
-        "meaning": "YarÄ±ÅŸ, Irk",
+        "meaning": "Yarış, Irk",
         "level": "A2"
     },
     {
         "id": 2862,
         "word": "Racing",
-        "meaning": "YarÄ±ÅŸ",
+        "meaning": "Yarış",
         "level": "A2"
     },
     {
@@ -13124,37 +13124,37 @@
     {
         "id": 2867,
         "word": "Rain",
-        "meaning": "YaÄŸmur",
+        "meaning": "Yağmur",
         "level": "A2"
     },
     {
         "id": 2868,
         "word": "Raise",
-        "meaning": "KaldÄ±rmak, ArtÄ±rmak",
+        "meaning": "Kaldırmak, Artırmak",
         "level": "A1"
     },
     {
         "id": 2869,
         "word": "Range",
-        "meaning": "Menzil, Ã‡eÅŸit",
+        "meaning": "Menzil, Çeşit",
         "level": "B1"
     },
     {
         "id": 2870,
         "word": "Rank",
-        "meaning": "RÃ¼tbe, SÄ±ra",
+        "meaning": "Rütbe, Sıra",
         "level": "B2"
     },
     {
         "id": 2871,
         "word": "Rapid",
-        "meaning": "HÄ±zlÄ±",
+        "meaning": "Hızlı",
         "level": "B2"
     },
     {
         "id": 2872,
         "word": "Rapidly",
-        "meaning": "HÄ±zla",
+        "meaning": "Hızla",
         "level": "B2"
     },
     {
@@ -13178,19 +13178,19 @@
     {
         "id": 2876,
         "word": "Rather",
-        "meaning": "OldukÃ§a, Tercihen",
+        "meaning": "Oldukça, Tercihen",
         "level": "A2"
     },
     {
         "id": 2877,
         "word": "Raw",
-        "meaning": "Ã‡iÄŸ",
+        "meaning": "Çiğ",
         "level": "B2"
     },
     {
         "id": 2878,
         "word": "Reach",
-        "meaning": "UlaÅŸmak",
+        "meaning": "Ulaşmak",
         "level": "A2"
     },
     {
@@ -13226,25 +13226,25 @@
     {
         "id": 2884,
         "word": "Ready",
-        "meaning": "HazÄ±r",
+        "meaning": "Hazır",
         "level": "A2"
     },
     {
         "id": 2885,
         "word": "Real",
-        "meaning": "GerÃ§ek",
+        "meaning": "Gerçek",
         "level": "A2"
     },
     {
         "id": 2886,
         "word": "Realistic",
-        "meaning": "GerÃ§ekÃ§i",
+        "meaning": "Gerçekçi",
         "level": "B2"
     },
     {
         "id": 2887,
         "word": "Reality",
-        "meaning": "GerÃ§eklik",
+        "meaning": "Gerçeklik",
         "level": "B1"
     },
     {
@@ -13256,7 +13256,7 @@
     {
         "id": 2889,
         "word": "Really",
-        "meaning": "GerÃ§ekten",
+        "meaning": "Gerçekten",
         "level": "A1"
     },
     {
@@ -13280,13 +13280,13 @@
     {
         "id": 2893,
         "word": "Recall",
-        "meaning": "HatÄ±rlamak",
+        "meaning": "Hatırlamak",
         "level": "B2"
     },
     {
         "id": 2894,
         "word": "Receipt",
-        "meaning": "FiÅŸ, Makbuz",
+        "meaning": "Fiş, Makbuz",
         "level": "B1"
     },
     {
@@ -13322,55 +13322,55 @@
     {
         "id": 2900,
         "word": "Recognise",
-        "meaning": "TanÄ±mak",
+        "meaning": "Tanımak",
         "level": "A2"
     },
     {
         "id": 2901,
         "word": "Recognition",
-        "meaning": "TanÄ±nma",
+        "meaning": "Tanınma",
         "level": "C1"
     },
     {
         "id": 2902,
         "word": "Recommend",
-        "meaning": "Ã–nermek",
+        "meaning": "Önermek",
         "level": "A2"
     },
     {
         "id": 2903,
         "word": "Recommendation",
-        "meaning": "Ã–neri",
+        "meaning": "Öneri",
         "level": "B2"
     },
     {
         "id": 2904,
         "word": "Record",
-        "meaning": "KayÄ±t",
+        "meaning": "Kayıt",
         "level": "A2"
     },
     {
         "id": 2905,
         "word": "Recording",
-        "meaning": "KayÄ±t etme",
+        "meaning": "Kayıt etme",
         "level": "A1"
     },
     {
         "id": 2906,
         "word": "Recover",
-        "meaning": "Ä°yileÅŸmek",
+        "meaning": "İyileşmek",
         "level": "B1"
     },
     {
         "id": 2907,
         "word": "Recovery",
-        "meaning": "Ä°yileÅŸme",
+        "meaning": "İyileşme",
         "level": "B2"
     },
     {
         "id": 2908,
         "word": "Red",
-        "meaning": "KÄ±rmÄ±zÄ±",
+        "meaning": "Kırmızı",
         "level": "A2"
     },
     {
@@ -13388,7 +13388,7 @@
     {
         "id": 2911,
         "word": "Refer",
-        "meaning": "AtÄ±fta bulunmak",
+        "meaning": "Atıfta bulunmak",
         "level": "B1"
     },
     {
@@ -13400,13 +13400,13 @@
     {
         "id": 2913,
         "word": "Reflect",
-        "meaning": "YansÄ±tmak",
+        "meaning": "Yansıtmak",
         "level": "B2"
     },
     {
         "id": 2914,
         "word": "Reflection",
-        "meaning": "YansÄ±ma",
+        "meaning": "Yansıma",
         "level": "C2"
     },
     {
@@ -13418,7 +13418,7 @@
     {
         "id": 2916,
         "word": "Refrigerator",
-        "meaning": "BuzdolabÄ±",
+        "meaning": "Buzdolabı",
         "level": "A1"
     },
     {
@@ -13430,55 +13430,55 @@
     {
         "id": 2918,
         "word": "Regard",
-        "meaning": "SaygÄ±, BakÄ±m",
+        "meaning": "Saygı, Bakım",
         "level": "B1"
     },
     {
         "id": 2919,
         "word": "Region",
-        "meaning": "BÃ¶lge",
+        "meaning": "Bölge",
         "level": "A2"
     },
     {
         "id": 2920,
         "word": "Regional",
-        "meaning": "BÃ¶lgesel",
+        "meaning": "Bölgesel",
         "level": "B1"
     },
     {
         "id": 2921,
         "word": "Register",
-        "meaning": "KayÄ±t olmak",
+        "meaning": "Kayıt olmak",
         "level": "B1"
     },
     {
         "id": 2922,
         "word": "Registration",
-        "meaning": "KayÄ±t",
+        "meaning": "Kayıt",
         "level": "B2"
     },
     {
         "id": 2923,
         "word": "Regret",
-        "meaning": "PiÅŸmanlÄ±k",
+        "meaning": "Pişmanlık",
         "level": "B1"
     },
     {
         "id": 2924,
         "word": "Regular",
-        "meaning": "DÃ¼zenli",
+        "meaning": "Düzenli",
         "level": "A2"
     },
     {
         "id": 2925,
         "word": "Regularly",
-        "meaning": "DÃ¼zenli olarak",
+        "meaning": "Düzenli olarak",
         "level": "B1"
     },
     {
         "id": 2926,
         "word": "Regulation",
-        "meaning": "YÃ¶netmelik",
+        "meaning": "Yönetmelik",
         "level": "B2"
     },
     {
@@ -13490,31 +13490,31 @@
     {
         "id": 2928,
         "word": "Relate",
-        "meaning": "Ä°liÅŸkilendirmek",
+        "meaning": "İlişkilendirmek",
         "level": "B1"
     },
     {
         "id": 2929,
         "word": "Related",
-        "meaning": "Ä°liÅŸkili",
+        "meaning": "İlişkili",
         "level": "B1"
     },
     {
         "id": 2930,
         "word": "Relation",
-        "meaning": "Ä°liÅŸki",
+        "meaning": "İlişki",
         "level": "B1"
     },
     {
         "id": 2931,
         "word": "Relationship",
-        "meaning": "Ä°liÅŸki",
+        "meaning": "İlişki",
         "level": "B1"
     },
     {
         "id": 2932,
         "word": "Relative",
-        "meaning": "Akraba, GÃ¶rece",
+        "meaning": "Akraba, Görece",
         "level": "B1"
     },
     {
@@ -13532,37 +13532,37 @@
     {
         "id": 2935,
         "word": "Relaxation",
-        "meaning": "GevÅŸeme",
+        "meaning": "Gevşeme",
         "level": "C2"
     },
     {
         "id": 2936,
         "word": "Relaxed",
-        "meaning": "RahatlamÄ±ÅŸ",
+        "meaning": "Rahatlamış",
         "level": "B1"
     },
     {
         "id": 2937,
         "word": "Relaxing",
-        "meaning": "RahatlatÄ±cÄ±",
+        "meaning": "Rahatlatıcı",
         "level": "B1"
     },
     {
         "id": 2938,
         "word": "Release",
-        "meaning": "Serbest bÄ±rakmak",
+        "meaning": "Serbest bırakmak",
         "level": "B1"
     },
     {
         "id": 2939,
         "word": "Relevant",
-        "meaning": "AlakalÄ±",
+        "meaning": "Alakalı",
         "level": "B2"
     },
     {
         "id": 2940,
         "word": "Reliable",
-        "meaning": "GÃ¼venilir",
+        "meaning": "Güvenilir",
         "level": "B1"
     },
     {
@@ -13586,7 +13586,7 @@
     {
         "id": 2944,
         "word": "Rely",
-        "meaning": "GÃ¼venmek",
+        "meaning": "Güvenmek",
         "level": "B2"
     },
     {
@@ -13610,25 +13610,25 @@
     {
         "id": 2948,
         "word": "Remark",
-        "meaning": "GÃ¶rÃ¼ÅŸ, Beyan",
+        "meaning": "Görüş, Beyan",
         "level": "B2"
     },
     {
         "id": 2949,
         "word": "Remarkable",
-        "meaning": "Dikkat Ã§ekici",
+        "meaning": "Dikkat çekici",
         "level": "B2"
     },
     {
         "id": 2950,
         "word": "Remember",
-        "meaning": "HatÄ±rlamak",
+        "meaning": "Hatırlamak",
         "level": "A1"
     },
     {
         "id": 2951,
         "word": "Remind",
-        "meaning": "HatÄ±rlatmak",
+        "meaning": "Hatırlatmak",
         "level": "B1"
     },
     {
@@ -13640,13 +13640,13 @@
     {
         "id": 2953,
         "word": "Removal",
-        "meaning": "KaldÄ±rma",
+        "meaning": "Kaldırma",
         "level": "C2"
     },
     {
         "id": 2954,
         "word": "Remove",
-        "meaning": "KaldÄ±rmak, Ã‡Ä±karmak",
+        "meaning": "Kaldırmak, Çıkarmak",
         "level": "B1"
     },
     {
@@ -13724,7 +13724,7 @@
     {
         "id": 2967,
         "word": "Reputation",
-        "meaning": "Ä°tibar",
+        "meaning": "İtibar",
         "level": "B2"
     },
     {
@@ -13748,13 +13748,13 @@
     {
         "id": 2971,
         "word": "Research",
-        "meaning": "AraÅŸtÄ±rma",
+        "meaning": "Araştırma",
         "level": "A2"
     },
     {
         "id": 2972,
         "word": "Researcher",
-        "meaning": "AraÅŸtÄ±rmacÄ±",
+        "meaning": "Araştırmacı",
         "level": "B1"
     },
     {
@@ -13766,7 +13766,7 @@
     {
         "id": 2974,
         "word": "Reserve",
-        "meaning": "AyÄ±rmak, Rezerv",
+        "meaning": "Ayırmak, Rezerv",
         "level": "B1"
     },
     {
@@ -13778,25 +13778,25 @@
     {
         "id": 2976,
         "word": "Resist",
-        "meaning": "DirenÃ§ gÃ¶stermek",
+        "meaning": "Direnç göstermek",
         "level": "B2"
     },
     {
         "id": 2977,
         "word": "Resistance",
-        "meaning": "DirenÃ§",
+        "meaning": "Direnç",
         "level": "B2"
     },
     {
         "id": 2978,
         "word": "Resolution",
-        "meaning": "Karar, Ã‡Ã¶zÃ¼nÃ¼rlÃ¼k",
+        "meaning": "Karar, Çözünürlük",
         "level": "C1"
     },
     {
         "id": 2979,
         "word": "Resolve",
-        "meaning": "Ã‡Ã¶zmek",
+        "meaning": "Çözmek",
         "level": "B2"
     },
     {
@@ -13814,13 +13814,13 @@
     {
         "id": 2982,
         "word": "Respect",
-        "meaning": "SaygÄ±",
+        "meaning": "Saygı",
         "level": "B1"
     },
     {
         "id": 2983,
         "word": "Respond",
-        "meaning": "YanÄ±tlamak",
+        "meaning": "Yanıtlamak",
         "level": "B1"
     },
     {
@@ -13862,19 +13862,19 @@
     {
         "id": 2990,
         "word": "Restrict",
-        "meaning": "KÄ±sÄ±tlamak",
+        "meaning": "Kısıtlamak",
         "level": "C2"
     },
     {
         "id": 2991,
         "word": "Restriction",
-        "meaning": "KÄ±sÄ±tlama",
+        "meaning": "Kısıtlama",
         "level": "B2"
     },
     {
         "id": 2992,
         "word": "Result",
-        "meaning": "SonuÃ§",
+        "meaning": "Sonuç",
         "level": "A2"
     },
     {
@@ -13898,13 +13898,13 @@
     {
         "id": 2996,
         "word": "Return",
-        "meaning": "Geri dÃ¶nmek",
+        "meaning": "Geri dönmek",
         "level": "A1"
     },
     {
         "id": 2997,
         "word": "Reveal",
-        "meaning": "AÃ§Ä±ÄŸa Ã§Ä±karmak",
+        "meaning": "Açığa çıkarmak",
         "level": "C1"
     },
     {
@@ -13916,7 +13916,7 @@
     {
         "id": 2999,
         "word": "Review",
-        "meaning": "GÃ¶zden geÃ§irmey, Ä°nceleme",
+        "meaning": "Gözden geçirmey, İnceleme",
         "level": "A2"
     },
     {
@@ -13934,7 +13934,7 @@
     {
         "id": 3002,
         "word": "Reward",
-        "meaning": "Ã–dÃ¼l",
+        "meaning": "Ödül",
         "level": "B1"
     },
     {
@@ -13946,7 +13946,7 @@
     {
         "id": 3004,
         "word": "Rice",
-        "meaning": "PirinÃ§",
+        "meaning": "Pirinç",
         "level": "A1"
     },
     {
@@ -13970,31 +13970,31 @@
     {
         "id": 3008,
         "word": "Rider",
-        "meaning": "SÃ¼rÃ¼cÃ¼",
+        "meaning": "Sürücü",
         "level": "B1"
     },
     {
         "id": 3009,
         "word": "Ridiculous",
-        "meaning": "GÃ¼lÃ¼nÃ§",
+        "meaning": "Gülünç",
         "level": "C2"
     },
     {
         "id": 3010,
         "word": "Right",
-        "meaning": "DoÄŸru, SaÄŸ",
+        "meaning": "Doğru, Sağ",
         "level": "A2"
     },
     {
         "id": 3011,
         "word": "Ring",
-        "meaning": "YÃ¼zÃ¼k, Ã‡almak",
+        "meaning": "Yüzük, Çalmak",
         "level": "A2"
     },
     {
         "id": 3012,
         "word": "Rise",
-        "meaning": "YÃ¼kselmek",
+        "meaning": "Yükselmek",
         "level": "A1"
     },
     {
@@ -14030,7 +14030,7 @@
     {
         "id": 3018,
         "word": "Rock",
-        "meaning": "Kaya, Rock (MÃ¼zik)",
+        "meaning": "Kaya, Rock (Müzik)",
         "level": "A2"
     },
     {
@@ -14054,7 +14054,7 @@
     {
         "id": 3022,
         "word": "Roof",
-        "meaning": "Ã‡atÄ±",
+        "meaning": "Çatı",
         "level": "A1"
     },
     {
@@ -14066,13 +14066,13 @@
     {
         "id": 3024,
         "word": "Root",
-        "meaning": "KÃ¶k",
+        "meaning": "Kök",
         "level": "B2"
     },
     {
         "id": 3025,
         "word": "Rope",
-        "meaning": "Ä°p",
+        "meaning": "İp",
         "level": "B1"
     },
     {
@@ -14108,7 +14108,7 @@
     {
         "id": 3031,
         "word": "Row",
-        "meaning": "SÄ±ra, KÃ¼rek Ã§ekmek",
+        "meaning": "Sıra, Kürek çekmek",
         "level": "B1"
     },
     {
@@ -14120,7 +14120,7 @@
     {
         "id": 3033,
         "word": "Rub",
-        "meaning": "OÄŸalamak",
+        "meaning": "Oğalamak",
         "level": "B2"
     },
     {
@@ -14132,7 +14132,7 @@
     {
         "id": 3035,
         "word": "Rubbish",
-        "meaning": "Ã‡Ã¶p",
+        "meaning": "Çöp",
         "level": "A2"
     },
     {
@@ -14156,31 +14156,31 @@
     {
         "id": 3039,
         "word": "Ruler",
-        "meaning": "Cetvel, HÃ¼kÃ¼mdar",
+        "meaning": "Cetvel, Hükümdar",
         "level": "A1"
     },
     {
         "id": 3040,
         "word": "Run",
-        "meaning": "KoÅŸmak",
+        "meaning": "Koşmak",
         "level": "A2"
     },
     {
         "id": 3041,
         "word": "Runner",
-        "meaning": "KoÅŸucu",
+        "meaning": "Koşucu",
         "level": "A2"
     },
     {
         "id": 3042,
         "word": "Running",
-        "meaning": "KoÅŸu",
+        "meaning": "Koşu",
         "level": "A2"
     },
     {
         "id": 3043,
         "word": "Rural",
-        "meaning": "KÄ±rsal",
+        "meaning": "Kırsal",
         "level": "B2"
     },
     {
@@ -14198,7 +14198,7 @@
     {
         "id": 3046,
         "word": "Sad",
-        "meaning": "ÃœzgÃ¼n",
+        "meaning": "Üzgün",
         "level": "A2"
     },
     {
@@ -14210,19 +14210,19 @@
     {
         "id": 3048,
         "word": "Safe",
-        "meaning": "GÃ¼venli",
+        "meaning": "Güvenli",
         "level": "A2"
     },
     {
         "id": 3049,
         "word": "Safety",
-        "meaning": "GÃ¼venlik",
+        "meaning": "Güvenlik",
         "level": "B1"
     },
     {
         "id": 3050,
         "word": "Sail",
-        "meaning": "Yelken aÃ§mak",
+        "meaning": "Yelken açmak",
         "level": "A2"
     },
     {
@@ -14246,13 +14246,13 @@
     {
         "id": 3054,
         "word": "Salary",
-        "meaning": "MaaÅŸ",
+        "meaning": "Maaş",
         "level": "B1"
     },
     {
         "id": 3055,
         "word": "Sale",
-        "meaning": "SatÄ±ÅŸ",
+        "meaning": "Satış",
         "level": "A1"
     },
     {
@@ -14264,13 +14264,13 @@
     {
         "id": 3057,
         "word": "Same",
-        "meaning": "AynÄ±",
+        "meaning": "Aynı",
         "level": "A2"
     },
     {
         "id": 3058,
         "word": "Sample",
-        "meaning": "Ã–rnek",
+        "meaning": "Örnek",
         "level": "B1"
     },
     {
@@ -14282,7 +14282,7 @@
     {
         "id": 3060,
         "word": "Sandwich",
-        "meaning": "SandviÃ§",
+        "meaning": "Sandviç",
         "level": "A1"
     },
     {
@@ -14342,19 +14342,19 @@
     {
         "id": 3070,
         "word": "Say",
-        "meaning": "SÃ¶ylemek",
+        "meaning": "Söylemek",
         "level": "A1"
     },
     {
         "id": 3071,
         "word": "Scale",
-        "meaning": "Ã–lÃ§ek",
+        "meaning": "Ölçek",
         "level": "B1"
     },
     {
         "id": 3072,
         "word": "Scared",
-        "meaning": "KorkmuÅŸ",
+        "meaning": "Korkmuş",
         "level": "A2"
     },
     {
@@ -14378,7 +14378,7 @@
     {
         "id": 3076,
         "word": "Scheme",
-        "meaning": "Plan, TasarÄ±",
+        "meaning": "Plan, Tasarı",
         "level": "B2"
     },
     {
@@ -14402,7 +14402,7 @@
     {
         "id": 3080,
         "word": "Scientist",
-        "meaning": "Bilim insanÄ±",
+        "meaning": "Bilim insanı",
         "level": "A2"
     },
     {
@@ -14420,7 +14420,7 @@
     {
         "id": 3083,
         "word": "Scream",
-        "meaning": "Ã‡Ä±ÄŸlÄ±k atmak",
+        "meaning": "Çığlık atmak",
         "level": "B1"
     },
     {
@@ -14444,7 +14444,7 @@
     {
         "id": 3087,
         "word": "Seal",
-        "meaning": "MÃ¼hÃ¼rlemek, Fok",
+        "meaning": "Mühürlemek, Fok",
         "level": "B2"
     },
     {
@@ -14468,19 +14468,19 @@
     {
         "id": 3091,
         "word": "Second",
-        "meaning": "Ä°kinci",
+        "meaning": "İkinci",
         "level": "A2"
     },
     {
         "id": 3092,
         "word": "Secondary",
-        "meaning": "Ä°kincil, Ortaokul",
+        "meaning": "İkincil, Ortaokul",
         "level": "B1"
     },
     {
         "id": 3093,
         "word": "Secret",
-        "meaning": "SÄ±r",
+        "meaning": "Sır",
         "level": "A1"
     },
     {
@@ -14492,31 +14492,31 @@
     {
         "id": 3095,
         "word": "Section",
-        "meaning": "BÃ¶lÃ¼m",
+        "meaning": "Bölüm",
         "level": "A2"
     },
     {
         "id": 3096,
         "word": "Sector",
-        "meaning": "SektÃ¶r",
+        "meaning": "Sektör",
         "level": "B1"
     },
     {
         "id": 3097,
         "word": "Secure",
-        "meaning": "GÃ¼venli",
+        "meaning": "Güvenli",
         "level": "B2"
     },
     {
         "id": 3098,
         "word": "Security",
-        "meaning": "GÃ¼venlik",
+        "meaning": "Güvenlik",
         "level": "B1"
     },
     {
         "id": 3099,
         "word": "See",
-        "meaning": "GÃ¶rmek",
+        "meaning": "Görmek",
         "level": "A2"
     },
     {
@@ -14534,25 +14534,25 @@
     {
         "id": 3102,
         "word": "Seem",
-        "meaning": "GÃ¶rÃ¼nmek",
+        "meaning": "Görünmek",
         "level": "A1"
     },
     {
         "id": 3103,
         "word": "Segment",
-        "meaning": "Segment, ParÃ§a",
+        "meaning": "Segment, Parça",
         "level": "B2"
     },
     {
         "id": 3104,
         "word": "Select",
-        "meaning": "SeÃ§mek",
+        "meaning": "Seçmek",
         "level": "A1"
     },
     {
         "id": 3105,
         "word": "Selection",
-        "meaning": "SeÃ§im",
+        "meaning": "Seçim",
         "level": "B1"
     },
     {
@@ -14570,13 +14570,13 @@
     {
         "id": 3108,
         "word": "Seller",
-        "meaning": "SatÄ±cÄ±",
+        "meaning": "Satıcı",
         "level": "A2"
     },
     {
         "id": 3109,
         "word": "Semi",
-        "meaning": "YarÄ±",
+        "meaning": "Yarı",
         "level": "B1"
     },
     {
@@ -14588,31 +14588,31 @@
     {
         "id": 3111,
         "word": "Senator",
-        "meaning": "SenatÃ¶r",
+        "meaning": "Senatör",
         "level": "B2"
     },
     {
         "id": 3112,
         "word": "Send",
-        "meaning": "GÃ¶ndermek",
+        "meaning": "Göndermek",
         "level": "A2"
     },
     {
         "id": 3113,
         "word": "Senior",
-        "meaning": "KÄ±demli",
+        "meaning": "Kıdemli",
         "level": "B2"
     },
     {
         "id": 3114,
         "word": "Sense",
-        "meaning": "Duyu, MantÄ±k",
+        "meaning": "Duyu, Mantık",
         "level": "B1"
     },
     {
         "id": 3115,
         "word": "Sensible",
-        "meaning": "MantÄ±klÄ±",
+        "meaning": "Mantıklı",
         "level": "B1"
     },
     {
@@ -14624,37 +14624,37 @@
     {
         "id": 3117,
         "word": "Sentence",
-        "meaning": "CÃ¼mle",
+        "meaning": "Cümle",
         "level": "A2"
     },
     {
         "id": 3118,
         "word": "Separate",
-        "meaning": "AyÄ±rmak",
+        "meaning": "Ayırmak",
         "level": "B1"
     },
     {
         "id": 3119,
         "word": "Separately",
-        "meaning": "AyrÄ± ayrÄ±",
+        "meaning": "Ayrı ayrı",
         "level": "B1"
     },
     {
         "id": 3120,
         "word": "Separation",
-        "meaning": "AyrÄ±lÄ±k",
+        "meaning": "Ayrılık",
         "level": "B2"
     },
     {
         "id": 3121,
         "word": "September",
-        "meaning": "EylÃ¼l",
+        "meaning": "Eylül",
         "level": "A1"
     },
     {
         "id": 3122,
         "word": "Sequence",
-        "meaning": "Dizi, SÄ±ra",
+        "meaning": "Dizi, Sıra",
         "level": "C1"
     },
     {
@@ -14678,7 +14678,7 @@
     {
         "id": 3126,
         "word": "Servant",
-        "meaning": "HizmetÃ§i",
+        "meaning": "Hizmetçi",
         "level": "B1"
     },
     {
@@ -14714,13 +14714,13 @@
     {
         "id": 3132,
         "word": "Settle",
-        "meaning": "YerleÅŸmek, Ã‡Ã¶zmek",
+        "meaning": "Yerleşmek, Çözmek",
         "level": "C1"
     },
     {
         "id": 3133,
         "word": "Settlement",
-        "meaning": "YerleÅŸim",
+        "meaning": "Yerleşim",
         "level": "C2"
     },
     {
@@ -14738,19 +14738,19 @@
     {
         "id": 3136,
         "word": "Seventy",
-        "meaning": "YetmiÅŸ",
+        "meaning": "Yetmiş",
         "level": "A2"
     },
     {
         "id": 3137,
         "word": "Several",
-        "meaning": "BirkaÃ§",
+        "meaning": "Birkaç",
         "level": "A2"
     },
     {
         "id": 3138,
         "word": "Severe",
-        "meaning": "AÄŸÄ±r, Åiddetli",
+        "meaning": "Ağır, Şiddetli",
         "level": "B2"
     },
     {
@@ -14774,13 +14774,13 @@
     {
         "id": 3142,
         "word": "Shade",
-        "meaning": "GÃ¶lge",
+        "meaning": "Gölge",
         "level": "B1"
     },
     {
         "id": 3143,
         "word": "Shadow",
-        "meaning": "GÃ¶lge",
+        "meaning": "Gölge",
         "level": "B1"
     },
     {
@@ -14798,25 +14798,25 @@
     {
         "id": 3146,
         "word": "Shallow",
-        "meaning": "SÄ±ÄŸ",
+        "meaning": "Sığ",
         "level": "B2"
     },
     {
         "id": 3147,
         "word": "Shame",
-        "meaning": "UtanÃ§",
+        "meaning": "Utanç",
         "level": "B1"
     },
     {
         "id": 3148,
         "word": "Shape",
-        "meaning": "Åekil",
+        "meaning": "Şekil",
         "level": "A2"
     },
     {
         "id": 3149,
         "word": "Share",
-        "meaning": "PaylaÅŸmak",
+        "meaning": "Paylaşmak",
         "level": "A2"
     },
     {
@@ -14828,7 +14828,7 @@
     {
         "id": 3151,
         "word": "She",
-        "meaning": "O (KadÄ±n)",
+        "meaning": "O (Kadın)",
         "level": "A2"
     },
     {
@@ -14840,7 +14840,7 @@
     {
         "id": 3153,
         "word": "Sheet",
-        "meaning": "Ã‡arÅŸaf, KaÄŸÄ±t",
+        "meaning": "Çarşaf, Kağıt",
         "level": "B1"
     },
     {
@@ -14858,13 +14858,13 @@
     {
         "id": 3156,
         "word": "Shelter",
-        "meaning": "BarÄ±nak",
+        "meaning": "Barınak",
         "level": "B2"
     },
     {
         "id": 3157,
         "word": "Shift",
-        "meaning": "Vardiya, KaydÄ±rmak",
+        "meaning": "Vardiya, Kaydırmak",
         "level": "B1"
     },
     {
@@ -14888,85 +14888,85 @@
     {
         "id": 3161,
         "word": "Shirt",
-        "meaning": "GÃ¶mlek",
+        "meaning": "Gömlek",
         "level": "A2"
     },
     {
         "id": 3162,
         "word": "Shock",
-        "meaning": "Åok",
+        "meaning": "Şok",
         "level": "B1"
     },
     {
         "id": 3163,
         "word": "Shocked",
-        "meaning": "Åok olmuÅŸ",
+        "meaning": "Şok olmuş",
         "level": "B1"
     },
     {
         "id": 3164,
         "word": "Shocking",
-        "meaning": "Åok edici",
+        "meaning": "Şok edici",
         "level": "B1"
     },
     {
         "id": 3165,
         "word": "Shoe",
-        "meaning": "AyakkabÄ±",
+        "meaning": "Ayakkabı",
         "level": "A2"
     },
     {
         "id": 3166,
         "word": "Shoot",
-        "meaning": "AteÅŸ etmek",
+        "meaning": "Ateş etmek",
         "level": "B1"
     },
     {
         "id": 3167,
         "word": "Shooting",
-        "meaning": "AtÄ±ÅŸ",
+        "meaning": "Atış",
         "level": "B2"
     },
     {
         "id": 3168,
         "word": "Shop",
-        "meaning": "MaÄŸaza",
+        "meaning": "Mağaza",
         "level": "A1"
     },
     {
         "id": 3169,
         "word": "Shopping",
-        "meaning": "AlÄ±ÅŸveriÅŸ",
+        "meaning": "Alışveriş",
         "level": "A2"
     },
     {
         "id": 3170,
         "word": "Shore",
-        "meaning": "KÄ±yÄ±",
+        "meaning": "Kıyı",
         "level": "B1"
     },
     {
         "id": 3171,
         "word": "Short",
-        "meaning": "KÄ±sa",
+        "meaning": "Kısa",
         "level": "A2"
     },
     {
         "id": 3172,
         "word": "Shortly",
-        "meaning": "KÄ±sa sÃ¼re sonra",
+        "meaning": "Kısa süre sonra",
         "level": "B1"
     },
     {
         "id": 3173,
         "word": "Shot",
-        "meaning": "AtÄ±ÅŸ, Åut",
+        "meaning": "Atış, Şut",
         "level": "B1"
     },
     {
         "id": 3174,
         "word": "Should",
-        "meaning": "-meli, -malÄ±",
+        "meaning": "-meli, -malı",
         "level": "A2"
     },
     {
@@ -14978,19 +14978,19 @@
     {
         "id": 3176,
         "word": "Shout",
-        "meaning": "BaÄŸÄ±rmak",
+        "meaning": "Bağırmak",
         "level": "A1"
     },
     {
         "id": 3177,
         "word": "Show",
-        "meaning": "GÃ¶stermek",
+        "meaning": "Göstermek",
         "level": "A2"
     },
     {
         "id": 3178,
         "word": "Shower",
-        "meaning": "DuÅŸ",
+        "meaning": "Duş",
         "level": "A1"
     },
     {
@@ -15002,7 +15002,7 @@
     {
         "id": 3180,
         "word": "Shy",
-        "meaning": "UtangaÃ§",
+        "meaning": "Utangaç",
         "level": "B1"
     },
     {
@@ -15020,13 +15020,13 @@
     {
         "id": 3183,
         "word": "Sight",
-        "meaning": "GÃ¶rÃ¼ÅŸ",
+        "meaning": "Görüş",
         "level": "B1"
     },
     {
         "id": 3184,
         "word": "Sign",
-        "meaning": "Ä°mza, Tabela",
+        "meaning": "İmza, Tabela",
         "level": "A2"
     },
     {
@@ -15038,25 +15038,25 @@
     {
         "id": 3186,
         "word": "Signature",
-        "meaning": "Ä°mza",
+        "meaning": "İmza",
         "level": "B1"
     },
     {
         "id": 3187,
         "word": "Significance",
-        "meaning": "Ã–nem",
+        "meaning": "Önem",
         "level": "B2"
     },
     {
         "id": 3188,
         "word": "Significant",
-        "meaning": "Ã–nemli",
+        "meaning": "Önemli",
         "level": "B1"
     },
     {
         "id": 3189,
         "word": "Significantly",
-        "meaning": "Ã–nemli Ã¶lÃ§Ã¼de",
+        "meaning": "Önemli ölçüde",
         "level": "B2"
     },
     {
@@ -15074,7 +15074,7 @@
     {
         "id": 3192,
         "word": "Silk",
-        "meaning": "Ä°pek",
+        "meaning": "İpek",
         "level": "B1"
     },
     {
@@ -15086,7 +15086,7 @@
     {
         "id": 3194,
         "word": "Silver",
-        "meaning": "GÃ¼mÃ¼ÅŸ",
+        "meaning": "Gümüş",
         "level": "A2"
     },
     {
@@ -15104,7 +15104,7 @@
     {
         "id": 3197,
         "word": "Similarly",
-        "meaning": "Benzer ÅŸekilde",
+        "meaning": "Benzer şekilde",
         "level": "B1"
     },
     {
@@ -15116,7 +15116,7 @@
     {
         "id": 3199,
         "word": "Simply",
-        "meaning": "BasitÃ§e",
+        "meaning": "Basitçe",
         "level": "B1"
     },
     {
@@ -15134,19 +15134,19 @@
     {
         "id": 3202,
         "word": "Sing",
-        "meaning": "ÅarkÄ± sÃ¶ylemek",
+        "meaning": "Şarkı söylemek",
         "level": "A2"
     },
     {
         "id": 3203,
         "word": "Singer",
-        "meaning": "ÅarkÄ±cÄ±",
+        "meaning": "Şarkıcı",
         "level": "A2"
     },
     {
         "id": 3204,
         "word": "Singing",
-        "meaning": "ÅarkÄ± sÃ¶yleme",
+        "meaning": "Şarkı söyleme",
         "level": "A2"
     },
     {
@@ -15164,13 +15164,13 @@
     {
         "id": 3207,
         "word": "Sir",
-        "meaning": "BayÄ±m, Efendim",
+        "meaning": "Bayım, Efendim",
         "level": "A1"
     },
     {
         "id": 3208,
         "word": "Sister",
-        "meaning": "KÄ±z kardeÅŸ",
+        "meaning": "Kız kardeş",
         "level": "A1"
     },
     {
@@ -15194,19 +15194,19 @@
     {
         "id": 3212,
         "word": "Six",
-        "meaning": "AltÄ±",
+        "meaning": "Altı",
         "level": "A2"
     },
     {
         "id": 3213,
         "word": "Sixteen",
-        "meaning": "On altÄ±",
+        "meaning": "On altı",
         "level": "A2"
     },
     {
         "id": 3214,
         "word": "Sixty",
-        "meaning": "AltmÄ±ÅŸ",
+        "meaning": "Altmış",
         "level": "A2"
     },
     {
@@ -15242,7 +15242,7 @@
     {
         "id": 3220,
         "word": "Sky",
-        "meaning": "GÃ¶kyÃ¼zÃ¼",
+        "meaning": "Gökyüzü",
         "level": "A2"
     },
     {
@@ -15278,13 +15278,13 @@
     {
         "id": 3226,
         "word": "Slightly",
-        "meaning": "HafifÃ§e",
+        "meaning": "Hafifçe",
         "level": "B1"
     },
     {
         "id": 3227,
         "word": "Slim",
-        "meaning": "Ä°nce",
+        "meaning": "İnce",
         "level": "B1"
     },
     {
@@ -15296,25 +15296,25 @@
     {
         "id": 3229,
         "word": "Slow",
-        "meaning": "YavaÅŸ",
+        "meaning": "Yavaş",
         "level": "A2"
     },
     {
         "id": 3230,
         "word": "Slowly",
-        "meaning": "YavaÅŸÃ§a",
+        "meaning": "Yavaşça",
         "level": "A1"
     },
     {
         "id": 3231,
         "word": "Small",
-        "meaning": "KÃ¼Ã§Ã¼k",
+        "meaning": "Küçük",
         "level": "A2"
     },
     {
         "id": 3232,
         "word": "Smart",
-        "meaning": "Zeki, ÅÄ±k",
+        "meaning": "Zeki, Şık",
         "level": "A1"
     },
     {
@@ -15326,31 +15326,31 @@
     {
         "id": 3234,
         "word": "Smile",
-        "meaning": "GÃ¼lÃ¼msemek",
+        "meaning": "Gülümsemek",
         "level": "A2"
     },
     {
         "id": 3235,
         "word": "Smoke",
-        "meaning": "Sigara iÃ§mek, Duman",
+        "meaning": "Sigara içmek, Duman",
         "level": "A2"
     },
     {
         "id": 3236,
         "word": "Smoking",
-        "meaning": "Sigara iÃ§me",
+        "meaning": "Sigara içme",
         "level": "A2"
     },
     {
         "id": 3237,
         "word": "Smooth",
-        "meaning": "PÃ¼rÃ¼zsÃ¼z",
+        "meaning": "Pürüzsüz",
         "level": "B1"
     },
     {
         "id": 3238,
         "word": "Snake",
-        "meaning": "YÄ±lan",
+        "meaning": "Yılan",
         "level": "A2"
     },
     {
@@ -15362,7 +15362,7 @@
     {
         "id": 3240,
         "word": "So",
-        "meaning": "Ã–yleyse, Bu yÃ¼zden",
+        "meaning": "Öyleyse, Bu yüzden",
         "level": "A1"
     },
     {
@@ -15392,19 +15392,19 @@
     {
         "id": 3245,
         "word": "Sock",
-        "meaning": "Ã‡orap",
+        "meaning": "Çorap",
         "level": "A2"
     },
     {
         "id": 3246,
         "word": "Soft",
-        "meaning": "YumuÅŸak",
+        "meaning": "Yumuşak",
         "level": "A2"
     },
     {
         "id": 3247,
         "word": "Software",
-        "meaning": "YazÄ±lÄ±m",
+        "meaning": "Yazılım",
         "level": "B1"
     },
     {
@@ -15422,25 +15422,25 @@
     {
         "id": 3250,
         "word": "Solid",
-        "meaning": "KatÄ±",
+        "meaning": "Katı",
         "level": "B1"
     },
     {
         "id": 3251,
         "word": "Solution",
-        "meaning": "Ã‡Ã¶zÃ¼m",
+        "meaning": "Çözüm",
         "level": "B1"
     },
     {
         "id": 3252,
         "word": "Solve",
-        "meaning": "Ã‡Ã¶zmek",
+        "meaning": "Çözmek",
         "level": "A2"
     },
     {
         "id": 3253,
         "word": "Some",
-        "meaning": "BazÄ±",
+        "meaning": "Bazı",
         "level": "A1"
     },
     {
@@ -15458,7 +15458,7 @@
     {
         "id": 3256,
         "word": "Something",
-        "meaning": "Bir ÅŸey",
+        "meaning": "Bir şey",
         "level": "A1"
     },
     {
@@ -15476,37 +15476,37 @@
     {
         "id": 3259,
         "word": "Son",
-        "meaning": "OÄŸul",
+        "meaning": "Oğul",
         "level": "A1"
     },
     {
         "id": 3260,
         "word": "Song",
-        "meaning": "ÅarkÄ±",
+        "meaning": "Şarkı",
         "level": "A2"
     },
     {
         "id": 3261,
         "word": "Soon",
-        "meaning": "YakÄ±nda",
+        "meaning": "Yakında",
         "level": "A2"
     },
     {
         "id": 3262,
         "word": "Sore",
-        "meaning": "AÄŸrÄ±lÄ±",
+        "meaning": "Ağrılı",
         "level": "B1"
     },
     {
         "id": 3263,
         "word": "Sorry",
-        "meaning": "ÃœzgÃ¼n",
+        "meaning": "Üzgün",
         "level": "A1"
     },
     {
         "id": 3264,
         "word": "Sort",
-        "meaning": "TÃ¼r",
+        "meaning": "Tür",
         "level": "A1"
     },
     {
@@ -15524,31 +15524,31 @@
     {
         "id": 3267,
         "word": "Soup",
-        "meaning": "Ã‡orba",
+        "meaning": "Çorba",
         "level": "A1"
     },
     {
         "id": 3268,
         "word": "Sour",
-        "meaning": "EkÅŸi",
+        "meaning": "Ekşi",
         "level": "B1"
     },
     {
         "id": 3269,
         "word": "South",
-        "meaning": "GÃ¼ney",
+        "meaning": "Güney",
         "level": "A2"
     },
     {
         "id": 3270,
         "word": "Southern",
-        "meaning": "GÃ¼neyli",
+        "meaning": "Güneyli",
         "level": "B1"
     },
     {
         "id": 3271,
         "word": "Space",
-        "meaning": "Uzay, BoÅŸluk",
+        "meaning": "Uzay, Boşluk",
         "level": "A2"
     },
     {
@@ -15560,19 +15560,19 @@
     {
         "id": 3273,
         "word": "Speak",
-        "meaning": "KonuÅŸmak",
+        "meaning": "Konuşmak",
         "level": "A1"
     },
     {
         "id": 3274,
         "word": "Speaker",
-        "meaning": "HoparlÃ¶r, KonuÅŸmacÄ±",
+        "meaning": "Hoparlör, Konuşmacı",
         "level": "A2"
     },
     {
         "id": 3275,
         "word": "Special",
-        "meaning": "Ã–zel",
+        "meaning": "Özel",
         "level": "A2"
     },
     {
@@ -15584,13 +15584,13 @@
     {
         "id": 3277,
         "word": "Specialize",
-        "meaning": "UzmanlaÅŸmak",
+        "meaning": "Uzmanlaşmak",
         "level": "B2"
     },
     {
         "id": 3278,
         "word": "Species",
-        "meaning": "TÃ¼rler",
+        "meaning": "Türler",
         "level": "B2"
     },
     {
@@ -15602,19 +15602,19 @@
     {
         "id": 3280,
         "word": "Specifically",
-        "meaning": "Ã–zellikle",
+        "meaning": "Özellikle",
         "level": "B2"
     },
     {
         "id": 3281,
         "word": "Speech",
-        "meaning": "KonuÅŸma",
+        "meaning": "Konuşma",
         "level": "B1"
     },
     {
         "id": 3282,
         "word": "Speed",
-        "meaning": "HÄ±z",
+        "meaning": "Hız",
         "level": "A2"
     },
     {
@@ -15626,7 +15626,7 @@
     {
         "id": 3284,
         "word": "Spelling",
-        "meaning": "YazÄ±m",
+        "meaning": "Yazım",
         "level": "A2"
     },
     {
@@ -15644,25 +15644,25 @@
     {
         "id": 3287,
         "word": "Spicy",
-        "meaning": "BaharatlÄ±",
+        "meaning": "Baharatlı",
         "level": "B1"
     },
     {
         "id": 3288,
         "word": "Spider",
-        "meaning": "Ã–rÃ¼mcek",
+        "meaning": "Örümcek",
         "level": "A2"
     },
     {
         "id": 3289,
         "word": "Spin",
-        "meaning": "DÃ¶nmek",
+        "meaning": "Dönmek",
         "level": "B1"
     },
     {
         "id": 3290,
         "word": "Spirit",
-        "meaning": "Ruh, Ä°spirto",
+        "meaning": "Ruh, İspirto",
         "level": "B1"
     },
     {
@@ -15674,13 +15674,13 @@
     {
         "id": 3292,
         "word": "Split",
-        "meaning": "BÃ¶lmek",
+        "meaning": "Bölmek",
         "level": "B2"
     },
     {
         "id": 3293,
         "word": "Spoon",
-        "meaning": "KaÅŸÄ±k",
+        "meaning": "Kaşık",
         "level": "A2"
     },
     {
@@ -15716,7 +15716,7 @@
     {
         "id": 3299,
         "word": "Stable",
-        "meaning": "Ä°stikrarlÄ±, AhÄ±r",
+        "meaning": "İstikrarlı, Ahır",
         "level": "B2"
     },
     {
@@ -15728,7 +15728,7 @@
     {
         "id": 3301,
         "word": "Stage",
-        "meaning": "AÅŸama, Sahne",
+        "meaning": "Aşama, Sahne",
         "level": "A2"
     },
     {
@@ -15758,7 +15758,7 @@
     {
         "id": 3306,
         "word": "Star",
-        "meaning": "YÄ±ldÄ±z",
+        "meaning": "Yıldız",
         "level": "A2"
     },
     {
@@ -15770,7 +15770,7 @@
     {
         "id": 3308,
         "word": "Start",
-        "meaning": "BaÅŸlamak",
+        "meaning": "Başlamak",
         "level": "A1"
     },
     {
@@ -15782,25 +15782,25 @@
     {
         "id": 3310,
         "word": "Statement",
-        "meaning": "Ä°fade, Beyan",
+        "meaning": "İfade, Beyan",
         "level": "B1"
     },
     {
         "id": 3311,
         "word": "Station",
-        "meaning": "Ä°stasyon",
+        "meaning": "İstasyon",
         "level": "A2"
     },
     {
         "id": 3312,
         "word": "Statistic",
-        "meaning": "Ä°statistik",
+        "meaning": "İstatistik",
         "level": "B2"
     },
     {
         "id": 3313,
         "word": "Status",
-        "meaning": "StatÃ¼",
+        "meaning": "Statü",
         "level": "B2"
     },
     {
@@ -15812,7 +15812,7 @@
     {
         "id": 3315,
         "word": "Steady",
-        "meaning": "Ä°stikrarlÄ±",
+        "meaning": "İstikrarlı",
         "level": "B2"
     },
     {
@@ -15824,7 +15824,7 @@
     {
         "id": 3317,
         "word": "Steal",
-        "meaning": "Ã‡almak",
+        "meaning": "Çalmak",
         "level": "A2"
     },
     {
@@ -15836,25 +15836,25 @@
     {
         "id": 3319,
         "word": "Steel",
-        "meaning": "Ã‡elik",
+        "meaning": "Çelik",
         "level": "B2"
     },
     {
         "id": 3320,
         "word": "Step",
-        "meaning": "AdÄ±m",
+        "meaning": "Adım",
         "level": "A2"
     },
     {
         "id": 3321,
         "word": "Stick",
-        "meaning": "Sopa, YapÄ±ÅŸtÄ±rmak",
+        "meaning": "Sopa, Yapıştırmak",
         "level": "B1"
     },
     {
         "id": 3322,
         "word": "Sticky",
-        "meaning": "YapÄ±ÅŸkan",
+        "meaning": "Yapışkan",
         "level": "B1"
     },
     {
@@ -15872,7 +15872,7 @@
     {
         "id": 3325,
         "word": "Stimulate",
-        "meaning": "UykulandÄ±ran, Uyarmak",
+        "meaning": "Uykulandıran, Uyarmak",
         "level": "C1"
     },
     {
@@ -15884,7 +15884,7 @@
     {
         "id": 3327,
         "word": "Stone",
-        "meaning": "TaÅŸ",
+        "meaning": "Taş",
         "level": "A2"
     },
     {
@@ -15896,13 +15896,13 @@
     {
         "id": 3329,
         "word": "Store",
-        "meaning": "DÃ¼kkan, Depolamak",
+        "meaning": "Dükkan, Depolamak",
         "level": "A2"
     },
     {
         "id": 3330,
         "word": "Storm",
-        "meaning": "FÄ±rtÄ±na",
+        "meaning": "Fırtına",
         "level": "A2"
     },
     {
@@ -15914,7 +15914,7 @@
     {
         "id": 3332,
         "word": "Straight",
-        "meaning": "DÃ¼z",
+        "meaning": "Düz",
         "level": "A1"
     },
     {
@@ -15926,7 +15926,7 @@
     {
         "id": 3334,
         "word": "Stranger",
-        "meaning": "YabancÄ±",
+        "meaning": "Yabancı",
         "level": "B1"
     },
     {
@@ -15938,7 +15938,7 @@
     {
         "id": 3336,
         "word": "Stream",
-        "meaning": "Dere, AkÄ±ÅŸ",
+        "meaning": "Dere, Akış",
         "level": "C1"
     },
     {
@@ -15950,7 +15950,7 @@
     {
         "id": 3338,
         "word": "Strength",
-        "meaning": "GÃ¼Ã§",
+        "meaning": "Güç",
         "level": "B1"
     },
     {
@@ -15974,7 +15974,7 @@
     {
         "id": 3342,
         "word": "Strict",
-        "meaning": "Sert, KatÄ±",
+        "meaning": "Sert, Katı",
         "level": "B2"
     },
     {
@@ -15986,55 +15986,55 @@
     {
         "id": 3344,
         "word": "String",
-        "meaning": "Ä°p, Tel",
+        "meaning": "İp, Tel",
         "level": "B1"
     },
     {
         "id": 3345,
         "word": "Strong",
-        "meaning": "GÃ¼Ã§lÃ¼",
+        "meaning": "Güçlü",
         "level": "A2"
     },
     {
         "id": 3346,
         "word": "Strongly",
-        "meaning": "GÃ¼Ã§lÃ¼ bir ÅŸekilde",
+        "meaning": "Güçlü bir şekilde",
         "level": "B1"
     },
     {
         "id": 3347,
         "word": "Structure",
-        "meaning": "YapÄ±",
+        "meaning": "Yapı",
         "level": "B1"
     },
     {
         "id": 3348,
         "word": "Struggle",
-        "meaning": "Ã‡abalamak",
+        "meaning": "Çabalamak",
         "level": "B2"
     },
     {
         "id": 3349,
         "word": "Student",
-        "meaning": "Ã–ÄŸrenci",
+        "meaning": "Öğrenci",
         "level": "A2"
     },
     {
         "id": 3350,
         "word": "Studio",
-        "meaning": "StÃ¼dyo",
+        "meaning": "Stüdyo",
         "level": "B1"
     },
     {
         "id": 3351,
         "word": "Study",
-        "meaning": "Ã‡alÄ±ÅŸmak",
+        "meaning": "Çalışmak",
         "level": "A2"
     },
     {
         "id": 3352,
         "word": "Stuff",
-        "meaning": "Åeyler",
+        "meaning": "Şeyler",
         "level": "B1"
     },
     {
@@ -16070,43 +16070,43 @@
     {
         "id": 3358,
         "word": "Substantial",
-        "meaning": "Ã–nemli, VarlÄ±klÄ±",
+        "meaning": "Önemli, Varlıklı",
         "level": "C1"
     },
     {
         "id": 3359,
         "word": "Substitute",
-        "meaning": "Yedek, Yerine geÃ§en",
+        "meaning": "Yedek, Yerine geçen",
         "level": "C1"
     },
     {
         "id": 3360,
         "word": "Succeed",
-        "meaning": "BaÅŸarmak",
+        "meaning": "Başarmak",
         "level": "A2"
     },
     {
         "id": 3361,
         "word": "Success",
-        "meaning": "BaÅŸarÄ±",
+        "meaning": "Başarı",
         "level": "A2"
     },
     {
         "id": 3362,
         "word": "Successful",
-        "meaning": "BaÅŸarÄ±lÄ±",
+        "meaning": "Başarılı",
         "level": "A2"
     },
     {
         "id": 3363,
         "word": "Successfully",
-        "meaning": "BaÅŸarÄ±yla",
+        "meaning": "Başarıyla",
         "level": "B1"
     },
     {
         "id": 3364,
         "word": "Such",
-        "meaning": "BÃ¶yle",
+        "meaning": "Böyle",
         "level": "A2"
     },
     {
@@ -16124,31 +16124,31 @@
     {
         "id": 3367,
         "word": "Suffer",
-        "meaning": "AcÄ± Ã§ekmek",
+        "meaning": "Acı çekmek",
         "level": "B1"
     },
     {
         "id": 3368,
         "word": "Sugar",
-        "meaning": "Åeker",
+        "meaning": "Şeker",
         "level": "A2"
     },
     {
         "id": 3369,
         "word": "Suggest",
-        "meaning": "Ã–nermek",
+        "meaning": "Önermek",
         "level": "A2"
     },
     {
         "id": 3370,
         "word": "Suggestion",
-        "meaning": "Ã–neri",
+        "meaning": "Öneri",
         "level": "A1"
     },
     {
         "id": 3371,
         "word": "Suit",
-        "meaning": "TakÄ±m elbise, Uymak",
+        "meaning": "Takım elbise, Uymak",
         "level": "A2"
     },
     {
@@ -16172,7 +16172,7 @@
     {
         "id": 3375,
         "word": "Summary",
-        "meaning": "Ã–zet",
+        "meaning": "Özet",
         "level": "B1"
     },
     {
@@ -16184,7 +16184,7 @@
     {
         "id": 3377,
         "word": "Sun",
-        "meaning": "GÃ¼neÅŸ",
+        "meaning": "Güneş",
         "level": "A2"
     },
     {
@@ -16196,7 +16196,7 @@
     {
         "id": 3379,
         "word": "Supermarket",
-        "meaning": "SÃ¼permarket",
+        "meaning": "Süpermarket",
         "level": "A2"
     },
     {
@@ -16208,7 +16208,7 @@
     {
         "id": 3381,
         "word": "Supporter",
-        "meaning": "DestekÃ§i",
+        "meaning": "Destekçi",
         "level": "B1"
     },
     {
@@ -16232,7 +16232,7 @@
     {
         "id": 3385,
         "word": "Surface",
-        "meaning": "YÃ¼zey",
+        "meaning": "Yüzey",
         "level": "B1"
     },
     {
@@ -16244,31 +16244,31 @@
     {
         "id": 3387,
         "word": "Surprise",
-        "meaning": "SÃ¼rpriz",
+        "meaning": "Sürpriz",
         "level": "A1"
     },
     {
         "id": 3388,
         "word": "Surprised",
-        "meaning": "ÅaÅŸÄ±rmÄ±ÅŸ",
+        "meaning": "Şaşırmış",
         "level": "A2"
     },
     {
         "id": 3389,
         "word": "Surprising",
-        "meaning": "ÅaÅŸÄ±rtÄ±cÄ±",
+        "meaning": "Şaşırtıcı",
         "level": "A2"
     },
     {
         "id": 3390,
         "word": "Surround",
-        "meaning": "Ã‡evrelemek",
+        "meaning": "Çevrelemek",
         "level": "B2"
     },
     {
         "id": 3391,
         "word": "Surrounding",
-        "meaning": "Ã‡evreleyen",
+        "meaning": "Çevreleyen",
         "level": "B2"
     },
     {
@@ -16292,31 +16292,31 @@
     {
         "id": 3395,
         "word": "Suspect",
-        "meaning": "ÅÃ¼phelenmek, ÅÃ¼pheli",
+        "meaning": "Şüphelenmek, Şüpheli",
         "level": "B1"
     },
     {
         "id": 3396,
         "word": "Sustain",
-        "meaning": "SÃ¼rdÃ¼rmek",
+        "meaning": "Sürdürmek",
         "level": "C1"
     },
     {
         "id": 3397,
         "word": "Sustainable",
-        "meaning": "SÃ¼rdÃ¼rÃ¼lebilir",
+        "meaning": "Sürdürülebilir",
         "level": "C1"
     },
     {
         "id": 3398,
         "word": "Swallow",
-        "meaning": "Yutmak, KÄ±rlangÄ±Ã§",
+        "meaning": "Yutmak, Kırlangıç",
         "level": "B2"
     },
     {
         "id": 3399,
         "word": "Swear",
-        "meaning": "Yemin etmek, KÃ¼fretmek",
+        "meaning": "Yemin etmek, Küfretmek",
         "level": "B2"
     },
     {
@@ -16327,13 +16327,13 @@
     },
     {
         "word": "Accomplish",
-        "meaning": "BaÅŸarmak, SonuÃ§landÄ±rmak",
+        "meaning": "Başarmak, Sonuçlandırmak",
         "level": "C1",
         "id": 3401
     },
     {
         "word": "Accumulate",
-        "meaning": "Biriktirmek, YÄ±ÄŸmak",
+        "meaning": "Biriktirmek, Yığmak",
         "level": "C1",
         "id": 3402
     },
@@ -16345,7 +16345,7 @@
     },
     {
         "word": "Adapt",
-        "meaning": "Uyum saÄŸlamak",
+        "meaning": "Uyum sağlamak",
         "level": "C1",
         "id": 3404
     },
@@ -16357,7 +16357,7 @@
     },
     {
         "word": "Adjacent",
-        "meaning": "BitiÅŸik, Yan yana",
+        "meaning": "Bitişik, Yan yana",
         "level": "C1",
         "id": 3406
     },
@@ -16369,7 +16369,7 @@
     },
     {
         "word": "Administer",
-        "meaning": "YÃ¶netmek, Ä°dare etmek",
+        "meaning": "Yönetmek, İdare etmek",
         "level": "C1",
         "id": 3408
     },
@@ -16387,31 +16387,31 @@
     },
     {
         "word": "Albeit",
-        "meaning": "GerÃ§i, ... olduÄŸu halde",
+        "meaning": "Gerçi, ... olduğu halde",
         "level": "C1",
         "id": 3411
     },
     {
         "word": "Allocate",
-        "meaning": "Tahsis etmek, PaylaÅŸtÄ±rmak",
+        "meaning": "Tahsis etmek, Paylaştırmak",
         "level": "C1",
         "id": 3412
     },
     {
         "word": "Alter",
-        "meaning": "DeÄŸiÅŸtirmek",
+        "meaning": "Değiştirmek",
         "level": "C1",
         "id": 3413
     },
     {
         "word": "Ambiguous",
-        "meaning": "MuÄŸlak, Belirsiz",
+        "meaning": "Muğlak, Belirsiz",
         "level": "C1",
         "id": 3415
     },
     {
         "word": "Amend",
-        "meaning": "DeÄŸiÅŸtirmek (yasa vb.)",
+        "meaning": "Değiştirmek (yasa vb.)",
         "level": "C1",
         "id": 3416
     },
@@ -16423,19 +16423,19 @@
     },
     {
         "word": "Anticipate",
-        "meaning": "Beklemek, Ã–ngÃ¶rmek",
+        "meaning": "Beklemek, Öngörmek",
         "level": "C1",
         "id": 3418
     },
     {
         "word": "Apparent",
-        "meaning": "Bariz, AÃ§Ä±k",
+        "meaning": "Bariz, Açık",
         "level": "C1",
         "id": 3419
     },
     {
         "word": "Append",
-        "meaning": "Eklemek, Ä°liÅŸtirmek",
+        "meaning": "Eklemek, İliştirmek",
         "level": "C1",
         "id": 3420
     },
@@ -16453,67 +16453,67 @@
     },
     {
         "word": "Assemble",
-        "meaning": "BirleÅŸtirmek, Toplamak",
+        "meaning": "Birleştirmek, Toplamak",
         "level": "C1",
         "id": 3427
     },
     {
         "word": "Assign",
-        "meaning": "Atamak, GÃ¶revlendirmek",
+        "meaning": "Atamak, Görevlendirmek",
         "level": "C1",
         "id": 3429
     },
     {
         "word": "Assume",
-        "meaning": "Varsaymak, Ãœstlenmek",
+        "meaning": "Varsaymak, Üstlenmek",
         "level": "C1",
         "id": 3431
     },
     {
         "word": "Assure",
-        "meaning": "Garanti etmek, GÃ¼vence vermek",
+        "meaning": "Garanti etmek, Güvence vermek",
         "level": "C1",
         "id": 3432
     },
     {
         "word": "Attain",
-        "meaning": "Elde etmek, UlaÅŸmak",
+        "meaning": "Elde etmek, Ulaşmak",
         "level": "C1",
         "id": 3434
     },
     {
         "word": "Attribute",
-        "meaning": "Atfetmek, Ã–zellik",
+        "meaning": "Atfetmek, Özellik",
         "level": "C1",
         "id": 3435
     },
     {
         "word": "Automate",
-        "meaning": "OtomatikleÅŸtirmek",
+        "meaning": "Otomatikleştirmek",
         "level": "C1",
         "id": 3436
     },
     {
         "word": "Behalf",
-        "meaning": "AdÄ±na, NamÄ±na",
+        "meaning": "Adına, Namına",
         "level": "C1",
         "id": 3439
     },
     {
         "word": "Beneficial",
-        "meaning": "FaydalÄ±, YararlÄ±",
+        "meaning": "Faydalı, Yararlı",
         "level": "C1",
         "id": 3440
     },
     {
         "word": "Bias",
-        "meaning": "Ã–nyargÄ±",
+        "meaning": "Önyargı",
         "level": "C1",
         "id": 3441
     },
     {
         "word": "Bulk",
-        "meaning": "YÄ±ÄŸÄ±n, Hacim",
+        "meaning": "Yığın, Hacim",
         "level": "C1",
         "id": 3443
     },
@@ -16525,37 +16525,37 @@
     },
     {
         "word": "Cite",
-        "meaning": "AlÄ±ntÄ± yapmak, Bahsetmek",
+        "meaning": "Alıntı yapmak, Bahsetmek",
         "level": "C1",
         "id": 3454
     },
     {
         "word": "Clarify",
-        "meaning": "AÃ§Ä±klÄ±ÄŸa kavuÅŸturmak",
+        "meaning": "Açıklığa kavuşturmak",
         "level": "C1",
         "id": 3456
     },
     {
         "word": "Clause",
-        "meaning": "Madde, FÄ±kra (Hukuk)",
+        "meaning": "Madde, Fıkra (Hukuk)",
         "level": "C1",
         "id": 3458
     },
     {
         "word": "Coherent",
-        "meaning": "TutarlÄ±, MantÄ±klÄ±",
+        "meaning": "Tutarlı, Mantıklı",
         "level": "C1",
         "id": 3460
     },
     {
         "word": "Coincide",
-        "meaning": "TesadÃ¼f etmek, Ã‡akÄ±ÅŸmak",
+        "meaning": "Tesadüf etmek, Çakışmak",
         "level": "C1",
         "id": 3461
     },
     {
         "word": "Commence",
-        "meaning": "BaÅŸlamak",
+        "meaning": "Başlamak",
         "level": "C1",
         "id": 3464
     },
@@ -16591,19 +16591,19 @@
     },
     {
         "word": "Abhor",
-        "meaning": "Nefret etmek, Ä°ÄŸrenmek",
+        "meaning": "Nefret etmek, İğrenmek",
         "level": "C2",
         "id": 3474
     },
     {
         "word": "Abridge",
-        "meaning": "KÄ±saltmak (kitap vb.)",
+        "meaning": "Kısaltmak (kitap vb.)",
         "level": "C2",
         "id": 3475
     },
     {
         "word": "Abstain",
-        "meaning": "Ã‡ekinmek, Uzak durmak",
+        "meaning": "Çekinmek, Uzak durmak",
         "level": "C2",
         "id": 3476
     },
@@ -16615,7 +16615,7 @@
     },
     {
         "word": "Adamant",
-        "meaning": "Ä°natÃ§Ä±, KararlÄ±",
+        "meaning": "İnatçı, Kararlı",
         "level": "C2",
         "id": 3478
     },
@@ -16633,13 +16633,13 @@
     },
     {
         "word": "Adulation",
-        "meaning": "AÅŸÄ±rÄ± Ã¶vgÃ¼, Yaltaklanma",
+        "meaning": "Aşırı övgü, Yaltaklanma",
         "level": "C2",
         "id": 3481
     },
     {
         "word": "Adversity",
-        "meaning": "SÄ±kÄ±ntÄ±, Zorluk",
+        "meaning": "Sıkıntı, Zorluk",
         "level": "C2",
         "id": 3482
     },
@@ -16651,19 +16651,19 @@
     },
     {
         "word": "Affable",
-        "meaning": "Nazik, Cana yakÄ±n",
+        "meaning": "Nazik, Cana yakın",
         "level": "C2",
         "id": 3484
     },
     {
         "word": "Alacrity",
-        "meaning": "CanlÄ±lÄ±k, Ä°steklilik",
+        "meaning": "Canlılık, İsteklilik",
         "level": "C2",
         "id": 3485
     },
     {
         "word": "Allay",
-        "meaning": "YatÄ±ÅŸtÄ±rmak, Hafifletmek",
+        "meaning": "Yatıştırmak, Hafifletmek",
         "level": "C2",
         "id": 3486
     },
@@ -16675,49 +16675,49 @@
     },
     {
         "word": "Aloof",
-        "meaning": "Uzak, SoÄŸuk",
+        "meaning": "Uzak, Soğuk",
         "level": "C2",
         "id": 3488
     },
     {
         "word": "Altruism",
-        "meaning": "DiÄŸerkamlÄ±k, Ã–zgecilik",
+        "meaning": "Diğerkamlık, Özgecilik",
         "level": "C2",
         "id": 3489
     },
     {
         "word": "Ambivalent",
-        "meaning": "KararsÄ±z, DuygularÄ± Ã§eliÅŸen",
+        "meaning": "Kararsız, Duyguları çelişen",
         "level": "C2",
         "id": 3490
     },
     {
         "word": "Ameliorate",
-        "meaning": "Ä°yileÅŸtirmek, DÃ¼zelmek",
+        "meaning": "İyileştirmek, Düzelmek",
         "level": "C2",
         "id": 3491
     },
     {
         "word": "Amiable",
-        "meaning": "Sevimli, TatlÄ±",
+        "meaning": "Sevimli, Tatlı",
         "level": "C2",
         "id": 3492
     },
     {
         "word": "Amicable",
-        "meaning": "DostÃ§a, BarÄ±ÅŸÃ§Ä±l",
+        "meaning": "Dostça, Barışçıl",
         "level": "C2",
         "id": 3493
     },
     {
         "word": "Anachronistic",
-        "meaning": "Ã‡aÄŸdÄ±ÅŸÄ±",
+        "meaning": "Çağdışı",
         "level": "C2",
         "id": 3494
     },
     {
         "word": "Animosity",
-        "meaning": "DÃ¼ÅŸmanlÄ±k, Kin",
+        "meaning": "Düşmanlık, Kin",
         "level": "C2",
         "id": 3495
     },
@@ -16729,7 +16729,7 @@
     },
     {
         "word": "Antipathy",
-        "meaning": "Antipati, Ä°tici his",
+        "meaning": "Antipati, İtici his",
         "level": "C2",
         "id": 3497
     },
@@ -16741,7 +16741,7 @@
     },
     {
         "word": "Appease",
-        "meaning": "YatÄ±ÅŸtÄ±rmak, Taviz vermek",
+        "meaning": "Yatıştırmak, Taviz vermek",
         "level": "C2",
         "id": 3499
     },
@@ -16753,37 +16753,37 @@
     },
     {
         "word": "Arduous",
-        "meaning": "GÃ¼Ã§, Ã‡etin",
+        "meaning": "Güç, Çetin",
         "level": "C2",
         "id": 3501
     },
     {
         "word": "Articulate",
-        "meaning": "AÃ§Ä±kÃ§a ifade etmek",
+        "meaning": "Açıkça ifade etmek",
         "level": "C2",
         "id": 3502
     },
     {
         "word": "Ascertain",
-        "meaning": "AslÄ±nÄ± Ã¶ÄŸrenmek, Tespit etmek",
+        "meaning": "Aslını öğrenmek, Tespit etmek",
         "level": "C2",
         "id": 3503
     },
     {
         "word": "Ascetic",
-        "meaning": "Ã‡ileci, Zahit",
+        "meaning": "Çileci, Zahit",
         "level": "C2",
         "id": 3504
     },
     {
         "word": "Assiduous",
-        "meaning": "Gayretli, Ã‡alÄ±ÅŸkan",
+        "meaning": "Gayretli, Çalışkan",
         "level": "C2",
         "id": 3505
     },
     {
         "word": "Assuage",
-        "meaning": "YatÄ±ÅŸtÄ±rmak, Dindirmek",
+        "meaning": "Yatıştırmak, Dindirmek",
         "level": "C2",
         "id": 3506
     },
@@ -16795,25 +16795,25 @@
     },
     {
         "word": "Audacious",
-        "meaning": "CÃ¼retkar, AtÄ±lgan",
+        "meaning": "Cüretkar, Atılgan",
         "level": "C2",
         "id": 3508
     },
     {
         "word": "Augment",
-        "meaning": "Ã‡oÄŸaltmak, ArttÄ±rmak",
+        "meaning": "Çoğaltmak, Arttırmak",
         "level": "C2",
         "id": 3509
     },
     {
         "word": "Auspicious",
-        "meaning": "UÄŸurlu, HayÄ±rlÄ±",
+        "meaning": "Uğurlu, Hayırlı",
         "level": "C2",
         "id": 3510
     },
     {
         "word": "Austere",
-        "meaning": "Sert, MÃ¼tevazÄ±",
+        "meaning": "Sert, Mütevazı",
         "level": "C2",
         "id": 3511
     },
@@ -16825,43 +16825,43 @@
     },
     {
         "word": "Autonomy",
-        "meaning": "Ã–zerklik",
+        "meaning": "Özerklik",
         "level": "C2",
         "id": 3513
     },
     {
         "word": "Avarice",
-        "meaning": "AÃ§gÃ¶zlÃ¼lÃ¼k, HÄ±rs",
+        "meaning": "Açgözlülük, Hırs",
         "level": "C2",
         "id": 3514
     },
     {
         "word": "Banal",
-        "meaning": "Banal, SÄ±radan",
+        "meaning": "Banal, Sıradan",
         "level": "C2",
         "id": 3515
     },
     {
         "word": "Barrage",
-        "meaning": "Baraj, YaylÄ±m ateÅŸi",
+        "meaning": "Baraj, Yaylım ateşi",
         "level": "C2",
         "id": 3516
     },
     {
         "word": "Belie",
-        "meaning": "Yalanlamak, YanÄ±ltmak",
+        "meaning": "Yalanlamak, Yanıltmak",
         "level": "C2",
         "id": 3517
     },
     {
         "word": "Benevolent",
-        "meaning": "HayÄ±rsever, Ä°yicil",
+        "meaning": "Hayırsever, İyicil",
         "level": "C2",
         "id": 3518
     },
     {
         "word": "Benign",
-        "meaning": "ZararsÄ±z, Ä°yi huylu",
+        "meaning": "Zararsız, İyi huylu",
         "level": "C2",
         "id": 3519
     },
@@ -16873,13 +16873,13 @@
     },
     {
         "word": "Bilateral",
-        "meaning": "Ä°ki taraflÄ±",
+        "meaning": "İki taraflı",
         "level": "C2",
         "id": 3522
     },
     {
         "word": "Blatant",
-        "meaning": "Bariz, KÃ¼stahÃ§a",
+        "meaning": "Bariz, Küstahça",
         "level": "C2",
         "id": 3523
     },
@@ -16891,13 +16891,13 @@
     },
     {
         "word": "Negotiate",
-        "meaning": "MÃ¼zakere etmek",
+        "meaning": "Müzakere etmek",
         "level": "B2",
         "id": 3525
     },
     {
         "word": "Recruit",
-        "meaning": "Ä°ÅŸe almak, Ãœye yapmak",
+        "meaning": "İşe almak, Üye yapmak",
         "level": "B2",
         "id": 3529
     },
@@ -16909,19 +16909,19 @@
     },
     {
         "word": "Transaction",
-        "meaning": "Ä°ÅŸlem, AlÄ±ÅŸveriÅŸ",
+        "meaning": "İşlem, Alışveriş",
         "level": "C1",
         "id": 3532
     },
     {
         "word": "Enterprise",
-        "meaning": "GiriÅŸim, Kurum",
+        "meaning": "Girişim, Kurum",
         "level": "C1",
         "id": 3533
     },
     {
         "word": "Merger",
-        "meaning": "BirleÅŸme (Åirket)",
+        "meaning": "Birleşme (Şirket)",
         "level": "C1",
         "id": 3534
     },
@@ -16945,31 +16945,31 @@
     },
     {
         "word": "Dividend",
-        "meaning": "Kar payÄ±",
+        "meaning": "Kar payı",
         "level": "C1",
         "id": 3544
     },
     {
         "word": "Asset",
-        "meaning": "VarlÄ±k, Mal",
+        "meaning": "Varlık, Mal",
         "level": "C1",
         "id": 3545
     },
     {
         "word": "Liability",
-        "meaning": "YÃ¼kÃ¼mlÃ¼lÃ¼k",
+        "meaning": "Yükümlülük",
         "level": "C1",
         "id": 3546
     },
     {
         "word": "Equity",
-        "meaning": "Ã–z sermaye",
+        "meaning": "Öz sermaye",
         "level": "C1",
         "id": 3547
     },
     {
         "word": "Bankruptcy",
-        "meaning": "Ä°flas",
+        "meaning": "İflas",
         "level": "C1",
         "id": 3548
     },
@@ -16999,7 +16999,7 @@
     },
     {
         "word": "Wholesale",
-        "meaning": "Toptan satÄ±ÅŸ",
+        "meaning": "Toptan satış",
         "level": "C1",
         "id": 3555
     },
@@ -17011,7 +17011,7 @@
     },
     {
         "word": "Distribution",
-        "meaning": "DaÄŸÄ±tÄ±m",
+        "meaning": "Dağıtım",
         "level": "B2",
         "id": 3557
     },
@@ -17041,19 +17041,19 @@
     },
     {
         "word": "Freight",
-        "meaning": "Nakliye, YÃ¼k",
+        "meaning": "Nakliye, Yük",
         "level": "C1",
         "id": 3562
     },
     {
         "word": "Customs",
-        "meaning": "GÃ¼mrÃ¼k",
+        "meaning": "Gümrük",
         "level": "B2",
         "id": 3565
     },
     {
         "word": "Tariff",
-        "meaning": "Tarife, GÃ¼mrÃ¼k vergisi",
+        "meaning": "Tarife, Gümrük vergisi",
         "level": "C1",
         "id": 3566
     },
@@ -17077,19 +17077,19 @@
     },
     {
         "word": "Negotiation",
-        "meaning": "MÃ¼zakere",
+        "meaning": "Müzakere",
         "level": "C1",
         "id": 3570
     },
     {
         "word": "Collaboration",
-        "meaning": "Ä°ÅŸbirliÄŸi",
+        "meaning": "İşbirliği",
         "level": "C1",
         "id": 3575
     },
     {
         "word": "Joint Venture",
-        "meaning": "Ortak giriÅŸim",
+        "meaning": "Ortak girişim",
         "level": "C1",
         "id": 3576
     },
@@ -17119,7 +17119,7 @@
     },
     {
         "word": "Consultant",
-        "meaning": "DanÄ±ÅŸman",
+        "meaning": "Danışman",
         "level": "C1",
         "id": 3585
     },
@@ -17131,31 +17131,31 @@
     },
     {
         "word": "Resume",
-        "meaning": "Ã–zgeÃ§miÅŸ",
+        "meaning": "Özgeçmiş",
         "level": "B2",
         "id": 3593
     },
     {
         "word": "Resign",
-        "meaning": "Ä°stifa etmek",
+        "meaning": "İstifa etmek",
         "level": "C1",
         "id": 3598
     },
     {
         "word": "Demotion",
-        "meaning": "RÃ¼tbe dÃ¼ÅŸÃ¼rme",
+        "meaning": "Rütbe düşürme",
         "level": "C2",
         "id": 3601
     },
     {
         "word": "Bonus",
-        "meaning": "Ä°kramiye",
+        "meaning": "İkramiye",
         "level": "B1",
         "id": 3602
     },
     {
         "word": "Incentive",
-        "meaning": "TeÅŸvik",
+        "meaning": "Teşvik",
         "level": "C1",
         "id": 3603
     },
@@ -17167,19 +17167,19 @@
     },
     {
         "word": "Evaluation",
-        "meaning": "DeÄŸerlendirme",
+        "meaning": "Değerlendirme",
         "level": "C1",
         "id": 3608
     },
     {
         "word": "Training",
-        "meaning": "EÄŸitim",
+        "meaning": "Eğitim",
         "level": "B1",
         "id": 3610
     },
     {
         "word": "Workshop",
-        "meaning": "AtÃ¶lye Ã§alÄ±ÅŸmasÄ±",
+        "meaning": "Atölye çalışması",
         "level": "B2",
         "id": 3611
     },
@@ -17191,25 +17191,25 @@
     },
     {
         "word": "Agenda",
-        "meaning": "GÃ¼ndem",
+        "meaning": "Gündem",
         "level": "B2",
         "id": 3614
     },
     {
         "word": "Minutes",
-        "meaning": "Tutanak (ToplantÄ±)",
+        "meaning": "Tutanak (Toplantı)",
         "level": "C1",
         "id": 3615
     },
     {
         "word": "Consensus",
-        "meaning": "Fikir birliÄŸi",
+        "meaning": "Fikir birliği",
         "level": "C1",
         "id": 3616
     },
     {
         "word": "Dispute",
-        "meaning": "AnlaÅŸmazlÄ±k",
+        "meaning": "Anlaşmazlık",
         "level": "C1",
         "id": 3617
     },
@@ -17221,43 +17221,43 @@
     },
     {
         "word": "Supervisor",
-        "meaning": "GÃ¶zetmen, Amir",
+        "meaning": "Gözetmen, Amir",
         "level": "C1",
         "id": 3628
     },
     {
         "word": "Co-worker",
-        "meaning": "Ä°ÅŸ arkadaÅŸÄ±",
+        "meaning": "İş arkadaşı",
         "level": "A2",
         "id": 3630
     },
     {
         "word": "Vendor",
-        "meaning": "SatÄ±cÄ±, TedarikÃ§i",
+        "meaning": "Satıcı, Tedarikçi",
         "level": "C1",
         "id": 3633
     },
     {
         "word": "Supplier",
-        "meaning": "TedarikÃ§i",
+        "meaning": "Tedarikçi",
         "level": "B2",
         "id": 3634
     },
     {
         "word": "Stakeholder",
-        "meaning": "PaydaÅŸ",
+        "meaning": "Paydaş",
         "level": "C1",
         "id": 3635
     },
     {
         "word": "Overview",
-        "meaning": "Genel bakÄ±ÅŸ",
+        "meaning": "Genel bakış",
         "level": "C1",
         "id": 3643
     },
     {
         "word": "Statistics",
-        "meaning": "Ä°statistik",
+        "meaning": "İstatistik",
         "level": "C1",
         "id": 3646
     },
@@ -17269,7 +17269,7 @@
     },
     {
         "word": "Trend",
-        "meaning": "EÄŸilim, Trend",
+        "meaning": "Eğilim, Trend",
         "level": "C1",
         "id": 3649
     },
@@ -17281,7 +17281,7 @@
     },
     {
         "word": "Prediction",
-        "meaning": "Ã–ngÃ¶rÃ¼",
+        "meaning": "Öngörü",
         "level": "B2",
         "id": 3651
     },
@@ -17305,7 +17305,7 @@
     },
     {
         "word": "Inspection",
-        "meaning": "TeftiÅŸ",
+        "meaning": "Teftiş",
         "level": "C1",
         "id": 3655
     },
@@ -17317,7 +17317,7 @@
     },
     {
         "word": "Specification",
-        "meaning": "Åartname",
+        "meaning": "Şartname",
         "level": "C1",
         "id": 3662
     },
@@ -17335,19 +17335,19 @@
     },
     {
         "word": "University",
-        "meaning": "Ãœniversite",
+        "meaning": "Üniversite",
         "level": "A1",
         "id": 3666
     },
     {
         "word": "Faculty",
-        "meaning": "FakÃ¼lte",
+        "meaning": "Fakülte",
         "level": "C1",
         "id": 3667
     },
     {
         "word": "Tutor",
-        "meaning": "Ã–zel Ã¶ÄŸretmen",
+        "meaning": "Özel öğretmen",
         "level": "C1",
         "id": 3671
     },
@@ -17359,7 +17359,7 @@
     },
     {
         "word": "Tuition",
-        "meaning": "HarÃ§ Ã¼creti",
+        "meaning": "Harç ücreti",
         "level": "C1",
         "id": 3674
     },
@@ -17401,19 +17401,19 @@
     },
     {
         "word": "Abstract",
-        "meaning": "Ã–zet (Makale)",
+        "meaning": "Özet (Makale)",
         "level": "C1",
         "id": 3686
     },
     {
         "word": "Citation",
-        "meaning": "AlÄ±ntÄ±",
+        "meaning": "Alıntı",
         "level": "C1",
         "id": 3687
     },
     {
         "word": "Bibliography",
-        "meaning": "KaynakÃ§a",
+        "meaning": "Kaynakça",
         "level": "C2",
         "id": 3689
     },
@@ -17431,7 +17431,7 @@
     },
     {
         "word": "Framework",
-        "meaning": "Ã‡erÃ§eve, YapÄ±",
+        "meaning": "Çerçeve, Yapı",
         "level": "C1",
         "id": 3693
     },
@@ -17449,19 +17449,19 @@
     },
     {
         "word": "Participant",
-        "meaning": "KatÄ±lÄ±mcÄ±",
+        "meaning": "Katılımcı",
         "level": "C1",
         "id": 3707
     },
     {
         "word": "Variable",
-        "meaning": "DeÄŸiÅŸken",
+        "meaning": "Değişken",
         "level": "C1",
         "id": 3710
     },
     {
         "word": "Correlation",
-        "meaning": "Korelasyon, Ä°liÅŸki",
+        "meaning": "Korelasyon, İlişki",
         "level": "C2",
         "id": 3711
     },
@@ -17473,13 +17473,13 @@
     },
     {
         "word": "Implication",
-        "meaning": "Ã‡Ä±karÄ±m, Ä°ma",
+        "meaning": "Çıkarım, İma",
         "level": "C1",
         "id": 3713
     },
     {
         "word": "Understanding",
-        "meaning": "AnlayÄ±ÅŸ",
+        "meaning": "Anlayış",
         "level": "B1",
         "id": 3718
     },
@@ -17497,55 +17497,55 @@
     },
     {
         "word": "Curriculum",
-        "meaning": "MÃ¼fredat",
+        "meaning": "Müfredat",
         "level": "C1",
         "id": 3724
     },
     {
         "word": "Syllabus",
-        "meaning": "Ders programÄ±",
+        "meaning": "Ders programı",
         "level": "C1",
         "id": 3725
     },
     {
         "word": "Semester",
-        "meaning": "DÃ¶nem (YarÄ±yÄ±l)",
+        "meaning": "Dönem (Yarıyıl)",
         "level": "B1",
         "id": 3726
     },
     {
         "word": "Term",
-        "meaning": "Terim, DÃ¶nem",
+        "meaning": "Terim, Dönem",
         "level": "B1",
         "id": 3727
     },
     {
         "word": "Quiz",
-        "meaning": "KÃ¼Ã§Ã¼k sÄ±nav",
+        "meaning": "Küçük sınav",
         "level": "A1",
         "id": 3729
     },
     {
         "word": "Plagiarism",
-        "meaning": "Ä°ntihal, Ã‡alÄ±ntÄ±",
+        "meaning": "İntihal, Çalıntı",
         "level": "C1",
         "id": 3740
     },
     {
         "word": "Originality",
-        "meaning": "Ã–zgÃ¼nlÃ¼k",
+        "meaning": "Özgünlük",
         "level": "C1",
         "id": 3741
     },
     {
         "word": "Creativity",
-        "meaning": "YaratÄ±cÄ±lÄ±k",
+        "meaning": "Yaratıcılık",
         "level": "B2",
         "id": 3742
     },
     {
         "word": "Innovation",
-        "meaning": "Ä°novasyon",
+        "meaning": "İnovasyon",
         "level": "C1",
         "id": 3743
     },
@@ -17557,7 +17557,7 @@
     },
     {
         "word": "Copyright",
-        "meaning": "Telif hakkÄ±",
+        "meaning": "Telif hakkı",
         "level": "C1",
         "id": 3747
     },
@@ -17569,7 +17569,7 @@
     },
     {
         "word": "Value",
-        "meaning": "DeÄŸer",
+        "meaning": "Değer",
         "level": "B1",
         "id": 3758
     },
@@ -17581,25 +17581,25 @@
     },
     {
         "word": "Economics",
-        "meaning": "Ä°ktisat",
+        "meaning": "İktisat",
         "level": "B2",
         "id": 3768
     },
     {
         "word": "Debit",
-        "meaning": "BorÃ§ kaydÄ±",
+        "meaning": "Borç kaydı",
         "level": "C1",
         "id": 3774
     },
     {
         "word": "Deposit",
-        "meaning": "Mevduat, YatÄ±rmak",
+        "meaning": "Mevduat, Yatırmak",
         "level": "C1",
         "id": 3775
     },
     {
         "word": "Withdraw",
-        "meaning": "Para Ã§ekmek",
+        "meaning": "Para çekmek",
         "level": "B2",
         "id": 3776
     },
@@ -17611,7 +17611,7 @@
     },
     {
         "word": "Worth",
-        "meaning": "DeÄŸerinde",
+        "meaning": "Değerinde",
         "level": "B1",
         "id": 3785
     },
@@ -17641,7 +17641,7 @@
     },
     {
         "word": "Design",
-        "meaning": "TasarÄ±m",
+        "meaning": "Tasarım",
         "level": "A2",
         "id": 3798
     },
@@ -17653,7 +17653,7 @@
     },
     {
         "word": "Simulation",
-        "meaning": "SimÃ¼lasyon",
+        "meaning": "Simülasyon",
         "level": "C1",
         "id": 3801
     },
@@ -17665,19 +17665,19 @@
     },
     {
         "word": "Interface",
-        "meaning": "ArayÃ¼z",
+        "meaning": "Arayüz",
         "level": "B2",
         "id": 3806
     },
     {
         "word": "User",
-        "meaning": "KullanÄ±cÄ±",
+        "meaning": "Kullanıcı",
         "level": "A1",
         "id": 3807
     },
     {
         "word": "Hardware",
-        "meaning": "DonanÄ±m",
+        "meaning": "Donanım",
         "level": "B1",
         "id": 3809
     },
@@ -17689,7 +17689,7 @@
     },
     {
         "word": "Database",
-        "meaning": "VeritabanÄ±",
+        "meaning": "Veritabanı",
         "level": "B2",
         "id": 3812
     },
@@ -17701,25 +17701,25 @@
     },
     {
         "word": "Bandwidth",
-        "meaning": "Bant geniÅŸliÄŸi",
+        "meaning": "Bant genişliği",
         "level": "C1",
         "id": 3816
     },
     {
         "word": "Latency",
-        "meaning": "Gecikme sÃ¼resi",
+        "meaning": "Gecikme süresi",
         "level": "C2",
         "id": 3817
     },
     {
         "word": "Encryption",
-        "meaning": "Åifreleme",
+        "meaning": "Şifreleme",
         "level": "C1",
         "id": 3818
     },
     {
         "word": "Loop",
-        "meaning": "DÃ¶ngÃ¼",
+        "meaning": "Döngü",
         "level": "B1",
         "id": 3822
     },
@@ -17737,7 +17737,7 @@
     },
     {
         "word": "Debugging",
-        "meaning": "Hata ayÄ±klama",
+        "meaning": "Hata ayıklama",
         "level": "C1",
         "id": 3829
     },
@@ -17749,13 +17749,13 @@
     },
     {
         "word": "Execution",
-        "meaning": "YÃ¼rÃ¼tme, Ã‡alÄ±ÅŸtÄ±rma",
+        "meaning": "Yürütme, Çalıştırma",
         "level": "C1",
         "id": 3831
     },
     {
         "word": "Runtime",
-        "meaning": "Ã‡alÄ±ÅŸma zamanÄ±",
+        "meaning": "Çalışma zamanı",
         "level": "C1",
         "id": 3832
     },
@@ -17767,19 +17767,19 @@
     },
     {
         "word": "Scalability",
-        "meaning": "Ã–lÃ§eklenebilirlik",
+        "meaning": "Ölçeklenebilirlik",
         "level": "C2",
         "id": 3836
     },
     {
         "word": "Maintenance",
-        "meaning": "BakÄ±m",
+        "meaning": "Bakım",
         "level": "B2",
         "id": 3837
     },
     {
         "word": "Deployment",
-        "meaning": "DaÄŸÄ±tÄ±m, YayÄ±na alma",
+        "meaning": "Dağıtım, Yayına alma",
         "level": "C1",
         "id": 3838
     },
@@ -17791,13 +17791,13 @@
     },
     {
         "word": "Version",
-        "meaning": "Versiyon, SÃ¼rÃ¼m",
+        "meaning": "Versiyon, Sürüm",
         "level": "B1",
         "id": 3840
     },
     {
         "word": "Update",
-        "meaning": "GÃ¼ncelleme",
+        "meaning": "Güncelleme",
         "level": "A2",
         "id": 3841
     },
@@ -17809,7 +17809,7 @@
     },
     {
         "word": "Bug",
-        "meaning": "Hata, BÃ¶cek",
+        "meaning": "Hata, Böcek",
         "level": "A2",
         "id": 3843
     },
@@ -17827,7 +17827,7 @@
     },
     {
         "word": "Authentication",
-        "meaning": "Kimlik doÄŸrulama",
+        "meaning": "Kimlik doğrulama",
         "level": "C1",
         "id": 3852
     },
@@ -17845,7 +17845,7 @@
     },
     {
         "word": "Cache",
-        "meaning": "Ã–nbellek",
+        "meaning": "Önbellek",
         "level": "C1",
         "id": 3857
     },
@@ -17857,13 +17857,13 @@
     },
     {
         "word": "Mechanical",
-        "meaning": "Makine (MÃ¼hendisliÄŸi)",
+        "meaning": "Makine (Mühendisliği)",
         "level": "B2",
         "id": 3860
     },
     {
         "word": "Aerospace",
-        "meaning": "HavacÄ±lÄ±k ve Uzay",
+        "meaning": "Havacılık ve Uzay",
         "level": "C1",
         "id": 3864
     },
@@ -17875,7 +17875,7 @@
     },
     {
         "word": "Manufacturing",
-        "meaning": "Ä°malat, Ãœretim",
+        "meaning": "İmalat, Üretim",
         "level": "B2",
         "id": 3866
     },
@@ -17893,43 +17893,43 @@
     },
     {
         "word": "Sensor",
-        "meaning": "SensÃ¶r, AlgÄ±layÄ±cÄ±",
+        "meaning": "Sensör, Algılayıcı",
         "level": "B2",
         "id": 3874
     },
     {
         "word": "Actuator",
-        "meaning": "Eyleyici, AktÃ¼atÃ¶r",
+        "meaning": "Eyleyici, Aktüatör",
         "level": "C2",
         "id": 3875
     },
     {
         "word": "Velocity",
-        "meaning": "HÄ±z (VektÃ¶rel)",
+        "meaning": "Hız (Vektörel)",
         "level": "C1",
         "id": 3883
     },
     {
         "word": "Acceleration",
-        "meaning": "Ä°vme, HÄ±zlanma",
+        "meaning": "İvme, Hızlanma",
         "level": "C1",
         "id": 3885
     },
     {
         "word": "Friction",
-        "meaning": "SÃ¼rtÃ¼nme",
+        "meaning": "Sürtünme",
         "level": "C1",
         "id": 3886
     },
     {
         "word": "Gravity",
-        "meaning": "YerÃ§ekimi",
+        "meaning": "Yerçekimi",
         "level": "B2",
         "id": 3887
     },
     {
         "word": "Temperature",
-        "meaning": "SÄ±caklÄ±k",
+        "meaning": "Sıcaklık",
         "level": "A2",
         "id": 3889
     },
@@ -17941,7 +17941,7 @@
     },
     {
         "word": "Fluid",
-        "meaning": "AkÄ±ÅŸkan, SÄ±vÄ±",
+        "meaning": "Akışkan, Sıvı",
         "level": "C1",
         "id": 3892
     },
@@ -17953,19 +17953,19 @@
     },
     {
         "word": "Alloy",
-        "meaning": "AlaÅŸÄ±m",
+        "meaning": "Alaşım",
         "level": "C2",
         "id": 3901
     },
     {
         "word": "Composite",
-        "meaning": "Kompozit, BileÅŸik",
+        "meaning": "Kompozit, Bileşik",
         "level": "C1",
         "id": 3902
     },
     {
         "word": "Durability",
-        "meaning": "DayanÄ±klÄ±lÄ±k (Ã–mÃ¼r)",
+        "meaning": "Dayanıklılık (Ömür)",
         "level": "C1",
         "id": 3904
     },
@@ -17983,7 +17983,7 @@
     },
     {
         "word": "Beam",
-        "meaning": "KiriÅŸ",
+        "meaning": "Kiriş",
         "level": "C1",
         "id": 3909
     },
@@ -17995,13 +17995,13 @@
     },
     {
         "word": "Infrastructure",
-        "meaning": "AltyapÄ±",
+        "meaning": "Altyapı",
         "level": "C1",
         "id": 3912
     },
     {
         "word": "Tunnel",
-        "meaning": "TÃ¼nel",
+        "meaning": "Tünel",
         "level": "B1",
         "id": 3914
     },
@@ -18019,19 +18019,19 @@
     },
     {
         "word": "Transport",
-        "meaning": "UlaÅŸÄ±m",
+        "meaning": "Ulaşım",
         "level": "B1",
         "id": 3919
     },
     {
         "word": "Vehicle",
-        "meaning": "AraÃ§",
+        "meaning": "Araç",
         "level": "B1",
         "id": 3920
     },
     {
         "word": "Emission",
-        "meaning": "Emisyon, SalÄ±nÄ±m",
+        "meaning": "Emisyon, Salınım",
         "level": "C1",
         "id": 3922
     },
@@ -18043,25 +18043,25 @@
     },
     {
         "word": "Solar",
-        "meaning": "GÃ¼neÅŸ (Enerjisi)",
+        "meaning": "Güneş (Enerjisi)",
         "level": "B1",
         "id": 3926
     },
     {
         "word": "Wind",
-        "meaning": "RÃ¼zgar",
+        "meaning": "Rüzgar",
         "level": "A2",
         "id": 3927
     },
     {
         "word": "Turbine",
-        "meaning": "TÃ¼rbin",
+        "meaning": "Türbin",
         "level": "C1",
         "id": 3928
     },
     {
         "word": "Generator",
-        "meaning": "JeneratÃ¶r",
+        "meaning": "Jeneratör",
         "level": "B2",
         "id": 3929
     },
@@ -18073,13 +18073,13 @@
     },
     {
         "word": "Transmission",
-        "meaning": "Ä°letim",
+        "meaning": "İletim",
         "level": "C1",
         "id": 3931
     },
     {
         "word": "Grid",
-        "meaning": "Åebeke",
+        "meaning": "Şebeke",
         "level": "C1",
         "id": 3933
     },
@@ -18091,7 +18091,7 @@
     },
     {
         "word": "Switch",
-        "meaning": "Anahtar, Åalter",
+        "meaning": "Anahtar, Şalter",
         "level": "B1",
         "id": 3936
     },
@@ -18103,13 +18103,13 @@
     },
     {
         "word": "Disconnect",
-        "meaning": "BaÄŸlantÄ±yÄ± kesmek",
+        "meaning": "Bağlantıyı kesmek",
         "level": "B2",
         "id": 3940
     },
     {
         "word": "Configure",
-        "meaning": "YapÄ±landÄ±rmak",
+        "meaning": "Yapılandırmak",
         "level": "C1",
         "id": 3942
     },
@@ -18133,13 +18133,13 @@
     },
     {
         "word": "Upgrade",
-        "meaning": "YÃ¼kseltmek",
+        "meaning": "Yükseltmek",
         "level": "B2",
         "id": 3955
     },
     {
         "word": "Modify",
-        "meaning": "DeÄŸiÅŸtirmek",
+        "meaning": "Değiştirmek",
         "level": "B2",
         "id": 3956
     },
@@ -18157,13 +18157,13 @@
     },
     {
         "word": "Verify",
-        "meaning": "DoÄŸrulamak",
+        "meaning": "Doğrulamak",
         "level": "C1",
         "id": 3964
     },
     {
         "word": "Validate",
-        "meaning": "GeÃ§erli kÄ±lmak",
+        "meaning": "Geçerli kılmak",
         "level": "C1",
         "id": 3965
     },
@@ -18175,25 +18175,25 @@
     },
     {
         "word": "Standardize",
-        "meaning": "StandartlaÅŸtÄ±rmak",
+        "meaning": "Standartlaştırmak",
         "level": "C1",
         "id": 3967
     },
     {
         "word": "Diagram",
-        "meaning": "Diyagram, Åema",
+        "meaning": "Diyagram, Şema",
         "level": "B2",
         "id": 3971
     },
     {
         "word": "Schematic",
-        "meaning": "Åematik",
+        "meaning": "Şematik",
         "level": "C2",
         "id": 3972
     },
     {
         "word": "Blueprint",
-        "meaning": "Plan, Teknik Ã§izim",
+        "meaning": "Plan, Teknik çizim",
         "level": "C1",
         "id": 3973
     },
@@ -18223,13 +18223,13 @@
     },
     {
         "word": "Imperial",
-        "meaning": "Ä°ngiliz Ã¶lÃ§Ã¼ birimi",
+        "meaning": "İngiliz ölçü birimi",
         "level": "C2",
         "id": 3980
     },
     {
         "word": "Accuracy",
-        "meaning": "DoÄŸruluk",
+        "meaning": "Doğruluk",
         "level": "B2",
         "id": 3981
     },
@@ -18259,7 +18259,7 @@
     },
     {
         "word": "Variance",
-        "meaning": "Varyans, DeÄŸiÅŸiklik",
+        "meaning": "Varyans, Değişiklik",
         "level": "C2",
         "id": 3987
     },
@@ -18271,13 +18271,13 @@
     },
     {
         "word": "Mode",
-        "meaning": "Mod (Ä°statistik)",
+        "meaning": "Mod (İstatistik)",
         "level": "C1",
         "id": 3991
     },
     {
         "word": "Probability",
-        "meaning": "OlasÄ±lÄ±k",
+        "meaning": "Olasılık",
         "level": "B2",
         "id": 3994
     },
@@ -18289,7 +18289,7 @@
     },
     {
         "word": "Stochastic",
-        "meaning": "Stokastik, RastlantÄ±sal",
+        "meaning": "Stokastik, Rastlantısal",
         "level": "C2",
         "id": 3996
     },
@@ -18301,13 +18301,13 @@
     },
     {
         "word": "Linear",
-        "meaning": "DoÄŸrusal",
+        "meaning": "Doğrusal",
         "level": "C1",
         "id": 3998
     },
     {
         "word": "Nonlinear",
-        "meaning": "DoÄŸrusal olmayan",
+        "meaning": "Doğrusal olmayan",
         "level": "C1",
         "id": 3999
     },
@@ -18319,19 +18319,19 @@
     },
     {
         "word": "Formula",
-        "meaning": "FormÃ¼l",
+        "meaning": "Formül",
         "level": "B1",
         "id": 4001
     },
     {
         "word": "Coefficient",
-        "meaning": "KatsayÄ±",
+        "meaning": "Katsayı",
         "level": "C2",
         "id": 4004
     },
     {
         "word": "Exponent",
-        "meaning": "Ãœs (Matematik)",
+        "meaning": "Üs (Matematik)",
         "level": "C2",
         "id": 4005
     },
@@ -18343,7 +18343,7 @@
     },
     {
         "word": "Calculus",
-        "meaning": "KalkÃ¼lÃ¼s",
+        "meaning": "Kalkülüs",
         "level": "C2",
         "id": 4007
     },
@@ -18421,7 +18421,7 @@
     },
     {
         "word": "Relativity",
-        "meaning": "GÃ¶relilik",
+        "meaning": "Görelilik",
         "level": "C2",
         "id": 4023
     },
@@ -18433,19 +18433,19 @@
     },
     {
         "word": "Get along",
-        "meaning": "Ä°yi geÃ§inmek",
+        "meaning": "İyi geçinmek",
         "level": "B1",
         "id": 4025
     },
     {
         "word": "Look forward to",
-        "meaning": "DÃ¶rt gÃ¶zle beklemek",
+        "meaning": "Dört gözle beklemek",
         "level": "B1",
         "id": 4026
     },
     {
         "word": "Run out of",
-        "meaning": "TÃ¼kenmek",
+        "meaning": "Tükenmek",
         "level": "B1",
         "id": 4027
     },
@@ -18457,7 +18457,7 @@
     },
     {
         "word": "Call off",
-        "meaning": "Ä°ptal etmek",
+        "meaning": "İptal etmek",
         "level": "B2",
         "id": 4029
     },
@@ -18469,31 +18469,31 @@
     },
     {
         "word": "Break down",
-        "meaning": "Bozulmak, ParÃ§alanmak",
+        "meaning": "Bozulmak, Parçalanmak",
         "level": "B1",
         "id": 4031
     },
     {
         "word": "Bring up",
-        "meaning": "YetiÅŸtirmek, GÃ¼ndeme getirmek",
+        "meaning": "Yetiştirmek, Gündeme getirmek",
         "level": "B2",
         "id": 4032
     },
     {
         "word": "Figure out",
-        "meaning": "Ã‡Ã¶zmek, Anlamak",
+        "meaning": "Çözmek, Anlamak",
         "level": "B1",
         "id": 4033
     },
     {
         "word": "Find out",
-        "meaning": "Ã–ÄŸrenmek, KeÅŸfetmek",
+        "meaning": "Öğrenmek, Keşfetmek",
         "level": "A2",
         "id": 4034
     },
     {
         "word": "Get over",
-        "meaning": "Atlatmak, Ä°yileÅŸmek",
+        "meaning": "Atlatmak, İyileşmek",
         "level": "B1",
         "id": 4035
     },
@@ -18511,7 +18511,7 @@
     },
     {
         "word": "Grow up",
-        "meaning": "BÃ¼yÃ¼mek",
+        "meaning": "Büyümek",
         "level": "A2",
         "id": 4038
     },
@@ -18523,7 +18523,7 @@
     },
     {
         "word": "Look after",
-        "meaning": "Bakmak, Ä°lgilenmek",
+        "meaning": "Bakmak, İlgilenmek",
         "level": "A2",
         "id": 4040
     },
@@ -18547,7 +18547,7 @@
     },
     {
         "word": "Pass out",
-        "meaning": "BayÄ±lmak, DaÄŸÄ±tmak",
+        "meaning": "Bayılmak, Dağıtmak",
         "level": "B2",
         "id": 4044
     },
@@ -18559,7 +18559,7 @@
     },
     {
         "word": "Point out",
-        "meaning": "Ä°ÅŸaret etmek",
+        "meaning": "İşaret etmek",
         "level": "B2",
         "id": 4046
     },
@@ -18571,25 +18571,25 @@
     },
     {
         "word": "Run into",
-        "meaning": "KarÅŸÄ±laÅŸmak",
+        "meaning": "Karşılaşmak",
         "level": "B1",
         "id": 4048
     },
     {
         "word": "Set up",
-        "meaning": "Kurmak, DÃ¼zenlemek",
+        "meaning": "Kurmak, Düzenlemek",
         "level": "B1",
         "id": 4049
     },
     {
         "word": "Show up",
-        "meaning": "GÃ¶rÃ¼nmek, Gelmek",
+        "meaning": "Görünmek, Gelmek",
         "level": "B1",
         "id": 4050
     },
     {
         "word": "Take off",
-        "meaning": "UÃ§aÄŸÄ±n kalkmasÄ±, Ã‡Ä±karmak",
+        "meaning": "Uçağın kalkması, Çıkarmak",
         "level": "A2",
         "id": 4051
     },
@@ -18601,13 +18601,13 @@
     },
     {
         "word": "Turn down",
-        "meaning": "Reddetmek, Sesini kÄ±smak",
+        "meaning": "Reddetmek, Sesini kısmak",
         "level": "B1",
         "id": 4053
     },
     {
         "word": "Turn on",
-        "meaning": "AÃ§mak",
+        "meaning": "Açmak",
         "level": "A2",
         "id": 4054
     },
@@ -18619,31 +18619,31 @@
     },
     {
         "word": "Work out",
-        "meaning": "Ã‡Ã¶zmek, Egzersiz yapmak",
+        "meaning": "Çözmek, Egzersiz yapmak",
         "level": "B1",
         "id": 4056
     },
     {
         "word": "Break up",
-        "meaning": "AyrÄ±lmak",
+        "meaning": "Ayrılmak",
         "level": "B1",
         "id": 4057
     },
     {
         "word": "Calm down",
-        "meaning": "SakinleÅŸmek",
+        "meaning": "Sakinleşmek",
         "level": "B1",
         "id": 4058
     },
     {
         "word": "Check in",
-        "meaning": "GiriÅŸ yapmak",
+        "meaning": "Giriş yapmak",
         "level": "B1",
         "id": 4059
     },
     {
         "word": "Check out",
-        "meaning": "Ã‡Ä±kÄ±ÅŸ yapmak, Kontrol etmek",
+        "meaning": "Çıkış yapmak, Kontrol etmek",
         "level": "B1",
         "id": 4060
     },
@@ -18655,7 +18655,7 @@
     },
     {
         "word": "Come across",
-        "meaning": "KarÅŸÄ±laÅŸmak",
+        "meaning": "Karşılaşmak",
         "level": "B2",
         "id": 4062
     },
@@ -18667,7 +18667,7 @@
     },
     {
         "word": "Count on",
-        "meaning": "GÃ¼venmek",
+        "meaning": "Güvenmek",
         "level": "B1",
         "id": 4064
     },
@@ -18685,25 +18685,25 @@
     },
     {
         "word": "Drop off",
-        "meaning": "BÄ±rakmak, Uyuyakalmak",
+        "meaning": "Bırakmak, Uyuyakalmak",
         "level": "B1",
         "id": 4067
     },
     {
         "word": "Eat out",
-        "meaning": "DÄ±ÅŸarÄ±da yemek",
+        "meaning": "Dışarıda yemek",
         "level": "A2",
         "id": 4068
     },
     {
         "word": "End up",
-        "meaning": "SonuÃ§lanmak",
+        "meaning": "Sonuçlanmak",
         "level": "B2",
         "id": 4069
     },
     {
         "word": "Fall apart",
-        "meaning": "ParÃ§alanmak",
+        "meaning": "Parçalanmak",
         "level": "B2",
         "id": 4070
     },
@@ -18715,7 +18715,7 @@
     },
     {
         "word": "Get back",
-        "meaning": "Geri dÃ¶nmek, Geri almak",
+        "meaning": "Geri dönmek, Geri almak",
         "level": "A2",
         "id": 4072
     },
@@ -18727,7 +18727,7 @@
     },
     {
         "word": "Get out",
-        "meaning": "Ã‡Ä±kmak",
+        "meaning": "Çıkmak",
         "level": "A1",
         "id": 4074
     },
@@ -18745,25 +18745,25 @@
     },
     {
         "word": "Go away",
-        "meaning": "UzaklaÅŸmak",
+        "meaning": "Uzaklaşmak",
         "level": "A2",
         "id": 4077
     },
     {
         "word": "Go back",
-        "meaning": "Geri dÃ¶nmek",
+        "meaning": "Geri dönmek",
         "level": "A2",
         "id": 4078
     },
     {
         "word": "Go out",
-        "meaning": "DÄ±ÅŸarÄ± Ã§Ä±kmak",
+        "meaning": "Dışarı çıkmak",
         "level": "A1",
         "id": 4079
     },
     {
         "word": "Hang out",
-        "meaning": "TakÄ±lmak",
+        "meaning": "Takılmak",
         "level": "B1",
         "id": 4080
     },
@@ -18787,19 +18787,19 @@
     },
     {
         "word": "Let down",
-        "meaning": "Hayal kÄ±rÄ±klÄ±ÄŸÄ±na uÄŸratmak",
+        "meaning": "Hayal kırıklığına uğratmak",
         "level": "B2",
         "id": 4084
     },
     {
         "word": "Look back",
-        "meaning": "GeÃ§miÅŸe bakmak",
+        "meaning": "Geçmişe bakmak",
         "level": "B1",
         "id": 4085
     },
     {
         "word": "Pay back",
-        "meaning": "Geri Ã¶demek",
+        "meaning": "Geri ödemek",
         "level": "B1",
         "id": 4086
     },
@@ -18817,19 +18817,19 @@
     },
     {
         "word": "Put out",
-        "meaning": "SÃ¶ndÃ¼rmek",
+        "meaning": "Söndürmek",
         "level": "B2",
         "id": 4089
     },
     {
         "word": "Run away",
-        "meaning": "KaÃ§mak",
+        "meaning": "Kaçmak",
         "level": "A2",
         "id": 4090
     },
     {
         "word": "Set off",
-        "meaning": "Yola Ã§Ä±kmak",
+        "meaning": "Yola çıkmak",
         "level": "B2",
         "id": 4091
     },
@@ -18841,13 +18841,13 @@
     },
     {
         "word": "Stand up",
-        "meaning": "AyaÄŸa kalkmak",
+        "meaning": "Ayağa kalkmak",
         "level": "A1",
         "id": 4093
     },
     {
         "word": "Switch on",
-        "meaning": "AÃ§mak (Anahtar)",
+        "meaning": "Açmak (Anahtar)",
         "level": "A2",
         "id": 4094
     },
@@ -18865,7 +18865,7 @@
     },
     {
         "word": "Take out",
-        "meaning": "Ã‡Ä±karmak, GÃ¶tÃ¼rmek",
+        "meaning": "Çıkarmak, Götürmek",
         "level": "A2",
         "id": 4097
     },
@@ -18877,13 +18877,13 @@
     },
     {
         "word": "Try on",
-        "meaning": "Denemek (KÄ±yafet)",
+        "meaning": "Denemek (Kıyafet)",
         "level": "A2",
         "id": 4099
     },
     {
         "word": "Turn up",
-        "meaning": "Varmak, Sesi aÃ§mak",
+        "meaning": "Varmak, Sesi açmak",
         "level": "B1",
         "id": 4100
     },
@@ -18907,55 +18907,55 @@
     },
     {
         "word": "Piece of cake",
-        "meaning": "Ã‡ocuk oyuncaÄŸÄ±",
+        "meaning": "Çocuk oyuncağı",
         "level": "C1",
         "id": 4104
     },
     {
         "word": "Break the ice",
-        "meaning": "BuzlarÄ± eritmek",
+        "meaning": "Buzları eritmek",
         "level": "C1",
         "id": 4105
     },
     {
         "word": "Cost an arm and a leg",
-        "meaning": "AteÅŸ pahasÄ±",
+        "meaning": "Ateş pahası",
         "level": "C1",
         "id": 4106
     },
     {
         "word": "Hit the sack",
-        "meaning": "YatÄ±p uyumak",
+        "meaning": "Yatıp uyumak",
         "level": "C1",
         "id": 4107
     },
     {
         "word": "Let the cat out of the bag",
-        "meaning": "AÄŸzÄ±ndan kaÃ§Ä±rmak",
+        "meaning": "Ağzından kaçırmak",
         "level": "C1",
         "id": 4108
     },
     {
         "word": "Once in a blue moon",
-        "meaning": "Ayda yÄ±lda bir",
+        "meaning": "Ayda yılda bir",
         "level": "C1",
         "id": 4109
     },
     {
         "word": "Under the weather",
-        "meaning": "RahatsÄ±z, Hasta",
+        "meaning": "Rahatsız, Hasta",
         "level": "C1",
         "id": 4110
     },
     {
         "word": "Bite the bullet",
-        "meaning": "DiÅŸini sÄ±kmak, Katlanmak",
+        "meaning": "Dişini sıkmak, Katlanmak",
         "level": "C2",
         "id": 4111
     },
     {
         "word": "Cut corners",
-        "meaning": "Ä°ÅŸin kolayÄ±na kaÃ§mak",
+        "meaning": "İşin kolayına kaçmak",
         "level": "C1",
         "id": 4112
     },
@@ -18967,31 +18967,31 @@
     },
     {
         "word": "Miss the boat",
-        "meaning": "FÄ±rsatÄ± kaÃ§Ä±rmak",
+        "meaning": "Fırsatı kaçırmak",
         "level": "C1",
         "id": 4114
     },
     {
         "word": "Pull someone's leg",
-        "meaning": "Biriyle dalga geÃ§mek",
+        "meaning": "Biriyle dalga geçmek",
         "level": "C1",
         "id": 4115
     },
     {
         "word": "Speak of the devil",
-        "meaning": "Ä°ti an Ã§omaÄŸÄ± hazÄ±rla",
+        "meaning": "İti an çomağı hazırla",
         "level": "C1",
         "id": 4116
     },
     {
         "word": "Time flies",
-        "meaning": "Zaman su gibi akÄ±p geÃ§iyor",
+        "meaning": "Zaman su gibi akıp geçiyor",
         "level": "B2",
         "id": 4117
     },
     {
         "word": "To make matters worse",
-        "meaning": "Daha da kÃ¶tÃ¼sÃ¼",
+        "meaning": "Daha da kötüsü",
         "level": "C1",
         "id": 4118
     },
@@ -19003,7 +19003,7 @@
     },
     {
         "word": "Wrap your head around something",
-        "meaning": "KafasÄ± basmak",
+        "meaning": "Kafası basmak",
         "level": "C2",
         "id": 4120
     },
@@ -19015,31 +19015,31 @@
     },
     {
         "word": "Get out of hand",
-        "meaning": "Kontrolden Ã§Ä±kmak",
+        "meaning": "Kontrolden çıkmak",
         "level": "C1",
         "id": 4122
     },
     {
         "word": "Go back to the drawing board",
-        "meaning": "Sil baÅŸtan baÅŸlamak",
+        "meaning": "Sil baştan başlamak",
         "level": "C1",
         "id": 4123
     },
     {
         "word": "Hit the nail on the head",
-        "meaning": "Tam Ã¼stÃ¼ne basmak",
+        "meaning": "Tam üstüne basmak",
         "level": "C1",
         "id": 4124
     },
     {
         "word": "Leave no stone unturned",
-        "meaning": "BakÄ±lmadÄ±k yer bÄ±rakmamak",
+        "meaning": "Bakılmadık yer bırakmamak",
         "level": "C2",
         "id": 4125
     },
     {
         "word": "Make a long story short",
-        "meaning": "Uzun lafÄ±n kÄ±sasÄ±",
+        "meaning": "Uzun lafın kısası",
         "level": "B2",
         "id": 4126
     },
@@ -19051,7 +19051,7 @@
     },
     {
         "word": "On the ball",
-        "meaning": "Ä°ÅŸini bilen, UyanÄ±k",
+        "meaning": "İşini bilen, Uyanık",
         "level": "C1",
         "id": 4128
     },
@@ -19063,13 +19063,13 @@
     },
     {
         "word": "So far so good",
-        "meaning": "Åu ana kadar her ÅŸey yolunda",
+        "meaning": "Şu ana kadar her şey yolunda",
         "level": "B1",
         "id": 4130
     },
     {
         "word": "The best of both worlds",
-        "meaning": "Her iki tarafÄ±n da en iyisi",
+        "meaning": "Her iki tarafın da en iyisi",
         "level": "C1",
         "id": 4131
     },
@@ -19081,19 +19081,19 @@
     },
     {
         "word": "Add fuel to the fire",
-        "meaning": "YangÄ±na kÃ¶rÃ¼kle gitmek",
+        "meaning": "Yangına körükle gitmek",
         "level": "C2",
         "id": 4133
     },
     {
         "word": "All ears",
-        "meaning": "Can kulaÄŸÄ±yla dinlemek",
+        "meaning": "Can kulağıyla dinlemek",
         "level": "C1",
         "id": 4134
     },
     {
         "word": "At the drop of a hat",
-        "meaning": "Hemen, AnÄ±nda",
+        "meaning": "Hemen, Anında",
         "level": "C2",
         "id": 4135
     },
@@ -19105,43 +19105,43 @@
     },
     {
         "word": "Barking up the wrong tree",
-        "meaning": "YanlÄ±ÅŸ kapÄ±yÄ± Ã§almak",
+        "meaning": "Yanlış kapıyı çalmak",
         "level": "C2",
         "id": 4137
     },
     {
         "word": "Be in the same boat",
-        "meaning": "AynÄ± gemide olmak",
+        "meaning": "Aynı gemide olmak",
         "level": "C1",
         "id": 4138
     },
     {
         "word": "Beat around the bush",
-        "meaning": "LafÄ± dolandÄ±rmak",
+        "meaning": "Lafı dolandırmak",
         "level": "C1",
         "id": 4139
     },
     {
         "word": "Better late than never",
-        "meaning": "GeÃ§ olsun gÃ¼Ã§ olmasÄ±n",
+        "meaning": "Geç olsun güç olmasın",
         "level": "B1",
         "id": 4140
     },
     {
         "word": "Bite off more than you can chew",
-        "meaning": "Boyundan bÃ¼yÃ¼k iÅŸe kalkÄ±ÅŸmak",
+        "meaning": "Boyundan büyük işe kalkışmak",
         "level": "C2",
         "id": 4141
     },
     {
         "word": "Blessing in disguise",
-        "meaning": "Her ÅŸerde bir hayÄ±r vardÄ±r",
+        "meaning": "Her şerde bir hayır vardır",
         "level": "C2",
         "id": 4142
     },
     {
         "word": "Burn the midnight oil",
-        "meaning": "Gece geÃ§ saatlere kadar Ã§alÄ±ÅŸmak",
+        "meaning": "Gece geç saatlere kadar çalışmak",
         "level": "C1",
         "id": 4143
     },
@@ -19153,43 +19153,43 @@
     },
     {
         "word": "Catch-22",
-        "meaning": "Ã‡Ä±kmaz sokak",
+        "meaning": "Çıkmaz sokak",
         "level": "C2",
         "id": 4145
     },
     {
         "word": "Cold shoulder",
-        "meaning": "SoÄŸuk davranmak",
+        "meaning": "Soğuk davranmak",
         "level": "C1",
         "id": 4146
     },
     {
         "word": "Cry wolf",
-        "meaning": "YalancÄ± Ã§obanlÄ±k yapmak",
+        "meaning": "Yalancı çobanlık yapmak",
         "level": "C2",
         "id": 4147
     },
     {
         "word": "Devil's advocate",
-        "meaning": "ÅeytanÄ±n avukatÄ±",
+        "meaning": "Şeytanın avukatı",
         "level": "C2",
         "id": 4148
     },
     {
         "word": "Don't count your chickens before they hatch",
-        "meaning": "Dereyi gÃ¶rmeden paÃ§alarÄ± sÄ±vama",
+        "meaning": "Dereyi görmeden paçaları sıvama",
         "level": "C1",
         "id": 4149
     },
     {
         "word": "Don't judge a book by its cover",
-        "meaning": "DÄ±ÅŸ gÃ¶rÃ¼nÃ¼ÅŸe aldanma",
+        "meaning": "Dış görünüşe aldanma",
         "level": "B2",
         "id": 4150
     },
     {
         "word": "Don't put all your eggs in one basket",
-        "meaning": "BÃ¼tÃ¼n yumurtalarÄ± aynÄ± sepete koyma",
+        "meaning": "Bütün yumurtaları aynı sepete koyma",
         "level": "C1",
         "id": 4151
     },
@@ -19201,19 +19201,19 @@
     },
     {
         "word": "Elvis has left the building",
-        "meaning": "GÃ¶steri bitti",
+        "meaning": "Gösteri bitti",
         "level": "C2",
         "id": 4153
     },
     {
         "word": "Every cloud has a silver lining",
-        "meaning": "Her iÅŸte bir hayÄ±r vardÄ±r",
+        "meaning": "Her işte bir hayır vardır",
         "level": "C1",
         "id": 4154
     },
     {
         "word": "Far cry from",
-        "meaning": "Ã‡ok farklÄ±, AlakasÄ±z",
+        "meaning": "Çok farklı, Alakasız",
         "level": "C2",
         "id": 4155
     },
@@ -19225,13 +19225,13 @@
     },
     {
         "word": "Give the benefit of the doubt",
-        "meaning": "ÅÃ¼phe avantajÄ±nÄ± kullanmak, Ä°nanmayÄ± seÃ§mek",
+        "meaning": "Şüphe avantajını kullanmak, İnanmayı seçmek",
         "level": "C2",
         "id": 4157
     },
     {
         "word": "Hear it on the grapevine",
-        "meaning": "KulaÄŸÄ±na Ã§alÄ±nmak",
+        "meaning": "Kulağına çalınmak",
         "level": "C2",
         "id": 4158
     },
@@ -19243,13 +19243,13 @@
     },
     {
         "word": "It takes two to tango",
-        "meaning": "Tek taraflÄ± olmaz",
+        "meaning": "Tek taraflı olmaz",
         "level": "C2",
         "id": 4160
     },
     {
         "word": "Jump on the bandwagon",
-        "meaning": "AkÄ±ma kapÄ±lmak, Modaya uymak",
+        "meaning": "Akıma kapılmak, Modaya uymak",
         "level": "C1",
         "id": 4161
     },
@@ -19261,37 +19261,37 @@
     },
     {
         "word": "Kill two birds with one stone",
-        "meaning": "Bir taÅŸla iki kuÅŸ vurmak",
+        "meaning": "Bir taşla iki kuş vurmak",
         "level": "B2",
         "id": 4163
     },
     {
         "word": "Last straw",
-        "meaning": "BardaÄŸÄ± taÅŸÄ±ran son damla",
+        "meaning": "Bardağı taşıran son damla",
         "level": "C1",
         "id": 4164
     },
     {
         "word": "Method to my madness",
-        "meaning": "Kendimce bildiÄŸim bir yol",
+        "meaning": "Kendimce bildiğim bir yol",
         "level": "C2",
         "id": 4165
     },
     {
         "word": "Off the hook",
-        "meaning": "PaÃ§ayÄ± kurtarmak",
+        "meaning": "Paçayı kurtarmak",
         "level": "C1",
         "id": 4166
     },
     {
         "word": "On the fence",
-        "meaning": "KararsÄ±z",
+        "meaning": "Kararsız",
         "level": "C1",
         "id": 4167
     },
     {
         "word": "Play it by ear",
-        "meaning": "GeliÅŸine gÃ¶re hareket etmek",
+        "meaning": "Gelişine göre hareket etmek",
         "level": "C2",
         "id": 4168
     },
@@ -19303,25 +19303,25 @@
     },
     {
         "word": "About",
-        "meaning": "HakkÄ±nda",
+        "meaning": "Hakkında",
         "level": "A1",
         "id": 4171
     },
     {
         "word": "Above",
-        "meaning": "YukarÄ±da",
+        "meaning": "Yukarıda",
         "level": "A1",
         "id": 4172
     },
     {
         "word": "According",
-        "meaning": "GÃ¶re",
+        "meaning": "Göre",
         "level": "B1",
         "id": 4174
     },
     {
         "word": "Across",
-        "meaning": "KarÅŸÄ±ya",
+        "meaning": "Karşıya",
         "level": "A1",
         "id": 4176
     },
@@ -19339,7 +19339,7 @@
     },
     {
         "word": "Administration",
-        "meaning": "YÃ¶netim",
+        "meaning": "Yönetim",
         "level": "B2",
         "id": 4183
     },
@@ -19357,7 +19357,7 @@
     },
     {
         "word": "Age",
-        "meaning": "YaÅŸ",
+        "meaning": "Yaş",
         "level": "A1",
         "id": 4190
     },
@@ -19369,7 +19369,7 @@
     },
     {
         "word": "Ago",
-        "meaning": "Ã–nce",
+        "meaning": "Önce",
         "level": "A1",
         "id": 4193
     },
@@ -19393,7 +19393,7 @@
     },
     {
         "word": "Anything",
-        "meaning": "Herhangi bir ÅŸey",
+        "meaning": "Herhangi bir şey",
         "level": "A1",
         "id": 4217
     },
@@ -19405,7 +19405,7 @@
     },
     {
         "word": "Around",
-        "meaning": "EtrafÄ±nda",
+        "meaning": "Etrafında",
         "level": "A1",
         "id": 4224
     },
@@ -19435,7 +19435,7 @@
     },
     {
         "word": "Because",
-        "meaning": "Ã‡Ã¼nkÃ¼",
+        "meaning": "Çünkü",
         "level": "A1",
         "id": 4252
     },
@@ -19453,7 +19453,7 @@
     },
     {
         "word": "Day",
-        "meaning": "GÃ¼n",
+        "meaning": "Gün",
         "level": "A1",
         "id": 4368
     },
@@ -19489,13 +19489,13 @@
     },
     {
         "word": "Describe",
-        "meaning": "TanÄ±mlamak",
+        "meaning": "Tanımlamak",
         "level": "A2",
         "id": 4381
     },
     {
         "word": "Despite",
-        "meaning": "RaÄŸmen",
+        "meaning": "Rağmen",
         "level": "B1",
         "id": 4383
     },
@@ -19513,13 +19513,13 @@
     },
     {
         "word": "Development",
-        "meaning": "GeliÅŸim",
+        "meaning": "Gelişim",
         "level": "A2",
         "id": 4387
     },
     {
         "word": "Die",
-        "meaning": "Ã–lmek",
+        "meaning": "Ölmek",
         "level": "A1",
         "id": 4388
     },
@@ -19531,7 +19531,7 @@
     },
     {
         "word": "Different",
-        "meaning": "FarklÄ±",
+        "meaning": "Farklı",
         "level": "A1",
         "id": 4390
     },
@@ -19543,13 +19543,13 @@
     },
     {
         "word": "Dinner",
-        "meaning": "AkÅŸam yemeÄŸi",
+        "meaning": "Akşam yemeği",
         "level": "A1",
         "id": 4392
     },
     {
         "word": "Discuss",
-        "meaning": "TartÄ±ÅŸmak",
+        "meaning": "Tartışmak",
         "level": "A2",
         "id": 4396
     },
@@ -19567,31 +19567,31 @@
     },
     {
         "word": "Dog",
-        "meaning": "KÃ¶pek",
+        "meaning": "Köpek",
         "level": "A1",
         "id": 4401
     },
     {
         "word": "Door",
-        "meaning": "KapÄ±",
+        "meaning": "Kapı",
         "level": "A1",
         "id": 4402
     },
     {
         "word": "Down",
-        "meaning": "AÅŸaÄŸÄ±",
+        "meaning": "Aşağı",
         "level": "A1",
         "id": 4403
     },
     {
         "word": "Draw",
-        "meaning": "Ã‡izmek",
+        "meaning": "Çizmek",
         "level": "A1",
         "id": 4404
     },
     {
         "word": "During",
-        "meaning": "SÄ±rasÄ±nda",
+        "meaning": "Sırasında",
         "level": "A2",
         "id": 4409
     },
@@ -19609,7 +19609,7 @@
     },
     {
         "word": "East",
-        "meaning": "DoÄŸu",
+        "meaning": "Doğu",
         "level": "A1",
         "id": 4412
     },
@@ -19639,7 +19639,7 @@
     },
     {
         "word": "Afternoon",
-        "meaning": "Ã–ÄŸleden sonra",
+        "meaning": "Öğleden sonra",
         "level": "A1",
         "id": 4421
     },
@@ -19657,7 +19657,7 @@
     },
     {
         "word": "Bakery",
-        "meaning": "FÄ±rÄ±n",
+        "meaning": "Fırın",
         "level": "A2",
         "id": 4429
     },
@@ -19669,7 +19669,7 @@
     },
     {
         "word": "Beef",
-        "meaning": "SÄ±ÄŸÄ±r eti",
+        "meaning": "Sığır eti",
         "level": "A2",
         "id": 4435
     },
@@ -19681,7 +19681,7 @@
     },
     {
         "word": "Beverage",
-        "meaning": "Ä°Ã§ecek",
+        "meaning": "İçecek",
         "level": "B1",
         "id": 4438
     },
@@ -19699,7 +19699,7 @@
     },
     {
         "word": "Boyfriend",
-        "meaning": "Erkek arkadaÅŸ",
+        "meaning": "Erkek arkadaş",
         "level": "A1",
         "id": 4457
     },
@@ -19717,7 +19717,7 @@
     },
     {
         "word": "Check-in",
-        "meaning": "GiriÅŸ iÅŸlemi",
+        "meaning": "Giriş işlemi",
         "level": "A2",
         "id": 4484
     },
@@ -19729,19 +19729,19 @@
     },
     {
         "word": "Chef",
-        "meaning": "Åef",
+        "meaning": "Şef",
         "level": "A2",
         "id": 4486
     },
     {
         "word": "Chips",
-        "meaning": "Cips, Patates kÄ±zartmasÄ±",
+        "meaning": "Cips, Patates kızartması",
         "level": "A2",
         "id": 4488
     },
     {
         "word": "Cleaner",
-        "meaning": "TemizlikÃ§i",
+        "meaning": "Temizlikçi",
         "level": "A2",
         "id": 4495
     },
@@ -19753,13 +19753,13 @@
     },
     {
         "word": "Comic",
-        "meaning": "Ã‡izgi roman",
+        "meaning": "Çizgi roman",
         "level": "B1",
         "id": 4508
     },
     {
         "word": "Credit card",
-        "meaning": "Kredi kartÄ±",
+        "meaning": "Kredi kartı",
         "level": "A1",
         "id": 4525
     },
@@ -19783,37 +19783,37 @@
     },
     {
         "word": "Department store",
-        "meaning": "BÃ¼yÃ¼k maÄŸaza",
+        "meaning": "Büyük mağaza",
         "level": "A2",
         "id": 4552
     },
     {
         "word": "Departure",
-        "meaning": "KalkÄ±ÅŸ",
+        "meaning": "Kalkış",
         "level": "B1",
         "id": 4553
     },
     {
         "word": "Desk",
-        "meaning": "SÄ±ra, Masa",
+        "meaning": "Sıra, Masa",
         "level": "A1",
         "id": 4555
     },
     {
         "word": "Dessert",
-        "meaning": "TatlÄ±",
+        "meaning": "Tatlı",
         "level": "A2",
         "id": 4556
     },
     {
         "word": "Destination",
-        "meaning": "VarÄ±ÅŸ yeri",
+        "meaning": "Varış yeri",
         "level": "B1",
         "id": 4557
     },
     {
         "word": "Dictionary",
-        "meaning": "SÃ¶zlÃ¼k",
+        "meaning": "Sözlük",
         "level": "A1",
         "id": 4559
     },
@@ -19843,7 +19843,7 @@
     },
     {
         "word": "Discount",
-        "meaning": "Ä°ndirim",
+        "meaning": "İndirim",
         "level": "B1",
         "id": 4570
     },
@@ -19867,7 +19867,7 @@
     },
     {
         "word": "Drawer",
-        "meaning": "Ã‡ekmece",
+        "meaning": "Çekmece",
         "level": "B1",
         "id": 4581
     },
@@ -19879,19 +19879,19 @@
     },
     {
         "word": "Dressed",
-        "meaning": "GiyinmiÅŸ",
+        "meaning": "Giyinmiş",
         "level": "A2",
         "id": 4585
     },
     {
         "word": "Drink",
-        "meaning": "Ä°Ã§mek",
+        "meaning": "İçmek",
         "level": "A1",
         "id": 4586
     },
     {
         "word": "Driver",
-        "meaning": "SÃ¼rÃ¼cÃ¼",
+        "meaning": "Sürücü",
         "level": "A1",
         "id": 4588
     },
@@ -19909,7 +19909,7 @@
     },
     {
         "word": "Duck",
-        "meaning": "Ã–rdek",
+        "meaning": "Ördek",
         "level": "A2",
         "id": 4593
     },
@@ -19927,13 +19927,13 @@
     },
     {
         "word": "Earache",
-        "meaning": "Kulak aÄŸrÄ±sÄ±",
+        "meaning": "Kulak ağrısı",
         "level": "A2",
         "id": 4597
     },
     {
         "word": "Earring",
-        "meaning": "KÃ¼pe",
+        "meaning": "Küpe",
         "level": "B1",
         "id": 4600
     },
@@ -19957,7 +19957,7 @@
     },
     {
         "word": "Exit",
-        "meaning": "Ã‡Ä±kÄ±ÅŸ",
+        "meaning": "Çıkış",
         "level": "B1",
         "id": 4627
     },
@@ -19981,31 +19981,31 @@
     },
     {
         "word": "French",
-        "meaning": "FransÄ±z(ca)",
+        "meaning": "Fransız(ca)",
         "level": "A1",
         "id": 4683
     },
     {
         "word": "Fried",
-        "meaning": "KÄ±zarmÄ±ÅŸ",
+        "meaning": "Kızarmış",
         "level": "A2",
         "id": 4686
     },
     {
         "word": "Acid rain",
-        "meaning": "Asit yaÄŸmuru",
+        "meaning": "Asit yağmuru",
         "level": "B2",
         "id": 4687
     },
     {
         "word": "Agriculture",
-        "meaning": "TarÄ±m",
+        "meaning": "Tarım",
         "level": "B1",
         "id": 4688
     },
     {
         "word": "Ant",
-        "meaning": "KarÄ±nca",
+        "meaning": "Karınca",
         "level": "A2",
         "id": 4691
     },
@@ -20017,13 +20017,13 @@
     },
     {
         "word": "Avalanche",
-        "meaning": "Ã‡Ä±ÄŸ",
+        "meaning": "Çığ",
         "level": "C1",
         "id": 4694
     },
     {
         "word": "Bark",
-        "meaning": "AÄŸaÃ§ kabuÄŸu, Havlamak",
+        "meaning": "Ağaç kabuğu, Havlamak",
         "level": "B2",
         "id": 4696
     },
@@ -20035,31 +20035,31 @@
     },
     {
         "word": "Bay",
-        "meaning": "KÃ¶rfez",
+        "meaning": "Körfez",
         "level": "B1",
         "id": 4698
     },
     {
         "word": "Bee",
-        "meaning": "ArÄ±",
+        "meaning": "Arı",
         "level": "A1",
         "id": 4701
     },
     {
         "word": "Biodiversity",
-        "meaning": "BiyoÃ§eÅŸitlilik",
+        "meaning": "Biyoçeşitlilik",
         "level": "C1",
         "id": 4703
     },
     {
         "word": "Blizzard",
-        "meaning": "Tipi, Kar fÄ±rtÄ±nasÄ±",
+        "meaning": "Tipi, Kar fırtınası",
         "level": "C1",
         "id": 4705
     },
     {
         "word": "Blossom",
-        "meaning": "Ã‡iÃ§ek aÃ§mak",
+        "meaning": "Çiçek açmak",
         "level": "B2",
         "id": 4706
     },
@@ -20071,7 +20071,7 @@
     },
     {
         "word": "Bull",
-        "meaning": "BoÄŸa",
+        "meaning": "Boğa",
         "level": "B1",
         "id": 4710
     },
@@ -20107,19 +20107,19 @@
     },
     {
         "word": "Cave",
-        "meaning": "MaÄŸara",
+        "meaning": "Mağara",
         "level": "B1",
         "id": 4718
     },
     {
         "word": "Comet",
-        "meaning": "Kuyruklu yÄ±ldÄ±z",
+        "meaning": "Kuyruklu yıldız",
         "level": "C1",
         "id": 4724
     },
     {
         "word": "Conservation",
-        "meaning": "Koruma (DoÄŸa)",
+        "meaning": "Koruma (Doğa)",
         "level": "B2",
         "id": 4725
     },
@@ -20131,19 +20131,19 @@
     },
     {
         "word": "Cyclone",
-        "meaning": "KasÄ±rga",
+        "meaning": "Kasırga",
         "level": "C1",
         "id": 4732
     },
     {
         "word": "Dawn",
-        "meaning": "Åafak",
+        "meaning": "Şafak",
         "level": "B2",
         "id": 4734
     },
     {
         "word": "Daylight",
-        "meaning": "GÃ¼n Ä±ÅŸÄ±ÄŸÄ±",
+        "meaning": "Gün ışığı",
         "level": "B1",
         "id": 4735
     },
@@ -20155,13 +20155,13 @@
     },
     {
         "word": "Deforestation",
-        "meaning": "OrmansÄ±zlaÅŸma",
+        "meaning": "Ormansızlaşma",
         "level": "C1",
         "id": 4737
     },
     {
         "word": "Dew",
-        "meaning": "Ã‡iy",
+        "meaning": "Çiy",
         "level": "C2",
         "id": 4739
     },
@@ -20179,13 +20179,13 @@
     },
     {
         "word": "Donkey",
-        "meaning": "EÅŸek",
+        "meaning": "Eşek",
         "level": "B1",
         "id": 4745
     },
     {
         "word": "Drought",
-        "meaning": "KuraklÄ±k",
+        "meaning": "Kuraklık",
         "level": "B2",
         "id": 4746
     },
@@ -20239,7 +20239,7 @@
     },
     {
         "word": "Eruption",
-        "meaning": "Patlama (YanardaÄŸ)",
+        "meaning": "Patlama (Yanardağ)",
         "level": "C1",
         "id": 4762
     },
@@ -20257,7 +20257,7 @@
     },
     {
         "word": "Extinct",
-        "meaning": "Soyu tÃ¼kenmiÅŸ",
+        "meaning": "Soyu tükenmiş",
         "level": "B2",
         "id": 4766
     },
@@ -20275,7 +20275,7 @@
     },
     {
         "word": "Frost",
-        "meaning": "Don, KÄ±raÄŸÄ±",
+        "meaning": "Don, Kırağı",
         "level": "B2",
         "id": 4779
     },
@@ -20299,7 +20299,7 @@
     },
     {
         "word": "Giraffe",
-        "meaning": "ZÃ¼rafa",
+        "meaning": "Zürafa",
         "level": "A2",
         "id": 4787
     },
@@ -20311,13 +20311,13 @@
     },
     {
         "word": "Global warming",
-        "meaning": "KÃ¼resel Ä±sÄ±nma",
+        "meaning": "Küresel ısınma",
         "level": "B1",
         "id": 4789
     },
     {
         "word": "Goat",
-        "meaning": "KeÃ§i",
+        "meaning": "Keçi",
         "level": "B1",
         "id": 4790
     },
@@ -20335,13 +20335,13 @@
     },
     {
         "word": "Habitat",
-        "meaning": "YaÅŸam alanÄ±",
+        "meaning": "Yaşam alanı",
         "level": "B2",
         "id": 4797
     },
     {
         "word": "Hail",
-        "meaning": "Dolu (YaÄŸÄ±ÅŸ)",
+        "meaning": "Dolu (Yağış)",
         "level": "C1",
         "id": 4798
     },
@@ -20353,7 +20353,7 @@
     },
     {
         "word": "Hawk",
-        "meaning": "Åahin",
+        "meaning": "Şahin",
         "level": "C1",
         "id": 4800
     },
@@ -20371,13 +20371,13 @@
     },
     {
         "word": "Herd",
-        "meaning": "SÃ¼rÃ¼",
+        "meaning": "Sürü",
         "level": "B2",
         "id": 4804
     },
     {
         "word": "Hippo",
-        "meaning": "Su aygÄ±rÄ±",
+        "meaning": "Su aygırı",
         "level": "B1",
         "id": 4806
     },
@@ -20395,25 +20395,25 @@
     },
     {
         "word": "Hyena",
-        "meaning": "SÄ±rtlan",
+        "meaning": "Sırtlan",
         "level": "B2",
         "id": 4811
     },
     {
         "word": "Iceberg",
-        "meaning": "BuzdaÄŸÄ±",
+        "meaning": "Buzdağı",
         "level": "B2",
         "id": 4813
     },
     {
         "word": "Jellyfish",
-        "meaning": "DenizanasÄ±",
+        "meaning": "Denizanası",
         "level": "B1",
         "id": 4816
     },
     {
         "word": "Jungle",
-        "meaning": "Balta girmemiÅŸ orman",
+        "meaning": "Balta girmemiş orman",
         "level": "B1",
         "id": 4817
     },
@@ -20437,7 +20437,7 @@
     },
     {
         "word": "Lightning",
-        "meaning": "ÅimÅŸek",
+        "meaning": "Şimşek",
         "level": "B1",
         "id": 4826
     },
@@ -20473,7 +20473,7 @@
     },
     {
         "word": "Meadow",
-        "meaning": "Ã‡ayÄ±r",
+        "meaning": "Çayır",
         "level": "B2",
         "id": 4833
     },
@@ -20527,7 +20527,7 @@
     },
     {
         "word": "Orbit",
-        "meaning": "YÃ¶rÃ¼nge",
+        "meaning": "Yörünge",
         "level": "C1",
         "id": 4853
     },
@@ -20539,7 +20539,7 @@
     },
     {
         "word": "Owl",
-        "meaning": "BaykuÅŸ",
+        "meaning": "Baykuş",
         "level": "B1",
         "id": 4855
     },
@@ -20557,13 +20557,13 @@
     },
     {
         "word": "Parrot",
-        "meaning": "PapaÄŸan",
+        "meaning": "Papağan",
         "level": "B1",
         "id": 4859
     },
     {
         "word": "Peacock",
-        "meaning": "TavuskuÅŸu",
+        "meaning": "Tavuskuşu",
         "level": "B2",
         "id": 4861
     },
@@ -20575,13 +20575,13 @@
     },
     {
         "word": "Pigeon",
-        "meaning": "GÃ¼vercin",
+        "meaning": "Güvercin",
         "level": "B1",
         "id": 4866
     },
     {
         "word": "Pine",
-        "meaning": "Ã‡am",
+        "meaning": "Çam",
         "level": "B1",
         "id": 4867
     },
@@ -20593,7 +20593,7 @@
     },
     {
         "word": "Pond",
-        "meaning": "GÃ¶let",
+        "meaning": "Gölet",
         "level": "B2",
         "id": 4873
     },
@@ -20611,49 +20611,49 @@
     },
     {
         "word": "Predator",
-        "meaning": "YÄ±rtÄ±cÄ±",
+        "meaning": "Yırtıcı",
         "level": "B2",
         "id": 4876
     },
     {
         "word": "Puppy",
-        "meaning": "Yavru kÃ¶pek",
+        "meaning": "Yavru köpek",
         "level": "A2",
         "id": 4877
     },
     {
         "word": "Rabbit",
-        "meaning": "TavÅŸan",
+        "meaning": "Tavşan",
         "level": "A1",
         "id": 4878
     },
     {
         "word": "Rainbow",
-        "meaning": "GÃ¶kkuÅŸaÄŸÄ±",
+        "meaning": "Gökkuşağı",
         "level": "A2",
         "id": 4880
     },
     {
         "word": "Rainforest",
-        "meaning": "YaÄŸmur ormanÄ±",
+        "meaning": "Yağmur ormanı",
         "level": "B1",
         "id": 4881
     },
     {
         "word": "Rat",
-        "meaning": "SÄ±Ã§an",
+        "meaning": "Sıçan",
         "level": "A2",
         "id": 4882
     },
     {
         "word": "Ray",
-        "meaning": "IÅŸÄ±n",
+        "meaning": "Işın",
         "level": "C1",
         "id": 4883
     },
     {
         "word": "Recycle",
-        "meaning": "Geri dÃ¶nÃ¼ÅŸtÃ¼rmek",
+        "meaning": "Geri dönüştürmek",
         "level": "B1",
         "id": 4884
     },
@@ -20665,13 +20665,13 @@
     },
     {
         "word": "Reptile",
-        "meaning": "SÃ¼rÃ¼ngen",
+        "meaning": "Sürüngen",
         "level": "C1",
         "id": 4887
     },
     {
         "word": "Rose",
-        "meaning": "GÃ¼l",
+        "meaning": "Gül",
         "level": "A2",
         "id": 4892
     },
@@ -20689,13 +20689,13 @@
     },
     {
         "word": "Seagull",
-        "meaning": "MartÄ±",
+        "meaning": "Martı",
         "level": "B1",
         "id": 4900
     },
     {
         "word": "Shark",
-        "meaning": "KÃ¶pekbalÄ±ÄŸÄ±",
+        "meaning": "Köpekbalığı",
         "level": "A2",
         "id": 4904
     },
@@ -20713,31 +20713,31 @@
     },
     {
         "word": "Sunrise",
-        "meaning": "GÃ¼ndoÄŸumu",
+        "meaning": "Gündoğumu",
         "level": "B1",
         "id": 4930
     },
     {
         "word": "Sunset",
-        "meaning": "GÃ¼nbatÄ±mÄ±",
+        "meaning": "Günbatımı",
         "level": "B1",
         "id": 4931
     },
     {
         "word": "Sunshine",
-        "meaning": "GÃ¼neÅŸ Ä±ÅŸÄ±ÄŸÄ±",
+        "meaning": "Güneş ışığı",
         "level": "B1",
         "id": 4932
     },
     {
         "word": "Sustainability",
-        "meaning": "SÃ¼rdÃ¼rÃ¼lebilirlik",
+        "meaning": "Sürdürülebilirlik",
         "level": "C1",
         "id": 4933
     },
     {
         "word": "Swan",
-        "meaning": "KuÄŸu",
+        "meaning": "Kuğu",
         "level": "B2",
         "id": 4934
     },
@@ -20749,7 +20749,7 @@
     },
     {
         "word": "Thunder",
-        "meaning": "GÃ¶k gÃ¼rÃ¼ltÃ¼sÃ¼",
+        "meaning": "Gök gürültüsü",
         "level": "B1",
         "id": 4937
     },
@@ -20767,7 +20767,7 @@
     },
     {
         "word": "Tree",
-        "meaning": "AÄŸaÃ§",
+        "meaning": "Ağaç",
         "level": "A1",
         "id": 4940
     },
@@ -20791,7 +20791,7 @@
     },
     {
         "word": "Turtle",
-        "meaning": "KaplumbaÄŸa",
+        "meaning": "Kaplumbağa",
         "level": "B1",
         "id": 4944
     },
@@ -20821,7 +20821,7 @@
     },
     {
         "word": "Volcano",
-        "meaning": "YanardaÄŸ",
+        "meaning": "Yanardağ",
         "level": "B1",
         "id": 4949
     },
@@ -20833,7 +20833,7 @@
     },
     {
         "word": "Waterfall",
-        "meaning": "Åelale",
+        "meaning": "Şelale",
         "level": "B1",
         "id": 4951
     },
@@ -20851,7 +20851,7 @@
     },
     {
         "word": "Web",
-        "meaning": "AÄŸ",
+        "meaning": "Ağ",
         "level": "A2",
         "id": 4954
     },
@@ -20863,7 +20863,7 @@
     },
     {
         "word": "West",
-        "meaning": "BatÄ±",
+        "meaning": "Batı",
         "level": "A1",
         "id": 4956
     },
@@ -20875,25 +20875,25 @@
     },
     {
         "word": "Wheat",
-        "meaning": "BuÄŸday",
+        "meaning": "Buğday",
         "level": "B1",
         "id": 4958
     },
     {
         "word": "Wild",
-        "meaning": "VahÅŸi",
+        "meaning": "Vahşi",
         "level": "A2",
         "id": 4959
     },
     {
         "word": "Wildlife",
-        "meaning": "VahÅŸi yaÅŸam",
+        "meaning": "Vahşi yaşam",
         "level": "B1",
         "id": 4960
     },
     {
         "word": "Winter",
-        "meaning": "KÄ±ÅŸ",
+        "meaning": "Kış",
         "level": "A1",
         "id": 4962
     },
@@ -20905,19 +20905,19 @@
     },
     {
         "word": "Wood",
-        "meaning": "Odun, AhÅŸap",
+        "meaning": "Odun, Ahşap",
         "level": "A2",
         "id": 4964
     },
     {
         "word": "Wool",
-        "meaning": "YÃ¼n",
+        "meaning": "Yün",
         "level": "B1",
         "id": 4965
     },
     {
         "word": "World",
-        "meaning": "DÃ¼nya",
+        "meaning": "Dünya",
         "level": "A1",
         "id": 4966
     },
@@ -20935,7 +20935,7 @@
     },
     {
         "word": "Zoo",
-        "meaning": "Hayvanat bahÃ§esi",
+        "meaning": "Hayvanat bahçesi",
         "level": "A1",
         "id": 4969
     },
@@ -20947,7 +20947,7 @@
     },
     {
         "word": "Ache",
-        "meaning": "AÄŸrÄ±",
+        "meaning": "Ağrı",
         "level": "B1",
         "id": 4973
     },
@@ -20965,19 +20965,19 @@
     },
     {
         "word": "Actress",
-        "meaning": "KadÄ±n oyuncu",
+        "meaning": "Kadın oyuncu",
         "level": "A1",
         "id": 4976
     },
     {
         "word": "Addiction",
-        "meaning": "BaÄŸÄ±mlÄ±lÄ±k",
+        "meaning": "Bağımlılık",
         "level": "B2",
         "id": 4977
     },
     {
         "word": "Admission",
-        "meaning": "GiriÅŸ, Kabul",
+        "meaning": "Giriş, Kabul",
         "level": "B2",
         "id": 4979
     },
@@ -20989,49 +20989,49 @@
     },
     {
         "word": "Advance",
-        "meaning": "Ä°lerleme",
+        "meaning": "İlerleme",
         "level": "B2",
         "id": 4983
     },
     {
         "word": "Advertising",
-        "meaning": "ReklamcÄ±lÄ±k",
+        "meaning": "Reklamcılık",
         "level": "A2",
         "id": 4985
     },
     {
         "word": "Affair",
-        "meaning": "Ä°liÅŸki, Mesele",
+        "meaning": "İlişki, Mesele",
         "level": "B2",
         "id": 4987
     },
     {
         "word": "Affection",
-        "meaning": "Åefkat",
+        "meaning": "Şefkat",
         "level": "C1",
         "id": 4988
     },
     {
         "word": "Aggression",
-        "meaning": "SaldÄ±rganlÄ±k",
+        "meaning": "Saldırganlık",
         "level": "C1",
         "id": 4990
     },
     {
         "word": "Aid",
-        "meaning": "YardÄ±m",
+        "meaning": "Yardım",
         "level": "B2",
         "id": 4991
     },
     {
         "word": "Ailment",
-        "meaning": "RahatsÄ±zlÄ±k",
+        "meaning": "Rahatsızlık",
         "level": "C1",
         "id": 4992
     },
     {
         "word": "Album",
-        "meaning": "AlbÃ¼m",
+        "meaning": "Albüm",
         "level": "B1",
         "id": 4993
     },
@@ -21049,13 +21049,13 @@
     },
     {
         "word": "Alliance",
-        "meaning": "Ä°ttifak",
+        "meaning": "İttifak",
         "level": "C1",
         "id": 4996
     },
     {
         "word": "Amendment",
-        "meaning": "Yasa deÄŸiÅŸikliÄŸi",
+        "meaning": "Yasa değişikliği",
         "level": "C1",
         "id": 4998
     },
@@ -21079,7 +21079,7 @@
     },
     {
         "word": "Anxiety",
-        "meaning": "KaygÄ±",
+        "meaning": "Kaygı",
         "level": "B2",
         "id": 5005
     },
@@ -21097,7 +21097,7 @@
     },
     {
         "word": "Asthma",
-        "meaning": "AstÄ±m",
+        "meaning": "Astım",
         "level": "B1",
         "id": 5016
     },
@@ -21109,7 +21109,7 @@
     },
     {
         "word": "Backache",
-        "meaning": "SÄ±rt aÄŸrÄ±sÄ±",
+        "meaning": "Sırt ağrısı",
         "level": "A2",
         "id": 5024
     },
@@ -21121,13 +21121,13 @@
     },
     {
         "word": "Ballot",
-        "meaning": "Oy pusulasÄ±",
+        "meaning": "Oy pusulası",
         "level": "C1",
         "id": 5026
     },
     {
         "word": "Bandage",
-        "meaning": "SargÄ± bezi",
+        "meaning": "Sargı bezi",
         "level": "B1",
         "id": 5028
     },
@@ -21145,13 +21145,13 @@
     },
     {
         "word": "Bruise",
-        "meaning": "Ã‡Ã¼rÃ¼k, Morluk",
+        "meaning": "Çürük, Morluk",
         "level": "C1",
         "id": 5044
     },
     {
         "word": "Cabinet",
-        "meaning": "Kabine (HÃ¼kÃ¼met)",
+        "meaning": "Kabine (Hükümet)",
         "level": "C1",
         "id": 5047
     },
@@ -21169,19 +21169,19 @@
     },
     {
         "word": "Cartoon",
-        "meaning": "KarikatÃ¼r, Ã‡izgi film",
+        "meaning": "Karikatür, Çizgi film",
         "level": "A2",
         "id": 5054
     },
     {
         "word": "Casualty",
-        "meaning": "Kazazede, KayÄ±p",
+        "meaning": "Kazazede, Kayıp",
         "level": "C1",
         "id": 5056
     },
     {
         "word": "Censorship",
-        "meaning": "SansÃ¼r",
+        "meaning": "Sansür",
         "level": "C1",
         "id": 5058
     },
@@ -21193,7 +21193,7 @@
     },
     {
         "word": "Chapel",
-        "meaning": "Åapel",
+        "meaning": "Şapel",
         "level": "C1",
         "id": 5062
     },
@@ -21205,7 +21205,7 @@
     },
     {
         "word": "Chin",
-        "meaning": "Ã‡ene",
+        "meaning": "Çene",
         "level": "B1",
         "id": 5068
     },
@@ -21241,7 +21241,7 @@
     },
     {
         "word": "Colony",
-        "meaning": "Koloni, SÃ¶mÃ¼rge",
+        "meaning": "Koloni, Sömürge",
         "level": "B2",
         "id": 5081
     },
@@ -21253,13 +21253,13 @@
     },
     {
         "word": "Commons",
-        "meaning": "Avam KamarasÄ±",
+        "meaning": "Avam Kamarası",
         "level": "C1",
         "id": 5088
     },
     {
         "word": "Communism",
-        "meaning": "KomÃ¼nizm",
+        "meaning": "Komünizm",
         "level": "C1",
         "id": 5090
     },
@@ -21277,7 +21277,7 @@
     },
     {
         "word": "Conductor",
-        "meaning": "Orkestra ÅŸefi",
+        "meaning": "Orkestra şefi",
         "level": "C1",
         "id": 5096
     },
@@ -21295,7 +21295,7 @@
     },
     {
         "word": "Counsel",
-        "meaning": "DanÄ±ÅŸmanlÄ±k",
+        "meaning": "Danışmanlık",
         "level": "C1",
         "id": 5107
     },
@@ -21313,13 +21313,13 @@
     },
     {
         "word": "Curator",
-        "meaning": "KÃ¼ratÃ¶r",
+        "meaning": "Küratör",
         "level": "C2",
         "id": 5119
     },
     {
         "word": "Deaf",
-        "meaning": "SaÄŸÄ±r",
+        "meaning": "Sağır",
         "level": "B1",
         "id": 5123
     },
@@ -21337,7 +21337,7 @@
     },
     {
         "word": "Deficit",
-        "meaning": "AÃ§Ä±k (BÃ¼tÃ§e)",
+        "meaning": "Açık (Bütçe)",
         "level": "C1",
         "id": 5131
     },
@@ -21355,19 +21355,19 @@
     },
     {
         "word": "Demonstration",
-        "meaning": "GÃ¶steri",
+        "meaning": "Gösteri",
         "level": "B2",
         "id": 5135
     },
     {
         "word": "Deputy",
-        "meaning": "Milletvekili, YardÄ±mcÄ±",
+        "meaning": "Milletvekili, Yardımcı",
         "level": "C1",
         "id": 5138
     },
     {
         "word": "Diagnosis",
-        "meaning": "TeÅŸhis",
+        "meaning": "Teşhis",
         "level": "C1",
         "id": 5140
     },
@@ -21379,7 +21379,7 @@
     },
     {
         "word": "Dictator",
-        "meaning": "DiktatÃ¶r",
+        "meaning": "Diktatör",
         "level": "C1",
         "id": 5143
     },
@@ -21415,7 +21415,7 @@
     },
     {
         "word": "Disorder",
-        "meaning": "RahatsÄ±zlÄ±k, Bozukluk",
+        "meaning": "Rahatsızlık, Bozukluk",
         "level": "C1",
         "id": 5152
     },
@@ -21427,7 +21427,7 @@
     },
     {
         "word": "Diversity",
-        "meaning": "Ã‡eÅŸitlilik",
+        "meaning": "Çeşitlilik",
         "level": "B2",
         "id": 5154
     },
@@ -21451,37 +21451,37 @@
     },
     {
         "word": "Edition",
-        "meaning": "BasÄ±m",
+        "meaning": "Basım",
         "level": "B2",
         "id": 5165
     },
     {
         "word": "Editor",
-        "meaning": "EditÃ¶r",
+        "meaning": "Editör",
         "level": "B1",
         "id": 5166
     },
     {
         "word": "Embassy",
-        "meaning": "BÃ¼yÃ¼kelÃ§ilik",
+        "meaning": "Büyükelçilik",
         "level": "B2",
         "id": 5169
     },
     {
         "word": "Empire",
-        "meaning": "Ä°mparatorluk",
+        "meaning": "İmparatorluk",
         "level": "B2",
         "id": 5172
     },
     {
         "word": "Epidemic",
-        "meaning": "SalgÄ±n",
+        "meaning": "Salgın",
         "level": "C1",
         "id": 5176
     },
     {
         "word": "Equality",
-        "meaning": "EÅŸitlik",
+        "meaning": "Eşitlik",
         "level": "B2",
         "id": 5177
     },
@@ -21499,13 +21499,13 @@
     },
     {
         "word": "Fame",
-        "meaning": "ÅÃ¶hret",
+        "meaning": "Şöhret",
         "level": "B2",
         "id": 5189
     },
     {
         "word": "Famine",
-        "meaning": "KÄ±tlÄ±k",
+        "meaning": "Kıtlık",
         "level": "C1",
         "id": 5191
     },
@@ -21523,19 +21523,19 @@
     },
     {
         "word": "Fever",
-        "meaning": "AteÅŸ (HastalÄ±k)",
+        "meaning": "Ateş (Hastalık)",
         "level": "B1",
         "id": 5197
     },
     {
         "word": "Flute",
-        "meaning": "FlÃ¼t",
+        "meaning": "Flüt",
         "level": "B1",
         "id": 5205
     },
     {
         "word": "Folk",
-        "meaning": "Halk (MÃ¼ziÄŸi vb.)",
+        "meaning": "Halk (Müziği vb.)",
         "level": "B1",
         "id": 5206
     },
@@ -21565,7 +21565,7 @@
     },
     {
         "word": "Graffiti",
-        "meaning": "Duvar yazÄ±sÄ±",
+        "meaning": "Duvar yazısı",
         "level": "B1",
         "id": 5221
     },
@@ -21583,31 +21583,31 @@
     },
     {
         "word": "Healthcare",
-        "meaning": "SaÄŸlÄ±k hizmeti",
+        "meaning": "Sağlık hizmeti",
         "level": "B2",
         "id": 5230
     },
     {
         "word": "Heal",
-        "meaning": "Ä°yileÅŸmek",
+        "meaning": "İyileşmek",
         "level": "B2",
         "id": 5233
     },
     {
         "word": "Heritage",
-        "meaning": "Miras (KÃ¼ltÃ¼rel)",
+        "meaning": "Miras (Kültürel)",
         "level": "C1",
         "id": 5234
     },
     {
         "word": "Historian",
-        "meaning": "TarihÃ§i",
+        "meaning": "Tarihçi",
         "level": "B2",
         "id": 5236
     },
     {
         "word": "Humanity",
-        "meaning": "Ä°nsanlÄ±k",
+        "meaning": "İnsanlık",
         "level": "B2",
         "id": 5242
     },
@@ -21619,7 +21619,7 @@
     },
     {
         "word": "Hunger",
-        "meaning": "AÃ§lÄ±k",
+        "meaning": "Açlık",
         "level": "B1",
         "id": 5244
     },
@@ -21631,25 +21631,25 @@
     },
     {
         "word": "Ideology",
-        "meaning": "Ä°deoloji",
+        "meaning": "İdeoloji",
         "level": "C1",
         "id": 5248
     },
     {
         "word": "Immigration",
-        "meaning": "GÃ¶Ã§",
+        "meaning": "Göç",
         "level": "B2",
         "id": 5255
     },
     {
         "word": "Immune",
-        "meaning": "BaÄŸÄ±ÅŸÄ±k",
+        "meaning": "Bağışık",
         "level": "C1",
         "id": 5256
     },
     {
         "word": "Independence",
-        "meaning": "BaÄŸÄ±msÄ±zlÄ±k",
+        "meaning": "Bağımsızlık",
         "level": "B2",
         "id": 5258
     },
@@ -21661,7 +21661,7 @@
     },
     {
         "word": "Inspiration",
-        "meaning": "Ä°lham",
+        "meaning": "İlham",
         "level": "B2",
         "id": 5265
     },
@@ -21673,7 +21673,7 @@
     },
     {
         "word": "Interior",
-        "meaning": "Ä°Ã§ mekan",
+        "meaning": "İç mekan",
         "level": "C1",
         "id": 5272
     },
@@ -21685,37 +21685,37 @@
     },
     {
         "word": "Jewelry",
-        "meaning": "MÃ¼cevher",
+        "meaning": "Mücevher",
         "level": "A2",
         "id": 5276
     },
     {
         "word": "Jurisdiction",
-        "meaning": "YargÄ± yetkisi",
+        "meaning": "Yargı yetkisi",
         "level": "C2",
         "id": 5280
     },
     {
         "word": "Jury",
-        "meaning": "JÃ¼ri",
+        "meaning": "Jüri",
         "level": "B2",
         "id": 5281
     },
     {
         "word": "Kidney",
-        "meaning": "BÃ¶brek",
+        "meaning": "Böbrek",
         "level": "B2",
         "id": 5283
     },
     {
         "word": "Kingdom",
-        "meaning": "KrallÄ±k",
+        "meaning": "Krallık",
         "level": "B1",
         "id": 5285
     },
     {
         "word": "Labor",
-        "meaning": "Ä°ÅŸÃ§i, Emek",
+        "meaning": "İşçi, Emek",
         "level": "B2",
         "id": 5287
     },
@@ -21733,25 +21733,25 @@
     },
     {
         "word": "Legislature",
-        "meaning": "Yasama organÄ±",
+        "meaning": "Yasama organı",
         "level": "C2",
         "id": 5298
     },
     {
         "word": "Liberty",
-        "meaning": "Ã–zgÃ¼rlÃ¼k",
+        "meaning": "Özgürlük",
         "level": "B2",
         "id": 5300
     },
     {
         "word": "Liver",
-        "meaning": "KaraciÄŸer",
+        "meaning": "Karaciğer",
         "level": "B2",
         "id": 5304
     },
     {
         "word": "Lyrics",
-        "meaning": "ÅarkÄ± sÃ¶zÃ¼",
+        "meaning": "Şarkı sözü",
         "level": "B1",
         "id": 5307
     },
@@ -21775,13 +21775,13 @@
     },
     {
         "word": "Masterpiece",
-        "meaning": "BaÅŸyapÄ±t",
+        "meaning": "Başyapıt",
         "level": "C1",
         "id": 5318
     },
     {
         "word": "Mayor",
-        "meaning": "Belediye baÅŸkanÄ±",
+        "meaning": "Belediye başkanı",
         "level": "B2",
         "id": 5319
     },
@@ -21799,7 +21799,7 @@
     },
     {
         "word": "Ministry",
-        "meaning": "BakanlÄ±k",
+        "meaning": "Bakanlık",
         "level": "B2",
         "id": 5330
     },
@@ -21817,7 +21817,7 @@
     },
     {
         "word": "Abuse",
-        "meaning": "KÃ¶tÃ¼ye kullanmak",
+        "meaning": "Kötüye kullanmak",
         "level": "B1",
         "id": 5333
     },
@@ -21841,25 +21841,25 @@
     },
     {
         "word": "Accompany",
-        "meaning": "EÅŸlik etmek",
+        "meaning": "Eşlik etmek",
         "level": "B1",
         "id": 5337
     },
     {
         "word": "Accurate",
-        "meaning": "DoÄŸru, Kesin",
+        "meaning": "Doğru, Kesin",
         "level": "B2",
         "id": 5338
     },
     {
         "word": "Accuse",
-        "meaning": "SuÃ§lamak",
+        "meaning": "Suçlamak",
         "level": "B2",
         "id": 5339
     },
     {
         "word": "Achievement",
-        "meaning": "BaÅŸarÄ±",
+        "meaning": "Başarı",
         "level": "B1",
         "id": 5340
     },
@@ -21889,7 +21889,7 @@
     },
     {
         "word": "Admiration",
-        "meaning": "HayranlÄ±k",
+        "meaning": "Hayranlık",
         "level": "C1",
         "id": 5352
     },
@@ -21907,7 +21907,7 @@
     },
     {
         "word": "Advanced",
-        "meaning": "Ä°leri",
+        "meaning": "İleri",
         "level": "B1",
         "id": 5356
     },
@@ -21919,13 +21919,13 @@
     },
     {
         "word": "Adviser",
-        "meaning": "DanÄ±ÅŸman",
+        "meaning": "Danışman",
         "level": "C1",
         "id": 5360
     },
     {
         "word": "Afford",
-        "meaning": "GÃ¼cÃ¼ yetmek (Maddi)",
+        "meaning": "Gücü yetmek (Maddi)",
         "level": "B1",
         "id": 5361
     },
@@ -21937,31 +21937,31 @@
     },
     {
         "word": "Aged",
-        "meaning": "YaÅŸÄ±nda",
+        "meaning": "Yaşında",
         "level": "B1",
         "id": 5364
     },
     {
         "word": "Aggressive",
-        "meaning": "SaldÄ±rgan",
+        "meaning": "Saldırgan",
         "level": "B1",
         "id": 5366
     },
     {
         "word": "Alcoholic",
-        "meaning": "AlkollÃ¼",
+        "meaning": "Alkollü",
         "level": "B1",
         "id": 5372
     },
     {
         "word": "Ally",
-        "meaning": "MÃ¼ttefik",
+        "meaning": "Müttefik",
         "level": "C1",
         "id": 5375
     },
     {
         "word": "Alongside",
-        "meaning": "YanÄ±nda",
+        "meaning": "Yanında",
         "level": "B2",
         "id": 5376
     },
@@ -21973,25 +21973,25 @@
     },
     {
         "word": "Ambitious",
-        "meaning": "HÄ±rslÄ±",
+        "meaning": "Hırslı",
         "level": "B1",
         "id": 5382
     },
     {
         "word": "Amuse",
-        "meaning": "EÄŸlendirmek",
+        "meaning": "Eğlendirmek",
         "level": "B2",
         "id": 5385
     },
     {
         "word": "Anger",
-        "meaning": "Ã–fke",
+        "meaning": "Öfke",
         "level": "B1",
         "id": 5388
     },
     {
         "word": "Angle",
-        "meaning": "AÃ§Ä±",
+        "meaning": "Açı",
         "level": "B2",
         "id": 5389
     },
@@ -22003,13 +22003,13 @@
     },
     {
         "word": "Appeal",
-        "meaning": "Cazibe, BaÅŸvuru",
+        "meaning": "Cazibe, Başvuru",
         "level": "B2",
         "id": 5404
     },
     {
         "word": "Applause",
-        "meaning": "AlkÄ±ÅŸ",
+        "meaning": "Alkış",
         "level": "C1",
         "id": 5407
     },
@@ -22033,13 +22033,13 @@
     },
     {
         "word": "Arise",
-        "meaning": "Ortaya Ã§Ä±kmak",
+        "meaning": "Ortaya çıkmak",
         "level": "C1",
         "id": 5423
     },
     {
         "word": "Armed",
-        "meaning": "SilahlÄ±",
+        "meaning": "Silahlı",
         "level": "B2",
         "id": 5424
     },
@@ -22057,7 +22057,7 @@
     },
     {
         "word": "Astonishing",
-        "meaning": "ÅaÅŸÄ±rtÄ±cÄ±",
+        "meaning": "Şaşırtıcı",
         "level": "C1",
         "id": 5448
     },
@@ -22081,7 +22081,7 @@
     },
     {
         "word": "Awake",
-        "meaning": "UyanÄ±k",
+        "meaning": "Uyanık",
         "level": "A2",
         "id": 5469
     },
@@ -22099,7 +22099,7 @@
     },
     {
         "word": "Banking",
-        "meaning": "BankacÄ±lÄ±k",
+        "meaning": "Bankacılık",
         "level": "B2",
         "id": 5484
     },
@@ -22111,7 +22111,7 @@
     },
     {
         "word": "Bargain",
-        "meaning": "PazarlÄ±k",
+        "meaning": "Pazarlık",
         "level": "B2",
         "id": 5487
     },
@@ -22141,31 +22141,31 @@
     },
     {
         "word": "Beneath",
-        "meaning": "AltÄ±nda",
+        "meaning": "Altında",
         "level": "B2",
         "id": 5514
     },
     {
         "word": "Beside",
-        "meaning": "YanÄ±nda",
+        "meaning": "Yanında",
         "level": "B1",
         "id": 5516
     },
     {
         "word": "Blade",
-        "meaning": "BÄ±Ã§ak aÄŸzÄ±",
+        "meaning": "Bıçak ağzı",
         "level": "C1",
         "id": 5533
     },
     {
         "word": "Breast",
-        "meaning": "GÃ¶ÄŸÃ¼s (KadÄ±n)",
+        "meaning": "Göğüs (Kadın)",
         "level": "B2",
         "id": 5573
     },
     {
         "word": "Brick",
-        "meaning": "TuÄŸla",
+        "meaning": "Tuğla",
         "level": "B2",
         "id": 5576
     },
@@ -22177,7 +22177,7 @@
     },
     {
         "word": "Buyer",
-        "meaning": "AlÄ±cÄ±",
+        "meaning": "Alıcı",
         "level": "B1",
         "id": 5606
     },
@@ -22189,7 +22189,7 @@
     },
     {
         "word": "Closed",
-        "meaning": "KapalÄ±",
+        "meaning": "Kapalı",
         "level": "A1",
         "id": 5716
     },
@@ -22207,19 +22207,19 @@
     },
     {
         "word": "Confine",
-        "meaning": "SÄ±nÄ±rlamak",
+        "meaning": "Sınırlamak",
         "level": "B2",
         "id": 5784
     },
     {
         "word": "Confront",
-        "meaning": "YÃ¼zleÅŸmek",
+        "meaning": "Yüzleşmek",
         "level": "B2",
         "id": 5786
     },
     {
         "word": "Confusion",
-        "meaning": "Kafa karÄ±ÅŸÄ±klÄ±ÄŸÄ±",
+        "meaning": "Kafa karışıklığı",
         "level": "B1",
         "id": 5790
     },
@@ -22237,13 +22237,13 @@
     },
     {
         "word": "Considerable",
-        "meaning": "Ã–nemli",
+        "meaning": "Önemli",
         "level": "B2",
         "id": 5800
     },
     {
         "word": "Consult",
-        "meaning": "DanÄ±ÅŸmak",
+        "meaning": "Danışmak",
         "level": "B2",
         "id": 5808
     },
@@ -22255,19 +22255,19 @@
     },
     {
         "word": "Crisp",
-        "meaning": "Ã‡Ä±tÄ±r",
+        "meaning": "Çıtır",
         "level": "B2",
         "id": 5873
     },
     {
         "word": "Curious",
-        "meaning": "MeraklÄ±",
+        "meaning": "Meraklı",
         "level": "B1",
         "id": 5890
     },
     {
         "word": "Curl",
-        "meaning": "KÄ±vÄ±rmak",
+        "meaning": "Kıvırmak",
         "level": "B1",
         "id": 5891
     },
@@ -22285,25 +22285,25 @@
     },
     {
         "word": "Dealer",
-        "meaning": "SatÄ±cÄ±",
+        "meaning": "Satıcı",
         "level": "B1",
         "id": 5922
     },
     {
         "word": "Decay",
-        "meaning": "Ã‡Ã¼rÃ¼mek",
+        "meaning": "Çürümek",
         "level": "B2",
         "id": 5928
     },
     {
         "word": "Decent",
-        "meaning": "Ä°yi, terbiyeli",
+        "meaning": "İyi, terbiyeli",
         "level": "B1",
         "id": 5930
     },
     {
         "word": "Declare",
-        "meaning": "Ä°lan etmek",
+        "meaning": "İlan etmek",
         "level": "B1",
         "id": 5933
     },
@@ -22339,31 +22339,31 @@
     },
     {
         "word": "Eastern",
-        "meaning": "DoÄŸuya ait",
+        "meaning": "Doğuya ait",
         "level": "B1",
         "id": 5947
     },
     {
         "word": "Edit",
-        "meaning": "DÃ¼zenlemek",
+        "meaning": "Düzenlemek",
         "level": "B1",
         "id": 5953
     },
     {
         "word": "Educate",
-        "meaning": "EÄŸitmek",
+        "meaning": "Eğitmek",
         "level": "B1",
         "id": 5956
     },
     {
         "word": "Educated",
-        "meaning": "EÄŸitimli",
+        "meaning": "Eğitimli",
         "level": "B1",
         "id": 5957
     },
     {
         "word": "Educational",
-        "meaning": "EÄŸitsel",
+        "meaning": "Eğitsel",
         "level": "B1",
         "id": 5959
     },
@@ -22375,7 +22375,7 @@
     },
     {
         "word": "Effectively",
-        "meaning": "Etkili bir ÅŸekilde",
+        "meaning": "Etkili bir şekilde",
         "level": "B1",
         "id": 5962
     },
@@ -22387,13 +22387,13 @@
     },
     {
         "word": "Embarrassing",
-        "meaning": "UtanÃ§ verici",
+        "meaning": "Utanç verici",
         "level": "B1",
         "id": 5986
     },
     {
         "word": "Engaged",
-        "meaning": "NiÅŸanlÄ±",
+        "meaning": "Nişanlı",
         "level": "B1",
         "id": 6009
     },
@@ -22411,31 +22411,31 @@
     },
     {
         "word": "Equally",
-        "meaning": "EÅŸit olarak",
+        "meaning": "Eşit olarak",
         "level": "B1",
         "id": 6033
     },
     {
         "word": "Expansion",
-        "meaning": "GeniÅŸleme",
+        "meaning": "Genişleme",
         "level": "B2",
         "id": 6078
     },
     {
         "word": "Fabric",
-        "meaning": "KumaÅŸ",
+        "meaning": "Kumaş",
         "level": "B2",
         "id": 6106
     },
     {
         "word": "Faint",
-        "meaning": "BayÄ±lmak",
+        "meaning": "Bayılmak",
         "level": "B1",
         "id": 6114
     },
     {
         "word": "Firefighter",
-        "meaning": "Ä°tfaiyeci",
+        "meaning": "İtfaiyeci",
         "level": "B1",
         "id": 6176
     },
@@ -22447,13 +22447,13 @@
     },
     {
         "word": "Flesh",
-        "meaning": "Et (Ä°nsan/Meyve)",
+        "meaning": "Et (İnsan/Meyve)",
         "level": "C1",
         "id": 6190
     },
     {
         "word": "Format",
-        "meaning": "BiÃ§im",
+        "meaning": "Biçim",
         "level": "B1",
         "id": 6222
     },
@@ -22465,7 +22465,7 @@
     },
     {
         "word": "Frequent",
-        "meaning": "SÄ±k",
+        "meaning": "Sık",
         "level": "B1",
         "id": 6239
     },
@@ -22489,7 +22489,7 @@
     },
     {
         "word": "Garbage",
-        "meaning": "Ã‡Ã¶p",
+        "meaning": "Çöp",
         "level": "B1",
         "id": 6277
     },
@@ -22501,19 +22501,19 @@
     },
     {
         "word": "Gear",
-        "meaning": "DiÅŸli, Vites",
+        "meaning": "Dişli, Vites",
         "level": "B2",
         "id": 6283
     },
     {
         "word": "Glasses",
-        "meaning": "GÃ¶zlÃ¼k",
+        "meaning": "Gözlük",
         "level": "A1",
         "id": 6302
     },
     {
         "word": "Golden",
-        "meaning": "AltÄ±n rengi",
+        "meaning": "Altın rengi",
         "level": "B1",
         "id": 6309
     },
@@ -22537,7 +22537,7 @@
     },
     {
         "word": "Granddaughter",
-        "meaning": "KÄ±z torun",
+        "meaning": "Kız torun",
         "level": "A1",
         "id": 6326
     },
@@ -22549,7 +22549,7 @@
     },
     {
         "word": "Grape",
-        "meaning": "ÃœzÃ¼m",
+        "meaning": "Üzüm",
         "level": "A2",
         "id": 6332
     },
@@ -22573,13 +22573,13 @@
     },
     {
         "word": "Hairdresser",
-        "meaning": "KuafÃ¶r",
+        "meaning": "Kuaför",
         "level": "A2",
         "id": 6358
     },
     {
         "word": "Hammer",
-        "meaning": "Ã‡ekiÃ§",
+        "meaning": "Çekiç",
         "level": "B1",
         "id": 6361
     },
@@ -22591,7 +22591,7 @@
     },
     {
         "word": "Inch",
-        "meaning": "Ä°nÃ§",
+        "meaning": "İnç",
         "level": "B1",
         "id": 6394
     },
@@ -22603,7 +22603,7 @@
     },
     {
         "word": "Index",
-        "meaning": "Ä°ndeks",
+        "meaning": "İndeks",
         "level": "B2",
         "id": 6407
     },
@@ -22615,13 +22615,13 @@
     },
     {
         "word": "Interval",
-        "meaning": "AralÄ±k",
+        "meaning": "Aralık",
         "level": "C1",
         "id": 6458
     },
     {
         "word": "Introduce",
-        "meaning": "TanÄ±tmak",
+        "meaning": "Tanıtmak",
         "level": "A1",
         "id": 6461
     },
@@ -22645,7 +22645,7 @@
     },
     {
         "word": "Kindly",
-        "meaning": "NazikÃ§e",
+        "meaning": "Nazikçe",
         "level": "B1",
         "id": 6515
     },
@@ -22657,13 +22657,13 @@
     },
     {
         "word": "Knit",
-        "meaning": "Ã–rmek",
+        "meaning": "Örmek",
         "level": "B1",
         "id": 6523
     },
     {
         "word": "Knot",
-        "meaning": "DÃ¼ÄŸÃ¼m",
+        "meaning": "Düğüm",
         "level": "C1",
         "id": 6525
     },
@@ -22681,7 +22681,7 @@
     },
     {
         "word": "Landing",
-        "meaning": "Ä°niÅŸ",
+        "meaning": "İniş",
         "level": "B2",
         "id": 6538
     },
@@ -22711,7 +22711,7 @@
     },
     {
         "word": "Laundry",
-        "meaning": "Ã‡amaÅŸÄ±r",
+        "meaning": "Çamaşır",
         "level": "B1",
         "id": 6554
     },
@@ -22723,31 +22723,31 @@
     },
     {
         "word": "Lighting",
-        "meaning": "AydÄ±nlatma",
+        "meaning": "Aydınlatma",
         "level": "B1",
         "id": 6595
     },
     {
         "word": "Limitation",
-        "meaning": "SÄ±nÄ±rlama",
+        "meaning": "Sınırlama",
         "level": "B2",
         "id": 6600
     },
     {
         "word": "Literacy",
-        "meaning": "OkuryazarlÄ±k",
+        "meaning": "Okuryazarlık",
         "level": "C1",
         "id": 6610
     },
     {
         "word": "Lively",
-        "meaning": "CanlÄ±",
+        "meaning": "Canlı",
         "level": "B1",
         "id": 6614
     },
     {
         "word": "Lover",
-        "meaning": "AÅŸÄ±k",
+        "meaning": "Aşık",
         "level": "B1",
         "id": 6637
     },
@@ -22759,7 +22759,7 @@
     },
     {
         "word": "Lump",
-        "meaning": "YÄ±ÄŸÄ±n, Topak",
+        "meaning": "Yığın, Topak",
         "level": "C1",
         "id": 6644
     },
@@ -22771,19 +22771,19 @@
     },
     {
         "word": "Magical",
-        "meaning": "BÃ¼yÃ¼lÃ¼",
+        "meaning": "Büyülü",
         "level": "B1",
         "id": 6653
     },
     {
         "word": "Manufacture",
-        "meaning": "Ãœretmek",
+        "meaning": "Üretmek",
         "level": "B2",
         "id": 6670
     },
     {
         "word": "Manufacturer",
-        "meaning": "Ãœretici",
+        "meaning": "Üretici",
         "level": "B1",
         "id": 6671
     },
@@ -22795,7 +22795,7 @@
     },
     {
         "word": "Mate",
-        "meaning": "ArkadaÅŸ",
+        "meaning": "Arkadaş",
         "level": "B1",
         "id": 6687
     },
@@ -22825,7 +22825,7 @@
     },
     {
         "word": "Mess",
-        "meaning": "DaÄŸÄ±nÄ±klÄ±k",
+        "meaning": "Dağınıklık",
         "level": "B1",
         "id": 6723
     },
@@ -22861,13 +22861,13 @@
     },
     {
         "word": "Moderation",
-        "meaning": "IlÄ±mlÄ±lÄ±k",
+        "meaning": "Ilımlılık",
         "level": "C1",
         "id": 6757
     },
     {
         "word": "Modest",
-        "meaning": "MÃ¼tevazÄ±",
+        "meaning": "Mütevazı",
         "level": "B2",
         "id": 6758
     },
@@ -22879,7 +22879,7 @@
     },
     {
         "word": "Mortgage",
-        "meaning": "Ä°potek",
+        "meaning": "İpotek",
         "level": "B2",
         "id": 6771
     },
@@ -22921,7 +22921,7 @@
     },
     {
         "word": "Narrative",
-        "meaning": "AnlatÄ±",
+        "meaning": "Anlatı",
         "level": "C1",
         "id": 6808
     },
@@ -22945,13 +22945,13 @@
     },
     {
         "word": "Neighbor",
-        "meaning": "KomÅŸu",
+        "meaning": "Komşu",
         "level": "A1",
         "id": 6830
     },
     {
         "word": "Nephew",
-        "meaning": "Erkek yeÄŸen",
+        "meaning": "Erkek yeğen",
         "level": "B1",
         "id": 6833
     },
@@ -22963,19 +22963,19 @@
     },
     {
         "word": "Nominate",
-        "meaning": "Aday gÃ¶stermek",
+        "meaning": "Aday göstermek",
         "level": "C1",
         "id": 6854
     },
     {
         "word": "Nonsense",
-        "meaning": "SaÃ§malÄ±k",
+        "meaning": "Saçmalık",
         "level": "C2",
         "id": 6856
     },
     {
         "word": "Noon",
-        "meaning": "Ã–ÄŸle vakti",
+        "meaning": "Öğle vakti",
         "level": "A2",
         "id": 6857
     },
@@ -22999,13 +22999,13 @@
     },
     {
         "word": "Nowhere",
-        "meaning": "HiÃ§bir yerde",
+        "meaning": "Hiçbir yerde",
         "level": "A2",
         "id": 6874
     },
     {
         "word": "Numerous",
-        "meaning": "SayÄ±sÄ±z",
+        "meaning": "Sayısız",
         "level": "B2",
         "id": 6877
     },
@@ -23035,13 +23035,13 @@
     },
     {
         "word": "Occupy",
-        "meaning": "Ä°ÅŸgal etmek, MeÅŸgul etmek",
+        "meaning": "İşgal etmek, Meşgul etmek",
         "level": "B2",
         "id": 6893
     },
     {
         "word": "Oppose",
-        "meaning": "KarÅŸÄ± Ã§Ä±kmak",
+        "meaning": "Karşı çıkmak",
         "level": "B2",
         "id": 6923
     },
@@ -23053,13 +23053,13 @@
     },
     {
         "word": "Origin",
-        "meaning": "KÃ¶ken",
+        "meaning": "Köken",
         "level": "B2",
         "id": 6934
     },
     {
         "word": "Outfit",
-        "meaning": "KÄ±yafet",
+        "meaning": "Kıyafet",
         "level": "B1",
         "id": 6947
     },
@@ -23089,19 +23089,19 @@
     },
     {
         "word": "Perceive",
-        "meaning": "AlgÄ±lamak",
+        "meaning": "Algılamak",
         "level": "B2",
         "id": 7003
     },
     {
         "word": "Personality",
-        "meaning": "KiÅŸilik",
+        "meaning": "Kişilik",
         "level": "B1",
         "id": 7016
     },
     {
         "word": "Plus",
-        "meaning": "ArtÄ±",
+        "meaning": "Artı",
         "level": "B1",
         "id": 7063
     },
@@ -23119,13 +23119,13 @@
     },
     {
         "word": "Premise",
-        "meaning": "Ã–ncÃ¼l",
+        "meaning": "Öncül",
         "level": "C1",
         "id": 7108
     },
     {
         "word": "Printing",
-        "meaning": "BaskÄ±",
+        "meaning": "Baskı",
         "level": "B1",
         "id": 7134
     },
@@ -23137,7 +23137,7 @@
     },
     {
         "word": "Proceed",
-        "meaning": "Ä°lerlemek",
+        "meaning": "İlerlemek",
         "level": "B2",
         "id": 7143
     },
@@ -23161,7 +23161,7 @@
     },
     {
         "word": "Publicity",
-        "meaning": "TanÄ±tÄ±m",
+        "meaning": "Tanıtım",
         "level": "B2",
         "id": 7181
     },
@@ -23173,13 +23173,13 @@
     },
     {
         "word": "Reasonably",
-        "meaning": "Makul Ã¶lÃ§Ã¼de",
+        "meaning": "Makul ölçüde",
         "level": "B1",
         "id": 7228
     },
     {
         "word": "Recognize",
-        "meaning": "TanÄ±mak",
+        "meaning": "Tanımak",
         "level": "A2",
         "id": 7236
     },
@@ -23203,13 +23203,13 @@
     },
     {
         "word": "Reverse",
-        "meaning": "Tersine Ã§evirmek",
+        "meaning": "Tersine çevirmek",
         "level": "B2",
         "id": 7317
     },
     {
         "word": "Revise",
-        "meaning": "GÃ¶zden geÃ§irmek",
+        "meaning": "Gözden geçirmek",
         "level": "B1",
         "id": 7319
     },
@@ -23251,7 +23251,7 @@
     },
     {
         "word": "Spite",
-        "meaning": "RaÄŸmen",
+        "meaning": "Rağmen",
         "level": "B2",
         "id": 7574
     },
@@ -23269,7 +23269,7 @@
     },
     {
         "word": "Squeeze",
-        "meaning": "SÄ±kmak",
+        "meaning": "Sıkmak",
         "level": "B1",
         "id": 7584
     },
@@ -23281,7 +23281,7 @@
     },
     {
         "word": "Steadily",
-        "meaning": "SÃ¼rekli",
+        "meaning": "Sürekli",
         "level": "B2",
         "id": 7601
     },
@@ -23293,13 +23293,13 @@
     },
     {
         "word": "Sting",
-        "meaning": "Sokmak (ArÄ± vb.)",
+        "meaning": "Sokmak (Arı vb.)",
         "level": "B1",
         "id": 7612
     },
     {
         "word": "Stir",
-        "meaning": "KarÄ±ÅŸtÄ±rmak",
+        "meaning": "Karıştırmak",
         "level": "B1",
         "id": 7613
     },
@@ -23317,7 +23317,7 @@
     },
     {
         "word": "Impeach",
-        "meaning": "SuÃ§lamak",
+        "meaning": "Suçlamak",
         "level": "C2",
         "id": 7631
     },
@@ -23341,7 +23341,7 @@
     },
     {
         "word": "Impetus",
-        "meaning": "Ä°tici gÃ¼Ã§",
+        "meaning": "İtici güç",
         "level": "C2",
         "id": 7636
     },
@@ -23353,13 +23353,13 @@
     },
     {
         "word": "Implicit",
-        "meaning": "Ä°ma edilen",
+        "meaning": "İma edilen",
         "level": "C2",
         "id": 7639
     },
     {
         "word": "Implode",
-        "meaning": "Ä°Ã§e patlamak",
+        "meaning": "İçe patlamak",
         "level": "C2",
         "id": 7640
     },
@@ -23371,7 +23371,7 @@
     },
     {
         "word": "Ugly",
-        "meaning": "Ã‡irkin",
+        "meaning": "Çirkin",
         "level": "A1",
         "id": 7642
     },
@@ -23383,13 +23383,13 @@
     },
     {
         "word": "Ultimately",
-        "meaning": "SonuÃ§ta",
+        "meaning": "Sonuçta",
         "level": "B2",
         "id": 7644
     },
     {
         "word": "Umbrella",
-        "meaning": "Åemsiye",
+        "meaning": "Şemsiye",
         "level": "A1",
         "id": 7645
     },
@@ -23413,25 +23413,25 @@
     },
     {
         "word": "Uncle",
-        "meaning": "Amca/DayÄ±",
+        "meaning": "Amca/Dayı",
         "level": "A1",
         "id": 7649
     },
     {
         "word": "Uncomfortable",
-        "meaning": "RahatsÄ±z",
+        "meaning": "Rahatsız",
         "level": "B1",
         "id": 7650
     },
     {
         "word": "Unconscious",
-        "meaning": "BilinÃ§siz",
+        "meaning": "Bilinçsiz",
         "level": "B2",
         "id": 7651
     },
     {
         "word": "Under",
-        "meaning": "AltÄ±nda",
+        "meaning": "Altında",
         "level": "A1",
         "id": 7652
     },
@@ -23443,7 +23443,7 @@
     },
     {
         "word": "Underground",
-        "meaning": "YeraltÄ±",
+        "meaning": "Yeraltı",
         "level": "A2",
         "id": 7654
     },
@@ -23455,19 +23455,19 @@
     },
     {
         "word": "Undertake",
-        "meaning": "Ãœstlenmek",
+        "meaning": "Üstlenmek",
         "level": "B2",
         "id": 7657
     },
     {
         "word": "Unemployed",
-        "meaning": "Ä°ÅŸsiz",
+        "meaning": "İşsiz",
         "level": "B1",
         "id": 7658
     },
     {
         "word": "Unemployment",
-        "meaning": "Ä°ÅŸsizlik",
+        "meaning": "İşsizlik",
         "level": "B1",
         "id": 7659
     },
@@ -23503,7 +23503,7 @@
     },
     {
         "word": "Uniform",
-        "meaning": "Ãœniforma",
+        "meaning": "Üniforma",
         "level": "A2",
         "id": 7665
     },
@@ -23515,19 +23515,19 @@
     },
     {
         "word": "Unique",
-        "meaning": "EÅŸsiz",
+        "meaning": "Eşsiz",
         "level": "B2",
         "id": 7667
     },
     {
         "word": "Unite",
-        "meaning": "BirleÅŸmek",
+        "meaning": "Birleşmek",
         "level": "B2",
         "id": 7669
     },
     {
         "word": "United",
-        "meaning": "BirleÅŸik",
+        "meaning": "Birleşik",
         "level": "A2",
         "id": 7670
     },
@@ -23557,7 +23557,7 @@
     },
     {
         "word": "Unlikely",
-        "meaning": "OlasÄ± olmayan",
+        "meaning": "Olası olmayan",
         "level": "B1",
         "id": 7677
     },
@@ -23569,37 +23569,37 @@
     },
     {
         "word": "Unusual",
-        "meaning": "SÄ±radÄ±ÅŸÄ±",
+        "meaning": "Sıradışı",
         "level": "A2",
         "id": 7679
     },
     {
         "word": "Up",
-        "meaning": "YukarÄ±",
+        "meaning": "Yukarı",
         "level": "A1",
         "id": 7680
     },
     {
         "word": "Upon",
-        "meaning": "Ãœzerine",
+        "meaning": "Üzerine",
         "level": "B1",
         "id": 7682
     },
     {
         "word": "Upper",
-        "meaning": "Ãœst",
+        "meaning": "Üst",
         "level": "B2",
         "id": 7683
     },
     {
         "word": "Upset",
-        "meaning": "ÃœzgÃ¼n",
+        "meaning": "Üzgün",
         "level": "B1",
         "id": 7684
     },
     {
         "word": "Upstairs",
-        "meaning": "Ãœst kat",
+        "meaning": "Üst kat",
         "level": "A1",
         "id": 7685
     },
@@ -23611,7 +23611,7 @@
     },
     {
         "word": "Urge",
-        "meaning": "DÃ¼rtÃ¼, Zorlamak",
+        "meaning": "Dürtü, Zorlamak",
         "level": "B2",
         "id": 7687
     },
@@ -23629,19 +23629,19 @@
     },
     {
         "word": "Used",
-        "meaning": "KullanÄ±lmÄ±ÅŸ",
+        "meaning": "Kullanılmış",
         "level": "A2",
         "id": 7690
     },
     {
         "word": "Useful",
-        "meaning": "FaydalÄ±",
+        "meaning": "Faydalı",
         "level": "A1",
         "id": 7691
     },
     {
         "word": "Usual",
-        "meaning": "OlaÄŸan",
+        "meaning": "Olağan",
         "level": "A2",
         "id": 7693
     },
@@ -23659,13 +23659,13 @@
     },
     {
         "word": "Valid",
-        "meaning": "GeÃ§erli",
+        "meaning": "Geçerli",
         "level": "B2",
         "id": 7696
     },
     {
         "word": "Valuable",
-        "meaning": "DeÄŸerli",
+        "meaning": "Değerli",
         "level": "B1",
         "id": 7698
     },
@@ -23683,19 +23683,19 @@
     },
     {
         "word": "Variety",
-        "meaning": "Ã‡eÅŸitlilik",
+        "meaning": "Çeşitlilik",
         "level": "A2",
         "id": 7702
     },
     {
         "word": "Various",
-        "meaning": "Ã‡eÅŸitli",
+        "meaning": "Çeşitli",
         "level": "B1",
         "id": 7703
     },
     {
         "word": "Vary",
-        "meaning": "DeÄŸiÅŸmek",
+        "meaning": "Değişmek",
         "level": "B2",
         "id": 7704
     },
@@ -23707,13 +23707,13 @@
     },
     {
         "word": "Vast",
-        "meaning": "GeniÅŸ",
+        "meaning": "Geniş",
         "level": "B2",
         "id": 7706
     },
     {
         "word": "Very",
-        "meaning": "Ã‡ok",
+        "meaning": "Çok",
         "level": "A1",
         "id": 7710
     },
@@ -23737,7 +23737,7 @@
     },
     {
         "word": "Via",
-        "meaning": "AracÄ±lÄ±ÄŸÄ±yla",
+        "meaning": "Aracılığıyla",
         "level": "B1",
         "id": 7714
     },
@@ -23761,31 +23761,31 @@
     },
     {
         "word": "View",
-        "meaning": "GÃ¶rÃ¼nÃ¼m, Manzara",
+        "meaning": "Görünüm, Manzara",
         "level": "A2",
         "id": 7718
     },
     {
         "word": "Viewer",
-        "meaning": "Ä°zleyici",
+        "meaning": "İzleyici",
         "level": "B1",
         "id": 7719
     },
     {
         "word": "Village",
-        "meaning": "KÃ¶y",
+        "meaning": "Köy",
         "level": "A1",
         "id": 7720
     },
     {
         "word": "Violence",
-        "meaning": "Åiddet",
+        "meaning": "Şiddet",
         "level": "B1",
         "id": 7721
     },
     {
         "word": "Violent",
-        "meaning": "Åiddetli",
+        "meaning": "Şiddetli",
         "level": "B1",
         "id": 7722
     },
@@ -23797,13 +23797,13 @@
     },
     {
         "word": "Virus",
-        "meaning": "VirÃ¼s",
+        "meaning": "Virüs",
         "level": "A2",
         "id": 7724
     },
     {
         "word": "Visible",
-        "meaning": "GÃ¶rÃ¼nÃ¼r",
+        "meaning": "Görünür",
         "level": "B2",
         "id": 7725
     },
@@ -23815,13 +23815,13 @@
     },
     {
         "word": "Visitor",
-        "meaning": "ZiyaretÃ§i",
+        "meaning": "Ziyaretçi",
         "level": "A1",
         "id": 7728
     },
     {
         "word": "Visual",
-        "meaning": "GÃ¶rsel",
+        "meaning": "Görsel",
         "level": "B2",
         "id": 7729
     },
@@ -23851,7 +23851,7 @@
     },
     {
         "word": "Volunteer",
-        "meaning": "GÃ¶nÃ¼llÃ¼",
+        "meaning": "Gönüllü",
         "level": "B2",
         "id": 7734
     },
@@ -23863,7 +23863,7 @@
     },
     {
         "word": "Wage",
-        "meaning": "Ãœcret",
+        "meaning": "Ücret",
         "level": "B2",
         "id": 7736
     },
@@ -23887,7 +23887,7 @@
     },
     {
         "word": "Walk",
-        "meaning": "YÃ¼rÃ¼mek",
+        "meaning": "Yürümek",
         "level": "A1",
         "id": 7740
     },
@@ -23899,25 +23899,25 @@
     },
     {
         "word": "Wander",
-        "meaning": "DolaÅŸmak",
+        "meaning": "Dolaşmak",
         "level": "B2",
         "id": 7742
     },
     {
         "word": "Want",
-        "meaning": "Ä°stemek",
+        "meaning": "İstemek",
         "level": "A1",
         "id": 7743
     },
     {
         "word": "War",
-        "meaning": "SavaÅŸ",
+        "meaning": "Savaş",
         "level": "A2",
         "id": 7744
     },
     {
         "word": "Warm",
-        "meaning": "IlÄ±k",
+        "meaning": "Ilık",
         "level": "A1",
         "id": 7745
     },
@@ -23929,25 +23929,25 @@
     },
     {
         "word": "Warning",
-        "meaning": "UyarÄ±",
+        "meaning": "Uyarı",
         "level": "B1",
         "id": 7747
     },
     {
         "word": "Wash",
-        "meaning": "YÄ±kamak",
+        "meaning": "Yıkamak",
         "level": "A1",
         "id": 7748
     },
     {
         "word": "Waste",
-        "meaning": "AtÄ±k, Ä°sraf etmek",
+        "meaning": "Atık, İsraf etmek",
         "level": "B1",
         "id": 7749
     },
     {
         "word": "Watch",
-        "meaning": "Ä°zlemek, Saat",
+        "meaning": "İzlemek, Saat",
         "level": "A1",
         "id": 7750
     },
@@ -23971,13 +23971,13 @@
     },
     {
         "word": "Weak",
-        "meaning": "ZayÄ±f",
+        "meaning": "Zayıf",
         "level": "A2",
         "id": 7755
     },
     {
         "word": "Weakness",
-        "meaning": "ZayÄ±flÄ±k",
+        "meaning": "Zayıflık",
         "level": "B2",
         "id": 7756
     },
@@ -24013,13 +24013,13 @@
     },
     {
         "word": "Wedding",
-        "meaning": "DÃ¼ÄŸÃ¼n",
+        "meaning": "Düğün",
         "level": "A2",
         "id": 7764
     },
     {
         "word": "Wednesday",
-        "meaning": "Ã‡arÅŸamba",
+        "meaning": "Çarşamba",
         "level": "A1",
         "id": 7765
     },
@@ -24037,7 +24037,7 @@
     },
     {
         "word": "Weekly",
-        "meaning": "HaftalÄ±k",
+        "meaning": "Haftalık",
         "level": "A2",
         "id": 7768
     },
@@ -24049,13 +24049,13 @@
     },
     {
         "word": "Weight",
-        "meaning": "AÄŸÄ±rlÄ±k",
+        "meaning": "Ağırlık",
         "level": "A2",
         "id": 7770
     },
     {
         "word": "Welcome",
-        "meaning": "HoÅŸ geldin",
+        "meaning": "Hoş geldin",
         "level": "A1",
         "id": 7771
     },
@@ -24067,13 +24067,13 @@
     },
     {
         "word": "Well",
-        "meaning": "Ä°yi",
+        "meaning": "İyi",
         "level": "A1",
         "id": 7773
     },
     {
         "word": "Western",
-        "meaning": "BatÄ±lÄ±",
+        "meaning": "Batılı",
         "level": "B1",
         "id": 7775
     },
@@ -24133,7 +24133,7 @@
     },
     {
         "word": "Whether",
-        "meaning": "Olup olmadÄ±ÄŸÄ±",
+        "meaning": "Olup olmadığı",
         "level": "B1",
         "id": 7787
     },
@@ -24145,13 +24145,13 @@
     },
     {
         "word": "While",
-        "meaning": "Ä°ken",
+        "meaning": "İken",
         "level": "A1",
         "id": 7789
     },
     {
         "word": "Whisper",
-        "meaning": "FÄ±sÄ±ldamak",
+        "meaning": "Fısıldamak",
         "level": "B2",
         "id": 7790
     },
@@ -24169,7 +24169,7 @@
     },
     {
         "word": "Whole",
-        "meaning": "TÃ¼m",
+        "meaning": "Tüm",
         "level": "A2",
         "id": 7793
     },
@@ -24193,25 +24193,25 @@
     },
     {
         "word": "Wide",
-        "meaning": "GeniÅŸ",
+        "meaning": "Geniş",
         "level": "A2",
         "id": 7797
     },
     {
         "word": "Widely",
-        "meaning": "GeniÅŸ Ã§apta",
+        "meaning": "Geniş çapta",
         "level": "B2",
         "id": 7798
     },
     {
         "word": "Width",
-        "meaning": "GeniÅŸlik",
+        "meaning": "Genişlik",
         "level": "C1",
         "id": 7799
     },
     {
         "word": "Wife",
-        "meaning": "EÅŸ (KadÄ±n)",
+        "meaning": "Eş (Kadın)",
         "level": "A1",
         "id": 7800
     },
@@ -24223,7 +24223,7 @@
     },
     {
         "word": "Willing",
-        "meaning": "Ä°stekli",
+        "meaning": "İstekli",
         "level": "B2",
         "id": 7804
     },
@@ -24241,7 +24241,7 @@
     },
     {
         "word": "Wine",
-        "meaning": "Åarap",
+        "meaning": "Şarap",
         "level": "A1",
         "id": 7808
     },
@@ -24271,31 +24271,31 @@
     },
     {
         "word": "With",
-        "meaning": "Ä°le",
+        "meaning": "İle",
         "level": "A1",
         "id": 7815
     },
     {
         "word": "Within",
-        "meaning": "Ä°Ã§inde",
+        "meaning": "İçinde",
         "level": "A2",
         "id": 7817
     },
     {
         "word": "Without",
-        "meaning": "OlmaksÄ±zÄ±n",
+        "meaning": "Olmaksızın",
         "level": "A1",
         "id": 7818
     },
     {
         "word": "Witness",
-        "meaning": "TanÄ±k",
+        "meaning": "Tanık",
         "level": "B2",
         "id": 7819
     },
     {
         "word": "Woman",
-        "meaning": "KadÄ±n",
+        "meaning": "Kadın",
         "level": "A1",
         "id": 7820
     },
@@ -24313,7 +24313,7 @@
     },
     {
         "word": "Wooden",
-        "meaning": "AhÅŸap",
+        "meaning": "Ahşap",
         "level": "A2",
         "id": 7824
     },
@@ -24325,19 +24325,19 @@
     },
     {
         "word": "Work",
-        "meaning": "Ã‡alÄ±ÅŸmak, Ä°ÅŸ",
+        "meaning": "Çalışmak, İş",
         "level": "A1",
         "id": 7827
     },
     {
         "word": "Worker",
-        "meaning": "Ä°ÅŸÃ§i",
+        "meaning": "İşçi",
         "level": "A1",
         "id": 7828
     },
     {
         "word": "Working",
-        "meaning": "Ã‡alÄ±ÅŸan",
+        "meaning": "Çalışan",
         "level": "A2",
         "id": 7829
     },
@@ -24349,37 +24349,37 @@
     },
     {
         "word": "Worldwide",
-        "meaning": "DÃ¼nya Ã§apÄ±nda",
+        "meaning": "Dünya çapında",
         "level": "B1",
         "id": 7832
     },
     {
         "word": "Worried",
-        "meaning": "EndiÅŸeli",
+        "meaning": "Endişeli",
         "level": "A2",
         "id": 7833
     },
     {
         "word": "Worry",
-        "meaning": "EndiÅŸelenmek",
+        "meaning": "Endişelenmek",
         "level": "A2",
         "id": 7834
     },
     {
         "word": "Worse",
-        "meaning": "Daha kÃ¶tÃ¼",
+        "meaning": "Daha kötü",
         "level": "A2",
         "id": 7835
     },
     {
         "word": "Worst",
-        "meaning": "En kÃ¶tÃ¼",
+        "meaning": "En kötü",
         "level": "A2",
         "id": 7836
     },
     {
         "word": "Would",
-        "meaning": "-cekti/caktÄ±",
+        "meaning": "-cekti/caktı",
         "level": "A1",
         "id": 7838
     },
@@ -24391,7 +24391,7 @@
     },
     {
         "word": "Wow",
-        "meaning": "Vay canÄ±na",
+        "meaning": "Vay canına",
         "level": "A1",
         "id": 7840
     },
@@ -24421,19 +24421,19 @@
     },
     {
         "word": "Writing",
-        "meaning": "YazÄ±",
+        "meaning": "Yazı",
         "level": "A1",
         "id": 7845
     },
     {
         "word": "Written",
-        "meaning": "YazÄ±lÄ±",
+        "meaning": "Yazılı",
         "level": "B1",
         "id": 7846
     },
     {
         "word": "Wrong",
-        "meaning": "YanlÄ±ÅŸ",
+        "meaning": "Yanlış",
         "level": "A1",
         "id": 7847
     },
@@ -24451,13 +24451,13 @@
     },
     {
         "word": "Year",
-        "meaning": "YÄ±l",
+        "meaning": "Yıl",
         "level": "A1",
         "id": 7850
     },
     {
         "word": "Yellow",
-        "meaning": "SarÄ±",
+        "meaning": "Sarı",
         "level": "A1",
         "id": 7851
     },
@@ -24469,13 +24469,13 @@
     },
     {
         "word": "Yesterday",
-        "meaning": "DÃ¼n",
+        "meaning": "Dün",
         "level": "A1",
         "id": 7853
     },
     {
         "word": "Yet",
-        "meaning": "HenÃ¼z",
+        "meaning": "Henüz",
         "level": "A2",
         "id": 7854
     },
@@ -24487,7 +24487,7 @@
     },
     {
         "word": "Yoghurt",
-        "meaning": "YoÄŸurt",
+        "meaning": "Yoğurt",
         "level": "A1",
         "id": 7856
     },
@@ -24499,7 +24499,7 @@
     },
     {
         "word": "Young",
-        "meaning": "GenÃ§",
+        "meaning": "Genç",
         "level": "A1",
         "id": 7858
     },
@@ -24523,61 +24523,61 @@
     },
     {
         "word": "Youth",
-        "meaning": "GenÃ§lik",
+        "meaning": "Gençlik",
         "level": "B1",
         "id": 7862
     },
     {
         "word": "Zero",
-        "meaning": "SÄ±fÄ±r",
+        "meaning": "Sıfır",
         "level": "A1",
         "id": 7863
     },
     {
         "word": "Zone",
-        "meaning": "BÃ¶lge",
+        "meaning": "Bölge",
         "level": "B1",
         "id": 7864
     },
     {
         "word": "Account for",
-        "meaning": "Hesap vermek, OluÅŸturmak",
+        "meaning": "Hesap vermek, Oluşturmak",
         "level": "B2",
         "id": 7865
     },
     {
         "word": "Act on",
-        "meaning": "Harekete geÃ§mek",
+        "meaning": "Harekete geçmek",
         "level": "C1",
         "id": 7866
     },
     {
         "word": "Act out",
-        "meaning": "DÄ±ÅŸa vurmak",
+        "meaning": "Dışa vurmak",
         "level": "C1",
         "id": 7867
     },
     {
         "word": "Add up",
-        "meaning": "Toplamak, AnlamlÄ± olmak",
+        "meaning": "Toplamak, Anlamlı olmak",
         "level": "B1",
         "id": 7868
     },
     {
         "word": "Adhere to",
-        "meaning": "SadÄ±k kalmak",
+        "meaning": "Sadık kalmak",
         "level": "C1",
         "id": 7869
     },
     {
         "word": "Advise against",
-        "meaning": "YapmamasÄ±nÄ± Ã¶ÄŸÃ¼tlemek",
+        "meaning": "Yapmamasını öğütlemek",
         "level": "C1",
         "id": 7870
     },
     {
         "word": "Agree with",
-        "meaning": "KatÄ±lmak",
+        "meaning": "Katılmak",
         "level": "A2",
         "id": 7871
     },
@@ -24595,49 +24595,49 @@
     },
     {
         "word": "Answer back",
-        "meaning": "KarÅŸÄ±lÄ±k vermek",
+        "meaning": "Karşılık vermek",
         "level": "B2",
         "id": 7874
     },
     {
         "word": "Appeal to",
-        "meaning": "Hitap etmek, BaÅŸvurmak",
+        "meaning": "Hitap etmek, Başvurmak",
         "level": "B2",
         "id": 7875
     },
     {
         "word": "Apply for",
-        "meaning": "BaÅŸvurmak",
+        "meaning": "Başvurmak",
         "level": "A2",
         "id": 7876
     },
     {
         "word": "Ask after",
-        "meaning": "Hal hatÄ±r sormak",
+        "meaning": "Hal hatır sormak",
         "level": "C1",
         "id": 7877
     },
     {
         "word": "Ask around",
-        "meaning": "SoruÅŸturmak",
+        "meaning": "Soruşturmak",
         "level": "B1",
         "id": 7878
     },
     {
         "word": "Ask for",
-        "meaning": "Ä°stemek",
+        "meaning": "İstemek",
         "level": "A1",
         "id": 7879
     },
     {
         "word": "Ask out",
-        "meaning": "Ã‡Ä±kma teklif etmek",
+        "meaning": "Çıkma teklif etmek",
         "level": "B1",
         "id": 7880
     },
     {
         "word": "Back away",
-        "meaning": "Geri Ã§ekilmek",
+        "meaning": "Geri çekilmek",
         "level": "B2",
         "id": 7881
     },
@@ -24655,7 +24655,7 @@
     },
     {
         "word": "Bank on",
-        "meaning": "Bel baÄŸlamak",
+        "meaning": "Bel bağlamak",
         "level": "C1",
         "id": 7884
     },
@@ -24667,7 +24667,7 @@
     },
     {
         "word": "Be after",
-        "meaning": "PeÅŸinde olmak",
+        "meaning": "Peşinde olmak",
         "level": "B1",
         "id": 7886
     },
@@ -24691,37 +24691,37 @@
     },
     {
         "word": "Be down",
-        "meaning": "Keyifsiz olmak, DÃ¼ÅŸmek",
+        "meaning": "Keyifsiz olmak, Düşmek",
         "level": "B1",
         "id": 7890
     },
     {
         "word": "Be fed up with",
-        "meaning": "BÄ±kmak",
+        "meaning": "Bıkmak",
         "level": "B2",
         "id": 7891
     },
     {
         "word": "Be into",
-        "meaning": "Ä°lgili olmak",
+        "meaning": "İlgili olmak",
         "level": "B1",
         "id": 7892
     },
     {
         "word": "Be off",
-        "meaning": "AyrÄ±lmak, Bozuk (GÄ±da)",
+        "meaning": "Ayrılmak, Bozuk (Gıda)",
         "level": "B1",
         "id": 7893
     },
     {
         "word": "Be on",
-        "meaning": "AÃ§Ä±k olmak (Cihaz), GÃ¶sterimde olmak",
+        "meaning": "Açık olmak (Cihaz), Gösterimde olmak",
         "level": "A2",
         "id": 7894
     },
     {
         "word": "Be out of",
-        "meaning": "TÃ¼kenmek",
+        "meaning": "Tükenmek",
         "level": "B1",
         "id": 7895
     },
@@ -24733,13 +24733,13 @@
     },
     {
         "word": "Be up",
-        "meaning": "UyanÄ±k olmak",
+        "meaning": "Uyanık olmak",
         "level": "B1",
         "id": 7897
     },
     {
         "word": "Be up to",
-        "meaning": "Yapmakta olmak, BaÄŸlÄ± olmak",
+        "meaning": "Yapmakta olmak, Bağlı olmak",
         "level": "B1",
         "id": 7898
     },
@@ -24751,13 +24751,13 @@
     },
     {
         "word": "Beat up",
-        "meaning": "DÃ¶vmek",
+        "meaning": "Dövmek",
         "level": "B2",
         "id": 7900
     },
     {
         "word": "Believe in",
-        "meaning": "Ä°nanmak",
+        "meaning": "İnanmak",
         "level": "A2",
         "id": 7901
     },
@@ -24769,61 +24769,61 @@
     },
     {
         "word": "Bend down",
-        "meaning": "EÄŸilmek",
+        "meaning": "Eğilmek",
         "level": "B1",
         "id": 7903
     },
     {
         "word": "Black out",
-        "meaning": "BayÄ±lmak",
+        "meaning": "Bayılmak",
         "level": "C1",
         "id": 7904
     },
     {
         "word": "Block out",
-        "meaning": "Engellemek (IÅŸÄ±k/Ses)",
+        "meaning": "Engellemek (Işık/Ses)",
         "level": "C1",
         "id": 7905
     },
     {
         "word": "Blow out",
-        "meaning": "SÃ¶ndÃ¼rmek (Ãœfleyerek)",
+        "meaning": "Söndürmek (Üfleyerek)",
         "level": "B1",
         "id": 7906
     },
     {
         "word": "Blow up",
-        "meaning": "Patlamak, ÅiÅŸirmek",
+        "meaning": "Patlamak, Şişirmek",
         "level": "B1",
         "id": 7907
     },
     {
         "word": "Boil over",
-        "meaning": "TaÅŸmak",
+        "meaning": "Taşmak",
         "level": "B2",
         "id": 7908
     },
     {
         "word": "Book in",
-        "meaning": "Yer ayÄ±rtmak",
+        "meaning": "Yer ayırtmak",
         "level": "B1",
         "id": 7909
     },
     {
         "word": "Boot up",
-        "meaning": "BilgisayarÄ± baÅŸlatmak",
+        "meaning": "Bilgisayarı başlatmak",
         "level": "B1",
         "id": 7910
     },
     {
         "word": "Break away",
-        "meaning": "KaÃ§Ä±p kurtulmak",
+        "meaning": "Kaçıp kurtulmak",
         "level": "B2",
         "id": 7911
     },
     {
         "word": "Break in",
-        "meaning": "Zorla girmek, AlÄ±ÅŸtÄ±rmak",
+        "meaning": "Zorla girmek, Alıştırmak",
         "level": "B2",
         "id": 7913
     },
@@ -24835,13 +24835,13 @@
     },
     {
         "word": "Break off",
-        "meaning": "Koparmak, Ä°liÅŸkiyi kesmek",
+        "meaning": "Koparmak, İlişkiyi kesmek",
         "level": "B2",
         "id": 7915
     },
     {
         "word": "Break out",
-        "meaning": "Patlak vermek, KaÃ§mak",
+        "meaning": "Patlak vermek, Kaçmak",
         "level": "B2",
         "id": 7916
     },
@@ -24865,25 +24865,25 @@
     },
     {
         "word": "Bring down",
-        "meaning": "Devirmek, Ä°ndirmek",
+        "meaning": "Devirmek, İndirmek",
         "level": "B2",
         "id": 7921
     },
     {
         "word": "Bring forward",
-        "meaning": "Ã–ne almak",
+        "meaning": "Öne almak",
         "level": "C1",
         "id": 7922
     },
     {
         "word": "Bring in",
-        "meaning": "KazandÄ±rmak, TanÄ±tmak",
+        "meaning": "Kazandırmak, Tanıtmak",
         "level": "B2",
         "id": 7923
     },
     {
         "word": "Bring off",
-        "meaning": "BaÅŸarmak",
+        "meaning": "Başarmak",
         "level": "C1",
         "id": 7924
     },
@@ -24895,7 +24895,7 @@
     },
     {
         "word": "Bring out",
-        "meaning": "Ortaya Ã§Ä±karmak, YayÄ±mlamak",
+        "meaning": "Ortaya çıkarmak, Yayımlamak",
         "level": "B2",
         "id": 7926
     },
@@ -24907,7 +24907,7 @@
     },
     {
         "word": "Build up",
-        "meaning": "GeliÅŸtirmek, Biriktirmek",
+        "meaning": "Geliştirmek, Biriktirmek",
         "level": "B1",
         "id": 7929
     },
@@ -24919,25 +24919,25 @@
     },
     {
         "word": "Burn down",
-        "meaning": "YanÄ±p kÃ¼l olmak",
+        "meaning": "Yanıp kül olmak",
         "level": "B1",
         "id": 7931
     },
     {
         "word": "Burn out",
-        "meaning": "TÃ¼kenmek",
+        "meaning": "Tükenmek",
         "level": "B2",
         "id": 7932
     },
     {
         "word": "Burst into",
-        "meaning": "Birden ... yapmaya baÅŸlamak",
+        "meaning": "Birden ... yapmaya başlamak",
         "level": "B2",
         "id": 7933
     },
     {
         "word": "Butt in",
-        "meaning": "SÃ¶ze karÄ±ÅŸmak",
+        "meaning": "Söze karışmak",
         "level": "C1",
         "id": 7934
     },
@@ -24949,19 +24949,19 @@
     },
     {
         "word": "Call for",
-        "meaning": "Gerektirmek, Ã‡aÄŸÄ±rmak",
+        "meaning": "Gerektirmek, Çağırmak",
         "level": "B1",
         "id": 7936
     },
     {
         "word": "Call in",
-        "meaning": "UÄŸramak, Ã‡aÄŸÄ±rmak (Doktor vb)",
+        "meaning": "Uğramak, Çağırmak (Doktor vb)",
         "level": "B2",
         "id": 7937
     },
     {
         "word": "Call on",
-        "meaning": "Ziyaret etmek, SÃ¶z hakkÄ± vermek",
+        "meaning": "Ziyaret etmek, Söz hakkı vermek",
         "level": "B2",
         "id": 7939
     },
@@ -24985,43 +24985,43 @@
     },
     {
         "word": "Catch on",
-        "meaning": "PopÃ¼ler olmak, Anlamak",
+        "meaning": "Popüler olmak, Anlamak",
         "level": "C1",
         "id": 7945
     },
     {
         "word": "Catch up",
-        "meaning": "YetiÅŸmek, Yakalamak",
+        "meaning": "Yetişmek, Yakalamak",
         "level": "B1",
         "id": 7946
     },
     {
         "word": "Cheer up",
-        "meaning": "NeÅŸelenmek",
+        "meaning": "Neşelenmek",
         "level": "B1",
         "id": 7949
     },
     {
         "word": "Chip in",
-        "meaning": "KatkÄ±da bulunmak",
+        "meaning": "Katkıda bulunmak",
         "level": "C1",
         "id": 7950
     },
     {
         "word": "Chop up",
-        "meaning": "DoÄŸramak",
+        "meaning": "Doğramak",
         "level": "B1",
         "id": 7951
     },
     {
         "word": "Clear up",
-        "meaning": "AÃ§Ä±klÄ±ÄŸa kavuÅŸturmak, Hava aÃ§masÄ±",
+        "meaning": "Açıklığa kavuşturmak, Hava açması",
         "level": "B2",
         "id": 7953
     },
     {
         "word": "Close down",
-        "meaning": "Kapanmak (Ä°ÅŸyeri)",
+        "meaning": "Kapanmak (İşyeri)",
         "level": "B1",
         "id": 7954
     },
@@ -25033,37 +25033,37 @@
     },
     {
         "word": "Come along",
-        "meaning": "EÅŸlik etmek, GeliÅŸmek",
+        "meaning": "Eşlik etmek, Gelişmek",
         "level": "B1",
         "id": 7957
     },
     {
         "word": "Come apart",
-        "meaning": "ParÃ§alanmak",
+        "meaning": "Parçalanmak",
         "level": "B2",
         "id": 7958
     },
     {
         "word": "Come around",
-        "meaning": "Fikrini deÄŸiÅŸtirmek, AyÄ±lmak",
+        "meaning": "Fikrini değiştirmek, Ayılmak",
         "level": "C1",
         "id": 7959
     },
     {
         "word": "Come away",
-        "meaning": "AyrÄ±lmak",
+        "meaning": "Ayrılmak",
         "level": "B2",
         "id": 7960
     },
     {
         "word": "Come by",
-        "meaning": "UÄŸramak, Elde etmek",
+        "meaning": "Uğramak, Elde etmek",
         "level": "C1",
         "id": 7962
     },
     {
         "word": "Come down",
-        "meaning": "Ä°nmek, DÃ¼ÅŸmek",
+        "meaning": "İnmek, Düşmek",
         "level": "B1",
         "id": 7963
     },
@@ -25075,7 +25075,7 @@
     },
     {
         "word": "Come forward",
-        "meaning": "Ã–ne Ã§Ä±kmak (Bilgi vermek)",
+        "meaning": "Öne çıkmak (Bilgi vermek)",
         "level": "C1",
         "id": 7965
     },
@@ -25099,37 +25099,37 @@
     },
     {
         "word": "Come off",
-        "meaning": "Kopmak, BaÅŸarÄ±lÄ± olmak",
+        "meaning": "Kopmak, Başarılı olmak",
         "level": "C1",
         "id": 7969
     },
     {
         "word": "Come on",
-        "meaning": "Hadi, GeliÅŸmek",
+        "meaning": "Hadi, Gelişmek",
         "level": "A1",
         "id": 7970
     },
     {
         "word": "Come out",
-        "meaning": "Ã‡Ä±kmak, YayÄ±mlanmak",
+        "meaning": "Çıkmak, Yayımlanmak",
         "level": "B1",
         "id": 7971
     },
     {
         "word": "Come over",
-        "meaning": "UÄŸramak",
+        "meaning": "Uğramak",
         "level": "B1",
         "id": 7972
     },
     {
         "word": "Come round",
-        "meaning": "Ziyaret etmek, AyÄ±lmak",
+        "meaning": "Ziyaret etmek, Ayılmak",
         "level": "B2",
         "id": 7973
     },
     {
         "word": "Come up",
-        "meaning": "Ortaya Ã§Ä±kmak",
+        "meaning": "Ortaya çıkmak",
         "level": "B1",
         "id": 7974
     },
@@ -25141,19 +25141,19 @@
     },
     {
         "word": "Cover up",
-        "meaning": "Ã–rtbas etmek",
+        "meaning": "Örtbas etmek",
         "level": "C1",
         "id": 7977
     },
     {
         "word": "Crack down on",
-        "meaning": "GÃ¶z aÃ§tÄ±rmamak",
+        "meaning": "Göz açtırmamak",
         "level": "C1",
         "id": 7978
     },
     {
         "word": "Cross out",
-        "meaning": "ÃœstÃ¼nÃ¼ Ã§izmek",
+        "meaning": "Üstünü çizmek",
         "level": "A2",
         "id": 7979
     },
@@ -25165,25 +25165,25 @@
     },
     {
         "word": "Cut out",
-        "meaning": "Kesip Ã§Ä±karmak, Åekil vermek",
+        "meaning": "Kesip çıkarmak, Şekil vermek",
         "level": "B1",
         "id": 7983
     },
     {
         "word": "Deal with",
-        "meaning": "Ä°lgilenmek, BaÅŸa Ã§Ä±kmak",
+        "meaning": "İlgilenmek, Başa çıkmak",
         "level": "A2",
         "id": 7984
     },
     {
         "word": "Decide on",
-        "meaning": "Karar kÄ±lmak",
+        "meaning": "Karar kılmak",
         "level": "B2",
         "id": 7985
     },
     {
         "word": "Depend on",
-        "meaning": "BaÄŸlÄ± olmak, GÃ¼venmek",
+        "meaning": "Bağlı olmak, Güvenmek",
         "level": "A2",
         "id": 7986
     },
@@ -25195,61 +25195,61 @@
     },
     {
         "word": "Dig up",
-        "meaning": "KazÄ±p Ã§Ä±karmak",
+        "meaning": "Kazıp çıkarmak",
         "level": "C1",
         "id": 7988
     },
     {
         "word": "Do away with",
-        "meaning": "YÃ¼rÃ¼rlÃ¼kten kaldÄ±rmak",
+        "meaning": "Yürürlükten kaldırmak",
         "level": "C1",
         "id": 7989
     },
     {
         "word": "Do up",
-        "meaning": "Ä°liklemek, Tamir etmek",
+        "meaning": "İliklemek, Tamir etmek",
         "level": "B2",
         "id": 7990
     },
     {
         "word": "Do without",
-        "meaning": "Ä°dare etmek",
+        "meaning": "İdare etmek",
         "level": "C1",
         "id": 7991
     },
     {
         "word": "Draw back",
-        "meaning": "Geri Ã§ekilmek",
+        "meaning": "Geri çekilmek",
         "level": "C1",
         "id": 7992
     },
     {
         "word": "Draw up",
-        "meaning": "DÃ¼zenlemek (Belge), Durmak",
+        "meaning": "Düzenlemek (Belge), Durmak",
         "level": "C1",
         "id": 7993
     },
     {
         "word": "Dress up",
-        "meaning": "ÅÄ±k giyinmek",
+        "meaning": "Şık giyinmek",
         "level": "B1",
         "id": 7994
     },
     {
         "word": "Drink up",
-        "meaning": "Ä°Ã§ip bitirmek",
+        "meaning": "İçip bitirmek",
         "level": "B1",
         "id": 7995
     },
     {
         "word": "Drive off",
-        "meaning": "Arabayla uzaklaÅŸmak",
+        "meaning": "Arabayla uzaklaşmak",
         "level": "B1",
         "id": 7996
     },
     {
         "word": "Drop by",
-        "meaning": "GeÃ§erken uÄŸramak",
+        "meaning": "Geçerken uğramak",
         "level": "B2",
         "id": 7997
     },
@@ -25261,7 +25261,7 @@
     },
     {
         "word": "Drop out",
-        "meaning": "Okulu bÄ±rakmak",
+        "meaning": "Okulu bırakmak",
         "level": "B2",
         "id": 8000
     },
@@ -25279,7 +25279,7 @@
     },
     {
         "word": "Enter into",
-        "meaning": "Girmek (AnlaÅŸma)",
+        "meaning": "Girmek (Anlaşma)",
         "level": "C1",
         "id": 8005
     },
@@ -25297,19 +25297,19 @@
     },
     {
         "word": "Fall down",
-        "meaning": "DÃ¼ÅŸmek",
+        "meaning": "Düşmek",
         "level": "A1",
         "id": 8009
     },
     {
         "word": "Fall for",
-        "meaning": "AÅŸÄ±k olmak, Kanmak",
+        "meaning": "Aşık olmak, Kanmak",
         "level": "B2",
         "id": 8010
     },
     {
         "word": "Fall out",
-        "meaning": "Kavga etmek, DÃ¶kÃ¼lmek",
+        "meaning": "Kavga etmek, Dökülmek",
         "level": "C1",
         "id": 8011
     },
@@ -25321,19 +25321,19 @@
     },
     {
         "word": "Fall through",
-        "meaning": "Suya dÃ¼ÅŸmek (Plan)",
+        "meaning": "Suya düşmek (Plan)",
         "level": "C1",
         "id": 8013
     },
     {
         "word": "Feel like",
-        "meaning": "Ä°stemek",
+        "meaning": "İstemek",
         "level": "B1",
         "id": 8014
     },
     {
         "word": "Fight back",
-        "meaning": "KarÅŸÄ± koymak",
+        "meaning": "Karşı koymak",
         "level": "B2",
         "id": 8015
     },
@@ -25351,13 +25351,13 @@
     },
     {
         "word": "Finish off",
-        "meaning": "Bitirmek, TÃ¼ketmek",
+        "meaning": "Bitirmek, Tüketmek",
         "level": "C1",
         "id": 8021
     },
     {
         "word": "Fit in",
-        "meaning": "Uyum saÄŸlamak",
+        "meaning": "Uyum sağlamak",
         "level": "B2",
         "id": 8022
     },
@@ -25387,25 +25387,25 @@
     },
     {
         "word": "Get around",
-        "meaning": "DolaÅŸmak, Ãœstesinden gelmek",
+        "meaning": "Dolaşmak, Üstesinden gelmek",
         "level": "B2",
         "id": 8028
     },
     {
         "word": "Get at",
-        "meaning": "UlaÅŸmak, Ä°ma etmek",
+        "meaning": "Ulaşmak, İma etmek",
         "level": "C1",
         "id": 8029
     },
     {
         "word": "Get away",
-        "meaning": "KaÃ§mak",
+        "meaning": "Kaçmak",
         "level": "B1",
         "id": 8030
     },
     {
         "word": "Get away with",
-        "meaning": "YanÄ±na kar kalmak",
+        "meaning": "Yanına kar kalmak",
         "level": "C1",
         "id": 8031
     },
@@ -25417,61 +25417,61 @@
     },
     {
         "word": "Get by",
-        "meaning": "GeÃ§inmek",
+        "meaning": "Geçinmek",
         "level": "B2",
         "id": 8034
     },
     {
         "word": "Get down",
-        "meaning": "EÄŸilmek, Moralini bozmak",
+        "meaning": "Eğilmek, Moralini bozmak",
         "level": "B1",
         "id": 8035
     },
     {
         "word": "Get down to",
-        "meaning": "Ä°ÅŸe koyulmak",
+        "meaning": "İşe koyulmak",
         "level": "C1",
         "id": 8036
     },
     {
         "word": "Get into",
-        "meaning": "Ä°lgilenmek, Binmek",
+        "meaning": "İlgilenmek, Binmek",
         "level": "B1",
         "id": 8038
     },
     {
         "word": "Get off",
-        "meaning": "Ä°nmek, AyrÄ±lmak",
+        "meaning": "İnmek, Ayrılmak",
         "level": "A2",
         "id": 8039
     },
     {
         "word": "Get on",
-        "meaning": "Binmek, Ä°lerlemek",
+        "meaning": "Binmek, İlerlemek",
         "level": "A2",
         "id": 8040
     },
     {
         "word": "Get on with",
-        "meaning": "Devam etmek, Ä°yi geÃ§inmek",
+        "meaning": "Devam etmek, İyi geçinmek",
         "level": "B2",
         "id": 8041
     },
     {
         "word": "Get out of",
-        "meaning": "KaÃ§Ä±nmak, Ã‡Ä±kmak",
+        "meaning": "Kaçınmak, Çıkmak",
         "level": "B1",
         "id": 8043
     },
     {
         "word": "Get round",
-        "meaning": "Ä°kna etmek",
+        "meaning": "İkna etmek",
         "level": "C1",
         "id": 8045
     },
     {
         "word": "Get through",
-        "meaning": "Telefonla ulaÅŸmak, Bitirmek",
+        "meaning": "Telefonla ulaşmak, Bitirmek",
         "level": "B2",
         "id": 8046
     },
@@ -25483,19 +25483,19 @@
     },
     {
         "word": "Give away",
-        "meaning": "BaÄŸÄ±ÅŸlamak, Ele vermek",
+        "meaning": "Bağışlamak, Ele vermek",
         "level": "B2",
         "id": 8049
     },
     {
         "word": "Give off",
-        "meaning": "Yaymak (Koku/IsÄ±)",
+        "meaning": "Yaymak (Koku/Isı)",
         "level": "C1",
         "id": 8052
     },
     {
         "word": "Give out",
-        "meaning": "DaÄŸÄ±tmak, TÃ¼kenmek",
+        "meaning": "Dağıtmak, Tükenmek",
         "level": "B2",
         "id": 8053
     },
@@ -25507,25 +25507,25 @@
     },
     {
         "word": "Go along",
-        "meaning": "EÅŸlik etmek",
+        "meaning": "Eşlik etmek",
         "level": "B2",
         "id": 8056
     },
     {
         "word": "Go by",
-        "meaning": "GeÃ§mek (Zaman)",
+        "meaning": "Geçmek (Zaman)",
         "level": "B2",
         "id": 8059
     },
     {
         "word": "Go down",
-        "meaning": "Ä°nmek, Batmak",
+        "meaning": "İnmek, Batmak",
         "level": "B1",
         "id": 8060
     },
     {
         "word": "Go for",
-        "meaning": "SeÃ§mek, SaldÄ±rmak",
+        "meaning": "Seçmek, Saldırmak",
         "level": "B1",
         "id": 8061
     },
@@ -25537,37 +25537,37 @@
     },
     {
         "word": "Go into",
-        "meaning": "Girmek, Ä°ncelemek",
+        "meaning": "Girmek, İncelemek",
         "level": "B1",
         "id": 8063
     },
     {
         "word": "Go off",
-        "meaning": "Patlamak, Ã‡almak (Alarm)",
+        "meaning": "Patlamak, Çalmak (Alarm)",
         "level": "B1",
         "id": 8064
     },
     {
         "word": "Go over",
-        "meaning": "GÃ¶zden geÃ§irmek",
+        "meaning": "Gözden geçirmek",
         "level": "B1",
         "id": 8067
     },
     {
         "word": "Go through",
-        "meaning": "YaÅŸamak (Deneyim), Ä°ncelemek",
+        "meaning": "Yaşamak (Deneyim), İncelemek",
         "level": "B2",
         "id": 8068
     },
     {
         "word": "Go up",
-        "meaning": "YÃ¼kselmek",
+        "meaning": "Yükselmek",
         "level": "A2",
         "id": 8069
     },
     {
         "word": "Go with",
-        "meaning": "Uymak, EÅŸlik etmek",
+        "meaning": "Uymak, Eşlik etmek",
         "level": "B1",
         "id": 8070
     },
@@ -25579,7 +25579,7 @@
     },
     {
         "word": "Grow apart",
-        "meaning": "UzaklaÅŸmak (Ä°liÅŸki)",
+        "meaning": "Uzaklaşmak (İlişki)",
         "level": "C1",
         "id": 8072
     },
@@ -25591,7 +25591,7 @@
     },
     {
         "word": "Hand out",
-        "meaning": "DaÄŸÄ±tmak",
+        "meaning": "Dağıtmak",
         "level": "B1",
         "id": 8075
     },
@@ -25609,7 +25609,7 @@
     },
     {
         "word": "Head for",
-        "meaning": "YÃ¶nelmek",
+        "meaning": "Yönelmek",
         "level": "B1",
         "id": 8079
     },
@@ -25621,13 +25621,13 @@
     },
     {
         "word": "Heat up",
-        "meaning": "IsÄ±tmak",
+        "meaning": "Isıtmak",
         "level": "B1",
         "id": 8081
     },
     {
         "word": "Help out",
-        "meaning": "YardÄ±m etmek",
+        "meaning": "Yardım etmek",
         "level": "B2",
         "id": 8082
     },
@@ -25645,7 +25645,7 @@
     },
     {
         "word": "Identify with",
-        "meaning": "Ã–zdeÅŸleÅŸmek",
+        "meaning": "Özdeşleşmek",
         "level": "C1",
         "id": 8087
     },
@@ -25663,7 +25663,7 @@
     },
     {
         "word": "Indulge in",
-        "meaning": "Kendini kaptÄ±rmak",
+        "meaning": "Kendini kaptırmak",
         "level": "C2",
         "id": 8090
     },
@@ -25681,13 +25681,13 @@
     },
     {
         "word": "Invest in",
-        "meaning": "YatÄ±rÄ±m yapmak",
+        "meaning": "Yatırım yapmak",
         "level": "B1",
         "id": 8093
     },
     {
         "word": "Invite in",
-        "meaning": "Ä°Ã§eri davet etmek",
+        "meaning": "İçeri davet etmek",
         "level": "B1",
         "id": 8094
     },
@@ -25699,13 +25699,13 @@
     },
     {
         "word": "Join in",
-        "meaning": "KatÄ±lmak",
+        "meaning": "Katılmak",
         "level": "B1",
         "id": 8096
     },
     {
         "word": "Keep at",
-        "meaning": "SÃ¼rdÃ¼rmek",
+        "meaning": "Sürdürmek",
         "level": "C2",
         "id": 8097
     },
@@ -25723,7 +25723,7 @@
     },
     {
         "word": "Keep down",
-        "meaning": "BastÄ±rmak, Yere yatmak",
+        "meaning": "Bastırmak, Yere yatmak",
         "level": "C1",
         "id": 8100
     },
@@ -25735,19 +25735,19 @@
     },
     {
         "word": "Keep out",
-        "meaning": "DÄ±ÅŸarÄ±da tutmak",
+        "meaning": "Dışarıda tutmak",
         "level": "B1",
         "id": 8103
     },
     {
         "word": "Kick off",
-        "meaning": "BaÅŸlamak (MaÃ§/Etkinlik)",
+        "meaning": "Başlamak (Maç/Etkinlik)",
         "level": "B2",
         "id": 8105
     },
     {
         "word": "Knock down",
-        "meaning": "Yere sermek, YÄ±kmak",
+        "meaning": "Yere sermek, Yıkmak",
         "level": "B2",
         "id": 8106
     },
@@ -25765,49 +25765,49 @@
     },
     {
         "word": "Laugh at",
-        "meaning": "GÃ¼lmek (Alay)",
+        "meaning": "Gülmek (Alay)",
         "level": "A2",
         "id": 8109
     },
     {
         "word": "Lay off",
-        "meaning": "Ä°ÅŸten Ã§Ä±karmak",
+        "meaning": "İşten çıkarmak",
         "level": "C1",
         "id": 8110
     },
     {
         "word": "Lead to",
-        "meaning": "Yol aÃ§mak",
+        "meaning": "Yol açmak",
         "level": "B1",
         "id": 8111
     },
     {
         "word": "Leak out",
-        "meaning": "SÄ±zmak (Bilgi)",
+        "meaning": "Sızmak (Bilgi)",
         "level": "C1",
         "id": 8112
     },
     {
         "word": "Leave out",
-        "meaning": "DÄ±ÅŸarÄ±da bÄ±rakmak",
+        "meaning": "Dışarıda bırakmak",
         "level": "B2",
         "id": 8113
     },
     {
         "word": "Let in",
-        "meaning": "Ä°Ã§eri almak",
+        "meaning": "İçeri almak",
         "level": "C2",
         "id": 8115
     },
     {
         "word": "Let off",
-        "meaning": "CezalandÄ±rmamak, Patlatmak",
+        "meaning": "Cezalandırmamak, Patlatmak",
         "level": "C1",
         "id": 8116
     },
     {
         "word": "Let out",
-        "meaning": "DÄ±ÅŸarÄ± Ã§Ä±karmak, GeniÅŸletmek",
+        "meaning": "Dışarı çıkarmak, Genişletmek",
         "level": "B2",
         "id": 8117
     },
@@ -25819,13 +25819,13 @@
     },
     {
         "word": "Live on",
-        "meaning": "Ä°le geÃ§inmek",
+        "meaning": "İle geçinmek",
         "level": "B2",
         "id": 8119
     },
     {
         "word": "Live up to",
-        "meaning": "Beklentiyi karÅŸÄ±lamak",
+        "meaning": "Beklentiyi karşılamak",
         "level": "C1",
         "id": 8120
     },
@@ -25837,31 +25837,31 @@
     },
     {
         "word": "Log in",
-        "meaning": "GiriÅŸ yapmak",
+        "meaning": "Giriş yapmak",
         "level": "A2",
         "id": 8122
     },
     {
         "word": "Log off",
-        "meaning": "Ã‡Ä±kÄ±ÅŸ yapmak",
+        "meaning": "Çıkış yapmak",
         "level": "A2",
         "id": 8123
     },
     {
         "word": "Log on",
-        "meaning": "GiriÅŸ yapmak",
+        "meaning": "Giriş yapmak",
         "level": "A2",
         "id": 8124
     },
     {
         "word": "Log out",
-        "meaning": "Ã‡Ä±kÄ±ÅŸ yapmak",
+        "meaning": "Çıkış yapmak",
         "level": "A2",
         "id": 8125
     },
     {
         "word": "Look around",
-        "meaning": "EtrafÄ±na bakmak",
+        "meaning": "Etrafına bakmak",
         "level": "B1",
         "id": 8127
     },
@@ -25873,19 +25873,19 @@
     },
     {
         "word": "Look down on",
-        "meaning": "KÃ¼Ã§Ã¼msemek",
+        "meaning": "Küçümsemek",
         "level": "C1",
         "id": 8130
     },
     {
         "word": "Look in",
-        "meaning": "UÄŸramak",
+        "meaning": "Uğramak",
         "level": "C2",
         "id": 8133
     },
     {
         "word": "Look into",
-        "meaning": "AraÅŸtÄ±rmak",
+        "meaning": "Araştırmak",
         "level": "B2",
         "id": 8134
     },
@@ -25897,19 +25897,19 @@
     },
     {
         "word": "Look up to",
-        "meaning": "SaygÄ± duymak",
+        "meaning": "Saygı duymak",
         "level": "B2",
         "id": 8137
     },
     {
         "word": "Make for",
-        "meaning": "YÃ¶nelmek",
+        "meaning": "Yönelmek",
         "level": "C1",
         "id": 8138
     },
     {
         "word": "Make out",
-        "meaning": "SeÃ§mek (GÃ¶rmek), Anlamak",
+        "meaning": "Seçmek (Görmek), Anlamak",
         "level": "B2",
         "id": 8139
     },
@@ -25927,19 +25927,19 @@
     },
     {
         "word": "Mix up",
-        "meaning": "KarÄ±ÅŸtÄ±rmak",
+        "meaning": "Karıştırmak",
         "level": "B2",
         "id": 8143
     },
     {
         "word": "Move in",
-        "meaning": "TaÅŸÄ±nmak (Ä°Ã§eri)",
+        "meaning": "Taşınmak (İçeri)",
         "level": "B1",
         "id": 8144
     },
     {
         "word": "Move out",
-        "meaning": "TaÅŸÄ±nmak (DÄ±ÅŸarÄ±)",
+        "meaning": "Taşınmak (Dışarı)",
         "level": "B1",
         "id": 8145
     },
@@ -25957,37 +25957,37 @@
     },
     {
         "word": "Opt for",
-        "meaning": "SeÃ§mek",
+        "meaning": "Seçmek",
         "level": "C1",
         "id": 8148
     },
     {
         "word": "Own up",
-        "meaning": "Ä°tiraf etmek",
+        "meaning": "İtiraf etmek",
         "level": "C2",
         "id": 8149
     },
     {
         "word": "Pass away",
-        "meaning": "Ã–lmek",
+        "meaning": "Ölmek",
         "level": "B2",
         "id": 8150
     },
     {
         "word": "Pass on",
-        "meaning": "Ä°letmek",
+        "meaning": "İletmek",
         "level": "B2",
         "id": 8151
     },
     {
         "word": "Pay for",
-        "meaning": "Ã–demek",
+        "meaning": "Ödemek",
         "level": "A2",
         "id": 8154
     },
     {
         "word": "Pay off",
-        "meaning": "Borcunu kapatmak, KarÅŸÄ±lÄ±ÄŸÄ±nÄ± almak",
+        "meaning": "Borcunu kapatmak, Karşılığını almak",
         "level": "B2",
         "id": 8155
     },
@@ -25999,61 +25999,61 @@
     },
     {
         "word": "Plan ahead",
-        "meaning": "Ã–nceden planlamak",
+        "meaning": "Önceden planlamak",
         "level": "B1",
         "id": 8158
     },
     {
         "word": "Play back",
-        "meaning": "KayÄ±ttan yÃ¼rÃ¼tmek",
+        "meaning": "Kayıttan yürütmek",
         "level": "C2",
         "id": 8159
     },
     {
         "word": "Plug in",
-        "meaning": "FiÅŸe takmak",
+        "meaning": "Fişe takmak",
         "level": "B1",
         "id": 8160
     },
     {
         "word": "Pop in",
-        "meaning": "UÄŸramak",
+        "meaning": "Uğramak",
         "level": "C1",
         "id": 8162
     },
     {
         "word": "Pour down",
-        "meaning": "SaÄŸanak yaÄŸmak",
+        "meaning": "Sağanak yağmak",
         "level": "C1",
         "id": 8163
     },
     {
         "word": "Print out",
-        "meaning": "YazdÄ±rmak",
+        "meaning": "Yazdırmak",
         "level": "A2",
         "id": 8164
     },
     {
         "word": "Pull down",
-        "meaning": "YÄ±kmak",
+        "meaning": "Yıkmak",
         "level": "C1",
         "id": 8165
     },
     {
         "word": "Pull in",
-        "meaning": "Kenara Ã§ekmek (AraÃ§)",
+        "meaning": "Kenara çekmek (Araç)",
         "level": "C1",
         "id": 8166
     },
     {
         "word": "Pull out",
-        "meaning": "Yola Ã§Ä±kmak (AraÃ§), Ã‡ekmek",
+        "meaning": "Yola çıkmak (Araç), Çekmek",
         "level": "B2",
         "id": 8167
     },
     {
         "word": "Pull over",
-        "meaning": "Kenara Ã§ekmek",
+        "meaning": "Kenara çekmek",
         "level": "B2",
         "id": 8168
     },
@@ -26065,19 +26065,19 @@
     },
     {
         "word": "Put forward",
-        "meaning": "Ã–nermek",
+        "meaning": "Önermek",
         "level": "C1",
         "id": 8172
     },
     {
         "word": "Put through",
-        "meaning": "Telefonu baÄŸlamak",
+        "meaning": "Telefonu bağlamak",
         "level": "B2",
         "id": 8176
     },
     {
         "word": "Put up",
-        "meaning": "Ä°nÅŸa etmek, Asmak",
+        "meaning": "İnşa etmek, Asmak",
         "level": "B1",
         "id": 8177
     },
@@ -26107,13 +26107,13 @@
     },
     {
         "word": "Binary",
-        "meaning": "Ä°kili",
+        "meaning": "İkili",
         "level": "C1",
         "id": 8188
     },
     {
         "word": "Browser",
-        "meaning": "TarayÄ±cÄ±",
+        "meaning": "Tarayıcı",
         "level": "A2",
         "id": 8190
     },
@@ -26125,7 +26125,7 @@
     },
     {
         "word": "Compress",
-        "meaning": "SÄ±kÄ±ÅŸtÄ±rmak",
+        "meaning": "Sıkıştırmak",
         "level": "B2",
         "id": 8203
     },
@@ -26137,7 +26137,7 @@
     },
     {
         "word": "Configuration",
-        "meaning": "YapÄ±landÄ±rma",
+        "meaning": "Yapılandırma",
         "level": "C1",
         "id": 8206
     },
@@ -26149,7 +26149,7 @@
     },
     {
         "word": "Cursor",
-        "meaning": "Ä°mleÃ§",
+        "meaning": "İmleç",
         "level": "B1",
         "id": 8216
     },
@@ -26161,7 +26161,7 @@
     },
     {
         "word": "Debug",
-        "meaning": "Hata ayÄ±klamak",
+        "meaning": "Hata ayıklamak",
         "level": "C1",
         "id": 8220
     },
@@ -26173,13 +26173,13 @@
     },
     {
         "word": "Desktop",
-        "meaning": "MasaÃ¼stÃ¼",
+        "meaning": "Masaüstü",
         "level": "A2",
         "id": 8222
     },
     {
         "word": "Developer",
-        "meaning": "GeliÅŸtirici",
+        "meaning": "Geliştirici",
         "level": "B1",
         "id": 8223
     },
@@ -26203,13 +26203,13 @@
     },
     {
         "word": "Domain",
-        "meaning": "Alan adÄ±",
+        "meaning": "Alan adı",
         "level": "C1",
         "id": 8230
     },
     {
         "word": "Drag",
-        "meaning": "SÃ¼rÃ¼klemek",
+        "meaning": "Sürüklemek",
         "level": "B1",
         "id": 8232
     },
@@ -26227,7 +26227,7 @@
     },
     {
         "word": "Execute",
-        "meaning": "Ã‡alÄ±ÅŸtÄ±rmak",
+        "meaning": "Çalıştırmak",
         "level": "C1",
         "id": 8244
     },
@@ -26239,19 +26239,19 @@
     },
     {
         "word": "Firewall",
-        "meaning": "GÃ¼venlik duvarÄ±",
+        "meaning": "Güvenlik duvarı",
         "level": "C1",
         "id": 8250
     },
     {
         "word": "Folder",
-        "meaning": "KlasÃ¶r",
+        "meaning": "Klasör",
         "level": "A2",
         "id": 8251
     },
     {
         "word": "Font",
-        "meaning": "YazÄ± tipi",
+        "meaning": "Yazı tipi",
         "level": "B1",
         "id": 8252
     },
@@ -26281,7 +26281,7 @@
     },
     {
         "word": "Glitch",
-        "meaning": "ArÄ±za",
+        "meaning": "Arıza",
         "level": "C1",
         "id": 8260
     },
@@ -26305,7 +26305,7 @@
     },
     {
         "word": "Headphones",
-        "meaning": "KulaklÄ±k",
+        "meaning": "Kulaklık",
         "level": "A2",
         "id": 8267
     },
@@ -26341,25 +26341,25 @@
     },
     {
         "word": "Layout",
-        "meaning": "DÃ¼zen",
+        "meaning": "Düzen",
         "level": "B2",
         "id": 8287
     },
     {
         "word": "Log",
-        "meaning": "KÃ¼tÃ¼k, KayÄ±t",
+        "meaning": "Kütük, Kayıt",
         "level": "B2",
         "id": 8290
     },
     {
         "word": "Login",
-        "meaning": "GiriÅŸ",
+        "meaning": "Giriş",
         "level": "A2",
         "id": 8291
     },
     {
         "word": "Logout",
-        "meaning": "Ã‡Ä±kÄ±ÅŸ",
+        "meaning": "Çıkış",
         "level": "A2",
         "id": 8292
     },
@@ -26371,19 +26371,19 @@
     },
     {
         "word": "Malware",
-        "meaning": "KÃ¶tÃ¼ amaÃ§lÄ± yazÄ±lÄ±m",
+        "meaning": "Kötü amaçlı yazılım",
         "level": "C1",
         "id": 8297
     },
     {
         "word": "Manual",
-        "meaning": "KÄ±lavuz, Manuel",
+        "meaning": "Kılavuz, Manuel",
         "level": "B2",
         "id": 8298
     },
     {
         "word": "Microprocessor",
-        "meaning": "MikroiÅŸlemci",
+        "meaning": "Mikroişlemci",
         "level": "C1",
         "id": 8304
     },
@@ -26401,7 +26401,7 @@
     },
     {
         "word": "Node",
-        "meaning": "DÃ¼ÄŸÃ¼m",
+        "meaning": "Düğüm",
         "level": "C1",
         "id": 8311
     },
@@ -26413,25 +26413,25 @@
     },
     {
         "word": "Offline",
-        "meaning": "Ã‡evrimdÄ±ÅŸÄ±",
+        "meaning": "Çevrimdışı",
         "level": "A2",
         "id": 8313
     },
     {
         "word": "Operating System",
-        "meaning": "Ä°ÅŸletim sistemi",
+        "meaning": "İşletim sistemi",
         "level": "B1",
         "id": 8315
     },
     {
         "word": "Password",
-        "meaning": "Åifre",
+        "meaning": "Şifre",
         "level": "A2",
         "id": 8320
     },
     {
         "word": "Paste",
-        "meaning": "YapÄ±ÅŸtÄ±rmak",
+        "meaning": "Yapıştırmak",
         "level": "B1",
         "id": 8321
     },
@@ -26443,7 +26443,7 @@
     },
     {
         "word": "Peripheral",
-        "meaning": "Ã‡evre birimi",
+        "meaning": "Çevre birimi",
         "level": "C2",
         "id": 8324
     },
@@ -26467,7 +26467,7 @@
     },
     {
         "word": "Processor",
-        "meaning": "Ä°ÅŸlemci",
+        "meaning": "İşlemci",
         "level": "B1",
         "id": 8339
     },
@@ -26479,7 +26479,7 @@
     },
     {
         "word": "Provider",
-        "meaning": "SaÄŸlayÄ±cÄ±",
+        "meaning": "Sağlayıcı",
         "level": "B2",
         "id": 8343
     },
@@ -26491,19 +26491,19 @@
     },
     {
         "word": "Reboot",
-        "meaning": "Yeniden baÅŸlatmak",
+        "meaning": "Yeniden başlatmak",
         "level": "B1",
         "id": 8345
     },
     {
         "word": "Restart",
-        "meaning": "Yeniden baÅŸlatmak",
+        "meaning": "Yeniden başlatmak",
         "level": "A2",
         "id": 8350
     },
     {
         "word": "Router",
-        "meaning": "YÃ¶nlendirici",
+        "meaning": "Yönlendirici",
         "level": "B2",
         "id": 8353
     },
@@ -26515,19 +26515,19 @@
     },
     {
         "word": "Scanner",
-        "meaning": "TarayÄ±cÄ±",
+        "meaning": "Tarayıcı",
         "level": "A2",
         "id": 8357
     },
     {
         "word": "Screenshot",
-        "meaning": "Ekran gÃ¶rÃ¼ntÃ¼sÃ¼",
+        "meaning": "Ekran görüntüsü",
         "level": "B1",
         "id": 8359
     },
     {
         "word": "Scroll",
-        "meaning": "KaydÄ±rmak",
+        "meaning": "Kaydırmak",
         "level": "B1",
         "id": 8361
     },
@@ -26539,13 +26539,13 @@
     },
     {
         "word": "Shortcut",
-        "meaning": "KÄ±sayol",
+        "meaning": "Kısayol",
         "level": "B2",
         "id": 8369
     },
     {
         "word": "Smartphone",
-        "meaning": "AkÄ±llÄ± telefon",
+        "meaning": "Akıllı telefon",
         "level": "A2",
         "id": 8372
     },
@@ -26569,7 +26569,7 @@
     },
     {
         "word": "Spyware",
-        "meaning": "Casus yazÄ±lÄ±m",
+        "meaning": "Casus yazılım",
         "level": "C1",
         "id": 8381
     },
@@ -26581,7 +26581,7 @@
     },
     {
         "word": "Surf",
-        "meaning": "SÃ¶rf yapmak (Web)",
+        "meaning": "Sörf yapmak (Web)",
         "level": "A2",
         "id": 8386
     },
@@ -26623,7 +26623,7 @@
     },
     {
         "word": "Task",
-        "meaning": "GÃ¶rev",
+        "meaning": "Görev",
         "level": "B1",
         "id": 8395
     },
@@ -26641,13 +26641,13 @@
     },
     {
         "word": "Telecommunications",
-        "meaning": "TelekomÃ¼nikasyon",
+        "meaning": "Telekomünikasyon",
         "level": "C1",
         "id": 8398
     },
     {
         "word": "Template",
-        "meaning": "Åablon",
+        "meaning": "Şablon",
         "level": "B2",
         "id": 8399
     },
@@ -26677,13 +26677,13 @@
     },
     {
         "word": "Tool",
-        "meaning": "AraÃ§",
+        "meaning": "Araç",
         "level": "A2",
         "id": 8404
     },
     {
         "word": "Toolbar",
-        "meaning": "AraÃ§ Ã§ubuÄŸu",
+        "meaning": "Araç çubuğu",
         "level": "B2",
         "id": 8405
     },
@@ -26701,7 +26701,7 @@
     },
     {
         "word": "Track",
-        "meaning": "Ä°zlemek",
+        "meaning": "İzlemek",
         "level": "B1",
         "id": 8408
     },
@@ -26713,13 +26713,13 @@
     },
     {
         "word": "Transmit",
-        "meaning": "Ä°letmek",
+        "meaning": "İletmek",
         "level": "C1",
         "id": 8411
     },
     {
         "word": "Trash",
-        "meaning": "Ã‡Ã¶p",
+        "meaning": "Çöp",
         "level": "B1",
         "id": 8412
     },
@@ -26743,7 +26743,7 @@
     },
     {
         "word": "Upload",
-        "meaning": "YÃ¼klemek",
+        "meaning": "Yüklemek",
         "level": "B1",
         "id": 8419
     },
@@ -26755,25 +26755,25 @@
     },
     {
         "word": "Username",
-        "meaning": "KullanÄ±cÄ± adÄ±",
+        "meaning": "Kullanıcı adı",
         "level": "A2",
         "id": 8422
     },
     {
         "word": "Utility",
-        "meaning": "YardÄ±mcÄ± program",
+        "meaning": "Yardımcı program",
         "level": "C1",
         "id": 8423
     },
     {
         "word": "Vector",
-        "meaning": "VektÃ¶r",
+        "meaning": "Vektör",
         "level": "C1",
         "id": 8427
     },
     {
         "word": "Webcam",
-        "meaning": "Web kamerasÄ±",
+        "meaning": "Web kamerası",
         "level": "A2",
         "id": 8436
     },
@@ -26791,31 +26791,31 @@
     },
     {
         "word": "Workstation",
-        "meaning": "Ä°ÅŸ istasyonu",
+        "meaning": "İş istasyonu",
         "level": "C2",
         "id": 8442
     },
     {
         "word": "World Wide Web",
-        "meaning": "DÃ¼nya Ã‡apÄ±nda AÄŸ",
+        "meaning": "Dünya Çapında Ağ",
         "level": "B1",
         "id": 8443
     },
     {
         "word": "Zoom",
-        "meaning": "YakÄ±nlaÅŸtÄ±rmak",
+        "meaning": "Yakınlaştırmak",
         "level": "B1",
         "id": 8445
     },
     {
         "word": "Abdomen",
-        "meaning": "KarÄ±n",
+        "meaning": "Karın",
         "level": "C1",
         "id": 8446
     },
     {
         "word": "Abortion",
-        "meaning": "KÃ¼rtaj",
+        "meaning": "Kürtaj",
         "level": "C1",
         "id": 8447
     },
@@ -26827,13 +26827,13 @@
     },
     {
         "word": "Addict",
-        "meaning": "BaÄŸÄ±mlÄ±",
+        "meaning": "Bağımlı",
         "level": "C1",
         "id": 8451
     },
     {
         "word": "Agony",
-        "meaning": "IzdÄ±rap",
+        "meaning": "Izdırap",
         "level": "C2",
         "id": 8455
     },
@@ -26875,19 +26875,19 @@
     },
     {
         "word": "Appetite",
-        "meaning": "Ä°ÅŸtah",
+        "meaning": "İştah",
         "level": "B2",
         "id": 8468
     },
     {
         "word": "Arthritis",
-        "meaning": "KireÃ§lenme",
+        "meaning": "Kireçlenme",
         "level": "C2",
         "id": 8471
     },
     {
         "word": "Belly",
-        "meaning": "GÃ¶bek",
+        "meaning": "Göbek",
         "level": "B1",
         "id": 8478
     },
@@ -26905,7 +26905,7 @@
     },
     {
         "word": "Capsule",
-        "meaning": "KapsÃ¼l",
+        "meaning": "Kapsül",
         "level": "C1",
         "id": 8495
     },
@@ -26923,7 +26923,7 @@
     },
     {
         "word": "Contagious",
-        "meaning": "BulaÅŸÄ±cÄ±",
+        "meaning": "Bulaşıcı",
         "level": "C1",
         "id": 8510
     },
@@ -26935,7 +26935,7 @@
     },
     {
         "word": "Dehydration",
-        "meaning": "SÄ±vÄ± kaybÄ±",
+        "meaning": "Sıvı kaybı",
         "level": "C1",
         "id": 8518
     },
@@ -26947,7 +26947,7 @@
     },
     {
         "word": "Dental",
-        "meaning": "DiÅŸ ile ilgili",
+        "meaning": "Diş ile ilgili",
         "level": "B2",
         "id": 8520
     },
@@ -26959,7 +26959,7 @@
     },
     {
         "word": "Diagnose",
-        "meaning": "TeÅŸhis etmek",
+        "meaning": "Teşhis etmek",
         "level": "C1",
         "id": 8524
     },
@@ -26971,19 +26971,19 @@
     },
     {
         "word": "Dizzy",
-        "meaning": "BaÅŸ dÃ¶nmesi",
+        "meaning": "Baş dönmesi",
         "level": "C1",
         "id": 8532
     },
     {
         "word": "Fatal",
-        "meaning": "Ã–lÃ¼mcÃ¼l",
+        "meaning": "Ölümcül",
         "level": "C1",
         "id": 8545
     },
     {
         "word": "Fracture",
-        "meaning": "KÄ±rÄ±k",
+        "meaning": "Kırık",
         "level": "C2",
         "id": 8551
     },
@@ -27001,19 +27001,19 @@
     },
     {
         "word": "Gland",
-        "meaning": "Bez (VÃ¼cut)",
+        "meaning": "Bez (Vücut)",
         "level": "C2",
         "id": 8555
     },
     {
         "word": "Infectious",
-        "meaning": "BulaÅŸÄ±cÄ±",
+        "meaning": "Bulaşıcı",
         "level": "C1",
         "id": 8573
     },
     {
         "word": "Injection",
-        "meaning": "Ä°ÄŸne (Enjeksiyon)",
+        "meaning": "İğne (Enjeksiyon)",
         "level": "C1",
         "id": 8574
     },
@@ -27025,13 +27025,13 @@
     },
     {
         "word": "Intensive",
-        "meaning": "YoÄŸun",
+        "meaning": "Yoğun",
         "level": "C1",
         "id": 8578
     },
     {
         "word": "Jaw",
-        "meaning": "Ã‡ene",
+        "meaning": "Çene",
         "level": "C1",
         "id": 8580
     },
@@ -27043,7 +27043,7 @@
     },
     {
         "word": "Malaria",
-        "meaning": "SÄ±tma",
+        "meaning": "Sıtma",
         "level": "C2",
         "id": 8590
     },
@@ -27061,7 +27061,7 @@
     },
     {
         "word": "Medication",
-        "meaning": "Ä°laÃ§ tedavisi",
+        "meaning": "İlaç tedavisi",
         "level": "C1",
         "id": 8594
     },
@@ -27079,13 +27079,13 @@
     },
     {
         "word": "Mortality",
-        "meaning": "Ã–lÃ¼m oranÄ±",
+        "meaning": "Ölüm oranı",
         "level": "C2",
         "id": 8602
     },
     {
         "word": "Nausea",
-        "meaning": "Mide bulantÄ±sÄ±",
+        "meaning": "Mide bulantısı",
         "level": "C2",
         "id": 8605
     },
@@ -27097,13 +27097,13 @@
     },
     {
         "word": "Optician",
-        "meaning": "GÃ¶zlÃ¼kÃ§Ã¼",
+        "meaning": "Gözlükçü",
         "level": "C1",
         "id": 8615
     },
     {
         "word": "Painkiller",
-        "meaning": "AÄŸrÄ± kesici",
+        "meaning": "Ağrı kesici",
         "level": "B2",
         "id": 8620
     },
@@ -27121,19 +27121,19 @@
     },
     {
         "word": "Plaster",
-        "meaning": "Yara bandÄ±, AlÃ§Ä±",
+        "meaning": "Yara bandı, Alçı",
         "level": "B2",
         "id": 8625
     },
     {
         "word": "Prescription",
-        "meaning": "ReÃ§ete",
+        "meaning": "Reçete",
         "level": "B2",
         "id": 8628
     },
     {
         "word": "Prevention",
-        "meaning": "Ã–nleme",
+        "meaning": "Önleme",
         "level": "B2",
         "id": 8629
     },
@@ -27145,19 +27145,19 @@
     },
     {
         "word": "Pulse",
-        "meaning": "NabÄ±z",
+        "meaning": "Nabız",
         "level": "C1",
         "id": 8634
     },
     {
         "word": "Rash",
-        "meaning": "DÃ¶kÃ¼ntÃ¼",
+        "meaning": "Döküntü",
         "level": "C2",
         "id": 8635
     },
     {
         "word": "Remedy",
-        "meaning": "Ã‡are, Ä°laÃ§",
+        "meaning": "Çare, İlaç",
         "level": "C1",
         "id": 8638
     },
@@ -27181,7 +27181,7 @@
     },
     {
         "word": "Scratch",
-        "meaning": "KaÅŸÄ±mak, Ã‡izik",
+        "meaning": "Kaşımak, Çizik",
         "level": "B1",
         "id": 8643
     },
@@ -27193,19 +27193,19 @@
     },
     {
         "word": "Skeleton",
-        "meaning": "Ä°skelet",
+        "meaning": "İskelet",
         "level": "C1",
         "id": 8649
     },
     {
         "word": "Skull",
-        "meaning": "KafatasÄ±",
+        "meaning": "Kafatası",
         "level": "C2",
         "id": 8651
     },
     {
         "word": "Sneeze",
-        "meaning": "HapÅŸÄ±rmak",
+        "meaning": "Hapşırmak",
         "level": "B2",
         "id": 8654
     },
@@ -27217,13 +27217,13 @@
     },
     {
         "word": "Stomachache",
-        "meaning": "KarÄ±n aÄŸrÄ±sÄ±",
+        "meaning": "Karın ağrısı",
         "level": "A2",
         "id": 8659
     },
     {
         "word": "Stroke",
-        "meaning": "FelÃ§",
+        "meaning": "Felç",
         "level": "C1",
         "id": 8661
     },
@@ -27253,19 +27253,19 @@
     },
     {
         "word": "Thermometer",
-        "meaning": "AteÅŸ Ã¶lÃ§er",
+        "meaning": "Ateş ölçer",
         "level": "B2",
         "id": 8672
     },
     {
         "word": "Throat",
-        "meaning": "BoÄŸaz",
+        "meaning": "Boğaz",
         "level": "B1",
         "id": 8673
     },
     {
         "word": "Thumb",
-        "meaning": "BaÅŸparmak",
+        "meaning": "Başparmak",
         "level": "B1",
         "id": 8674
     },
@@ -27277,7 +27277,7 @@
     },
     {
         "word": "Toe",
-        "meaning": "Ayak parmaÄŸÄ±",
+        "meaning": "Ayak parmağı",
         "level": "B1",
         "id": 8676
     },
@@ -27289,13 +27289,13 @@
     },
     {
         "word": "Tooth",
-        "meaning": "DiÅŸ",
+        "meaning": "Diş",
         "level": "A1",
         "id": 8678
     },
     {
         "word": "Toothache",
-        "meaning": "DiÅŸ aÄŸrÄ±sÄ±",
+        "meaning": "Diş ağrısı",
         "level": "A2",
         "id": 8679
     },
@@ -27313,19 +27313,19 @@
     },
     {
         "word": "Tumor",
-        "meaning": "TÃ¼mÃ¶r",
+        "meaning": "Tümör",
         "level": "C2",
         "id": 8683
     },
     {
         "word": "Ulcer",
-        "meaning": "Ãœlser",
+        "meaning": "Ülser",
         "level": "C2",
         "id": 8684
     },
     {
         "word": "Vaccine",
-        "meaning": "AÅŸÄ±",
+        "meaning": "Aşı",
         "level": "B2",
         "id": 8686
     },
@@ -27349,13 +27349,13 @@
     },
     {
         "word": "Ward",
-        "meaning": "KoÄŸuÅŸ",
+        "meaning": "Koğuş",
         "level": "C2",
         "id": 8694
     },
     {
         "word": "Wardrobe",
-        "meaning": "GardÄ±rop",
+        "meaning": "Gardırop",
         "level": "B1",
         "id": 8695
     },
@@ -27367,7 +27367,7 @@
     },
     {
         "word": "X-ray",
-        "meaning": "RÃ¶ntgen",
+        "meaning": "Röntgen",
         "level": "B1",
         "id": 8701
     },
@@ -27409,7 +27409,7 @@
     },
     {
         "word": "Asian",
-        "meaning": "AsyalÄ±",
+        "meaning": "Asyalı",
         "level": "A1",
         "id": 8709
     },
@@ -27421,7 +27421,7 @@
     },
     {
         "word": "Australian",
-        "meaning": "AvustralyalÄ±",
+        "meaning": "Avustralyalı",
         "level": "A1",
         "id": 8711
     },
@@ -27451,7 +27451,7 @@
     },
     {
         "word": "Bangladesh",
-        "meaning": "BangladeÅŸ",
+        "meaning": "Bangladeş",
         "level": "B1",
         "id": 8716
     },
@@ -27469,7 +27469,7 @@
     },
     {
         "word": "Belgium",
-        "meaning": "BelÃ§ika",
+        "meaning": "Belçika",
         "level": "A2",
         "id": 8719
     },
@@ -27517,13 +27517,13 @@
     },
     {
         "word": "Brazilian",
-        "meaning": "BrezilyalÄ±",
+        "meaning": "Brezilyalı",
         "level": "A1",
         "id": 8727
     },
     {
         "word": "British",
-        "meaning": "Ä°ngiliz",
+        "meaning": "İngiliz",
         "level": "A1",
         "id": 8728
     },
@@ -27547,7 +27547,7 @@
     },
     {
         "word": "Cambodia",
-        "meaning": "KamboÃ§ya",
+        "meaning": "Kamboçya",
         "level": "B1",
         "id": 8732
     },
@@ -27565,31 +27565,31 @@
     },
     {
         "word": "Canadian",
-        "meaning": "KanadalÄ±",
+        "meaning": "Kanadalı",
         "level": "A1",
         "id": 8735
     },
     {
         "word": "Chad",
-        "meaning": "Ã‡ad",
+        "meaning": "Çad",
         "level": "B1",
         "id": 8736
     },
     {
         "word": "Chile",
-        "meaning": "Åili",
+        "meaning": "Şili",
         "level": "B1",
         "id": 8737
     },
     {
         "word": "China",
-        "meaning": "Ã‡in",
+        "meaning": "Çin",
         "level": "A1",
         "id": 8738
     },
     {
         "word": "Chinese",
-        "meaning": "Ã‡inli",
+        "meaning": "Çinli",
         "level": "A1",
         "id": 8739
     },
@@ -27613,25 +27613,25 @@
     },
     {
         "word": "Croatia",
-        "meaning": "HÄ±rvatistan",
+        "meaning": "Hırvatistan",
         "level": "B1",
         "id": 8743
     },
     {
         "word": "Cuba",
-        "meaning": "KÃ¼ba",
+        "meaning": "Küba",
         "level": "B1",
         "id": 8744
     },
     {
         "word": "Cyprus",
-        "meaning": "KÄ±brÄ±s",
+        "meaning": "Kıbrıs",
         "level": "A2",
         "id": 8745
     },
     {
         "word": "Czech",
-        "meaning": "Ã‡ek",
+        "meaning": "Çek",
         "level": "B1",
         "id": 8746
     },
@@ -27661,25 +27661,25 @@
     },
     {
         "word": "Egypt",
-        "meaning": "MÄ±sÄ±r",
+        "meaning": "Mısır",
         "level": "A2",
         "id": 8751
     },
     {
         "word": "Egyptian",
-        "meaning": "MÄ±sÄ±rlÄ±",
+        "meaning": "Mısırlı",
         "level": "A2",
         "id": 8752
     },
     {
         "word": "England",
-        "meaning": "Ä°ngiltere",
+        "meaning": "İngiltere",
         "level": "A1",
         "id": 8753
     },
     {
         "word": "English",
-        "meaning": "Ä°ngiliz/Ä°ngilizce",
+        "meaning": "İngiliz/İngilizce",
         "level": "A1",
         "id": 8754
     },
@@ -27709,7 +27709,7 @@
     },
     {
         "word": "European",
-        "meaning": "AvrupalÄ±",
+        "meaning": "Avrupalı",
         "level": "A1",
         "id": 8759
     },
@@ -27745,7 +27745,7 @@
     },
     {
         "word": "Georgia",
-        "meaning": "GÃ¼rcistan",
+        "meaning": "Gürcistan",
         "level": "A2",
         "id": 8766
     },
@@ -27829,7 +27829,7 @@
     },
     {
         "word": "Iceland",
-        "meaning": "Ä°zlanda",
+        "meaning": "İzlanda",
         "level": "B1",
         "id": 8780
     },
@@ -27853,7 +27853,7 @@
     },
     {
         "word": "Iran",
-        "meaning": "Ä°ran",
+        "meaning": "İran",
         "level": "A2",
         "id": 8784
     },
@@ -27865,31 +27865,31 @@
     },
     {
         "word": "Ireland",
-        "meaning": "Ä°rlanda",
+        "meaning": "İrlanda",
         "level": "A2",
         "id": 8786
     },
     {
         "word": "Irish",
-        "meaning": "Ä°rlandalÄ±",
+        "meaning": "İrlandalı",
         "level": "A2",
         "id": 8787
     },
     {
         "word": "Israel",
-        "meaning": "Ä°srail",
+        "meaning": "İsrail",
         "level": "B1",
         "id": 8788
     },
     {
         "word": "Italy",
-        "meaning": "Ä°talya",
+        "meaning": "İtalya",
         "level": "A1",
         "id": 8789
     },
     {
         "word": "Italian",
-        "meaning": "Ä°talyan",
+        "meaning": "İtalyan",
         "level": "A1",
         "id": 8790
     },
@@ -27913,7 +27913,7 @@
     },
     {
         "word": "Jordan",
-        "meaning": "ÃœrdÃ¼n",
+        "meaning": "Ürdün",
         "level": "B1",
         "id": 8794
     },
@@ -27961,7 +27961,7 @@
     },
     {
         "word": "Kyrgyzstan",
-        "meaning": "KÄ±rgÄ±zistan",
+        "meaning": "Kırgızistan",
         "level": "B1",
         "id": 8802
     },
@@ -27979,7 +27979,7 @@
     },
     {
         "word": "Lebanon",
-        "meaning": "LÃ¼bnan",
+        "meaning": "Lübnan",
         "level": "B1",
         "id": 8805
     },
@@ -28009,7 +28009,7 @@
     },
     {
         "word": "Luxembourg",
-        "meaning": "LÃ¼ksemburg",
+        "meaning": "Lüksemburg",
         "level": "B1",
         "id": 8810
     },
@@ -28063,7 +28063,7 @@
     },
     {
         "word": "Mexican",
-        "meaning": "MeksikalÄ±",
+        "meaning": "Meksikalı",
         "level": "A1",
         "id": 8819
     },
@@ -28081,13 +28081,13 @@
     },
     {
         "word": "Mongolia",
-        "meaning": "MoÄŸolistan",
+        "meaning": "Moğolistan",
         "level": "B1",
         "id": 8822
     },
     {
         "word": "Montenegro",
-        "meaning": "KaradaÄŸ",
+        "meaning": "Karadağ",
         "level": "B1",
         "id": 8823
     },
@@ -28135,7 +28135,7 @@
     },
     {
         "word": "Dutch",
-        "meaning": "HollandalÄ±",
+        "meaning": "Hollandalı",
         "level": "A2",
         "id": 8831
     },
@@ -28159,13 +28159,13 @@
     },
     {
         "word": "Norway",
-        "meaning": "NorveÃ§",
+        "meaning": "Norveç",
         "level": "A2",
         "id": 8835
     },
     {
         "word": "Norwegian",
-        "meaning": "NorveÃ§li",
+        "meaning": "Norveçli",
         "level": "A2",
         "id": 8836
     },
@@ -28279,13 +28279,13 @@
     },
     {
         "word": "Serbia",
-        "meaning": "SÄ±rbistan",
+        "meaning": "Sırbistan",
         "level": "B1",
         "id": 8856
     },
     {
         "word": "Seychelles",
-        "meaning": "SeyÅŸeller",
+        "meaning": "Seyşeller",
         "level": "B1",
         "id": 8857
     },
@@ -28315,13 +28315,13 @@
     },
     {
         "word": "Spain",
-        "meaning": "Ä°spanya",
+        "meaning": "İspanya",
         "level": "A1",
         "id": 8862
     },
     {
         "word": "Spanish",
-        "meaning": "Ä°spanyol",
+        "meaning": "İspanyol",
         "level": "A1",
         "id": 8863
     },
@@ -28345,25 +28345,25 @@
     },
     {
         "word": "Sweden",
-        "meaning": "Ä°sveÃ§",
+        "meaning": "İsveç",
         "level": "A2",
         "id": 8867
     },
     {
         "word": "Swedish",
-        "meaning": "Ä°sveÃ§li",
+        "meaning": "İsveçli",
         "level": "A2",
         "id": 8868
     },
     {
         "word": "Switzerland",
-        "meaning": "Ä°sviÃ§re",
+        "meaning": "İsviçre",
         "level": "A2",
         "id": 8869
     },
     {
         "word": "Swiss",
-        "meaning": "Ä°sviÃ§reli",
+        "meaning": "İsviçreli",
         "level": "A2",
         "id": 8870
     },
@@ -28399,7 +28399,7 @@
     },
     {
         "word": "Thai",
-        "meaning": "TaylandlÄ±",
+        "meaning": "Taylandlı",
         "level": "B1",
         "id": 8876
     },
@@ -28423,13 +28423,13 @@
     },
     {
         "word": "Turkish",
-        "meaning": "TÃ¼rk",
+        "meaning": "Türk",
         "level": "A1",
         "id": 8881
     },
     {
         "word": "Turkmenistan",
-        "meaning": "TÃ¼rkmenistan",
+        "meaning": "Türkmenistan",
         "level": "B1",
         "id": 8882
     },
@@ -28459,7 +28459,7 @@
     },
     {
         "word": "Uzbekistan",
-        "meaning": "Ã–zbekistan",
+        "meaning": "Özbekistan",
         "level": "B1",
         "id": 8887
     },
@@ -28537,7 +28537,7 @@
     },
     {
         "word": "Brussels",
-        "meaning": "BrÃ¼ksel",
+        "meaning": "Brüksel",
         "level": "B1",
         "id": 8900
     },
@@ -28567,7 +28567,7 @@
     },
     {
         "word": "Istanbul",
-        "meaning": "Ä°stanbul",
+        "meaning": "İstanbul",
         "level": "A2",
         "id": 8905
     },
@@ -28579,7 +28579,7 @@
     },
     {
         "word": "Jerusalem",
-        "meaning": "KudÃ¼s",
+        "meaning": "Kudüs",
         "level": "B1",
         "id": 8907
     },
@@ -28699,7 +28699,7 @@
     },
     {
         "word": "Warsaw",
-        "meaning": "VarÅŸova",
+        "meaning": "Varşova",
         "level": "B1",
         "id": 8927
     },
@@ -28717,7 +28717,7 @@
     },
     {
         "word": "Archipelago",
-        "meaning": "TakÄ±mada",
+        "meaning": "Takımada",
         "level": "C2",
         "id": 8930
     },
@@ -28735,7 +28735,7 @@
     },
     {
         "word": "Cliff",
-        "meaning": "UÃ§urum",
+        "meaning": "Uçurum",
         "level": "B1",
         "id": 8940
     },
@@ -28747,7 +28747,7 @@
     },
     {
         "word": "Globe",
-        "meaning": "KÃ¼re (DÃ¼nya)",
+        "meaning": "Küre (Dünya)",
         "level": "B2",
         "id": 8956
     },
@@ -28759,7 +28759,7 @@
     },
     {
         "word": "Landmark",
-        "meaning": "Simge yapÄ±",
+        "meaning": "Simge yapı",
         "level": "C1",
         "id": 8963
     },
@@ -28783,7 +28783,7 @@
     },
     {
         "word": "Peninsula",
-        "meaning": "YarÄ±mada",
+        "meaning": "Yarımada",
         "level": "C1",
         "id": 8972
     },
@@ -28795,13 +28795,13 @@
     },
     {
         "word": "Province",
-        "meaning": "Ä°l/Eyalet",
+        "meaning": "İl/Eyalet",
         "level": "B2",
         "id": 8979
     },
     {
         "word": "Slope",
-        "meaning": "YamaÃ§",
+        "meaning": "Yamaç",
         "level": "B2",
         "id": 8988
     },
@@ -28813,7 +28813,7 @@
     },
     {
         "word": "Swamp",
-        "meaning": "BataklÄ±k",
+        "meaning": "Bataklık",
         "level": "C2",
         "id": 8997
     },
@@ -28825,7 +28825,7 @@
     },
     {
         "word": "Territory",
-        "meaning": "BÃ¶lge/Toprak",
+        "meaning": "Bölge/Toprak",
         "level": "B2",
         "id": 8999
     },
@@ -28849,25 +28849,25 @@
     },
     {
         "word": "Abbey",
-        "meaning": "ManastÄ±r",
+        "meaning": "Manastır",
         "level": "C1",
         "id": 9005
     },
     {
         "word": "Abbreviation",
-        "meaning": "KÄ±saltma",
+        "meaning": "Kısaltma",
         "level": "B1",
         "id": 9006
     },
     {
         "word": "Abdominal",
-        "meaning": "KarÄ±n ile ilgili",
+        "meaning": "Karın ile ilgili",
         "level": "C2",
         "id": 9007
     },
     {
         "word": "Abduct",
-        "meaning": "KaÃ§Ä±rmak (Birini)",
+        "meaning": "Kaçırmak (Birini)",
         "level": "C2",
         "id": 9008
     },
@@ -28885,13 +28885,13 @@
     },
     {
         "word": "Aboard",
-        "meaning": "GÃ¼vertede, Gemide/UÃ§akta",
+        "meaning": "Güvertede, Gemide/Uçakta",
         "level": "C1",
         "id": 9013
     },
     {
         "word": "Abolish",
-        "meaning": "YÃ¼rÃ¼rlÃ¼kten kaldÄ±rmak",
+        "meaning": "Yürürlükten kaldırmak",
         "level": "C1",
         "id": 9014
     },
@@ -28921,7 +28921,7 @@
     },
     {
         "word": "Absurd",
-        "meaning": "SaÃ§ma",
+        "meaning": "Saçma",
         "level": "C1",
         "id": 9024
     },
@@ -28933,7 +28933,7 @@
     },
     {
         "word": "Accelerate",
-        "meaning": "HÄ±zlandÄ±rmak",
+        "meaning": "Hızlandırmak",
         "level": "C1",
         "id": 9029
     },
@@ -28945,7 +28945,7 @@
     },
     {
         "word": "Accessible",
-        "meaning": "EriÅŸilebilir",
+        "meaning": "Erişilebilir",
         "level": "C1",
         "id": 9034
     },
@@ -28957,7 +28957,7 @@
     },
     {
         "word": "Accommodate",
-        "meaning": "BarÄ±ndÄ±rmak, AÄŸÄ±rlamak",
+        "meaning": "Barındırmak, Ağırlamak",
         "level": "C1",
         "id": 9038
     },
@@ -28975,7 +28975,7 @@
     },
     {
         "word": "According to",
-        "meaning": "GÃ¶re",
+        "meaning": "Göre",
         "level": "A2",
         "id": 9043
     },
@@ -28987,25 +28987,25 @@
     },
     {
         "word": "Accusation",
-        "meaning": "SuÃ§lama",
+        "meaning": "Suçlama",
         "level": "C1",
         "id": 9049
     },
     {
         "word": "Accused",
-        "meaning": "SanÄ±k",
+        "meaning": "Sanık",
         "level": "C1",
         "id": 9050
     },
     {
         "word": "Acre",
-        "meaning": "DÃ¶nÃ¼m (Akre)",
+        "meaning": "Dönüm (Akre)",
         "level": "C1",
         "id": 9056
     },
     {
         "word": "Activate",
-        "meaning": "EtkinleÅŸtirmek",
+        "meaning": "Etkinleştirmek",
         "level": "B2",
         "id": 9060
     },
@@ -29017,7 +29017,7 @@
     },
     {
         "word": "Actual",
-        "meaning": "GerÃ§ek",
+        "meaning": "Gerçek",
         "level": "B2",
         "id": 9066
     },
@@ -29041,7 +29041,7 @@
     },
     {
         "word": "Administrator",
-        "meaning": "YÃ¶netici",
+        "meaning": "Yönetici",
         "level": "C1",
         "id": 9079
     },
@@ -29059,31 +29059,31 @@
     },
     {
         "word": "Affordable",
-        "meaning": "Uygun fiyatlÄ±",
+        "meaning": "Uygun fiyatlı",
         "level": "B2",
         "id": 9100
     },
     {
         "word": "Aircraft",
-        "meaning": "Hava taÅŸÄ±tÄ±",
+        "meaning": "Hava taşıtı",
         "level": "B2",
         "id": 9119
     },
     {
         "word": "Allegation",
-        "meaning": "Ä°ddia",
+        "meaning": "İddia",
         "level": "C1",
         "id": 9126
     },
     {
         "word": "Allege",
-        "meaning": "Ä°ddia etmek",
+        "meaning": "İddia etmek",
         "level": "C1",
         "id": 9127
     },
     {
         "word": "Allegedly",
-        "meaning": "Ä°ddiaya gÃ¶re",
+        "meaning": "İddiaya göre",
         "level": "C1",
         "id": 9128
     },
@@ -29095,7 +29095,7 @@
     },
     {
         "word": "Allowance",
-        "meaning": "HarÃ§lÄ±k, Ä°zin",
+        "meaning": "Harçlık, İzin",
         "level": "C1",
         "id": 9133
     },
@@ -29119,31 +29119,31 @@
     },
     {
         "word": "Amateur",
-        "meaning": "AmatÃ¶r",
+        "meaning": "Amatör",
         "level": "C1",
         "id": 9149
     },
     {
         "word": "Amaze",
-        "meaning": "ÅaÅŸÄ±rtmak",
+        "meaning": "Şaşırtmak",
         "level": "B2",
         "id": 9150
     },
     {
         "word": "Ambassador",
-        "meaning": "BÃ¼yÃ¼kelÃ§i",
+        "meaning": "Büyükelçi",
         "level": "C1",
         "id": 9152
     },
     {
         "word": "Amusing",
-        "meaning": "EÄŸlenceli",
+        "meaning": "Eğlenceli",
         "level": "B2",
         "id": 9157
     },
     {
         "word": "Anchor",
-        "meaning": "Ã‡apa",
+        "meaning": "Çapa",
         "level": "C2",
         "id": 9161
     },
@@ -29167,25 +29167,25 @@
     },
     {
         "word": "Annoyed",
-        "meaning": "RahatsÄ±z olmuÅŸ",
+        "meaning": "Rahatsız olmuş",
         "level": "B1",
         "id": 9175
     },
     {
         "word": "Annoying",
-        "meaning": "RahatsÄ±z edici",
+        "meaning": "Rahatsız edici",
         "level": "B1",
         "id": 9176
     },
     {
         "word": "Annually",
-        "meaning": "YÄ±llÄ±k olarak",
+        "meaning": "Yıllık olarak",
         "level": "B2",
         "id": 9178
     },
     {
         "word": "Anymore",
-        "meaning": "ArtÄ±k",
+        "meaning": "Artık",
         "level": "A2",
         "id": 9187
     },
@@ -29197,25 +29197,25 @@
     },
     {
         "word": "Apology",
-        "meaning": "Ã–zÃ¼r",
+        "meaning": "Özür",
         "level": "B2",
         "id": 9195
     },
     {
         "word": "Appalling",
-        "meaning": "KorkunÃ§",
+        "meaning": "Korkunç",
         "level": "C1",
         "id": 9197
     },
     {
         "word": "Apparatus",
-        "meaning": "AygÄ±t",
+        "meaning": "Aygıt",
         "level": "C1",
         "id": 9198
     },
     {
         "word": "Apparently",
-        "meaning": "GÃ¶rÃ¼nÃ¼ÅŸe gÃ¶re",
+        "meaning": "Görünüşe göre",
         "level": "B2",
         "id": 9200
     },
@@ -29239,7 +29239,7 @@
     },
     {
         "word": "Approximately",
-        "meaning": "YaklaÅŸÄ±k olarak",
+        "meaning": "Yaklaşık olarak",
         "level": "B1",
         "id": 9218
     },
@@ -29251,7 +29251,7 @@
     },
     {
         "word": "Archive",
-        "meaning": "ArÅŸiv",
+        "meaning": "Arşiv",
         "level": "C1",
         "id": 9223
     },
@@ -29281,7 +29281,7 @@
     },
     {
         "word": "Ash",
-        "meaning": "KÃ¼l",
+        "meaning": "Kül",
         "level": "C1",
         "id": 9247
     },
@@ -29293,7 +29293,7 @@
     },
     {
         "word": "Aspiration",
-        "meaning": "Ã–zlem",
+        "meaning": "Özlem",
         "level": "C1",
         "id": 9253
     },
@@ -29305,37 +29305,37 @@
     },
     {
         "word": "Assault",
-        "meaning": "SaldÄ±rÄ±",
+        "meaning": "Saldırı",
         "level": "C1",
         "id": 9256
     },
     {
         "word": "Assert",
-        "meaning": "Ä°leri sÃ¼rmek",
+        "meaning": "İleri sürmek",
         "level": "C1",
         "id": 9259
     },
     {
         "word": "Assistance",
-        "meaning": "YardÄ±m",
+        "meaning": "Yardım",
         "level": "B2",
         "id": 9265
     },
     {
         "word": "Assurance",
-        "meaning": "GÃ¼vence",
+        "meaning": "Güvence",
         "level": "C1",
         "id": 9271
     },
     {
         "word": "Astonish",
-        "meaning": "ÅaÅŸÄ±rtmak",
+        "meaning": "Şaşırtmak",
         "level": "C2",
         "id": 9273
     },
     {
         "word": "Asylum",
-        "meaning": "SÄ±ÄŸÄ±nma",
+        "meaning": "Sığınma",
         "level": "C2",
         "id": 9274
     },
@@ -29347,31 +29347,31 @@
     },
     {
         "word": "Atrocity",
-        "meaning": "VahÅŸet",
+        "meaning": "Vahşet",
         "level": "C2",
         "id": 9278
     },
     {
         "word": "Attacker",
-        "meaning": "SaldÄ±rgan",
+        "meaning": "Saldırgan",
         "level": "B1",
         "id": 9282
     },
     {
         "word": "Attendance",
-        "meaning": "KatÄ±lÄ±m",
+        "meaning": "Katılım",
         "level": "C1",
         "id": 9286
     },
     {
         "word": "Auction",
-        "meaning": "MÃ¼zayede",
+        "meaning": "Müzayede",
         "level": "C1",
         "id": 9294
     },
     {
         "word": "August",
-        "meaning": "AÄŸustos",
+        "meaning": "Ağustos",
         "level": "A1",
         "id": 9297
     },
@@ -29407,7 +29407,7 @@
     },
     {
         "word": "Awareness",
-        "meaning": "FarkÄ±ndalÄ±k",
+        "meaning": "Farkındalık",
         "level": "C1",
         "id": 9315
     },
@@ -29419,19 +29419,19 @@
     },
     {
         "word": "Backpack",
-        "meaning": "SÄ±rt Ã§antasÄ±",
+        "meaning": "Sırt çantası",
         "level": "B1",
         "id": 9322
     },
     {
         "word": "Backwards",
-        "meaning": "Geriye doÄŸru",
+        "meaning": "Geriye doğru",
         "level": "B2",
         "id": 9324
     },
     {
         "word": "Bacon",
-        "meaning": "Domuz pastÄ±rmasÄ±",
+        "meaning": "Domuz pastırması",
         "level": "B1",
         "id": 9325
     },
@@ -29467,7 +29467,7 @@
     },
     {
         "word": "Bare",
-        "meaning": "Ã‡Ä±plak",
+        "meaning": "Çıplak",
         "level": "C1",
         "id": 9347
     },
@@ -29479,7 +29479,7 @@
     },
     {
         "word": "Based",
-        "meaning": "DayalÄ±",
+        "meaning": "Dayalı",
         "level": "A2",
         "id": 9355
     },
@@ -29491,7 +29491,7 @@
     },
     {
         "word": "Basin",
-        "meaning": "LeÄŸen, Havza",
+        "meaning": "Leğen, Havza",
         "level": "C1",
         "id": 9359
     },
@@ -29503,7 +29503,7 @@
     },
     {
         "word": "Battlefield",
-        "meaning": "SavaÅŸ alanÄ±",
+        "meaning": "Savaş alanı",
         "level": "C1",
         "id": 9368
     },
@@ -29515,13 +29515,13 @@
     },
     {
         "word": "Beforehand",
-        "meaning": "Ã–nceden",
+        "meaning": "Önceden",
         "level": "C1",
         "id": 9388
     },
     {
         "word": "Being",
-        "meaning": "VarlÄ±k",
+        "meaning": "Varlık",
         "level": "B2",
         "id": 9396
     },
@@ -29557,19 +29557,19 @@
     },
     {
         "word": "Bent",
-        "meaning": "bÃ¼kÃ¼lmÃ¼ÅŸ",
+        "meaning": "bükülmüş",
         "level": "B2",
         "id": 9412
     },
     {
         "word": "Besides",
-        "meaning": "AyrÄ±ca",
+        "meaning": "Ayrıca",
         "level": "B1",
         "id": 9414
     },
     {
         "word": "Betray",
-        "meaning": "Ä°hanet etmek",
+        "meaning": "İhanet etmek",
         "level": "C1",
         "id": 9417
     },
@@ -29581,7 +29581,7 @@
     },
     {
         "word": "Bind",
-        "meaning": "BaÄŸlamak",
+        "meaning": "Bağlamak",
         "level": "C1",
         "id": 9429
     },
@@ -29599,7 +29599,7 @@
     },
     {
         "word": "Blend",
-        "meaning": "KarÄ±ÅŸtÄ±rmak",
+        "meaning": "Karıştırmak",
         "level": "C1",
         "id": 9448
     },
@@ -29611,13 +29611,13 @@
     },
     {
         "word": "Blond",
-        "meaning": "SarÄ±ÅŸÄ±n",
+        "meaning": "Sarışın",
         "level": "A1",
         "id": 9452
     },
     {
         "word": "Boast",
-        "meaning": "Ã–vÃ¼nmek",
+        "meaning": "Övünmek",
         "level": "C2",
         "id": 9457
     },
@@ -29647,37 +29647,37 @@
     },
     {
         "word": "Boost",
-        "meaning": "ArtÄ±rmak",
+        "meaning": "Artırmak",
         "level": "B2",
         "id": 9471
     },
     {
         "word": "Borough",
-        "meaning": "Ä°lÃ§e",
+        "meaning": "İlçe",
         "level": "C2",
         "id": 9477
     },
     {
         "word": "Bounce",
-        "meaning": "ZÄ±plamak",
+        "meaning": "Zıplamak",
         "level": "C1",
         "id": 9484
     },
     {
         "word": "Bound",
-        "meaning": "BaÄŸlÄ±",
+        "meaning": "Bağlı",
         "level": "C1",
         "id": 9485
     },
     {
         "word": "Boundary",
-        "meaning": "SÄ±nÄ±r",
+        "meaning": "Sınır",
         "level": "C1",
         "id": 9486
     },
     {
         "word": "Bow",
-        "meaning": "EÄŸilmek, Yay",
+        "meaning": "Eğilmek, Yay",
         "level": "C1",
         "id": 9487
     },
@@ -29689,7 +29689,7 @@
     },
     {
         "word": "Cape",
-        "meaning": "Pelerin, Burun (CoÄŸ)",
+        "meaning": "Pelerin, Burun (Coğ)",
         "level": "C1",
         "id": 9506
     },
@@ -29707,7 +29707,7 @@
     },
     {
         "word": "Cattle",
-        "meaning": "SÄ±ÄŸÄ±r",
+        "meaning": "Sığır",
         "level": "B2",
         "id": 9526
     },
@@ -29719,13 +29719,13 @@
     },
     {
         "word": "Cement",
-        "meaning": "Ã‡imento",
+        "meaning": "Çimento",
         "level": "B2",
         "id": 9534
     },
     {
         "word": "Championship",
-        "meaning": "Åampiyona",
+        "meaning": "Şampiyona",
         "level": "B1",
         "id": 9549
     },
@@ -29743,13 +29743,13 @@
     },
     {
         "word": "Cheer",
-        "meaning": "TezahÃ¼rat etmek",
+        "meaning": "Tezahürat etmek",
         "level": "B1",
         "id": 9567
     },
     {
         "word": "Chess",
-        "meaning": "SatranÃ§",
+        "meaning": "Satranç",
         "level": "A2",
         "id": 9573
     },
@@ -29761,13 +29761,13 @@
     },
     {
         "word": "Climbing",
-        "meaning": "TÄ±rmanÄ±ÅŸ",
+        "meaning": "Tırmanış",
         "level": "A2",
         "id": 9607
     },
     {
         "word": "Clue",
-        "meaning": "Ä°pucu",
+        "meaning": "İpucu",
         "level": "B2",
         "id": 9618
     },
@@ -29779,13 +29779,13 @@
     },
     {
         "word": "District",
-        "meaning": "BÃ¶lge, Ä°lÃ§e",
+        "meaning": "Bölge, İlçe",
         "level": "B2",
         "id": 9630
     },
     {
         "word": "Disturb",
-        "meaning": "RahatsÄ±z etmek",
+        "meaning": "Rahatsız etmek",
         "level": "B2",
         "id": 9631
     },
@@ -29797,19 +29797,19 @@
     },
     {
         "word": "Divide",
-        "meaning": "BÃ¶lmek",
+        "meaning": "Bölmek",
         "level": "B1",
         "id": 9633
     },
     {
         "word": "Division",
-        "meaning": "BÃ¶lÃ¼m",
+        "meaning": "Bölüm",
         "level": "B2",
         "id": 9634
     },
     {
         "word": "Divorce",
-        "meaning": "BoÅŸanmak",
+        "meaning": "Boşanmak",
         "level": "B1",
         "id": 9635
     },
@@ -29821,7 +29821,7 @@
     },
     {
         "word": "Dominant",
-        "meaning": "BaskÄ±n",
+        "meaning": "Baskın",
         "level": "B2",
         "id": 9643
     },
@@ -29833,19 +29833,19 @@
     },
     {
         "word": "Doubt",
-        "meaning": "ÅÃ¼phe",
+        "meaning": "Şüphe",
         "level": "B1",
         "id": 9647
     },
     {
         "word": "Downtown",
-        "meaning": "Åehir merkezi",
+        "meaning": "Şehir merkezi",
         "level": "A2",
         "id": 9650
     },
     {
         "word": "Dozen",
-        "meaning": "DÃ¼zine",
+        "meaning": "Düzine",
         "level": "B1",
         "id": 9651
     },
@@ -29857,31 +29857,31 @@
     },
     {
         "word": "Drunk",
-        "meaning": "SarhoÅŸ",
+        "meaning": "Sarhoş",
         "level": "B1",
         "id": 9667
     },
     {
         "word": "Due",
-        "meaning": "Vadesi gelmiÅŸ",
+        "meaning": "Vadesi gelmiş",
         "level": "B1",
         "id": 9670
     },
     {
         "word": "Dull",
-        "meaning": "SÄ±kÄ±cÄ±, Mat",
+        "meaning": "Sıkıcı, Mat",
         "level": "B1",
         "id": 9671
     },
     {
         "word": "Dump",
-        "meaning": "Ã‡Ã¶plÃ¼k, DÃ¶kmek",
+        "meaning": "Çöplük, Dökmek",
         "level": "B2",
         "id": 9672
     },
     {
         "word": "Duty",
-        "meaning": "GÃ¶rev",
+        "meaning": "Görev",
         "level": "B1",
         "id": 9675
     },
@@ -29893,13 +29893,13 @@
     },
     {
         "word": "Naked",
-        "meaning": "Ã‡Ä±plak",
+        "meaning": "Çıplak",
         "level": "B1",
         "id": 9679
     },
     {
         "word": "Obsession",
-        "meaning": "TakÄ±ntÄ±",
+        "meaning": "Takıntı",
         "level": "C1",
         "id": 9744
     },
@@ -29911,7 +29911,7 @@
     },
     {
         "word": "Performer",
-        "meaning": "SanatÃ§Ä±",
+        "meaning": "Sanatçı",
         "level": "B2",
         "id": 9858
     },
@@ -29923,13 +29923,13 @@
     },
     {
         "word": "Playground",
-        "meaning": "Oyun alanÄ±",
+        "meaning": "Oyun alanı",
         "level": "A2",
         "id": 9904
     },
     {
         "word": "Popcorn",
-        "meaning": "PatlamÄ±ÅŸ mÄ±sÄ±r",
+        "meaning": "Patlamış mısır",
         "level": "A1",
         "id": 9905
     },
@@ -29941,13 +29941,13 @@
     },
     {
         "word": "Probable",
-        "meaning": "OlasÄ±",
+        "meaning": "Olası",
         "level": "B1",
         "id": 9973
     },
     {
         "word": "Prosecution",
-        "meaning": "KovuÅŸturma",
+        "meaning": "Kovuşturma",
         "level": "C2",
         "id": 10003
     },
@@ -29959,7 +29959,7 @@
     },
     {
         "word": "Purse",
-        "meaning": "CÃ¼zdan (KadÄ±n)",
+        "meaning": "Cüzdan (Kadın)",
         "level": "B1",
         "id": 10031
     },
@@ -29977,7 +29977,7 @@
     },
     {
         "word": "Queue",
-        "meaning": "SÄ±ra",
+        "meaning": "Sıra",
         "level": "B1",
         "id": 10046
     },
@@ -29989,19 +29989,19 @@
     },
     {
         "word": "Radiator",
-        "meaning": "RadyatÃ¶r",
+        "meaning": "Radyatör",
         "level": "C1",
         "id": 10057
     },
     {
         "word": "Raincoat",
-        "meaning": "YaÄŸmurluk",
+        "meaning": "Yağmurluk",
         "level": "B1",
         "id": 10063
     },
     {
         "word": "Rainy",
-        "meaning": "YaÄŸmurlu",
+        "meaning": "Yağmurlu",
         "level": "A1",
         "id": 10064
     },
@@ -30025,7 +30025,7 @@
     },
     {
         "word": "Heading",
-        "meaning": "BaÅŸlÄ±k",
+        "meaning": "Başlık",
         "level": "B1",
         "id": 10086
     },
@@ -30037,7 +30037,7 @@
     },
     {
         "word": "Rebel",
-        "meaning": "Ä°syancÄ±",
+        "meaning": "İsyancı",
         "level": "C1",
         "id": 10098
     },
@@ -30049,13 +30049,13 @@
     },
     {
         "word": "Recipient",
-        "meaning": "AlÄ±cÄ±",
+        "meaning": "Alıcı",
         "level": "C2",
         "id": 10107
     },
     {
         "word": "Refugee",
-        "meaning": "MÃ¼lteci",
+        "meaning": "Mülteci",
         "level": "B2",
         "id": 10126
     },
@@ -30067,7 +30067,7 @@
     },
     {
         "word": "Regarding",
-        "meaning": "Ä°le ilgili",
+        "meaning": "İle ilgili",
         "level": "B2",
         "id": 10130
     },
@@ -30079,13 +30079,13 @@
     },
     {
         "word": "Regulate",
-        "meaning": "DÃ¼zenlemek (Yasa)",
+        "meaning": "Düzenlemek (Yasa)",
         "level": "B2",
         "id": 10139
     },
     {
         "word": "Reinforce",
-        "meaning": "GÃ¼Ã§lendirmek",
+        "meaning": "Güçlendirmek",
         "level": "C1",
         "id": 10141
     },
@@ -30121,25 +30121,25 @@
     },
     {
         "word": "Ablaze",
-        "meaning": "Alevler iÃ§inde",
+        "meaning": "Alevler içinde",
         "level": "C2",
         "id": 10194
     },
     {
         "word": "Abode",
-        "meaning": "Ä°kametgah",
+        "meaning": "İkametgah",
         "level": "C2",
         "id": 10197
     },
     {
         "word": "Abolition",
-        "meaning": "Ä°lga, KaldÄ±rma",
+        "meaning": "İlga, Kaldırma",
         "level": "C1",
         "id": 10199
     },
     {
         "word": "Abominable",
-        "meaning": "Ä°ÄŸrenÃ§",
+        "meaning": "İğrenç",
         "level": "C2",
         "id": 10200
     },
@@ -30151,7 +30151,7 @@
     },
     {
         "word": "Abort",
-        "meaning": "Durdurmak (Ä°ptal)",
+        "meaning": "Durdurmak (İptal)",
         "level": "C1",
         "id": 10202
     },
@@ -30163,13 +30163,13 @@
     },
     {
         "word": "Abrasion",
-        "meaning": "AÅŸÄ±nma",
+        "meaning": "Aşınma",
         "level": "C2",
         "id": 10207
     },
     {
         "word": "Abrasive",
-        "meaning": "AÅŸÄ±ndÄ±rÄ±cÄ±",
+        "meaning": "Aşındırıcı",
         "level": "C2",
         "id": 10208
     },
@@ -30193,7 +30193,7 @@
     },
     {
         "word": "Absolve",
-        "meaning": "Temize Ã§Ä±karmak",
+        "meaning": "Temize çıkarmak",
         "level": "C2",
         "id": 10218
     },
@@ -30229,55 +30229,55 @@
     },
     {
         "word": "Accession",
-        "meaning": "KatÄ±lÄ±m",
+        "meaning": "Katılım",
         "level": "C2",
         "id": 10239
     },
     {
         "word": "Acclaim",
-        "meaning": "Ã–vmek",
+        "meaning": "Övmek",
         "level": "C1",
         "id": 10244
     },
     {
         "word": "Acclimate",
-        "meaning": "Ä°klime alÄ±ÅŸtÄ±rmak",
+        "meaning": "İklime alıştırmak",
         "level": "C2",
         "id": 10245
     },
     {
         "word": "Accompaniment",
-        "meaning": "EÅŸlik",
+        "meaning": "Eşlik",
         "level": "C2",
         "id": 10248
     },
     {
         "word": "Accomplice",
-        "meaning": "SuÃ§ ortaÄŸÄ±",
+        "meaning": "Suç ortağı",
         "level": "C2",
         "id": 10250
     },
     {
         "word": "Accomplished",
-        "meaning": "BaÅŸarÄ±lÄ±",
+        "meaning": "Başarılı",
         "level": "C1",
         "id": 10252
     },
     {
         "word": "Accomplishment",
-        "meaning": "BaÅŸarÄ±",
+        "meaning": "Başarı",
         "level": "C1",
         "id": 10253
     },
     {
         "word": "Accord",
-        "meaning": "AnlaÅŸma",
+        "meaning": "Anlaşma",
         "level": "C1",
         "id": 10254
     },
     {
         "word": "Accordingly",
-        "meaning": "Bu doÄŸrultuda",
+        "meaning": "Bu doğrultuda",
         "level": "C1",
         "id": 10256
     },
@@ -30325,7 +30325,7 @@
     },
     {
         "word": "Accustom",
-        "meaning": "AlÄ±ÅŸtÄ±rmak",
+        "meaning": "Alıştırmak",
         "level": "C1",
         "id": 10271
     },
@@ -30349,19 +30349,19 @@
     },
     {
         "word": "Acquaint",
-        "meaning": "TanÄ±tmak",
+        "meaning": "Tanıtmak",
         "level": "C1",
         "id": 10280
     },
     {
         "word": "Acquaintance",
-        "meaning": "TanÄ±dÄ±k",
+        "meaning": "Tanıdık",
         "level": "C1",
         "id": 10281
     },
     {
         "word": "Acquiesce",
-        "meaning": "RazÄ± olmak",
+        "meaning": "Razı olmak",
         "level": "C2",
         "id": 10282
     },
@@ -30373,7 +30373,7 @@
     },
     {
         "word": "Acrimonious",
-        "meaning": "HÄ±rÃ§Ä±n",
+        "meaning": "Hırçın",
         "level": "C2",
         "id": 10287
     },
@@ -30385,7 +30385,7 @@
     },
     {
         "word": "Acronym",
-        "meaning": "KÄ±saltma",
+        "meaning": "Kısaltma",
         "level": "C2",
         "id": 10289
     },
@@ -30415,7 +30415,7 @@
     },
     {
         "word": "Addicted",
-        "meaning": "BaÄŸÄ±mlÄ± (SÄ±fat)",
+        "meaning": "Bağımlı (Sıfat)",
         "level": "C1",
         "id": 10311
     },
@@ -30439,55 +30439,55 @@
     },
     {
         "word": "Adhere",
-        "meaning": "YapÄ±ÅŸmak",
+        "meaning": "Yapışmak",
         "level": "C1",
         "id": 10320
     },
     {
         "word": "Adherence",
-        "meaning": "BaÄŸlÄ±lÄ±k",
+        "meaning": "Bağlılık",
         "level": "C2",
         "id": 10321
     },
     {
         "word": "Adjective",
-        "meaning": "SÄ±fat",
+        "meaning": "Sıfat",
         "level": "A2",
         "id": 10323
     },
     {
         "word": "Adjourn",
-        "meaning": "Ertelemek (ToplantÄ±)",
+        "meaning": "Ertelemek (Toplantı)",
         "level": "C2",
         "id": 10324
     },
     {
         "word": "Administrative",
-        "meaning": "Ä°dari",
+        "meaning": "İdari",
         "level": "C1",
         "id": 10329
     },
     {
         "word": "Admittance",
-        "meaning": "GiriÅŸ izni",
+        "meaning": "Giriş izni",
         "level": "C2",
         "id": 10334
     },
     {
         "word": "Adorable",
-        "meaning": "Ã‡ok gÃ¼zel",
+        "meaning": "Çok güzel",
         "level": "C1",
         "id": 10339
     },
     {
         "word": "Adore",
-        "meaning": "Ã‡ok sevmek",
+        "meaning": "Çok sevmek",
         "level": "C1",
         "id": 10340
     },
     {
         "word": "Adorn",
-        "meaning": "SÃ¼slemek",
+        "meaning": "Süslemek",
         "level": "C2",
         "id": 10341
     },
@@ -30499,25 +30499,25 @@
     },
     {
         "word": "Advancement",
-        "meaning": "Ä°lerleme",
+        "meaning": "İlerleme",
         "level": "C1",
         "id": 10346
     },
     {
         "word": "Advantageous",
-        "meaning": "AvantajlÄ±",
+        "meaning": "Avantajlı",
         "level": "C1",
         "id": 10348
     },
     {
         "word": "Adventurous",
-        "meaning": "MaceracÄ±",
+        "meaning": "Maceracı",
         "level": "C1",
         "id": 10350
     },
     {
         "word": "Adversary",
-        "meaning": "HasÄ±m",
+        "meaning": "Hasım",
         "level": "C2",
         "id": 10351
     },
@@ -30547,19 +30547,19 @@
     },
     {
         "word": "Affiliate",
-        "meaning": "BaÄŸlÄ± kuruluÅŸ",
+        "meaning": "Bağlı kuruluş",
         "level": "C2",
         "id": 10369
     },
     {
         "word": "Affinity",
-        "meaning": "YakÄ±nlÄ±k",
+        "meaning": "Yakınlık",
         "level": "C2",
         "id": 10370
     },
     {
         "word": "Affirm",
-        "meaning": "DoÄŸrulamak",
+        "meaning": "Doğrulamak",
         "level": "C2",
         "id": 10371
     },
@@ -30571,7 +30571,7 @@
     },
     {
         "word": "Afflict",
-        "meaning": "AcÄ± vermek",
+        "meaning": "Acı vermek",
         "level": "C2",
         "id": 10373
     },
@@ -30589,7 +30589,7 @@
     },
     {
         "word": "Aftermath",
-        "meaning": "AkÄ±bet",
+        "meaning": "Akıbet",
         "level": "C2",
         "id": 10380
     },
@@ -30601,37 +30601,37 @@
     },
     {
         "word": "Aggravate",
-        "meaning": "AÄŸÄ±rlaÅŸtÄ±rmak",
+        "meaning": "Ağırlaştırmak",
         "level": "C2",
         "id": 10390
     },
     {
         "word": "Aggressor",
-        "meaning": "SaldÄ±rgan",
+        "meaning": "Saldırgan",
         "level": "C2",
         "id": 10394
     },
     {
         "word": "Agile",
-        "meaning": "Ã‡evik",
+        "meaning": "Çevik",
         "level": "C1",
         "id": 10395
     },
     {
         "word": "Agitate",
-        "meaning": "KÄ±ÅŸkÄ±rtmak",
+        "meaning": "Kışkırtmak",
         "level": "C2",
         "id": 10396
     },
     {
         "word": "Agonizing",
-        "meaning": "IzdÄ±rap verici",
+        "meaning": "Izdırap verici",
         "level": "C2",
         "id": 10398
     },
     {
         "word": "Agreeable",
-        "meaning": "HoÅŸ",
+        "meaning": "Hoş",
         "level": "C1",
         "id": 10401
     },
@@ -30643,13 +30643,13 @@
     },
     {
         "word": "Ail",
-        "meaning": "RahatsÄ±z etmek",
+        "meaning": "Rahatsız etmek",
         "level": "C2",
         "id": 10407
     },
     {
         "word": "Airplane",
-        "meaning": "UÃ§ak",
+        "meaning": "Uçak",
         "level": "A2",
         "id": 10413
     },
@@ -30661,7 +30661,7 @@
     },
     {
         "word": "Ajar",
-        "meaning": "AralÄ±k",
+        "meaning": "Aralık",
         "level": "C2",
         "id": 10416
     },
@@ -30673,7 +30673,7 @@
     },
     {
         "word": "Alder",
-        "meaning": "KÄ±zÄ±laÄŸaÃ§",
+        "meaning": "Kızılağaç",
         "level": "C2",
         "id": 10422
     },
@@ -30685,13 +30685,13 @@
     },
     {
         "word": "Alien",
-        "meaning": "UzaylÄ±",
+        "meaning": "Uzaylı",
         "level": "C1",
         "id": 10424
     },
     {
         "word": "Alienate",
-        "meaning": "YabancÄ±laÅŸtÄ±rmak",
+        "meaning": "Yabancılaştırmak",
         "level": "C2",
         "id": 10425
     },
@@ -30733,7 +30733,7 @@
     },
     {
         "word": "Allied",
-        "meaning": "MÃ¼ttefik",
+        "meaning": "Müttefik",
         "level": "C2",
         "id": 10442
     },
@@ -30745,7 +30745,7 @@
     },
     {
         "word": "Allude",
-        "meaning": "Ä°ma etmek",
+        "meaning": "İma etmek",
         "level": "C2",
         "id": 10449
     },
@@ -30757,19 +30757,19 @@
     },
     {
         "word": "Allusion",
-        "meaning": "Ä°ma",
+        "meaning": "İma",
         "level": "C2",
         "id": 10451
     },
     {
         "word": "Almanac",
-        "meaning": "YÄ±llÄ±k",
+        "meaning": "Yıllık",
         "level": "C2",
         "id": 10453
     },
     {
         "word": "Mighty",
-        "meaning": "GÃ¼Ã§lÃ¼",
+        "meaning": "Güçlü",
         "level": "C1",
         "id": 10454
     },
@@ -30787,7 +30787,7 @@
     },
     {
         "word": "Aloft",
-        "meaning": "YÃ¼ksekte",
+        "meaning": "Yüksekte",
         "level": "C2",
         "id": 10458
     },
@@ -30799,7 +30799,7 @@
     },
     {
         "word": "Altercation",
-        "meaning": "TartÄ±ÅŸma",
+        "meaning": "Tartışma",
         "level": "C2",
         "id": 10469
     },
@@ -30811,13 +30811,13 @@
     },
     {
         "word": "Altitude",
-        "meaning": "RakÄ±m",
+        "meaning": "Rakım",
         "level": "C1",
         "id": 10473
     },
     {
         "word": "Aluminum",
-        "meaning": "AlÃ¼minyum",
+        "meaning": "Alüminyum",
         "level": "C1",
         "id": 10476
     },
@@ -30829,7 +30829,7 @@
     },
     {
         "word": "Amalgamate",
-        "meaning": "BirleÅŸtirmek",
+        "meaning": "Birleştirmek",
         "level": "C2",
         "id": 10479
     },
@@ -30841,7 +30841,7 @@
     },
     {
         "word": "Amazed",
-        "meaning": "ÅaÅŸÄ±rmÄ±ÅŸ",
+        "meaning": "Şaşırmış",
         "level": "B2",
         "id": 10483
     },
@@ -30865,7 +30865,7 @@
     },
     {
         "word": "Ambient",
-        "meaning": "Ã‡evreleyen",
+        "meaning": "Çevreleyen",
         "level": "C2",
         "id": 10489
     },
@@ -30901,13 +30901,13 @@
     },
     {
         "word": "Amid",
-        "meaning": "ArasÄ±nda",
+        "meaning": "Arasında",
         "level": "C1",
         "id": 10506
     },
     {
         "word": "Amiss",
-        "meaning": "HatalÄ±",
+        "meaning": "Hatalı",
         "level": "C2",
         "id": 10507
     },
@@ -30919,7 +30919,7 @@
     },
     {
         "word": "Ammunition",
-        "meaning": "MÃ¼himmat",
+        "meaning": "Mühimmat",
         "level": "C2",
         "id": 10509
     },
@@ -30937,7 +30937,7 @@
     },
     {
         "word": "Amplify",
-        "meaning": "GÃ¼Ã§lendirmek",
+        "meaning": "Güçlendirmek",
         "level": "C2",
         "id": 10514
     },
@@ -30949,25 +30949,25 @@
     },
     {
         "word": "Amused",
-        "meaning": "EÄŸlenmiÅŸ",
+        "meaning": "Eğlenmiş",
         "level": "B2",
         "id": 10517
     },
     {
         "word": "Amusement",
-        "meaning": "EÄŸlence",
+        "meaning": "Eğlence",
         "level": "B2",
         "id": 10518
     },
     {
         "word": "Anachronism",
-        "meaning": "Tarih hatasÄ±",
+        "meaning": "Tarih hatası",
         "level": "C2",
         "id": 10520
     },
     {
         "word": "Abacus",
-        "meaning": "AbakÃ¼s",
+        "meaning": "Abaküs",
         "level": "C1",
         "id": 10521
     },
@@ -30991,7 +30991,7 @@
     },
     {
         "word": "Adobe",
-        "meaning": "KerpiÃ§",
+        "meaning": "Kerpiç",
         "level": "C2",
         "id": 10526
     },
@@ -31009,7 +31009,7 @@
     },
     {
         "word": "Aftershock",
-        "meaning": "ArtÃ§Ä± ÅŸok",
+        "meaning": "Artçı şok",
         "level": "C1",
         "id": 10529
     },
@@ -31021,7 +31021,7 @@
     },
     {
         "word": "Albumen",
-        "meaning": "Yumurta akÄ±",
+        "meaning": "Yumurta akı",
         "level": "C2",
         "id": 10532
     },
@@ -31033,7 +31033,7 @@
     },
     {
         "word": "Alcove",
-        "meaning": "HÃ¼cre (Oda)",
+        "meaning": "Hücre (Oda)",
         "level": "C2",
         "id": 10534
     },
@@ -31069,7 +31069,7 @@
     },
     {
         "word": "Alleyway",
-        "meaning": "Dar geÃ§it",
+        "meaning": "Dar geçit",
         "level": "C2",
         "id": 10543
     },
@@ -31087,7 +31087,7 @@
     },
     {
         "word": "Amalgams",
-        "meaning": "KarÄ±ÅŸÄ±mlar",
+        "meaning": "Karışımlar",
         "level": "C2",
         "id": 10552
     },
@@ -31099,7 +31099,7 @@
     },
     {
         "word": "Ambrosia",
-        "meaning": "TanrÄ± yemeÄŸi",
+        "meaning": "Tanrı yemeği",
         "level": "C2",
         "id": 10556
     },
@@ -31117,7 +31117,7 @@
     },
     {
         "word": "Amnesia",
-        "meaning": "HafÄ±za kaybÄ±",
+        "meaning": "Hafıza kaybı",
         "level": "C2",
         "id": 10561
     },
@@ -31141,7 +31141,7 @@
     },
     {
         "word": "Ampoule",
-        "meaning": "Ampul (Ä°laÃ§)",
+        "meaning": "Ampul (İlaç)",
         "level": "C2",
         "id": 10565
     },
@@ -31171,7 +31171,7 @@
     },
     {
         "word": "Anarchy",
-        "meaning": "AnarÅŸi",
+        "meaning": "Anarşi",
         "level": "C2",
         "id": 10572
     },
@@ -31195,19 +31195,19 @@
     },
     {
         "word": "Angellfish",
-        "meaning": "Melek balÄ±ÄŸÄ±",
+        "meaning": "Melek balığı",
         "level": "C2",
         "id": 10578
     },
     {
         "word": "Angler",
-        "meaning": "Olta balÄ±kÃ§Ä±sÄ±",
+        "meaning": "Olta balıkçısı",
         "level": "C2",
         "id": 10580
     },
     {
         "word": "Angora",
-        "meaning": "Ankara keÃ§isi",
+        "meaning": "Ankara keçisi",
         "level": "C2",
         "id": 10581
     },
@@ -31243,7 +31243,7 @@
     },
     {
         "word": "Anteater",
-        "meaning": "KarÄ±ncayiyen",
+        "meaning": "Karıncayiyen",
         "level": "C2",
         "id": 10592
     },
@@ -31261,13 +31261,13 @@
     },
     {
         "word": "Anthem",
-        "meaning": "MarÅŸ",
+        "meaning": "Marş",
         "level": "C2",
         "id": 10595
     },
     {
         "word": "Anthill",
-        "meaning": "KarÄ±nca yuvasÄ±",
+        "meaning": "Karınca yuvası",
         "level": "C2",
         "id": 10596
     },
@@ -31279,7 +31279,7 @@
     },
     {
         "word": "Anthrax",
-        "meaning": "Åarbon",
+        "meaning": "Şarbon",
         "level": "C2",
         "id": 10598
     },
@@ -31321,7 +31321,7 @@
     },
     {
         "word": "Anvil",
-        "meaning": "Ã–rs",
+        "meaning": "Örs",
         "level": "C2",
         "id": 10606
     },
@@ -31333,7 +31333,7 @@
     },
     {
         "word": "Aperture",
-        "meaning": "AÃ§Ä±klÄ±k",
+        "meaning": "Açıklık",
         "level": "C2",
         "id": 10610
     },
@@ -31345,7 +31345,7 @@
     },
     {
         "word": "Apiary",
-        "meaning": "ArÄ± kovanlÄ±ÄŸÄ±",
+        "meaning": "Arı kovanlığı",
         "level": "C2",
         "id": 10613
     },
@@ -31357,7 +31357,7 @@
     },
     {
         "word": "Apostrophe",
-        "meaning": "Kesme iÅŸareti",
+        "meaning": "Kesme işareti",
         "level": "C2",
         "id": 10616
     },
@@ -31387,19 +31387,19 @@
     },
     {
         "word": "Applicant",
-        "meaning": "BaÅŸvuran",
+        "meaning": "Başvuran",
         "level": "B2",
         "id": 10625
     },
     {
         "word": "Apricot",
-        "meaning": "KayÄ±sÄ±",
+        "meaning": "Kayısı",
         "level": "B2",
         "id": 10627
     },
     {
         "word": "Apron",
-        "meaning": "Ã–nlÃ¼k",
+        "meaning": "Önlük",
         "level": "B2",
         "id": 10628
     },
@@ -31435,7 +31435,7 @@
     },
     {
         "word": "Arachnid",
-        "meaning": "Ã–rÃ¼mcegiller",
+        "meaning": "Örümcegiller",
         "level": "C2",
         "id": 10634
     },
@@ -31471,13 +31471,13 @@
     },
     {
         "word": "Archer",
-        "meaning": "OkÃ§u",
+        "meaning": "Okçu",
         "level": "C1",
         "id": 10640
     },
     {
         "word": "Archives",
-        "meaning": "ArÅŸivler",
+        "meaning": "Arşivler",
         "level": "C1",
         "id": 10643
     },
@@ -31495,7 +31495,7 @@
     },
     {
         "word": "Aries",
-        "meaning": "KoÃ§ burcu",
+        "meaning": "Koç burcu",
         "level": "C2",
         "id": 10649
     },
@@ -31531,13 +31531,13 @@
     },
     {
         "word": "Armament",
-        "meaning": "TeÃ§hizat",
+        "meaning": "Teçhizat",
         "level": "C2",
         "id": 10656
     },
     {
         "word": "Armor",
-        "meaning": "ZÄ±rh",
+        "meaning": "Zırh",
         "level": "C1",
         "id": 10658
     },
@@ -31549,7 +31549,7 @@
     },
     {
         "word": "Armpit",
-        "meaning": "Koltuk altÄ±",
+        "meaning": "Koltuk altı",
         "level": "B2",
         "id": 10660
     },
@@ -31585,7 +31585,7 @@
     },
     {
         "word": "Artillery",
-        "meaning": "TopÃ§u",
+        "meaning": "Topçu",
         "level": "C2",
         "id": 10675
     },
@@ -31603,19 +31603,19 @@
     },
     {
         "word": "Ascent",
-        "meaning": "TÄ±rmanÄ±ÅŸ",
+        "meaning": "Tırmanış",
         "level": "C2",
         "id": 10679
     },
     {
         "word": "Ashtray",
-        "meaning": "KÃ¼llÃ¼k",
+        "meaning": "Küllük",
         "level": "B2",
         "id": 10682
     },
     {
         "word": "Asparagus",
-        "meaning": "KuÅŸkonmaz",
+        "meaning": "Kuşkonmaz",
         "level": "C1",
         "id": 10683
     },
@@ -31627,7 +31627,7 @@
     },
     {
         "word": "Assassin",
-        "meaning": "SuikastÃ§Ä±",
+        "meaning": "Suikastçı",
         "level": "C2",
         "id": 10685
     },
@@ -31645,7 +31645,7 @@
     },
     {
         "word": "Zinc",
-        "meaning": "Ã‡inko",
+        "meaning": "Çinko",
         "level": "C1",
         "id": 10688
     },
@@ -31675,13 +31675,13 @@
     },
     {
         "word": "Wisteria",
-        "meaning": "Mor salkÄ±m",
+        "meaning": "Mor salkım",
         "level": "C2",
         "id": 10693
     },
     {
         "word": "Willow",
-        "meaning": "SÃ¶ÄŸÃ¼t",
+        "meaning": "Söğüt",
         "level": "C2",
         "id": 10694
     },
@@ -31693,7 +31693,7 @@
     },
     {
         "word": "Violet",
-        "meaning": "MenekÅŸe",
+        "meaning": "Menekşe",
         "level": "B2",
         "id": 10696
     },
@@ -31705,7 +31705,7 @@
     },
     {
         "word": "Trout",
-        "meaning": "AlabalÄ±k",
+        "meaning": "Alabalık",
         "level": "C2",
         "id": 10701
     },
@@ -31717,7 +31717,7 @@
     },
     {
         "word": "Toad",
-        "meaning": "Karlar kurbaÄŸasÄ±",
+        "meaning": "Karlar kurbağası",
         "level": "C1",
         "id": 10703
     },
@@ -31741,7 +31741,7 @@
     },
     {
         "word": "Tentacle",
-        "meaning": "DokunaÃ§",
+        "meaning": "Dokunaç",
         "level": "C2",
         "id": 10709
     },
@@ -31789,7 +31789,7 @@
     },
     {
         "word": "Robin",
-        "meaning": "ArdÄ±Ã§ kuÅŸu",
+        "meaning": "Ardıç kuşu",
         "level": "C2",
         "id": 10719
     },
@@ -31831,7 +31831,7 @@
     },
     {
         "word": "Puffin",
-        "meaning": "Deniz papaÄŸanÄ±",
+        "meaning": "Deniz papağanı",
         "level": "C2",
         "id": 10727
     },
@@ -31843,7 +31843,7 @@
     },
     {
         "word": "Primrose",
-        "meaning": "Ã‡uha Ã§iÃ§eÄŸi",
+        "meaning": "Çuha çiçeği",
         "level": "C2",
         "id": 10729
     },
@@ -31903,18 +31903,18 @@
     },
     {
         "word": "Pistachio",
-        "meaning": "Antep fÄ±stÄ±ÄŸÄ±",
+        "meaning": "Antep fıstığı",
         "level": "C1",
         "id": 10741
     },
     {
         "word": "accumulated",
-        "meaning": "birikmiÅŸ, toplanmÄ±ÅŸ",
+        "meaning": "birikmiş, toplanmış",
         "level": "B2"
     },
     {
         "word": "ached",
-        "meaning": "aÄŸrÄ±dÄ±, sÄ±zladÄ±",
+        "meaning": "ağrıdı, sızladı",
         "level": "B1"
     },
     {
@@ -31924,37 +31924,37 @@
     },
     {
         "word": "adonis",
-        "meaning": "Adonis (Ã§ok yakÄ±ÅŸÄ±klÄ± erkek)",
+        "meaning": "Adonis (çok yakışıklı erkek)",
         "level": "C1"
     },
     {
         "word": "adored",
-        "meaning": "Ã§ok sevdi, tapÄ±ndÄ±",
+        "meaning": "çok sevdi, tapındı",
         "level": "B2"
     },
     {
         "word": "ages",
-        "meaning": "Ã§aÄŸlar, uzun yÄ±llar",
+        "meaning": "çağlar, uzun yıllar",
         "level": "B1"
     },
     {
         "word": "ain't",
-        "meaning": "deÄŸil (argo)",
+        "meaning": "değil (argo)",
         "level": "B2"
     },
     {
         "word": "allusions",
-        "meaning": "anÄ±ÅŸtÄ±rmalar, imalar",
+        "meaning": "anıştırmalar, imalar",
         "level": "C2"
     },
     {
         "word": "amazement",
-        "meaning": "ÅŸaÅŸkÄ±nlÄ±k, hayret",
+        "meaning": "şaşkınlık, hayret",
         "level": "B2"
     },
     {
         "word": "amidst",
-        "meaning": "ortasÄ±nda, arasÄ±nda",
+        "meaning": "ortasında, arasında",
         "level": "B2"
     },
     {
@@ -31964,42 +31964,42 @@
     },
     {
         "word": "answered",
-        "meaning": "cevapladÄ±",
+        "meaning": "cevapladı",
         "level": "A2"
     },
     {
         "word": "appeared",
-        "meaning": "gÃ¶rÃ¼ndÃ¼",
+        "meaning": "göründü",
         "level": "A2"
     },
     {
         "word": "appears",
-        "meaning": "gÃ¶rÃ¼nÃ¼r",
+        "meaning": "görünür",
         "level": "A2"
     },
     {
         "word": "argued",
-        "meaning": "tartÄ±ÅŸtÄ±",
+        "meaning": "tartıştı",
         "level": "B1"
     },
     {
         "word": "arises",
-        "meaning": "ortaya Ã§Ä±kar",
+        "meaning": "ortaya çıkar",
         "level": "B2"
     },
     {
         "word": "arose",
-        "meaning": "ortaya Ã§Ä±ktÄ±",
+        "meaning": "ortaya çıktı",
         "level": "B2"
     },
     {
         "word": "arrives",
-        "meaning": "varÄ±r, ulaÅŸÄ±r",
+        "meaning": "varır, ulaşır",
         "level": "A2"
     },
     {
         "word": "artists",
-        "meaning": "sanatÃ§Ä±lar",
+        "meaning": "sanatçılar",
         "level": "A2"
     },
     {
@@ -32014,7 +32014,7 @@
     },
     {
         "word": "audacity",
-        "meaning": "kÃ¼stahlÄ±k, cÃ¼ret",
+        "meaning": "küstahlık, cüret",
         "level": "C1"
     },
     {
@@ -32024,7 +32024,7 @@
     },
     {
         "word": "awhile",
-        "meaning": "bir sÃ¼re",
+        "meaning": "bir süre",
         "level": "Old"
     },
     {
@@ -32034,17 +32034,17 @@
     },
     {
         "word": "barracks",
-        "meaning": "kÄ±ÅŸla",
+        "meaning": "kışla",
         "level": "B2"
     },
     {
         "word": "bearing",
-        "meaning": "taÅŸÄ±yan, duruÅŸ",
+        "meaning": "taşıyan, duruş",
         "level": "B2"
     },
     {
         "word": "beating",
-        "meaning": "dÃ¶vme, kalp atÄ±ÅŸÄ±",
+        "meaning": "dövme, kalp atışı",
         "level": "B1"
     },
     {
@@ -32054,12 +32054,12 @@
     },
     {
         "word": "becoming",
-        "meaning": "oluyor, yakÄ±ÅŸan",
+        "meaning": "oluyor, yakışan",
         "level": "B1"
     },
     {
         "word": "began",
-        "meaning": "baÅŸladÄ±",
+        "meaning": "başladı",
         "level": "A2"
     },
     {
@@ -32069,12 +32069,12 @@
     },
     {
         "word": "begins",
-        "meaning": "baÅŸlar",
+        "meaning": "başlar",
         "level": "A1"
     },
     {
         "word": "believed",
-        "meaning": "inandÄ±",
+        "meaning": "inandı",
         "level": "A2"
     },
     {
@@ -32089,22 +32089,22 @@
     },
     {
         "word": "birds",
-        "meaning": "kuÅŸlar",
+        "meaning": "kuşlar",
         "level": "A1"
     },
     {
         "word": "blandly",
-        "meaning": "yumuÅŸakÃ§a, sakince",
+        "meaning": "yumuşakça, sakince",
         "level": "C1"
     },
     {
         "word": "blessed",
-        "meaning": "kutsadÄ±",
+        "meaning": "kutsadı",
         "level": "B1"
     },
     {
         "word": "blinking",
-        "meaning": "gÃ¶z kÄ±rpma",
+        "meaning": "göz kırpma",
         "level": "B1"
     },
     {
@@ -32114,12 +32114,12 @@
     },
     {
         "word": "bloody",
-        "meaning": "kanlÄ±, lanet (argo)",
+        "meaning": "kanlı, lanet (argo)",
         "level": "B1"
     },
     {
         "word": "blossoms",
-        "meaning": "Ã§iÃ§ekler (aÄŸaÃ§)",
+        "meaning": "çiçekler (ağaç)",
         "level": "B1"
     },
     {
@@ -32129,17 +32129,17 @@
     },
     {
         "word": "bosom",
-        "meaning": "baÄŸÄ±r, gÃ¶ÄŸÃ¼s",
+        "meaning": "bağır, göğüs",
         "level": "C1"
     },
     {
         "word": "bought",
-        "meaning": "satÄ±n aldÄ±",
+        "meaning": "satın aldı",
         "level": "A2"
     },
     {
         "word": "boys",
-        "meaning": "erkek Ã§ocuklar",
+        "meaning": "erkek çocuklar",
         "level": "A1"
     },
     {
@@ -32149,7 +32149,7 @@
     },
     {
         "word": "bribe",
-        "meaning": "rÃ¼ÅŸvet",
+        "meaning": "rüşvet",
         "level": "B2"
     },
     {
@@ -32159,12 +32159,12 @@
     },
     {
         "word": "briskly",
-        "meaning": "canlÄ± bir ÅŸekilde, Ã§abucak",
+        "meaning": "canlı bir şekilde, çabucak",
         "level": "B2"
     },
     {
         "word": "broke",
-        "meaning": "kÄ±rdÄ±, bozuldu",
+        "meaning": "kırdı, bozuldu",
         "level": "A2"
     },
     {
@@ -32179,7 +32179,7 @@
     },
     {
         "word": "brows",
-        "meaning": "kaÅŸlar, alÄ±n",
+        "meaning": "kaşlar, alın",
         "level": "B1"
     },
     {
@@ -32189,7 +32189,7 @@
     },
     {
         "word": "burden",
-        "meaning": "yÃ¼k, sorumluluk",
+        "meaning": "yük, sorumluluk",
         "level": "B2"
     },
     {
@@ -32199,17 +32199,17 @@
     },
     {
         "word": "called",
-        "meaning": "aradÄ±, isimlendirdi",
+        "meaning": "aradı, isimlendirdi",
         "level": "A1"
     },
     {
         "word": "calls",
-        "meaning": "arar, Ã§aÄŸÄ±rÄ±r",
+        "meaning": "arar, çağırır",
         "level": "A1"
     },
     {
         "word": "calmly",
-        "meaning": "sakin bir ÅŸekilde",
+        "meaning": "sakin bir şekilde",
         "level": "B1"
     },
     {
@@ -32224,7 +32224,7 @@
     },
     {
         "word": "captured",
-        "meaning": "yakaladÄ±, ele geÃ§irdi",
+        "meaning": "yakaladı, ele geçirdi",
         "level": "B2"
     },
     {
@@ -32269,7 +32269,7 @@
     },
     {
         "word": "changed",
-        "meaning": "deÄŸiÅŸti",
+        "meaning": "değişti",
         "level": "A1"
     },
     {
@@ -32284,7 +32284,7 @@
     },
     {
         "word": "charming",
-        "meaning": "cazibeli, bÃ¼yÃ¼leyici",
+        "meaning": "cazibeli, büyüleyici",
         "level": "B1"
     },
     {
@@ -32299,17 +32299,17 @@
     },
     {
         "word": "chew",
-        "meaning": "Ã§iÄŸnemek",
+        "meaning": "çiğnemek",
         "level": "B1"
     },
     {
         "word": "chews",
-        "meaning": "Ã§iÄŸner",
+        "meaning": "çiğner",
         "level": "B1"
     },
     {
         "word": "chuckled",
-        "meaning": "kÄ±s kÄ±s gÃ¼ldÃ¼",
+        "meaning": "kıs kıs güldü",
         "level": "B2"
     },
     {
@@ -32319,27 +32319,27 @@
     },
     {
         "word": "clearing",
-        "meaning": "temizleme, aÃ§Ä±klÄ±k alan",
+        "meaning": "temizleme, açıklık alan",
         "level": "B1"
     },
     {
         "word": "cleverly",
-        "meaning": "akÄ±llÄ±ca",
+        "meaning": "akıllıca",
         "level": "B1"
     },
     {
         "word": "closes",
-        "meaning": "kapanÄ±r",
+        "meaning": "kapanır",
         "level": "A1"
     },
     {
         "word": "coal-black",
-        "meaning": "kÃ¶mÃ¼r karasÄ±",
+        "meaning": "kömür karası",
         "level": "B2"
     },
     {
         "word": "coarsely",
-        "meaning": "kaba bir ÅŸekilde",
+        "meaning": "kaba bir şekilde",
         "level": "C1"
     },
     {
@@ -32349,7 +32349,7 @@
     },
     {
         "word": "coldly",
-        "meaning": "soÄŸukÃ§a",
+        "meaning": "soğukça",
         "level": "B1"
     },
     {
@@ -32364,12 +32364,12 @@
     },
     {
         "word": "complexity",
-        "meaning": "karmaÅŸÄ±klÄ±k",
+        "meaning": "karmaşıklık",
         "level": "B2"
     },
     {
         "word": "comprehended",
-        "meaning": "kavradÄ±, anladÄ±",
+        "meaning": "kavradı, anladı",
         "level": "C1"
     },
     {
@@ -32379,7 +32379,7 @@
     },
     {
         "word": "conceived",
-        "meaning": "tasarladÄ±, kafasÄ±na koydu",
+        "meaning": "tasarladı, kafasına koydu",
         "level": "C1"
     },
     {
@@ -32394,27 +32394,27 @@
     },
     {
         "word": "consciousness",
-        "meaning": "bilinÃ§",
+        "meaning": "bilinç",
         "level": "B2"
     },
     {
         "word": "consent",
-        "meaning": "rÄ±za, onay",
+        "meaning": "rıza, onay",
         "level": "B2"
     },
     {
         "word": "considered",
-        "meaning": "dÃ¼ÅŸÃ¼ndÃ¼, hesaba kattÄ±",
+        "meaning": "düşündü, hesaba kattı",
         "level": "A2"
     },
     {
         "word": "consists",
-        "meaning": "-den oluÅŸur",
+        "meaning": "-den oluşur",
         "level": "B1"
     },
     {
         "word": "contemplated",
-        "meaning": "dÃ¼ÅŸÃ¼nÃ¼p taÅŸÄ±ndÄ±",
+        "meaning": "düşünüp taşındı",
         "level": "C1"
     },
     {
@@ -32424,7 +32424,7 @@
     },
     {
         "word": "contradict",
-        "meaning": "Ã§eliÅŸmek, itiraz etmek",
+        "meaning": "çelişmek, itiraz etmek",
         "level": "C1"
     },
     {
@@ -32434,7 +32434,7 @@
     },
     {
         "word": "convinced",
-        "meaning": "ikna olmuÅŸ",
+        "meaning": "ikna olmuş",
         "level": "B1"
     },
     {
@@ -32444,37 +32444,37 @@
     },
     {
         "word": "corrupt",
-        "meaning": "yozlaÅŸmÄ±ÅŸ",
+        "meaning": "yozlaşmış",
         "level": "B2"
     },
     {
         "word": "counted",
-        "meaning": "saydÄ±",
+        "meaning": "saydı",
         "level": "A2"
     },
     {
         "word": "covet",
-        "meaning": "imrenmek, gÃ¶z dikmek",
+        "meaning": "imrenmek, göz dikmek",
         "level": "C2"
     },
     {
         "word": "crammed",
-        "meaning": "tÄ±kÄ±ÅŸtÄ±rdÄ±",
+        "meaning": "tıkıştırdı",
         "level": "B2"
     },
     {
         "word": "cried",
-        "meaning": "aÄŸladÄ±, baÄŸÄ±rdÄ±",
+        "meaning": "ağladı, bağırdı",
         "level": "A2"
     },
     {
         "word": "crossed",
-        "meaning": "karÅŸÄ±ya geÃ§ti, Ã§apraz",
+        "meaning": "karşıya geçti, çapraz",
         "level": "A2"
     },
     {
         "word": "crosses",
-        "meaning": "haÃ§lar, geÃ§iÅŸler",
+        "meaning": "haçlar, geçişler",
         "level": "B1"
     },
     {
@@ -32484,7 +32484,7 @@
     },
     {
         "word": "crying",
-        "meaning": "aÄŸlama",
+        "meaning": "ağlama",
         "level": "A2"
     },
     {
@@ -32494,7 +32494,7 @@
     },
     {
         "word": "curled",
-        "meaning": "kÄ±vrÄ±ldÄ±",
+        "meaning": "kıvrıldı",
         "level": "B1"
     },
     {
@@ -32509,17 +32509,17 @@
     },
     {
         "word": "darkened",
-        "meaning": "karardÄ±",
+        "meaning": "karardı",
         "level": "B1"
     },
     {
         "word": "days",
-        "meaning": "gÃ¼nler",
+        "meaning": "günler",
         "level": "A1"
     },
     {
         "word": "dearly",
-        "meaning": "iÃ§tenlikle, pahalÄ±ya",
+        "meaning": "içtenlikle, pahalıya",
         "level": "B2"
     },
     {
@@ -32529,17 +32529,17 @@
     },
     {
         "word": "deeds",
-        "meaning": "iÅŸler, eylemler",
+        "meaning": "işler, eylemler",
         "level": "C1"
     },
     {
         "word": "deepening",
-        "meaning": "derinleÅŸen",
+        "meaning": "derinleşen",
         "level": "C1"
     },
     {
         "word": "defines",
-        "meaning": "tanÄ±mlar",
+        "meaning": "tanımlar",
         "level": "B1"
     },
     {
@@ -32554,22 +32554,22 @@
     },
     {
         "word": "delight",
-        "meaning": "sevinÃ§, zevk",
+        "meaning": "sevinç, zevk",
         "level": "B1"
     },
     {
         "word": "deposited",
-        "meaning": "koydu, yatÄ±rdÄ±",
+        "meaning": "koydu, yatırdı",
         "level": "C1"
     },
     {
         "word": "derision",
-        "meaning": "alay, kÃ¼Ã§Ã¼mseme",
+        "meaning": "alay, küçümseme",
         "level": "C2"
     },
     {
         "word": "described",
-        "meaning": "tanÄ±mladÄ±",
+        "meaning": "tanımladı",
         "level": "A2"
     },
     {
@@ -32594,7 +32594,7 @@
     },
     {
         "word": "destruction",
-        "meaning": "yÄ±kÄ±m",
+        "meaning": "yıkım",
         "level": "B2"
     },
     {
@@ -32604,22 +32604,22 @@
     },
     {
         "word": "didn't",
-        "meaning": "yapmadÄ±",
+        "meaning": "yapmadı",
         "level": "A1"
     },
     {
         "word": "dipped",
-        "meaning": "daldÄ±rdÄ±",
+        "meaning": "daldırdı",
         "level": "B1"
     },
     {
         "word": "discovered",
-        "meaning": "keÅŸfetti",
+        "meaning": "keşfetti",
         "level": "B1"
     },
     {
         "word": "dismembered",
-        "meaning": "parÃ§alara ayÄ±rdÄ±",
+        "meaning": "parçalara ayırdı",
         "level": "C2"
     },
     {
@@ -32629,12 +32629,12 @@
     },
     {
         "word": "dissemble",
-        "meaning": "gizlemek, ikiyÃ¼zlÃ¼lÃ¼k yapmak",
+        "meaning": "gizlemek, ikiyüzlülük yapmak",
         "level": "C2"
     },
     {
         "word": "dissimulation",
-        "meaning": "iki yÃ¼zlÃ¼lÃ¼k, gizleme",
+        "meaning": "iki yüzlülük, gizleme",
         "level": "C2"
     },
     {
@@ -32644,7 +32644,7 @@
     },
     {
         "word": "distracted",
-        "meaning": "dikkatini daÄŸÄ±ttÄ±",
+        "meaning": "dikkatini dağıttı",
         "level": "B1"
     },
     {
@@ -32669,52 +32669,52 @@
     },
     {
         "word": "done",
-        "meaning": "yapÄ±lmÄ±ÅŸ, bitmiÅŸ",
+        "meaning": "yapılmış, bitmiş",
         "level": "A1"
     },
     {
         "word": "doorway",
-        "meaning": "kapÄ± aralÄ±ÄŸÄ±",
+        "meaning": "kapı aralığı",
         "level": "B1"
     },
     {
         "word": "dragged",
-        "meaning": "sÃ¼rÃ¼kledi",
+        "meaning": "sürükledi",
         "level": "B1"
     },
     {
         "word": "dreadful",
-        "meaning": "korkunÃ§",
+        "meaning": "korkunç",
         "level": "B2"
     },
     {
         "word": "dreadfully",
-        "meaning": "korkunÃ§ bir ÅŸekilde",
+        "meaning": "korkunç bir şekilde",
         "level": "B2"
     },
     {
         "word": "drew",
-        "meaning": "Ã§izdi, Ã§ekti",
+        "meaning": "çizdi, çekti",
         "level": "A2"
     },
     {
         "word": "droned",
-        "meaning": "vÄ±zÄ±ldadÄ±",
+        "meaning": "vızıldadı",
         "level": "C1"
     },
     {
         "word": "drove",
-        "meaning": "sÃ¼rdÃ¼",
+        "meaning": "sürdü",
         "level": "A2"
     },
     {
         "word": "dulled",
-        "meaning": "kÃ¶relmiÅŸ, donuklaÅŸmÄ±ÅŸ",
+        "meaning": "körelmiş, donuklaşmış",
         "level": "C1"
     },
     {
         "word": "dying",
-        "meaning": "Ã¶lmekte olan",
+        "meaning": "ölmekte olan",
         "level": "B1"
     },
     {
@@ -32744,17 +32744,17 @@
     },
     {
         "word": "elegant",
-        "meaning": "zarif, ÅŸÄ±k",
+        "meaning": "zarif, şık",
         "level": "B1"
     },
     {
         "word": "elevated",
-        "meaning": "yÃ¼kseltilmiÅŸ, yÃ¼ce",
+        "meaning": "yükseltilmiş, yüce",
         "level": "C1"
     },
     {
         "word": "embodiment",
-        "meaning": "somutlaÅŸmÄ±ÅŸ hali, simge",
+        "meaning": "somutlaşmış hali, simge",
         "level": "C2"
     },
     {
@@ -32774,7 +32774,7 @@
     },
     {
         "word": "envied",
-        "meaning": "kÄ±skandÄ±, gÄ±pta etti",
+        "meaning": "kıskandı, gıpta etti",
         "level": "B2"
     },
     {
@@ -32784,12 +32784,12 @@
     },
     {
         "word": "eras",
-        "meaning": "Ã§aÄŸlar, dÃ¶nemler",
+        "meaning": "çağlar, dönemler",
         "level": "B2"
     },
     {
         "word": "ere",
-        "meaning": "Ã¶nce (eski)",
+        "meaning": "önce (eski)",
         "level": "Old"
     },
     {
@@ -32814,7 +32814,7 @@
     },
     {
         "word": "excerpt",
-        "meaning": "alÄ±ntÄ±",
+        "meaning": "alıntı",
         "level": "B2"
     },
     {
@@ -32824,52 +32824,52 @@
     },
     {
         "word": "exploration",
-        "meaning": "keÅŸif",
+        "meaning": "keşif",
         "level": "B1"
     },
     {
         "word": "eyebrows",
-        "meaning": "kaÅŸlar",
+        "meaning": "kaşlar",
         "level": "B1"
     },
     {
         "word": "eyes",
-        "meaning": "gÃ¶zler",
+        "meaning": "gözler",
         "level": "A1"
     },
     {
         "word": "faced",
-        "meaning": "yÃ¼zleÅŸti, dÃ¶nÃ¼k",
+        "meaning": "yüzleşti, dönük",
         "level": "B1"
     },
     {
         "word": "fancied",
-        "meaning": "hayal etti, sandÄ±",
+        "meaning": "hayal etti, sandı",
         "level": "C1"
     },
     {
         "word": "fanciful",
-        "meaning": "sÃ¼slÃ¼, hayali",
+        "meaning": "süslü, hayali",
         "level": "C2"
     },
     {
         "word": "fastening",
-        "meaning": "tutturma, baÄŸlama",
+        "meaning": "tutturma, bağlama",
         "level": "B2"
     },
     {
         "word": "fatigues",
-        "meaning": "yorgunluklar (askeri iÅŸ)",
+        "meaning": "yorgunluklar (askeri iş)",
         "level": "C2"
     },
     {
         "word": "fearful",
-        "meaning": "korkunÃ§, korkak",
+        "meaning": "korkunç, korkak",
         "level": "B1"
     },
     {
         "word": "features",
-        "meaning": "Ã¶zellikler, yÃ¼z hatlarÄ±",
+        "meaning": "özellikler, yüz hatları",
         "level": "B1"
     },
     {
@@ -32884,7 +32884,7 @@
     },
     {
         "word": "fell",
-        "meaning": "dÃ¼ÅŸtÃ¼",
+        "meaning": "düştü",
         "level": "A2"
     },
     {
@@ -32899,12 +32899,12 @@
     },
     {
         "word": "filled",
-        "meaning": "dolu, doldurulmuÅŸ",
+        "meaning": "dolu, doldurulmuş",
         "level": "A2"
     },
     {
         "word": "finely",
-        "meaning": "ince bir ÅŸekilde, gÃ¼zelce",
+        "meaning": "ince bir şekilde, güzelce",
         "level": "B2"
     },
     {
@@ -32914,7 +32914,7 @@
     },
     {
         "word": "finical",
-        "meaning": "titiz, sÃ¼slÃ¼",
+        "meaning": "titiz, süslü",
         "level": "C2"
     },
     {
@@ -32924,32 +32924,32 @@
     },
     {
         "word": "flame-like",
-        "meaning": "ateÅŸ gibi",
+        "meaning": "ateş gibi",
         "level": "B2"
     },
     {
         "word": "flitted",
-        "meaning": "uÃ§uÅŸtu, sÃ¼zÃ¼ldÃ¼",
+        "meaning": "uçuştu, süzüldü",
         "level": "C2"
     },
     {
         "word": "flooring",
-        "meaning": "dÃ¶ÅŸeme",
+        "meaning": "döşeme",
         "level": "B1"
     },
     {
         "word": "fluently",
-        "meaning": "akÄ±cÄ± bir ÅŸekilde",
+        "meaning": "akıcı bir şekilde",
         "level": "B1"
     },
     {
         "word": "flung",
-        "meaning": "fÄ±rlattÄ±",
+        "meaning": "fırlattı",
         "level": "B2"
     },
     {
         "word": "folds",
-        "meaning": "kÄ±vrÄ±mlar",
+        "meaning": "kıvrımlar",
         "level": "B1"
     },
     {
@@ -32959,32 +32959,32 @@
     },
     {
         "word": "foresight",
-        "meaning": "Ã¶ngÃ¶rÃ¼",
+        "meaning": "öngörü",
         "level": "C1"
     },
     {
         "word": "forth",
-        "meaning": "ileri, dÄ±ÅŸarÄ±",
+        "meaning": "ileri, dışarı",
         "level": "B2"
     },
     {
         "word": "frank",
-        "meaning": "dobra, iÃ§ten",
+        "meaning": "dobra, içten",
         "level": "B2"
     },
     {
         "word": "frankly",
-        "meaning": "aÃ§Ä±kÃ§asÄ±",
+        "meaning": "açıkçası",
         "level": "B1"
     },
     {
         "word": "friends",
-        "meaning": "arkadaÅŸlar",
+        "meaning": "arkadaşlar",
         "level": "A1"
     },
     {
         "word": "gaily",
-        "meaning": "neÅŸeyle",
+        "meaning": "neşeyle",
         "level": "C1"
     },
     {
@@ -33004,7 +33004,7 @@
     },
     {
         "word": "gay",
-        "meaning": "neÅŸeli (eski kullanÄ±m)",
+        "meaning": "neşeli (eski kullanım)",
         "level": "Old"
     },
     {
@@ -33019,12 +33019,12 @@
     },
     {
         "word": "gently",
-        "meaning": "nazikÃ§e",
+        "meaning": "nazikçe",
         "level": "B1"
     },
     {
         "word": "genuine",
-        "meaning": "hakiki, gerÃ§ek",
+        "meaning": "hakiki, gerçek",
         "level": "B2"
     },
     {
@@ -33044,27 +33044,27 @@
     },
     {
         "word": "girls",
-        "meaning": "kÄ±zlar",
+        "meaning": "kızlar",
         "level": "A1"
     },
     {
         "word": "given",
-        "meaning": "verilmiÅŸ",
+        "meaning": "verilmiş",
         "level": "A2"
     },
     {
         "word": "gleam",
-        "meaning": "parÄ±ltÄ±",
+        "meaning": "parıltı",
         "level": "C1"
     },
     {
         "word": "glistening",
-        "meaning": "parÄ±ldayan",
+        "meaning": "parıldayan",
         "level": "C1"
     },
     {
         "word": "gloomily",
-        "meaning": "kasvetli bir ÅŸekilde",
+        "meaning": "kasvetli bir şekilde",
         "level": "B2"
     },
     {
@@ -33074,17 +33074,17 @@
     },
     {
         "word": "gone",
-        "meaning": "gitmiÅŸ",
+        "meaning": "gitmiş",
         "level": "A2"
     },
     {
         "word": "got",
-        "meaning": "aldÄ±, sahip oldu",
+        "meaning": "aldı, sahip oldu",
         "level": "A1"
     },
     {
         "word": "gown",
-        "meaning": "sabahlÄ±k, elbise",
+        "meaning": "sabahlık, elbise",
         "level": "B1"
     },
     {
@@ -33099,12 +33099,12 @@
     },
     {
         "word": "greatest",
-        "meaning": "en bÃ¼yÃ¼k",
+        "meaning": "en büyük",
         "level": "A2"
     },
     {
         "word": "grew",
-        "meaning": "bÃ¼yÃ¼dÃ¼, oldu",
+        "meaning": "büyüdü, oldu",
         "level": "B1"
     },
     {
@@ -33124,37 +33124,37 @@
     },
     {
         "word": "growled",
-        "meaning": "hÄ±rladÄ±",
+        "meaning": "hırladı",
         "level": "B2"
     },
     {
         "word": "grows",
-        "meaning": "bÃ¼yÃ¼r",
+        "meaning": "büyür",
         "level": "A1"
     },
     {
         "word": "guilt",
-        "meaning": "suÃ§luluk",
+        "meaning": "suçluluk",
         "level": "B2"
     },
     {
         "word": "gunrest",
-        "meaning": "silah dayanaÄŸÄ±",
+        "meaning": "silah dayanağı",
         "level": "C2"
     },
     {
         "word": "gurgling",
-        "meaning": "Ã§aÄŸlayan, fokurdayan",
+        "meaning": "çağlayan, fokurdayan",
         "level": "C1"
     },
     {
         "word": "haircut",
-        "meaning": "saÃ§ kesimi",
+        "meaning": "saç kesimi",
         "level": "A2"
     },
     {
         "word": "halfway",
-        "meaning": "yarÄ± yolda",
+        "meaning": "yarı yolda",
         "level": "B1"
     },
     {
@@ -33169,7 +33169,7 @@
     },
     {
         "word": "hasn't",
-        "meaning": "yapmadÄ± (has not)",
+        "meaning": "yapmadı (has not)",
         "level": "A1"
     },
     {
@@ -33184,12 +33184,12 @@
     },
     {
         "word": "haunted",
-        "meaning": "perili, aklÄ±ndan Ã§Ä±kmayan",
+        "meaning": "perili, aklından çıkmayan",
         "level": "B2"
     },
     {
         "word": "healthily",
-        "meaning": "saÄŸlÄ±klÄ± bir ÅŸekilde",
+        "meaning": "sağlıklı bir şekilde",
         "level": "B1"
     },
     {
@@ -33204,12 +33204,12 @@
     },
     {
         "word": "heartbeat",
-        "meaning": "kalp atÄ±ÅŸÄ±",
+        "meaning": "kalp atışı",
         "level": "B1"
     },
     {
         "word": "hedonism",
-        "meaning": "hazcÄ±lÄ±k",
+        "meaning": "hazcılık",
         "level": "C2"
     },
     {
@@ -33224,7 +33224,7 @@
     },
     {
         "word": "helps",
-        "meaning": "yardÄ±m eder",
+        "meaning": "yardım eder",
         "level": "A1"
     },
     {
@@ -33239,17 +33239,17 @@
     },
     {
         "word": "hid",
-        "meaning": "sakladÄ±",
+        "meaning": "sakladı",
         "level": "B1"
     },
     {
         "word": "hideous",
-        "meaning": "iÄŸrenÃ§, korkunÃ§",
+        "meaning": "iğrenç, korkunç",
         "level": "B2"
     },
     {
         "word": "hoarsened",
-        "meaning": "kÄ±sÄ±lmÄ±ÅŸ (ses)",
+        "meaning": "kısılmış (ses)",
         "level": "C2"
     },
     {
@@ -33259,7 +33259,7 @@
     },
     {
         "word": "honey-sweet",
-        "meaning": "bal gibi tatlÄ±",
+        "meaning": "bal gibi tatlı",
         "level": "B2"
     },
     {
@@ -33289,32 +33289,32 @@
     },
     {
         "word": "hunters",
-        "meaning": "avcÄ±lar",
+        "meaning": "avcılar",
         "level": "B1"
     },
     {
         "word": "hyperborean",
-        "meaning": "kuzeyli, Ã§ok soÄŸuk",
+        "meaning": "kuzeyli, çok soğuk",
         "level": "C2"
     },
     {
         "word": "hypocritical",
-        "meaning": "ikiyÃ¼zlÃ¼",
+        "meaning": "ikiyüzlü",
         "level": "B2"
     },
     {
         "word": "i'll",
-        "meaning": "yapacaÄŸÄ±m",
+        "meaning": "yapacağım",
         "level": "A1"
     },
     {
         "word": "i'm",
-        "meaning": "ben ...'Ä±m",
+        "meaning": "ben ...'ım",
         "level": "A1"
     },
     {
         "word": "idle",
-        "meaning": "aylak, boÅŸ",
+        "meaning": "aylak, boş",
         "level": "B1"
     },
     {
@@ -33334,22 +33334,22 @@
     },
     {
         "word": "impaled",
-        "meaning": "saplanmÄ±ÅŸ",
+        "meaning": "saplanmış",
         "level": "C1"
     },
     {
         "word": "increased",
-        "meaning": "arttÄ±",
+        "meaning": "arttı",
         "level": "B1"
     },
     {
         "word": "indigestion",
-        "meaning": "hazÄ±msÄ±zlÄ±k",
+        "meaning": "hazımsızlık",
         "level": "B2"
     },
     {
         "word": "innumerable",
-        "meaning": "sayÄ±sÄ±z, hadsiz hesapsÄ±z",
+        "meaning": "sayısız, hadsiz hesapsız",
         "level": "C1"
     },
     {
@@ -33359,27 +33359,27 @@
     },
     {
         "word": "intoned",
-        "meaning": "aÄŸÄ±r aÄŸÄ±r sÃ¶yledi",
+        "meaning": "ağır ağır söyledi",
         "level": "C2"
     },
     {
         "word": "intricate",
-        "meaning": "karmaÅŸÄ±k, girift",
+        "meaning": "karmaşık, girift",
         "level": "C1"
     },
     {
         "word": "introduced",
-        "meaning": "tanÄ±ttÄ±",
+        "meaning": "tanıttı",
         "level": "A2"
     },
     {
         "word": "introducing",
-        "meaning": "tanÄ±tma",
+        "meaning": "tanıtma",
         "level": "A2"
     },
     {
         "word": "isn't",
-        "meaning": "deÄŸil",
+        "meaning": "değil",
         "level": "A1"
     },
     {
@@ -33389,17 +33389,17 @@
     },
     {
         "word": "items",
-        "meaning": "eÅŸyalar, maddeler",
+        "meaning": "eşyalar, maddeler",
         "level": "A2"
     },
     {
         "word": "ivory",
-        "meaning": "fildiÅŸi",
+        "meaning": "fildişi",
         "level": "C1"
     },
     {
         "word": "jade-faced",
-        "meaning": "yeÅŸim yÃ¼zlÃ¼ (soluk)",
+        "meaning": "yeşim yüzlü (soluk)",
         "level": "C2"
     },
     {
@@ -33409,7 +33409,7 @@
     },
     {
         "word": "jest",
-        "meaning": "ÅŸaka, alay",
+        "meaning": "şaka, alay",
         "level": "C1"
     },
     {
@@ -33419,22 +33419,22 @@
     },
     {
         "word": "jowl",
-        "meaning": "gÄ±dÄ±, Ã§ene altÄ±",
+        "meaning": "gıdı, çene altı",
         "level": "C2"
     },
     {
         "word": "jug",
-        "meaning": "sÃ¼rahi",
+        "meaning": "sürahi",
         "level": "B1"
     },
     {
         "word": "kept",
-        "meaning": "tuttu, sakladÄ±",
+        "meaning": "tuttu, sakladı",
         "level": "A2"
     },
     {
         "word": "killed",
-        "meaning": "Ã¶ldÃ¼rdÃ¼",
+        "meaning": "öldürdü",
         "level": "A2"
     },
     {
@@ -33444,22 +33444,22 @@
     },
     {
         "word": "kinds",
-        "meaning": "tÃ¼rler",
+        "meaning": "türler",
         "level": "A2"
     },
     {
         "word": "kinswoman",
-        "meaning": "kadÄ±n akraba",
+        "meaning": "kadın akraba",
         "level": "C2"
     },
     {
         "word": "kite",
-        "meaning": "uÃ§urtma",
+        "meaning": "uçurtma",
         "level": "A2"
     },
     {
         "word": "kneel",
-        "meaning": "diz Ã§Ã¶kmek",
+        "meaning": "diz çökmek",
         "level": "B1"
     },
     {
@@ -33469,7 +33469,7 @@
     },
     {
         "word": "knelt",
-        "meaning": "diz Ã§Ã¶ktÃ¼",
+        "meaning": "diz çöktü",
         "level": "B1"
     },
     {
@@ -33479,22 +33479,22 @@
     },
     {
         "word": "knocking",
-        "meaning": "vurma, tÄ±kÄ±rtÄ±",
+        "meaning": "vurma, tıkırtı",
         "level": "B1"
     },
     {
         "word": "labors",
-        "meaning": "emekler, iÅŸler",
+        "meaning": "emekler, işler",
         "level": "C1"
     },
     {
         "word": "laburnum",
-        "meaning": "sarÄ± salkÄ±m aÄŸacÄ±",
+        "meaning": "sarı salkım ağacı",
         "level": "C2"
     },
     {
         "word": "laid",
-        "meaning": "koydu, yatÄ±rdÄ±",
+        "meaning": "koydu, yatırdı",
         "level": "B1"
     },
     {
@@ -33504,62 +33504,62 @@
     },
     {
         "word": "latch",
-        "meaning": "kapÄ± mandalÄ±",
+        "meaning": "kapı mandalı",
         "level": "B2"
     },
     {
         "word": "lather",
-        "meaning": "kÃ¶pÃ¼k (sabun)",
+        "meaning": "köpük (sabun)",
         "level": "C1"
     },
     {
         "word": "lathered",
-        "meaning": "kÃ¶pÃ¼rttÃ¼",
+        "meaning": "köpürttü",
         "level": "C1"
     },
     {
         "word": "laughed",
-        "meaning": "gÃ¼ldÃ¼",
+        "meaning": "güldü",
         "level": "A1"
     },
     {
         "word": "laughing",
-        "meaning": "gÃ¼lme",
+        "meaning": "gülme",
         "level": "A1"
     },
     {
         "word": "laughs",
-        "meaning": "gÃ¼ler",
+        "meaning": "güler",
         "level": "A1"
     },
     {
         "word": "leads",
-        "meaning": "yol aÃ§ar, yÃ¶netir",
+        "meaning": "yol açar, yönetir",
         "level": "B1"
     },
     {
         "word": "leaned",
-        "meaning": "yaslandÄ±, eÄŸildi",
+        "meaning": "yaslandı, eğildi",
         "level": "B2"
     },
     {
         "word": "leaning",
-        "meaning": "yaslanma, eÄŸilme",
+        "meaning": "yaslanma, eğilme",
         "level": "B2"
     },
     {
         "word": "leaped",
-        "meaning": "sÄ±Ã§radÄ±",
+        "meaning": "sıçradı",
         "level": "B2"
     },
     {
         "word": "learned",
-        "meaning": "Ã¶ÄŸrendi",
+        "meaning": "öğrendi",
         "level": "A1"
     },
     {
         "word": "led",
-        "meaning": "yol gÃ¶sterdi",
+        "meaning": "yol gösterdi",
         "level": "B1"
     },
     {
@@ -33569,7 +33569,7 @@
     },
     {
         "word": "lemme",
-        "meaning": "bÄ±rak (let me)",
+        "meaning": "bırak (let me)",
         "level": "A2"
     },
     {
@@ -33579,7 +33579,7 @@
     },
     {
         "word": "lifting",
-        "meaning": "kaldÄ±rma",
+        "meaning": "kaldırma",
         "level": "B1"
     },
     {
@@ -33589,7 +33589,7 @@
     },
     {
         "word": "lines",
-        "meaning": "satÄ±rlar, Ã§izgiler",
+        "meaning": "satırlar, çizgiler",
         "level": "A1"
     },
     {
@@ -33604,7 +33604,7 @@
     },
     {
         "word": "lived",
-        "meaning": "yaÅŸadÄ±",
+        "meaning": "yaşadı",
         "level": "A1"
     },
     {
@@ -33624,17 +33624,17 @@
     },
     {
         "word": "looked",
-        "meaning": "baktÄ±, gÃ¶rÃ¼ndÃ¼",
+        "meaning": "baktı, göründü",
         "level": "A1"
     },
     {
         "word": "looks",
-        "meaning": "bakar, gÃ¶rÃ¼nÃ¼r",
+        "meaning": "bakar, görünür",
         "level": "A1"
     },
     {
         "word": "louder",
-        "meaning": "daha yÃ¼ksek sesli",
+        "meaning": "daha yüksek sesli",
         "level": "A2"
     },
     {
@@ -33644,22 +33644,22 @@
     },
     {
         "word": "lunged",
-        "meaning": "ileri atÄ±ldÄ±",
+        "meaning": "ileri atıldı",
         "level": "C1"
     },
     {
         "word": "lying",
-        "meaning": "uzanma, yalan sÃ¶yleme",
+        "meaning": "uzanma, yalan söyleme",
         "level": "B1"
     },
     {
         "word": "ma'am",
-        "meaning": "hanÄ±mefendi",
+        "meaning": "hanımefendi",
         "level": "A2"
     },
     {
         "word": "made",
-        "meaning": "yaptÄ±",
+        "meaning": "yaptı",
         "level": "A1"
     },
     {
@@ -33674,7 +33674,7 @@
     },
     {
         "word": "magi",
-        "meaning": "mÃ¼neccimler (bilge adamlar)",
+        "meaning": "müneccimler (bilge adamlar)",
         "level": "C2"
     },
     {
@@ -33694,7 +33694,7 @@
     },
     {
         "word": "man's",
-        "meaning": "adamÄ±n",
+        "meaning": "adamın",
         "level": "A1"
     },
     {
@@ -33714,12 +33714,12 @@
     },
     {
         "word": "messmates",
-        "meaning": "yemek arkadaÅŸlarÄ± (askeri/denizci)",
+        "meaning": "yemek arkadaşları (askeri/denizci)",
         "level": "C2"
     },
     {
         "word": "missus",
-        "meaning": "hanÄ±mefendi (halk aÄŸzÄ±)",
+        "meaning": "hanımefendi (halk ağzı)",
         "level": "B2"
     },
     {
@@ -33729,7 +33729,7 @@
     },
     {
         "word": "momentary",
-        "meaning": "anlÄ±k",
+        "meaning": "anlık",
         "level": "B2"
     },
     {
@@ -33744,22 +33744,22 @@
     },
     {
         "word": "mountains",
-        "meaning": "daÄŸlar",
+        "meaning": "dağlar",
         "level": "A1"
     },
     {
         "word": "mounted",
-        "meaning": "bindi, tÄ±rmandÄ±",
+        "meaning": "bindi, tırmandı",
         "level": "B2"
     },
     {
         "word": "moved",
-        "meaning": "hareket etti, taÅŸÄ±ndÄ±",
+        "meaning": "hareket etti, taşındı",
         "level": "A2"
     },
     {
         "word": "muffled",
-        "meaning": "boÄŸuk (ses)",
+        "meaning": "boğuk (ses)",
         "level": "C1"
     },
     {
@@ -33769,22 +33769,22 @@
     },
     {
         "word": "munched",
-        "meaning": "kÄ±tÄ±r kÄ±tÄ±r yedi",
+        "meaning": "kıtır kıtır yedi",
         "level": "C1"
     },
     {
         "word": "murmured",
-        "meaning": "mÄ±rÄ±ldandÄ±",
+        "meaning": "mırıldandı",
         "level": "B2"
     },
     {
         "word": "narrator's",
-        "meaning": "anlatÄ±cÄ±nÄ±n",
+        "meaning": "anlatıcının",
         "level": "B2"
     },
     {
         "word": "needed",
-        "meaning": "ihtiyacÄ± vardÄ±",
+        "meaning": "ihtiyacı vardı",
         "level": "A1"
     },
     {
@@ -33794,7 +33794,7 @@
     },
     {
         "word": "nicely",
-        "meaning": "gÃ¼zelce",
+        "meaning": "güzelce",
         "level": "A2"
     },
     {
@@ -33834,22 +33834,22 @@
     },
     {
         "word": "older",
-        "meaning": "daha yaÅŸlÄ±",
+        "meaning": "daha yaşlı",
         "level": "A1"
     },
     {
         "word": "omnipotence",
-        "meaning": "kadir-i mutlaklÄ±k (her ÅŸeye gÃ¼cÃ¼ yetme)",
+        "meaning": "kadir-i mutlaklık (her şeye gücü yetme)",
         "level": "C2"
     },
     {
         "word": "one's",
-        "meaning": "kiÅŸinin",
+        "meaning": "kişinin",
         "level": "B2"
     },
     {
         "word": "opened",
-        "meaning": "aÃ§tÄ±",
+        "meaning": "açtı",
         "level": "A1"
     },
     {
@@ -33859,12 +33859,12 @@
     },
     {
         "word": "opium-tainted",
-        "meaning": "afyon bulaÅŸmÄ±ÅŸ",
+        "meaning": "afyon bulaşmış",
         "level": "C2"
     },
     {
         "word": "oughtn't",
-        "meaning": "yapmamalÄ± (ought not)",
+        "meaning": "yapmamalı (ought not)",
         "level": "B1"
     },
     {
@@ -33884,12 +33884,12 @@
     },
     {
         "word": "paid",
-        "meaning": "Ã¶dedi",
+        "meaning": "ödedi",
         "level": "A2"
     },
     {
         "word": "painted",
-        "meaning": "boyalÄ±, boyanmÄ±ÅŸ",
+        "meaning": "boyalı, boyanmış",
         "level": "A2"
     },
     {
@@ -33899,7 +33899,7 @@
     },
     {
         "word": "pallid",
-        "meaning": "solgun, benzi atmÄ±ÅŸ",
+        "meaning": "solgun, benzi atmış",
         "level": "C2"
     },
     {
@@ -33909,7 +33909,7 @@
     },
     {
         "word": "passed",
-        "meaning": "geÃ§ti",
+        "meaning": "geçti",
         "level": "A2"
     },
     {
@@ -33919,7 +33919,7 @@
     },
     {
         "word": "paused",
-        "meaning": "durakladÄ±",
+        "meaning": "durakladı",
         "level": "B1"
     },
     {
@@ -33929,32 +33929,32 @@
     },
     {
         "word": "peeped",
-        "meaning": "gÃ¶zetledi",
+        "meaning": "gözetledi",
         "level": "C1"
     },
     {
         "word": "peered",
-        "meaning": "dikkatle baktÄ±",
+        "meaning": "dikkatle baktı",
         "level": "C1"
     },
     {
         "word": "perfume",
-        "meaning": "parfÃ¼m",
+        "meaning": "parfüm",
         "level": "A2"
     },
     {
         "word": "persian",
-        "meaning": "FarsÃ§a, Ä°ranlÄ±",
+        "meaning": "Farsça, İranlı",
         "level": "B1"
     },
     {
         "word": "petticoats",
-        "meaning": "iÃ§ etekler",
+        "meaning": "iç etekler",
         "level": "C1"
     },
     {
         "word": "philanthropy",
-        "meaning": "hayÄ±rseverlik",
+        "meaning": "hayırseverlik",
         "level": "C2"
     },
     {
@@ -33964,12 +33964,12 @@
     },
     {
         "word": "pink-flowering",
-        "meaning": "pembe Ã§iÃ§ek aÃ§an",
+        "meaning": "pembe çiçek açan",
         "level": "C1"
     },
     {
         "word": "placed",
-        "meaning": "yerleÅŸtirdi",
+        "meaning": "yerleştirdi",
         "level": "B1"
     },
     {
@@ -33979,7 +33979,7 @@
     },
     {
         "word": "planned",
-        "meaning": "planladÄ±",
+        "meaning": "planladı",
         "level": "A2"
     },
     {
@@ -33989,7 +33989,7 @@
     },
     {
         "word": "pleasantly",
-        "meaning": "hoÅŸ bir ÅŸekilde",
+        "meaning": "hoş bir şekilde",
         "level": "B1"
     },
     {
@@ -33999,7 +33999,7 @@
     },
     {
         "word": "pointed",
-        "meaning": "iÅŸaret etti",
+        "meaning": "işaret etti",
         "level": "B1"
     },
     {
@@ -34009,17 +34009,17 @@
     },
     {
         "word": "ponderous",
-        "meaning": "hantal, aÄŸÄ±r",
+        "meaning": "hantal, ağır",
         "level": "C2"
     },
     {
         "word": "possessions",
-        "meaning": "eÅŸyalar, varlÄ±klar",
+        "meaning": "eşyalar, varlıklar",
         "level": "B2"
     },
     {
         "word": "powers",
-        "meaning": "gÃ¼Ã§ler, yetkiler",
+        "meaning": "güçler, yetkiler",
         "level": "B1"
     },
     {
@@ -34029,32 +34029,32 @@
     },
     {
         "word": "precautions",
-        "meaning": "Ã¶nlemler",
+        "meaning": "önlemler",
         "level": "B2"
     },
     {
         "word": "precious",
-        "meaning": "deÄŸerli, kÄ±ymetli",
+        "meaning": "değerli, kıymetli",
         "level": "B1"
     },
     {
         "word": "prelate",
-        "meaning": "yÃ¼ksek rÃ¼tbeli din adamÄ±",
+        "meaning": "yüksek rütbeli din adamı",
         "level": "C2"
     },
     {
         "word": "presently",
-        "meaning": "ÅŸu anda, birazdan",
+        "meaning": "şu anda, birazdan",
         "level": "B2"
     },
     {
         "word": "pretended",
-        "meaning": "numara yaptÄ±",
+        "meaning": "numara yaptı",
         "level": "B1"
     },
     {
         "word": "printed",
-        "meaning": "basÄ±lmÄ±ÅŸ",
+        "meaning": "basılmış",
         "level": "B1"
     },
     {
@@ -34064,32 +34064,32 @@
     },
     {
         "word": "producing",
-        "meaning": "Ã¼retme",
+        "meaning": "üretme",
         "level": "B1"
     },
     {
         "word": "propped",
-        "meaning": "destekledi, dayadÄ±",
+        "meaning": "destekledi, dayadı",
         "level": "C1"
     },
     {
         "word": "pulled",
-        "meaning": "Ã§ekti",
+        "meaning": "çekti",
         "level": "A2"
     },
     {
         "word": "pulsation",
-        "meaning": "nabÄ±z atÄ±ÅŸÄ±",
+        "meaning": "nabız atışı",
         "level": "C2"
     },
     {
         "word": "pursued",
-        "meaning": "takip etti, sÃ¼rdÃ¼rdÃ¼",
+        "meaning": "takip etti, sürdürdü",
         "level": "C1"
     },
     {
         "word": "puzzled",
-        "meaning": "ÅŸaÅŸkÄ±n, kafasÄ± karÄ±ÅŸÄ±k",
+        "meaning": "şaşkın, kafası karışık",
         "level": "B1"
     },
     {
@@ -34104,27 +34104,27 @@
     },
     {
         "word": "ran",
-        "meaning": "koÅŸtu",
+        "meaning": "koştu",
         "level": "A1"
     },
     {
         "word": "rapt",
-        "meaning": "kendinden geÃ§miÅŸ, dalmÄ±ÅŸ",
+        "meaning": "kendinden geçmiş, dalmış",
         "level": "C2"
     },
     {
         "word": "rasping",
-        "meaning": "tÄ±rmalayÄ±cÄ± (ses)",
+        "meaning": "tırmalayıcı (ses)",
         "level": "C2"
     },
     {
         "word": "razor",
-        "meaning": "ustura, tÄ±raÅŸ bÄ±Ã§aÄŸÄ±",
+        "meaning": "ustura, tıraş bıçağı",
         "level": "B1"
     },
     {
         "word": "reached",
-        "meaning": "ulaÅŸtÄ±, uzandÄ±",
+        "meaning": "ulaştı, uzandı",
         "level": "A2"
     },
     {
@@ -34144,7 +34144,7 @@
     },
     {
         "word": "recalled",
-        "meaning": "hatÄ±rladÄ±, anÄ±msadÄ±",
+        "meaning": "hatırladı, anımsadı",
         "level": "B2"
     },
     {
@@ -34169,22 +34169,22 @@
     },
     {
         "word": "remained",
-        "meaning": "kaldÄ±",
+        "meaning": "kaldı",
         "level": "B1"
     },
     {
         "word": "remembered",
-        "meaning": "hatÄ±rladÄ±",
+        "meaning": "hatırladı",
         "level": "A2"
     },
     {
         "word": "removed",
-        "meaning": "kaldÄ±rdÄ±, Ã§Ä±kardÄ±",
+        "meaning": "kaldırdı, çıkardı",
         "level": "B1"
     },
     {
         "word": "replaced",
-        "meaning": "yerine koydu, deÄŸiÅŸtirdi",
+        "meaning": "yerine koydu, değiştirdi",
         "level": "B1"
     },
     {
@@ -34209,47 +34209,47 @@
     },
     {
         "word": "resumed",
-        "meaning": "kaldÄ±ÄŸÄ± yerden devam etti",
+        "meaning": "kaldığı yerden devam etti",
         "level": "C1"
     },
     {
         "word": "returned",
-        "meaning": "dÃ¶ndÃ¼",
+        "meaning": "döndü",
         "level": "A2"
     },
     {
         "word": "returns",
-        "meaning": "dÃ¶ner",
+        "meaning": "döner",
         "level": "A2"
     },
     {
         "word": "revealed",
-        "meaning": "aÃ§Ä±ÄŸa Ã§Ä±kardÄ±",
+        "meaning": "açığa çıkardı",
         "level": "B1"
     },
     {
         "word": "revelation",
-        "meaning": "vahiy, ifÅŸa",
+        "meaning": "vahiy, ifşa",
         "level": "C1"
     },
     {
         "word": "revolutionized",
-        "meaning": "devrim yarattÄ±",
+        "meaning": "devrim yarattı",
         "level": "C1"
     },
     {
         "word": "ringing",
-        "meaning": "Ã§Ä±nlama, Ã§alma",
+        "meaning": "çınlama, çalma",
         "level": "B1"
     },
     {
         "word": "roar",
-        "meaning": "kÃ¼kreme",
+        "meaning": "kükreme",
         "level": "B1"
     },
     {
         "word": "roars",
-        "meaning": "kÃ¼krer",
+        "meaning": "kükrer",
         "level": "B1"
     },
     {
@@ -34259,22 +34259,22 @@
     },
     {
         "word": "rose-leaves",
-        "meaning": "gÃ¼l yapraklarÄ±",
+        "meaning": "gül yaprakları",
         "level": "B2"
     },
     {
         "word": "roses",
-        "meaning": "gÃ¼ller",
+        "meaning": "güller",
         "level": "A1"
     },
     {
         "word": "rugged",
-        "meaning": "saÄŸlam, engebeli",
+        "meaning": "sağlam, engebeli",
         "level": "C1"
     },
     {
         "word": "runs",
-        "meaning": "koÅŸar",
+        "meaning": "koşar",
         "level": "A1"
     },
     {
@@ -34299,22 +34299,22 @@
     },
     {
         "word": "saved",
-        "meaning": "kurtardÄ±, kaydetti",
+        "meaning": "kurtardı, kaydetti",
         "level": "A2"
     },
     {
         "word": "scantlings",
-        "meaning": "keresteler, kiriÅŸler",
+        "meaning": "keresteler, kirişler",
         "level": "C2"
     },
     {
         "word": "scarcely",
-        "meaning": "neredeyse hiÃ§, gÃ¼Ã§bela",
+        "meaning": "neredeyse hiç, güçbela",
         "level": "C1"
     },
     {
         "word": "scarlet",
-        "meaning": "kÄ±zÄ±l",
+        "meaning": "kızıl",
         "level": "C1"
     },
     {
@@ -34329,42 +34329,42 @@
     },
     {
         "word": "screamed",
-        "meaning": "Ã§Ä±ÄŸlÄ±k attÄ±",
+        "meaning": "çığlık attı",
         "level": "B1"
     },
     {
         "word": "scrotumtightening",
-        "meaning": "torba sÄ±kÄ±ÅŸtÄ±ran (mecazi/deniz)",
+        "meaning": "torba sıkıştıran (mecazi/deniz)",
         "level": "C2"
     },
     {
         "word": "searching",
-        "meaning": "arama, araÅŸtÄ±ran",
+        "meaning": "arama, araştıran",
         "level": "B1"
     },
     {
         "word": "seeing",
-        "meaning": "gÃ¶rme",
+        "meaning": "görme",
         "level": "A1"
     },
     {
         "word": "seemed",
-        "meaning": "gibi gÃ¶rÃ¼ndÃ¼",
+        "meaning": "gibi göründü",
         "level": "B1"
     },
     {
         "word": "seen",
-        "meaning": "gÃ¶rÃ¼lmÃ¼ÅŸ",
+        "meaning": "görülmüş",
         "level": "A2"
     },
     {
         "word": "sees",
-        "meaning": "gÃ¶rÃ¼r",
+        "meaning": "görür",
         "level": "A1"
     },
     {
         "word": "seized",
-        "meaning": "ele geÃ§irdi, yakaladÄ±",
+        "meaning": "ele geçirdi, yakaladı",
         "level": "B2"
     },
     {
@@ -34379,12 +34379,12 @@
     },
     {
         "word": "shadowed",
-        "meaning": "gÃ¶lgeli, izlenen",
+        "meaning": "gölgeli, izlenen",
         "level": "B2"
     },
     {
         "word": "shadows",
-        "meaning": "gÃ¶lgeler",
+        "meaning": "gölgeler",
         "level": "B1"
     },
     {
@@ -34394,52 +34394,52 @@
     },
     {
         "word": "sharpened",
-        "meaning": "keskinleÅŸmiÅŸ",
+        "meaning": "keskinleşmiş",
         "level": "B2"
     },
     {
         "word": "shave",
-        "meaning": "tÄ±raÅŸ olmak",
+        "meaning": "tıraş olmak",
         "level": "A2"
     },
     {
         "word": "shaven",
-        "meaning": "tÄ±raÅŸlÄ±",
+        "meaning": "tıraşlı",
         "level": "B1"
     },
     {
         "word": "she'd",
-        "meaning": "o yapardÄ±/yapmÄ±ÅŸtÄ± (she would/had)",
+        "meaning": "o yapardı/yapmıştı (she would/had)",
         "level": "B1"
     },
     {
         "word": "shone",
-        "meaning": "parladÄ±",
+        "meaning": "parladı",
         "level": "B1"
     },
     {
         "word": "shook",
-        "meaning": "salladÄ±, titredi",
+        "meaning": "salladı, titredi",
         "level": "B1"
     },
     {
         "word": "shops",
-        "meaning": "dÃ¼kkanlar",
+        "meaning": "dükkanlar",
         "level": "A1"
     },
     {
         "word": "showed",
-        "meaning": "gÃ¶sterdi",
+        "meaning": "gösterdi",
         "level": "A1"
     },
     {
         "word": "showing",
-        "meaning": "gÃ¶sterme",
+        "meaning": "gösterme",
         "level": "A1"
     },
     {
         "word": "shriek",
-        "meaning": "Ã§Ä±ÄŸlÄ±k",
+        "meaning": "çığlık",
         "level": "B2"
     },
     {
@@ -34449,47 +34449,47 @@
     },
     {
         "word": "shrill",
-        "meaning": "acÄ±, tiz (ses)",
+        "meaning": "acı, tiz (ses)",
         "level": "C1"
     },
     {
         "word": "shucks",
-        "meaning": "hadi canÄ±m (Ã¼nlem)",
+        "meaning": "hadi canım (ünlem)",
         "level": "C2"
     },
     {
         "word": "sidewalk",
-        "meaning": "kaldÄ±rÄ±m",
+        "meaning": "kaldırım",
         "level": "A2"
     },
     {
         "word": "sideways",
-        "meaning": "yanlamasÄ±na",
+        "meaning": "yanlamasına",
         "level": "B2"
     },
     {
         "word": "sin",
-        "meaning": "gÃ¼nah",
+        "meaning": "günah",
         "level": "B1"
     },
     {
         "word": "sinister",
-        "meaning": "uÄŸursuz, kÃ¶tÃ¼",
+        "meaning": "uğursuz, kötü",
         "level": "C1"
     },
     {
         "word": "sins",
-        "meaning": "gÃ¼nahlar",
+        "meaning": "günahlar",
         "level": "B1"
     },
     {
         "word": "sisters",
-        "meaning": "kÄ±z kardeÅŸler",
+        "meaning": "kız kardeşler",
         "level": "A1"
     },
     {
         "word": "skipped",
-        "meaning": "atladÄ±, sekti",
+        "meaning": "atladı, sekti",
         "level": "B1"
     },
     {
@@ -34524,37 +34524,37 @@
     },
     {
         "word": "slipped",
-        "meaning": "kaydÄ±",
+        "meaning": "kaydı",
         "level": "B1"
     },
     {
         "word": "slowed",
-        "meaning": "yavaÅŸladÄ±",
+        "meaning": "yavaşladı",
         "level": "A2"
     },
     {
         "word": "smartly",
-        "meaning": "ÅŸÄ±k bir ÅŸekilde, akÄ±llÄ±ca",
+        "meaning": "şık bir şekilde, akıllıca",
         "level": "B2"
     },
     {
         "word": "smiled",
-        "meaning": "gÃ¼lÃ¼msedi",
+        "meaning": "gülümsedi",
         "level": "A2"
     },
     {
         "word": "smiles",
-        "meaning": "gÃ¼lÃ¼mser",
+        "meaning": "gülümser",
         "level": "A1"
     },
     {
         "word": "smiling",
-        "meaning": "gÃ¼lÃ¼mseyen",
+        "meaning": "gülümseyen",
         "level": "A1"
     },
     {
         "word": "snotgreen",
-        "meaning": "sÃ¼mÃ¼k yeÅŸili",
+        "meaning": "sümük yeşili",
         "level": "C2"
     },
     {
@@ -34564,7 +34564,7 @@
     },
     {
         "word": "sold",
-        "meaning": "sattÄ±",
+        "meaning": "sattı",
         "level": "A2"
     },
     {
@@ -34574,7 +34574,7 @@
     },
     {
         "word": "sounded",
-        "meaning": "ses Ã§Ä±kardÄ±, gibi geldi",
+        "meaning": "ses çıkardı, gibi geldi",
         "level": "B1"
     },
     {
@@ -34584,17 +34584,17 @@
     },
     {
         "word": "speaking",
-        "meaning": "konuÅŸma",
+        "meaning": "konuşma",
         "level": "A1"
     },
     {
         "word": "spoken",
-        "meaning": "konuÅŸulan",
+        "meaning": "konuşulan",
         "level": "B1"
     },
     {
         "word": "sprang",
-        "meaning": "fÄ±rladÄ±, sÄ±Ã§radÄ±",
+        "meaning": "fırladı, sıçradı",
         "level": "C1"
     },
     {
@@ -34604,12 +34604,12 @@
     },
     {
         "word": "staircase",
-        "meaning": "merdiven boÅŸluÄŸu",
+        "meaning": "merdiven boşluğu",
         "level": "B2"
     },
     {
         "word": "stairhead",
-        "meaning": "merdiven baÅŸÄ±",
+        "meaning": "merdiven başı",
         "level": "C2"
     },
     {
@@ -34619,52 +34619,52 @@
     },
     {
         "word": "stared",
-        "meaning": "dik dik baktÄ±",
+        "meaning": "dik dik baktı",
         "level": "B1"
     },
     {
         "word": "started",
-        "meaning": "baÅŸladÄ±",
+        "meaning": "başladı",
         "level": "A1"
     },
     {
         "word": "stately",
-        "meaning": "gÃ¶rkemli, asil",
+        "meaning": "görkemli, asil",
         "level": "C1"
     },
     {
         "word": "stayed",
-        "meaning": "kaldÄ±",
+        "meaning": "kaldı",
         "level": "A2"
     },
     {
         "word": "steamboat",
-        "meaning": "buharlÄ± gemi",
+        "meaning": "buharlı gemi",
         "level": "B1"
     },
     {
         "word": "stepped",
-        "meaning": "adÄ±m attÄ±",
+        "meaning": "adım attı",
         "level": "B1"
     },
     {
         "word": "steps",
-        "meaning": "adÄ±mlar, basamaklar",
+        "meaning": "adımlar, basamaklar",
         "level": "A2"
     },
     {
         "word": "sternly",
-        "meaning": "sertÃ§e",
+        "meaning": "sertçe",
         "level": "C1"
     },
     {
         "word": "stifled",
-        "meaning": "bastÄ±rÄ±lmÄ±ÅŸ, boÄŸulmuÅŸ",
+        "meaning": "bastırılmış, boğulmuş",
         "level": "C1"
     },
     {
         "word": "stirred",
-        "meaning": "kÄ±pÄ±rdadÄ±, karÄ±ÅŸtÄ±rdÄ±",
+        "meaning": "kıpırdadı, karıştırdı",
         "level": "B2"
     },
     {
@@ -34684,17 +34684,17 @@
     },
     {
         "word": "stream-of-consciousness",
-        "meaning": "bilinÃ§ akÄ±ÅŸÄ±",
+        "meaning": "bilinç akışı",
         "level": "C2"
     },
     {
         "word": "stretched",
-        "meaning": "gerindi, uzandÄ±",
+        "meaning": "gerindi, uzandı",
         "level": "B1"
     },
     {
         "word": "stump",
-        "meaning": "kÃ¼tÃ¼k, Ã§Ä±kmaz",
+        "meaning": "kütük, çıkmaz",
         "level": "C1"
     },
     {
@@ -34704,37 +34704,37 @@
     },
     {
         "word": "suggested",
-        "meaning": "Ã¶nerdi",
+        "meaning": "önerdi",
         "level": "B1"
     },
     {
         "word": "suits",
-        "meaning": "takÄ±m elbiseler, uyar",
+        "meaning": "takım elbiseler, uyar",
         "level": "B1"
     },
     {
         "word": "sullen",
-        "meaning": "suratsÄ±z, asÄ±k suratlÄ±",
+        "meaning": "suratsız, asık suratlı",
         "level": "C1"
     },
     {
         "word": "sunlight",
-        "meaning": "gÃ¼neÅŸ Ä±ÅŸÄ±ÄŸÄ±",
+        "meaning": "güneş ışığı",
         "level": "A2"
     },
     {
         "word": "sunny",
-        "meaning": "gÃ¼neÅŸli",
+        "meaning": "güneşli",
         "level": "A1"
     },
     {
         "word": "suspected",
-        "meaning": "ÅŸÃ¼phelendi",
+        "meaning": "şüphelendi",
         "level": "B2"
     },
     {
         "word": "sustained",
-        "meaning": "sÃ¼rdÃ¼rÃ¼len, desteklenen",
+        "meaning": "sürdürülen, desteklenen",
         "level": "C1"
     },
     {
@@ -34744,32 +34744,32 @@
     },
     {
         "word": "sweet",
-        "meaning": "tatlÄ±",
+        "meaning": "tatlı",
         "level": "A1"
     },
     {
         "word": "swept",
-        "meaning": "sÃ¼pÃ¼rdÃ¼",
+        "meaning": "süpürdü",
         "level": "B1"
     },
     {
         "word": "swiftness",
-        "meaning": "sÃ¼rat, Ã§abukluk",
+        "meaning": "sürat, çabukluk",
         "level": "C1"
     },
     {
         "word": "swim",
-        "meaning": "yÃ¼zmek",
+        "meaning": "yüzmek",
         "level": "A1"
     },
     {
         "word": "swimming",
-        "meaning": "yÃ¼zme",
+        "meaning": "yüzme",
         "level": "A1"
     },
     {
         "word": "swung",
-        "meaning": "salladÄ±",
+        "meaning": "salladı",
         "level": "B2"
     },
     {
@@ -34779,37 +34779,37 @@
     },
     {
         "word": "takes",
-        "meaning": "alÄ±r",
+        "meaning": "alır",
         "level": "A1"
     },
     {
         "word": "talk",
-        "meaning": "konuÅŸmak",
+        "meaning": "konuşmak",
         "level": "A1"
     },
     {
         "word": "talked",
-        "meaning": "konuÅŸtu",
+        "meaning": "konuştu",
         "level": "A1"
     },
     {
         "word": "talks",
-        "meaning": "konuÅŸur",
+        "meaning": "konuşur",
         "level": "A1"
     },
     {
         "word": "tea",
-        "meaning": "Ã§ay",
+        "meaning": "çay",
         "level": "A1"
     },
     {
         "word": "teach",
-        "meaning": "Ã¶ÄŸretmek",
+        "meaning": "öğretmek",
         "level": "A1"
     },
     {
         "word": "tear",
-        "meaning": "gÃ¶zyaÅŸÄ±, yÄ±rtmak",
+        "meaning": "gözyaşı, yırtmak",
         "level": "B1"
     },
     {
@@ -34819,12 +34819,12 @@
     },
     {
         "word": "teeth",
-        "meaning": "diÅŸler",
+        "meaning": "dişler",
         "level": "A2"
     },
     {
         "word": "tell",
-        "meaning": "anlatmak, sÃ¶ylemek",
+        "meaning": "anlatmak, söylemek",
         "level": "A1"
     },
     {
@@ -34834,17 +34834,17 @@
     },
     {
         "word": "terrible",
-        "meaning": "korkunÃ§",
+        "meaning": "korkunç",
         "level": "A2"
     },
     {
         "word": "terror",
-        "meaning": "dehÅŸet",
+        "meaning": "dehşet",
         "level": "B1"
     },
     {
         "word": "terrors",
-        "meaning": "dehÅŸetler",
+        "meaning": "dehşetler",
         "level": "B1"
     },
     {
@@ -34854,17 +34854,17 @@
     },
     {
         "word": "than",
-        "meaning": "...-den (karÅŸÄ±laÅŸtÄ±rma)",
+        "meaning": "...-den (karşılaştırma)",
         "level": "A1"
     },
     {
         "word": "thank",
-        "meaning": "teÅŸekkÃ¼r etmek",
+        "meaning": "teşekkür etmek",
         "level": "A1"
     },
     {
         "word": "thanks",
-        "meaning": "teÅŸekkÃ¼rler",
+        "meaning": "teşekkürler",
         "level": "A1"
     },
     {
@@ -34874,7 +34874,7 @@
     },
     {
         "word": "theirs",
-        "meaning": "onlarÄ±nki",
+        "meaning": "onlarınki",
         "level": "B1"
     },
     {
@@ -34889,7 +34889,7 @@
     },
     {
         "word": "thick",
-        "meaning": "kalÄ±n",
+        "meaning": "kalın",
         "level": "A2"
     },
     {
@@ -34899,22 +34899,22 @@
     },
     {
         "word": "thing",
-        "meaning": "ÅŸey",
+        "meaning": "şey",
         "level": "A1"
     },
     {
         "word": "things",
-        "meaning": "ÅŸeyler",
+        "meaning": "şeyler",
         "level": "A1"
     },
     {
         "word": "think",
-        "meaning": "dÃ¼ÅŸÃ¼nmek",
+        "meaning": "düşünmek",
         "level": "A1"
     },
     {
         "word": "thinks",
-        "meaning": "dÃ¼ÅŸÃ¼nÃ¼r",
+        "meaning": "düşünür",
         "level": "A1"
     },
     {
@@ -34929,27 +34929,27 @@
     },
     {
         "word": "thoughts",
-        "meaning": "dÃ¼ÅŸÃ¼nceler",
+        "meaning": "düşünceler",
         "level": "B1"
     },
     {
         "word": "three",
-        "meaning": "Ã¼Ã§",
+        "meaning": "üç",
         "level": "A1"
     },
     {
         "word": "threw",
-        "meaning": "fÄ±rlattÄ±",
+        "meaning": "fırlattı",
         "level": "B1"
     },
     {
         "word": "thrice",
-        "meaning": "Ã¼Ã§ kez",
+        "meaning": "üç kez",
         "level": "C1"
     },
     {
         "word": "through",
-        "meaning": "iÃ§inden, vasÄ±tasÄ±yla",
+        "meaning": "içinden, vasıtasıyla",
         "level": "A2"
     },
     {
@@ -34959,7 +34959,7 @@
     },
     {
         "word": "thus",
-        "meaning": "bÃ¶ylece",
+        "meaning": "böylece",
         "level": "B2"
     },
     {
@@ -34984,17 +34984,17 @@
     },
     {
         "word": "told",
-        "meaning": "anlattÄ±, sÃ¶yledi",
+        "meaning": "anlattı, söyledi",
         "level": "A2"
     },
     {
         "word": "tolerable",
-        "meaning": "katlanÄ±labilir",
+        "meaning": "katlanılabilir",
         "level": "B2"
     },
     {
         "word": "tomorrow",
-        "meaning": "yarÄ±n",
+        "meaning": "yarın",
         "level": "A1"
     },
     {
@@ -35004,27 +35004,27 @@
     },
     {
         "word": "too",
-        "meaning": "Ã§ok, de/da",
+        "meaning": "çok, de/da",
         "level": "A1"
     },
     {
         "word": "took",
-        "meaning": "aldÄ±",
+        "meaning": "aldı",
         "level": "A1"
     },
     {
         "word": "top",
-        "meaning": "Ã¼st, tepe",
+        "meaning": "üst, tepe",
         "level": "A1"
     },
     {
         "word": "tossing",
-        "meaning": "fÄ±rlatma, savurma",
+        "meaning": "fırlatma, savurma",
         "level": "B2"
     },
     {
         "word": "towards",
-        "meaning": "doÄŸru, yÃ¶nÃ¼nde",
+        "meaning": "doğru, yönünde",
         "level": "A2"
     },
     {
@@ -35044,7 +35044,7 @@
     },
     {
         "word": "transformation",
-        "meaning": "dÃ¶nÃ¼ÅŸÃ¼m",
+        "meaning": "dönüşüm",
         "level": "B2"
     },
     {
@@ -35064,12 +35064,12 @@
     },
     {
         "word": "trees",
-        "meaning": "aÄŸaÃ§lar",
+        "meaning": "ağaçlar",
         "level": "A1"
     },
     {
         "word": "tremulous",
-        "meaning": "titrek, Ã¼rkek",
+        "meaning": "titrek, ürkek",
         "level": "C2"
     },
     {
@@ -35079,12 +35079,12 @@
     },
     {
         "word": "trifles",
-        "meaning": "Ä±vÄ±r zÄ±vÄ±r",
+        "meaning": "ıvır zıvır",
         "level": "C2"
     },
     {
         "word": "tripping",
-        "meaning": "tÃ¶kezleme, seke seke yÃ¼rÃ¼me",
+        "meaning": "tökezleme, seke seke yürüme",
         "level": "B2"
     },
     {
@@ -35099,22 +35099,22 @@
     },
     {
         "word": "true",
-        "meaning": "doÄŸru",
+        "meaning": "doğru",
         "level": "A1"
     },
     {
         "word": "truly",
-        "meaning": "gerÃ§ekten",
+        "meaning": "gerçekten",
         "level": "B1"
     },
     {
         "word": "trust",
-        "meaning": "gÃ¼venmek",
+        "meaning": "güvenmek",
         "level": "A2"
     },
     {
         "word": "truth",
-        "meaning": "gerÃ§ek",
+        "meaning": "gerçek",
         "level": "B1"
     },
     {
@@ -35124,12 +35124,12 @@
     },
     {
         "word": "turn",
-        "meaning": "dÃ¶nmek, sÄ±ra",
+        "meaning": "dönmek, sıra",
         "level": "A1"
     },
     {
         "word": "turned",
-        "meaning": "dÃ¶ndÃ¼",
+        "meaning": "döndü",
         "level": "A2"
     },
     {
@@ -35154,7 +35154,7 @@
     },
     {
         "word": "twisted",
-        "meaning": "bÃ¼kÃ¼lmÃ¼ÅŸ, Ã§arpÄ±k",
+        "meaning": "bükülmüş, çarpık",
         "level": "B2"
     },
     {
@@ -35164,42 +35164,42 @@
     },
     {
         "word": "understood",
-        "meaning": "anladÄ±",
+        "meaning": "anladı",
         "level": "A2"
     },
     {
         "word": "undisturbed",
-        "meaning": "rahatsÄ±z edilmemiÅŸ",
+        "meaning": "rahatsız edilmemiş",
         "level": "C1"
     },
     {
         "word": "ungirdled",
-        "meaning": "kushaksÄ±z, kemersiz",
+        "meaning": "kushaksız, kemersiz",
         "level": "C2"
     },
     {
         "word": "unlock",
-        "meaning": "kilit aÃ§mak",
+        "meaning": "kilit açmak",
         "level": "B1"
     },
     {
         "word": "unprecedented",
-        "meaning": "eÅŸi benzeri gÃ¶rÃ¼lmemiÅŸ",
+        "meaning": "eşi benzeri görülmemiş",
         "level": "C2"
     },
     {
         "word": "untonsured",
-        "meaning": "rahip tÄ±raÅŸÄ± olmamÄ±ÅŸ",
+        "meaning": "rahip tıraşı olmamış",
         "level": "C2"
     },
     {
         "word": "untouched",
-        "meaning": "dokunulmamÄ±ÅŸ",
+        "meaning": "dokunulmamış",
         "level": "B2"
     },
     {
         "word": "uses",
-        "meaning": "kullanÄ±r",
+        "meaning": "kullanır",
         "level": "A1"
     },
     {
@@ -35209,12 +35209,12 @@
     },
     {
         "word": "vex",
-        "meaning": "kÄ±zdÄ±rmak, Ã¼zmek",
+        "meaning": "kızdırmak, üzmek",
         "level": "C2"
     },
     {
         "word": "vice",
-        "meaning": "ahlaksÄ±zlÄ±k, kusur",
+        "meaning": "ahlaksızlık, kusur",
         "level": "C2"
     },
     {
@@ -35224,17 +35224,17 @@
     },
     {
         "word": "vigorously",
-        "meaning": "gÃ¼Ã§lÃ¼ bir ÅŸekilde",
+        "meaning": "güçlü bir şekilde",
         "level": "C1"
     },
     {
         "word": "villains",
-        "meaning": "kÃ¶tÃ¼ adamlar, hainler",
+        "meaning": "kötü adamlar, hainler",
         "level": "B2"
     },
     {
         "word": "visitors",
-        "meaning": "ziyaretÃ§iler",
+        "meaning": "ziyaretçiler",
         "level": "A2"
     },
     {
@@ -35244,17 +35244,17 @@
     },
     {
         "word": "wakes",
-        "meaning": "uyanÄ±r",
+        "meaning": "uyanır",
         "level": "A2"
     },
     {
         "word": "walked",
-        "meaning": "yÃ¼rÃ¼dÃ¼",
+        "meaning": "yürüdü",
         "level": "A1"
     },
     {
         "word": "walks",
-        "meaning": "yÃ¼rÃ¼r",
+        "meaning": "yürür",
         "level": "A1"
     },
     {
@@ -35269,7 +35269,7 @@
     },
     {
         "word": "wasn't",
-        "meaning": "deÄŸildi",
+        "meaning": "değildi",
         "level": "A1"
     },
     {
@@ -35279,7 +35279,7 @@
     },
     {
         "word": "watcher",
-        "meaning": "gÃ¶zcÃ¼, izleyici",
+        "meaning": "gözcü, izleyici",
         "level": "B2"
     },
     {
@@ -35304,7 +35304,7 @@
     },
     {
         "word": "welled",
-        "meaning": "fÄ±ÅŸkÄ±rdÄ±, doldu",
+        "meaning": "fışkırdı, doldu",
         "level": "C2"
     },
     {
@@ -35314,17 +35314,17 @@
     },
     {
         "word": "wheedling",
-        "meaning": "tatlÄ± dille kandÄ±rma",
+        "meaning": "tatlı dille kandırma",
         "level": "C2"
     },
     {
         "word": "whistle",
-        "meaning": "Ä±slÄ±k, dÃ¼dÃ¼k",
+        "meaning": "ıslık, düdük",
         "level": "B1"
     },
     {
         "word": "whistles",
-        "meaning": "Ä±slÄ±klar",
+        "meaning": "ıslıklar",
         "level": "B1"
     },
     {
@@ -35334,7 +35334,7 @@
     },
     {
         "word": "whitewashed",
-        "meaning": "badanalÄ±",
+        "meaning": "badanalı",
         "level": "C1"
     },
     {
@@ -35349,12 +35349,12 @@
     },
     {
         "word": "whorls",
-        "meaning": "helezonlar, kÄ±vrÄ±mlar",
+        "meaning": "helezonlar, kıvrımlar",
         "level": "C2"
     },
     {
         "word": "winding",
-        "meaning": "kÄ±vrÄ±mlÄ±, dolambaÃ§lÄ±",
+        "meaning": "kıvrımlı, dolambaçlı",
         "level": "B2"
     },
     {
@@ -35374,12 +35374,12 @@
     },
     {
         "word": "woman's",
-        "meaning": "kadÄ±nÄ±n",
+        "meaning": "kadının",
         "level": "A1"
     },
     {
         "word": "women",
-        "meaning": "kadÄ±nlar",
+        "meaning": "kadınlar",
         "level": "A1"
     },
     {
@@ -35399,32 +35399,32 @@
     },
     {
         "word": "worked",
-        "meaning": "Ã§alÄ±ÅŸtÄ±",
+        "meaning": "çalıştı",
         "level": "A1"
     },
     {
         "word": "works",
-        "meaning": "Ã§alÄ±ÅŸÄ±r, eserler",
+        "meaning": "çalışır, eserler",
         "level": "A1"
     },
     {
         "word": "world's",
-        "meaning": "dÃ¼nyanÄ±n",
+        "meaning": "dünyanın",
         "level": "A1"
     },
     {
         "word": "wouldn't",
-        "meaning": "yapmazdÄ±",
+        "meaning": "yapmazdı",
         "level": "B1"
     },
     {
         "word": "wreaths",
-        "meaning": "Ã§elenkler, halkalar",
+        "meaning": "çelenkler, halkalar",
         "level": "C2"
     },
     {
         "word": "wronged",
-        "meaning": "haksÄ±zlÄ±ÄŸa uÄŸramÄ±ÅŸ",
+        "meaning": "haksızlığa uğramış",
         "level": "C1"
     },
     {
@@ -35434,44 +35434,44 @@
     },
     {
         "word": "years",
-        "meaning": "yÄ±llar",
+        "meaning": "yıllar",
         "level": "A1"
     },
     {
         "word": "yell",
-        "meaning": "baÄŸÄ±rmak",
+        "meaning": "bağırmak",
         "level": "B1"
     },
     {
         "word": "you'd",
-        "meaning": "sen yapardÄ±n",
+        "meaning": "sen yapardın",
         "level": "B1"
     },
     {
         "word": "you'll",
-        "meaning": "sen yapacaksÄ±n",
+        "meaning": "sen yapacaksın",
         "level": "A1"
     },
     {
         "word": "you're",
-        "meaning": "sen ...'sÄ±n",
+        "meaning": "sen ...'sın",
         "level": "A1"
     },
     {
         "word": "younger",
-        "meaning": "daha genÃ§",
+        "meaning": "daha genç",
         "level": "A1"
     },
     {
         "id": 10742,
         "word": "Today",
-        "meaning": "bugÃ¼n",
+        "meaning": "bugün",
         "level": "A1"
     },
     {
         "id": 10743,
         "word": "Opens",
-        "meaning": "aÃ§ar",
+        "meaning": "açar",
         "level": "A1"
     },
     {
@@ -35495,13 +35495,13 @@
     {
         "id": 10747,
         "word": "Thirsty",
-        "meaning": "susamÄ±ÅŸ",
+        "meaning": "susamış",
         "level": "A1"
     },
     {
         "id": 10748,
         "word": "Drinks",
-        "meaning": "iÃ§er",
+        "meaning": "içer",
         "level": "A1"
     },
     {
@@ -35513,7 +35513,7 @@
     {
         "id": 10750,
         "word": "Carries",
-        "meaning": "taÅŸÄ±r",
+        "meaning": "taşır",
         "level": "A1"
     },
     {
@@ -35525,31 +35525,31 @@
     {
         "id": 10752,
         "word": "Throws",
-        "meaning": "fÄ±rlatÄ±r",
+        "meaning": "fırlatır",
         "level": "A1"
     },
     {
         "id": 10753,
         "word": "Flies",
-        "meaning": "uÃ§ar",
+        "meaning": "uçar",
         "level": "A1"
     },
     {
         "id": 10754,
         "word": "Flowers",
-        "meaning": "Ã§iÃ§ekler",
+        "meaning": "çiçekler",
         "level": "A1"
     },
     {
         "id": 10755,
         "word": "Chasing",
-        "meaning": "kovalÄ±yor",
+        "meaning": "kovalıyor",
         "level": "A1"
     },
     {
         "id": 10756,
         "word": "Jumps",
-        "meaning": "zÄ±plar",
+        "meaning": "zıplar",
         "level": "A1"
     },
     {
@@ -35561,7 +35561,7 @@
     {
         "id": 10758,
         "word": "Mailman",
-        "meaning": "postacÄ±",
+        "meaning": "postacı",
         "level": "A1"
     },
     {
@@ -35573,13 +35573,13 @@
     {
         "id": 10760,
         "word": "Says",
-        "meaning": "sÃ¶yler",
+        "meaning": "söyler",
         "level": "A1"
     },
     {
         "id": 10761,
         "word": "Likes",
-        "meaning": "beÄŸenir",
+        "meaning": "beğenir",
         "level": "A1"
     },
     {
@@ -35591,7 +35591,7 @@
     {
         "id": 10763,
         "word": "Looking",
-        "meaning": "bakÄ±yor",
+        "meaning": "bakıyor",
         "level": "A1"
     },
     {
@@ -35603,19 +35603,19 @@
     {
         "id": 10765,
         "word": "Starts",
-        "meaning": "baÅŸlar",
+        "meaning": "başlar",
         "level": "A1"
     },
     {
         "id": 10766,
         "word": "Stays",
-        "meaning": "kalÄ±r",
+        "meaning": "kalır",
         "level": "A1"
     },
     {
         "id": 10767,
         "word": "Lies",
-        "meaning": "yalanlar/uzanÄ±r",
+        "meaning": "yalanlar/uzanır",
         "level": "A1"
     },
     {
@@ -35639,7 +35639,7 @@
     {
         "id": 10771,
         "word": "Barking",
-        "meaning": "havlÄ±yor",
+        "meaning": "havlıyor",
         "level": "A1"
     },
     {
@@ -35669,7 +35669,7 @@
     {
         "id": 10776,
         "word": "Needs",
-        "meaning": "ihtiyaÃ§ duyar",
+        "meaning": "ihtiyaç duyar",
         "level": "A1"
     },
     {
@@ -35711,13 +35711,13 @@
     {
         "id": 10783,
         "word": "Snack",
-        "meaning": "atÄ±ÅŸtÄ±rmalÄ±k",
+        "meaning": "atıştırmalık",
         "level": "A1"
     },
     {
         "id": 10784,
         "word": "Crunches",
-        "meaning": "Ã§Ä±tÄ±rdatÄ±r",
+        "meaning": "çıtırdatır",
         "level": "A1"
     },
     {
@@ -35729,7 +35729,7 @@
     {
         "id": 10786,
         "word": "Turns",
-        "meaning": "dÃ¶ner/Ã§evirir",
+        "meaning": "döner/çevirir",
         "level": "A1"
     },
     {
@@ -35741,7 +35741,7 @@
     {
         "id": 10788,
         "word": "Dreaming",
-        "meaning": "rÃ¼ya gÃ¶rÃ¼yor",
+        "meaning": "rüya görüyor",
         "level": "A1"
     },
     {
@@ -35753,19 +35753,19 @@
     {
         "id": 10790,
         "word": "Stretches",
-        "meaning": "esner/uzanÄ±r",
+        "meaning": "esner/uzanır",
         "level": "A1"
     },
     {
         "id": 10791,
         "word": "Pillow",
-        "meaning": "yastÄ±k",
+        "meaning": "yastık",
         "level": "A1"
     },
     {
         "id": 10792,
         "word": "Grandma",
-        "meaning": "bÃ¼yÃ¼kanne",
+        "meaning": "büyükanne",
         "level": "A1"
     },
     {
@@ -35801,13 +35801,13 @@
     {
         "id": 10798,
         "word": "Doing",
-        "meaning": "yapÄ±yor",
+        "meaning": "yapıyor",
         "level": "A1"
     },
     {
         "id": 10799,
         "word": "Stars",
-        "meaning": "yÄ±ldÄ±zlar",
+        "meaning": "yıldızlar",
         "level": "A1"
     },
     {
@@ -35837,7 +35837,7 @@
     {
         "id": 10804,
         "word": "Buses",
-        "meaning": "otobÃ¼sler",
+        "meaning": "otobüsler",
         "level": "A1"
     },
     {
@@ -35873,13 +35873,13 @@
     {
         "id": 10810,
         "word": "Buckingham",
-        "meaning": "Buckingham SarayÄ±",
+        "meaning": "Buckingham Sarayı",
         "level": "A1"
     },
     {
         "id": 10811,
         "word": "Lives",
-        "meaning": "yaÅŸar",
+        "meaning": "yaşar",
         "level": "A1"
     },
     {
@@ -35915,19 +35915,19 @@
     {
         "id": 10817,
         "word": "Souvenirs",
-        "meaning": "hediyelik eÅŸyalar",
+        "meaning": "hediyelik eşyalar",
         "level": "A1"
     },
     {
         "id": 10818,
         "word": "Rainfall",
-        "meaning": "yaÄŸÄ±ÅŸ",
+        "meaning": "yağış",
         "level": "A1"
     },
     {
         "id": 10819,
         "word": "Raining",
-        "meaning": "yaÄŸmur yaÄŸÄ±yor",
+        "meaning": "yağmur yağıyor",
         "level": "A1"
     },
     {
@@ -35939,13 +35939,13 @@
     {
         "id": 10821,
         "word": "Walking",
-        "meaning": "yÃ¼rÃ¼yor",
+        "meaning": "yürüyor",
         "level": "A1"
     },
     {
         "id": 10822,
         "word": "Sneakers",
-        "meaning": "spor ayakkabÄ±",
+        "meaning": "spor ayakkabı",
         "level": "A1"
     },
     {
@@ -35969,7 +35969,7 @@
     {
         "id": 10826,
         "word": "Bags",
-        "meaning": "Ã§antalar",
+        "meaning": "çantalar",
         "level": "A1"
     },
     {
@@ -35993,7 +35993,7 @@
     {
         "id": 10830,
         "word": "Trafalgar",
-        "meaning": "Trafalgar MeydanÄ±",
+        "meaning": "Trafalgar Meydanı",
         "level": "A1"
     },
     {
@@ -36005,7 +36005,7 @@
     {
         "id": 10832,
         "word": "Pigeons",
-        "meaning": "gÃ¼vercinler",
+        "meaning": "güvercinler",
         "level": "A1"
     },
     {
@@ -36017,19 +36017,19 @@
     {
         "id": 10834,
         "word": "Grapes",
-        "meaning": "Ã¼zÃ¼mler",
+        "meaning": "üzümler",
         "level": "A1"
     },
     {
         "id": 10835,
         "word": "Bookshop",
-        "meaning": "kitapÃ§Ä±",
+        "meaning": "kitapçı",
         "level": "A1"
     },
     {
         "id": 10836,
         "word": "Lights",
-        "meaning": "Ä±ÅŸÄ±klar",
+        "meaning": "ışıklar",
         "level": "A1"
     },
     {
@@ -36065,7 +36065,7 @@
     {
         "id": 10842,
         "word": "Countries",
-        "meaning": "Ã¼lkeler",
+        "meaning": "ülkeler",
         "level": "A1"
     },
     {
@@ -36095,7 +36095,7 @@
     {
         "id": 10847,
         "word": "Packing",
-        "meaning": "paketleme/valiz hazÄ±rlama",
+        "meaning": "paketleme/valiz hazırlama",
         "level": "A1"
     },
     {
@@ -36107,31 +36107,31 @@
     {
         "id": 10849,
         "word": "Cinnamon",
-        "meaning": "tarÃ§Ä±n",
+        "meaning": "tarçın",
         "level": "A2"
     },
     {
         "id": 10850,
         "word": "Tile",
-        "meaning": "fayans/Ã§ini",
+        "meaning": "fayans/çini",
         "level": "A2"
     },
     {
         "id": 10851,
         "word": "Prying",
-        "meaning": "meraklÄ±/kurcalama",
+        "meaning": "meraklı/kurcalama",
         "level": "A2"
     },
     {
         "id": 10852,
         "word": "Underneath",
-        "meaning": "altÄ±nda",
+        "meaning": "altında",
         "level": "A2"
     },
     {
         "id": 10853,
         "word": "Handful",
-        "meaning": "avuÃ§ dolusu",
+        "meaning": "avuç dolusu",
         "level": "A2"
     },
     {
@@ -36155,13 +36155,13 @@
     {
         "id": 10857,
         "word": "Climbed",
-        "meaning": "tÄ±rmandÄ±",
+        "meaning": "tırmandı",
         "level": "A2"
     },
     {
         "id": 10858,
         "word": "Higher",
-        "meaning": "daha yÃ¼ksek",
+        "meaning": "daha yüksek",
         "level": "A2"
     },
     {
@@ -36173,7 +36173,7 @@
     {
         "id": 10860,
         "word": "Arriving",
-        "meaning": "varÄ±yor",
+        "meaning": "varıyor",
         "level": "A2"
     },
     {
@@ -36191,13 +36191,13 @@
     {
         "id": 10863,
         "word": "Whispered",
-        "meaning": "fÄ±sÄ±ldadÄ±",
+        "meaning": "fısıldadı",
         "level": "A2"
     },
     {
         "id": 10864,
         "word": "Mysteriously",
-        "meaning": "gizemli bir ÅŸekilde",
+        "meaning": "gizemli bir şekilde",
         "level": "A2"
     },
     {
@@ -36215,7 +36215,7 @@
     {
         "id": 10867,
         "word": "Picked",
-        "meaning": "topladÄ±",
+        "meaning": "topladı",
         "level": "A2"
     },
     {
@@ -36227,19 +36227,19 @@
     {
         "id": 10869,
         "word": "Beehive",
-        "meaning": "arÄ± kovanÄ±",
+        "meaning": "arı kovanı",
         "level": "A2"
     },
     {
         "id": 10870,
         "word": "Beekeeper",
-        "meaning": "arÄ±cÄ±",
+        "meaning": "arıcı",
         "level": "A2"
     },
     {
         "id": 10871,
         "word": "Named",
-        "meaning": "adlandÄ±rÄ±lmÄ±ÅŸ",
+        "meaning": "adlandırılmış",
         "level": "A2"
     },
     {
@@ -36257,43 +36257,43 @@
     {
         "id": 10874,
         "word": "Tasted",
-        "meaning": "tattÄ±",
+        "meaning": "tattı",
         "level": "A2"
     },
     {
         "id": 10875,
         "word": "Sweeter",
-        "meaning": "daha tatlÄ±",
+        "meaning": "daha tatlı",
         "level": "A2"
     },
     {
         "id": 10876,
         "word": "Thanked",
-        "meaning": "teÅŸekkÃ¼r etti",
+        "meaning": "teşekkür etti",
         "level": "A2"
     },
     {
         "id": 10877,
         "word": "Third",
-        "meaning": "Ã¼Ã§Ã¼ncÃ¼",
+        "meaning": "üçüncü",
         "level": "A2"
     },
     {
         "id": 10878,
         "word": "Oldest",
-        "meaning": "en eski/yaÅŸlÄ±",
+        "meaning": "en eski/yaşlı",
         "level": "A2"
     },
     {
         "id": 10879,
         "word": "Baker",
-        "meaning": "fÄ±rÄ±ncÄ±",
+        "meaning": "fırıncı",
         "level": "A2"
     },
     {
         "id": 10880,
         "word": "Been",
-        "meaning": "olmuÅŸ",
+        "meaning": "olmuş",
         "level": "A2"
     },
     {
@@ -36317,37 +36317,37 @@
     {
         "id": 10884,
         "word": "Townspeople",
-        "meaning": "kasaba halkÄ±",
+        "meaning": "kasaba halkı",
         "level": "A2"
     },
     {
         "id": 10885,
         "word": "Recognized",
-        "meaning": "tanÄ±dÄ±",
+        "meaning": "tanıdı",
         "level": "A2"
     },
     {
         "id": 10886,
         "word": "Tasting",
-        "meaning": "tadÄ±na bakma",
+        "meaning": "tadına bakma",
         "level": "A2"
     },
     {
         "id": 10887,
         "word": "Sharing",
-        "meaning": "paylaÅŸma",
+        "meaning": "paylaşma",
         "level": "A2"
     },
     {
         "id": 10888,
         "word": "Shared",
-        "meaning": "paylaÅŸtÄ±",
+        "meaning": "paylaştı",
         "level": "A2"
     },
     {
         "id": 10889,
         "word": "Secrets",
-        "meaning": "sÄ±rlar",
+        "meaning": "sırlar",
         "level": "A2"
     },
     {
@@ -36371,7 +36371,7 @@
     {
         "id": 10893,
         "word": "Wrote",
-        "meaning": "yazdÄ±",
+        "meaning": "yazdı",
         "level": "A2"
     },
     {
@@ -36383,7 +36383,7 @@
     {
         "id": 10895,
         "word": "Their",
-        "meaning": "onlarÄ±n",
+        "meaning": "onların",
         "level": "A2"
     },
     {
@@ -36413,31 +36413,31 @@
     {
         "id": 10900,
         "word": "Buying",
-        "meaning": "satÄ±n alÄ±yor",
+        "meaning": "satın alıyor",
         "level": "A2"
     },
     {
         "id": 10901,
         "word": "Earned",
-        "meaning": "kazandÄ±",
+        "meaning": "kazandı",
         "level": "A2"
     },
     {
         "id": 10902,
         "word": "Received",
-        "meaning": "aldÄ±",
+        "meaning": "aldı",
         "level": "A2"
     },
     {
         "id": 10903,
         "word": "Arrived",
-        "meaning": "vardÄ±",
+        "meaning": "vardı",
         "level": "A2"
     },
     {
         "id": 10904,
         "word": "Sent",
-        "meaning": "gÃ¶nderdi",
+        "meaning": "gönderdi",
         "level": "A2"
     },
     {
@@ -36449,13 +36449,13 @@
     {
         "id": 10906,
         "word": "Teaching",
-        "meaning": "Ã¶ÄŸretme",
+        "meaning": "öğretme",
         "level": "A2"
     },
     {
         "id": 10907,
         "word": "Others",
-        "meaning": "diÄŸerleri",
+        "meaning": "diğerleri",
         "level": "A2"
     },
     {
@@ -36467,31 +36467,31 @@
     {
         "id": 10909,
         "word": "Children",
-        "meaning": "Ã§ocuklar",
+        "meaning": "çocuklar",
         "level": "A2"
     },
     {
         "id": 10910,
         "word": "Taught",
-        "meaning": "Ã¶ÄŸretti",
+        "meaning": "öğretti",
         "level": "A2"
     },
     {
         "id": 10911,
         "word": "Woke",
-        "meaning": "uyandÄ±",
+        "meaning": "uyandı",
         "level": "A2"
     },
     {
         "id": 10912,
         "word": "Rising",
-        "meaning": "yÃ¼kseliyor",
+        "meaning": "yükseliyor",
         "level": "A2"
     },
     {
         "id": 10913,
         "word": "Seagulls",
-        "meaning": "martÄ±lar",
+        "meaning": "martılar",
         "level": "A2"
     },
     {
@@ -36575,7 +36575,7 @@
     {
         "id": 10927,
         "word": "Cart",
-        "meaning": "el arabasÄ±",
+        "meaning": "el arabası",
         "level": "A2"
     },
     {
@@ -36599,19 +36599,19 @@
     {
         "id": 10931,
         "word": "Maiden",
-        "meaning": "kÄ±z (kule vb. iÃ§in)",
+        "meaning": "kız (kule vb. için)",
         "level": "A2"
     },
     {
         "id": 10932,
         "word": "Crossing",
-        "meaning": "geÃ§iÅŸ",
+        "meaning": "geçiş",
         "level": "A2"
     },
     {
         "id": 10933,
         "word": "Continents",
-        "meaning": "kÄ±talar",
+        "meaning": "kıtalar",
         "level": "A2"
     },
     {
@@ -36629,7 +36629,7 @@
     {
         "id": 10936,
         "word": "Starting",
-        "meaning": "baÅŸlÄ±yor",
+        "meaning": "başlıyor",
         "level": "A2"
     },
     {
@@ -36659,7 +36659,7 @@
     {
         "id": 10941,
         "word": "Hundreds",
-        "meaning": "yÃ¼zlerce",
+        "meaning": "yüzlerce",
         "level": "A2"
     },
     {
@@ -36671,7 +36671,7 @@
     {
         "id": 10943,
         "word": "Wars",
-        "meaning": "savaÅŸlar",
+        "meaning": "savaşlar",
         "level": "A2"
     },
     {
@@ -36719,7 +36719,7 @@
     {
         "id": 10951,
         "word": "Roman",
-        "meaning": "RomalÄ±/Roma",
+        "meaning": "Romalı/Roma",
         "level": "A2"
     },
     {
@@ -36737,7 +36737,7 @@
     {
         "id": 10954,
         "word": "Stones",
-        "meaning": "taÅŸlar",
+        "meaning": "taşlar",
         "level": "A2"
     },
     {
@@ -36749,19 +36749,19 @@
     {
         "id": 10956,
         "word": "Preserved",
-        "meaning": "korunmuÅŸ",
+        "meaning": "korunmuş",
         "level": "A2"
     },
     {
         "id": 10957,
         "word": "Sunken",
-        "meaning": "batÄ±k",
+        "meaning": "batık",
         "level": "A2"
     },
     {
         "id": 10958,
         "word": "Sailed",
-        "meaning": "yelken aÃ§tÄ±",
+        "meaning": "yelken açtı",
         "level": "A2"
     },
     {
@@ -36773,19 +36773,19 @@
     {
         "id": 10960,
         "word": "Carved",
-        "meaning": "oyulmuÅŸ",
+        "meaning": "oyulmuş",
         "level": "A2"
     },
     {
         "id": 10961,
         "word": "Cliffs",
-        "meaning": "kayalÄ±klar",
+        "meaning": "kayalıklar",
         "level": "A2"
     },
     {
         "id": 10962,
         "word": "Doors",
-        "meaning": "kapÄ±lar",
+        "meaning": "kapılar",
         "level": "A2"
     },
     {
@@ -36797,19 +36797,19 @@
     {
         "id": 10964,
         "word": "Largest",
-        "meaning": "en bÃ¼yÃ¼k",
+        "meaning": "en büyük",
         "level": "A2"
     },
     {
         "id": 10965,
         "word": "Cities",
-        "meaning": "ÅŸehirler",
+        "meaning": "şehirler",
         "level": "A2"
     },
     {
         "id": 10966,
         "word": "Magnificent",
-        "meaning": "muhteÅŸem",
+        "meaning": "muhteşem",
         "level": "A2"
     },
     {
@@ -36827,13 +36827,13 @@
     {
         "id": 10969,
         "word": "Scrolls",
-        "meaning": "parÅŸÃ¶menler",
+        "meaning": "parşömenler",
         "level": "A2"
     },
     {
         "id": 10970,
         "word": "Clapped",
-        "meaning": "alkÄ±ÅŸladÄ±",
+        "meaning": "alkışladı",
         "level": "A2"
     },
     {
@@ -36863,7 +36863,7 @@
     {
         "id": 10975,
         "word": "Healing",
-        "meaning": "iyileÅŸtirici",
+        "meaning": "iyileştirici",
         "level": "A2"
     },
     {
@@ -36875,25 +36875,25 @@
     {
         "id": 10977,
         "word": "Lagoon",
-        "meaning": "lagÃ¼n",
+        "meaning": "lagün",
         "level": "A2"
     },
     {
         "id": 10978,
         "word": "Paragliding",
-        "meaning": "yamaÃ§ paraÅŸÃ¼tÃ¼",
+        "meaning": "yamaç paraşütü",
         "level": "A2"
     },
     {
         "id": 10979,
         "word": "Jumped",
-        "meaning": "atladÄ±",
+        "meaning": "atladı",
         "level": "A2"
     },
     {
         "id": 10980,
         "word": "Parachute",
-        "meaning": "paraÅŸÃ¼t",
+        "meaning": "paraşüt",
         "level": "A2"
     },
     {
@@ -36923,31 +36923,31 @@
     {
         "id": 10985,
         "word": "Tomb",
-        "meaning": "mezar/tÃ¼rbe",
+        "meaning": "mezar/türbe",
         "level": "A2"
     },
     {
         "id": 10986,
         "word": "Skyscrapers",
-        "meaning": "gÃ¶kdelenler",
+        "meaning": "gökdelenler",
         "level": "A2"
     },
     {
         "id": 10987,
         "word": "Leaving",
-        "meaning": "ayrÄ±lÄ±yor",
+        "meaning": "ayrılıyor",
         "level": "A2"
     },
     {
         "id": 10988,
         "word": "Mesopotamian",
-        "meaning": "MezopotamyalÄ±",
+        "meaning": "Mezopotamyalı",
         "level": "A2"
     },
     {
         "id": 10989,
         "word": "Syriac",
-        "meaning": "SÃ¼ryani",
+        "meaning": "Süryani",
         "level": "A2"
     },
     {
@@ -36965,13 +36965,13 @@
     {
         "id": 10992,
         "word": "Gods",
-        "meaning": "tanrÄ±lar",
+        "meaning": "tanrılar",
         "level": "A2"
     },
     {
         "id": 10993,
         "word": "Highest",
-        "meaning": "en yÃ¼ksek",
+        "meaning": "en yüksek",
         "level": "A2"
     },
     {
@@ -36995,19 +36995,19 @@
     {
         "id": 10997,
         "word": "Reflections",
-        "meaning": "yansÄ±malar",
+        "meaning": "yansımalar",
         "level": "A2"
     },
     {
         "id": 10998,
         "word": "Memories",
-        "meaning": "anÄ±larÄ±",
+        "meaning": "anıları",
         "level": "A2"
     },
     {
         "id": 10999,
         "word": "Orchards",
-        "meaning": "meyve bahÃ§eleri",
+        "meaning": "meyve bahçeleri",
         "level": "B1"
     },
     {
@@ -37019,31 +37019,31 @@
     {
         "id": 11001,
         "word": "Encouraged",
-        "meaning": "teÅŸvik etti",
+        "meaning": "teşvik etti",
         "level": "B1"
     },
     {
         "id": 11002,
         "word": "Students",
-        "meaning": "Ã¶ÄŸrenciler",
+        "meaning": "öğrenciler",
         "level": "B1"
     },
     {
         "id": 11003,
         "word": "Companies",
-        "meaning": "ÅŸirketler",
+        "meaning": "şirketler",
         "level": "B1"
     },
     {
         "id": 11004,
         "word": "Birthplace",
-        "meaning": "doÄŸum yeri",
+        "meaning": "doğum yeri",
         "level": "B1"
     },
     {
         "id": 11005,
         "word": "Shows",
-        "meaning": "gÃ¶sterir/sergiler",
+        "meaning": "gösterir/sergiler",
         "level": "B1"
     },
     {
@@ -37061,13 +37061,13 @@
     {
         "id": 11008,
         "word": "Transistor",
-        "meaning": "transistÃ¶r",
+        "meaning": "transistör",
         "level": "B1"
     },
     {
         "id": 11009,
         "word": "Scientists",
-        "meaning": "bilim insanlarÄ±",
+        "meaning": "bilim insanları",
         "level": "B1"
     },
     {
@@ -37085,19 +37085,19 @@
     {
         "id": 11012,
         "word": "Tubes",
-        "meaning": "tÃ¼pler",
+        "meaning": "tüpler",
         "level": "B1"
     },
     {
         "id": 11013,
         "word": "Smaller",
-        "meaning": "daha kÃ¼Ã§Ã¼k",
+        "meaning": "daha küçük",
         "level": "B1"
     },
     {
         "id": 11014,
         "word": "Faster",
-        "meaning": "daha hÄ±zlÄ±",
+        "meaning": "daha hızlı",
         "level": "B1"
     },
     {
@@ -37109,7 +37109,7 @@
     {
         "id": 11016,
         "word": "Hired",
-        "meaning": "iÅŸe aldÄ±",
+        "meaning": "işe aldı",
         "level": "B1"
     },
     {
@@ -37121,7 +37121,7 @@
     {
         "id": 11018,
         "word": "Engineers",
-        "meaning": "mÃ¼hendisler",
+        "meaning": "mühendisler",
         "level": "B1"
     },
     {
@@ -37133,7 +37133,7 @@
     {
         "id": 11020,
         "word": "Semiconductor",
-        "meaning": "yarÄ± iletken",
+        "meaning": "yarı iletken",
         "level": "B1"
     },
     {
@@ -37145,13 +37145,13 @@
     {
         "id": 11022,
         "word": "Refers",
-        "meaning": "atÄ±fta bulunur/ifade eder",
+        "meaning": "atıfta bulunur/ifade eder",
         "level": "B1"
     },
     {
         "id": 11023,
         "word": "Semiconductors",
-        "meaning": "yarÄ± iletkenler",
+        "meaning": "yarı iletkenler",
         "level": "B1"
     },
     {
@@ -37163,37 +37163,37 @@
     {
         "id": 11025,
         "word": "Created",
-        "meaning": "yaratÄ±ldÄ±",
+        "meaning": "yaratıldı",
         "level": "B1"
     },
     {
         "id": 11026,
         "word": "Tiny",
-        "meaning": "kÃ¼Ã§Ã¼cÃ¼k",
+        "meaning": "küçücük",
         "level": "B1"
     },
     {
         "id": 11027,
         "word": "Homebrew",
-        "meaning": "ev yapÄ±mÄ±",
+        "meaning": "ev yapımı",
         "level": "B1"
     },
     {
         "id": 11028,
         "word": "Hobbyists",
-        "meaning": "hobi meraklÄ±larÄ±",
+        "meaning": "hobi meraklıları",
         "level": "B1"
     },
     {
         "id": 11029,
         "word": "Members",
-        "meaning": "Ã¼yeler",
+        "meaning": "üyeler",
         "level": "B1"
     },
     {
         "id": 11030,
         "word": "Built",
-        "meaning": "inÅŸa edildi",
+        "meaning": "inşa edildi",
         "level": "B1"
     },
     {
@@ -37223,7 +37223,7 @@
     {
         "id": 11035,
         "word": "Networking",
-        "meaning": "aÄŸ kurma",
+        "meaning": "ağ kurma",
         "level": "B1"
     },
     {
@@ -37241,13 +37241,13 @@
     {
         "id": 11038,
         "word": "Though",
-        "meaning": "raÄŸmen",
+        "meaning": "rağmen",
         "level": "B1"
     },
     {
         "id": 11039,
         "word": "Powered",
-        "meaning": "gÃ¼Ã§lendirildi",
+        "meaning": "güçlendirildi",
         "level": "B1"
     },
     {
@@ -37259,13 +37259,13 @@
     {
         "id": 11041,
         "word": "Failed",
-        "meaning": "baÅŸarÄ±sÄ±z oldu",
+        "meaning": "başarısız oldu",
         "level": "B1"
     },
     {
         "id": 11042,
         "word": "Thought",
-        "meaning": "dÃ¼ÅŸÃ¼nen/dÃ¼ÅŸÃ¼nce",
+        "meaning": "düşünen/düşünce",
         "level": "B1"
     },
     {
@@ -37289,7 +37289,7 @@
     {
         "id": 11046,
         "word": "Released",
-        "meaning": "yayÄ±nlandÄ±",
+        "meaning": "yayınlandı",
         "level": "B1"
     },
     {
@@ -37301,13 +37301,13 @@
     {
         "id": 11048,
         "word": "Connected",
-        "meaning": "baÄŸlÄ±",
+        "meaning": "bağlı",
         "level": "B1"
     },
     {
         "id": 11049,
         "word": "Streaming",
-        "meaning": "akÄ±ÅŸ (video/ses)",
+        "meaning": "akış (video/ses)",
         "level": "B1"
     },
     {
@@ -37331,7 +37331,7 @@
     {
         "id": 11053,
         "word": "Computing",
-        "meaning": "bilgi iÅŸlem",
+        "meaning": "bilgi işlem",
         "level": "B1"
     },
     {
@@ -37343,7 +37343,7 @@
     {
         "id": 11055,
         "word": "Rented",
-        "meaning": "kiralÄ±k",
+        "meaning": "kiralık",
         "level": "B1"
     },
     {
@@ -37355,7 +37355,7 @@
     {
         "id": 11057,
         "word": "Startups",
-        "meaning": "yeni giriÅŸimler",
+        "meaning": "yeni girişimler",
         "level": "B1"
     },
     {
@@ -37367,19 +37367,19 @@
     {
         "id": 11059,
         "word": "Interests",
-        "meaning": "ilgi alanlarÄ±/Ã§Ä±karlar",
+        "meaning": "ilgi alanları/çıkarlar",
         "level": "B1"
     },
     {
         "id": 11060,
         "word": "Industries",
-        "meaning": "endÃ¼striler",
+        "meaning": "endüstriler",
         "level": "B1"
     },
     {
         "id": 11061,
         "word": "Frontier",
-        "meaning": "sÄ±nÄ±r/Ã¶n saflar",
+        "meaning": "sınır/ön saflar",
         "level": "B1"
     },
     {
@@ -37391,7 +37391,7 @@
     {
         "id": 11063,
         "word": "Failing",
-        "meaning": "baÅŸarÄ±sÄ±z olma",
+        "meaning": "başarısız olma",
         "level": "B1"
     },
     {
@@ -37403,13 +37403,13 @@
     {
         "id": 11065,
         "word": "Venture",
-        "meaning": "riskli giriÅŸim",
+        "meaning": "riskli girişim",
         "level": "B1"
     },
     {
         "id": 11066,
         "word": "Investors",
-        "meaning": "yatÄ±rÄ±mcÄ±lar",
+        "meaning": "yatırımcılar",
         "level": "B1"
     },
     {
@@ -37445,13 +37445,13 @@
     {
         "id": 11072,
         "word": "Struggling",
-        "meaning": "mÃ¼cadele eden",
+        "meaning": "mücadele eden",
         "level": "B1"
     },
     {
         "id": 11073,
         "word": "Minorities",
-        "meaning": "azÄ±nlÄ±klar",
+        "meaning": "azınlıklar",
         "level": "B1"
     },
     {
@@ -37463,7 +37463,7 @@
     {
         "id": 11075,
         "word": "Concerns",
-        "meaning": "endiÅŸeler",
+        "meaning": "endişeler",
         "level": "B1"
     },
     {
@@ -37475,19 +37475,19 @@
     {
         "id": 11077,
         "word": "Unicorns",
-        "meaning": "milyar dolarlÄ±k giriÅŸimler",
+        "meaning": "milyar dolarlık girişimler",
         "level": "B1"
     },
     {
         "id": 11078,
         "word": "Unicorn",
-        "meaning": "tek boynuzlu at/nadir giriÅŸim",
+        "meaning": "tek boynuzlu at/nadir girişim",
         "level": "B1"
     },
     {
         "id": 11079,
         "word": "Startup",
-        "meaning": "giriÅŸim",
+        "meaning": "girişim",
         "level": "B1"
     },
     {
@@ -37499,7 +37499,7 @@
     {
         "id": 11081,
         "word": "Workers",
-        "meaning": "iÅŸÃ§iler",
+        "meaning": "işçiler",
         "level": "B1"
     },
     {
@@ -37523,7 +37523,7 @@
     {
         "id": 11085,
         "word": "Editing",
-        "meaning": "dÃ¼zenleme",
+        "meaning": "düzenleme",
         "level": "B1"
     },
     {
@@ -37535,7 +37535,7 @@
     {
         "id": 11087,
         "word": "Developed",
-        "meaning": "geliÅŸtirildi",
+        "meaning": "geliştirildi",
         "level": "B1"
     },
     {
@@ -37547,7 +37547,7 @@
     {
         "id": 11089,
         "word": "Cybersecurity",
-        "meaning": "siber gÃ¼venlik",
+        "meaning": "siber güvenlik",
         "level": "B1"
     },
     {
@@ -37559,7 +37559,7 @@
     {
         "id": 11091,
         "word": "Solving",
-        "meaning": "Ã§Ã¶zme",
+        "meaning": "çözme",
         "level": "B1"
     },
     {
@@ -37571,7 +37571,7 @@
     {
         "id": 11093,
         "word": "Remains",
-        "meaning": "kalÄ±ntÄ±lar/kalÄ±r",
+        "meaning": "kalıntılar/kalır",
         "level": "B1"
     },
     {
@@ -37595,7 +37595,7 @@
     {
         "id": 11097,
         "word": "Happens",
-        "meaning": "olur/gerÃ§ekleÅŸir",
+        "meaning": "olur/gerçekleşir",
         "level": "B1"
     },
     {
@@ -37619,13 +37619,13 @@
     {
         "id": 11101,
         "word": "Growing",
-        "meaning": "bÃ¼yÃ¼yen",
+        "meaning": "büyüyen",
         "level": "B1"
     },
     {
         "id": 11102,
         "word": "Thinking",
-        "meaning": "dÃ¼ÅŸÃ¼nme",
+        "meaning": "düşünme",
         "level": "B1"
     },
     {
@@ -37649,7 +37649,7 @@
     {
         "id": 11106,
         "word": "Flourished",
-        "meaning": "geliÅŸti/serpildi",
+        "meaning": "gelişti/serpildi",
         "level": "B1"
     },
     {
@@ -37661,7 +37661,7 @@
     {
         "id": 11108,
         "word": "Plumbing",
-        "meaning": "su tesisatÄ±",
+        "meaning": "su tesisatı",
         "level": "B1"
     },
     {
@@ -37703,7 +37703,7 @@
     {
         "id": 11115,
         "word": "Erupted",
-        "meaning": "patladÄ± (yanardaÄŸ)",
+        "meaning": "patladı (yanardağ)",
         "level": "B1"
     },
     {
@@ -37715,19 +37715,19 @@
     {
         "id": 11117,
         "word": "Historians",
-        "meaning": "tarihÃ§iler",
+        "meaning": "tarihçiler",
         "level": "B1"
     },
     {
         "id": 11118,
         "word": "Inspired",
-        "meaning": "ilham aldÄ±",
+        "meaning": "ilham aldı",
         "level": "B1"
     },
     {
         "id": 11119,
         "word": "Centuries",
-        "meaning": "yÃ¼zyÄ±llar",
+        "meaning": "yüzyıllar",
         "level": "B1"
     },
     {
@@ -37745,7 +37745,7 @@
     {
         "id": 11122,
         "word": "Iliad",
-        "meaning": "Ä°lyada",
+        "meaning": "İlyada",
         "level": "B1"
     },
     {
@@ -37763,7 +37763,7 @@
     {
         "id": 11125,
         "word": "Suggests",
-        "meaning": "Ã¶ngÃ¶rÃ¼r/iddia eder",
+        "meaning": "öngörür/iddia eder",
         "level": "B1"
     },
     {
@@ -37775,55 +37775,55 @@
     {
         "id": 11127,
         "word": "Warriors",
-        "meaning": "savaÅŸÃ§Ä±lar",
+        "meaning": "savaşçılar",
         "level": "B1"
     },
     {
         "id": 11128,
         "word": "Cyclopean",
-        "meaning": "kiklopik (dev taÅŸlarla yapÄ±lmÄ±ÅŸ)",
+        "meaning": "kiklopik (dev taşlarla yapılmış)",
         "level": "B1"
     },
     {
         "id": 11129,
         "word": "Civilizations",
-        "meaning": "uygarlÄ±klar",
+        "meaning": "uygarlıklar",
         "level": "B1"
     },
     {
         "id": 11130,
         "word": "Collapsed",
-        "meaning": "Ã§Ã¶ktÃ¼",
+        "meaning": "çöktü",
         "level": "B1"
     },
     {
         "id": 11131,
         "word": "Disappeared",
-        "meaning": "gÃ¶zden kayboldu",
+        "meaning": "gözden kayboldu",
         "level": "B1"
     },
     {
         "id": 11132,
         "word": "Aren",
-        "meaning": "arena/kumsal (yanlÄ±ÅŸ yazÄ±m olabilir ama metne gÃ¶re)",
+        "meaning": "arena/kumsal (yanlış yazım olabilir ama metne göre)",
         "level": "B1"
     },
     {
         "id": 11133,
         "word": "Emerged",
-        "meaning": "ortaya Ã§Ä±ktÄ±",
+        "meaning": "ortaya çıktı",
         "level": "B1"
     },
     {
         "id": 11134,
         "word": "Underwater",
-        "meaning": "su altÄ±",
+        "meaning": "su altı",
         "level": "B1"
     },
     {
         "id": 11135,
         "word": "Discoveries",
-        "meaning": "keÅŸifler",
+        "meaning": "keşifler",
         "level": "B1"
     },
     {
@@ -37835,25 +37835,25 @@
     {
         "id": 11137,
         "word": "Shipwrecks",
-        "meaning": "gemi enkazlarÄ±",
+        "meaning": "gemi enkazları",
         "level": "B1"
     },
     {
         "id": 11138,
         "word": "Capsules",
-        "meaning": "kapsÃ¼ller",
+        "meaning": "kapsüller",
         "level": "B1"
     },
     {
         "id": 11139,
         "word": "Divers",
-        "meaning": "dalgÄ±Ã§lar",
+        "meaning": "dalgıçlar",
         "level": "B1"
     },
     {
         "id": 11140,
         "word": "Shipwreck",
-        "meaning": "gemi enkazÄ±",
+        "meaning": "gemi enkazı",
         "level": "B1"
     },
     {
@@ -37865,7 +37865,7 @@
     {
         "id": 11142,
         "word": "Temple",
-        "meaning": "tapÄ±nak",
+        "meaning": "tapınak",
         "level": "B1"
     },
     {
@@ -37913,13 +37913,13 @@
     {
         "id": 11150,
         "word": "Records",
-        "meaning": "kayÄ±tlar",
+        "meaning": "kayıtlar",
         "level": "B1"
     },
     {
         "id": 11151,
         "word": "Attacked",
-        "meaning": "saldÄ±rÄ±ya uÄŸradÄ±",
+        "meaning": "saldırıya uğradı",
         "level": "B1"
     },
     {
@@ -37931,31 +37931,31 @@
     {
         "id": 11153,
         "word": "Explained",
-        "meaning": "aÃ§Ä±kladÄ±",
+        "meaning": "açıkladı",
         "level": "B1"
     },
     {
         "id": 11154,
         "word": "Triangles",
-        "meaning": "Ã¼Ã§genler",
+        "meaning": "üçgenler",
         "level": "B1"
     },
     {
         "id": 11155,
         "word": "Numbers",
-        "meaning": "sayÄ±lar",
+        "meaning": "sayılar",
         "level": "B1"
     },
     {
         "id": 11156,
         "word": "Romans",
-        "meaning": "RomalÄ±lar",
+        "meaning": "Romalılar",
         "level": "B1"
     },
     {
         "id": 11157,
         "word": "Byzantines",
-        "meaning": "BizanslÄ±lar",
+        "meaning": "Bizanslılar",
         "level": "B1"
     },
     {
@@ -37967,13 +37967,13 @@
     {
         "id": 11159,
         "word": "Knights",
-        "meaning": "ÅŸÃ¶valyeler",
+        "meaning": "şövalyeler",
         "level": "B1"
     },
     {
         "id": 11160,
         "word": "Crusades",
-        "meaning": "haÃ§lÄ± seferleri",
+        "meaning": "haçlı seferleri",
         "level": "B1"
     },
     {
@@ -37985,7 +37985,7 @@
     {
         "id": 11162,
         "word": "Havens",
-        "meaning": "limanlar/sÄ±ÄŸÄ±naklar",
+        "meaning": "limanlar/sığınaklar",
         "level": "B1"
     },
     {
@@ -38009,13 +38009,13 @@
     {
         "id": 11166,
         "word": "Carrying",
-        "meaning": "taÅŸÄ±ma",
+        "meaning": "taşıma",
         "level": "B1"
     },
     {
         "id": 11167,
         "word": "Sponges",
-        "meaning": "sÃ¼ngerler",
+        "meaning": "süngerler",
         "level": "B1"
     },
     {
@@ -38027,13 +38027,13 @@
     {
         "id": 11169,
         "word": "Sponge",
-        "meaning": "sÃ¼nger",
+        "meaning": "sünger",
         "level": "B1"
     },
     {
         "id": 11170,
         "word": "Diving",
-        "meaning": "dalÄ±ÅŸ",
+        "meaning": "dalış",
         "level": "B1"
     },
     {
@@ -38045,13 +38045,13 @@
     {
         "id": 11172,
         "word": "Windmills",
-        "meaning": "yeldeÄŸirmenleri",
+        "meaning": "yeldeğirmenleri",
         "level": "B1"
     },
     {
         "id": 11173,
         "word": "Grind",
-        "meaning": "Ã¶ÄŸÃ¼tmek",
+        "meaning": "öğütmek",
         "level": "B1"
     },
     {
@@ -38069,7 +38069,7 @@
     {
         "id": 11176,
         "word": "Quarries",
-        "meaning": "taÅŸ ocaklarÄ±",
+        "meaning": "taş ocakları",
         "level": "B1"
     },
     {
@@ -38087,13 +38087,13 @@
     {
         "id": 11179,
         "word": "Provided",
-        "meaning": "saÄŸlandÄ±",
+        "meaning": "sağlandı",
         "level": "B1"
     },
     {
         "id": 11180,
         "word": "Libraries",
-        "meaning": "kÃ¼tÃ¼phaneler",
+        "meaning": "kütüphaneler",
         "level": "B1"
     },
     {
@@ -38105,19 +38105,19 @@
     {
         "id": 11182,
         "word": "Monastery",
-        "meaning": "manastÄ±r",
+        "meaning": "manastır",
         "level": "B1"
     },
     {
         "id": 11183,
         "word": "Containing",
-        "meaning": "iÃ§eren",
+        "meaning": "içeren",
         "level": "B1"
     },
     {
         "id": 11184,
         "word": "Manuscripts",
-        "meaning": "el yazmalarÄ±",
+        "meaning": "el yazmaları",
         "level": "B1"
     },
     {
@@ -38135,25 +38135,25 @@
     {
         "id": 11187,
         "word": "Zones",
-        "meaning": "bÃ¶lgeler",
+        "meaning": "bölgeler",
         "level": "B1"
     },
     {
         "id": 11188,
         "word": "Rebuilt",
-        "meaning": "yeniden inÅŸa edildi",
+        "meaning": "yeniden inşa edildi",
         "level": "B1"
     },
     {
         "id": 11189,
         "word": "Inscriptions",
-        "meaning": "yazÄ±tlar",
+        "meaning": "yazıtlar",
         "level": "B1"
     },
     {
         "id": 11190,
         "word": "Farmers",
-        "meaning": "Ã§iftÃ§iler",
+        "meaning": "çiftçiler",
         "level": "B1"
     },
     {
@@ -38165,7 +38165,7 @@
     {
         "id": 11192,
         "word": "Contains",
-        "meaning": "iÃ§erir",
+        "meaning": "içerir",
         "level": "B1"
     },
     {
@@ -38183,25 +38183,25 @@
     {
         "id": 11195,
         "word": "Fleece",
-        "meaning": "post/yapaÄŸÄ±",
+        "meaning": "post/yapağı",
         "level": "B1"
     },
     {
         "id": 11196,
         "word": "Cultures",
-        "meaning": "kÃ¼ltÃ¼rler",
+        "meaning": "kültürler",
         "level": "B1"
     },
     {
         "id": 11197,
         "word": "Instruments",
-        "meaning": "enstrÃ¼manlar",
+        "meaning": "enstrümanlar",
         "level": "B1"
     },
     {
         "id": 11198,
         "word": "Roots",
-        "meaning": "kÃ¶kler",
+        "meaning": "kökler",
         "level": "B1"
     },
     {
@@ -38231,7 +38231,7 @@
     {
         "id": 11203,
         "word": "Temples",
-        "meaning": "tapÄ±naklar",
+        "meaning": "tapınaklar",
         "level": "B1"
     },
     {
@@ -38249,7 +38249,7 @@
     {
         "id": 11206,
         "word": "Coastal",
-        "meaning": "kÄ±yÄ±",
+        "meaning": "kıyı",
         "level": "B1"
     },
     {
@@ -38273,7 +38273,7 @@
     {
         "id": 11210,
         "word": "Ruled",
-        "meaning": "yÃ¶netildi",
+        "meaning": "yönetildi",
         "level": "B1"
     },
     {
@@ -38285,7 +38285,7 @@
     {
         "id": 11212,
         "word": "Pottery",
-        "meaning": "Ã§Ã¶mlekÃ§ilik",
+        "meaning": "çömlekçilik",
         "level": "B1"
     },
     {
@@ -38315,13 +38315,13 @@
     {
         "id": 11217,
         "word": "Poems",
-        "meaning": "ÅŸiirler",
+        "meaning": "şiirler",
         "level": "B1"
     },
     {
         "id": 11218,
         "word": "Shaped",
-        "meaning": "ÅŸekillendirildi",
+        "meaning": "şekillendirildi",
         "level": "B1"
     },
     {
@@ -38333,7 +38333,7 @@
     {
         "id": 11220,
         "word": "Fires",
-        "meaning": "yangÄ±nlar",
+        "meaning": "yangınlar",
         "level": "B1"
     },
     {
@@ -38363,7 +38363,7 @@
     {
         "id": 11225,
         "word": "Evaporating",
-        "meaning": "buharlaÅŸan",
+        "meaning": "buharlaşan",
         "level": "B1"
     },
     {
@@ -38375,7 +38375,7 @@
     {
         "id": 11227,
         "word": "Steamships",
-        "meaning": "buharlÄ± gemiler",
+        "meaning": "buharlı gemiler",
         "level": "B1"
     },
     {
@@ -38417,7 +38417,7 @@
     {
         "id": 11234,
         "word": "Overfishing",
-        "meaning": "aÅŸÄ±rÄ± avlanma",
+        "meaning": "aşırı avlanma",
         "level": "B1"
     },
     {
@@ -38435,13 +38435,13 @@
     {
         "id": 11237,
         "word": "Scanners",
-        "meaning": "tarayÄ±cÄ±lar",
+        "meaning": "tarayıcılar",
         "level": "B1"
     },
     {
         "id": 11238,
         "word": "Helping",
-        "meaning": "yardÄ±m etme",
+        "meaning": "yardım etme",
         "level": "B1"
     },
     {
@@ -38477,19 +38477,19 @@
     {
         "id": 11244,
         "word": "Timeless",
-        "meaning": "zamansÄ±z",
+        "meaning": "zamansız",
         "level": "B1"
     },
     {
         "id": 11245,
         "word": "Definition",
-        "meaning": "tanÄ±m",
+        "meaning": "tanım",
         "level": "B2"
     },
     {
         "id": 11246,
         "word": "Distinction",
-        "meaning": "ayrÄ±m",
+        "meaning": "ayrım",
         "level": "B2"
     },
     {
@@ -38507,19 +38507,19 @@
     {
         "id": 11249,
         "word": "Cognition",
-        "meaning": "biliÅŸ/kavrama",
+        "meaning": "biliş/kavrama",
         "level": "B2"
     },
     {
         "id": 11250,
         "word": "Blurred",
-        "meaning": "bulanÄ±klaÅŸmÄ±ÅŸ",
+        "meaning": "bulanıklaşmış",
         "level": "B2"
     },
     {
         "id": 11251,
         "word": "Proposed",
-        "meaning": "Ã¶nerildi",
+        "meaning": "önerildi",
         "level": "B2"
     },
     {
@@ -38531,13 +38531,13 @@
     {
         "id": 11253,
         "word": "Observable",
-        "meaning": "gÃ¶zlemlenebilir",
+        "meaning": "gözlemlenebilir",
         "level": "B2"
     },
     {
         "id": 11254,
         "word": "Foundations",
-        "meaning": "temeller/vakÄ±flar",
+        "meaning": "temeller/vakıflar",
         "level": "B2"
     },
     {
@@ -38549,7 +38549,7 @@
     {
         "id": 11256,
         "word": "Networks",
-        "meaning": "aÄŸlar",
+        "meaning": "ağlar",
         "level": "B2"
     },
     {
@@ -38567,7 +38567,7 @@
     {
         "id": 11259,
         "word": "Explicit",
-        "meaning": "aÃ§Ä±k/belirgin",
+        "meaning": "açık/belirgin",
         "level": "B2"
     },
     {
@@ -38579,7 +38579,7 @@
     {
         "id": 11261,
         "word": "Trained",
-        "meaning": "eÄŸitildi",
+        "meaning": "eğitildi",
         "level": "B2"
     },
     {
@@ -38591,13 +38591,13 @@
     {
         "id": 11263,
         "word": "Prejudices",
-        "meaning": "Ã¶nyargÄ±lar",
+        "meaning": "önyargılar",
         "level": "B2"
     },
     {
         "id": 11264,
         "word": "Inevitably",
-        "meaning": "kaÃ§Ä±nÄ±lmaz olarak",
+        "meaning": "kaçınılmaz olarak",
         "level": "B2"
     },
     {
@@ -38609,7 +38609,7 @@
     {
         "id": 11266,
         "word": "Biases",
-        "meaning": "taraflÄ±lÄ±k/Ã¶nyargÄ±lar",
+        "meaning": "taraflılık/önyargılar",
         "level": "B2"
     },
     {
@@ -38627,25 +38627,25 @@
     {
         "id": 11269,
         "word": "Ensuring",
-        "meaning": "saÄŸlama/garanti etme",
+        "meaning": "sağlama/garanti etme",
         "level": "B2"
     },
     {
         "id": 11270,
         "word": "Hiring",
-        "meaning": "iÅŸe alÄ±m",
+        "meaning": "işe alım",
         "level": "B2"
     },
     {
         "id": 11271,
         "word": "Enforcement",
-        "meaning": "yÃ¼rÃ¼tme/uygulama",
+        "meaning": "yürütme/uygulama",
         "level": "B2"
     },
     {
         "id": 11272,
         "word": "Discriminate",
-        "meaning": "ayrÄ±mcÄ±lÄ±k yapmak",
+        "meaning": "ayrımcılık yapmak",
         "level": "B2"
     },
     {
@@ -38657,19 +38657,19 @@
     {
         "id": 11274,
         "word": "Ethicists",
-        "meaning": "etik uzmanlarÄ±",
+        "meaning": "etik uzmanları",
         "level": "B2"
     },
     {
         "id": 11275,
         "word": "Transparency",
-        "meaning": "ÅŸeffaflÄ±k",
+        "meaning": "şeffaflık",
         "level": "B2"
     },
     {
         "id": 11276,
         "word": "Explainability",
-        "meaning": "aÃ§Ä±klanabilirlik",
+        "meaning": "açıklanabilirlik",
         "level": "B2"
     },
     {
@@ -38681,13 +38681,13 @@
     {
         "id": 11278,
         "word": "Citizens",
-        "meaning": "vatandaÅŸlar",
+        "meaning": "vatandaşlar",
         "level": "B2"
     },
     {
         "id": 11279,
         "word": "Automated",
-        "meaning": "otomatikleÅŸtirilmiÅŸ",
+        "meaning": "otomatikleştirilmiş",
         "level": "B2"
     },
     {
@@ -38705,7 +38705,7 @@
     {
         "id": 11282,
         "word": "Vehicles",
-        "meaning": "araÃ§lar",
+        "meaning": "araçlar",
         "level": "B2"
     },
     {
@@ -38723,19 +38723,19 @@
     {
         "id": 11285,
         "word": "Trolley",
-        "meaning": "tramvay/el arabasÄ±",
+        "meaning": "tramvay/el arabası",
         "level": "B2"
     },
     {
         "id": 11286,
         "word": "Prioritize",
-        "meaning": "Ã¶nceliklendirmek",
+        "meaning": "önceliklendirmek",
         "level": "B2"
     },
     {
         "id": 11287,
         "word": "Unavoidable",
-        "meaning": "kaÃ§Ä±nÄ±lmaz",
+        "meaning": "kaçınılmaz",
         "level": "B2"
     },
     {
@@ -38771,13 +38771,13 @@
     {
         "id": 11293,
         "word": "Facial",
-        "meaning": "yÃ¼zle ilgili",
+        "meaning": "yüzle ilgili",
         "level": "B2"
     },
     {
         "id": 11294,
         "word": "Predictive",
-        "meaning": "Ã¶ngÃ¶rÃ¼cÃ¼",
+        "meaning": "öngörücü",
         "level": "B2"
     },
     {
@@ -38801,7 +38801,7 @@
     {
         "id": 11298,
         "word": "Products",
-        "meaning": "Ã¼rÃ¼nler",
+        "meaning": "ürünler",
         "level": "B2"
     },
     {
@@ -38837,7 +38837,7 @@
     {
         "id": 11304,
         "word": "Transformed",
-        "meaning": "dÃ¶nÃ¼ÅŸtÃ¼rÃ¼ldÃ¼",
+        "meaning": "dönüştürüldü",
         "level": "B2"
     },
     {
@@ -38849,13 +38849,13 @@
     {
         "id": 11306,
         "word": "Debating",
-        "meaning": "tartÄ±ÅŸma",
+        "meaning": "tartışma",
         "level": "B2"
     },
     {
         "id": 11307,
         "word": "Decouple",
-        "meaning": "ayÄ±rmak/baÄŸlantÄ±yÄ± kesmek",
+        "meaning": "ayırmak/bağlantıyı kesmek",
         "level": "B2"
     },
     {
@@ -38873,19 +38873,19 @@
     {
         "id": 11310,
         "word": "Poses",
-        "meaning": "oluÅŸturur/poz verir",
+        "meaning": "oluşturur/poz verir",
         "level": "B2"
     },
     {
         "id": 11311,
         "word": "Processes",
-        "meaning": "sÃ¼reÃ§ler",
+        "meaning": "süreçler",
         "level": "B2"
     },
     {
         "id": 11312,
         "word": "Misinformation",
-        "meaning": "dezenformasyon/yanlÄ±ÅŸ bilgi",
+        "meaning": "dezenformasyon/yanlış bilgi",
         "level": "B2"
     },
     {
@@ -38909,25 +38909,25 @@
     {
         "id": 11316,
         "word": "Overwhelming",
-        "meaning": "ezici/bunaltÄ±cÄ±",
+        "meaning": "ezici/bunaltıcı",
         "level": "B2"
     },
     {
         "id": 11317,
         "word": "Distinguish",
-        "meaning": "ayÄ±rt etmek",
+        "meaning": "ayırt etmek",
         "level": "B2"
     },
     {
         "id": 11318,
         "word": "Warfare",
-        "meaning": "savaÅŸ/harp",
+        "meaning": "savaş/harp",
         "level": "B2"
     },
     {
         "id": 11319,
         "word": "Lethal",
-        "meaning": "Ã¶lÃ¼mcÃ¼l",
+        "meaning": "ölümcül",
         "level": "B2"
     },
     {
@@ -38945,7 +38945,7 @@
     {
         "id": 11322,
         "word": "Intervention",
-        "meaning": "mÃ¼dahale",
+        "meaning": "müdahale",
         "level": "B2"
     },
     {
@@ -38963,19 +38963,19 @@
     {
         "id": 11325,
         "word": "Frameworks",
-        "meaning": "Ã§erÃ§eveler/yapÄ±lar",
+        "meaning": "çerçeveler/yapılar",
         "level": "B2"
     },
     {
         "id": 11326,
         "word": "Makers",
-        "meaning": "yapÄ±cÄ±lar/karar vericiler",
+        "meaning": "yapıcılar/karar vericiler",
         "level": "B2"
     },
     {
         "id": 11327,
         "word": "Super",
-        "meaning": "sÃ¼per",
+        "meaning": "süper",
         "level": "B2"
     },
     {
@@ -38987,37 +38987,37 @@
     {
         "id": 11329,
         "word": "Aligned",
-        "meaning": "hizalanmÄ±ÅŸ",
+        "meaning": "hizalanmış",
         "level": "B2"
     },
     {
         "id": 11330,
         "word": "Values",
-        "meaning": "deÄŸerler",
+        "meaning": "değerler",
         "level": "B2"
     },
     {
         "id": 11331,
         "word": "Instrumental",
-        "meaning": "enstrÃ¼mantal/araÃ§sal",
+        "meaning": "enstrümantal/araçsal",
         "level": "B2"
     },
     {
         "id": 11332,
         "word": "Convergence",
-        "meaning": "yakÄ±nsama",
+        "meaning": "yakınsama",
         "level": "B2"
     },
     {
         "id": 11333,
         "word": "Harmless",
-        "meaning": "zararsÄ±z",
+        "meaning": "zararsız",
         "level": "B2"
     },
     {
         "id": 11334,
         "word": "Consumes",
-        "meaning": "tÃ¼ketir",
+        "meaning": "tüketir",
         "level": "B2"
     },
     {
@@ -39047,13 +39047,13 @@
     {
         "id": 11339,
         "word": "Anthropomorphism",
-        "meaning": "insan biÃ§imcilik",
+        "meaning": "insan biçimcilik",
         "level": "B2"
     },
     {
         "id": 11340,
         "word": "Tendency",
-        "meaning": "eÄŸilim",
+        "meaning": "eğilim",
         "level": "B2"
     },
     {
@@ -39071,7 +39071,7 @@
     {
         "id": 11343,
         "word": "Inanimate",
-        "meaning": "cansÄ±z",
+        "meaning": "cansız",
         "level": "B2"
     },
     {
@@ -39083,7 +39083,7 @@
     {
         "id": 11345,
         "word": "Sophisticated",
-        "meaning": "sofistike/geliÅŸmiÅŸ",
+        "meaning": "sofistike/gelişmiş",
         "level": "B2"
     },
     {
@@ -39095,19 +39095,19 @@
     {
         "id": 11347,
         "word": "Facing",
-        "meaning": "yÃ¼zleÅŸmek",
+        "meaning": "yüzleşmek",
         "level": "B2"
     },
     {
         "id": 11348,
         "word": "Isolation",
-        "meaning": "izolasyon/yalÄ±tÄ±m",
+        "meaning": "izolasyon/yalıtım",
         "level": "B2"
     },
     {
         "id": 11349,
         "word": "Companions",
-        "meaning": "arkadaÅŸlar/eÅŸlikÃ§iler",
+        "meaning": "arkadaşlar/eşlikçiler",
         "level": "B2"
     },
     {
@@ -39125,19 +39125,19 @@
     {
         "id": 11352,
         "word": "Discarded",
-        "meaning": "atÄ±lmÄ±ÅŸ/Ä±skartaya Ã§Ä±karÄ±lmÄ±ÅŸ",
+        "meaning": "atılmış/ıskartaya çıkarılmış",
         "level": "B2"
     },
     {
         "id": 11353,
         "word": "Governments",
-        "meaning": "hÃ¼kÃ¼metler",
+        "meaning": "hükümetler",
         "level": "B2"
     },
     {
         "id": 11354,
         "word": "Passing",
-        "meaning": "geÃ§me",
+        "meaning": "geçme",
         "level": "B2"
     },
     {
@@ -39149,31 +39149,31 @@
     {
         "id": 11356,
         "word": "Corporations",
-        "meaning": "ÅŸirketler/kurumlar",
+        "meaning": "şirketler/kurumlar",
         "level": "B2"
     },
     {
         "id": 11357,
         "word": "Implications",
-        "meaning": "sonuÃ§lar/etkiler",
+        "meaning": "sonuçlar/etkiler",
         "level": "B2"
     },
     {
         "id": 11358,
         "word": "Safer",
-        "meaning": "daha gÃ¼venli",
+        "meaning": "daha güvenli",
         "level": "B2"
     },
     {
         "id": 11359,
         "word": "Openly",
-        "meaning": "aÃ§Ä±kÃ§a",
+        "meaning": "açıkça",
         "level": "B2"
     },
     {
         "id": 11360,
         "word": "Actors",
-        "meaning": "aktÃ¶rler",
+        "meaning": "aktörler",
         "level": "B2"
     },
     {
@@ -39185,7 +39185,7 @@
     {
         "id": 11362,
         "word": "Futurists",
-        "meaning": "fÃ¼tÃ¼ristler",
+        "meaning": "fütüristler",
         "level": "B2"
     },
     {
@@ -39197,13 +39197,13 @@
     {
         "id": 11364,
         "word": "Interfaces",
-        "meaning": "arayÃ¼zler",
+        "meaning": "arayüzler",
         "level": "B2"
     },
     {
         "id": 11365,
         "word": "Connecting",
-        "meaning": "baÄŸlama",
+        "meaning": "bağlama",
         "level": "B2"
     },
     {
@@ -39215,7 +39215,7 @@
     {
         "id": 11367,
         "word": "Directly",
-        "meaning": "doÄŸrudan",
+        "meaning": "doğrudan",
         "level": "B2"
     },
     {
@@ -39227,61 +39227,61 @@
     {
         "id": 11369,
         "word": "Hacked",
-        "meaning": "hacklenmiÅŸ",
+        "meaning": "hacklenmiş",
         "level": "B2"
     },
     {
         "id": 11370,
         "word": "Transhumanism",
-        "meaning": "transhÃ¼manizm",
+        "meaning": "transhümanizm",
         "level": "B2"
     },
     {
         "id": 11371,
         "word": "Evolve",
-        "meaning": "evrimleÅŸmek",
+        "meaning": "evrimleşmek",
         "level": "B2"
     },
     {
         "id": 11372,
         "word": "Limitations",
-        "meaning": "sÄ±nÄ±rlamalar",
+        "meaning": "sınırlamalar",
         "level": "B2"
     },
     {
         "id": 11373,
         "word": "Achieving",
-        "meaning": "baÅŸarma",
+        "meaning": "başarma",
         "level": "B2"
     },
     {
         "id": 11374,
         "word": "Immortality",
-        "meaning": "Ã¶lÃ¼msÃ¼zlÃ¼k",
+        "meaning": "ölümsüzlük",
         "level": "B2"
     },
     {
         "id": 11375,
         "word": "Personalized",
-        "meaning": "kiÅŸiselleÅŸtirilmiÅŸ",
+        "meaning": "kişiselleştirilmiş",
         "level": "B2"
     },
     {
         "id": 11376,
         "word": "Tutors",
-        "meaning": "Ã¶ÄŸretmenler/hocalar",
+        "meaning": "öğretmenler/hocalar",
         "level": "B2"
     },
     {
         "id": 11377,
         "word": "Integrity",
-        "meaning": "bÃ¼tÃ¼nlÃ¼k/dÃ¼rÃ¼stlÃ¼k",
+        "meaning": "bütünlük/dürüstlük",
         "level": "B2"
     },
     {
         "id": 11378,
         "word": "Tools",
-        "meaning": "araÃ§lar",
+        "meaning": "araçlar",
         "level": "B2"
     },
     {
@@ -39293,13 +39293,13 @@
     {
         "id": 11380,
         "word": "Educators",
-        "meaning": "eÄŸitimciler",
+        "meaning": "eğitimciler",
         "level": "B2"
     },
     {
         "id": 11381,
         "word": "Rethink",
-        "meaning": "yeniden dÃ¼ÅŸÃ¼nmek",
+        "meaning": "yeniden düşünmek",
         "level": "B2"
     },
     {
@@ -39317,7 +39317,7 @@
     {
         "id": 11384,
         "word": "Manipulation",
-        "meaning": "manipÃ¼lasyon",
+        "meaning": "manipülasyon",
         "level": "B2"
     },
     {
@@ -39329,13 +39329,13 @@
     {
         "id": 11386,
         "word": "Salesman",
-        "meaning": "satÄ±cÄ±",
+        "meaning": "satıcı",
         "level": "B2"
     },
     {
         "id": 11387,
         "word": "Theologians",
-        "meaning": "ilahiyatÃ§Ä±lar",
+        "meaning": "ilahiyatçılar",
         "level": "B2"
     },
     {
@@ -39347,7 +39347,7 @@
     {
         "id": 11389,
         "word": "Collaborative",
-        "meaning": "iÅŸbirlikÃ§i",
+        "meaning": "işbirlikçi",
         "level": "B2"
     },
     {
@@ -39365,31 +39365,31 @@
     {
         "id": 11392,
         "word": "Copilot",
-        "meaning": "yardÄ±mcÄ± pilot",
+        "meaning": "yardımcı pilot",
         "level": "B2"
     },
     {
         "id": 11393,
         "word": "Augmenting",
-        "meaning": "artÄ±rma/Ã§oÄŸaltma",
+        "meaning": "artırma/çoğaltma",
         "level": "B2"
     },
     {
         "id": 11394,
         "word": "Replacing",
-        "meaning": "yerine geÃ§me",
+        "meaning": "yerine geçme",
         "level": "B2"
     },
     {
         "id": 11395,
         "word": "Treaties",
-        "meaning": "antlaÅŸmalar",
+        "meaning": "antlaşmalar",
         "level": "B2"
     },
     {
         "id": 11396,
         "word": "Universities",
-        "meaning": "Ã¼niversiteler",
+        "meaning": "üniversiteler",
         "level": "B2"
     },
     {
@@ -39407,7 +39407,7 @@
     {
         "id": 11399,
         "word": "Struggles",
-        "meaning": "mÃ¼cadeleler",
+        "meaning": "mücadeleler",
         "level": "B2"
     },
     {
@@ -39425,7 +39425,7 @@
     {
         "id": 11402,
         "word": "Grids",
-        "meaning": "ÅŸebekeler/Ä±zgaralar",
+        "meaning": "şebekeler/ızgaralar",
         "level": "B2"
     },
     {
@@ -39443,19 +39443,19 @@
     {
         "id": 11405,
         "word": "Defining",
-        "meaning": "tanÄ±mlama",
+        "meaning": "tanımlama",
         "level": "B2"
     },
     {
         "id": 11406,
         "word": "Forced",
-        "meaning": "zorlanmÄ±ÅŸ",
+        "meaning": "zorlanmış",
         "level": "B2"
     },
     {
         "id": 11407,
         "word": "Define",
-        "meaning": "tanÄ±mlamak",
+        "meaning": "tanımlamak",
         "level": "B2"
     },
     {
@@ -39485,13 +39485,13 @@
     {
         "id": 11412,
         "word": "Safely",
-        "meaning": "gÃ¼venli bir ÅŸekilde",
+        "meaning": "güvenli bir şekilde",
         "level": "B2"
     },
     {
         "id": 11413,
         "word": "Critically",
-        "meaning": "eleÅŸtirel olarak",
+        "meaning": "eleştirel olarak",
         "level": "B2"
     },
     {
@@ -39509,7 +39509,7 @@
     {
         "id": 11416,
         "word": "Fragile",
-        "meaning": "kÄ±rÄ±lgan",
+        "meaning": "kırılgan",
         "level": "B2"
     },
     {
@@ -39521,7 +39521,7 @@
     {
         "id": 11418,
         "word": "Brothers",
-        "meaning": "kardeÅŸler",
+        "meaning": "kardeşler",
         "level": "B2"
     },
     {
@@ -39539,7 +39539,7 @@
     {
         "id": 11421,
         "word": "Leap",
-        "meaning": "sÄ±Ã§rama",
+        "meaning": "sıçrama",
         "level": "B2"
     },
     {
@@ -39569,7 +39569,7 @@
     {
         "id": 11426,
         "word": "Mankind",
-        "meaning": "insanlÄ±k",
+        "meaning": "insanlık",
         "level": "B2"
     },
     {
@@ -39581,25 +39581,25 @@
     {
         "id": 11428,
         "word": "Shuttle",
-        "meaning": "uzay mekiÄŸi",
+        "meaning": "uzay mekiği",
         "level": "B2"
     },
     {
         "id": 11429,
         "word": "Reusable",
-        "meaning": "yeniden kullanÄ±labilir",
+        "meaning": "yeniden kullanılabilir",
         "level": "B2"
     },
     {
         "id": 11430,
         "word": "Spacecraft",
-        "meaning": "uzay aracÄ±",
+        "meaning": "uzay aracı",
         "level": "B2"
     },
     {
         "id": 11431,
         "word": "Cooperation",
-        "meaning": "iÅŸbirliÄŸi",
+        "meaning": "işbirliği",
         "level": "B2"
     },
     {
@@ -39611,7 +39611,7 @@
     {
         "id": 11433,
         "word": "Microgravity",
-        "meaning": "mikroyerÃ§ekimi",
+        "meaning": "mikroyerçekimi",
         "level": "B2"
     },
     {
@@ -39629,7 +39629,7 @@
     {
         "id": 11436,
         "word": "Shrink",
-        "meaning": "kÃ¼Ã§Ã¼lmek/Ã§ekmek",
+        "meaning": "küçülmek/çekmek",
         "level": "B2"
     },
     {
@@ -39641,7 +39641,7 @@
     {
         "id": 11438,
         "word": "Formed",
-        "meaning": "oluÅŸtu",
+        "meaning": "oluştu",
         "level": "B2"
     },
     {
@@ -39653,7 +39653,7 @@
     {
         "id": 11440,
         "word": "Infrared",
-        "meaning": "kÄ±zÄ±lÃ¶tesi",
+        "meaning": "kızılötesi",
         "level": "B2"
     },
     {
@@ -39671,13 +39671,13 @@
     {
         "id": 11443,
         "word": "Explorers",
-        "meaning": "kaÅŸifler",
+        "meaning": "kaşifler",
         "level": "B2"
     },
     {
         "id": 11444,
         "word": "Rovers",
-        "meaning": "gegin araÃ§lar",
+        "meaning": "gegin araçlar",
         "level": "B2"
     },
     {
@@ -39701,13 +39701,13 @@
     {
         "id": 11448,
         "word": "Martian",
-        "meaning": "MarslÄ±",
+        "meaning": "Marslı",
         "level": "B2"
     },
     {
         "id": 11449,
         "word": "Signs",
-        "meaning": "iÅŸaretler",
+        "meaning": "işaretler",
         "level": "B2"
     },
     {
@@ -39725,7 +39725,7 @@
     {
         "id": 11452,
         "word": "Colonizing",
-        "meaning": "sÃ¶mÃ¼rgeleÅŸtirme/yerleÅŸme",
+        "meaning": "sömürgeleştirme/yerleşme",
         "level": "B2"
     },
     {
@@ -39737,7 +39737,7 @@
     {
         "id": 11454,
         "word": "Stepping",
-        "meaning": "adÄ±mlama",
+        "meaning": "adımlama",
         "level": "B2"
     },
     {
@@ -39749,7 +39749,7 @@
     {
         "id": 11456,
         "word": "Missions",
-        "meaning": "gÃ¶revler",
+        "meaning": "görevler",
         "level": "B2"
     },
     {
@@ -39773,7 +39773,7 @@
     {
         "id": 11460,
         "word": "Changing",
-        "meaning": "deÄŸiÅŸme",
+        "meaning": "değişme",
         "level": "B2"
     },
     {
@@ -39791,13 +39791,13 @@
     {
         "id": 11463,
         "word": "Designed",
-        "meaning": "tasarlandÄ±",
+        "meaning": "tasarlandı",
         "level": "B2"
     },
     {
         "id": 11464,
         "word": "Colonization",
-        "meaning": "kolonileÅŸme",
+        "meaning": "kolonileşme",
         "level": "B2"
     },
     {
@@ -39845,13 +39845,13 @@
     {
         "id": 11472,
         "word": "Shown",
-        "meaning": "gÃ¶sterildi",
+        "meaning": "gösterildi",
         "level": "B2"
     },
     {
         "id": 11473,
         "word": "Saturn",
-        "meaning": "SatÃ¼rn",
+        "meaning": "Satürn",
         "level": "B2"
     },
     {
@@ -39863,13 +39863,13 @@
     {
         "id": 11475,
         "word": "Storms",
-        "meaning": "fÄ±rtÄ±nalar",
+        "meaning": "fırtınalar",
         "level": "B2"
     },
     {
         "id": 11476,
         "word": "Jupiter",
-        "meaning": "JÃ¼piter",
+        "meaning": "Jüpiter",
         "level": "B2"
     },
     {
@@ -39905,25 +39905,25 @@
     {
         "id": 11482,
         "word": "Exoplanets",
-        "meaning": "Ã¶tegezegenler",
+        "meaning": "ötegezegenler",
         "level": "B2"
     },
     {
         "id": 11483,
         "word": "Conditions",
-        "meaning": "koÅŸullar",
+        "meaning": "koşullar",
         "level": "B2"
     },
     {
         "id": 11484,
         "word": "Seti",
-        "meaning": "SETÄ°",
+        "meaning": "SETİ",
         "level": "B2"
     },
     {
         "id": 11485,
         "word": "Extraterrestrial",
-        "meaning": "dÃ¼nya dÄ±ÅŸÄ±",
+        "meaning": "dünya dışı",
         "level": "B2"
     },
     {
@@ -39953,13 +39953,13 @@
     {
         "id": 11490,
         "word": "Warp",
-        "meaning": "Ã§arpÄ±tma/bÃ¼kme",
+        "meaning": "çarpıtma/bükme",
         "level": "B2"
     },
     {
         "id": 11491,
         "word": "Exploring",
-        "meaning": "keÅŸfetme",
+        "meaning": "keşfetme",
         "level": "B2"
     },
     {
@@ -39983,7 +39983,7 @@
     {
         "id": 11495,
         "word": "Regions",
-        "meaning": "bÃ¶lgeler",
+        "meaning": "bölgeler",
         "level": "B2"
     },
     {
@@ -40001,7 +40001,7 @@
     {
         "id": 11498,
         "word": "Shortcuts",
-        "meaning": "kÄ±sayollar",
+        "meaning": "kısayollar",
         "level": "B2"
     },
     {
@@ -40019,49 +40019,49 @@
     {
         "id": 11501,
         "word": "Debris",
-        "meaning": "enkaz/kalÄ±ntÄ±",
+        "meaning": "enkaz/kalıntı",
         "level": "B2"
     },
     {
         "id": 11502,
         "word": "Pieces",
-        "meaning": "parÃ§alar",
+        "meaning": "parçalar",
         "level": "B2"
     },
     {
         "id": 11503,
         "word": "Orbiting",
-        "meaning": "yÃ¶rÃ¼ngede dÃ¶nme",
+        "meaning": "yörüngede dönme",
         "level": "B2"
     },
     {
         "id": 11504,
         "word": "Speeds",
-        "meaning": "hÄ±zlar",
+        "meaning": "hızlar",
         "level": "B2"
     },
     {
         "id": 11505,
         "word": "Sized",
-        "meaning": "boyutlandÄ±rÄ±lmÄ±ÅŸ",
+        "meaning": "boyutlandırılmış",
         "level": "B2"
     },
     {
         "id": 11506,
         "word": "Goldilocks",
-        "meaning": "Goldilocks (yaÅŸanabilir bÃ¶lge)",
+        "meaning": "Goldilocks (yaşanabilir bölge)",
         "level": "B2"
     },
     {
         "id": 11507,
         "word": "Transform",
-        "meaning": "dÃ¶nÃ¼ÅŸtÃ¼rmek",
+        "meaning": "dönüştürmek",
         "level": "B2"
     },
     {
         "id": 11508,
         "word": "Terraforming",
-        "meaning": "dÃ¼nyalaÅŸtÄ±rma",
+        "meaning": "dünyalaştırma",
         "level": "B2"
     },
     {
@@ -40085,13 +40085,13 @@
     {
         "id": 11512,
         "word": "Rays",
-        "meaning": "Ä±ÅŸÄ±nlar",
+        "meaning": "ışınlar",
         "level": "B2"
     },
     {
         "id": 11513,
         "word": "Shielding",
-        "meaning": "kalkan oluÅŸturma",
+        "meaning": "kalkan oluşturma",
         "level": "B2"
     },
     {
@@ -40127,19 +40127,19 @@
     {
         "id": 11519,
         "word": "Nearest",
-        "meaning": "en yakÄ±n",
+        "meaning": "en yakın",
         "level": "B2"
     },
     {
         "id": 11520,
         "word": "Lifetime",
-        "meaning": "yaÅŸam sÃ¼resi",
+        "meaning": "yaşam süresi",
         "level": "B2"
     },
     {
         "id": 11521,
         "word": "Breakthrough",
-        "meaning": "bÃ¼yÃ¼k buluÅŸ/atÄ±lÄ±m",
+        "meaning": "büyük buluş/atılım",
         "level": "B2"
     },
     {
@@ -40151,7 +40151,7 @@
     {
         "id": 11523,
         "word": "Nanocrafts",
-        "meaning": "nanohava araÃ§larÄ±",
+        "meaning": "nanohava araçları",
         "level": "B2"
     },
     {
@@ -40169,7 +40169,7 @@
     {
         "id": 11526,
         "word": "Supernovae",
-        "meaning": "sÃ¼pernovalar",
+        "meaning": "süpernovalar",
         "level": "B2"
     },
     {
@@ -40181,13 +40181,13 @@
     {
         "id": 11528,
         "word": "Multi",
-        "meaning": "Ã§oklu",
+        "meaning": "çoklu",
         "level": "B2"
     },
     {
         "id": 11529,
         "word": "Generational",
-        "meaning": "nesiller arasÄ±",
+        "meaning": "nesiller arası",
         "level": "B2"
     },
     {
@@ -40205,7 +40205,7 @@
     {
         "id": 11532,
         "word": "Anthropocene",
-        "meaning": "Antroposen (Ä°nsan Ã‡aÄŸÄ±)",
+        "meaning": "Antroposen (İnsan Çağı)",
         "level": "C1"
     },
     {
@@ -40217,7 +40217,7 @@
     {
         "id": 11534,
         "word": "Epoch",
-        "meaning": "Ã§aÄŸ/devir",
+        "meaning": "çağ/devir",
         "level": "C1"
     },
     {
@@ -40241,7 +40241,7 @@
     {
         "id": 11538,
         "word": "Resilience",
-        "meaning": "direnÃ§lilik/dayanÄ±klÄ±lÄ±k",
+        "meaning": "dirençlilik/dayanıklılık",
         "level": "C1"
     },
     {
@@ -40271,7 +40271,7 @@
     {
         "id": 11543,
         "word": "Primarily",
-        "meaning": "Ã¶ncelikli olarak",
+        "meaning": "öncelikli olarak",
         "level": "C1"
     },
     {
@@ -40283,13 +40283,13 @@
     {
         "id": 11545,
         "word": "Contributed",
-        "meaning": "katkÄ±da bulunuldu",
+        "meaning": "katkıda bulunuldu",
         "level": "C1"
     },
     {
         "id": 11546,
         "word": "Cumulative",
-        "meaning": "kÃ¼mÃ¼latif/birikimli",
+        "meaning": "kümülatif/birikimli",
         "level": "C1"
     },
     {
@@ -40319,13 +40319,13 @@
     {
         "id": 11551,
         "word": "Determined",
-        "meaning": "kararlÄ±/belirlenmiÅŸ",
+        "meaning": "kararlı/belirlenmiş",
         "level": "C1"
     },
     {
         "id": 11552,
         "word": "Contributions",
-        "meaning": "katkÄ±lar",
+        "meaning": "katkılar",
         "level": "C1"
     },
     {
@@ -40337,7 +40337,7 @@
     {
         "id": 11554,
         "word": "Signatory",
-        "meaning": "imzacÄ±",
+        "meaning": "imzacı",
         "level": "C1"
     },
     {
@@ -40349,31 +40349,31 @@
     {
         "id": 11556,
         "word": "Binding",
-        "meaning": "baÄŸlayÄ±cÄ±",
+        "meaning": "bağlayıcı",
         "level": "C1"
     },
     {
         "id": 11557,
         "word": "Contention",
-        "meaning": "iddia/Ã§ekiÅŸme",
+        "meaning": "iddia/çekişme",
         "level": "C1"
     },
     {
         "id": 11558,
         "word": "Sequestration",
-        "meaning": "ayÄ±rma (karbon ayÄ±rma)",
+        "meaning": "ayırma (karbon ayırma)",
         "level": "C1"
     },
     {
         "id": 11559,
         "word": "Innovative",
-        "meaning": "yenilikÃ§i",
+        "meaning": "yenilikçi",
         "level": "C1"
     },
     {
         "id": 11560,
         "word": "Permanently",
-        "meaning": "kalÄ±cÄ± olarak",
+        "meaning": "kalıcı olarak",
         "level": "C1"
     },
     {
@@ -40385,19 +40385,19 @@
     {
         "id": 11562,
         "word": "Overhaul",
-        "meaning": "revizyon/genel onarÄ±m",
+        "meaning": "revizyon/genel onarım",
         "level": "C1"
     },
     {
         "id": 11563,
         "word": "Providing",
-        "meaning": "saÄŸlayarak",
+        "meaning": "sağlayarak",
         "level": "C1"
     },
     {
         "id": 11564,
         "word": "Policymakers",
-        "meaning": "politika yapÄ±cÄ±lar",
+        "meaning": "politika yapıcılar",
         "level": "C1"
     },
     {
@@ -40427,13 +40427,13 @@
     {
         "id": 11569,
         "word": "Contributing",
-        "meaning": "katkÄ±da bulunan",
+        "meaning": "katkıda bulunan",
         "level": "C1"
     },
     {
         "id": 11570,
         "word": "Accelerated",
-        "meaning": "hÄ±zlandÄ±rÄ±lmÄ±ÅŸ",
+        "meaning": "hızlandırılmış",
         "level": "C1"
     },
     {
@@ -40445,19 +40445,19 @@
     {
         "id": 11572,
         "word": "Vulnerable",
-        "meaning": "kÄ±rÄ±lgan/incinebilir",
+        "meaning": "kırılgan/incinebilir",
         "level": "C1"
     },
     {
         "id": 11573,
         "word": "Populations",
-        "meaning": "nÃ¼fuslar",
+        "meaning": "nüfuslar",
         "level": "C1"
     },
     {
         "id": 11574,
         "word": "Disproportionately",
-        "meaning": "orantÄ±sÄ±z bir ÅŸekilde",
+        "meaning": "orantısız bir şekilde",
         "level": "C1"
     },
     {
@@ -40481,31 +40481,31 @@
     {
         "id": 11578,
         "word": "Shifting",
-        "meaning": "deÄŸiÅŸen/kayan",
+        "meaning": "değişen/kayan",
         "level": "C1"
     },
     {
         "id": 11579,
         "word": "Extinction",
-        "meaning": "nesli tÃ¼kenme",
+        "meaning": "nesli tükenme",
         "level": "C1"
     },
     {
         "id": 11580,
         "word": "Circular",
-        "meaning": "dairesel/Ã§izgesi (ekonomi iÃ§in)",
+        "meaning": "dairesel/çizgesi (ekonomi için)",
         "level": "C1"
     },
     {
         "id": 11581,
         "word": "Continuously",
-        "meaning": "sÃ¼rekli olarak",
+        "meaning": "sürekli olarak",
         "level": "C1"
     },
     {
         "id": 11582,
         "word": "Pricing",
-        "meaning": "fiyatlandÄ±rma",
+        "meaning": "fiyatlandırma",
         "level": "C1"
     },
     {
@@ -40517,13 +40517,13 @@
     {
         "id": 11584,
         "word": "Internalize",
-        "meaning": "iÃ§selleÅŸtirmek",
+        "meaning": "içselleştirmek",
         "level": "C1"
     },
     {
         "id": 11585,
         "word": "Divesting",
-        "meaning": "yatÄ±rÄ±mÄ± geri Ã§ekme",
+        "meaning": "yatırımı geri çekme",
         "level": "C1"
     },
     {
@@ -40541,43 +40541,43 @@
     {
         "id": 11588,
         "word": "Enterprises",
-        "meaning": "iÅŸletmeler/giriÅŸimler",
+        "meaning": "işletmeler/girişimler",
         "level": "C1"
     },
     {
         "id": 11589,
         "word": "Loops",
-        "meaning": "dÃ¶ngÃ¼ler",
+        "meaning": "döngüler",
         "level": "C1"
     },
     {
         "id": 11590,
         "word": "Thawing",
-        "meaning": "erime/Ã§Ã¶zÃ¼lme",
+        "meaning": "erime/çözülme",
         "level": "C1"
     },
     {
         "id": 11591,
         "word": "Permafrost",
-        "meaning": "donmuÅŸ toprak (permafrost)",
+        "meaning": "donmuş toprak (permafrost)",
         "level": "C1"
     },
     {
         "id": 11592,
         "word": "Irreversible",
-        "meaning": "geri dÃ¶ndÃ¼rÃ¼lemez",
+        "meaning": "geri döndürülemez",
         "level": "C1"
     },
     {
         "id": 11593,
         "word": "Runaway",
-        "meaning": "kontrolden Ã§Ä±kmÄ±ÅŸ/kaÃ§ak",
+        "meaning": "kontrolden çıkmış/kaçak",
         "level": "C1"
     },
     {
         "id": 11594,
         "word": "Agricultural",
-        "meaning": "tarÄ±msal",
+        "meaning": "tarımsal",
         "level": "C1"
     },
     {
@@ -40589,13 +40589,13 @@
     {
         "id": 11596,
         "word": "Consumption",
-        "meaning": "tÃ¼ketim",
+        "meaning": "tüketim",
         "level": "C1"
     },
     {
         "id": 11597,
         "word": "Migration",
-        "meaning": "gÃ¶Ã§",
+        "meaning": "göç",
         "level": "C1"
     },
     {
@@ -40607,19 +40607,19 @@
     {
         "id": 11599,
         "word": "Displaced",
-        "meaning": "yerinden edilmiÅŸ",
+        "meaning": "yerinden edilmiş",
         "level": "C1"
     },
     {
         "id": 11600,
         "word": "Droughts",
-        "meaning": "kuraklÄ±klar",
+        "meaning": "kuraklıklar",
         "level": "C1"
     },
     {
         "id": 11601,
         "word": "Unlivable",
-        "meaning": "yaÅŸanamaz",
+        "meaning": "yaşanamaz",
         "level": "C1"
     },
     {
@@ -40637,7 +40637,7 @@
     {
         "id": 11604,
         "word": "Resilient",
-        "meaning": "direnÃ§li",
+        "meaning": "dirençli",
         "level": "C1"
     },
     {
@@ -40655,7 +40655,7 @@
     {
         "id": 11607,
         "word": "Greenwashing",
-        "meaning": "yeÅŸil aklama",
+        "meaning": "yeşil aklama",
         "level": "C1"
     },
     {
@@ -40697,13 +40697,13 @@
     {
         "id": 11614,
         "word": "Produced",
-        "meaning": "Ã¼retilen",
+        "meaning": "üretilen",
         "level": "C1"
     },
     {
         "id": 11615,
         "word": "Decarbonize",
-        "meaning": "karbonsuzlaÅŸtÄ±rmak",
+        "meaning": "karbonsuzlaştırmak",
         "level": "C1"
     },
     {
@@ -40715,7 +40715,7 @@
     {
         "id": 11617,
         "word": "Denialism",
-        "meaning": "inkarcÄ±lÄ±k",
+        "meaning": "inkarcılık",
         "level": "C1"
     },
     {
@@ -40763,7 +40763,7 @@
     {
         "id": 11625,
         "word": "Skepticism",
-        "meaning": "ÅŸÃ¼phecilik",
+        "meaning": "şüphecilik",
         "level": "C1"
     },
     {
@@ -40775,7 +40775,7 @@
     {
         "id": 11627,
         "word": "Seagrasses",
-        "meaning": "deniz Ã§ayÄ±rlarÄ±",
+        "meaning": "deniz çayırları",
         "level": "C1"
     },
     {
@@ -40787,25 +40787,25 @@
     {
         "id": 11629,
         "word": "Negotiations",
-        "meaning": "mÃ¼zakereler",
+        "meaning": "müzakereler",
         "level": "C1"
     },
     {
         "id": 11630,
         "word": "Watered",
-        "meaning": "sulandÄ±rÄ±lmÄ±ÅŸ",
+        "meaning": "sulandırılmış",
         "level": "C1"
     },
     {
         "id": 11631,
         "word": "Commitments",
-        "meaning": "taahhÃ¼tler",
+        "meaning": "taahhütler",
         "level": "C1"
     },
     {
         "id": 11632,
         "word": "Consumers",
-        "meaning": "tÃ¼keticiler",
+        "meaning": "tüketiciler",
         "level": "C1"
     },
     {
@@ -40823,7 +40823,7 @@
     {
         "id": 11635,
         "word": "Cradle",
-        "meaning": "beÅŸik (cradle-to-grave: beÅŸikten mezara)",
+        "meaning": "beşik (cradle-to-grave: beşikten mezara)",
         "level": "C1"
     },
     {
@@ -40835,13 +40835,13 @@
     {
         "id": 11637,
         "word": "Reforestation",
-        "meaning": "yeniden aÄŸaÃ§landÄ±rma",
+        "meaning": "yeniden ağaçlandırma",
         "level": "C1"
     },
     {
         "id": 11638,
         "word": "Afforestation",
-        "meaning": "aÄŸaÃ§landÄ±rma",
+        "meaning": "ağaçlandırma",
         "level": "C1"
     },
     {
@@ -40859,43 +40859,43 @@
     {
         "id": 11641,
         "word": "Sterile",
-        "meaning": "steril/kÄ±sÄ±r",
+        "meaning": "steril/kısır",
         "level": "C1"
     },
     {
         "id": 11642,
         "word": "Monocultures",
-        "meaning": "monokÃ¼ltÃ¼rler",
+        "meaning": "monokültürler",
         "level": "C1"
     },
     {
         "id": 11643,
         "word": "Scarcity",
-        "meaning": "kÄ±tlÄ±k/yokluk",
+        "meaning": "kıtlık/yokluk",
         "level": "C1"
     },
     {
         "id": 11644,
         "word": "Altering",
-        "meaning": "deÄŸiÅŸtirme/baÅŸkalaÅŸtÄ±rma",
+        "meaning": "değiştirme/başkalaştırma",
         "level": "C1"
     },
     {
         "id": 11645,
         "word": "Precipitation",
-        "meaning": "yaÄŸÄ±ÅŸ",
+        "meaning": "yağış",
         "level": "C1"
     },
     {
         "id": 11646,
         "word": "Patterns",
-        "meaning": "kalÄ±plar/Ã¶rÃ¼ntÃ¼ler",
+        "meaning": "kalıplar/örüntüler",
         "level": "C1"
     },
     {
         "id": 11647,
         "word": "Chronic",
-        "meaning": "kronik/sÃ¼regelen",
+        "meaning": "kronik/süregelen",
         "level": "C1"
     },
     {
@@ -40907,7 +40907,7 @@
     {
         "id": 11649,
         "word": "Depleting",
-        "meaning": "tÃ¼ketme",
+        "meaning": "tüketme",
         "level": "C1"
     },
     {
@@ -40931,7 +40931,7 @@
     {
         "id": 11653,
         "word": "Aviation",
-        "meaning": "havacÄ±lÄ±k",
+        "meaning": "havacılık",
         "level": "C1"
     },
     {
@@ -40943,7 +40943,7 @@
     {
         "id": 11655,
         "word": "Attribution",
-        "meaning": "atÄ±f/nedensellik",
+        "meaning": "atıf/nedensellik",
         "level": "C1"
     },
     {
@@ -40955,19 +40955,19 @@
     {
         "id": 11657,
         "word": "Heatwave",
-        "meaning": "sÄ±caklÄ±k dalgasÄ±",
+        "meaning": "sıcaklık dalgası",
         "level": "C1"
     },
     {
         "id": 11658,
         "word": "Ownership",
-        "meaning": "mÃ¼lkiyet/sahiplik",
+        "meaning": "mülkiyet/sahiplik",
         "level": "C1"
     },
     {
         "id": 11659,
         "word": "Equitable",
-        "meaning": "hakkaniyetli/eÅŸitlikÃ§i",
+        "meaning": "hakkaniyetli/eşitlikçi",
         "level": "C1"
     },
     {
@@ -40979,31 +40979,31 @@
     {
         "id": 11661,
         "word": "Emitters",
-        "meaning": "yayÄ±cÄ±lar",
+        "meaning": "yayıcılar",
         "level": "C1"
     },
     {
         "id": 11662,
         "word": "Absorbs",
-        "meaning": "absorbe eder/sÃ¶ndÃ¼rÃ¼r",
+        "meaning": "absorbe eder/söndürür",
         "level": "C1"
     },
     {
         "id": 11663,
         "word": "Limits",
-        "meaning": "limitler/sÄ±nÄ±rlar",
+        "meaning": "limitler/sınırlar",
         "level": "C1"
     },
     {
         "id": 11664,
         "word": "Predicated",
-        "meaning": "dayandÄ±rÄ±lmÄ±ÅŸ",
+        "meaning": "dayandırılmış",
         "level": "C1"
     },
     {
         "id": 11665,
         "word": "Perpetual",
-        "meaning": "ebedi/sÃ¼rekli",
+        "meaning": "ebedi/sürekli",
         "level": "C1"
     },
     {
@@ -41021,49 +41021,49 @@
     {
         "id": 11668,
         "word": "Inevitable",
-        "meaning": "kaÃ§Ä±nÄ±lmaz",
+        "meaning": "kaçınılmaz",
         "level": "C1"
     },
     {
         "id": 11669,
         "word": "Meaningful",
-        "meaning": "anlamlÄ±",
+        "meaning": "anlamlı",
         "level": "C1"
     },
     {
         "id": 11670,
         "word": "Depends",
-        "meaning": "baÄŸlÄ±dÄ±r",
+        "meaning": "bağlıdır",
         "level": "C1"
     },
     {
         "id": 11671,
         "word": "Precedes",
-        "meaning": "Ã¶nce gelir",
+        "meaning": "önce gelir",
         "level": "C1"
     },
     {
         "id": 11672,
         "word": "Essence",
-        "meaning": "Ã¶z",
+        "meaning": "öz",
         "level": "C1"
     },
     {
         "id": 11673,
         "word": "Existentialism",
-        "meaning": "varoluÅŸÃ§uluk",
+        "meaning": "varoluşçuluk",
         "level": "C1"
     },
     {
         "id": 11674,
         "word": "Beings",
-        "meaning": "varlÄ±klar",
+        "meaning": "varlıklar",
         "level": "C1"
     },
     {
         "id": 11675,
         "word": "Choices",
-        "meaning": "seÃ§imler",
+        "meaning": "seçimler",
         "level": "C1"
     },
     {
@@ -41075,13 +41075,13 @@
     {
         "id": 11677,
         "word": "Existentialists",
-        "meaning": "varoluÅŸÃ§ular",
+        "meaning": "varoluşçular",
         "level": "C1"
     },
     {
         "id": 11678,
         "word": "Predetermined",
-        "meaning": "Ã¶nceden belirlenmiÅŸ",
+        "meaning": "önceden belirlenmiş",
         "level": "C1"
     },
     {
@@ -41093,37 +41093,37 @@
     {
         "id": 11680,
         "word": "Condemned",
-        "meaning": "mahkum edilmiÅŸ",
+        "meaning": "mahkum edilmiş",
         "level": "C1"
     },
     {
         "id": 11681,
         "word": "Anguish",
-        "meaning": "keder/Ä±zdÄ±rap",
+        "meaning": "keder/ızdırap",
         "level": "C1"
     },
     {
         "id": 11682,
         "word": "Realization",
-        "meaning": "farkÄ±na varma/gerÃ§ekleÅŸme",
+        "meaning": "farkına varma/gerçekleşme",
         "level": "C1"
     },
     {
         "id": 11683,
         "word": "Profound",
-        "meaning": "derin/esaslÄ±",
+        "meaning": "derin/esaslı",
         "level": "C1"
     },
     {
         "id": 11684,
         "word": "Consequences",
-        "meaning": "sonuÃ§lar",
+        "meaning": "sonuçlar",
         "level": "C1"
     },
     {
         "id": 11685,
         "word": "Mauvaise",
-        "meaning": "kÃ¶tÃ¼ (mauvaise foi: kÃ¶tÃ¼ niyet)",
+        "meaning": "kötü (mauvaise foi: kötü niyet)",
         "level": "C1"
     },
     {
@@ -41135,37 +41135,37 @@
     {
         "id": 11687,
         "word": "Conventions",
-        "meaning": "sÃ¶zleÅŸmeler/gelenekler",
+        "meaning": "sözleşmeler/gelenekler",
         "level": "C1"
     },
     {
         "id": 11688,
         "word": "Indifference",
-        "meaning": "kayÄ±tsÄ±zlÄ±k",
+        "meaning": "kayıtsızlık",
         "level": "C1"
     },
     {
         "id": 11689,
         "word": "Overcoming",
-        "meaning": "Ã¼stesinden gelme",
+        "meaning": "üstesinden gelme",
         "level": "C1"
     },
     {
         "id": 11690,
         "word": "Facts",
-        "meaning": "gerÃ§ekler/olgular",
+        "meaning": "gerçekler/olgular",
         "level": "C1"
     },
     {
         "id": 11691,
         "word": "Explored",
-        "meaning": "keÅŸfedilen",
+        "meaning": "keşfedilen",
         "level": "C1"
     },
     {
         "id": 11692,
         "word": "Dasein",
-        "meaning": "Dasein (VarlÄ±k/Orada-OluÅŸ)",
+        "meaning": "Dasein (Varlık/Orada-Oluş)",
         "level": "C1"
     },
     {
@@ -41177,13 +41177,13 @@
     {
         "id": 11694,
         "word": "Authenticity",
-        "meaning": "Ã¶zgÃ¼nlÃ¼k/sahicilik",
+        "meaning": "özgünlük/sahicilik",
         "level": "C1"
     },
     {
         "id": 11695,
         "word": "Facticity",
-        "meaning": "olguumsallÄ±k (facticity)",
+        "meaning": "olguumsallık (facticity)",
         "level": "C1"
     },
     {
@@ -41195,7 +41195,7 @@
     {
         "id": 11697,
         "word": "Arguing",
-        "meaning": "tartÄ±ÅŸma/iddia etme",
+        "meaning": "tartışma/iddia etme",
         "level": "C1"
     },
     {
@@ -41219,31 +41219,31 @@
     {
         "id": 11701,
         "word": "Matters",
-        "meaning": "Ã¶nem taÅŸÄ±r",
+        "meaning": "önem taşır",
         "level": "C1"
     },
     {
         "id": 11702,
         "word": "Inherent",
-        "meaning": "iÃ§sel/doÄŸal",
+        "meaning": "içsel/doğal",
         "level": "C1"
     },
     {
         "id": 11703,
         "word": "Nothingness",
-        "meaning": "hiÃ§lik",
+        "meaning": "hiçlik",
         "level": "C1"
     },
     {
         "id": 11704,
         "word": "Asserting",
-        "meaning": "ileri sÃ¼rme/iddia etme",
+        "meaning": "ileri sürme/iddia etme",
         "level": "C1"
     },
     {
         "id": 11705,
         "word": "Existential",
-        "meaning": "varoluÅŸsal",
+        "meaning": "varoluşsal",
         "level": "C1"
     },
     {
@@ -41255,31 +41255,31 @@
     {
         "id": 11707,
         "word": "Explores",
-        "meaning": "keÅŸfeder",
+        "meaning": "keşfeder",
         "level": "C1"
     },
     {
         "id": 11708,
         "word": "Gaze",
-        "meaning": "bakÄ±ÅŸ",
+        "meaning": "bakış",
         "level": "C1"
     },
     {
         "id": 11709,
         "word": "Alienation",
-        "meaning": "yabancÄ±laÅŸma",
+        "meaning": "yabancılaşma",
         "level": "C1"
     },
     {
         "id": 11710,
         "word": "Disconnected",
-        "meaning": "baÄŸlantÄ±sÄ±z",
+        "meaning": "bağlantısız",
         "level": "C1"
     },
     {
         "id": 11711,
         "word": "Possibilities",
-        "meaning": "olasÄ±lÄ±klar",
+        "meaning": "olasılıklar",
         "level": "C1"
     },
     {
@@ -41297,7 +41297,7 @@
     {
         "id": 11714,
         "word": "Futility",
-        "meaning": "anlamsÄ±zlÄ±k/faydasÄ±zlÄ±k",
+        "meaning": "anlamsızlık/faydasızlık",
         "level": "C1"
     },
     {
@@ -41309,37 +41309,37 @@
     {
         "id": 11716,
         "word": "Engaging",
-        "meaning": "ilgi Ã§ekici/dahil olma",
+        "meaning": "ilgi çekici/dahil olma",
         "level": "C1"
     },
     {
         "id": 11717,
         "word": "Oppression",
-        "meaning": "baskÄ±/zulÃ¼m",
+        "meaning": "baskı/zulüm",
         "level": "C1"
     },
     {
         "id": 11718,
         "word": "Involves",
-        "meaning": "iÃ§erir/gerektirir",
+        "meaning": "içerir/gerektirir",
         "level": "C1"
     },
     {
         "id": 11719,
         "word": "Committing",
-        "meaning": "Ã¼stlenme/yapma",
+        "meaning": "üstlenme/yapma",
         "level": "C1"
     },
     {
         "id": 11720,
         "word": "Boredom",
-        "meaning": "can sÄ±kÄ±ntÄ±sÄ±",
+        "meaning": "can sıkıntısı",
         "level": "C1"
     },
     {
         "id": 11721,
         "word": "Dread",
-        "meaning": "korku/dehÅŸet",
+        "meaning": "korku/dehşet",
         "level": "C1"
     },
     {
@@ -41351,7 +41351,7 @@
     {
         "id": 11723,
         "word": "Ephemerality",
-        "meaning": "geÃ§icilik",
+        "meaning": "geçicilik",
         "level": "C1"
     },
     {
@@ -41363,13 +41363,13 @@
     {
         "id": 11725,
         "word": "Beliefs",
-        "meaning": "inanÃ§lar",
+        "meaning": "inançlar",
         "level": "C1"
     },
     {
         "id": 11726,
         "word": "Paralysis",
-        "meaning": "felÃ§",
+        "meaning": "felç",
         "level": "C1"
     },
     {
@@ -41387,19 +41387,19 @@
     {
         "id": 11729,
         "word": "Circumstances",
-        "meaning": "koÅŸullar/durumlar",
+        "meaning": "koşullar/durumlar",
         "level": "C1"
     },
     {
         "id": 11730,
         "word": "Embodied",
-        "meaning": "somutlaÅŸmÄ±ÅŸ/cisimleÅŸmiÅŸ",
+        "meaning": "somutlaşmış/cisimleşmiş",
         "level": "C1"
     },
     {
         "id": 11731,
         "word": "Inextricably",
-        "meaning": "ayrÄ±lmaz bir ÅŸekilde",
+        "meaning": "ayrılmaz bir şekilde",
         "level": "C1"
     },
     {
@@ -41420,257 +41420,257 @@
         "meaning": "kabul etme",
         "level": "C1"
     },
-    { "id": 11735, "word": "Bakery", "meaning": "FÄ±rÄ±n", "level": "A1" },
-    { "id": 11736, "word": "Baker", "meaning": "FÄ±rÄ±ncÄ±", "level": "A1" },
-    { "id": 11737, "word": "Apron", "meaning": "Ã–nlÃ¼k", "level": "A2" },
+    { "id": 11735, "word": "Bakery", "meaning": "Fırın", "level": "A1" },
+    { "id": 11736, "word": "Baker", "meaning": "Fırıncı", "level": "A1" },
+    { "id": 11737, "word": "Apron", "meaning": "Önlük", "level": "A2" },
     { "id": 11738, "word": "Flour", "meaning": "Un", "level": "A1" },
     { "id": 11739, "word": "Dough", "meaning": "Hamur", "level": "B1" },
     { "id": 11740, "word": "Yeast", "meaning": "Maya", "level": "B2" },
     { "id": 11741, "word": "Croissant", "meaning": "Kruvasan", "level": "B1" },
-    { "id": 11742, "word": "Baguette", "meaning": "Baget ekmeÄŸi", "level": "B1" },
+    { "id": 11742, "word": "Baguette", "meaning": "Baget ekmeği", "level": "B1" },
     { "id": 11743, "word": "Rack", "meaning": "Raf", "level": "A2" },
-    { "id": 11744, "word": "Madame", "meaning": "HanÄ±mefendi", "level": "A1" },
-    { "id": 11745, "word": "Paper bag", "meaning": "KaÄŸÄ±t poÅŸet", "level": "A1" },
+    { "id": 11744, "word": "Madame", "meaning": "Hanımefendi", "level": "A1" },
+    { "id": 11745, "word": "Paper bag", "meaning": "Kağıt poşet", "level": "A1" },
     { "id": 11746, "word": "Truck", "meaning": "Kamyon", "level": "A1" },
     { "id": 11747, "word": "Delivery", "meaning": "Teslimat", "level": "B1" },
-    { "id": 11748, "word": "Sack", "meaning": "Ã‡uval", "level": "B1" },
+    { "id": 11748, "word": "Sack", "meaning": "Çuval", "level": "B1" },
     { "id": 11749, "word": "Eclair", "meaning": "Ekler", "level": "B2" },
     { "id": 11750, "word": "Cream", "meaning": "Krema", "level": "A2" },
-    { "id": 11751, "word": "Icing", "meaning": "Kaplama/Åekerleme", "level": "B2" },
-    { "id": 11752, "word": "Pastry", "meaning": "Pastane Ã¼rÃ¼nÃ¼/Hamur iÅŸi", "level": "B1" },
-    { "id": 11753, "word": "Thief", "meaning": "HÄ±rsÄ±z", "level": "A2" },
-    { "id": 11754, "word": "Purr", "meaning": "MÄ±rÄ±ldanmak", "level": "B1" },
-    { "id": 11755, "word": "Garlic", "meaning": "SarÄ±msak", "level": "A2" },
+    { "id": 11751, "word": "Icing", "meaning": "Kaplama/Şekerleme", "level": "B2" },
+    { "id": 11752, "word": "Pastry", "meaning": "Pastane ürünü/Hamur işi", "level": "B1" },
+    { "id": 11753, "word": "Thief", "meaning": "Hırsız", "level": "A2" },
+    { "id": 11754, "word": "Purr", "meaning": "Mırıldanmak", "level": "B1" },
+    { "id": 11755, "word": "Garlic", "meaning": "Sarımsak", "level": "A2" },
     { "id": 11756, "word": "Herb", "meaning": "Bitki/Baharat", "level": "B1" },
     { "id": 11757, "word": "Rosemary", "meaning": "Biberiye", "level": "B2" },
     { "id": 11758, "word": "Thyme", "meaning": "Kekik", "level": "B2" },
-    { "id": 11759, "word": "Cozy", "meaning": "Rahat/SÄ±cak", "level": "B1" },
-    { "id": 11760, "word": "Tartlet", "meaning": "KÃ¼Ã§Ã¼k tart", "level": "B2" },
+    { "id": 11759, "word": "Cozy", "meaning": "Rahat/Sıcak", "level": "B1" },
+    { "id": 11760, "word": "Tartlet", "meaning": "Küçük tart", "level": "B2" },
     { "id": 11761, "word": "Custard", "meaning": "Muhallebi/Krema", "level": "B2" },
     { "id": 11762, "word": "Macaron", "meaning": "Makaron", "level": "B1" },
-    { "id": 11763, "word": "Pistachio", "meaning": "Antep fÄ±stÄ±ÄŸÄ±", "level": "B2" },
-    { "id": 11764, "word": "Ambassador", "meaning": "ElÃ§i", "level": "C1" },
-    { "id": 11765, "word": "Apprentice", "meaning": "Ã‡Ä±rak", "level": "B2" },
+    { "id": 11763, "word": "Pistachio", "meaning": "Antep fıstığı", "level": "B2" },
+    { "id": 11764, "word": "Ambassador", "meaning": "Elçi", "level": "C1" },
+    { "id": 11765, "word": "Apprentice", "meaning": "Çırak", "level": "B2" },
     { "id": 11766, "word": "Tradition", "meaning": "Gelenek", "level": "B1" },
     { "id": 11767, "word": "Legacy", "meaning": "Miras", "level": "C1" },
-    { "id": 11768, "word": "Extinguisher", "meaning": "SÃ¶ndÃ¼rÃ¼cÃ¼", "level": "C1" },
-    { "id": 11769, "word": "Foam", "meaning": "KÃ¶pÃ¼k", "level": "B2" },
+    { "id": 11768, "word": "Extinguisher", "meaning": "Söndürücü", "level": "C1" },
+    { "id": 11769, "word": "Foam", "meaning": "Köpük", "level": "B2" },
     { "id": 11770, "word": "Retirement", "meaning": "Emeklilik", "level": "B1" },
     { "id": 11771, "word": "Valley", "meaning": "Vadi", "level": "A2" },
     { "id": 11772, "word": "Porch", "meaning": "Sundurma/Veranda", "level": "B1" },
-    { "id": 11773, "word": "Overalls", "meaning": "Tulum/Ä°ÅŸ tulumu", "level": "B2" },
+    { "id": 11773, "word": "Overalls", "meaning": "Tulum/İş tulumu", "level": "B2" },
     { "id": 11774, "word": "Straw", "meaning": "Saman/Pipet", "level": "A2" },
     { "id": 11775, "word": "Rooster", "meaning": "Horoz", "level": "B1" },
-    { "id": 11776, "word": "Coop", "meaning": "KÃ¼mes", "level": "B2" },
+    { "id": 11776, "word": "Coop", "meaning": "Kümes", "level": "B2" },
     { "id": 11777, "word": "Hay", "meaning": "Kuru ot/Saman", "level": "B1" },
-    { "id": 11778, "word": "Grain", "meaning": "TahÄ±l", "level": "B1" },
+    { "id": 11778, "word": "Grain", "meaning": "Tahıl", "level": "B1" },
     { "id": 11779, "word": "Peck", "meaning": "Gagalamak", "level": "C1" },
-    { "id": 11780, "word": "Tractor", "meaning": "TraktÃ¶r", "level": "A2" },
+    { "id": 11780, "word": "Tractor", "meaning": "Traktör", "level": "A2" },
     { "id": 11781, "word": "Tire", "meaning": "Lastik", "level": "A2" },
     { "id": 11782, "word": "Engine", "meaning": "Motor", "level": "A2" },
     { "id": 11783, "word": "Plow", "meaning": "Pulluk/Saban", "level": "C1" },
-    { "id": 11784, "word": "Orchard", "meaning": "Meyve bahÃ§esi", "level": "B2" },
-    { "id": 11785, "word": "Muddy", "meaning": "Ã‡amurlu", "level": "A2" },
-    { "id": 11786, "word": "Border collie", "meaning": "Ã‡oban kÃ¶peÄŸi tÃ¼rÃ¼", "level": "B2" },
+    { "id": 11784, "word": "Orchard", "meaning": "Meyve bahçesi", "level": "B2" },
+    { "id": 11785, "word": "Muddy", "meaning": "Çamurlu", "level": "A2" },
+    { "id": 11786, "word": "Border collie", "meaning": "Çoban köpeği türü", "level": "B2" },
     { "id": 11787, "word": "Honeycomb", "meaning": "Petek", "level": "B2" },
-    { "id": 11788, "word": "Stable", "meaning": "AhÄ±r/Tavla", "level": "B1" },
-    { "id": 11789, "word": "Shovel", "meaning": "KÃ¼rek", "level": "A2" },
+    { "id": 11788, "word": "Stable", "meaning": "Ahır/Tavla", "level": "B1" },
+    { "id": 11789, "word": "Shovel", "meaning": "Kürek", "level": "A2" },
     { "id": 11790, "word": "Weed", "meaning": "Yabani ot", "level": "B1" },
     { "id": 11791, "word": "Mane", "meaning": "Yele", "level": "C1" },
-    { "id": 11792, "word": "Meadow", "meaning": "Ã‡ayÄ±r", "level": "B1" },
-    { "id": 11793, "word": "Cider", "meaning": "Elma ÅŸÄ±rasÄ±", "level": "B2" },
-    { "id": 11794, "word": "Stargazing", "meaning": "YÄ±ldÄ±zlarÄ± izleme", "level": "B2" },
-    { "id": 11795, "word": "Birdhouse", "meaning": "KuÅŸ yuvasÄ±", "level": "B1" },
+    { "id": 11792, "word": "Meadow", "meaning": "Çayır", "level": "B1" },
+    { "id": 11793, "word": "Cider", "meaning": "Elma şırası", "level": "B2" },
+    { "id": 11794, "word": "Stargazing", "meaning": "Yıldızları izleme", "level": "B2" },
+    { "id": 11795, "word": "Birdhouse", "meaning": "Kuş yuvası", "level": "B1" },
     { "id": 11796, "word": "Galaxy", "meaning": "Galaksi", "level": "A2" },
     { "id": 11797, "word": "Crescent", "meaning": "Hilal", "level": "B1" },
-    { "id": 11798, "word": "Salesman", "meaning": "SatÄ±cÄ±", "level": "B1" },
-    { "id": 11799, "word": "Attic", "meaning": "Tavan arasÄ±", "level": "B2" },
-    { "id": 11800, "word": "Trunk", "meaning": "SandÄ±k", "level": "B2" },
-    { "id": 11801, "word": "Knead", "meaning": "YoÄŸurmak", "level": "C1" },
-    { "id": 11802, "word": "Flicker", "meaning": "Titremek/PÄ±rpÄ±r etmek", "level": "C1" },
+    { "id": 11798, "word": "Salesman", "meaning": "Satıcı", "level": "B1" },
+    { "id": 11799, "word": "Attic", "meaning": "Tavan arası", "level": "B2" },
+    { "id": 11800, "word": "Trunk", "meaning": "Sandık", "level": "B2" },
+    { "id": 11801, "word": "Knead", "meaning": "Yoğurmak", "level": "C1" },
+    { "id": 11802, "word": "Flicker", "meaning": "Titremek/Pırpır etmek", "level": "C1" },
     { "id": 11803, "word": "Bouquet", "meaning": "Buket/Demet", "level": "B1" },
     { "id": 11804, "word": "Lavender", "meaning": "Lavanta", "level": "B1" },
-    { "id": 11805, "word": "Wagon", "meaning": "Vagon/At arabasÄ±", "level": "B1" },
-    { "id": 11806, "word": "Hayride", "meaning": "Saman arabasÄ± gezisi", "level": "B2" },
+    { "id": 11805, "word": "Wagon", "meaning": "Vagon/At arabası", "level": "B1" },
+    { "id": 11806, "word": "Hayride", "meaning": "Saman arabası gezisi", "level": "B2" },
     { "id": 11807, "word": "Detective", "meaning": "Dedektif", "level": "A2" },
     { "id": 11808, "word": "Office", "meaning": "Ofis", "level": "A2" },
-    { "id": 11809, "word": "Downtown", "meaning": "Åehir merkezi", "level": "A2" },
-    { "id": 11810, "word": "Messy", "meaning": "DaÄŸÄ±nÄ±k", "level": "A2" },
+    { "id": 11809, "word": "Downtown", "meaning": "Şehir merkezi", "level": "A2" },
+    { "id": 11810, "word": "Messy", "meaning": "Dağınık", "level": "A2" },
     { "id": 11811, "word": "Ginger", "meaning": "Turuncu/Zencefil", "level": "A2" },
-    { "id": 11812, "word": "Neighbor", "meaning": "KomÅŸu", "level": "A2" },
+    { "id": 11812, "word": "Neighbor", "meaning": "Komşu", "level": "A2" },
     { "id": 11813, "word": "Ribbon", "meaning": "Kurdele", "level": "A2" },
     { "id": 11814, "word": "Collar", "meaning": "Tasma/Yaka", "level": "A2" },
-    { "id": 11815, "word": "Silk", "meaning": "Ä°pek", "level": "B1" },
+    { "id": 11815, "word": "Silk", "meaning": "İpek", "level": "B1" },
     { "id": 11816, "word": "Plastic", "meaning": "Plastik", "level": "A2" },
     { "id": 11817, "word": "Footprint", "meaning": "Ayak izi", "level": "B1" },
-    { "id": 11818, "word": "Thread", "meaning": "Ä°plik", "level": "B1" },
+    { "id": 11818, "word": "Thread", "meaning": "İplik", "level": "B1" },
     { "id": 11819, "word": "Alley", "meaning": "Ara sokak", "level": "B2" },
     { "id": 11820, "word": "Warehouse", "meaning": "Depo", "level": "B2" },
     { "id": 11821, "word": "Heel", "meaning": "Topuk", "level": "B1" },
-    { "id": 11822, "word": "Evidence", "meaning": "KanÄ±t", "level": "B2" },
-    { "id": 11823, "word": "Rabbit", "meaning": "TavÅŸan", "level": "A2" },
-    { "id": 11824, "word": "Magic", "meaning": "Sihir/BÃ¼yÃ¼", "level": "A2" },
-    { "id": 11825, "word": "Embarrassed", "meaning": "UtanmÄ±ÅŸ", "level": "B1" },
-    { "id": 11826, "word": "Doubt", "meaning": "ÅÃ¼phe", "level": "B1" },
+    { "id": 11822, "word": "Evidence", "meaning": "Kanıt", "level": "B2" },
+    { "id": 11823, "word": "Rabbit", "meaning": "Tavşan", "level": "A2" },
+    { "id": 11824, "word": "Magic", "meaning": "Sihir/Büyü", "level": "A2" },
+    { "id": 11825, "word": "Embarrassed", "meaning": "Utanmış", "level": "B1" },
+    { "id": 11826, "word": "Doubt", "meaning": "Şüphe", "level": "B1" },
     { "id": 11827, "word": "Captain", "meaning": "Kaptan", "level": "A2" },
     { "id": 11828, "word": "Board", "meaning": "Binmek/Kurul", "level": "B1" },
-    { "id": 11829, "word": "Tuna", "meaning": "Ton balÄ±ÄŸÄ±", "level": "B1" },
-    { "id": 11830, "word": "Raw", "meaning": "Ã‡iÄŸ", "level": "B2" },
+    { "id": 11829, "word": "Tuna", "meaning": "Ton balığı", "level": "B1" },
+    { "id": 11830, "word": "Raw", "meaning": "Çiğ", "level": "B2" },
     { "id": 11831, "word": "Medal", "meaning": "Madalya", "level": "B1" },
     { "id": 11832, "word": "Celebration", "meaning": "Kutlama", "level": "B1" },
-    { "id": 11833, "word": "Tunnel", "meaning": "TÃ¼nel", "level": "B1" },
+    { "id": 11833, "word": "Tunnel", "meaning": "Tünel", "level": "B1" },
     { "id": 11834, "word": "Digital", "meaning": "Dijital", "level": "B1" },
     { "id": 11835, "word": "Data", "meaning": "Veri", "level": "B1" },
     { "id": 11836, "word": "Server", "meaning": "Sunucu", "level": "B1" },
-    { "id": 11837, "word": "Hunter", "meaning": "AvcÄ±", "level": "B1" },
-    { "id": 11838, "word": "Vacuum", "meaning": "Vakum/BoÅŸluk", "level": "B2" },
+    { "id": 11837, "word": "Hunter", "meaning": "Avcı", "level": "B1" },
+    { "id": 11838, "word": "Vacuum", "meaning": "Vakum/Boşluk", "level": "B2" },
     { "id": 11839, "word": "Radiation", "meaning": "Radyasyon", "level": "C1" },
-    { "id": 11840, "word": "Gravity", "meaning": "YerÃ§ekimi", "level": "B2" },
+    { "id": 11840, "word": "Gravity", "meaning": "Yerçekimi", "level": "B2" },
     { "id": 11841, "word": "Asteroid", "meaning": "Asteroit", "level": "B2" },
-    { "id": 11842, "word": "Comet", "meaning": "Kuyruklu yÄ±ldÄ±z", "level": "B2" },
+    { "id": 11842, "word": "Comet", "meaning": "Kuyruklu yıldız", "level": "B2" },
     { "id": 11843, "word": "Meteor", "meaning": "Meteor", "level": "B2" },
     { "id": 11844, "word": "Galaxy", "meaning": "Galaksi", "level": "B1" },
     { "id": 11845, "word": "Satellite", "meaning": "Uydu", "level": "B1" },
-    { "id": 11846, "word": "Spacecraft", "meaning": "Uzay aracÄ±", "level": "B2" },
-    { "id": 11847, "word": "Orbit", "meaning": "YÃ¶rÃ¼nge", "level": "B2" },
+    { "id": 11846, "word": "Spacecraft", "meaning": "Uzay aracı", "level": "B2" },
+    { "id": 11847, "word": "Orbit", "meaning": "Yörünge", "level": "B2" },
     { "id": 11848, "word": "Experiment", "meaning": "Deney", "level": "B1" },
     { "id": 11849, "word": "Astronaut", "meaning": "Astronot", "level": "B1" },
-    { "id": 11850, "word": "Suit", "meaning": "TakÄ±m elbise/Uygun olmak", "level": "A2" },
+    { "id": 11850, "word": "Suit", "meaning": "Takım elbise/Uygun olmak", "level": "A2" },
     { "id": 11851, "word": "Visor", "meaning": "Siperlik", "level": "B2" },
     { "id": 11852, "word": "Telescope", "meaning": "Teleskop", "level": "B1" },
     { "id": 11853, "word": "Mirror", "meaning": "Ayna", "level": "A2" },
     { "id": 11854, "word": "Nebula", "meaning": "Bulutsu", "level": "C1" },
     { "id": 11855, "word": "Atmosphere", "meaning": "Atmosfer", "level": "B1" },
-    { "id": 11856, "word": "Solar Flare", "meaning": "GÃ¼neÅŸ patlamasÄ±", "level": "C1" },
+    { "id": 11856, "word": "Solar Flare", "meaning": "Güneş patlaması", "level": "C1" },
     { "id": 11857, "word": "Magnetic", "meaning": "Manyetik", "level": "B2" },
-    { "id": 11858, "word": "Density", "meaning": "YoÄŸunluk", "level": "C1" },
+    { "id": 11858, "word": "Density", "meaning": "Yoğunluk", "level": "C1" },
     { "id": 11859, "word": "Spiral", "meaning": "Sarmal", "level": "B2" },
     { "id": 11860, "word": "Planet", "meaning": "Gezegen", "level": "A2" },
-    { "id": 11861, "word": "Dwarf", "meaning": "CÃ¼ce", "level": "B1" },
+    { "id": 11861, "word": "Dwarf", "meaning": "Cüce", "level": "B1" },
     { "id": 11862, "word": "Glacier", "meaning": "Buzul", "level": "B2" },
-    { "id": 11863, "word": "Kuiper", "meaning": "Kuiper kuÅŸaÄŸÄ±", "level": "C1" },
+    { "id": 11863, "word": "Kuiper", "meaning": "Kuiper kuşağı", "level": "C1" },
     { "id": 11864, "word": "Oort", "meaning": "Oort bulutu", "level": "C1" },
-    { "id": 11865, "word": "Record", "meaning": "KayÄ±t", "level": "A2" },
+    { "id": 11865, "word": "Record", "meaning": "Kayıt", "level": "A2" },
     { "id": 11866, "word": "Message", "meaning": "Mesaj", "level": "A2" },
     { "id": 11867, "word": "Billion", "meaning": "Milyar", "level": "A2" },
     { "id": 11868, "word": "Inventor", "meaning": "Mucit", "level": "B1" },
-    { "id": 11869, "word": "Audience", "meaning": "Ä°zleyici", "level": "B1" },
+    { "id": 11869, "word": "Audience", "meaning": "İzleyici", "level": "B1" },
     { "id": 11870, "word": "Scientific", "meaning": "Bilimsel", "level": "B1" },
-    { "id": 11871, "word": "Masterpiece", "meaning": "Åaheser", "level": "B1" },
+    { "id": 11871, "word": "Masterpiece", "meaning": "Şaheser", "level": "B1" },
     { "id": 11872, "word": "Dialogue", "meaning": "Diyalog", "level": "B1" },
-    { "id": 11873, "word": "Special effects", "meaning": "Ã–zel efektler", "level": "B1" },
+    { "id": 11873, "word": "Special effects", "meaning": "Özel efektler", "level": "B1" },
     { "id": 11874, "word": "Revolutionize", "meaning": "Devrim yapmak", "level": "B1" },
-    { "id": 11875, "word": "Independent", "meaning": "BaÄŸÄ±msÄ±z", "level": "B1" },
-    { "id": 11876, "word": "Censorship", "meaning": "SansÃ¼r", "level": "B1" },
+    { "id": 11875, "word": "Independent", "meaning": "Bağımsız", "level": "B1" },
+    { "id": 11876, "word": "Censorship", "meaning": "Sansür", "level": "B1" },
     { "id": 11877, "word": "Suspense", "meaning": "Gerilim", "level": "B1" },
     { "id": 11878, "word": "Universal", "meaning": "Evrensel", "level": "B1" },
     { "id": 11879, "word": "Document", "meaning": "Belgelemek", "level": "B1" },
-    { "id": 11880, "word": "Sustainable", "meaning": "SÃ¼rdÃ¼rÃ¼lebilir", "level": "B1" },
+    { "id": 11880, "word": "Sustainable", "meaning": "Sürdürülebilir", "level": "B1" },
     { "id": 11881, "word": "Pollution", "meaning": "Kirlilik", "level": "B1" },
     { "id": 11882, "word": "Resource", "meaning": "Kaynak", "level": "B1" },
     { "id": 11883, "word": "Generation", "meaning": "Nesil", "level": "B1" },
-    { "id": 11884, "word": "Challenge", "meaning": "Zorluk/MÃ¼cadele", "level": "B1" },
+    { "id": 11884, "word": "Challenge", "meaning": "Zorluk/Mücadele", "level": "B1" },
     { "id": 11885, "word": "Reduce", "meaning": "Azaltmak", "level": "B1" },
-    { "id": 11886, "word": "Recycle", "meaning": "Geri dÃ¶nÃ¼ÅŸtÃ¼rmek", "level": "B1" },
-    { "id": 11887, "word": "Environment", "meaning": "Ã‡evre", "level": "B1" },
+    { "id": 11886, "word": "Recycle", "meaning": "Geri dönüştürmek", "level": "B1" },
+    { "id": 11887, "word": "Environment", "meaning": "Çevre", "level": "B1" },
     { "id": 11888, "word": "Atmosphere", "meaning": "Atmosfer", "level": "B1" },
     { "id": 11889, "word": "Efficiency", "meaning": "Verimlilik", "level": "B1" },
-    { "id": 11890, "word": "Insulation", "meaning": "YalÄ±tÄ±m", "level": "B1" },
-    { "id": 11891, "word": "Precious", "meaning": "DeÄŸerli", "level": "B1" },
+    { "id": 11890, "word": "Insulation", "meaning": "Yalıtım", "level": "B1" },
+    { "id": 11891, "word": "Precious", "meaning": "Değerli", "level": "B1" },
     { "id": 11892, "word": "Organic", "meaning": "Organik", "level": "B1" },
-    { "id": 11893, "word": "Pesticide", "meaning": "BÃ¶cek ilacÄ±", "level": "B1" },
+    { "id": 11893, "word": "Pesticide", "meaning": "Böcek ilacı", "level": "B1" },
     { "id": 11894, "word": "Artificial", "meaning": "Yapay", "level": "B1" },
-    { "id": 11895, "word": "Conscious", "meaning": "BilinÃ§li", "level": "B1" },
-    { "id": 11896, "word": "Consumer", "meaning": "TÃ¼ketici", "level": "B1" },
-    { "id": 11897, "word": "Transport", "meaning": "UlaÅŸÄ±m", "level": "B1" },
+    { "id": 11895, "word": "Conscious", "meaning": "Bilinçli", "level": "B1" },
+    { "id": 11896, "word": "Consumer", "meaning": "Tüketici", "level": "B1" },
+    { "id": 11897, "word": "Transport", "meaning": "Ulaşım", "level": "B1" },
     { "id": 11898, "word": "Ethical", "meaning": "Etik", "level": "B1" },
-    { "id": 11899, "word": "Biodiversity", "meaning": "BiyoÃ§eÅŸitlilik", "level": "B1" },
-    { "id": 11900, "word": "Extinct", "meaning": "Nesli tÃ¼kenmiÅŸ", "level": "B1" },
+    { "id": 11899, "word": "Biodiversity", "meaning": "Biyoçeşitlilik", "level": "B1" },
+    { "id": 11900, "word": "Extinct", "meaning": "Nesli tükenmiş", "level": "B1" },
     { "id": 11901, "word": "Footprint", "meaning": "Ayak izi", "level": "B1" },
     { "id": 11902, "word": "Innovation", "meaning": "Yenilik", "level": "B1" },
     { "id": 11903, "word": "Policy", "meaning": "Politika", "level": "B1" },
     { "id": 11904, "word": "Community", "meaning": "Topluluk", "level": "B1" },
     { "id": 11905, "word": "Minimalism", "meaning": "Minimalizm", "level": "B1" },
-    { "id": 11906, "word": "Infrastructure", "meaning": "AltyapÄ±", "level": "B1" },
+    { "id": 11906, "word": "Infrastructure", "meaning": "Altyapı", "level": "B1" },
     { "id": 11907, "word": "Alternative", "meaning": "Alternatif", "level": "B1" },
-    { "id": 11908, "word": "Stability", "meaning": "KararlÄ±lÄ±k", "level": "B1" },
-    { "id": 11909, "word": "Resilient", "meaning": "DayanÄ±klÄ±", "level": "B1" },
-    { "id": 11910, "word": "Entrepreneur", "meaning": "GiriÅŸimci", "level": "B1" },
-    { "id": 11911, "word": "Species", "meaning": "TÃ¼r", "level": "B1" },
+    { "id": 11908, "word": "Stability", "meaning": "Kararlılık", "level": "B1" },
+    { "id": 11909, "word": "Resilient", "meaning": "Dayanıklı", "level": "B1" },
+    { "id": 11910, "word": "Entrepreneur", "meaning": "Girişimci", "level": "B1" },
+    { "id": 11911, "word": "Species", "meaning": "Tür", "level": "B1" },
     { "id": 11912, "word": "Conservation", "meaning": "Koruma", "level": "B1" },
-    { "id": 11913, "word": "Interact", "meaning": "EtkileÅŸim kurmak", "level": "B1" },
+    { "id": 11913, "word": "Interact", "meaning": "Etkileşim kurmak", "level": "B1" },
     { "id": 11914, "word": "Screenplay", "meaning": "Senaryo", "level": "B1" },
     { "id": 11915, "word": "Cinematography", "meaning": "Sinematografi", "level": "B1" },
-    { "id": 11916, "word": "Blockbuster", "meaning": "GiÅŸe rekortmeni", "level": "B1" },
-    { "id": 11917, "word": "Streaming", "meaning": "Ã‡evrimiÃ§i akÄ±ÅŸ", "level": "B1" },
-    { "id": 11918, "word": "Subtitles", "meaning": "AltyazÄ±", "level": "B1" },
+    { "id": 11916, "word": "Blockbuster", "meaning": "Gişe rekortmeni", "level": "B1" },
+    { "id": 11917, "word": "Streaming", "meaning": "Çevrimiçi akış", "level": "B1" },
+    { "id": 11918, "word": "Subtitles", "meaning": "Altyazı", "level": "B1" },
     { "id": 11919, "word": "Blueprint", "meaning": "Taslak", "level": "B1" },
-    { "id": 11920, "word": "Conflict", "meaning": "Ã‡atÄ±ÅŸma", "level": "B1" },
-    { "id": 11921, "word": "Resolution", "meaning": "Ã‡Ã¶zÃ¼m", "level": "B1" },
-    { "id": 11922, "word": "Subtle", "meaning": "Hafif/Ä°nce", "level": "B1" },
-    { "id": 11923, "word": "Visual", "meaning": "GÃ¶rsel", "level": "B1" },
+    { "id": 11920, "word": "Conflict", "meaning": "Çatışma", "level": "B1" },
+    { "id": 11921, "word": "Resolution", "meaning": "Çözüm", "level": "B1" },
+    { "id": 11922, "word": "Subtle", "meaning": "Hafif/İnce", "level": "B1" },
+    { "id": 11923, "word": "Visual", "meaning": "Görsel", "level": "B1" },
     { "id": 11924, "word": "Rhythm", "meaning": "Ritim", "level": "B1" },
-    { "id": 11925, "word": "Continuity", "meaning": "SÃ¼reklilik", "level": "B1" },
+    { "id": 11925, "word": "Continuity", "meaning": "Süreklilik", "level": "B1" },
     { "id": 11926, "word": "Atmosphere", "meaning": "Atmosfer", "level": "B1" },
-    { "id": 11927, "word": "Biodegradable", "meaning": "DoÄŸada Ã§Ã¶zÃ¼nÃ¼r", "level": "B1" },
-    { "id": 11928, "word": "Profound", "meaning": "Derin/EsaslÄ±", "level": "B2" },
-    { "id": 11929, "word": "Transformation", "meaning": "DÃ¶nÃ¼ÅŸÃ¼m", "level": "B2" },
+    { "id": 11927, "word": "Biodegradable", "meaning": "Doğada çözünür", "level": "B1" },
+    { "id": 11928, "word": "Profound", "meaning": "Derin/Esaslı", "level": "B2" },
+    { "id": 11929, "word": "Transformation", "meaning": "Dönüşüm", "level": "B2" },
     { "id": 11930, "word": "Efficient", "meaning": "Verimli", "level": "B2" },
-    { "id": 11931, "word": "Urbanization", "meaning": "ÅehirleÅŸme", "level": "B2" },
-    { "id": 11932, "word": "Migration", "meaning": "GÃ¶Ã§", "level": "B2" },
-    { "id": 11933, "word": "Unprecedented", "meaning": "EÅŸi gÃ¶rÃ¼lmemiÅŸ", "level": "B2" },
-    { "id": 11934, "word": "Suppress", "meaning": "BastÄ±rmak", "level": "B2" },
-    { "id": 11935, "word": "Regulate", "meaning": "DÃ¼zenlemek", "level": "B2" },
+    { "id": 11931, "word": "Urbanization", "meaning": "Şehirleşme", "level": "B2" },
+    { "id": 11932, "word": "Migration", "meaning": "Göç", "level": "B2" },
+    { "id": 11933, "word": "Unprecedented", "meaning": "Eşi görülmemiş", "level": "B2" },
+    { "id": 11934, "word": "Suppress", "meaning": "Bastırmak", "level": "B2" },
+    { "id": 11935, "word": "Regulate", "meaning": "Düzenlemek", "level": "B2" },
     { "id": 11936, "word": "Mandatory", "meaning": "Zorunlu", "level": "B2" },
-    { "id": 11937, "word": "Consequence", "meaning": "SonuÃ§", "level": "B2" },
+    { "id": 11937, "word": "Consequence", "meaning": "Sonuç", "level": "B2" },
     { "id": 11938, "word": "Phenomenon", "meaning": "Olgu/Olay", "level": "B2" },
-    { "id": 11939, "word": "Ingenuity", "meaning": "UstalÄ±k/Beceri", "level": "B2" },
+    { "id": 11939, "word": "Ingenuity", "meaning": "Ustalık/Beceri", "level": "B2" },
     { "id": 11940, "word": "Feudal", "meaning": "Derebeylik", "level": "B2" },
     { "id": 11941, "word": "Bourgeoisie", "meaning": "Burjuvazi", "level": "B2" },
-    { "id": 11942, "word": "Proletariat", "meaning": "Ä°ÅŸÃ§i sÄ±nÄ±fÄ±", "level": "B2" },
-    { "id": 11943, "word": "Suffrage", "meaning": "Oy hakkÄ±", "level": "B2" },
-    { "id": 11944, "word": "Infrastructure", "meaning": "AltyapÄ±", "level": "B2" },
+    { "id": 11942, "word": "Proletariat", "meaning": "İşçi sınıfı", "level": "B2" },
+    { "id": 11943, "word": "Suffrage", "meaning": "Oy hakkı", "level": "B2" },
+    { "id": 11944, "word": "Infrastructure", "meaning": "Altyapı", "level": "B2" },
     { "id": 11945, "word": "Capitalism", "meaning": "Kapitalizm", "level": "B2" },
-    { "id": 11946, "word": "Exploitation", "meaning": "SÃ¶mÃ¼rÃ¼", "level": "B2" },
-    { "id": 11947, "word": "Vulnerable", "meaning": "SavunmasÄ±z", "level": "B2" },
-    { "id": 11948, "word": "Standardization", "meaning": "StandartlaÅŸtÄ±rma", "level": "B2" },
-    { "id": 11949, "word": "Sustainability", "meaning": "SÃ¼rdÃ¼rÃ¼lebilirlik", "level": "B2" },
-    { "id": 11950, "word": "Circadian", "meaning": "GÃ¼nlÃ¼k (biyolojik)", "level": "B2" },
+    { "id": 11946, "word": "Exploitation", "meaning": "Sömürü", "level": "B2" },
+    { "id": 11947, "word": "Vulnerable", "meaning": "Savunmasız", "level": "B2" },
+    { "id": 11948, "word": "Standardization", "meaning": "Standartlaştırma", "level": "B2" },
+    { "id": 11949, "word": "Sustainability", "meaning": "Sürdürülebilirlik", "level": "B2" },
+    { "id": 11950, "word": "Circadian", "meaning": "Günlük (biyolojik)", "level": "B2" },
     { "id": 11951, "word": "Metabolism", "meaning": "Metabolizma", "level": "B2" },
     { "id": 11952, "word": "Deprivation", "meaning": "Yoksunluk", "level": "B2" },
-    { "id": 11953, "word": "Reparative", "meaning": "OnarÄ±cÄ±", "level": "B2" },
-    { "id": 11954, "word": "Consolidation", "meaning": "BirleÅŸtirme", "level": "B2" },
-    { "id": 11955, "word": "Immune", "meaning": "BaÄŸÄ±ÅŸÄ±klÄ±k", "level": "B2" },
+    { "id": 11953, "word": "Reparative", "meaning": "Onarıcı", "level": "B2" },
+    { "id": 11954, "word": "Consolidation", "meaning": "Birleştirme", "level": "B2" },
+    { "id": 11955, "word": "Immune", "meaning": "Bağışıklık", "level": "B2" },
     { "id": 11956, "word": "Neurotransmitter", "meaning": "Sinirsel iletici", "level": "B2" },
     { "id": 11957, "word": "Adenosine", "meaning": "Adenozin", "level": "B2" },
     { "id": 11958, "word": "Dementia", "meaning": "Bunama", "level": "B2" },
-    { "id": 11959, "word": "Plasticity", "meaning": "Esneklik (nÃ¶ral)", "level": "B2" },
-    { "id": 11960, "word": "Indigestion", "meaning": "HazÄ±msÄ±zlÄ±k", "level": "B2" },
-    { "id": 11961, "word": "Hydration", "meaning": "SÄ±vÄ± alÄ±mÄ±", "level": "B2" },
-    { "id": 11962, "word": "Insomnia", "meaning": "Uykusuzluk hastalÄ±ÄŸÄ±", "level": "B2" },
-    { "id": 11963, "word": "Apnea", "meaning": "Apne/Soluk durmasÄ±", "level": "B2" },
+    { "id": 11959, "word": "Plasticity", "meaning": "Esneklik (nöral)", "level": "B2" },
+    { "id": 11960, "word": "Indigestion", "meaning": "Hazımsızlık", "level": "B2" },
+    { "id": 11961, "word": "Hydration", "meaning": "Sıvı alımı", "level": "B2" },
+    { "id": 11962, "word": "Insomnia", "meaning": "Uykusuzluk hastalığı", "level": "B2" },
+    { "id": 11963, "word": "Apnea", "meaning": "Apne/Soluk durması", "level": "B2" },
     { "id": 11964, "word": "Narcolepsy", "meaning": "Narkolepsi", "level": "B2" },
     { "id": 11965, "word": "Chronotype", "meaning": "Kronotip", "level": "B2" },
-    { "id": 11966, "word": "Resilience", "meaning": "DayanÄ±klÄ±lÄ±k", "level": "B2" },
+    { "id": 11966, "word": "Resilience", "meaning": "Dayanıklılık", "level": "B2" },
     { "id": 11967, "word": "Physiology", "meaning": "Fizyoloji", "level": "B2" },
-    { "id": 11968, "word": "Longevity", "meaning": "Uzun Ã¶mÃ¼rlÃ¼lÃ¼k", "level": "B2" },
-    { "id": 11969, "word": "Inflammation", "meaning": "Ä°ltihap", "level": "B2" },
-    { "id": 11970, "word": "Hustle", "meaning": "TelaÅŸ/KoÅŸturmaca", "level": "B2" },
-    { "id": 11971, "word": "Insight", "meaning": "Ä°Ã§gÃ¶rÃ¼", "level": "B2" },
-    { "id": 11972, "word": "Fragmented", "meaning": "ParÃ§alanmÄ±ÅŸ", "level": "B2" },
-    { "id": 11973, "word": "Consistent", "meaning": "TutarlÄ±", "level": "B2" },
+    { "id": 11968, "word": "Longevity", "meaning": "Uzun ömürlülük", "level": "B2" },
+    { "id": 11969, "word": "Inflammation", "meaning": "İltihap", "level": "B2" },
+    { "id": 11970, "word": "Hustle", "meaning": "Telaş/Koşturmaca", "level": "B2" },
+    { "id": 11971, "word": "Insight", "meaning": "İçgörü", "level": "B2" },
+    { "id": 11972, "word": "Fragmented", "meaning": "Parçalanmış", "level": "B2" },
+    { "id": 11973, "word": "Consistent", "meaning": "Tutarlı", "level": "B2" },
     { "id": 11974, "word": "Detox", "meaning": "Detoks", "level": "B2" },
-    { "id": 11975, "word": "Vivid", "meaning": "CanlÄ±/Net", "level": "B2" },
+    { "id": 11975, "word": "Vivid", "meaning": "Canlı/Net", "level": "B2" },
     { "id": 11976, "word": "Abstract", "meaning": "Soyut", "level": "B2" },
-    { "id": 11977, "word": "Multisensory", "meaning": "Ã‡ok duyulu", "level": "B2" },
+    { "id": 11977, "word": "Multisensory", "meaning": "Çok duyulu", "level": "B2" },
     { "id": 11978, "word": "Melatonin", "meaning": "Melatonin", "level": "B2" },
     { "id": 11979, "word": "Paradox", "meaning": "Paradoks", "level": "B2" },
-    { "id": 11980, "word": "Incubator", "meaning": "KuluÃ§ka makinesi", "level": "B2" },
+    { "id": 11980, "word": "Incubator", "meaning": "Kuluçka makinesi", "level": "B2" },
     { "id": 11981, "word": "Rationality", "meaning": "Rasyonellik", "level": "B2" },
     { "id": 11982, "word": "Atmospheric", "meaning": "Atmosferik", "level": "B2" },
     { "id": 11983, "word": "Geopolitics", "meaning": "Jeopolitik", "level": "B2" },
     { "id": 11984, "word": "Innovation", "meaning": "Yenilik", "level": "B2" },
-    { "id": 11985, "word": "Biodiversity", "meaning": "BiyoÃ§eÅŸitlilik", "level": "B2" },
+    { "id": 11985, "word": "Biodiversity", "meaning": "Biyoçeşitlilik", "level": "B2" },
     { "id": 11986, "word": "Rehabilitation", "meaning": "Rehabilitasyon", "level": "B2" },
     { "id": 11987, "word": "Linguistics", "meaning": "Dilbilim", "level": "C1" },
     { "id": 11988, "word": "Phonology", "meaning": "Sesbilim", "level": "C1" },
