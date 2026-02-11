@@ -42,6 +42,10 @@ const app = {
         currentOptions: [],
         filters: { search: '', showFavsOnly: false, level: 'all' },
 
+        // Scoring
+        sessionScore: 0, // Reset every game
+        rushHighScore: 0, // Best Rush Mode Score
+
         // Audio State
         isMusicPlaying: false,
         musicVolume: 0.3,
@@ -111,6 +115,11 @@ const app = {
 
         // Authenticate
         this.authenticateAndListen();
+
+        // Audio Warmup (Wake up server)
+        if (window.ttsManager) {
+            window.ttsManager.warmup();
+        }
     },
 
 
@@ -123,6 +132,7 @@ const app = {
         if (stored) {
             const data = JSON.parse(stored);
             this.state.highScore = data.highScore || 0;
+            this.state.rushHighScore = data.rushHighScore || 0;
 
             // If we have a cached username and NOT admin, we expect cloud data
             if (localStorage.getItem('cached_username') && !this.state.isAdmin) {
@@ -158,6 +168,12 @@ const app = {
             }
         }
 
+        // Load Persistent Voice Preference
+        const savedVoice = localStorage.getItem('voice_preference');
+        if (savedVoice) {
+            this.state.listening.voicePreference = savedVoice;
+        }
+
         this.updateHeaderStats();
         this.updateAvatarUI();
     },
@@ -170,9 +186,15 @@ const app = {
             favorites: this.state.favorites,
             currentLevel: this.state.currentLevel,
             maxLevel: this.state.maxLevel, // SAVE MAX
+            rushHighScore: this.state.rushHighScore, // SAVE RUSH
             customWords: this.state.customWords
         };
         localStorage.setItem(storageKey, JSON.stringify(data));
+
+        // Save Voice Preference Globally
+        if (this.state.listening.voicePreference) {
+            localStorage.setItem('voice_preference', this.state.listening.voicePreference);
+        }
 
         if (this.state.isAdmin) {
             localStorage.setItem('admin_avatar', this.state.selectedAvatar);
@@ -191,16 +213,15 @@ const app = {
         if (this.state.isAdmin) return;
         const user = firebase.auth().currentUser;
         if (user) {
+            // Updated: Source of Truth (Progress/Cupa)
             db.collection('users').doc(user.uid).set({
                 score: this.state.score,
-                username: this.state.playerName || user.displayName
+                username: this.state.playerName || user.displayName,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
             }, { merge: true }).catch(e => console.error('Users write failed:', e));
 
-            db.collection('scores').doc(user.uid).set({
-                score: this.state.score,
-                name: this.state.playerName || user.displayName,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            }, { merge: true }).catch(e => console.error('Scores write failed:', e));
+            // CRITICAL: We NO LONGER update 'scores' collection here.
+            // 'scores' is only for Rush Mode (Acele Modu) records.
         }
     },
 
@@ -779,6 +800,7 @@ const app = {
         }
 
         this.state.gameMode = targetMode;
+        this.state.sessionScore = 0; // Reset session score for every game
         // this.state.score = 0; // REMOVED: Score is now persistent/cumulative
 
         // Apply Background based on Mode
@@ -941,7 +963,7 @@ const app = {
     },
 
     async performReset() {
-        if (!confirm("⚠️ DIKKAT: Bu işlem TÜM DÜNYADAKİ rekor listesini temizleyecek!\n(Kişisel elmaslar silinmez.)\n\nDevam etmek istiyor musun?")) return;
+        if (!confirm("⚠️ DİKKAT: Bu işlem ACELE MODU rekor listesini temizleyecek!\n\nDevam etmek istiyor musun?")) return;
 
         try {
             // Get all scores
@@ -954,28 +976,32 @@ const app = {
             });
             await batch.commit();
 
-            alert("✅ Global Rekor Tablosu Başarıyla Temizlendi!");
+            alert("✅ Acele Modu Rekor Tablosu Başarıyla Temizlendi!");
         } catch (e) {
-            console.error("Error clearing leaderboard: ", e);
+            console.error("Error clearing scores: ", e);
             alert("Hata oluştu: " + e.message);
         }
     },
 
     async performTrophyReset() {
-        if (!confirm("⚠️ DİKKAT: Bu işlem TÜM KUPA LİSTESİNİ ve TÜM OYUNCU PUANLARINI sıfırlayacak!\n\nBu işlem geri alınamaz. Devam etmek istiyor musunuz?")) return;
+        if (!confirm("⚠️ DİKKAT: Bu işlem TÜM KUPA LİSTESİNİ ve TÜM OYUNCU PUANLARI ile REKORLARI sıfırlayacak!\n\nBu işlem geri alınamaz. Devam etmek istiyor musunuz?")) return;
 
         try {
-            // 1. Clear Global Scores (Trophy Leaderboard)
-            const globalSnapshot = await db.collection("global_scores").get();
             const batch = db.batch();
-            globalSnapshot.docs.forEach(doc => {
+
+            // 1. Clear Acele Modu Records
+            const scoresSnapshot = await db.collection("scores").get();
+            scoresSnapshot.docs.forEach(doc => {
                 batch.delete(doc.ref);
             });
 
-            // 2. Reset All User Scores to 0
+            // 2. Reset All User Scores to 0 (Global XP/Cupa)
             const usersSnapshot = await db.collection("users").get();
             usersSnapshot.docs.forEach(doc => {
-                batch.update(doc.ref, { score: 0 });
+                batch.update(doc.ref, {
+                    score: 0,
+                    rushHighScore: 0
+                });
             });
 
             await batch.commit();
@@ -983,12 +1009,13 @@ const app = {
             // 3. Update Current Session State
             this.state.score = 0;
             this.state.highScore = 0;
+            this.state.rushHighScore = 0;
             this.saveData(); // Sync local storage
             this.updateHeaderStats();
 
-            alert("✅ Kupa tablosu ve tüm oyuncu puanları başarıyla sıfırlandı!");
+            alert("✅ Kupa tablosu ve tüm oyuncu rekorları başarıyla sıfırlandı!");
         } catch (e) {
-            console.error("Error resetting trophy leaderboard:", e);
+            console.error("Error resetting leaderboard:", e);
             alert("Sıfırlama sırasında bir hata oluştu: " + e.message);
         }
     },
@@ -1102,6 +1129,11 @@ const app = {
     prepareGameForWord(word) {
         this.state.currentWord = word;
 
+        // Prefetch Audio
+        if (window.ttsManager && word && word.word) {
+            window.ttsManager.prefetch(word.word);
+        }
+
         // Distractors from GLOBAL pool or LEVEL pool?
         // Global is better for variety
         let allWords = this.getAllWords();
@@ -1203,6 +1235,11 @@ const app = {
         const targetIndex = Math.floor(Math.random() * data.length);
         this.state.currentWord = data[targetIndex];
 
+        // Prefetch Audio
+        if (window.ttsManager && this.state.currentWord && this.state.currentWord.word) {
+            window.ttsManager.prefetch(this.state.currentWord.word);
+        }
+
         const distractors = [];
         while (distractors.length < 3) {
             const idx = Math.floor(Math.random() * data.length);
@@ -1284,9 +1321,23 @@ const app = {
         if (isCorrect) {
             btnElement.classList.add('correct');
 
-            // Unified Scoring: +1 for Vocab (All modes including Adventure)
+            // Unified Scoring: +1 for Vocab (Global XP/Cupa)
             this.state.score += 1;
+
+            // Differentiated Scoring: 
+            // Rush Mode Rank gets +5, all other modes get +1 on their session score
+            if (this.state.gameMode === 'rush') {
+                this.state.sessionScore += 5;
+            } else {
+                this.state.sessionScore += 1;
+            }
+
             if (this.state.score > this.state.highScore) this.state.highScore = this.state.score;
+
+            // For Rush Mode: track session record
+            if (this.state.gameMode === 'rush' && this.state.sessionScore > this.state.rushHighScore) {
+                this.state.rushHighScore = this.state.sessionScore;
+            }
 
             this.saveData(); // Persist + updateHeaderStats
 
@@ -1362,14 +1413,14 @@ const app = {
             }
         }
 
-        // Leaderboard logic - Save for ALL modes if score > 0
-        if (this.state.score > 0) {
+        // Leaderboard logic - ONLY for Rush Mode (Acele Modu)
+        if (this.state.gameMode === 'rush' && this.state.score > 0) {
             this.saveScoreToFirebase();
         }
 
         this.saveData();
 
-        document.getElementById('final-score').textContent = this.state.score;
+        document.getElementById('final-score').textContent = this.state.gameMode === 'rush' ? this.state.sessionScore : this.state.score;
 
         // Show correct header
         const title = document.querySelector('#view-gameover h3');
@@ -1789,31 +1840,35 @@ const app = {
     },
 
     async saveScoreToFirebase() {
-        // Save the TOTAL ACCUMULATED SCORE
-        if (!auth.currentUser) return;
+        // Save the RUSH MODE BEST SCORE
+        if (!auth.currentUser || this.state.gameMode !== 'rush') return;
 
         try {
-            // 1. Update User Profile (Source of Truth)
-            await db.collection("users").doc(auth.currentUser.uid).update({
-                score: this.state.score,
+            const uid = auth.currentUser.uid;
+
+            // Check if this session's score is a record for this player
+            // We use rushHighScore which is updated in handleAnswer
+
+            // 1. Update User Profile (Source of Truth for XP)
+            await db.collection("users").doc(uid).update({
+                score: this.state.score, // Total XP
+                rushHighScore: this.state.rushHighScore, // Personal Best in Rush
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
             });
 
-            // 2. Add to Leaderboard History (Optional, or update if we want unique entry per user)
-            // For now, let's keep the history log as is, but maybe limit it?
-            // Actually, for a leaderboard, usually we want the User's Best Score or Current Score.
-            // The `scores` collection seems to be a log.
-            // Let's just log it for now as requested.
-            await db.collection("scores").add({
+            // 2. Update Leaderboard (Dedicated Best Scores)
+            // Use .doc(uid).set to ensure UNIQUE entries per player
+            await db.collection("scores").doc(uid).set({
                 name: this.state.playerName,
-                uid: auth.currentUser.uid,
-                score: this.state.score,
+                uid: uid,
+                score: this.state.rushHighScore, // Only save the BEST score
                 date: new Date().toLocaleDateString('tr-TR'),
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            });
-            console.log("Score synced to Profile & Leaderboard!");
+            }, { merge: true });
+
+            console.log("Rush Record synced to Profile & Leaderboard!");
         } catch (e) {
-            console.error("Error syncing score: ", e);
+            console.error("Error syncing High Score: ", e);
         }
     },
 
@@ -3914,6 +3969,97 @@ const app = {
         if (this.listeningTimeout) clearTimeout(this.listeningTimeout);
         this.state.listening.currentIndex++;
         this.renderListeningLevel();
+    },
+
+    // --- VOICE SETTINGS ---
+    openVoiceSettings() {
+        const modal = document.getElementById('view-voice-settings-modal');
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+        this.renderVoiceOptions();
+    },
+
+    closeVoiceSettings() {
+        const modal = document.getElementById('view-voice-settings-modal');
+        if (!modal) return;
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+
+        if (window.ttsManager) {
+            // window.ttsManager.stop(); 
+        }
+    },
+
+    renderVoiceOptions() {
+        const container = document.getElementById('voice-options-container');
+        if (!container) return;
+        container.innerHTML = '';
+
+        const voices = [
+            { id: 'andrew', name: 'Andrew (Erkek)', flag: '🇺🇸', description: 'Amerikan (Standart)' },
+            { id: 'ava', name: 'Ava (Kadın)', flag: '🇺🇸', description: 'Amerikan (Doğal)' },
+            { id: 'brian', name: 'Brian (Erkek)', flag: '🇺🇸', description: 'Amerikan (Hızlı)' },
+            { id: 'emma', name: 'Emma (Kadın)', flag: '🇺🇸', description: 'Amerikan (Yumuşak)' },
+            { id: 'guy', name: 'Guy (Erkek)', flag: '🇺🇸', description: 'Amerikan (Derin)' },
+            { id: 'jenny', name: 'Jenny (Kadın)', flag: '🇺🇸', description: 'Amerikan (Resmi)' }
+        ];
+
+        // Ensure default
+        if (!this.state.listening) this.state.listening = {};
+        if (!this.state.listening.voicePreference) {
+            this.state.listening.voicePreference = localStorage.getItem('voice_preference') || 'andrew';
+        }
+        const currentId = this.state.listening.voicePreference;
+
+        voices.forEach(voice => {
+            const isSelected = currentId === voice.id;
+            const card = document.createElement('div');
+            card.className = `voice-option-card ${isSelected ? 'selected' : ''}`;
+            card.style.cssText = `
+                display: flex; align-items: center; justify-content: space-between;
+                padding: 1rem; border-radius: 12px; cursor: pointer;
+                background: ${isSelected ? 'rgba(34, 197, 94, 0.2)' : 'rgba(255,255,255,0.05)'};
+                border: 1px solid ${isSelected ? '#22c55e' : 'rgba(255,255,255,0.1)'};
+                transition: all 0.2s;
+                margin-bottom: 0.5rem;
+            `;
+
+            card.onclick = () => this.previewAndSelectVoice(voice.id);
+
+            card.innerHTML = `
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <div style="font-size:1.8rem;">${voice.flag}</div>
+                    <div>
+                        <div style="font-weight:bold; font-size:1rem; color:${isSelected ? '#22c55e' : 'white'}">${voice.name}</div>
+                        <div style="font-size:0.8rem; color:rgba(255,255,255,0.6);">${voice.description}</div>
+                    </div>
+                </div>
+                <div style="font-size:1.2rem;">
+                   ${isSelected ? '✅' : '🔊'}
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    },
+
+    previewAndSelectVoice(voiceId) {
+        this.state.listening.voicePreference = voiceId;
+        localStorage.setItem('voice_preference', voiceId);
+
+        // Re-render UI to show selection
+        this.renderVoiceOptions();
+
+        // Also update listening mode selector if present
+        const listeningSelect = document.getElementById('listening-voice-select');
+        if (listeningSelect) listeningSelect.value = voiceId;
+
+        // Play Sample
+        if (window.ttsManager) {
+            window.ttsManager.stop();
+            const phrase = "Hello! This is my voice.";
+            window.ttsManager.speak(phrase, voiceId);
+        }
     },
 
 };

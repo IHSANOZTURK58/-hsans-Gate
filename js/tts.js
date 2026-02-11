@@ -12,7 +12,7 @@ class TTSManager {
         this.isPlaying = false;
         this.currentAudio = null;
         this.cache = new Map();
-        this.maxCacheSize = 50;
+        this.maxCacheSize = 20; // Cache last 20 audio files
         this.activeRequestId = 0;
         this._healthChecked = false;
 
@@ -61,50 +61,128 @@ class TTSManager {
         this._healthChecked = true;
     }
 
+    async warmup() {
+        // Explicitly trigger a health check to wake up Render instance
+        console.log('[TTS] 🔥 Sunucu ısıtılıyor (Warmup)...');
+        try {
+            await fetch(`${this.proxyUrl}/api/health`, { mode: 'no-cors' });
+            console.log('[TTS] 🔥 Sunucu ısıtma isteği gönderildi.');
+        } catch (e) {
+            console.log('[TTS] Warmup isteği sessizce başarısız oldu (Sorun değil).');
+        }
+    }
+
+    prefetch(text, voice) {
+        if (!text) return;
+        const v = voice || this.defaultVoice;
+        const key = `${text}|${v}`;
+
+        if (this.cache.has(key)) {
+            // Already cached
+            console.log(`[TTS] ⚡ Prefetch: '${text}' zaten önbellekte.`);
+            return;
+        }
+
+        const audioUrl = `${this.proxyUrl}/api/tts?text=${encodeURIComponent(text)}&voice=${encodeURIComponent(v)}`;
+        
+        // Create audio object but DO NOT PLAY
+        const audio = new Audio(audioUrl);
+        audio.preload = 'auto'; // Force buffer
+        audio.load(); // Trigger load
+        
+        this._addToCache(key, audio);
+        console.log(`[TTS] 📥 Prefetch: '${text}' arka planda yükleniyor...`);
+    }
+
     async speak(text, voice) {
         if (!text || typeof text !== 'string') return;
         text = text.trim();
         if (text.length === 0) return;
+
+        const v = voice || this.defaultVoice;
+        const key = `${text}|${v}`;
 
         // Wait for server detection to finish before first speak
         if (!this._healthChecked && this._serverReady) {
             await this._serverReady;
         }
 
-        // Invalidate previous requests
+        // Stop current audio
         this.stop();
 
-        // Capture NEW ID after stop() has incremented it
-        const requestId = this.activeRequestId;
+        // Check Cache First
+        if (this.cache.has(key)) {
+            console.log(`[TTS] 🚀 Cache'den oynatılıyor: '${text}'`);
+            const audio = this.cache.get(key);
+            
+            // Reuse cached audio
+            this.activeRequestId++;
+            const requestId = this.activeRequestId;
 
-        const v = voice || this.defaultVoice;
+            return new Promise((resolve, reject) => {
+                this.currentAudio = audio;
+                this.isPlaying = true;
+                audio.currentTime = 0; // Reset to start
+
+                const cleanup = () => {
+                    audio.onended = null;
+                    audio.onerror = null;
+                };
+
+                audio.onended = () => {
+                    if (this.currentAudio === audio) {
+                        this.isPlaying = false;
+                        this.currentAudio = null;
+                    }
+                    cleanup();
+                    resolve();
+                };
+
+                audio.onerror = (e) => {
+                    cleanup();
+                    // If cache file failed (expired url?), try fresh fetch
+                    console.warn('[TTS] Cache oynatma hatası, yenileniyor...');
+                    this.cache.delete(key);
+                    resolve(this._speakFresh(text, v, requestId));
+                };
+
+                audio.play().catch(e => {
+                    console.error("[TTS] Play error:", e);
+                    reject(e);
+                });
+            });
+        }
+
+        // If not in cache, fresh fetch
+        this.activeRequestId++;
+        return this._speakFresh(text, v, this.activeRequestId);
+    }
+
+    async _speakFresh(text, voice, requestId) {
+        const key = `${text}|${voice}`;
         try {
-            const audioUrl = `${this.proxyUrl}/api/tts?text=${encodeURIComponent(text)}&voice=${encodeURIComponent(v)}`;
-
+            const audioUrl = `${this.proxyUrl}/api/tts?text=${encodeURIComponent(text)}&voice=${encodeURIComponent(voice)}`;
+            
             if (requestId !== this.activeRequestId) return;
-            await this._playAudio(audioUrl, requestId);
+            
+            // Create and Cache instantly
+            const audio = new Audio(audioUrl);
+            audio.preload = 'auto';
+            this._addToCache(key, audio);
+
+            await this._playAudioObject(audio, requestId);
         } catch (error) {
-            console.warn('[TTS] Python sunucusu baglantisi basarisiz, tarayici sesine geciliyor:', error.message);
+            console.warn('[TTS] Bağlantı başarısız, fallback deneniyor:', error.message);
             if (requestId === this.activeRequestId) {
                 this._fallbackSpeak(text);
             }
         }
     }
 
-    _playAudio(audioUrl, requestId) {
+    _playAudioObject(audio, requestId) {
         return new Promise((resolve, reject) => {
-            const audio = new Audio(audioUrl);
-            audio.preload = 'auto';
-
             this.currentAudio = audio;
             this.isPlaying = true;
-
-            audio.onplay = () => {
-                if (requestId !== this.activeRequestId) {
-                    audio.pause();
-                    audio.src = "";
-                }
-            };
 
             audio.onended = () => {
                 if (this.currentAudio === audio) {
@@ -115,22 +193,13 @@ class TTSManager {
             };
 
             audio.onerror = (e) => {
-                if (this.currentAudio === audio) {
-                    this.isPlaying = false;
-                    this.currentAudio = null;
-                }
-                reject(new Error('Ses calinamadi'));
+                this.isPlaying = false;
+                this.currentAudio = null;
+                reject(new Error('Ses çalınamadı'));
             };
 
             audio.play().catch(err => {
-                // If aborted, reject so .then() doesn't fire in app.js
-                if (err.name === 'AbortError') {
-                    reject(new Error('Aborted'));
-                } else if (requestId === this.activeRequestId) {
-                    reject(err);
-                } else {
-                    reject(new Error('Stale request'));
-                }
+                if (requestId === this.activeRequestId) reject(err);
             });
         });
     }
@@ -146,12 +215,11 @@ class TTSManager {
     }
 
     stop() {
-        this.activeRequestId++; // Invalidate any ongoing speak() calls to prevent fallback
+        this.activeRequestId++;
         if (this.currentAudio) {
             try {
                 this.currentAudio.pause();
-                this.currentAudio.src = "";
-                this.currentAudio.load();
+                this.currentAudio.currentTime = 0;
             } catch (e) { }
             this.currentAudio = null;
         }
@@ -161,14 +229,13 @@ class TTSManager {
         }
     }
 
-    _addToCache(key, value) {
+    _addToCache(key, audioValue) {
+        // Simple LRU-like: if full, delete oldest
         if (this.cache.size >= this.maxCacheSize) {
-            const oldest = this.cache.keys().next().value;
-            const oldUrl = this.cache.get(oldest);
-            URL.revokeObjectURL(oldUrl);
-            this.cache.delete(oldest);
+            const firstKey = this.cache.keys().next().value;
+            this.cache.delete(firstKey);
         }
-        this.cache.set(key, value);
+        this.cache.set(key, audioValue);
     }
 
     async checkHealth() {

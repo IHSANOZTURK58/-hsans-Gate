@@ -174,7 +174,7 @@
                                 <div class="icon-box">📚</div>
                                 <div class="module-info">
                                     <h4>Kelime Çalışması</h4>
-                                    <p>Kelime hazineni geliştir.</p>
+                                    <p>Yeni kelimeler öğren ve pratik yap.</p>
                                 </div>
                                 <div class="hover-glow"></div>
                             </div>
@@ -184,7 +184,7 @@
                                 <div class="icon-box">🧠</div>
                                 <div class="module-info">
                                     <h4>Dil Bilgisi</h4>
-                                    <p>Boşluk Doldurma</p>
+                                    <p>Dil bilgisi kurallarını test et.</p>
                                 </div>
                                 <div class="hover-glow"></div>
                             </div>
@@ -194,7 +194,7 @@
                                 <div class="icon-box">📖🎧</div>
                                 <div class="module-info">
                                     <h4>Okuma & Dinleme</h4>
-                                    <p>Kitaplar ve Dinleme Odası</p>
+                                    <p>Hikayeler oku ve dinleme egzersizleri yap.</p>
                                 </div>
                                 <div class="hover-glow"></div>
                             </div>
@@ -204,7 +204,7 @@
                                 <div class="icon-box">✍️</div>
                                 <div class="module-info">
                                     <h4>Yazma</h4>
-                                    <p>Kelime oluştur.</p>
+                                    <p>Kelime ve cümle yazma becerilerini geliştir.</p>
                                 </div>
                                 <div class="hover-glow"></div>
                             </div>
@@ -238,7 +238,7 @@
                             <div class="mode-icon" style="font-size:3rem; margin-bottom:1rem;">🧩</div>
                             <div class="mode-info">
                                 <h3>Harf Birleştirme</h3>
-                                <p>Karışık harfleri düzelt.</p>
+                                <p>Karışık harflerden doğru kelimeyi bul.</p>
                             </div>
                         </div>
 
@@ -248,7 +248,7 @@
                             <div class="mode-icon" style="font-size:3rem; margin-bottom:1rem;">⌨️</div>
                             <div class="mode-info">
                                 <h3>Kelime Yazma</h3>
-                                <p>İngilizcesini kendin yaz.</p>
+                                <p>Türkçe kelimenin İngilizcesini yaz.</p>
                             </div>
                         </div>
                     </div>
@@ -259,16 +259,35 @@
             <div id="view-reading-listening" class="view hidden"
                 style="background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('assets/library-bg.png') no-repeat center center/cover;">
                 <div class="modes-split-layout"
-                    style="justify-content:center; align-items:center; flex-direction:column; padding-top:3rem;">
+                    style="justify-content:flex-start; align-items:center; flex-direction:column; padding-top:2rem; padding-bottom: 2rem; overflow-y: auto;">
 
+                    <!-- HEADER GROUP -->
                     <div class="modes-header-group"
-                        style="text-align:center; margin-bottom:2rem; width:100%; padding:0 1rem;">
-                        <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Geri"
-                            style="position:absolute; top:2rem; left:1rem;">
-                            &larr;
-                        </button>
-                        <h2 style="font-size:1.8rem;">Okuma & Dinleme</h2>
-                        <p style="color:var(--text-secondary); font-size:0.9rem;">Hangi modda çalışmak istersin?</p>
+                        style="display:flex; flex-direction: column; align-items:center; justify-content:center; gap: 1rem; margin-bottom:2rem; width:100%; padding:0 1.5rem; position:relative;">
+
+                        <!-- Top Row: Back & Voice Settings -->
+                        <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                            <!-- Back Button -->
+                            <button class="btn-icon back-btn-top" onclick="app.showDashboard()" title="Geri"
+                                style="position:relative; margin:0; width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%;">
+                                &larr;
+                            </button>
+
+                            <!-- Voice Settings Button -->
+                            <button class="btn-icon" onclick="app.openVoiceSettings()" title="AI Ses Ayarları"
+                                style="position:relative; background:rgba(255,255,255,0.15); width:45px; height:45px; border-radius:12px; display:flex; align-items:center; justify-content:center; border:1px solid rgba(255,255,255,0.3); z-index:10; cursor:pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                                🗣️
+                            </button>
+                        </div>
+
+                        <!-- Title (Center) -->
+                        <div style="text-align:center; padding:0 1rem;">
+                            <h2
+                                style="font-size:1.8rem; margin:0; line-height:1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                                Okuma & Dinleme</h2>
+                            <p style="color:var(--text-secondary); font-size:0.9rem; margin:0.5rem 0 0 0;">Çalışma
+                                modunu seç</p>
+                        </div>
                     </div>
 
                     <div class="mode-grid-compact"
@@ -279,7 +298,7 @@
                             <div class="mode-icon" style="font-size:2.5rem; margin-bottom:0.5rem;">📚</div>
                             <div class="mode-info">
                                 <h3 style="font-size:1.2rem;">Kütüphane</h3>
-                                <p style="font-size:0.85rem;">Kitaplar ve Hikayeler.</p>
+                                <p style="font-size:0.85rem;">Seviyene uygun İngilizce kitaplar oku.</p>
                             </div>
                         </div>
 
@@ -289,7 +308,7 @@
                             <div class="mode-icon" style="font-size:2.5rem; margin-bottom:0.5rem;">🎧</div>
                             <div class="mode-info">
                                 <h3 style="font-size:1.2rem;">Dinleme Odası</h3>
-                                <p style="font-size:0.85rem;">Duyduğunu Yaz.</p>
+                                <p style="font-size:0.85rem;">Duyduğun cümleyi doğru şekilde yaz.</p>
                             </div>
                         </div>
 
@@ -299,7 +318,7 @@
                             <div class="mode-icon" style="font-size:2.5rem; margin-bottom:0.5rem;">🗣️</div>
                             <div class="mode-info">
                                 <h3 style="font-size:1.2rem;">Günlük Senaryolar</h3>
-                                <p style="font-size:0.85rem;">Uzun Dinleme & Diyaloglar.</p>
+                                <p style="font-size:0.85rem;">Gerçek hayat diyaloglarını dinle ve anla.</p>
                             </div>
                         </div>
                     </div>
@@ -411,7 +430,7 @@
                             <button id="btn-check-answer" class="btn-action check"
                                 onclick="app.checkWritingInputAnswer()">KONTROL ET</button>
                             <button id="btn-giveup-input" class="btn-action"
-                                style="border: 1px solid #ef4444; background: rgba(239, 68, 68, 0.1); color: white; display:flex; align-items:center; justify-content:center; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer;"
+                                style="border: 1px solid rgba(255,255,255,0.1); background: rgba(15, 23, 42, 0.6); color: white; display:flex; align-items:center; justify-content:center; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer;"
                                 onclick="app.giveUpWritingInput()">PES ET 🏳️</button>
                             <button id="btn-next-question" class="btn-action next hidden"
                                 onclick="app.nextWritingQuestion()">DEVAM ET ➡</button>
@@ -511,21 +530,21 @@
                                 <div class="mode-icon">🏔️</div>
                                 <div class="mode-info">
                                     <h3>Kelime Serüveni</h3>
-                                    <p>100 Seviye, Artan Zorluk.</p>
+                                    <p>100 farklı seviye ile kelime bilgini sına.</p>
                                 </div>
                             </div>
                             <div class="mode-card compact" onclick="app.startGame('rush')">
                                 <div class="mode-icon">⚡</div>
                                 <div class="mode-info">
                                     <h3>Acele Modu</h3>
-                                    <p>120 sn, rekor kır.</p>
+                                    <p>120 saniyede en fazla doğruyu yapmaya çalış.</p>
                                 </div>
                             </div>
                             <div class="mode-card compact" onclick="app.startGame('favorites')">
                                 <div class="mode-icon">⭐</div>
                                 <div class="mode-info">
                                     <h3>Favoriler</h3>
-                                    <p>Kendi kelimelerin.</p>
+                                    <p>Kaydettiğin zor kelimeleri tekrar et.</p>
                                 </div>
                             </div>
                         </div>
@@ -630,6 +649,38 @@
                     <div style="display:flex; gap:1rem; justify-content:center">
                         <button class="btn btn-secondary" onclick="app.handleGameOverExit()">Çıkış</button>
                         <button class="btn btn-primary" onclick="app.startGame()">Tekrar Oyna ↺</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VOICE SETTINGS MODAL -->
+            <div id="view-voice-settings-modal" class="modal-overlay hidden"
+                style="z-index: 2500; align-items: center; justify-content: center; padding: 1rem;">
+                <div class="modal-content"
+                    style="width: 100%; max-width:450px; max-height: 90vh; display: flex; flex-direction: column; padding:1.5rem; background:rgba(30, 41, 59, 0.95); backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.1); border-radius: 16px;">
+                    <div
+                        style="flex-shrink: 0; display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
+                        <h3
+                            style="margin:0; color:var(--accent-gold); display:flex; align-items:center; gap:0.5rem; font-size: 1.2rem;">
+                            🗣️ AI Ses Seçimi</h3>
+                        <button class="btn-icon" onclick="app.closeVoiceSettings()"
+                            style="background:none; border:none; font-size:1.5rem; padding: 0.5rem;">&times;</button>
+                    </div>
+
+                    <p
+                        style="flex-shrink: 0; color:var(--text-secondary); margin-bottom:1rem; font-size:0.9rem; line-height: 1.4;">
+                        Sana en uygun gelen eğitmen sesini seç.
+                    </p>
+
+                    <div id="voice-options-container" class="voice-options-grid"
+                        style="flex-grow: 1; overflow-y:auto; display:grid; grid-template-columns: 1fr; gap:0.6rem; padding-right: 5px;">
+                        <!-- JS injected voices -->
+                    </div>
+
+                    <div style="flex-shrink: 0; margin-top:1rem; text-align:center;">
+                        <button class="btn btn-primary" onclick="app.closeVoiceSettings()"
+                            style="width:100%; padding: 0.8rem;">Tamam
+                            👍</button>
                     </div>
                 </div>
             </div>
@@ -775,7 +826,7 @@
                         <button id="btn-check-listening" class="btn btn-primary"
                             onclick="app.checkListeningAnswer()">Kontrol Et</button>
                         <button id="btn-giveup-listening" class="btn btn-outline"
-                            style="border: 1px solid #ef4444; background: rgba(239, 68, 68, 0.1); color: white;"
+                            style="border: 1px solid rgba(255,255,255,0.1); background: rgba(15, 23, 42, 0.6); color: white;"
                             onclick="app.giveUpListening()">Pes Et 🏳️</button>
                     </div>
 
@@ -925,7 +976,7 @@
                     <button id="btn-scramble-clear" class="btn btn-secondary" onclick="app.clearWritingSlots()">TEMİZLE
                         🧹</button>
                     <button id="btn-scramble-giveup" class="btn btn-outline"
-                        style="border: 1px solid #ef4444; background: rgba(239, 68, 68, 0.1); color: white;"
+                        style="border: 1px solid rgba(255,255,255,0.1); background: rgba(15, 23, 42, 0.6); color: white;"
                         onclick="app.giveUpWritingScramble()">PES ET 🏳️</button>
                     <button id="btn-scramble-check" class="btn btn-primary" onclick="app.checkWritingAnswer()">KONTROL
                         ET ✅</button>
@@ -1256,14 +1307,14 @@
                     </button>
 
                     <button class="btn btn-secondary" onclick="app.resetProgress()">
-                        <span style="font-size:2rem; display:block">🗑️</span>
-                        İlerlemeyi Sıfırla
+                        <span style="font-size:2rem; display:block">⚡</span>
+                        Rekorları (Acele) Sıfırla
                     </button>
 
                     <button class="btn btn-secondary" onclick="app.resetTrophyLeaderboard()"
                         style="border-color: #ef4444; color: #ef4444;">
                         <span style="font-size:2rem; display:block">🏆</span>
-                        Kupa Tablosunu Sıfırla
+                        Her Şeyi (Kupa+Rekor) Sıfırla
                     </button>
 
                     <button class="btn btn-primary" onclick="app.openModeSelection()"
