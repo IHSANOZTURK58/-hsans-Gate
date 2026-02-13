@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix Translations</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        .progress {
+            margin: 20px 0;
+            padding: 10px;
+            background: #444;
+        }
+
+        .log {
+            height: 300px;
+            overflow-y: auto;
+            background: #222;
+            padding: 10px;
+            font-family: monospace;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #22c55e;
+            border: none;
+            color: white;
+        }
+
+        button:disabled {
+            background: #555;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Translation Fixer</h1>
+    <p>Translating missing vocabulary using Gemini API...</p>
+
+    <button id="startBtn" onclick="startTranslation()">START TRANSLATION</button>
+    <div id="status" class="progress">Ready to start.</div>
+    <div id="log" class="log"></div>
+
+    <script>
+        const API_KEYS = [
+            "AIzaSyAjIAR8yjA0kTPN23qxy0ovel-REpoH5Zc",  // Key 1
+            "AIzaSyCKb-Cm2rnVlkA-WfkxjU5E_YHGrPqKObw",  // Key 2
+            "AIzaSyCMQoab17MmEEBgSHqEeabHr_aNnyyfC48",  // Key 3
+            "AIzaSyCKBMvmoImAWiVSgMfPpYlTYOQJrF1clEo"   // Key 4
+        ];
+
+        let currentKeyIndex = 0;
+        let wordsToFix = [];
+        let fixedWords = [];
+        const BATCH_SIZE = 50;
+
+        async function log(msg) {
+            const el = document.getElementById('log');
+            el.innerHTML += `<div>${new Date().toLocaleTimeString()} - ${msg}</div>`;
+            el.scrollTop = el.scrollHeight;
+        }
+
+        async function loadWords() {
+            try {
+                const response = await fetch('/fix_vocab.json');
+                wordsToFix = await response.json();
+                document.getElementById('status').textContent = `Loaded ${wordsToFix.length} words.`;
+            } catch (e) {
+                log("Error loading words: " + e);
+            }
+        }
+
+        async function translateBatch(batch) {
+            const wordList = batch.map(w => w.word);
+            const prompt = `
+            Translate the following English words to Turkish.
+            Return ONLY a valid JSON object where keys are English words and values are Turkish meanings.
+            Do not include any explanations or markdown formatting.
+            Words: ${JSON.stringify(wordList)}
+            `;
+
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }]
+            };
+
+            for (let attempt = 0; attempt < API_KEYS.length; attempt++) {
+                const key = API_KEYS[currentKeyIndex];
+                const targetUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${key}`;
+
+                try {
+                    // Use local proxy
+                    const response = await fetch('/api/proxy', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            url: targetUrl,
+                            body: payload
+                        })
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        let text = data.candidates[0].content.parts[0].text;
+                        text = text.replace(/```json/g, '').replace(/```/g, '').trim();
+                        const jsonStart = text.indexOf('{');
+                        const jsonEnd = text.lastIndexOf('}');
+                        if (jsonStart !== -1 && jsonEnd !== -1) {
+                            text = text.substring(jsonStart, jsonEnd + 1);
+                        }
+                        return JSON.parse(text);
+                    } else if (response.status === 429) {
+                        log(`Key ${currentKeyIndex} quota exceeded. Rotating...`);
+                        currentKeyIndex = (currentKeyIndex + 1) % API_KEYS.length;
+                    } else {
+                        const errText = await response.text();
+                        log(`API Error ${response.status}: ${errText}. Rotating...`);
+                        currentKeyIndex = (currentKeyIndex + 1) % API_KEYS.length;
+                    }
+                } catch (e) {
+                    log(`Network error with key ${currentKeyIndex}: ${e}`);
+                    currentKeyIndex = (currentKeyIndex + 1) % API_KEYS.length;
+                }
+            }
+            throw new Error("All keys failed for this batch.");
+        }
+
+        async function startTranslation() {
+            document.getElementById('startBtn').disabled = true;
+            if (wordsToFix.length === 0) await loadWords();
+
+            fixedWords = [];
+
+            for (let i = 0; i < wordsToFix.length; i += BATCH_SIZE) {
+                const batch = wordsToFix.slice(i, i + BATCH_SIZE);
+                document.getElementById('status').textContent = `Processing ${i} / ${wordsToFix.length}...`;
+
+                let success = false;
+                let retryCount = 0;
+
+                while (!success && retryCount < 3) {
+                    try {
+                        const translations = await translateBatch(batch);
+
+                        batch.forEach(item => {
+                            const t = translations[item.word] || translations[item.word.toLowerCase()] || translations[item.word.charAt(0).toUpperCase() + item.word.slice(1)];
+                            if (t) {
+                                item.meaning = t;
+                            } else {
+                                log(`No translation for: ${item.word}`);
+                            }
+                            fixedWords.push(item);
+                        });
+
+                        success = true;
+                        // Save intermediate progress
+                        if (fixedWords.length % 500 === 0) {
+                            saveProgress();
+                        }
+
+                    } catch (e) {
+                        log(`Batch failed: ${e}. Retrying...`);
+                        retryCount++;
+                        await new Promise(r => setTimeout(r, 2000));
+                    }
+                }
+
+                // Be nice to API
+                await new Promise(r => setTimeout(r, 1000));
+            }
+
+            log("Translation complete. Saving final result...");
+            await saveProgress(true);
+            document.getElementById('status').textContent = "All Done!";
+        }
+
+        async function saveProgress(final = false) {
+            try {
+                const response = await fetch('/save', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(fixedWords)
+                });
+                if (response.ok) {
+                    log(`Saved ${fixedWords.length} words.`);
+                } else {
+                    log("Error saving progress.");
+                }
+            } catch (e) {
+                log("Save error: " + e);
+            }
+        }
+
+        // Auto-load
+        loadWords();
+    </script>
+</body>
+
+</html>

@@ -73,6 +73,11 @@
                             <div id="reader-content" class="reader-content">
                                 <!-- Text injected via JS -->
                             </div>
+                            <!-- Bookmark Ribbon -->
+                            <div id="bookmark-ribbon" class="bookmark-ribbon" onclick="app.toggleBookmark()"
+                                title="Kaldığın yeri işaretle">
+                                <div class="ribbon-tail"></div>
+                            </div>
                         </div>
                     </div>
                     <!-- Pagination Controls -->
@@ -298,7 +303,9 @@
                             <div class="mode-icon" style="font-size:2.5rem; margin-bottom:0.5rem;">📚</div>
                             <div class="mode-info">
                                 <h3 style="font-size:1.2rem;">Kütüphane</h3>
-                                <p style="font-size:0.85rem;">Seviyene uygun İngilizce kitaplar oku.</p>
+                                <p
+                                    style="display:block !important; color:#cbd5e1; margin-top:0.4rem; font-size:0.85rem;">
+                                    Seviyene uygun İngilizce kitaplar oku.</p>
                             </div>
                         </div>
 
@@ -308,7 +315,9 @@
                             <div class="mode-icon" style="font-size:2.5rem; margin-bottom:0.5rem;">🎧</div>
                             <div class="mode-info">
                                 <h3 style="font-size:1.2rem;">Dinleme Odası</h3>
-                                <p style="font-size:0.85rem;">Duyduğun cümleyi doğru şekilde yaz.</p>
+                                <p
+                                    style="display:block !important; color:#cbd5e1; margin-top:0.4rem; font-size:0.85rem;">
+                                    Duyduğun cümleyi doğru şekilde yaz.</p>
                             </div>
                         </div>
 
@@ -318,7 +327,9 @@
                             <div class="mode-icon" style="font-size:2.5rem; margin-bottom:0.5rem;">🗣️</div>
                             <div class="mode-info">
                                 <h3 style="font-size:1.2rem;">Günlük Senaryolar</h3>
-                                <p style="font-size:0.85rem;">Gerçek hayat diyaloglarını dinle ve anla.</p>
+                                <p
+                                    style="display:block !important; color:#cbd5e1; margin-top:0.4rem; font-size:0.85rem;">
+                                    Gerçek hayat diyaloglarını dinle ve anla.</p>
                             </div>
                         </div>
                     </div>
@@ -417,7 +428,7 @@
                         <!-- task-header removed -->
 
                         <div class="task-content">
-                            <h2 id="input-target-meaning" class="task-question-text">Loading...</h2>
+                            <h2 id="input-target-meaning" class="task-question-text">Yükleniyor...</h2>
 
                             <div class="task-input-wrapper">
                                 <textarea id="writing-direct-input" class="task-textarea"
@@ -1172,7 +1183,7 @@
                             <div class="topic-info">
                                 <h3>Possessives</h3>
                                 <p>My, Your, His...</p>
-                                <span class="topic-count">Loading...</span>
+                                <span class="topic-count">Yükleniyor...</span>
                             </div>
                         </div>
 
@@ -1185,7 +1196,7 @@
                             <div class="topic-info">
                                 <h3>Adjectives & Adverbs</h3>
                                 <p>Quick vs Quickly</p>
-                                <span class="topic-count">Loading...</span>
+                                <span class="topic-count">Yükleniyor...</span>
                             </div>
                         </div>
 
@@ -1198,7 +1209,7 @@
                             <div class="topic-info">
                                 <h3>Conjunctions</h3>
                                 <p>And, But, So, Because</p>
-                                <span class="topic-count">Loading...</span>
+                                <span class="topic-count">Yükleniyor...</span>
                             </div>
                         </div>
 
@@ -1211,7 +1222,7 @@
                             <div class="topic-info">
                                 <h3>Quantifiers & Noun Clauses</h3>
                                 <p>Some, Any, That...</p>
-                                <span class="topic-count">Loading...</span>
+                                <span class="topic-count">Yükleniyor...</span>
                             </div>
                         </div>
                     </div>
@@ -1417,7 +1428,7 @@
     <script src="js/grammar.js?v=33"></script>
     <script src="js/grammar_explanations.js?v=33"></script>
     <script src="js/scenarios.js?v=1"></script>
-    <script src="js/books.js"></script>
+    <!-- Books loaded lazily in app.js -->
     <script src="js/tts.js"></script>
     <script src="js/app.js?v=34"></script>
 
@@ -1425,10 +1436,10 @@
     <div id="dict-toast" class="dict-toast">
         <div class="dict-content">
             <div class="dict-header">
-                <span id="dict-word" class="dict-word">Word</span>
+                <span id="dict-word" class="dict-word">Kelime</span>
                 <span id="dict-level" class="dict-level">A1</span>
             </div>
-            <div id="dict-meaning" class="dict-meaning">Meaning goes here</div>
+            <div id="dict-meaning" class="dict-meaning">Anlam burada görünecek</div>
         </div>
         <div class="dict-actions">
             <button id="dict-star-btn" class="btn-dict-star" onclick="app.toggleDictToastFavorite()"

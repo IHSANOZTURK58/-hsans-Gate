@@ -2091,7 +2091,7 @@ const app = {
         },
 
         async checkAnswer(source, input, direction = 'EN_TR') {
-            if (this.apiKeys.length === 0) return { error: "No API keys available" };
+            if (this.apiKeys.length === 0) return { error: "API anahtarı bulunamadı" };
 
             let prompt = '';
 
@@ -2164,7 +2164,7 @@ const app = {
                         continue;
                     } else {
                         console.error(`API Error: ${response.status}`);
-                        const apiError = data.error?.message || "Unknown API Error";
+                        const apiError = data.error?.message || "Bilinmeyen API Hatası";
                         return { error: apiError };
                     }
                 } catch (e) {
@@ -3160,11 +3160,105 @@ const app = {
     },
 
     // --- READING MODE ---
-    openReadingMode() {
+    // --- READING MODE ---
+    async openReadingMode() {
         this.state.previousView = this.state.currentView;
         this.state.currentView = 'reading';
         this.render();
+
+        // Show Loading State
+        const grid = document.getElementById('library-grid');
+        if (grid) {
+            grid.innerHTML = `
+                <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:200px;">
+                    <div class="loader" style="border: 4px solid rgba(255,255,255,0.1); border-top: 4px solid var(--neon-blue); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite;"></div>
+                    <p style="margin-top:1rem; color:var(--text-secondary);">Kütüphane Oluşturuluyor...</p>
+                </div>
+            `;
+        }
+
+        // Add spinner animation if not exists
+        if (!document.getElementById('loader-style')) {
+            const style = document.createElement('style');
+            style.id = 'loader-style';
+            style.textContent = `@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`;
+            document.head.appendChild(style);
+        }
+
+        await this.loadBookData();
         this.renderLibrary();
+    },
+
+    loadBookData() {
+        return new Promise((resolve) => {
+            if (this.state.areBooksLoaded) {
+                resolve();
+                return;
+            }
+
+            console.log("Lazy Loading Books...");
+
+            // Core init file must load first
+            const initScript = document.createElement('script');
+            initScript.src = 'js/books.js';
+            initScript.onload = () => {
+                // Now load the rest in parallel
+                const scripts = [
+                    'js/aesop_books.js',
+                    'js/dolittle_books.js',
+                    'js/fairy_tales_books.js',
+                    'js/grimms_books.js',
+                    'js/jungle_book_books.js',
+                    'js/little_princess_books.js',
+                    'js/mother_goose_books.js',
+                    'js/mother_west_wind_books.js',
+                    'js/peter_pan_books.js',
+                    'js/peter_rabbit_books.js',
+                    'js/pride_prejudice_books.js',
+                    'js/tom_sawyer_books.js',
+                    'js/wizard_oz_books.js',
+                    'js/secret_garden_books.js',
+                    'js/railway_children_books.js',
+                    'js/sherlock_books.js',
+                    'js/gatsby_books.js',
+                    'js/dorian_gray_books.js',
+                    'js/frankenstein_books.js',
+                    'js/treasure_island_books.js'
+                ];
+
+                let loaded = 0;
+                let total = scripts.length;
+
+                if (total === 0) {
+                    this.state.areBooksLoaded = true;
+                    resolve();
+                    return;
+                }
+
+                scripts.forEach(src => {
+                    const s = document.createElement('script');
+                    s.src = src;
+                    s.onload = () => {
+                        loaded++;
+                        if (loaded === total) {
+                            console.log("All books loaded.");
+                            this.state.areBooksLoaded = true;
+                            resolve();
+                        }
+                    };
+                    s.onerror = () => {
+                        console.error("Failed to load book:", src);
+                        loaded++; // continue anyway
+                        if (loaded === total) {
+                            this.state.areBooksLoaded = true;
+                            resolve();
+                        }
+                    };
+                    document.body.appendChild(s);
+                });
+            };
+            document.body.appendChild(initScript);
+        });
     },
 
 
@@ -3183,6 +3277,20 @@ const app = {
         levels.forEach(level => {
             const books = window.BOOK_DATA[level];
             if (books && Array.isArray(books) && books.length > 0) {
+                // Grouping Logic
+                const groups = {};
+                books.forEach((book, index) => {
+                    // Extract base title (e.g. "Peter Pan - Vol 1" -> "Peter Pan")
+                    // Regex: Anything before " - Vol X"
+                    const match = book.title.match(/^(.*?) - Vol \d+$/);
+                    const baseTitle = match ? match[1] : book.title;
+
+                    if (!groups[baseTitle]) {
+                        groups[baseTitle] = [];
+                    }
+                    groups[baseTitle].push({ ...book, originalIndex: index });
+                });
+
                 // Create Shelf Group
                 const group = document.createElement('div');
                 group.className = 'shelf-group';
@@ -3195,17 +3303,34 @@ const app = {
                 const row = document.createElement('div');
                 row.className = 'shelf-row';
 
-                books.forEach((book, index) => {
+                // Render Groups
+                Object.keys(groups).forEach(baseTitle => {
+                    const groupBooks = groups[baseTitle];
+                    const isSeries = groupBooks.length > 1;
+                    const representative = groupBooks[0]; // Use first book for cover/color
+
                     const card = document.createElement('div');
                     card.className = 'book-card';
-                    card.style.backgroundColor = book.color || '#2d3436';
-                    card.onclick = () => this.openBook(level, index);
+                    card.style.backgroundColor = representative.color || '#2d3436';
 
-                    card.innerHTML = `
-                        <div class="book-cover">${book.cover || '📖'}</div>
-                        <div class="book-title">${book.title}</div>
-                        <div class="book-author">${book.author}</div>
-                    `;
+                    if (isSeries) {
+                        // Series Card
+                        card.onclick = () => this.openVolumeSelector(level, baseTitle, groupBooks);
+                        card.innerHTML = `
+                            <div class="book-cover">${representative.cover || '📚'}</div>
+                            <div class="book-title">${baseTitle}</div>
+                            <div class="book-author">${representative.author}</div>
+                            <div class="series-badge">${groupBooks.length} Cilt</div>
+                        `;
+                    } else {
+                        // Single Book
+                        card.onclick = () => this.openBook(level, representative.originalIndex);
+                        card.innerHTML = `
+                            <div class="book-cover">${representative.cover || '📖'}</div>
+                            <div class="book-title">${representative.title}</div>
+                            <div class="book-author">${representative.author}</div>
+                        `;
+                    }
                     row.appendChild(card);
                 });
 
@@ -3218,6 +3343,63 @@ const app = {
                 grid.appendChild(group);
             }
         });
+    },
+
+    openVolumeSelector(level, title, books) {
+        // Remove existing modal if any
+        const existing = document.getElementById('volume-selector-modal');
+        if (existing) existing.remove();
+
+        const modal = document.createElement('div');
+        modal.id = 'volume-selector-modal';
+        modal.className = 'modal-overlay';
+        modal.style.zIndex = '3000';
+        modal.onclick = (e) => {
+            if (e.target === modal) modal.remove();
+        };
+
+        const content = document.createElement('div');
+        content.className = 'modal-content volume-selector-content';
+
+        // Header
+        content.innerHTML = `
+            <div class="volume-header">
+                <h3 style="margin:0; color:var(--accent-gold);">${title}</h3>
+                <button class="btn-icon-small" onclick="document.getElementById('volume-selector-modal').remove()">&times;</button>
+            </div>
+            <p style="color:var(--text-secondary); margin-bottom:1.5rem;">Okumak istediğin cildi seç:</p>
+            <div class="volume-grid"></div>
+        `;
+
+        const grid = content.querySelector('.volume-grid');
+
+        books.forEach(book => {
+            const btn = document.createElement('button');
+            btn.className = 'volume-btn';
+            btn.style.borderColor = book.color || 'rgba(255,255,255,0.2)';
+
+            // Extract Vol Number usually at end
+            const volMatch = book.title.match(/Vol (\d+)$/);
+            const volNum = volMatch ? volMatch[1] : '?';
+
+            btn.onclick = () => {
+                document.getElementById('volume-selector-modal').remove();
+                this.openBook(level, book.originalIndex);
+            };
+
+            btn.innerHTML = `
+                <div class="vol-icon" style="background:${book.color || '#444'}">${book.cover}</div>
+                <div class="vol-info">
+                    <span class="vol-label">Cilt ${volNum}</span>
+                    <span class="vol-sub">Bölüm ${volNum === '1' ? '1-??' : '??-??'}</span> 
+                </div>
+                <div class="vol-arrow">→</div>
+            `;
+            grid.appendChild(btn);
+        });
+
+        modal.appendChild(content);
+        document.body.appendChild(modal);
     },
 
     getPaginatedPages(originalPages, maxLines = 7) {
@@ -3257,7 +3439,14 @@ const app = {
         // Initialize state
         this.state.currentBookLevel = level;
         this.state.currentBookIndex = index;
-        this.state.currentBookPage = 0;
+        // Check for bookmark
+        const savedPage = this.getBookmark(book.title);
+        if (savedPage !== null && savedPage < paginatedPages.length) {
+            this.state.currentBookPage = savedPage;
+        } else {
+            this.state.currentBookPage = 0;
+        }
+
         this.state.paginatedPages = paginatedPages;
         this.state.totalBookPages = paginatedPages.length;
 
@@ -3267,7 +3456,7 @@ const app = {
         document.getElementById('reader-book-title').textContent = book.title;
         document.getElementById('reader-book-level').textContent = `Seviye ${book.level}`;
 
-        // Render first page
+        // Render page
         this.renderBookPage();
 
         // Reset search
@@ -3342,9 +3531,43 @@ const app = {
         if (prevBtn) prevBtn.disabled = this.state.currentBookPage === 0;
         if (nextBtn) nextBtn.disabled = this.state.currentBookPage === this.state.totalBookPages - 1;
 
+        // Update bookmark visual state
+        const ribbon = document.getElementById('bookmark-ribbon');
+        if (ribbon) {
+            const bookTitle = document.getElementById('reader-book-title').textContent;
+            const savedPage = this.getBookmark(bookTitle);
+            if (savedPage === this.state.currentBookPage) {
+                ribbon.classList.add('active');
+            } else {
+                ribbon.classList.remove('active');
+            }
+        }
+
         // Scroll to top
         const readerContent = document.getElementById('reader-content');
         if (readerContent) readerContent.scrollTop = 0;
+    },
+
+    toggleBookmark() {
+        const bookTitle = document.getElementById('reader-book-title').textContent;
+        const currentProgress = this.getBookmark(bookTitle);
+
+        if (currentProgress === this.state.currentBookPage) {
+            // Remove bookmark
+            localStorage.removeItem(`bookmark_${bookTitle}`);
+            this.playSound('click');
+        } else {
+            // Set bookmark
+            localStorage.setItem(`bookmark_${bookTitle}`, this.state.currentBookPage);
+            this.playSound('correct');
+        }
+
+        this.renderBookPage(); // Refresh UI
+    },
+
+    getBookmark(bookTitle) {
+        const val = localStorage.getItem(`bookmark_${bookTitle}`);
+        return val !== null ? parseInt(val) : null;
     },
 
     speakCurrentPage() {
