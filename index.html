@@ -19,10 +19,95 @@
     <link rel="preload" as="image" href="assets/game-bg-galaxy.png">
     <link rel="preload" as="image" href="assets/modes-bg.png">
     <link rel="preload" as="image" href="assets/writing-bg.png">
+
+    <style>
+        /* AI Teacher Responsive Layout Refined */
+        .ai-game-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ai-main-column {
+            width: 100%;
+        }
+
+        /* Teacher Explanation Drawer */
+        #ai-rich-feedback {
+            position: fixed;
+            bottom: -100%;
+            /* Start off-screen */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            max-width: 600px;
+            background: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px 24px 0 0;
+            padding: 2rem;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #ai-rich-feedback.active {
+            bottom: 0;
+        }
+
+        .btn-ai-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: background 0.2s;
+        }
+
+        .btn-ai-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 900px) {
+            .ai-card-glass {
+                padding: 1.5rem 1.2rem !important;
+                background: rgba(30, 41, 59, 0.5) !important;
+            }
+
+            #ai-source-text {
+                font-size: 1.5rem !important;
+            }
+
+            .btn-ai-action {
+                width: 100%;
+                height: 60px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="app-container">
+        <!-- Global Utilities -->
+        <div class="global-floating-controls">
+            <button id="btn-fullscreen-toggle" class="btn-fullscreen" onclick="app.toggleFullscreen()"
+                title="Tam Ekran">
+                <span class="fs-icon">⛶</span>
+            </button>
+        </div>
 
 
         <main id="app-content">
@@ -247,15 +332,17 @@
                             </div>
                         </div>
 
-                        <!-- Direct Input Mode -->
-                        <div class="mode-card compact" onclick="app.startWritingInputMode()"
-                            style="width:100%; max-width:350px; text-align:center; display:block; padding:2rem;">
-                            <div class="mode-icon" style="font-size:3rem; margin-bottom:1rem;">⌨️</div>
+                        <!-- AI Teacher Mode (NEW) -->
+                        <div class="mode-card compact highlight-border" onclick="GeminiTeacher.init()"
+                            style="width:100%; max-width:350px; text-align:center; display:block; padding:2rem; border:1px solid var(--neon-purple); box-shadow:0 0 15px rgba(139, 92, 246, 0.3);">
+                            <div class="mode-icon" style="font-size:3rem; margin-bottom:1rem;">🤖</div>
                             <div class="mode-info">
-                                <h3>Kelime Yazma</h3>
-                                <p>Türkçe kelimenin İngilizcesini yaz.</p>
+                                <h3>AI Öğretmen</h3>
+                                <p>Yapay zeka ile cümle çevirisi yap.</p>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>
@@ -403,98 +490,7 @@
             </div>
 
 
-            <!-- WRITING INPUT VIEW (Split Layout) -->
-            <div id="view-writing-input" class="view hidden" style="position:relative;">
-                <!-- START OVERLAY (Quota Saver) -->
-                <div id="writing-input-start-overlay"
-                    style="position:absolute; inset:0; background:rgba(15, 23, 42, 0.95); z-index:1000; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
-                    <div style="font-size:4rem; margin-bottom:1rem;">🤖</div>
-                    <h2 style="font-size:2rem; margin-bottom:0.5rem; color:var(--accent-gold);">Hazır mısın?</h2>
-                    <p style="color:var(--text-secondary); max-width:400px; margin-bottom:2rem;">
-                        Başla butonuna bastığında Yapay Zeka senin için özel bir soru hazırlayacak.
-                    </p>
-                    <button class="btn btn-primary" style="font-size:1.5rem; padding:1rem 3rem;"
-                        onclick="app.beginProWritingSession()">
-                        BAŞLA 🚀
-                    </button>
-                    <button class="btn btn-text" style="margin-top:1rem;" onclick="app.openWritingModes()">Geri
-                        Dön</button>
-                </div>
 
-                <div class="split-screen-container">
-
-                    <!-- LEFT: Task Pane -->
-                    <div class="task-pane">
-                        <!-- task-header removed -->
-
-                        <div class="task-content">
-                            <h2 id="input-target-meaning" class="task-question-text">Yükleniyor...</h2>
-
-                            <div class="task-input-wrapper">
-                                <textarea id="writing-direct-input" class="task-textarea"
-                                    placeholder="Türkçesi nedir?..." rows="2"
-                                    onkeydown="if(event.key === 'Enter') { event.preventDefault(); app.checkWritingInputAnswer(); }"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="task-actions">
-                            <button id="btn-check-answer" class="btn-action check"
-                                onclick="app.checkWritingInputAnswer()">KONTROL ET</button>
-                            <button id="btn-giveup-input" class="btn-action"
-                                style="border: 1px solid rgba(255,255,255,0.1); background: rgba(15, 23, 42, 0.6); color: white; display:flex; align-items:center; justify-content:center; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer;"
-                                onclick="app.giveUpWritingInput()">PES ET 🏳️</button>
-                            <button id="btn-next-question" class="btn-action next hidden"
-                                onclick="app.nextWritingQuestion()">DEVAM ET ➡</button>
-                        </div>
-                    </div>
-
-                    <!-- RIGHT: AI Chat Pane -->
-                    <div class="chat-pane">
-                        <div class="chat-header" style="justify-content: space-between;">
-                            <button class="btn-icon back-btn-simple" onclick="app.openWritingModes()"
-                                style="margin-right:0;">&larr;</button>
-
-                            <div style="display:flex; align-items:center; gap:0.5rem;">
-                                <span class="ai-avatar">🤖</span>
-                                <div class="ai-info">
-                                    <span class="ai-name">AI Asistan</span>
-                                    <span class="ai-status">Çevrimiçi</span>
-                                </div>
-                            </div>
-                            <button id="btn-music" class="btn-music" onclick="app.toggleMusic()" title="Müzik Aç/Kapat">
-                                🎵
-                            </button>
-                            <div class="user-profile">
-                                <img src="assets/avatars/avatar_1.png" alt="Avatar" class="profile-avatar"
-                                    id="header-avatar-chat" onclick="app.toggleAvatarPicker()">
-                                <span class="user-name" id="display-user-name-chat">Misafir</span>
-                                <!-- Score removed from chat pane to avoid ID duplicate -->
-                            </div>
-
-                            <button id="btn-lang-toggle" class="lang-toggle-btn mode-en-tr"
-                                onclick="app.toggleWritingDirection()">
-                                <div class="toggle-content">
-                                    <span class="lang-group">
-                                        <img src="https://flagcdn.com/w40/gb.png" alt="UK" class="flag-img">
-                                        <span class="lang-text">İng</span>
-                                    </span>
-                                    <span class="arrow-icon" id="toggle-arrow">➡</span>
-                                    <span class="lang-group">
-                                        <img src="https://flagcdn.com/w40/tr.png" alt="TR" class="flag-img">
-                                        <span class="lang-text">Tr</span>
-                                    </span>
-                                </div>
-                            </button>
-                        </div>
-                        <div id="ai-chat-messages" class="chat-messages">
-                            <!-- Messages will appear here -->
-                            <div class="chat-bubble ai">Merhaba! Sana çevirilerde yardım etmek için buradayım.
-                                Başlayalım! 🚀</div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
 
             <!-- WRITING VIEW (Scramble Mode) -->
             <div id="view-modes" class="view hidden" style="padding: 0;">
@@ -569,6 +565,229 @@
                             <span>📚</span> Tüm Kelimeler & Favoriler
                         </button>
                     </div>
+                </div>
+            </div>
+
+            <!-- GAME VIEW -->
+            <!-- AI TEACHER VIEW (New Production-Ready Feature) -->
+            <div id="view-ai-teacher" class="view hidden" style="padding:0; height:100vh; overflow:hidden;">
+
+                <!-- 1. START SCREEN (Brightened Thematic Background) -->
+                <div id="ai-start-screen" class="ai-overlay active"
+                    style="position:absolute; inset:0; z-index:20; background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(30, 41, 59, 0.7)), url('assets/library-bg.png') no-repeat center center/cover; display:flex; justify-content:center; align-items:center;">
+
+                    <!-- Decorative Floating Particles -->
+                    <div class="ai-bg-particles"
+                        style="position:absolute; inset:0; pointer-events:none; overflow:hidden;">
+                        <div class="particle"
+                            style="position:absolute; width:4px; height:4px; background:rgba(255,255,255,0.4); border-radius:50%; top:20%; left:30%; animation: float 10s infinite;">
+                        </div>
+                        <div class="particle"
+                            style="position:absolute; width:6px; height:6px; background:rgba(99, 102, 241, 0.4); border-radius:50%; top:60%; left:80%; animation: float 15s infinite reverse;">
+                        </div>
+                    </div>
+
+                    <div class="ai-content-center"
+                        style="text-align:center; color:white; padding:2rem; width:100%; max-width:500px; position:relative; z-index:2;">
+                        <div class="ai-avatar-large"
+                            style="font-size:5rem; margin-bottom:1rem; animation: float 3s ease-in-out infinite; text-shadow: 0 0 20px rgba(255,255,255,0.3);">
+                            👨‍🏫
+                        </div>
+                        <h1
+                            style="font-size:2.5rem; margin-bottom:0.5rem; background: linear-gradient(to right, #c084fc, #818cf8); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 10px rgba(129, 140, 248, 0.3));">
+                            Özel Dil Öğretmeni</h1>
+                        <p
+                            style="color:#e2e8f0; margin-bottom:2rem; font-size:1.1rem; font-weight:500; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                            Seviyeni seç ve sana özel
+                            hazırlanmış cümlelerle pratik yap.</p>
+
+                        <!-- Study Mode Picker (Brightened Glass) -->
+                        <div class="ai-start-mode-picker"
+                            style="margin-bottom:1.5rem; background:rgba(255, 255, 255, 0.1); backdrop-filter:blur(15px); padding:1.2rem; border-radius:24px; border:1px solid rgba(255,255,255,0.3); box-shadow: 0 8px 32px rgba(0,0,0,0.2);">
+                            <label
+                                style="display:block; font-size:0.8rem; color:#cbd5e1; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; font-weight:bold;">Çalışma
+                                Şekli</label>
+
+                            <div class="ai-chip-grid" style="display:flex; gap:0.8rem; justify-content:center;">
+                                <div class="ai-selection-chip active" data-value="EN_TR"
+                                    onclick="GeminiTeacher.setStartMode('EN_TR', this)"
+                                    style="flex:1; background:rgba(99, 102, 241, 0.4); border:2px solid #a5b4fc; padding:0.8rem; border-radius:16px; cursor:pointer; transition:all 0.3s; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);">
+                                    <div style="font-size:1.5rem; margin-bottom:0.2rem;">🇬🇧</div>
+                                    <div style="font-size:0.75rem; font-weight:bold; color:white;">EN &rarr; TR</div>
+                                </div>
+                                <div class="ai-selection-chip" data-value="TR_EN"
+                                    onclick="GeminiTeacher.setStartMode('TR_EN', this)"
+                                    style="flex:1; background:rgba(255,255,255,0.1); border:2px solid rgba(255,255,255,0.2); padding:0.8rem; border-radius:16px; cursor:pointer; transition:all 0.3s;">
+                                    <div style="font-size:1.5rem; margin-bottom:0.2rem;">🇹🇷</div>
+                                    <div style="font-size:0.75rem; font-weight:bold; color:rgba(255,255,255,0.7);">TR
+                                        &rarr; EN</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level Picker on Start (Brightened Glass) -->
+                        <div class="ai-start-level-picker"
+                            style="margin-bottom:2rem; background:rgba(255, 255, 255, 0.1); backdrop-filter:blur(15px); padding:1.2rem; border-radius:32px; border:1px solid rgba(255,255,255,0.3); box-shadow: 0 8px 32px rgba(0,0,0,0.2);">
+                            <label
+                                style="display:block; font-size:0.8rem; color:#cbd5e1; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; font-weight:bold;">Öğrenme
+                                Seviyesi</label>
+
+                            <div class="ai-chip-grid-scroll"
+                                style="display:grid; grid-template-columns: repeat(3, 1fr); gap:0.5rem;">
+                                <div class="ai-level-chip active" data-value="Mixed"
+                                    onclick="GeminiTeacher.setStartLevel('Mixed', this)"
+                                    style="background:rgba(139, 92, 246, 0.4); border:2px solid #c084fc; padding:0.6rem; border-radius:16px; cursor:pointer; font-weight:bold; font-size:0.9rem; transition:all 0.3s; grid-column: span 3; margin-bottom:0.2rem; color:white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);">
+                                    🌟 Karışık</div>
+
+                                <div class="ai-level-chip" data-value="A1"
+                                    onclick="GeminiTeacher.setStartLevel('A1', this)"
+                                    style="background:rgba(34, 197, 94, 0.1); border:2px solid rgba(34, 197, 94, 0.3); padding:0.5rem; border-radius:12px; cursor:pointer; font-weight:bold; color:#86efac;">
+                                    A1</div>
+                                <div class="ai-level-chip" data-value="A2"
+                                    onclick="GeminiTeacher.setStartLevel('A2', this)"
+                                    style="background:rgba(59, 130, 246, 0.1); border:2px solid rgba(59, 130, 246, 0.3); padding:0.5rem; border-radius:12px; cursor:pointer; font-weight:bold; color:#93c5fd;">
+                                    A2</div>
+                                <div class="ai-level-chip" data-value="B1"
+                                    onclick="GeminiTeacher.setStartLevel('B1', this)"
+                                    style="background:rgba(234, 179, 8, 0.1); border:2px solid rgba(234, 179, 8, 0.3); padding:0.5rem; border-radius:12px; cursor:pointer; font-weight:bold; color:#fde047;">
+                                    B1</div>
+                                <div class="ai-level-chip" data-value="B2"
+                                    onclick="GeminiTeacher.setStartLevel('B2', this)"
+                                    style="background:rgba(249, 115, 22, 0.1); border:2px solid rgba(249, 115, 22, 0.3); padding:0.5rem; border-radius:12px; cursor:pointer; font-weight:bold; color:#fdba74;">
+                                    B2</div>
+                                <div class="ai-level-chip" data-value="C1"
+                                    onclick="GeminiTeacher.setStartLevel('C1', this)"
+                                    style="background:rgba(239, 68, 68, 0.1); border:2px solid rgba(239, 68, 68, 0.3); padding:0.5rem; border-radius:12px; cursor:pointer; font-weight:bold; color:#fca5a5;">
+                                    C1</div>
+                                <div class="ai-level-chip" data-value="C2"
+                                    onclick="GeminiTeacher.setStartLevel('C2', this)"
+                                    style="background:rgba(168, 85, 247, 0.1); border:2px solid rgba(168, 85, 247, 0.3); padding:0.5rem; border-radius:12px; cursor:pointer; font-weight:bold; color:#d8b4fe;">
+                                    C2</div>
+                            </div>
+                        </div>
+
+                        <button class="btn-ai-start" onclick="GeminiTeacher.startSession()"
+                            style="width:100%; background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%); color: white; border: none; padding: 1.2rem; font-size: 1.2rem; border-radius: 50px; cursor: pointer; box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); transition: transform 0.2s; font-weight:bold;">
+                            <span>Derslere Başla 🚀</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. GAME INTERFACE -->
+                <div id="ai-game-interface" class="ai-game-container hidden"
+                    style="height:100%; display:flex; flex-direction:column;">
+
+                    <!-- Header -->
+                    <div class="ai-header"
+                        style="padding:1rem 1.5rem; display:flex; align-items:center; justify-content:space-between; background:rgba(15, 23, 42, 0.6); backdrop-filter:blur(10px); border-bottom:1px solid rgba(255,255,255,0.1);">
+                        <button class="btn-icon-glass" onclick="app.openWritingModes()"
+                            style="background:rgba(255,255,255,0.1); border:none; color:white; width:36px; height:36px; border-radius:50%; cursor:pointer;">&larr;</button>
+
+                        <div class="ai-status-pill"
+                            style="display:flex; align-items:center; gap:0.5rem; background:rgba(0,0,0,0.3); padding:0.4rem 1rem; border-radius:20px; border:1px solid rgba(255,255,255,0.1);">
+                            <span class="status-dot online"
+                                style="width:8px; height:8px; background:#4ade80; border-radius:50%; box-shadow:0 0 5px #4ade80;"></span>
+                            <span id="ai-active-level-badge"
+                                style="font-size:0.9rem; color:var(--text-secondary); font-weight:bold;">-</span>
+                        </div>
+
+                        <div style="display:flex; gap:0.5rem;">
+                            <!-- Mode Indicator Header -->
+                            <div class="ai-mode-badge"
+                                style="background:rgba(139, 92, 246, 0.2); padding:0.4rem 0.8rem; border-radius:12px; border:1px solid rgba(139, 92, 246, 0.2); min-width:80px; text-align:center;">
+                                <span id="ai-mode-text"
+                                    style="font-weight:bold; font-size:0.85rem; color:#c4b5fd;">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Card Area -->
+                    <div class="flex-1-scroll"
+                        style="display:flex; justify-content:center; align-items:center; padding:1.5rem;">
+                        <div class="ai-game-layout">
+
+                            <div class="ai-main-column">
+                                <div class="ai-card-glass"
+                                    style="background:rgba(30, 41, 59, 0.7); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:24px; padding:2.5rem; box-shadow:0 10px 30px rgba(0,0,0,0.3); text-align:center;">
+
+                                    <div class="ai-question-area" style="margin-bottom:2.5rem;">
+                                        <span class="label-sm"
+                                            style="display:block; font-size:0.9rem; color:#94a3b8; margin-bottom:0.8rem; text-transform:uppercase; letter-spacing:1px;">Çevirmen
+                                            gereken cümle:</span>
+                                        <h2 id="ai-source-text"
+                                            style="font-size:2rem; color:white; line-height:1.4; min-height:100px; display:flex; align-items:center; justify-content:center; margin:0;">
+                                            Yükleniyor...</h2>
+                                        <p id="ai-hint"
+                                            style="color:#94a3b8; font-size:1rem; opacity:0; transition:opacity 0.3s; margin-top:1rem;">
+                                            İpucu: ...</p>
+                                    </div>
+
+                                    <div class="ai-input-area" style="position:relative; margin-bottom:2rem;">
+                                        <input type="text" id="ai-user-input" placeholder="Anlamını buraya yaz..."
+                                            autocomplete="off"
+                                            style="width:100%; padding:1.2rem 1.5rem; background:rgba(0,0,0,0.3); border:2px solid rgba(255,255,255,0.1); border-radius:20px; color:white; font-size:1.2rem; outline:none; text-align:center; transition:all 0.2s; box-shadow:inset 0 2px 10px rgba(0,0,0,0.2);"
+                                            onkeydown="GeminiTeacher.handleInputKey(event)">
+                                    </div>
+
+                                    <!-- Feedback Text -->
+                                    <div id="ai-feedback-text" class="feedback-message hidden"
+                                        style="margin-bottom:1.5rem; min-height:2rem; font-size:1.1rem; font-weight:600; padding:0.8rem; border-radius:12px;">
+                                    </div>
+
+                                    <!-- Show Explanation Button (Down Arrow) -->
+                                    <button id="btn-ai-show-explanation" class="hidden"
+                                        onclick="GeminiTeacher.toggleExplanation(true)"
+                                        style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:#a78bfa; padding:0.6rem 1.2rem; border-radius:12px; font-size:0.9rem; font-weight:bold; cursor:pointer; margin-bottom:1.5rem; transition:all 0.2s; display:inline-flex; align-items:center; gap:0.5rem; margin: 0 auto 1.5rem auto;">
+                                        <span>Öğretmen Açıklaması 👨‍🏫</span>
+                                        <span style="font-size:1rem;">▼</span>
+                                    </button>
+
+                                    <!-- Action Buttons -->
+                                    <div class="ai-actions" style="display:flex; justify-content:center;">
+                                        <button id="btn-ai-check" class="btn-ai-action primary"
+                                            onclick="GeminiTeacher.checkAnswer()"
+                                            style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: black; border: none; padding: 1rem 3rem; font-size:1.1rem; border-radius: 50px; font-weight:bold; cursor:pointer; min-width:180px; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3); transition: transform 0.2s;">KONTROL
+                                            ET</button>
+                                        <button id="btn-ai-next" class="btn-ai-action secondary hidden"
+                                            onclick="GeminiTeacher.nextQuestion()"
+                                            style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border: none; padding: 1rem 3rem; font-size:1.1rem; border-radius: 50px; font-weight:bold; cursor:pointer; min-width:180px; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); transition: transform 0.2s;">SONRAKİ
+                                            CÜMLE &rarr;</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Teacher Explanation Drawer (Fixed Bottom) -->
+                    <div id="ai-rich-feedback" class="hidden">
+                        <button class="btn-ai-close" onclick="GeminiTeacher.toggleExplanation(false)">&times;</button>
+
+                        <div id="ai-teacher-note" style="margin-bottom:1.5rem;">
+                            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.8rem;">
+                                <span style="font-size:1.5rem;">👨‍🏫</span>
+                                <span
+                                    style="font-weight:bold; color:#a78bfa; font-size:1.1rem; text-transform:uppercase; letter-spacing:1px;">Öğretmenin
+                                    Notu</span>
+                            </div>
+                            <p id="ai-grammar-tip" style="color:#f1f5f9; font-size:1.05rem; line-height:1.7; margin:0;">
+                            </p>
+                            <p id="ai-warning-tip" class="hidden"
+                                style="color:#fbbf24; font-size:1rem; line-height:1.5; margin-top:1.2rem; padding:1.2rem; background:rgba(251,191,36,0.1); border-radius:12px; border:1px solid rgba(251,191,36,0.2);">
+                            </p>
+                        </div>
+
+                        <!-- Vocabulary Tags -->
+                        <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:1.2rem;">
+                            <span
+                                style="display:block; font-size:0.85rem; color:#94a3b8; text-transform:uppercase; margin-bottom:1rem; letter-spacing:1.2px; font-weight:bold;">📚
+                                Kelime Dağarcığı</span>
+                            <div id="ai-vocab-tags" style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+                                <!-- Tags injected via JS -->
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -1431,6 +1650,7 @@
     <!-- Books loaded lazily in app.js -->
     <script src="js/tts.js"></script>
     <script src="js/app.js?v=34"></script>
+    <script src="js/gemini_teacher.js"></script>
 
     <!-- DICTIONARY TOAST (Re-injected) -->
     <div id="dict-toast" class="dict-toast">

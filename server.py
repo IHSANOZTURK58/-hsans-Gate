@@ -10,6 +10,24 @@ import os
 from flask import Flask, request, jsonify, send_file, send_from_directory
 from flask_cors import CORS
 import edge_tts
+import requests
+import json
+
+# --- CONFIG ---
+# Get API Key from Environment Variable ONLY
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+
+if not GEMINI_API_KEY:
+    try:
+        from dotenv import load_dotenv
+        load_dotenv()
+        GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+    except ImportError:
+        pass
+
+if not GEMINI_API_KEY:
+    print("Warning: GEMINI_API_KEY not found in environment variables.") 
+
 
 app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)
@@ -75,6 +93,41 @@ def voices_endpoint():
         "default": DEFAULT_VOICE,
         "voices": [{"key": k, **v} for k, v in VOICES.items()]
     })
+
+@app.route('/api/ai/generate', methods=['POST'])
+def gemini_proxy():
+    try:
+        data = request.get_json()
+        if not data or 'prompt' not in data:
+            return jsonify({"error": "Prompt gereklidir."}), 400
+
+        model = data.get('model', 'gemini-1.5-flash')
+        
+        # Determine API Key
+        # Priority: Environment Var > Hardcoded > Client Provided (Legacy/Testing)
+        api_key = GEMINI_API_KEY
+        
+        if not api_key or "YOUR_API_KEY" in api_key:
+             return jsonify({"error": "Sunucuda API Key tanimli degil."}), 500
+
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
+        
+        payload = {
+            "contents": [{
+                "parts": [{"text": data['prompt']}]
+            }]
+        }
+        
+        response = requests.post(url, json=payload, headers={'Content-Type': 'application/json'})
+        
+        if response.status_code != 200:
+            return jsonify({"error": f"Gemini API Hatasi: {response.text}"}), response.status_code
+            
+        return jsonify(response.json())
+
+    except Exception as e:
+        print(f"[AI Proxy Error] {e}")
+        return jsonify({"error": f"Sunucu hatasi: {str(e)}"}), 500
 
 @app.route('/api/health', methods=['GET'])
 def health_endpoint():

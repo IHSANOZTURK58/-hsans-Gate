@@ -54,6 +54,51 @@ body {
     /* Center it */
 }
 
+/* GLOBAL FLOATING UTILITIES */
+.global-floating-controls {
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.btn-fullscreen {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-fullscreen:hover {
+    background: rgba(15, 23, 42, 0.8);
+    transform: scale(1.1);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+}
+
+.btn-fullscreen:active {
+    transform: scale(0.9);
+}
+
+/* Hide on mobile as per user request */
+@media (max-width: 600px) {
+    .global-floating-controls {
+        display: none;
+    }
+}
+
 /* HEADER */
 .main-header {
     padding: 1rem 1.5rem;
@@ -418,9 +463,6 @@ body {
     opacity: 1;
 }
 
-.module-card.hero {
-    /* No difference anymore, all are heroes */
-}
 
 .module-card .icon-box {
     font-size: 2.5rem;

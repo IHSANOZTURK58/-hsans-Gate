@@ -66,8 +66,7 @@ const app = {
         adventureLives: 3,
         levelWords: [],
 
-        // Writing Input Settings
-        writingDirection: 'EN_TR', // 'EN_TR' (Default) or 'TR_EN'
+
 
         // Navigation History
         previousView: null,
@@ -110,7 +109,7 @@ const app = {
         this.render();
         this.renderLeaderboard();
 
-        this.geminiService.init();
+
 
 
         // Authenticate
@@ -242,6 +241,29 @@ const app = {
         // Global Key Listener for Writing Mode
         document.addEventListener('keydown', (e) => {
             this.handleWritingKeyPress(e);
+        });
+
+        // Hyper-Robust Fullscreen Sync
+        const syncFullscreenUI = () => {
+            requestAnimationFrame(() => {
+                const fsIcon = document.querySelector('.fs-icon');
+                if (!fsIcon) return;
+
+                // 1. Primary: API State
+                const isApiFull = !!(document.fullscreenElement || document.webkitFullscreenElement ||
+                    document.mozFullScreenElement || document.msFullscreenElement);
+
+                // 2. Secondary: Dimensional Check (F12 resilient)
+                const isDimFull = window.innerHeight >= (screen.height - 20) && window.innerWidth >= (screen.width - 20);
+
+                const reallyFull = isApiFull || isDimFull;
+                fsIcon.textContent = reallyFull ? '❐' : '⛶';
+            });
+        };
+
+        ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange', 'resize'].forEach(evt => {
+            window.addEventListener(evt, syncFullscreenUI);
+            document.addEventListener(evt, syncFullscreenUI);
         });
     },
 
@@ -505,6 +527,30 @@ const app = {
 
         // Also listen for word updates
         this.setupWordListener();
+    },
+
+    showDashboard() {
+        this.render('view-dashboard');
+    },
+
+    toggleFullscreen() {
+        const d = document;
+        const de = d.documentElement;
+
+        const isCurrentlyFull = !!(d.fullscreenElement || d.webkitFullscreenElement ||
+            d.mozFullScreenElement || d.msFullscreenElement);
+
+        if (!isCurrentlyFull) {
+            // Attempt all prefixes
+            const request = de.requestFullscreen || de.webkitRequestFullscreen ||
+                de.mozRequestFullScreen || de.msRequestFullscreen;
+            if (request) request.call(de).catch(() => { });
+        } else {
+            // Attempt all exit prefixes
+            const exit = d.exitFullscreen || d.webkitExitFullscreen ||
+                d.mozCancelFullScreen || d.msExitFullscreen;
+            if (exit) exit.call(d).catch(() => { });
+        }
     },
 
     openModeSelection() {
@@ -2008,176 +2054,7 @@ const app = {
         }
     },
 
-    // --- GEMINI AI SERVICE ---
-    geminiService: {
-        // Multi-Key Rotation System (supports up to 4 keys)
-        apiKeys: [
-            "AIzaSyAjIAR8yjA0kTPN23qxy0ovel-REpoH5Zc",  // Key 1
-            "AIzaSyCKb-Cm2rnVlkA-WfkxjU5E_YHGrPqKObw",  // Key 2
-            "AIzaSyCMQoab17MmEEBgSHqEeabHr_aNnyyfC48",  // Key 3
-            "AIzaSyCKBMvmoImAWiVSgMfPpYlTYOQJrF1clEo"   // Key 4
-        ],
-        currentKeyIndex: 0,
-        modelName: 'gemini-pro',  // Changed to gemini-pro for v1beta compatibility
 
-        init() {
-            // Clear old localStorage
-            localStorage.removeItem('gemini_api_key');
-
-            const savedModel = localStorage.getItem('gemini_valid_model');
-            if (savedModel) this.modelName = savedModel;
-
-            console.log(`🔑 Gemini Service initialized with ${this.apiKeys.length} API keys`);
-        },
-
-        async generateSentence() {
-            if (this.apiKeys.length === 0) return null;
-
-            const topics = ['Daily Life', 'Travel', 'Food', 'Work', 'School', 'Hobby', 'Family', 'Weather', 'Technology', 'Nature', 'Health', 'Shopping'];
-            const randomTopic = topics[Math.floor(Math.random() * topics.length)];
-
-            const prompt = `Generate a unique, simple English sentence (A1-B1 level) related to topic "${randomTopic}". 
-            Also provide its correct Turkish translation.
-            Return ONLY a pure JSON object with keys 'en' (the sentence) and 'tr' (meaning). 
-            No markdown.`;
-
-            // Try all keys in rotation
-            for (let attempt = 0; attempt < this.apiKeys.length; attempt++) {
-                const currentKey = this.apiKeys[this.currentKeyIndex];
-
-                try {
-                    console.log(`📡 AI Request (Key ${this.currentKeyIndex + 1}/${this.apiKeys.length}), Model: [${this.modelName}]`);
-
-                    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.modelName}:generateContent?key=${currentKey}`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-                    });
-
-                    if (response.ok) {
-                        const data = await response.json();
-                        if (data.candidates && data.candidates[0].content) {
-                            let text = data.candidates[0].content.parts[0].text;
-                            try {
-                                const startIndex = text.indexOf('{');
-                                const endIndex = text.lastIndexOf('}');
-                                if (startIndex !== -1 && endIndex !== -1) {
-                                    text = text.substring(startIndex, endIndex + 1);
-                                    return JSON.parse(text);
-                                }
-                            } catch (e) {
-                                console.error("JSON Parse Error:", e);
-                            }
-                        }
-                    } else if (response.status === 429) {
-                        // Quota exceeded - rotate to next key
-                        console.warn(`⚠️ Key ${this.currentKeyIndex + 1} quota exceeded (429). Rotating...`);
-                        this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
-                        continue;
-                    } else {
-                        console.error(`API Error: ${response.status}`);
-                        this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
-                        continue;
-                    }
-                } catch (e) {
-                    console.error("Network Error:", e);
-                    this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
-                    continue;
-                }
-            }
-
-            console.error("❌ All API keys exhausted for generateSentence");
-            return null;
-        },
-
-        async checkAnswer(source, input, direction = 'EN_TR') {
-            if (this.apiKeys.length === 0) return { error: "API anahtarı bulunamadı" };
-
-            let prompt = '';
-
-            if (direction === 'EN_TR') {
-                prompt = `
-                Act as a supportive Turkish language tutor.
-                
-                English Source: "${source.en}"
-                User's Translation: "${input}"
-                
-                Task: Evaluation.
-                Rules:
-                1. Be FLEXIBLE. Accept synonyms, dropped pronouns, and minor typos.
-                2. If the meaning is mostly preserved, mark it as TRUE.
-                3. IGNORE punctuation and casing.
-                
-                Return ONLY a pure JSON object (no markdown):
-                {
-                    "isCorrect": boolean,
-                    "feedback": "If Correct: Praise enthusiastically in Turkish. IF WRONG: Explain the specific mistake in Turkish."
-                }`;
-            } else {
-                prompt = `
-                Act as a supportive English language tutor for a Turkish speaker.
-                
-                Turkish Source: "${source.tr}"
-                User's English translation: "${input}"
-                
-                Task: Evaluation.
-                Rules:
-                1. Be FLEXIBLE. Accept synonyms, American/British spelling, and minor typos.
-                2. If the meaning is mostly preserved, mark it as TRUE.
-                3. IGNORE punctuation and casing.
-                
-                Return ONLY a pure JSON object (no markdown):
-                {
-                    "isCorrect": boolean,
-                    "feedback": "If Correct: Praise enthusiastically in English (keep it simple). IF WRONG: Explain the specific mistake in Turkish so the user understands."
-                }`;
-            }
-
-            // Try all keys in rotation
-            for (let attempt = 0; attempt < this.apiKeys.length; attempt++) {
-                const currentKey = this.apiKeys[this.currentKeyIndex];
-
-                try {
-                    console.log(`🔍 Checking answer (Key ${this.currentKeyIndex + 1}/${this.apiKeys.length})`);
-
-                    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.modelName}:generateContent?key=${currentKey}`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-                    });
-
-                    const data = await response.json();
-
-                    if (response.ok) {
-                        if (data.candidates && data.candidates[0].content) {
-                            let text = data.candidates[0].content.parts[0].text;
-                            const startIndex = text.indexOf('{');
-                            const endIndex = text.lastIndexOf('}');
-                            if (startIndex !== -1 && endIndex !== -1) {
-                                text = text.substring(startIndex, endIndex + 1);
-                                return JSON.parse(text);
-                            }
-                        }
-                    } else if (response.status === 429) {
-                        console.warn(`⚠️ Key ${this.currentKeyIndex + 1} quota exceeded. Rotating...`);
-                        this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
-                        continue;
-                    } else {
-                        console.error(`API Error: ${response.status}`);
-                        const apiError = data.error?.message || "Bilinmeyen API Hatası";
-                        return { error: apiError };
-                    }
-                } catch (e) {
-                    console.error("Network Error:", e);
-                    this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
-                    continue;
-                }
-            }
-
-            console.error("❌ All API keys exhausted for checkAnswer");
-            return { error: "Yapay zeka çevrimdışı (Tüm API anahtarları limitte)" };
-        }
-    },
 
     // --- WRITING MODULE (New) ---
     openWritingModes() {
@@ -2211,289 +2088,8 @@ const app = {
         this.nextWritingQuestion();
     },
 
-    startWritingInputMode() {
-        console.log("Starting Writing Input Mode...");
-        // DIRECT INPUT MODE
-        if (!this.state.playerName) {
-            alert("⚠️ Önce giriş yapmalısınız.");
-            this.showLanding();
-            return;
-        }
-        this.state.previousView = this.state.currentView;
-        this.state.currentView = 'writing-input';
-        this.state.writingScore = 0;
 
-        // RESET OVERLAY (Quota Saver)
-        const overlay = document.getElementById('writing-input-start-overlay');
-        if (overlay) {
-            console.log("Overlay found, showing...");
-            overlay.classList.remove('hidden');
-        } else {
-            console.error("Overlay NOT found!");
-        }
 
-        this.render();
-        // this.nextWritingInputQuestion(); // DELAYED until user clicks Start
-    },
-
-    beginProWritingSession() {
-        console.log("User clicked START");
-        const overlay = document.getElementById('writing-input-start-overlay');
-        if (overlay) {
-            overlay.classList.add('hidden');
-            console.log("Overlay hidden via classList");
-        }
-        this.nextWritingInputQuestion();
-    },
-
-    async nextWritingInputQuestion() {
-        // Clear Inputs
-        const input = document.getElementById('writing-direct-input');
-        input.value = '';
-        input.disabled = true;
-        input.placeholder = 'Soruyu hazırlıyorum...';
-
-        // Update Label
-        const label = document.querySelector('.task-label');
-        if (label) {
-            if (this.state.writingDirection === 'EN_TR') {
-                label.innerHTML = "İngilizce &rarr; Türkçe";
-            } else {
-                label.innerHTML = "Türkçe &rarr; İngilizce";
-            }
-        }
-
-        document.getElementById('input-target-meaning').textContent = '...';
-
-        // ALWAYS use sentences.js (no API quota cost!)
-        const allSentences = this.getSentences();
-        const sentenceData = allSentences[Math.floor(Math.random() * allSentences.length)];
-
-        this.state.currentWritingSentence = sentenceData;
-
-        // Render Question based on direction
-        // document.getElementById('writing-input-score').textContent = this.state.writingScore; // REMOVED
-
-        if (this.state.writingDirection === 'EN_TR') {
-            // EN -> TR
-            document.getElementById('input-target-meaning').textContent = sentenceData.en;
-            input.placeholder = 'Türkçesi nedir?';
-        } else {
-            // TR -> EN
-            document.getElementById('input-target-meaning').textContent = sentenceData.tr; // Show Turkish
-            input.placeholder = 'İngilizcesi nedir?'; // Ask for English
-        }
-
-        input.disabled = false;
-        input.focus();
-
-        // Check Button Reset
-        const btn = document.getElementById('btn-check-answer');
-        if (btn) {
-            btn.disabled = false;
-            btn.textContent = "KONTROL ET";
-            btn.onclick = () => app.checkWritingInputAnswer();
-            btn.style.background = 'white';
-            btn.style.color = 'black';
-        }
-    },
-
-    toggleWritingDirection() {
-        if (this.state.writingDirection === 'EN_TR') {
-            this.state.writingDirection = 'TR_EN';
-        } else {
-            this.state.writingDirection = 'EN_TR';
-        }
-
-        // Update Button UI (Classes)
-        const btn = document.getElementById('btn-lang-toggle');
-        if (btn) {
-            btn.classList.remove('mode-en-tr', 'mode-tr-en');
-
-            if (this.state.writingDirection === 'EN_TR') {
-                btn.classList.add('mode-en-tr');
-            } else {
-                btn.classList.add('mode-tr-en');
-            }
-
-            // Animation
-            const arrow = btn.querySelector('#toggle-arrow');
-            if (arrow) {
-                arrow.classList.remove('rotate-anim');
-                void arrow.offsetWidth; // Trigger reflow
-                arrow.classList.add('rotate-anim');
-            }
-        }
-
-        // Reload question
-        this.nextWritingInputQuestion();
-    },
-
-    updateChat(sender, msg) {
-        const chatContainer = document.getElementById('ai-chat-messages');
-        if (!chatContainer) return;
-
-        const bubble = document.createElement('div');
-        bubble.className = `chat-bubble ${sender}`;
-        bubble.innerHTML = msg;
-        chatContainer.appendChild(bubble); // Append to bottom
-        chatContainer.scrollTop = chatContainer.scrollHeight; // Auto scroll
-    },
-
-    async checkWritingInputAnswer() {
-        const input = document.getElementById('writing-direct-input');
-        const val = input.value.trim();
-
-        if (!val) return;
-
-        // Put user message in chat
-        this.updateChat('user', val);
-
-        input.disabled = true;
-        const btn = document.getElementById('btn-check-answer');
-        btn.textContent = "KONTROL EDİLİYOR...";
-        btn.disabled = true;
-
-        let isCorrect = false;
-        let feedback = '';
-
-        // AI Check
-        // Hybrid Check: Try AI -> Fallback to Local
-        let result = null;
-        if (this.geminiService.apiKey) {
-            try {
-                result = await this.geminiService.checkAnswer(this.state.currentWritingSentence, val, this.state.writingDirection);
-            } catch (err) {
-                console.error("AI Check failed, falling back to local:", err);
-            }
-        }
-
-        if (result && !result.error) {
-            // AI Success
-            isCorrect = result.isCorrect;
-            feedback = result.feedback;
-        } else {
-            // Fallback: Local match (Offline or API Fail)
-            let errorMsg = "Yapay zeka çevrimdışı";
-            if (result && result.error) {
-                const err = result.error.toLowerCase();
-
-                if (err.includes('quota') || err.includes('429') || err.includes('rate limit')) {
-                    if (err.includes('daily') || err.includes('exceeded')) {
-                        errorMsg = "🛑 GÜNLÜK Kota Doldu! (Başka API Key girin)";
-                    } else {
-                        errorMsg = "⏳ Çok Hızlısın! (15sn Bekle)";
-                    }
-                } else if (err.includes('key') || err.includes('403')) {
-                    errorMsg = "🔑 Geçersiz API Key";
-                } else {
-                    errorMsg += ` (${result.error})`;
-                }
-            }
-
-            // Improved Fuzzy Logic: Token-based comparison to allow flexibility in word order and minor typos.
-            const cleanInput = val.toLowerCase().replace(/[.,!?'"]/g, ' ').trim();
-            const inputTokens = cleanInput.split(/\s+/).filter(t => t.length > 0).sort();
-
-            let targetText = '';
-            if (this.state.writingDirection === 'EN_TR') {
-                targetText = this.state.currentWritingSentence.tr;
-            } else {
-                targetText = this.state.currentWritingSentence.en;
-            }
-
-            const cleanTarget = targetText.toLowerCase().replace(/[.,!?'"]/g, ' ').trim();
-            const targetTokens = cleanTarget.split(/\s+/).filter(t => t.length > 0).sort();
-
-            // Calculate intersection
-            let matchCount = 0;
-            inputTokens.forEach(token => {
-                if (targetTokens.includes(token)) matchCount++;
-            });
-
-            // If more than 70% of significant words match, consider it correct.
-            const accuracy = matchCount / Math.max(inputTokens.length, targetTokens.length);
-            isCorrect = accuracy >= 0.7;
-
-            // Also check for simple containment as a safety net
-            if (!isCorrect) {
-                const simpleInput = val.toLowerCase().replace(/\s+/g, '');
-                const simpleTarget = targetText.toLowerCase().replace(/\s+/g, '');
-                isCorrect = simpleInput === simpleTarget;
-            }
-
-            if (isCorrect) {
-                feedback = `Güzel! (${errorMsg} ama kelime bazlı eşleşme başarılı.)`;
-            } else {
-                feedback = `Eşleşmedi. (${errorMsg} olduğu için sadece kelime kontrolü yapabildim.)`;
-            }
-        }
-
-        if (isCorrect) {
-            this.playSound('correct');
-            // Award 1 point for correct answer
-            this.state.score += 1;
-            this.state.writingScore += 1;
-            this.saveData(); // Persist
-            this.updateHeaderStats(); // Update UI immediately
-
-            // document.getElementById('writing-input-score').textContent = this.state.writingScore; // REMOVED
-
-            this.updateChat('ai', `✅ <b>Doğru!</b> ${feedback} (+1 Puan)`);
-
-            btn.textContent = "DEVAM ET ->";
-            btn.disabled = false;
-            btn.style.background = '#22c55e';
-            btn.style.color = 'white';
-            btn.onclick = () => app.nextWritingInputQuestion();
-
-        } else {
-            this.playSound('wrong');
-
-            const correctText = this.state.writingDirection === 'EN_TR' ?
-                this.state.currentWritingSentence.tr :
-                this.state.currentWritingSentence.en;
-
-            this.updateChat('ai', `❌ <b>Yanlış.</b> ${feedback}<br><br>Doğru Çeviri: <i>${correctText}</i>`);
-
-            btn.textContent = "DEVAM ET ->";
-            btn.disabled = false;
-            btn.style.background = '#ef4444';
-            btn.style.color = 'white';
-            btn.onclick = () => app.nextWritingInputQuestion();
-        }
-    },
-
-    passWritingQuestion() {
-        this.updateChat('user', 'Pas geçtim.');
-        const correctText = this.state.writingDirection === 'EN_TR' ?
-            this.state.currentWritingSentence.tr :
-            this.state.currentWritingSentence.en;
-        this.updateChat('ai', `Sorun değil! Cevap şuydu: <b>${correctText}</b>`);
-        this.nextWritingInputQuestion();
-    },
-
-    giveUpWritingInput() {
-        this.updateChat('user', 'Pes ediyorum 🏳️');
-        const correctText = this.state.writingDirection === 'EN_TR' ?
-            this.state.currentWritingSentence.tr :
-            this.state.currentWritingSentence.en;
-        this.updateChat('ai', `Pes etmek yok! 💪 Doğrusu buydu:<br><b>${correctText}</b>`);
-
-        const btn = document.getElementById('btn-check-answer');
-        btn.textContent = "DEVAM ET ->";
-        btn.onclick = () => app.nextWritingInputQuestion();
-    },
-    getSentences() {
-        // Use external huge list if available, else small fallback
-        if (window.SENTENCE_DATA && window.SENTENCE_DATA.length > 0) {
-            return window.SENTENCE_DATA;
-        }
-        return [
-            { en: "I am ready", tr: "Hazırım" },
-            { en: "See you later", tr: "Sonra görüşürüz" }
-        ];
-    },
 
     nextWritingQuestion() {
         const allWords = this.getAllWords();
